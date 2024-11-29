@@ -19,8 +19,8 @@ interface ProjectDetails {
 const projectDetails: Record<number, ProjectDetails> = {
   1: {
     id: 1,
-    title: 'Villa Renovatie',
-    location: 'Eindhoven Centrum',
+    title: 'villa niet villa niet',
+    location: 'nee Centrum',
     type: 'Buitenschilderwerk',
     imageUrl: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&q=80',
     beforeImage: 'https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?auto=format&fit=crop&q=80',
