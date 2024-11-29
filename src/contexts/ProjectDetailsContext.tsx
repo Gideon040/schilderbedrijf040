@@ -1,4 +1,13 @@
-import React, { createContext, useContext } from 'react';
+import React, { createContext, useContext, useState, useEffect } from 'react';
+import matter from 'gray-matter'
+
+interface ProjectData {
+  title: string;
+  description: string;
+  image: string;
+  content: string;
+  // andere velden die je nodig hebt
+}
 
 interface ProjectDetails {
   id: number;
@@ -77,10 +86,43 @@ interface ProjectDetailsContextType {
 
 const ProjectDetailsContext = createContext<ProjectDetailsContextType | undefined>(undefined);
 
-export function ProjectDetailsProvider({ children }: { children: React.ReactNode }) {
+export const ProjectDetailsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  const [cmsProjects, setCmsProjects] = useState<ProjectData[]>([]);
+
+  useEffect(() => {
+    const loadProjects = async () => {
+      try {
+        const response = await fetch('/api/projects');
+        const projectsData = await response.json();
+        setCmsProjects(projectsData);
+      } catch (error) {
+        console.error('Error loading projects:', error);
+      }
+    };
+
+    loadProjects();
+  }, []);
+
   const getProjectDetails = (id: number) => projectDetails[id];
   
-  const getAllProjects = () => Object.values(projectDetails);
+  const getAllProjects = () => {
+    const hardcodedProjects = Object.values(projectDetails);
+    return [...hardcodedProjects, ...cmsProjects.map((project, index) => ({
+      id: hardcodedProjects.length + index + 1,
+      title: project.title,
+      location: '',  // of een default waarde
+      type: 'Overig', // of een default waarde
+      imageUrl: project.image,
+      beforeImage: '',
+      afterImage: '',
+      completionDate: '',
+      projectManager: '',
+      description: project.description,
+      workPerformed: [],
+      materialsUsed: [],
+      result: project.content
+    }))];
+  };
   
   const getProjectsByType = (type: string) => 
     Object.values(projectDetails).filter(project => project.type === type);

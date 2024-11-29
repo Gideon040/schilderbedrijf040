@@ -2,25 +2,10 @@ backend:
   name: git-gateway
   branch: main
 
-media_folder: "public/uploads"
-public_folder: "/uploads"
+media_folder: "public/images/uploads"
+public_folder: "/images/uploads"
 
 collections:
-  - name: "blog"
-    label: "Blog"
-    folder: "content/blog"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Slug", name: "slug", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Featured Image", name: "imageUrl", widget: "image"}
-      - {label: "Category", name: "category", widget: "select", options: ["Verfproducten", "Tips & Advies", "Projecten", "Nieuws"]}
-      - {label: "Author", name: "author", widget: "string", default: "Team Schildersbedrijf040"}
-      - {label: "Excerpt", name: "excerpt", widget: "text"}
-      - {label: "Content", name: "content", widget: "markdown"}
-
   - name: "projects"
     label: "Projects"
     folder: "content/projects"
@@ -28,13 +13,17 @@ collections:
     slug: "{{slug}}"
     fields:
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Location", name: "location", widget: "string"}
-      - {label: "Type", name: "type", widget: "select", options: ["Binnenschilderwerk", "Buitenschilderwerk", "Behangwerk", "Lakwerk", "Houtrot Sanering", "Totaalproject"]}
-      - {label: "Before Image", name: "beforeImage", widget: "image"}
-      - {label: "After Image", name: "afterImage", widget: "image"}
-      - {label: "Completion Date", name: "completionDate", widget: "string"}
-      - {label: "Project Manager", name: "projectManager", widget: "string"}
       - {label: "Description", name: "description", widget: "text"}
-      - {label: "Work Performed", name: "workPerformed", widget: "list"}
-      - {label: "Materials Used", name: "materialsUsed", widget: "list"}
-      - {label: "Result", name: "result", widget: "text"}
+      - {label: "Image", name: "image", widget: "image"}
+      - {label: "Body", name: "body", widget: "markdown"}
+
+  - name: "blog"
+    label: "Blog"
+    folder: "content/blog"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Body", name: "body", widget: "markdown"}
