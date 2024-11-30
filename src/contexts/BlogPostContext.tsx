@@ -33,13 +33,27 @@ export function BlogPostProvider({ children }: { children: React.ReactNode }) {
     const fetchBlogPosts = async () => {
       try {
         setIsLoading(true);
-        // Hier fetch je de data van waar Netlify CMS het opslaat
         const response = await fetch('/content/blog/index.json');
         if (!response.ok) throw new Error('Failed to fetch blog posts');
         const data = await response.json();
         setBlogPosts(data);
       } catch (err) {
         setError(err instanceof Error ? err.message : 'Er is een fout opgetreden');
+        if (import.meta.env.DEV) {
+          setBlogPosts([
+            {
+              id: '1',
+              slug: 'test-post',
+              title: 'Test Post',
+              excerpt: 'Dit is een test post',
+              content: 'Test content',
+              imageUrl: '/images/test.jpg',
+              category: 'Alle Regio\'s',
+              date: new Date().toISOString(),
+              author: 'Test Author'
+            }
+          ]);
+        }
       } finally {
         setIsLoading(false);
       }
