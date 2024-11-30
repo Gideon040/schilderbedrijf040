@@ -1,4 +1,4 @@
-import React, { createContext, useContext } from 'react';
+import React, { createContext, useContext, useState, useEffect } from 'react';
 
 interface ProjectDetails {
   id: number;
@@ -16,59 +16,10 @@ interface ProjectDetails {
   result: string;
 }
 
-const projectDetails: Record<number, ProjectDetails> = {
-  1: {
-    id: 1,
-    title: 'Villa Renovatie',
-    location: 'Eindhoven Centrum',
-    type: 'Buitenschilderwerk',
-    imageUrl: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&q=80',
-    beforeImage: 'https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?auto=format&fit=crop&q=80',
-    afterImage: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&q=80',
-    completionDate: 'Maart 2024',
-    projectManager: 'Jan van der Steen',
-    description: 'Complete renovatie van een karakteristieke villa in het centrum van Eindhoven.',
-    workPerformed: [
-      'Complete voorbereiding en reiniging',
-      'Houtrot reparatie',
-      'Schilderwerk buitenzijde',
-      'Kozijnrenovatie'
-    ],
-    materialsUsed: [
-      'Sigma Coating systemen',
-      'Repair Care producten',
-      'Premium aflakken'
-    ],
-    result: 'Een volledig gerenoveerde villa met behoud van authentieke details.'
-  },
-  2: {
-    id: 2,
-    title: 'Modern Appartement',
-    location: 'Strijp-S',
-    type: 'Binnenschilderwerk',
-    imageUrl: 'https://images.unsplash.com/photo-1562663474-6cbb3eaa4d14?auto=format&fit=crop&q=80',
-    beforeImage: 'https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?auto=format&fit=crop&q=80',
-    afterImage: 'https://images.unsplash.com/photo-1562663474-6cbb3eaa4d14?auto=format&fit=crop&q=80',
-    completionDate: 'Februari 2024',
-    projectManager: 'Peter de Vries',
-    description: 'Modern interieur schilderwerk voor een nieuw appartement in Strijp-S.',
-    workPerformed: [
-      'Wandvoorbereiding',
-      'Latex spuitwerk',
-      'Kozijnen lakken',
-      'Plafondafwerking'
-    ],
-    materialsUsed: [
-      'Sikkens producten',
-      'Sigma latex',
-      'Hoogglans lakken'
-    ],
-    result: 'Een strak en modern afgewerkt appartement met perfecte details.'
-  },
-  // Add more projects as needed...
-};
-
 interface ProjectDetailsContextType {
+  projects: ProjectDetails[];
+  isLoading: boolean;
+  error: string | null;
   getProjectDetails: (id: number) => ProjectDetails | undefined;
   getAllProjects: () => ProjectDetails[];
   getProjectsByType: (type: string) => ProjectDetails[];
@@ -78,20 +29,40 @@ interface ProjectDetailsContextType {
 const ProjectDetailsContext = createContext<ProjectDetailsContextType | undefined>(undefined);
 
 export function ProjectDetailsProvider({ children }: { children: React.ReactNode }) {
-  const getProjectDetails = (id: number) => projectDetails[id];
-  
-  const getAllProjects = () => Object.values(projectDetails);
-  
+  const [projects, setProjects] = useState<ProjectDetails[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    const fetchProjects = async () => {
+      try {
+        setIsLoading(true);
+        const response = await fetch('/content/projects/index.json');
+        if (!response.ok) throw new Error('Failed to fetch projects');
+        const data = await response.json();
+        setProjects(data);
+      } catch (err) {
+        setError(err instanceof Error ? err.message : 'Er is een fout opgetreden');
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetchProjects();
+  }, []);
+
+  const getProjectDetails = (id: number) => projects.find(project => project.id === id);
+  const getAllProjects = () => projects;
   const getProjectsByType = (type: string) => 
-    Object.values(projectDetails).filter(project => project.type === type);
-  
+    projects.filter(project => project.type === type);
   const getRelatedProjects = (currentId: number, type: string) => 
-    Object.values(projectDetails)
-      .filter(project => project.id !== currentId && project.type === type)
-      .slice(0, 3);
+    projects.filter(project => project.id !== currentId && project.type === type).slice(0, 3);
 
   return (
     <ProjectDetailsContext.Provider value={{ 
+      projects,
+      isLoading,
+      error,
       getProjectDetails, 
       getAllProjects, 
       getProjectsByType,
@@ -100,12 +71,4 @@ export function ProjectDetailsProvider({ children }: { children: React.ReactNode
       {children}
     </ProjectDetailsContext.Provider>
   );
-}
-
-export function useProjectDetails() {
-  const context = useContext(ProjectDetailsContext);
-  if (context === undefined) {
-    throw new Error('useProjectDetails must be used within a ProjectDetailsProvider');
-  }
-  return context;
 }
