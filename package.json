@@ -6,6 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
+    "build:content": "node build-scripts/generateContent.js",
+    "build:all": "npm run build:content && npm run build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
