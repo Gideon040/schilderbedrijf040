@@ -69,3 +69,11 @@ export function BlogPostProvider({ children }: { children: React.ReactNode }) {
     </BlogPostContext.Provider>
   );
 }
+// Voeg deze hook toe aan het einde van het bestand
+export function useBlogPosts() {
+  const context = useContext(BlogPostContext);
+  if (context === undefined) {
+    throw new Error('useBlogPosts must be used within a BlogPostProvider');
+  }
+  return context;
+}
