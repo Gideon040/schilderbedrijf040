@@ -1,0 +1,24 @@
+# Dependencies
+node_modules/
+
+# Next.js build
+.next/
+out/
+
+# Environment variables (secrets!)
+.env.local
+.env*.local
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Debug
+npm-debug.log*
+
+# Netlify
+.netlify/
+
+# IDE
+.vscode/
+.idea/

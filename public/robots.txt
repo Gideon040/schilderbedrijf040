@@ -1,0 +1,12 @@
+# Robots.txt for Schildersbedrijf040
+# https://schildersbedrijf040.nl
+
+User-agent: *
+Allow: /
+Disallow: /studio
+
+# Sitemap location
+Sitemap: https://schildersbedrijf040.nl/sitemap.xml
+
+# Crawl-delay for politeness
+Crawl-delay: 1
