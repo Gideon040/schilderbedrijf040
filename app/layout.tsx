@@ -31,8 +31,8 @@ export const metadata: Metadata = {
     telephone: false,
   },
   icons: {
-    icon: 'https://res.cloudinary.com/dbtaisgda/image/upload/v1743873386/schildersbedrijf040_logo_aqxhxr.png',
-    apple: 'https://res.cloudinary.com/dbtaisgda/image/upload/v1743873386/schildersbedrijf040_logo_aqxhxr.png',
+    icon: '/icon.svg',
+    apple: '/icon.svg',
   },
   openGraph: {
     type: 'website',
