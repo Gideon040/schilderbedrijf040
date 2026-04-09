@@ -6,29 +6,33 @@ import { MapPin } from 'lucide-react'
 type Region = {
   name: string
   slug?: string
+  href?: string
 }
 
 const regions: Region[][] = [
   [
-    { name: 'Eindhoven en omstreken', slug: 'eindhoven' },
-    { name: 'Den Bosch en omstreken' },
-    { name: 'Uden en omstreken' },
-    { name: 'Valkenswaard en omstreken' },
-    { name: 'Boxtel en omstreken' },
-  ],
-  [
-    { name: 'Helmond en omstreken', slug: 'helmond' },
-    { name: 'Tilburg en omstreken' },
-    { name: 'Weert en omstreken' },
-    { name: 'Veldhoven en omstreken', slug: 'veldhoven' },
-    { name: 'Deurne en omstreken' },
-  ],
-  [
+    { name: 'Eindhoven', href: '/' },
+    { name: 'Veldhoven', slug: 'veldhoven' },
     { name: 'Waalre', slug: 'waalre' },
     { name: 'Best', slug: 'best' },
-    { name: 'Son en Breugel', slug: 'son-en-breugel' },
-    { name: 'Geldrop', slug: 'geldrop' },
     { name: 'Nuenen', slug: 'nuenen' },
+    { name: 'Geldrop', slug: 'geldrop' },
+  ],
+  [
+    { name: 'Helmond', slug: 'helmond' },
+    { name: 'Son en Breugel', slug: 'son-en-breugel' },
+    { name: 'Valkenswaard', slug: 'valkenswaard' },
+    { name: 'Oirschot', slug: 'oirschot' },
+    { name: 'Heeze', slug: 'heeze' },
+    { name: 'Mierlo', slug: 'mierlo' },
+  ],
+  [
+    { name: 'Meerhoven', slug: 'meerhoven' },
+    { name: 'Deurne', slug: 'deurne' },
+    { name: 'Beek en Donk', slug: 'beek-en-donk' },
+    { name: 'Eersel', slug: 'eersel' },
+    { name: 'Bergeijk', slug: 'bergeijk' },
+    { name: 'Maarheeze', slug: 'maarheeze' },
   ]
 ]
 
@@ -66,8 +70,8 @@ export function ServiceArea() {
                   {column.map((region, index) => (
                     <div key={index} className="flex items-center">
                       <MapPin className="w-5 h-5 text-primary mr-2 flex-shrink-0" />
-                      {region.slug ? (
-                        <Link href={`/locaties/${region.slug}`} className="text-primary hover:underline">
+                      {region.slug || region.href ? (
+                        <Link href={region.href || `/locaties/${region.slug}`} className="text-primary hover:underline">
                           {region.name}
                         </Link>
                       ) : (

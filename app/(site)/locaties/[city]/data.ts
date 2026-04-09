@@ -1,28 +1,7 @@
-// Type definitions
-export type FAQ = {
-  question: string
-  answer: string
-}
-
-export type Dienst = {
-  title: string
-  slug: string
-  description: string
-}
-
-export type CityData = {
-  title: string
-  displayName: string
-  heroImage: string
-  intro: string
-  wijken: string[]
-  kosten: string
-  diensten: Dienst[]
-  waarom: string
-  werkwijze: string
-  contact: string
-  faqs: FAQ[]
-}
+import { batch1Data } from './data-batch1'
+import { batch2Data } from './data-batch2'
+export type { FAQ, Dienst, CityData } from './types'
+import type { CityData } from './types'
 
 // City specific data
 // Note: Eindhoven is intentionally excluded — the homepage (/) targets Eindhoven to avoid SEO cannibalization
@@ -487,5 +466,7 @@ export const cityData: Record<string, CityData> = {
         answer: 'Schildersbedrijf040 biedt garantie op al het schilderwerk dat in Helmond wordt uitgevoerd. De garantie geldt voor gebreken die ontstaan door materialen of uitvoering. Na oplevering controleert Schildersbedrijf040 samen met u het resultaat in Helmond en verhelpt eventuele onvolkomenheden direct. Door Boonstoppel verf te gebruiken gaat het schilderwerk 8 tot 10 jaar mee.'
       }
     ]
-  }
+  },
+  ...batch1Data,
+  ...batch2Data,
 }

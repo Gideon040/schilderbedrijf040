@@ -12,11 +12,32 @@ const services = [
   { name: 'Houtrot Sanering', href: '/diensten/houtrot-sanering' }
 ]
 
+const werkgebieden = [
+  { name: 'Eindhoven', href: '/' },
+  { name: 'Veldhoven', href: '/locaties/veldhoven' },
+  { name: 'Waalre', href: '/locaties/waalre' },
+  { name: 'Best', href: '/locaties/best' },
+  { name: 'Nuenen', href: '/locaties/nuenen' },
+  { name: 'Geldrop', href: '/locaties/geldrop' },
+  { name: 'Helmond', href: '/locaties/helmond' },
+  { name: 'Son en Breugel', href: '/locaties/son-en-breugel' },
+  { name: 'Valkenswaard', href: '/locaties/valkenswaard' },
+  { name: 'Oirschot', href: '/locaties/oirschot' },
+  { name: 'Heeze', href: '/locaties/heeze' },
+  { name: 'Mierlo', href: '/locaties/mierlo' },
+  { name: 'Meerhoven', href: '/locaties/meerhoven' },
+  { name: 'Deurne', href: '/locaties/deurne' },
+  { name: 'Beek en Donk', href: '/locaties/beek-en-donk' },
+  { name: 'Eersel', href: '/locaties/eersel' },
+  { name: 'Bergeijk', href: '/locaties/bergeijk' },
+  { name: 'Maarheeze', href: '/locaties/maarheeze' },
+]
+
 export function Footer() {
   return (
     <footer className="bg-[#001B32] text-white">
       <div className="container py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
           {/* Contact Info */}
           <div>
             <h3 className="text-xl font-bebas mb-6">CONTACT</h3>
@@ -74,6 +95,20 @@ export function Footer() {
                   FAQ
                 </Link>
               </li>
+            </ul>
+          </div>
+
+          {/* Werkgebieden */}
+          <div>
+            <h3 className="text-xl font-bebas mb-6">WERKGEBIEDEN</h3>
+            <ul className="space-y-2">
+              {werkgebieden.map((locatie) => (
+                <li key={locatie.href}>
+                  <Link href={locatie.href} className="hover:text-primary transition-colors">
+                    {locatie.name}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 

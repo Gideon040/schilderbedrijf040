@@ -3,7 +3,15 @@
     "allow": [
       "Bash(npx next build:*)",
       "Bash(npm install:*)",
-      "Bash(npm ls:*)"
+      "Bash(npm ls:*)",
+      "Bash(grep -n \"Boonstoppel\" /d/schildersbedrijf040-optimized/app/\\\\\\(site\\\\\\)/locaties/[city]/data.ts)",
+      "Bash(grep -n \"€\\\\|euro\\\\|prijs\\\\|kosten\" /d/schildersbedrijf040-optimized/app/\\\\\\(site\\\\\\)/locaties/[city]/data.ts)",
+      "Bash(grep:*)",
+      "WebSearch",
+      "Bash(ls:*)",
+      "Bash(ls \"D:/schildersbedrijf040-optimized/app/\\(site\\)/diensten/behangen/\")",
+      "Bash(ls \"D:/schildersbedrijf040-optimized/app/\\(site\\)/diensten/lakwerk/\")",
+      "Bash(npx tsc:*)"
     ]
   }
 }

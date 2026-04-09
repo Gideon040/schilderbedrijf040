@@ -193,7 +193,7 @@ export default function Home() {
         name: 'Werkt Schildersbedrijf040 ook buiten Eindhoven?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Schildersbedrijf040 is gevestigd in Eindhoven en werkt in de hele regio tot circa 50 kilometer. Vaste werkgebieden zijn onder meer Waalre, Veldhoven, Best, Son en Breugel, Geldrop, Nuenen en Helmond. Ook in plaatsen als Den Bosch, Tilburg en Weert voert Schildersbedrijf040 regelmatig schilderwerk uit.'
+          text: 'Schildersbedrijf040 is gevestigd in Eindhoven en werkt in de hele regio tot circa 50 kilometer. Vaste werkgebieden zijn onder meer Waalre, Veldhoven, Best, Son en Breugel, Geldrop, Nuenen, Helmond, Valkenswaard, Oirschot, Heeze, Mierlo, Meerhoven, Deurne, Beek en Donk, Eersel, Bergeijk en Maarheeze.'
         }
       }
     ]

@@ -1,33 +1,231 @@
-# SEO + GEO Content Mega Prompt & Quality Checker
+# SEO + GEO Content Framework v4.0 — Met Hiërarchie & Differentiatie
 
-*MIR Media Group - Versie 3.0*
+*MIR Media Group — Maart 2026*
 
 ---
 
-## Inhoudsopgave
+## Wat is nieuw in v4.0?
 
-1. De 5W1H Content Methodologie
-2. Prose Writing Rules (Shopify / Next.js)
-3. Content Depth Scoring
-4. **[NIEUW] GEO: Entity & Schema Strategie**
-5. **[NIEUW] GEO: Citability & AI-Leesbaarheid**
-6. De Mega Content Prompt
-7. Content Checklist (Per Sectie) â€” *nu met GEO*
-8. Voorbeeld: Slechte vs Goede Content
-9. FAQ Quality Framework â€” *nu met GEO*
-10. Interne Linking Gids
-11. **[NIEUW] Schema Markup Implementatie Gids**
-12. Content Audit Scorecard â€” *nu met GEO*
-13. Snelle Referentie Prompts â€” *nu met GEO*
-14. Shopify Metafield Output Voorbeeld
-15. Next.js / Headless Output Voorbeeld
-16. Implementatie Checklist â€” *nu met GEO*
+v3.0 had een blind spot: elke pagina kreeg dezelfde instructies (1000-1500 woorden, 5 H2's, 8 FAQ's, zelfde structuur). Dat leidt tot **keyword kannibalisatie** — Google ziet meerdere pagina's die hetzelfde verhaal vertellen en weet niet welke te ranken.
+
+v4.0 voegt **Deel 0: Paginahiërarchie & Differentiatie** toe — een verplichte pre-writing stap die bepaalt welke content wél en welke content NIET op een pagina hoort, op basis van het paginaniveau in de silo.
+
+---
+
+## Deel 0: Paginahiërarchie & Differentiatie [NIEUW v4.0]
+
+### VERPLICHT: Bepaal het paginaniveau VOORDAT je schrijft
+
+Elke collectie- of dienstenpagina valt in één van deze niveaus. Het niveau bepaalt alles: woordaantal, structuur, diepgang, FAQ-onderwerpen en welke content je NIET mag schrijven.
+
+---
+
+### NIVEAU A: PILLAR PAGE (Hoofdcollectie / Hub)
+
+**Wanneer:** De pagina is de brede hoofdcategorie waar subcollecties onder hangen.
+**Voorbeelden:** /collections/plaktegels, /collections/infrarood-verwarming, /collections/zelfklevend-behang
+
+**Specs:**
+- Woordaantal: 1200-1500 woorden
+- H2 secties: 5-6
+- FAQ's: 5-8
+- Interne links: Naar ELKE subcollectie (anchor text = primair keyword van de sub)
+
+**Structuur:**
+
+```
+H2: Wat zijn [categorie]?
+→ Brede definitie, max 150 woorden. Wat is het concept.
+
+H2: Soorten [categorie]
+→ KORT overzicht per type/stijl: 2-3 zinnen per type + link naar subcollectie
+→ NIET diep ingaan op details — dat is terrein van de sub
+→ H3 per type, maar alleen als korte intro + doorlink
+
+H2: [Categorie] per ruimte / per toepassing
+→ KORT per ruimte/toepassing: 2-3 zinnen + link naar ruimte-sub
+→ NIET ruimte-specifieke details behandelen (hittebestendigheid keuken etc.)
+
+H2: Voordelen / Vergelijking met alternatieven
+→ Generieke vergelijking (plaktegels vs. echte tegels, infrarood vs. CV)
+→ Dit is de plek voor brede "waarom dit product" content
+
+H2: [Categorie] aanbrengen / Hoe werkt het?
+→ Generiek stappenplan, NIET ruimte-specifiek
+→ Ruimte-specifieke tips staan op de ruimte-sub
+
+H2: [Categorie] kopen bij [Bedrijf]
+→ USP's, CTA, vertrouwenselementen
+```
+
+**GOUDEN REGEL PILLAR PAGE:**
+De pillar page geeft het OVERZICHT en de KEUZEHULP. Per onderwerp max 2-3 zinnen + link naar de sub waar de diepgang staat. Als je merkt dat je meer dan 100 woorden schrijft over één sub-onderwerp, stop je en verplaats je die content naar de subpagina.
+
+**FAQ-onderwerpen (breed, generiek):**
+- Definitievragen: "Wat zijn [categorie]?"
+- Vergelijkingsvragen: "Wat is het verschil tussen X en Y?"
+- Algemene toepassingsvragen: "In welke ruimtes kan ik X gebruiken?"
+- Generieke praktische vragen: "Op welke ondergronden werkt X?"
+- Onderhoudsvragen: "Hoe onderhoud ik X?"
+
+**WAT JE NIET OP DE PILLAR PAGE ZET:**
+- ✗ Ruimte-specifieke diepgang (keuken, badkamer, toilet details)
+- ✗ Kleur-specifiek interieuradvies
+- ✗ Gedetailleerde rekenvoorbeelden per ruimte
+- ✗ FAQ's die een subcollectie beter kan beantwoorden
+- ✗ Content die je ook op een subpagina zou kunnen zetten → dan hoort het op de sub
+
+---
+
+### NIVEAU B: SUBCOLLECTIE — RUIMTE/TOEPASSING
+
+**Wanneer:** De pagina richt zich op één specifieke ruimte of toepassing binnen de hoofdcategorie.
+**Voorbeelden:** /collections/plaktegels-keuken, /collections/infrarood-verwarming-badkamer, /collections/zelfklevend-behang-badkamer
+
+**Specs:**
+- Woordaantal: 800-1000 woorden
+- H2 secties: 4-5
+- FAQ's: 4-6
+- Interne links: Terug naar pillar + naar relevante kleur/stijl-subs + cross-silo
+
+**Structuur:**
+
+```
+H2: Waarom [categorie] voor de [ruimte]?
+→ NIET herhalen "wat zijn [categorie]" — dat staat op de pillar
+→ Direct insteken op waarom dit product specifiek in deze ruimte werkt
+→ Max 100 woorden intro
+
+H2: Welke [categorie] passen bij jouw [ruimte]?
+→ Keuzeadvies per stijl van die ruimte (moderne keuken, landelijke keuken etc.)
+→ Dit is UNIEKE content die de pillar bewust niet heeft
+
+H2: [Categorie] vs. alternatieven in de [ruimte]
+→ Ruimte-specifieke vergelijking (keuken: plaktegels vs. glazen spatwand vs. RVS)
+→ Dit is ANDERE content dan de generieke vergelijking op de pillar
+
+H2: Hoeveel [categorie] heb je nodig? / Praktische tips
+→ Rekenvoorbeeld specifiek voor deze ruimte (standaard achterwand 200x60cm)
+→ Ruimte-specifieke aanbrengtips (keukenvet ontvetten, afstand fornuis)
+
+H2: [Categorie] voor de [ruimte] bij [Bedrijf]
+→ Kort, CTA-gericht
+```
+
+**GOUDEN REGEL RUIMTE-SUB:**
+De ruimte-sub behandelt ALLEEN wat specifiek is voor die ruimte. Alles wat generiek is (definitie, soorten-overzicht, generiek stappenplan) staat op de pillar en wordt hier niet herhaald. Als een zin net zo goed op de pillar zou passen, hoort hij hier niet.
+
+**FAQ-onderwerpen (ruimte-specifiek):**
+- "Kan ik [categorie] achter het fornuis plakken?" (keuken)
+- "Hoeveel sets heb ik nodig voor mijn [ruimte]?"
+- "Welke kleur past bij een [stijl] [ruimte]?"
+- "Is [categorie] bestand tegen [ruimte-specifiek probleem]?" (vocht, vet, stoom)
+- "Kan ik [categorie] in de [ruimte] plakken als huurder?"
+
+**WAT JE NIET OP DE RUIMTE-SUB ZET:**
+- ✗ "Wat zijn [categorie]?" — link naar pillar
+- ✗ Breed soorten-overzicht (visgraat, hexagon, marmer) — staat op pillar
+- ✗ Generiek stappenplan — staat op pillar (eventueel kort ruimte-specifiek blok)
+- ✗ Content over andere ruimtes
+- ✗ Generieke FAQ's die de pillar al beantwoordt
+
+---
+
+### NIVEAU C: SUBCOLLECTIE — KLEUR/STIJL/MATERIAAL
+
+**Wanneer:** De pagina richt zich op één specifieke kleur, stijl of materiaalvariant.
+**Voorbeelden:** /collections/plaktegels-zwart, /collections/plaktegels-beige, /collections/plaktegels-hout
+
+**Specs:**
+- Woordaantal: 500-700 woorden
+- H2 secties: 3-4
+- FAQ's: 3-4
+- Interne links: Terug naar pillar + naar ruimte-subs waar deze kleur populair is
+
+**Structuur:**
+
+```
+H2: [Kleur/stijl] [categorie] — de uitstraling
+→ Kort: wat maakt deze kleur/stijl bijzonder, welk effect geeft het
+→ Max 80 woorden intro
+
+H2: In welke ruimtes werken [kleur] [categorie]?
+→ Per ruimte 2-3 zinnen over hoe deze kleur daar werkt
+→ Link naar ruimte-subs
+
+H2: Combineer [kleur] met...
+→ Interieuradvies: welke materialen, kleuren, stijlen combineren goed
+→ Dit is 100% UNIEKE content die nergens anders staat
+
+H2: Tips voor [kleur] [categorie]
+→ Praktische styling-tips (hoe voorkom je dat zwart "zwaar" voelt, etc.)
+```
+
+**GOUDEN REGEL KLEUR/STIJL-SUB:**
+De kleur-sub is een inspiratiepagina. Geen technische content, geen stappenplannen, geen "wat zijn [categorie]". Puur: hoe ziet het eruit, waar past het, waarmee combineer je het. De content moet aanvoelen als interieuradvies, niet als productuitleg.
+
+**FAQ-onderwerpen (kleur/stijl-specifiek):**
+- "Past [kleur] bij een [stijl] interieur?"
+- "Zie je vingerafdrukken/vlekken op [kleur] [categorie]?"
+- "Welke accentkleur past bij [kleur]?"
+- "Is [kleur] een trend of tijdloos?"
+
+**WAT JE NIET OP DE KLEUR/STIJL-SUB ZET:**
+- ✗ "Wat zijn [categorie]?"
+- ✗ Aanbrengen-stappenplan
+- ✗ Technische specs (hittebestendigheid, vochtbestendigheid)
+- ✗ Vergelijking met alternatieven (dat staat op pillar of ruimte-sub)
+- ✗ Andere kleuren uitgebreid bespreken
+
+---
+
+### NIVEAU D: LONG-TAIL / SUPPORT PAGINA
+
+**Wanneer:** Zeer specifieke pagina met laag zoekvolume maar hoge koopintentie.
+**Voorbeelden:** /collections/infrarood-verwarming-met-thermostaat, /collections/plaktegels-toilet (als het zoekvolume laag is)
+
+**Specs:**
+- Woordaantal: 300-500 woorden
+- H2 secties: 2-3
+- FAQ's: 2-3
+- Interne links: Terug naar pillar + naar gerelateerde sub
+
+---
+
+### DE DIFFERENTIATIE-CHECK (Verplicht voor elke pagina)
+
+Voordat je begint met schrijven, beantwoord deze 5 vragen:
+
+```
+1. PAGINANIVEAU: Is dit een A (pillar), B (ruimte-sub), C (kleur-sub) of D (long-tail)?
+2. KEYWORD CLUSTER: Welke keywords zijn UNIEK voor deze pagina en staan NIET op een andere pagina?
+3. WAT WEL: Welke content is SPECIFIEK voor deze pagina en kan nergens anders?
+4. WAT NIET: Welke content staat al op de pillar of een andere sub en mag hier NIET herhaald worden?
+5. OVERLAP-TEST: Zou ik deze zin ook op een andere pagina in de hiërarchie kunnen plakken? → Dan hoort hij hier niet.
+```
+
+### FAQ DEDUPLICATIE-REGEL [NIEUW v4.0]
+
+Geen twee pagina's in dezelfde silo mogen dezelfde FAQ beantwoorden. Voor elke FAQ:
+- Check of de vraag al op de pillar staat → zo ja, niet herhalen
+- Check of de vraag beter bij een andere sub past → zo ja, daar neerzetten
+- De vraag moet specifiek genoeg zijn dat hij alleen op DEZE pagina logisch is
+
+**Voorbeeld van wat NIET mag:**
+- Pillar FAQ: "Wat zijn plaktegels?" 
+- Keuken-sub FAQ: "Wat zijn plaktegels voor de keuken?"
+→ Dit is dezelfde vraag met "keuken" eraan geplakt. De keuken-sub mag deze vraag NIET hebben.
+
+**Voorbeeld van wat WEL mag:**
+- Pillar FAQ: "Wat zijn plaktegels?"
+- Keuken-sub FAQ: "Kan ik plaktegels achter een gaskookplaat plakken?"
+→ Dit is een unieke, ruimte-specifieke vraag die alleen op de keuken-sub logisch is.
 
 ---
 
 ## Deel 1: De 5W1H Content Methodologie
 
-Elke paragraaf of sectie moet minimaal 3 van deze 6 elementen bevatten:
+*(Ongewijzigd t.o.v. v3.0 — elke paragraaf of sectie moet minimaal 3 van de 6 elementen bevatten)*
 
 ### Het Framework
 
@@ -43,23 +241,13 @@ Elke paragraaf of sectie moet minimaal 3 van deze 6 elementen bevatten:
 ### De Gouden Regel
 
 ```
-âŒ SLECHT: "Reinig je sexpop met een toycleaner."
+❌ SLECHT: "Reinig je product met een schoonmaakmiddel."
 
-âœ… GOED: "Reinig je sexpop na elk gebruik met een speciale toycleaner.
-Waarom? Reguliere zeep kan het materiaal aantasten en laat een residu
-achter dat bacteriegroei bevordert. Zonder goede reiniging kan TPE
-binnen 6 maanden scheuren en verkleuren. Een toycleaner is pH-neutraal
-en speciaal ontwikkeld om siliconen en TPE te beschermen."
+✅ GOED: "Reinig je plaktegels na koken met een vochtige doek en 
+eventueel een milde ontvetter. Waarom? Keukenvet dat niet wordt 
+verwijderd kan de kleeflaag op termijn aantasten. Bij wekelijks 
+onderhoud blijven plaktegels jarenlang als nieuw."
 ```
-
-### Waarom dit ook voor GEO werkt
-
-AI-engines (ChatGPT, Gemini, Perplexity) citeren content die:
-- **Directe antwoorden** geeft op vragen (WAT + WAAROM)
-- **Specifieke cijfers** noemt (6 maanden, pH-neutraal)
-- **Consequenties** benoemt (wat als je het niet doet)
-
-Het 5W1H framework levert dit automatisch. Maar: AI-engines moeten de content ook *technisch* kunnen vinden en begrijpen. Dat is waar Deel 4 en 5 (GEO) bij komen.
 
 ---
 
@@ -68,892 +256,218 @@ Het 5W1H framework levert dit automatisch. Maar: AI-engines moeten de content oo
 ### GEEN Spec-Sheet Stijl
 
 ```
-âŒ SLECHT (spec-sheet):
+❌ SLECHT (spec-sheet):
 
-Torso's en half-body modellen
+Visgraat plaktegels
 
-Wat: Bovenlichaam of onderlichaam replica, meestal 5-15 kg
-Voor wie: Beginners, mensen met beperkte opslagruimte
-Waarom kiezen:
-â€¢ Makkelijk te hanteren
-â€¢ Binnen 5 minuten klaar
-â€¢ Prijsklasse â‚¬100-â‚¬400
-Nadeel: Minder immersieve ervaring
+Wat: Schuine legpatroon, diepte en beweging
+Voor wie: Moderne en landelijke keukens
+Waarom: Verbreden ruimte optisch
+Beschikbaar in: Wit, zwart, grijs, taupe
 
 ---
 
-âœ… GOED (prose):
+✅ GOED (prose):
 
-Torso's zijn bovenlichaam of onderlichaam replica's van meestal
-5-15 kg. Ze zijn ideaal voor beginners en mensen met beperkte
-opslagruimte. Waarom zo populair? Ze zijn makkelijk te hanteren,
-binnen 5 minuten klaar voor gebruik Ã©n opgeruimd, en met prijzen
-van â‚¬100-â‚¬400 zeer toegankelijk om te ontdekken of een sexpop
-bij je past. Het nadeel is dat de ervaring minder immersief is
-door ontbrekende lichaamsdelen - maar voor veel gebruikers weegt
-het gemak daar ruimschoots tegenop.
+Visgraat plaktegels voegen een verfijnd, ambachtelijk patroon toe aan 
+je keukenachterwand. Het schuine legpatroon creëert diepte en beweging 
+in de ruimte, waardoor zelfs een kleine keuken groter en interessanter 
+oogt. Ze zijn beschikbaar in kleuren van ingetogen wit tot stoer zwart — 
+combineer ze met een strak aanrechtblad voor een contrast dat direct opvalt.
 ```
 
-### Wanneer WEL bullet points gebruiken:
+### Wanneer WEL bullet points:
+- Stap-voor-stap instructies (aanbrengen, installatie)
+- USP-lijsten (maximaal 4-5 punten)
+- Directe vergelijkingslijsten (alleen als prose niet werkt)
 
-| Situatie | Bullet points OK? |
-|----------|-------------------|
-| Product type beschrijvingen | âŒ Nee, prose |
-| Voor/nadelen opsommen | âŒ Nee, prose |
-| Vergelijkingen (A vs B) | âŒ Nee, prose |
-| USP's van de webshop | âœ… Ja |
-| Stap-voor-stap instructies | âœ… Ja (+ HowTo schema) |
-| Lijsten van 5+ concrete items | âœ… Ja |
-
-### Geen tabellen in Shopify Rich Text
-
-Shopify's Rich Text metafield ondersteunt GEEN tabellen. Schrijf vergelijkingen als prose:
-
-```
-âŒ GEEN TABELLEN
-
-âœ… PROSE ALTERNATIEF:
-"Siliconen voelt steviger en gladder aan, is niet-poreus (dus
-hygiÃ«nischer), en kan 10+ jaar meegaan. Het nadeel: siliconen
-kost 2-3x meer dan TPE en voelt kouder aan. TPE daarentegen
-voelt zachter en huidachtiger aan, neemt lichaamswarmte over,
-en is betaalbaarder. Bij goed onderhoud gaat TPE 3-5 jaar mee."
-```
+### Wanneer NOOIT bullet points:
+- Productbeschrijvingen
+- Voordelen uitleggen (schrijf in prose)
+- FAQ-antwoorden
+- Soorten/types beschrijven
 
 ---
 
 ## Deel 3: Content Depth Scoring
 
-### Score Elke Sectie (0-10 punten)
+Elke H2-sectie scoort 0-10 punten:
 
-| Criterium | 0-2 punten | 3-5 punten | 6-8 punten | 9-10 punten |
-|-----------|------------|------------|------------|-------------|
-| **Diepgang** | Alleen WAT | WAT + HOE | WAT + HOE + WAAROM | Alle 5W1H |
-| **Consequenties** | Geen | Vaag benoemd | Specifiek benoemd | Met voorbeelden |
-| **Cijfers/Data** | Geen | Schattingen | Specifieke cijfers | Bronvermelding |
-| **Voorbeelden** | Geen | 1 voorbeeld | 2-3 voorbeelden | Scenario's |
-| **Alternatieven** | Geen | Genoemd | Vergeleken | Pro's/cons |
-| **GEO-gereedheid** | Geen structuur | Keyword-only | Entity + anchor IDs | Entity + schema + citeerbaar |
+| Criterium | 0 punten | 5 punten | 10 punten |
+|-----------|----------|----------|-----------|
+| 5W1H | Alleen WAT | WAT + WAAROM | WAT + WAAROM + HOE + consequenties |
+| Specificiteit | Generiek | Enkele details | Concrete cijfers, maten, tijden |
+| Consequenties | Geen | Voordelen benoemd | Wat als wel/niet + concreet gevolg |
+| Vergelijkingen | Geen | Vs. één alternatief | Vs. 2+ alternatieven met nuance |
+| Prose kwaliteit | Spec-sheet | Mix | Vloeiende paragrafen |
 
-### Minimum Scores per Paginatype
-
-| Paginatype | Minimum Score | Target Score |
-|------------|---------------|--------------|
-| Productpagina | 5/10 | 7/10 |
-| Categoriepagina / Dienstenpagina | 6/10 | 8/10 |
-| Blog/Gids | 7/10 | 9/10 |
-| FAQ antwoord | 6/10 | 8/10 |
-| Homepage (sectie-niveau) | 5/10 | 7/10 |
+**Minimumscore per paginaniveau:**
+- Pillar (A): minimaal 7 per H2
+- Ruimte-sub (B): minimaal 7 per H2
+- Kleur-sub (C): minimaal 6 per H2
+- Long-tail (D): minimaal 5 per H2
 
 ---
 
-## Deel 4: GEO â€” Entity & Schema Strategie [NIEUW]
+## Deel 4: GEO — Entity & Schema Strategie
 
-### Waarom dit ertoe doet
-
-Traditionele SEO denkt in keywords. GEO denkt in **entiteiten**: herkenbare concepten die AI-modellen aan elkaar koppelen. Een LLM zoekt niet naar "stucwerk Eindhoven" â€” het zoekt naar de *entiteit* "AfbouwZuid" en checkt of die gekoppeld is aan de entiteiten "stucwerk", "Eindhoven", "nieuwbouw afwerking".
+*(Ongewijzigd t.o.v. v3.0)*
 
 ### Entity Mapping (per pagina)
 
-Bepaal vÃ³Ã³r het schrijven:
+Definieer vóór het schrijven:
+- **1 primaire entiteit** (= het hoofdonderwerp, bijv. "plaktegels keuken")
+- **3-6 ondersteunende entiteiten** (gerelateerde concepten, bijv. "keukenachterwand", "3M-kleeflaag", "PVC wandtegel", "Wallways")
 
-```
-PRIMAIRE ENTITEIT (1x):
-Het hoofdonderwerp van de pagina. Dit is wat de pagina
-IS in de ogen van een AI-engine.
+### Entity regels:
+- Primaire entiteit in eerste 100 woorden + minimaal 1 heading
+- Ondersteunende entiteiten natuurlijk verwerkt in de tekst
+- Consistente benaming (niet afwisselen tussen synoniemen tenzij bewust)
+- Bedrijfsnaam minimaal 2x met inhoudelijke context
 
-Voorbeeld: "Traditioneel Stucwerk" (dienstenpagina)
-Voorbeeld: "AfbouwZuid" (homepage)
-Voorbeeld: "Sexpop Onderhoud" (gids-pagina)
+### Schema Markup per paginaniveau [AANGEPAST v4.0]:
 
-ONDERSTEUNENDE ENTITEITEN (3-6x):
-Concepten die context geven en de primaire entiteit
-verankeren in een kennisnetwerk.
-
-Voorbeeld bij "Traditioneel Stucwerk":
-- AfbouwZuid (merk/organisatie)
-- Nieuwbouw afwerking (categorie)
-- Brabant & Limburg (regio)
-- Sausklaar stucwerk (variant)
-- Sierpleister (variant)
-- Cementgebonden stucwerk (materiaal)
-```
-
-### Entity Regels
-
-1. **Primaire entiteit in de eerste 100 woorden** van de pagina
-2. **Primaire entiteit in minimaal 1 heading** (H1 of H2)
-3. **Consistente benaming**: kies Ã©Ã©n term en gebruik die consequent
-   - Goed: "stucwerk" overal, met "stukadoorswerk" als eenmalige variatie
-   - Slecht: afwisselen tussen "stucwerk", "pleisterwerk", "stukadoorswerk", "bepleistering"
-4. **Ondersteunende entiteiten** natuurlijk verwerken in de eerste 3 alinea's
-5. **Organisatie-entiteit** (bedrijfsnaam) minimaal 2x per pagina benoemen met context
-   - Goed: "Bij AfbouwZuid werken we uitsluitend met cementgebonden stucwerk"
-   - Slecht: "Neem contact op met AfbouwZuid" (geen inhoudelijke koppeling)
-
-### Schema Types per Paginatype
-
-| Paginatype | Verplichte Schema | Optioneel |
-|------------|-------------------|-----------|
-| **Homepage** | Organization, LocalBusiness, FAQPage | WebSite, SiteNavigationElement |
-| **Dienstenpagina** | Service, FAQPage, BreadcrumbList | HowTo (als er stappen zijn) |
-| **Categoriepagina** | CollectionPage, FAQPage, BreadcrumbList | Product (als items getoond) |
-| **Productpagina** | Product, FAQPage, BreadcrumbList | AggregateRating, Offer |
-| **Blog/Gids** | Article, FAQPage, BreadcrumbList | HowTo, VideoObject |
-| **Contactpagina** | LocalBusiness, ContactPoint | - |
-| **Projecten/Portfolio** | CreativeWork of ImageGallery | - |
-
-### LocalBusiness Schema â€” Basistemplate
-
-Elke bedrijfssite MOET dit bevatten op de homepage:
-
-```json
-{
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "@id": "https://www.bedrijf.nl/#organization",
-  "name": "Bedrijfsnaam",
-  "description": "Korte beschrijving met primaire entiteit en regio",
-  "url": "https://www.bedrijf.nl",
-  "telephone": "+31612345678",
-  "email": "info@bedrijf.nl",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Straatnaam 1",
-    "addressLocality": "Stad",
-    "addressRegion": "Provincie",
-    "postalCode": "1234 AB",
-    "addressCountry": "NL"
-  },
-  "areaServed": [
-    { "@type": "State", "name": "Noord-Brabant" },
-    { "@type": "State", "name": "Limburg" }
-  ],
-  "hasOfferCatalog": {
-    "@type": "OfferCatalog",
-    "name": "Diensten",
-    "itemListElement": [
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Stucwerk" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Schilderwerk" } }
-    ]
-  },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "9.7",
-    "ratingCount": "200",
-    "bestRating": "10"
-  }
-}
-```
-
-### Service Schema â€” Per Dienstenpagina
-
-```json
-{
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "@id": "https://www.bedrijf.nl/stucwerk/#service",
-  "name": "Traditioneel Stucwerk",
-  "description": "Cementgebonden stucwerk voor nieuwbouw en renovatie in Brabant en Limburg",
-  "provider": { "@id": "https://www.bedrijf.nl/#organization" },
-  "areaServed": [
-    { "@type": "State", "name": "Noord-Brabant" },
-    { "@type": "State", "name": "Limburg" }
-  ],
-  "serviceType": "Stucwerk",
-  "offers": {
-    "@type": "Offer",
-    "priceSpecification": {
-      "@type": "UnitPriceSpecification",
-      "priceCurrency": "EUR",
-      "price": "15-35",
-      "unitText": "per mÂ²"
-    }
-  }
-}
-```
-
-### Stabiele @id Waarden
-
-Gebruik **altijd** een vast `@id` patroon zodat AI-engines dezelfde entiteit herkennen over meerdere pagina's:
-
-```
-Organisatie:    https://www.bedrijf.nl/#organization
-Service:        https://www.bedrijf.nl/[dienst]/#service
-Contactpunt:    https://www.bedrijf.nl/#contact
-Website:        https://www.bedrijf.nl/#website
-```
-
-Dit voorkomt duplicatie en versterkt de entiteitsherkenning.
+| Niveau | Schema types |
+|--------|-------------|
+| Pillar (A) | CollectionPage + FAQPage + BreadcrumbList + Organization (homepage) |
+| Ruimte-sub (B) | CollectionPage + FAQPage + BreadcrumbList |
+| Kleur-sub (C) | CollectionPage + FAQPage + BreadcrumbList |
+| Long-tail (D) | CollectionPage + BreadcrumbList |
 
 ---
 
-## Deel 5: GEO â€” Citability & AI-Leesbaarheid [NIEUW]
+## Deel 5: GEO — Citability & AI-Leesbaarheid
 
-### Het probleem
+*(Ongewijzigd t.o.v. v3.0)*
 
-Je content kan perfect geschreven zijn voor mensen, maar als een AI-engine het niet kan "knippen" en citeren, besta je niet in AI-zoekresultaten.
-
-### Citability Regels
-
-#### 1. Front-load antwoorden
-
-Elke sectie en elk FAQ-antwoord begint met het directe antwoord in de eerste zin. De uitleg volgt daarna.
-
-```
-âŒ SLECHT (begraven antwoord):
-"Er zijn veel factoren die meespelen bij de keuze voor stucwerk.
-Het hangt af van de staat van je muren, je budget, en het gewenste
-eindresultaat. Over het algemeen kost stucwerk tussen de â‚¬15 en â‚¬35 per mÂ²."
-
-âœ… GOED (front-loaded):
-"Stucwerk kost gemiddeld â‚¬15 tot â‚¬35 per mÂ², afhankelijk van het type
-afwerking en de staat van de ondergrond. Sausklaar stucwerk zit rond
-â‚¬15-â‚¬20, sierpleister tussen â‚¬25-â‚¬35. De spreiding komt doordat een
-nieuwbouwmuur die al vlak is minder voorbereiding vraagt dan een
-renovatiewand met scheuren of oud behang."
-```
-
-**Waarom?** AI-engines knippen vaak de eerste 1-2 zinnen als antwoord. Als je antwoord in zin 3 of later staat, wordt een concurrent geciteerd.
-
-#### 2. Anchor IDs op elke sectie
-
-Voeg `id`-attributen toe aan elke H2 en H3 zodat AI-engines naar specifieke fragmenten kunnen verwijzen, niet alleen naar hele pagina's.
-
-```html
-<h2 id="stucwerk-kosten">Wat kost stucwerk per mÂ²?</h2>
-<h2 id="soorten-stucwerk">Soorten stucwerk</h2>
-<h3 id="sausklaar-stucwerk">Sausklaar stucwerk</h3>
-<h3 id="sierpleister">Sierpleister</h3>
-<section id="faq">...</section>
-```
-
-**Patroon:** `[onderwerp]-[aspect]` in kebab-case.
-
-#### 3. Zelfstandige secties
-
-Elke H2-sectie moet op zichzelf begrijpbaar zijn, zonder dat de lezer (of AI) de rest van de pagina heeft gelezen.
-
-```
-âŒ SLECHT (context-afhankelijk):
-"Zoals hierboven beschreven, is dit ook van toepassing op het materiaal."
-
-âœ… GOED (zelfstandig):
-"TPE-materiaal is poreus, waardoor bacteriÃ«n zich in de poriÃ«n
-nestelen als je niet binnen 30 minuten na gebruik reinigt."
-```
-
-#### 4. Context-woorden vooraan
-
-AI-engines herkennen antwoordtypen sneller als je context-woorden aan het begin plaatst:
-
-| Context-woord | Gebruik bij |
-|---------------|------------|
-| **Prijs / Kosten** | Prijsvragen ("Stucwerk kost â‚¬15-35 per mÂ²") |
-| **Tijdsduur / Doorlooptijd** | Tijdsvragen ("Het stucen van een gemiddelde woning duurt 2-3 dagen") |
-| **Verschil** | Vergelijkingsvragen ("Het verschil tussen sausklaar en sierpleister is...") |
-| **Voordeel / Nadeel** | Keuzevragen ("Het voordeel van TPE is de zachte aanvoeling") |
-| **Stap 1, Stap 2** | Instructievragen |
-
-#### 5. Maximale citeerbare blokken
-
-Houd FAQ-antwoorden tussen 50-150 woorden. Houd prose-paragrafen op maximaal 4-5 zinnen. Elke paragraaf bevat maximaal **Ã©Ã©n kernboodschap** die een AI kan extraheren.
-
-**Vuistregel:** Als je een paragraaf niet kunt samenvatten in Ã©Ã©n zin, splits hem op.
-
-#### 6. Vermijd vage verwijzingen
-
-```
-âŒ SLECHT: "Dit product", "deze methode", "het bovenstaande"
-âœ… GOED: Herhaal de entiteitsnaam: "Sausklaar stucwerk", "de toycleaner", "airless spuittechniek"
-```
-
-AI-engines extraheren fragmenten uit context. Als een fragment "dit product" bevat, is het waardeloos als citatie.
+- Front-load elk antwoord (direct antwoord in zin 1)
+- Anchor IDs op alle H2's en H3's (id="kebab-case")
+- Elke sectie moet zelfstandig leesbaar zijn zonder de rest van de pagina
+- Herhaal entiteitsnamen, GEEN "dit", "deze", "het bovenstaande"
+- Context-woorden aan begin van secties: prijs, kosten, tijdsduur, verschil, voordeel
+- FAQ-antwoorden 50-150 woorden (citeerbare lengte)
 
 ---
 
-## Deel 6: De Mega Content Prompt
+## Deel 6: De Mega Content Prompt (v4.0)
 
-### Instructies voor Content Generatie
-
-```markdown
-# CONTEXT
-Je schrijft SEO + GEO content voor een website/webshop. De content moet:
-- Ranken in Google (SEO)
-- Geciteerd worden door AI assistants zoals ChatGPT, Gemini, Perplexity (GEO)
-- Bezoekers converteren naar klanten
-- Echte waarde bieden aan de lezer
-
-# TONE OF VOICE
-- Informatief maar toegankelijk
-- Professioneel zonder klinisch te zijn
-- Behulpzaam en niet oordelend
-- Direct, geen wollig taalgebruik
-- Nederlands (geen Belgisch)
-
-# 5W1H VERPLICHTING
-Elke sectie MOET minimaal bevatten:
-1. WAT - Wat is/doet het onderwerp
-2. WAAROM - Waarom is dit belangrijk/relevant
-3. Plus minimaal 1 van: WIE, WAAR, WANNEER, HOE
-
-# CONSEQUENTIE REGEL
-Bij elke instructie of advies, beantwoord:
-- "Wat gebeurt er als je dit WEL doet?" (positief)
-- "Wat gebeurt er als je dit NIET doet?" (negatief)
-- Gebruik specifieke cijfers waar mogelijk (tijdsduur, percentages, euro's)
-
-# GEO VERPLICHTINGEN [NIEUW v3.0]
-1. ENTITY MAPPING: Bepaal 1 primaire entiteit + 3-6 ondersteunende entiteiten
-2. FRONT-LOADING: Elk antwoord begint met het directe antwoord in zin 1
-3. ANCHOR IDS: Elke H2/H3 krijgt een id-attribuut (kebab-case)
-4. ZELFSTANDIGHEID: Elke sectie is begrijpelijk zonder de rest van de pagina
-5. GEEN VAGE VERWIJZINGEN: Herhaal entiteitsnamen, geen "dit", "deze", "het bovenstaande"
-6. CONTEXT-WOORDEN: Front-load met prijs/kosten/tijdsduur/verschil/voordeel
-
-# VOORBEELD FORMAAT
-
-## [H2: Onderwerp met keyword â€” id="onderwerp-keyword"]
-
-[Opening: 1-2 zinnen WAT het is â€” primaire entiteit in eerste zin]
-
-[Uitleg WAAROM dit belangrijk is â€” consequenties noemen]
-
-[HOE je het doet â€” stap voor stap indien nodig]
-
-[WIE dit vooral moet weten / WANNEER dit van toepassing is]
-
-[Eventueel: vergelijking met alternatieven]
-
-# INTERNE LINKS
-Verwerk minimaal [X] interne links naar:
-- Gerelateerde producten/categorieÃ«n/diensten
-- Ondersteunende producten (glijmiddel, cleaner, etc.)
-- Contact/advies pagina
-
-Anchor text variatie:
-- 30% exact match keyword
-- 40% partial match / natuurlijke tekst
-- 30% branded of generiek
-
-# STRUCTUUR EISEN
-
-## Voor Dienstenpagina's (bijv. afbouw, installatie, etc.):
-- H1: [Dienst] + regio/kwalificatie keyword
-- Intro: 150-200 woorden (WAT + VOOR WIE + WAAR)
-- H2: Wat is [dienst]? (definitie + entiteit)
-- H2: Soorten [dienst] (met H3 per type)
-- H2: Hoe kiezen / wanneer inzetten (beslissingscriteria)
-- H2: Ons werkproces (HOE + vertrouwen)
-- H2: [Dienst] bij [Bedrijfsnaam] (CONVERSIE)
-- FAQ: 5-8 vragen met uitgebreide antwoorden
-- Schema: Service + FAQPage + BreadcrumbList
-
-## Voor Categoriepagina's (Shopify):
-- H1: [Categorie] + koopintentie keyword
-- Intro: 150-200 woorden (WAT + VOOR WIE)
-- H2: Soorten/Types (WELKE varianten)
-- H2: Hoe kies je (BESLISSINGSCRITERIA)
-- H2: Gebruik en onderhoud (HOE + WAAROM)
-- H2: Kopen bij [Bedrijfsnaam] (CONVERSIE)
-- FAQ: 5-8 vragen met uitgebreide antwoorden
-- Schema: CollectionPage + FAQPage + BreadcrumbList
-
-## Voor Productpagina's:
-- H1: [Productnaam] + eigenschap
-- Intro: 100-150 woorden
-- H2: Kenmerken/Wat maakt dit product uniek
-- H2: Voor wie geschikt
-- H2: Hoe te gebruiken
-- H2: Specificaties
-- FAQ: 3-5 product-specifieke vragen
-- Schema: Product + FAQPage + BreadcrumbList
-
-## Voor Blog/Gidsen:
-- H1: [Vraag/Onderwerp] + keyword
-- Intro: 100-150 woorden met kernantwoord IN ZIN 1 (GEO!)
-- H2's: Logische opbouw van onderwerp
-- H3's: Subsecties waar nodig
-- Conclusie: Samenvatting + CTA
-- FAQ: 3-5 vragen die niet in hoofdtekst staan
-- Schema: Article + FAQPage + BreadcrumbList
-
-## Voor Homepage's:
-- H1: [Bedrijfsnaam] + primaire dienst/product + regio
-- Intro: 100-150 woorden (WAT + WIE + WAAR â€” alle entiteiten benoemen)
-- Secties: kort maar krachtig (WAT + WAAROM + 1 trust signal per sectie)
-- FAQ: 5 vragen (breed, niet dienstspecifiek)
-- Schema: Organization + LocalBusiness + FAQPage + WebSite
-
-# CONVERSIE ELEMENTEN
-Verwerk natuurlijk in de tekst:
-- USP's van het bedrijf
-- Trust signals (reviews, ervaring, garantie, certificeringen)
-- Urgentie waar gepast (beschikbaarheid, seizoen)
-- Duidelijke CTA's
-
-# VERBODEN
-- Medische claims zonder nuance
-- Overdreven superlatieven ("de allerbeste")
-- Keyword stuffing
-- Dunne content zonder waarde
-- Copy-paste van concurrenten
-- Alleen WAT zonder WAAROM
-- Vage verwijzingen ("dit", "deze", "het bovenstaande") [NIEUW v3.0]
-- Context-afhankelijke secties die niet zelfstandig leesbaar zijn [NIEUW v3.0]
-```
-
----
-
-## Deel 7: Content Checklist (Per Sectie)
-
-### Voor ELKE H2 sectie, check:
-
-```markdown
-â–¡ VOLLEDIGHEID
-  â–¡ WAT is duidelijk uitgelegd?
-  â–¡ WAAROM is benoemd (belang/consequenties)?
-  â–¡ Minimaal 1 extra W (wie/waar/wanneer/hoe)?
-
-â–¡ DIEPGANG
-  â–¡ Specifieke cijfers/data genoemd?
-  â–¡ Concrete voorbeelden gegeven?
-  â–¡ Alternatieven/vergelijkingen gemaakt?
-  â–¡ Consequenties van WEL/NIET doen?
-
-â–¡ SEO
-  â–¡ Target keyword in eerste 100 woorden?
-  â–¡ Gerelateerde keywords natuurlijk verwerkt?
-  â–¡ Minimaal 1 interne link?
-  â–¡ Heading bevat zoekterm?
-
-â–¡ GEO / AI-VINDBAARHEID [NIEUW v3.0]
-  â–¡ Primaire entiteit benoemd in eerste 100 woorden?
-  â–¡ Anchor ID op H2/H3 (id="onderwerp-aspect")?
-  â–¡ Antwoord front-loaded (direct antwoord in eerste zin)?
-  â–¡ Sectie is zelfstandig leesbaar zonder context?
-  â–¡ Ondersteunende entiteiten (3-6) natuurlijk verwerkt?
-  â–¡ Geen vage verwijzingen ("dit", "deze", "het bovenstaande")?
-  â–¡ Context-woord aan begin (prijs/tijdsduur/verschil/voordeel)?
-  â–¡ Schema type bepaald voor deze pagina?
-
-â–¡ LEESBAARHEID
-  â–¡ Zinnen max 20 woorden gemiddeld?
-  â–¡ Paragrafen max 4-5 zinnen?
-  â–¡ EÃ©n kernboodschap per paragraaf?
-  â–¡ Bullet points waar logisch?
-  â–¡ Geen jargon zonder uitleg?
-
-â–¡ CONVERSIE
-  â–¡ Voordeel voor lezer duidelijk?
-  â–¡ Logische link naar product/dienst?
-  â–¡ Trust element aanwezig?
-```
-
----
-
-## Deel 8: Voorbeeld â€” Slechte vs Goede Content
-
-### Onderwerp: Onderhoud van een sexpop
-
----
-
-### âŒ SLECHTE CONTENT (Score: 2/10)
+### STAP 1: Vul de differentiatie-check in
 
 ```
-## Onderhoud
-
-Maak je sexpop schoon na gebruik. Gebruik een toycleaner.
-Berg hem op een droge plek op. Gebruik glijmiddel tijdens gebruik.
-```
-
-**Wat mist:**
-- âŒ Geen WAAROM
-- âŒ Geen consequenties
-- âŒ Geen specifieke instructies
-- âŒ Geen cijfers/tijden
-- âŒ Geen voorbeelden
-- âŒ Geen alternatieven
-- âŒ Geen anchor ID
-- âŒ Geen front-loaded antwoord
-- âŒ Niet zelfstandig leesbaar (geen context)
-- âŒ Geen entity benoeming
-
----
-
-### âœ… GOEDE CONTENT (Score: 9/10)
-
-```html
-<h2 id="onderhoud-sexpop">Onderhoud en verzorging van je sexpop</h2>
-
-<p>Een goede verzorging verlengt de levensduur van je sexpop met jaren.
-Met het juiste onderhoud gaat een kwaliteitsmodel 3-5 jaar mee.
-Zonder onderhoud? Dan zie je binnen 6 maanden al scheurtjes,
-verkleuring en onaangename geurtjes ontstaan.</p>
-
-<h3 id="reinigen-na-gebruik">Reinigen na gebruik</h3>
-
-<p><strong>Wanneer:</strong> Direct na elk gebruik, binnen 30 minuten.</p>
-
-<p><strong>Waarom reinigen cruciaal is:</strong> Lichaamsvloeistoffen en
-glijmiddel trekken in het materiaal als je te lang wacht. TPE is
-poreus â€” bacteriÃ«n nestelen zich in de poriÃ«n en zijn dan bijna
-niet meer te verwijderen. Dit veroorzaakt niet alleen geurtjes,
-maar kan ook huidirritatie of infecties veroorzaken bij hergebruik.</p>
-
-<p><strong>Hoe je je sexpop reinigt:</strong></p>
-<ol>
-<li>Spoel eerst met lauw water (niet heet â€” dat beschadigt TPE)</li>
-<li>Gebruik een <a href="/collections/toycleaner">speciale toycleaner</a> â€”
-geen gewone zeep! Zeep laat een residu achter en verstoort de
-pH-balans van het materiaal</li>
-<li>Dep droog met een pluisvrije doek (geen handdoek â€” pluisjes
-blijven plakken)</li>
-<li>Laat 2-3 uur drogen voordat je opbergt</li>
-</ol>
-
-<p><strong>Tip:</strong> Investeer in een toycleaner spray (â‚¬8-12) in plaats
-van de doekjes. Goedkoper per gebruik en grondiger.</p>
-
-<h3 id="opslag-sexpop">Opslag</h3>
-
-<p>De ideale opslagtemperatuur voor je sexpop ligt tussen 15-25Â°C.
-TPE en siliconen zijn gevoelig voor UV-licht en warmte. Direct zonlicht
-veroorzaakt binnen weken verkleuring. Warmte boven 30Â°C maakt het
-materiaal kleverig en versnelt degradatie.</p>
-
-<p>Berg je sexpop liggend of hangend op, nooit opgevouwen â€” dat
-veroorzaakt permanente vouwen in het materiaal. Gebruik geen plastic
-zak (geen ventilatie = schimmelrisico) en zorg dat de pop niet tegen
-andere toys aan ligt, omdat materialen chemisch kunnen reageren.</p>
-
-<h3 id="onderhoud-tussen-gebruik">Onderhoud tussen gebruik door</h3>
-
-<p>Strooi elke 2-4 weken maÃ¯zenapoeder of speciaal renewingpoeder
-over het oppervlak van je sexpop. Dit houdt de huid zacht en voorkomt
-dat het materiaal kleverig wordt. De behandeling kost 5 minuten maar
-verdubbelt de levensduur van het materiaal.</p>
-
-<p><strong>Let op:</strong> Gebruik NOOIT talkpoeder â€” dit bevat stoffen
-die schadelijk kunnen zijn bij contact met slijmvliezen.</p>
-```
-
-**Wat deze versie goed doet:**
-- âœ… WAAROM bij elke instructie
-- âœ… Consequenties (positief Ã©n negatief)
-- âœ… Specifieke cijfers (30 min, 2-3 uur, 6 maanden, 3-5 jaar)
-- âœ… Concrete stappen
-- âœ… Alternatieven en vergelijkingen
-- âœ… Wat NIET te doen (en waarom)
-- âœ… Interne link naar product
-- âœ… Prijsindicatie
-- âœ… Tips voor besparing/verbetering
-- âœ… **Anchor IDs** op elke H2/H3 (GEO)
-- âœ… **Front-loaded antwoorden** (GEO)
-- âœ… **Zelfstandige secties** â€” elk blok leesbaar zonder context (GEO)
-- âœ… **Entiteitsnamen herhaald** â€” "sexpop", "TPE", "toycleaner" (GEO)
-- âœ… **Geen vage verwijzingen** (GEO)
-
----
-
-## Deel 9: FAQ Quality Framework
-
-### Slechte FAQ (Score: 3/10)
-
-```
-V: Hoe reinig ik mijn sexpop?
-A: Met een toycleaner en water.
-```
-
-### Goede FAQ (Score: 8/10, SEO + GEO proof)
-
-```
-V: Hoe reinig ik mijn sexpop het beste?
-
-A: Reinig je sexpop binnen 30 minuten na gebruik met lauw water
-en een speciale toycleaner. Gebruik nooit gewone zeep â€” dit laat
-een residu achter dat bacteriegroei bevordert en het materiaal
-aantast. Spoel grondig af, dep droog met een pluisvrije doek,
-en laat 2-3 uur volledig drogen voordat je opbergt. Bij modellen
-met uitneembare inserts kun je deze apart reinigen, wat het
-proces makkelijker maakt.
-```
-
-**GEO-check voor deze FAQ:**
-- âœ… Direct antwoord in eerste zin ("Reinig je sexpop binnen 30 minuten...")
-- âœ… Specifiek cijfer front-loaded ("30 minuten", "2-3 uur")
-- âœ… Zelfstandig leesbaar zonder rest van pagina
-- âœ… Entiteitsnaam herhaald ("sexpop", "toycleaner")
-- âœ… 50-150 woorden (ideale citeerbare lengte)
-- âœ… Geen vage verwijzingen
-
-### FAQ Checklist (v3.0)
-
-```markdown
-â–¡ Vraag bevat zoekterm/keyword?
-â–¡ Antwoord begint met directe beantwoording? (GEO: VERPLICHT)
-â–¡ Antwoord bevat WAAROM/consequentie?
-â–¡ Specifieke cijfers/tijden genoemd?
-â–¡ Praktische tip of alternatief?
-â–¡ 50-150 woorden (niet te kort, niet te lang)?
-â–¡ Zelfstandig leesbaar zonder pagina-context? (GEO)
-â–¡ Entiteitsnamen herhaald, geen "dit/deze"? (GEO)
-â–¡ FAQPage schema markup aanwezig? (GEO)
-```
-
-### FAQ Schema Markup (JSON-LD)
-
-Bij ELKE FAQ-sectie hoort deze markup in de `<head>` of onderaan de pagina:
-
-```json
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Hoe reinig ik mijn sexpop het beste?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Reinig je sexpop binnen 30 minuten na gebruik met lauw water en een speciale toycleaner. Gebruik nooit gewone zeep â€” dit laat een residu achter dat bacteriegroei bevordert en het materiaal aantast."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Wat kost stucwerk per mÂ²?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Stucwerk kost gemiddeld â‚¬15 tot â‚¬35 per mÂ², afhankelijk van het type afwerking en de staat van de ondergrond. Sausklaar stucwerk zit rond â‚¬15-â‚¬20, sierpleister tussen â‚¬25-â‚¬35."
-      }
-    }
-  ]
-}
-```
-
----
-
-## Deel 10: Interne Linking Gids
-
-### Link Contextueel, Niet Random
-
-```markdown
-âŒ SLECHT:
-"Bekijk ook onze andere producten."
-
-âœ… GOED:
-"Voor optimaal comfort en bescherming van het materiaal
-raden we aan om altijd een [glijmiddel op waterbasis](/collections/glijmiddelen)
-te gebruiken. Siliconen-glijmiddelen kunnen namelijk reageren met
-siliconen toys en het oppervlak beschadigen."
-```
-
-### Link Mapping per Productcategorie (Webshop)
-
-| Categorie | Altijd linken naar | Context |
-|-----------|-------------------|---------|
-| Sexpoppen | Glijmiddel, Toycleaner, Masturbators | Onderhoud, alternatieven |
-| Vibrators | Glijmiddel, Toycleaner, Batterijen | Gebruik, onderhoud |
-| Dildo's | Glijmiddel, Harnassen, Zuignap info | Gebruik, combinaties |
-| BDSM | Toycleaner, Glijmiddel, Veiligheid | HygiÃ«ne, veilig gebruik |
-| Lingerie | Verzorging, Gerelateerde sets | Onderhoud, combineren |
-
-### Link Mapping per Dienstenpagina (Bedrijfssite)
-
-| Dienst | Altijd linken naar | Context |
-|--------|-------------------|---------|
-| Stucwerk | Schilderwerk, Latexspuiten, Projecten | Vervolg, combinatie |
-| Schilderwerk | Stucwerk, Lakwerk, Projecten | Voorbereiding, aanvulling |
-| Vloeren | Traprenovatie, Totaalpakket, Contact | Combinatie, upsell |
-| Traprenovatie | Vloeren, Schilderwerk, Contact | Combinatie, afwerking |
-| Totaalpakket | Alle individuele diensten, Projecten | Overzicht, verdieping |
-
-### Anchor Text Variatie
-
-```markdown
-Per 1000 woorden content, streef naar:
-
-â–¡ 2-3 exact match anchors: "stucwerk", "traprenovatie"
-â–¡ 2-3 partial match: "professioneel stucwerk in Brabant"
-â–¡ 1-2 branded: "bekijk de AfbouwZuid aanpak"
-â–¡ 1-2 generiek: "bekijk onze werkwijze", "lees meer"
-```
-
----
-
-## Deel 11: Schema Markup Implementatie Gids [NIEUW]
-
-### Waar plaatsen?
-
-Schema markup wordt altijd als JSON-LD geplaatst in een `<script>` tag:
-
-```html
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "...",
-  ...
-}
-</script>
-```
-
-**Plaatsing:** In de `<head>` van de pagina, of direct vÃ³Ã³r `</body>`. EÃ©n `<script>` blok per schema type, of alles in een `@graph` array combineren.
-
-### Implementatie per Platform
-
-#### Next.js / Headless
-
-```jsx
-// components/SchemaMarkup.tsx
-export function SchemaMarkup({ data }) {
-  return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
-    />
-  );
-}
-
-// Gebruik in pagina:
-<Head>
-  <SchemaMarkup data={localBusinessSchema} />
-  <SchemaMarkup data={faqSchema} />
-</Head>
-```
-
-#### Shopify
-
-In Shopify gebruik je Liquid in `theme.liquid` of per template:
-
-```liquid
-{% if template contains 'collection' %}
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "CollectionPage",
-  "name": "{{ collection.title }}",
-  "description": "{{ collection.description | strip_html | escape }}",
-  "url": "{{ shop.url }}{{ collection.url }}"
-}
-</script>
-{% endif %}
-```
-
-#### WordPress
-
-Gebruik Rank Math of Yoast SEO plugin, of voeg handmatig JSON-LD toe via `wp_head` hook.
-
-### Validatie
-
-Na implementatie ALTIJD valideren:
-
-1. **Google Rich Results Test:** https://search.google.com/test/rich-results
-2. **Schema.org Validator:** https://validator.schema.org/
-3. **Handmatig testen:** Zoek je eigen pagina in Google, check of rich results verschijnen
-
-### Prioriteit Schema Types (van hoog naar laag)
-
-| Prioriteit | Schema Type | Impact op GEO |
-|------------|------------|---------------|
-| ðŸ”´ Kritiek | FAQPage | Hoogste citatie-kans in AI-resultaten |
-| ðŸ”´ Kritiek | Organization / LocalBusiness | Entiteitsherkenning door AI |
-| ðŸŸ  Hoog | Service / Product | Vergelijkingen en aanbevelingen |
-| ðŸŸ  Hoog | BreadcrumbList | Sitestructuur begrip |
-| ðŸŸ¡ Medium | Article | Blogcontent citatie |
-| ðŸŸ¡ Medium | HowTo | Stap-voor-stap citatie |
-| ðŸŸ¢ Nice-to-have | AggregateRating | Trust signaal |
-| ðŸŸ¢ Nice-to-have | VideoObject | Multimedia indexering |
-
----
-
-## Deel 12: Content Audit Scorecard (v3.0)
-
-### Gebruik voor bestaande content
-
-```markdown
-# Content Audit: [Pagina URL]
-Datum: [DATUM]
-Auditor: [NAAM]
-
-## Scores (1-10)
-
-### Volledigheid (SEO)
-- [ ] WAT uitgelegd: _/10
-- [ ] WAAROM benoemd: _/10
-- [ ] HOE beschreven: _/10
-- [ ] Consequenties: _/10
-**Subtotaal:** _/40
-
-### SEO Technisch
-- [ ] H1 met keyword: _/10
-- [ ] H2 structuur logisch: _/10
-- [ ] Meta title optimaal: _/10
-- [ ] Meta description: _/10
-- [ ] Interne links (min 3): _/10
-**Subtotaal:** _/50
-
-### Diepgang
-- [ ] Specifieke cijfers: _/10
-- [ ] Concrete voorbeelden: _/10
-- [ ] Vergelijkingen/alternatieven: _/10
-- [ ] Expert-niveau info: _/10
-**Subtotaal:** _/40
-
-### Conversie
-- [ ] USP's verwerkt: _/10
-- [ ] Trust signals: _/10
-- [ ] CTA aanwezig: _/10
-- [ ] Productlinks/Dienstlinks: _/10
-**Subtotaal:** _/40
-
-### GEO / AI-Vindbaarheid [NIEUW v3.0]
-- [ ] Entity mapping aanwezig (primair + ondersteunend): _/10
-- [ ] Schema markup geÃ¯mplementeerd (juiste types): _/10
-- [ ] Antwoorden front-loaded (direct in eerste zin): _/10
-- [ ] Anchor IDs op alle H2/H3: _/10
-- [ ] Secties zelfstandig leesbaar: _/10
-- [ ] Geen vage verwijzingen: _/10
-- [ ] FAQ's in citeerbaar formaat (50-150 woorden): _/10
-**Subtotaal:** _/70
-
-## TOTAAL: _/240
-
-### Beoordeling
-- 200-240: Excellent âœ… (SEO + GEO proof)
-- 160-199: Goed, kleine verbeteringen
-- 120-159: Matig, revisie nodig (waarschijnlijk GEO-gaps)
-- <120: Herschrijven nodig
-
-## Actie Items
-1. [Specifieke verbetering]
-2. [Specifieke verbetering]
-3. [Specifieke verbetering]
-```
-
----
-
-## Deel 13: Snelle Referentie Prompts (v3.0)
-
-### Voor Nieuwe Categorie Content (Shopify Metafields)
-
-```
-Schrijf SEO + GEO content voor de categoriepagina: [CATEGORIE]
+===================
+PRE-WRITING: DIFFERENTIATIE CHECK [VERPLICHT]
+===================
+
+PAGINA: [URL]
+PAGINANIVEAU: [A/B/C/D - kies één]
+  A = Pillar/Hub (hoofdcollectie)
+  B = Subcollectie — Ruimte/Toepassing
+  C = Subcollectie — Kleur/Stijl/Materiaal
+  D = Long-tail / Support
+
+PILLAR PAGE (alleen voor B/C/D): [URL van de hoofdcollectie waar deze onder hangt]
+
+PRIMAIRE KEYWORDS (uniek voor deze pagina):
+- [keyword 1] ([zoekvolume])
+- [keyword 2] ([zoekvolume])
+
+KEYWORDS DIE IK NIET TARGET (staan op andere pagina):
+- [keyword] → staat op [URL]
+- [keyword] → staat op [URL]
 
 ENTITY MAPPING:
-- Primaire entiteit: [bijv. "vibrators"]
-- Ondersteunende entiteiten: [bijv. "clitoris vibrator", "G-spot vibrator",
-  "Satisfyer", "Erotheek Hengelo", "seksuele stimulatie"]
+- Primaire entiteit: [invullen]
+- Ondersteunende entiteiten: [3-6 invullen]
 
-VEREISTEN:
-- 1000-1500 woorden voor SEO content
-- 5 H2 secties (deze worden TOC items)
-- H3 subsecties waar logisch
-- 8 FAQ vragen met uitgebreide antwoorden
-- Minimaal 5 interne links
-- Elke sectie bevat WAT + WAAROM + consequenties
-- Specifieke cijfers waar mogelijk
-- Tone: informatief, behulpzaam, niet oordelend
+WAT WEL OP DEZE PAGINA (unieke content):
+- [onderwerp 1]
+- [onderwerp 2]
+- [onderwerp 3]
 
-SCHRIJFSTIJL - CRUCIAAL:
+WAT NIET OP DEZE PAGINA (staat elders):
+- [onderwerp] → staat op [URL]
+- [onderwerp] → staat op [URL]
+
+INTERNE LINKS NAAR:
+- [URL] (pillar - terug linken)
+- [URL] (gerelateerde sub)
+- [URL] (cross-silo)
+- /pages/contact
+```
+
+### STAP 2: Schrijf de content met niveau-specifieke instructies
+
+```
+===================
+CONTENT INSTRUCTIES
+===================
+
+Schrijf SEO + GEO content voor: [PAGINA TITEL]
+Paginaniveau: [A/B/C/D]
+
+--- ALS NIVEAU A (PILLAR) ---
+
+WOORDAANTAL: 1200-1500
+STRUCTUUR:
+1. H2: Wat zijn [categorie]? (max 150 woorden, brede definitie)
+2. H2: Soorten [categorie] (H3 per type, max 2-3 zinnen per type + link naar sub)
+3. H2: [Categorie] per ruimte/toepassing (H3 per ruimte, max 2-3 zinnen + link naar ruimte-sub)
+4. H2: Voordelen / Vergelijking met alternatieven (generiek)
+5. H2: [Categorie] aanbrengen / Hoe werkt het (generiek stappenplan)
+6. H2: [Categorie] kopen bij [Bedrijf]
+FAQ's: 5-8 (breed, generiek — geen ruimte/kleur-specifieke vragen)
+
+PILLAR-SPECIFIEKE REGELS:
+- Per sub-onderwerp MAX 2-3 zinnen + link naar sub. Meer = te diep.
+- Geen ruimte-specifieke details (hittebestendigheid keuken etc.)
+- Geen kleur-specifiek interieuradvies
+- Dit is een overzichtspagina, geen diepduik
+
+--- ALS NIVEAU B (RUIMTE-SUB) ---
+
+WOORDAANTAL: 800-1000
+STRUCTUUR:
+1. H2: Waarom [categorie] voor de [ruimte]? (max 100 woorden, NIET "wat zijn [categorie]")
+2. H2: Welke [categorie] passen bij jouw [ruimte]? (keuzeadvies per stijl)
+3. H2: [Categorie] vs. alternatieven in de [ruimte] (ruimte-specifieke vergelijking)
+4. H2: Hoeveel [categorie] heb je nodig? / Praktische tips (rekenvoorbeeld + ruimte-tips)
+5. H2: [Categorie] voor de [ruimte] bij [Bedrijf]
+FAQ's: 4-6 (ruimte-specifiek — vragen die ALLEEN voor deze ruimte gelden)
+
+RUIMTE-SUB-SPECIFIEKE REGELS:
+- NOOIT beginnen met "Wat zijn [categorie]" — link naar pillar
+- NOOIT het soorten-overzicht herhalen van de pillar
+- NOOIT het generieke stappenplan herhalen (wel kort ruimte-specifiek blok)
+- ALLEEN content die specifiek is voor deze ruimte
+- De overlap-test: zou deze zin op de pillar kunnen? → dan hoort hij hier niet
+
+--- ALS NIVEAU C (KLEUR/STIJL-SUB) ---
+
+WOORDAANTAL: 500-700
+STRUCTUUR:
+1. H2: [Kleur/stijl] [categorie] — de uitstraling (max 80 woorden)
+2. H2: In welke ruimtes werken [kleur] [categorie]? (per ruimte 2-3 zinnen + link)
+3. H2: Combineer [kleur] met... (interieuradvies, combinatietips)
+4. H2: Tips voor [kleur] [categorie] (praktische styling-tips)
+FAQ's: 3-4 (kleur/stijl-specifiek)
+
+KLEUR-SUB-SPECIFIEKE REGELS:
+- Dit is een INSPIRATIEPAGINA, geen technische pagina
+- Geen "wat zijn [categorie]", geen stappenplan, geen technische specs
+- Puur: hoe ziet het eruit, waar past het, waarmee combineer je het
+- De tone is interieuradvies, niet productuitleg
+
+--- ALS NIVEAU D (LONG-TAIL) ---
+
+WOORDAANTAL: 300-500
+STRUCTUUR: 2-3 H2's, direct to the point
+FAQ's: 2-3
+Focus op koopintentie en specifieke use case
+
+===================
+SCHRIJFSTIJL (ALLE NIVEAUS)
+===================
+
 - Schrijf in VLOEIENDE PARAGRAFEN (prose), geen spec-sheets
 - NOOIT "Wat: ... / Voor wie: ... / Waarom: ..." format
 - GEEN tabellen (Shopify Rich Text ondersteunt dit niet)
@@ -961,45 +475,19 @@ SCHRIJFSTIJL - CRUCIAAL:
 - Verwerk vergelijkingen in prose, niet in lijsten
 - Elke H3 sectie is minimaal 2-3 alinea's vloeiende tekst
 
-GEO VEREISTEN [v3.0]:
+GEO VEREISTEN:
 - Primaire entiteit in eerste 100 woorden + minimaal 1 heading
 - Front-load elk antwoord (direct antwoord in zin 1)
 - Anchor IDs op alle H2's en H3's (id="kebab-case")
 - Elke sectie moet zelfstandig leesbaar zijn
 - Herhaal entiteitsnamen, GEEN "dit", "deze", "het bovenstaande"
-- Context-woorden aan begin: prijs/kosten/tijdsduur/verschil/voordeel
 - FAQ-antwoorden 50-150 woorden (citeerbare lengte)
 
-STRUCTUUR SEO CONTENT:
-1. H2: Wat zijn [categorie]?
-2. H2: Soorten [categorie] (met H3 per type)
-3. H2: Hoe kies je de juiste [categorie]? (met H3 per criterium)
-4. H2: Gebruik en onderhoud (met H3 per fase)
-5. H2: [Categorie] kopen bij [Bedrijfsnaam]
-
-FAQ VERDELING (8 vragen):
-- 2x WAT vragen (definitie, verschil tussen types)
-- 2x HOE vragen (gebruik, onderhoud, reiniging)
-- 2x WAAROM vragen (materiaalkeuze, belang van onderhoud)
-- 2x PRAKTISCH (verzending, retour, geschiktheid)
-
-SCHEMA MARKUP NODIG:
-- CollectionPage schema
-- FAQPage schema (alle 8 FAQ's)
-- BreadcrumbList schema
-
-LINK NAAR:
-- [Gerelateerde categorie 1]
-- [Gerelateerde categorie 2]
-- [Ondersteunend product zoals glijmiddel/toycleaner]
-- [Contact pagina]
-
-USP'S TE VERWERKEN:
-- Fysieke winkel + jarenlange ervaring
-- Discrete verzending
-- 30 dagen bedenktijd
-- Persoonlijk advies
-- Eigen merk (indien relevant)
+5W1H VEREISTEN:
+- Elke sectie bevat WAT + WAAROM + minimaal 1 extra element
+- Consequenties benoemen (wat als je het wel/niet doet)
+- Specifieke cijfers waar mogelijk (afmetingen, prijzen, tijden)
+- Vergelijkingen waar relevant
 
 ===================
 OUTPUT FORMAAT
@@ -1014,369 +502,138 @@ Geef output als pure HTML code:
 - <ul><li> ALLEEN voor stap-voor-stap of USP's
 - GEEN tabellen, GEEN "Wat:/Voor wie:/Waarom:" format
 
-**SECTIE 1: SEO CONTENT (custom.seo_content)**
-
+SECTIE 1: SEO CONTENT (custom.seo_content)
 [Pure HTML hier]
 
-**SECTIE 2: FAQ METAFIELDS (8x)**
-
+SECTIE 2: FAQ METAFIELDS
 FAQ 1:
 Vraag: [Platte tekst]
 Antwoord: <p>[HTML antwoord 50-150 woorden]</p>
+[etc.]
 
-[etc. voor FAQ 2-8]
-
-**SECTIE 3: SCHEMA MARKUP [NIEUW v3.0]**
-
-[FAQPage JSON-LD]
-[CollectionPage JSON-LD]
-[BreadcrumbList JSON-LD]
-```
-
-### Voor Nieuwe Dienstenpagina (Next.js / Bedrijfssite)
-
-```
-Schrijf SEO + GEO content voor de dienstenpagina: [DIENST]
-Bedrijf: [BEDRIJFSNAAM]
-Regio: [WERKGEBIED]
-
-ENTITY MAPPING:
-- Primaire entiteit: [bijv. "Traditioneel Stucwerk"]
-- Ondersteunende entiteiten: [bijv. "AfbouwZuid", "nieuwbouw afwerking",
-  "Brabant", "sausklaar stucwerk", "sierpleister", "cementgebonden stucwerk"]
-
-VEREISTEN:
-- 1200-1500 woorden
-- 5 H2 secties met H3 subsecties
-- 8 FAQ vragen met uitgebreide antwoorden
-- Minimaal 5 interne links naar andere diensten
-- Elke sectie bevat WAT + WAAROM + consequenties
-- Specifieke cijfers: prijsindicaties, doorlooptijden, levensduur
-- Tone: professioneel, vakkundig, toegankelijk
-
-GEO VEREISTEN [v3.0]:
-- Primaire entiteit in eerste 100 woorden + minimaal 1 heading
-- Bedrijfsnaam minimaal 2x met inhoudelijke context
-- Regio-entiteiten verwerken (steden, provincies)
-- Front-load elk antwoord
-- Anchor IDs op alle H2's en H3's
-- Zelfstandig leesbare secties
-- Context-woorden vooraan
-
-STRUCTUUR:
-1. H2: Wat is [dienst]?
-2. H2: Soorten [dienst] (met H3 per type/variant)
-3. H2: Wanneer kies je voor [dienst]?
-4. H2: Hoe werkt [Bedrijfsnaam]?
-5. H2: [Dienst] door [Bedrijfsnaam]
-
-FAQ VERDELING (8 vragen):
-- 2x WAT (definitie, verschil types)
-- 2x HOE (werkproces, doorlooptijd)
-- 2x WAAROM (materiaalkeuze, belang kwaliteit)
-- 2x PRAKTISCH (kosten, offerte, garantie)
-
-SCHEMA MARKUP:
-- Service schema met areaServed
-- FAQPage schema
-- BreadcrumbList schema
-
-===================
-OUTPUT FORMAAT
-===================
-
-**SECTIE 1: PAGINA CONTENT**
-[Pure HTML met anchor IDs]
-
-**SECTIE 2: FAQ's (8x)**
-FAQ 1:
-Vraag: [tekst]
-Antwoord: <p>[50-150 woorden]</p>
-
-**SECTIE 3: SCHEMA MARKUP**
-[Service JSON-LD]
-[FAQPage JSON-LD]
-[BreadcrumbList JSON-LD]
-```
-
-### Voor Content Verbetering (v3.0)
-
-```
-Verbeter de volgende content volgens het 5W1H + GEO framework:
-
-HUIDIGE CONTENT:
-[PLAK CONTENT]
-
-ENTITY MAPPING:
-- Primaire entiteit: [invullen]
-- Ondersteunende entiteiten: [invullen]
-
-VERBETER DOOR:
-1. Voeg WAAROM toe aan elke instructie
-2. Noem consequenties (wat als je het wel/niet doet)
-3. Voeg specifieke cijfers/tijden toe
-4. Geef concrete voorbeelden
-5. Voeg vergelijkingen toe waar relevant
-6. Maak interne links contextueel
-7. [NIEUW] Front-load alle antwoorden (direct antwoord in zin 1)
-8. [NIEUW] Voeg anchor IDs toe aan H2/H3 tags
-9. [NIEUW] Maak secties zelfstandig leesbaar
-10. [NIEUW] Vervang vage verwijzingen door entiteitsnamen
-11. [NIEUW] Voeg ontbrekende schema markup toe
-
-OUTPUT: Verbeterde versie + schema markup + GEO-score
-```
-
-### Voor FAQ Generatie (v3.0)
-
-```
-Genereer 8 FAQ's voor [ONDERWERP/CATEGORIE]
-
-ENTITY MAPPING:
-- Primaire entiteit: [invullen]
-- Bedrijfsnaam: [invullen]
-
-VEREISTEN PER FAQ:
-- Vraag bevat zoekterm
-- Antwoord 50-150 woorden (citeerbare lengte voor AI)
-- EERSTE ZIN = direct antwoord (GEO verplicht)
-- Bevat WAAROM/consequentie
-- Noemt specifieke cijfers waar mogelijk
-- Eindigt met praktische tip of link
-- Herhaal entiteitsnamen, geen "dit/deze"
-- Zelfstandig leesbaar zonder pagina-context
-
-VERDELING:
-- 2x WAT vragen (definitie, verschil)
-- 2x HOE vragen (gebruik, onderhoud)
-- 2x WAAROM vragen (keuze, belang)
-- 2x PRAKTISCH (verzending/offerte, retour/garantie, advies)
-
-EXTRA OUTPUT: FAQPage JSON-LD schema markup voor alle 8 FAQ's
+SECTIE 3: META TITLE + DESCRIPTION
+Meta title: [max 60 tekens]
+Meta description: [max 155 tekens]
 ```
 
 ---
 
-## Deel 14: Shopify Metafield Output Voorbeeld
+## Deel 7: Content Checklist Per Sectie (v4.0)
 
-### Zo ziet de output eruit:
+### Per H2 sectie controleren:
 
-**SECTIE 1: SEO CONTENT (custom.seo_content)**
+**SEO:**
+- [ ] Primair keyword in H2 of eerste zin
+- [ ] Minimaal 1 interne link
+- [ ] Geen keyword stuffing
 
-```html
-<h2 id="wat-zijn-vibrators">Wat zijn vibrators?</h2>
+**Leesbaarheid:**
+- [ ] Prose stijl (geen spec-sheets)
+- [ ] Alinea's van 3-5 zinnen
+- [ ] Geen jargon zonder uitleg
 
-<p>Een vibrator is een seksspeeltje dat trillingen produceert voor seksuele stimulatie. Maar waarom is de vibrator al decennia het populairste seksspeeltje ter wereld? Het antwoord: consistente stimulatie die met de hand moeilijk te evenaren is.</p>
+**Diepgang (5W1H):**
+- [ ] WAT + WAAROM aanwezig
+- [ ] Consequenties benoemd
+- [ ] Specifiek cijfer of voorbeeld
 
-<p>Vibrators zijn geschikt voor vrouwen die hun lichaam willen verkennen, koppels die hun seksleven willen verrijken, en mensen die moeite hebben met klaarkomen tijdens penetratie. Bij Erotheek Hengelo vind je vibrators van topmerken zoals <a href="/collections/satisfyer">Satisfyer</a> en <a href="/collections/lelo">LELO</a>. Twijfel je welk type vibrator bij je past? <a href="/pages/contact">Vraag ons om advies</a>.</p>
+**Conversie:**
+- [ ] Duidelijke CTA of doorlink
+- [ ] Productvoordelen verweven in tekst
 
-<h2 id="soorten-vibrators">Soorten vibrators</h2>
+**GEO / AI-vindbaarheid:**
+- [ ] Primaire entiteit benoemd
+- [ ] Anchor ID op H2/H3
+- [ ] Antwoord front-loaded (direct antwoord in zin 1)
+- [ ] Sectie zelfstandig leesbaar zonder context
+- [ ] Ondersteunende entiteiten verwerkt
 
-<p>Het aanbod aan vibrators is enorm. Om je te helpen kiezen, bespreken we de belangrijkste types vibrators.</p>
-
-<h3 id="clitoris-vibrators">Clitoris vibrators</h3>
-
-<p>Clitoris vibrators zijn ontworpen voor uitwendige stimulatie van de clitoris. Ze zijn compact, vaak niet groter dan een lippenstift, en focussen op gerichte trillingen. Waarom clitoris vibrators zo populair zijn? De clitoris bevat meer dan 8.000 zenuwuiteinden â€” meer dan enig ander lichaamsdeel. Gerichte stimulatie hier leidt voor veel vrouwen sneller tot een orgasme dan inwendige stimulatie. Een clitoris vibrator is perfect voor beginners die nog niet klaar zijn voor penetratie, maar ook voor ervaren gebruikers als finishing touch.</p>
-
-<h3 id="g-spot-vibrators">G-spot vibrators</h3>
-
-<p>G-spot vibrators hebben een gebogen vorm die specifiek ontworpen is om de G-spot te bereiken â€” een gevoelig gebied aan de voorwand van de vagina, ongeveer 5-7cm naar binnen. De curve van een G-spot vibrator zorgt ervoor dat de trillingen precies op de juiste plek terechtkomen. Veel vrouwen beschrijven G-spot orgasmes als intenser en "dieper" dan clitorale orgasmes. Het vinden van je G-spot kan even oefening vragen, maar een goede vibrator maakt het zoeken een stuk aangenamer.</p>
-```
-
-**Let op de GEO-verbeteringen:**
-- âœ… Anchor IDs op elke heading (`id="wat-zijn-vibrators"`)
-- âœ… Entiteitsnamen herhaald ("vibrator", "clitoris vibrator", "G-spot vibrator")
-- âœ… Geen "dit product" of "deze" â€” altijd de naam van het type
-- âœ… Zelfstandig leesbare secties
-- âœ… Front-loaded informatie
-
-**SECTIE 2: FAQ METAFIELDS**
-
-```
-FAQ 1:
-Vraag: Wat is de beste vibrator voor beginners?
-Antwoord: <p>De beste vibrator voor beginners is een clitoris vibrator of bullet vibrator. Deze vibrators zijn compact, niet-intimiderend, en focussen op externe stimulatie. Je hoeft niets in te brengen, wat voor veel vrouwen comfortabeler voelt bij de eerste keer. Kwaliteitsvibrators voor beginners zijn verkrijgbaar vanaf â‚¬20. Start simpel â€” je kunt altijd upgraden als je weet wat je fijn vindt.</p>
-
-FAQ 2:
-Vraag: Hoe reinig ik mijn vibrator na gebruik?
-Antwoord: <p>Reinig je vibrator voor Ã©n na elk gebruik met een speciale toycleaner of milde zeep en lauw water. Waarom vÃ³Ã³r gebruik? Tijdens opslag kan stof of bacteriÃ«n zich ophopen op de vibrator. Waarom erna? Lichaamsvloeistoffen die opdrogen zijn lastiger te verwijderen en kunnen bacteriegroei veroorzaken. Dompel alleen waterdichte vibrators volledig onder â€” controleer altijd de IPX-rating in de specificaties van je vibrator.</p>
-
-[... FAQ 3-8 ...]
-```
-
-**SECTIE 3: SCHEMA MARKUP [NIEUW v3.0]**
-
-```json
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Wat is de beste vibrator voor beginners?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "De beste vibrator voor beginners is een clitoris vibrator of bullet vibrator. Deze vibrators zijn compact, niet-intimiderend, en focussen op externe stimulatie. Je hoeft niets in te brengen, wat voor veel vrouwen comfortabeler voelt bij de eerste keer. Kwaliteitsvibrators voor beginners zijn verkrijgbaar vanaf â‚¬20."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Hoe reinig ik mijn vibrator na gebruik?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Reinig je vibrator voor Ã©n na elk gebruik met een speciale toycleaner of milde zeep en lauw water. Tijdens opslag kan stof of bacteriÃ«n zich ophopen. Lichaamsvloeistoffen die opdrogen zijn lastiger te verwijderen en kunnen bacteriegroei veroorzaken. Dompel alleen waterdichte vibrators volledig onder."
-      }
-    }
-  ]
-}
-</script>
-```
-
-### Waar plak je dit in Shopify?
-
-1. **SEO Content** â†’ Collection â†’ Metafields â†’ `custom.seo_content` (Tekst met opmaak)
-2. **FAQ 1 Vraag** â†’ `custom.faq_1_question` (Tekst Ã©Ã©n regel)
-3. **FAQ 1 Antwoord** â†’ `custom.faq_1_answer` (Tekst met opmaak)
-4. Herhaal voor FAQ 2-8
-5. **Schema Markup** â†’ In je theme.liquid of collection template (Liquid)
+**DIFFERENTIATIE [NIEUW v4.0]:**
+- [ ] Content is UNIEK voor deze pagina
+- [ ] Overlap-test gedaan: geen zin die ook op pillar/andere sub past
+- [ ] FAQ is niet een variant van een FAQ op een andere pagina
+- [ ] Juist detailniveau voor het paginaniveau (A/B/C/D)
 
 ---
 
-## Deel 15: Next.js / Headless Output Voorbeeld [NIEUW]
+## Deel 8: FAQ Quality Framework (v4.0)
 
-Voor bedrijfssites gebouwd in Next.js:
+### FAQ Verdeling per paginaniveau:
 
-### Pagina Structuur
+**Pillar (A) — 5-8 FAQ's:**
+- 2x WAT (brede definitie, verschil tussen types)
+- 2x HOE (generiek gebruik, onderhoud)
+- 1-2x WAAROM (materiaalkeuze, belang kwaliteit)
+- 1-2x PRAKTISCH (ondergrond, verwijderbaarheid)
+
+**Ruimte-sub (B) — 4-6 FAQ's:**
+- 1-2x RUIMTE-SPECIFIEK (geschiktheid, beperkingen in deze ruimte)
+- 1-2x KEUZEADVIES (welke kleur/stijl past bij mijn ruimte)
+- 1-2x PRAKTISCH (hoeveel nodig, specifieke aanbrengtips)
+
+**Kleur-sub (C) — 3-4 FAQ's:**
+- 1-2x INTERIEUR (past [kleur] bij [stijl], combineren met)
+- 1-2x PRAKTISCH (onderhoud specifiek voor deze kleur, trend vs. tijdloos)
+
+### FAQ Deduplicatie-regel:
 
 ```
-/diensten/stucwerk/page.tsx     â†’ Content component + schema
-/diensten/stucwerk/schema.ts    â†’ JSON-LD generatie
-/components/FAQ.tsx             â†’ FAQ component met schema
-/components/SchemaMarkup.tsx    â†’ Generieke schema wrapper
-```
-
-### Content Component Voorbeeld
-
-```tsx
-// /diensten/stucwerk/page.tsx
-import { SchemaMarkup } from '@/components/SchemaMarkup';
-import { FAQ } from '@/components/FAQ';
-import { stucwerkSchema, stucwerkFAQSchema } from './schema';
-
-export const metadata = {
-  title: 'Stucwerk | AfbouwZuid â€” Vakmanschap in Brabant & Limburg',
-  description: 'Professioneel stucwerk door AfbouwZuid. Sausklaar, sierpleister en dunpleister voor nieuwbouw en renovatie. 15+ jaar ervaring in Zuid-Nederland.',
-};
-
-export default function StucwerkPage() {
-  return (
-    <>
-      <SchemaMarkup data={stucwerkSchema} />
-      <SchemaMarkup data={stucwerkFAQSchema} />
-
-      <section>
-        <h1>Stucwerk door AfbouwZuid â€” vakmanschap voor nieuwbouw en renovatie</h1>
-
-        <h2 id="wat-is-stucwerk">Wat is stucwerk?</h2>
-        <p>Stucwerk is een cement- of gipsgebonden afwerklaag die...</p>
-
-        <h2 id="soorten-stucwerk">Soorten stucwerk</h2>
-        <h3 id="sausklaar-stucwerk">Sausklaar stucwerk</h3>
-        <p>Sausklaar stucwerk is een gladde...</p>
-
-        {/* etc. */}
-
-        <FAQ items={stucwerkFAQItems} />
-      </section>
-    </>
-  );
-}
+VOOR ELKE FAQ, STEL:
+1. Staat deze vraag (of een variant) al op de pillar? → NIET gebruiken
+2. Past deze vraag beter bij een andere sub? → daar neerzetten
+3. Is deze vraag specifiek genoeg voor ALLEEN deze pagina? → gebruiken
 ```
 
 ---
 
-## Deel 16: Implementatie Checklist (v3.0)
+## Deel 9: Interne Linking Strategie (v4.0)
 
-### Voor Nieuwe Content
+### Linking regels per paginaniveau:
 
-```markdown
-â–¡ PRE-WRITING
-  â–¡ Keyword research gedaan
-  â–¡ Zoekintentie bepaald (informational/commercial/transactional)
-  â–¡ Concurrentie content geanalyseerd
-  â–¡ Interne link targets bepaald
-  â–¡ USP's en trust signals verzameld
-  â–¡ [NIEUW] Entity mapping gedaan (1 primair + 3-6 ondersteunend)
-  â–¡ [NIEUW] Schema types per pagina bepaald
-  â–¡ [NIEUW] Anchor ID structuur gepland
+**Pillar (A):**
+- Link naar ELKE sub in de silo (minimaal 1x per sub)
+- Anchor text = primair keyword van de sub (bijv. "plaktegels voor de keuken")
+- NOOIT "klik hier" of "bekijk hier" als anchor text
+- Cross-silo link naar 1-2 gerelateerde pillar pages
 
-â–¡ WRITING
-  â–¡ 5W1H framework per sectie
-  â–¡ Consequenties bij instructies
-  â–¡ Specifieke cijfers verwerkt
-  â–¡ Voorbeelden gegeven
-  â–¡ Interne links contextueel geplaatst
-  â–¡ [NIEUW] Primaire entiteit in eerste 100 woorden
-  â–¡ [NIEUW] Antwoorden front-loaded (direct in zin 1)
-  â–¡ [NIEUW] Secties zelfstandig leesbaar
-  â–¡ [NIEUW] Geen vage verwijzingen
-  â–¡ [NIEUW] Context-woorden vooraan (prijs/tijd/verschil)
+**Ruimte-sub (B):**
+- Link terug naar pillar (1-2x)
+- Link naar kleur-subs die populair zijn in deze ruimte (1-2x)
+- Link naar gerelateerde producten/upsells (1x)
+- Cross-silo link waar relevant (1x)
 
-â–¡ POST-WRITING
-  â–¡ Content Audit Scorecard ingevuld (min 160/240)
-  â–¡ Spelling/grammar check
-  â–¡ Leesbaarheid check
-  â–¡ Alle links werken
-  â–¡ Heading hiÃ«rarchie klopt
-  â–¡ [NIEUW] Alle H2/H3 hebben anchor IDs
-  â–¡ [NIEUW] Alle secties zelfstandig leesbaar gecontroleerd
-
-â–¡ TECHNICAL
-  â–¡ Meta title geoptimaliseerd
-  â–¡ Meta description geschreven
-  â–¡ Images met alt tekst
-  â–¡ Canonical URL correct
-  â–¡ [NIEUW] FAQPage schema geÃ¯mplementeerd + gevalideerd
-  â–¡ [NIEUW] Service/Product schema geÃ¯mplementeerd + gevalideerd
-  â–¡ [NIEUW] Organization/LocalBusiness schema op homepage
-  â–¡ [NIEUW] BreadcrumbList schema op alle pagina's
-  â–¡ [NIEUW] Schema gevalideerd via Google Rich Results Test
-  â–¡ [NIEUW] Google Business Profile consistent met site-entiteiten
-
-â–¡ GEO MONITORING (doorlopend) [NIEUW]
-  â–¡ Test je pagina in ChatGPT/Perplexity â€” word je geciteerd?
-  â–¡ Check Google AI Overviews voor je keywords
-  â–¡ Monitor welke FAQ's en secties geciteerd worden
-  â–¡ Update content minimaal elk kwartaal (recency signaal)
-```
+**Kleur-sub (C):**
+- Link terug naar pillar (1x)
+- Link naar ruimte-subs waar deze kleur werkt (1-2x)
+- Cross-link naar contrastkleur-sub (1x)
 
 ---
 
-## Bijlage A: Externe Autoriteit (buiten het framework)
+## Deel 10: Content Audit Scorecard (v4.0)
 
-Dit framework richt zich op **on-site** optimalisatie. Maar GEO-succes hangt ook af van **externe signalen** die buiten het schrijfproces vallen:
+### Score per pagina (0-100):
 
-### Per klant beoordelen:
+| Criterium | Max punten | Hoe |
+|-----------|-----------|-----|
+| 5W1H diepgang | 20 | Gemiddelde score × 2 |
+| Prose kwaliteit | 15 | Geen spec-sheets, vloeiend |
+| GEO readiness | 15 | Entity, front-load, anchors, schema |
+| FAQ kwaliteit | 15 | Uniek, front-loaded, juiste lengte |
+| Internal linking | 10 | Juiste links, goede anchor text |
+| **Differentiatie** [NIEUW] | **15** | Unieke content, geen overlap, juist niveau |
+| Conversie-elementen | 10 | CTA, USP's, vertrouwen |
 
-| Signaal | Actie | Impact |
-|---------|-------|--------|
-| Google Business Profile | Volledig invullen, foto's, reviews verzamelen | ðŸ”´ Kritiek |
-| Google Reviews | Actief verzamelen (9.0+ score) | ðŸ”´ Kritiek |
-| Branchevermeldingen | Kvk, branchesites, leverancierslijsten | ðŸŸ  Hoog |
-| Lokale media | Persberichten, lokale nieuwssites | ðŸŸ  Hoog |
-| Social media mentions | Consistent posten, merknaam gebruiken | ðŸŸ¡ Medium |
-| Backlinks | Gastblogs, samenwerkingen, PR | ðŸŸ¡ Medium |
-| Wikipedia/Wikidata | Alleen voor grotere merken relevant | ðŸŸ¢ Bonus |
-
-**Vuistregel:** AI-engines citeren merken die niet alleen op hun eigen site, maar ook door *derden* als autoriteit worden erkend. Schema + goede content + externe vermeldingen = GEO-succes.
+**Minimumscore:**
+- Pillar (A): 75+
+- Ruimte-sub (B): 70+
+- Kleur-sub (C): 65+
+- Long-tail (D): 55+
 
 ---
 
-*Versie 3.0 â€” Februari 2025*
-*MIR Media Group*
+## Changelog
 
-**Wijzigingslog:**
-- v3.0: Toegevoegd GEO framework (entity mapping, schema markup, citability regels), GEO checklist items, schema implementatie gids, Next.js output voorbeeld, dienstenpagina prompt template, externe autoriteit bijlage, scoring uitgebreid naar /240
-- v2.0: Toegevoegd 5W1H framework, consequentie regel, scoring systeem
-- v1.0: InitiÃ«le versie met basis structuur
+| Versie | Datum | Wijzigingen |
+|--------|-------|-------------|
+| v3.0 | Feb 2026 | GEO-laag toegevoegd: entity mapping, schema markup, citability |
+| v4.0 | Mrt 2026 | Paginahiërarchie & Differentiatie (Deel 0), FAQ deduplicatie, niveau-specifieke structuren, overlap-test, gedifferentieerde woordaantallen en FAQ-counts per niveau |
