@@ -16,7 +16,7 @@ const contactInfo = [
   {
     icon: MapPin,
     title: 'ADRES',
-    content: 'Jacob van Campenweg 25, 5624CD Eindhoven'
+    content: 'Straatsburglaan 26, 5627DB Eindhoven'
   },
   {
     icon: Clock,

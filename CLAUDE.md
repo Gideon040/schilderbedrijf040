@@ -5,7 +5,7 @@
 - **Diensten:** Binnenschilderwerk, Buitenschilderwerk, Behangen, Houtrot Sanering, Lakwerk, Latex Spuiten
 - **Regio:** Eindhoven en omgeving (18 locatiepagina's live)
 - **Telefoon:** +31638903004
-- **Adres:** Jacob van Campenweg 25, 5624CD Eindhoven
+- **Adres:** Straatsburglaan 26, 5627DB Eindhoven
 - **Reviews:** 41 Google reviews (5 sterren), 4,9 op Werkspot (19 reviews)
 
 ## Tech Stack

@@ -52,7 +52,7 @@ export function Footer() {
               </a>
               <div className="flex items-start gap-2">
                 <MapPin className="w-5 h-5 flex-shrink-0" />
-                <span>Jacob van Campenweg 25, 5624CD Eindhoven</span>
+                <span>Straatsburglaan 26, 5627DB Eindhoven</span>
               </div>
             </div>
           </div>

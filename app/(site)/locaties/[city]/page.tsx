@@ -100,9 +100,9 @@ export default function LocationPage({ params }: { params: { city: string } }) {
     priceRange: '€€',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: 'Jacob van Campenweg 25',
+      streetAddress: 'Straatsburglaan 26',
       addressLocality: 'Eindhoven',
-      postalCode: '5624CD',
+      postalCode: '5627DB',
       addressCountry: 'NL',
     },
     geo: {

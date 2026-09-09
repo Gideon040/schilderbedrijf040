@@ -40,9 +40,9 @@ export default function ContactPage() {
       },
       address: {
         '@type': 'PostalAddress',
-        streetAddress: 'Jacob van Campenweg 25',
+        streetAddress: 'Straatsburglaan 26',
         addressLocality: 'Eindhoven',
-        postalCode: '5624CD',
+        postalCode: '5627DB',
         addressCountry: 'NL'
       },
       openingHoursSpecification: {
