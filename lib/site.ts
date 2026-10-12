@@ -1,4 +1,4 @@
-// Bedrijfsfeiten op één plek. Alleen feiten die door Jordy zijn bevestigd (zie schildersbedrijf040-seo/CLAUDE.md).
+// Bedrijfsfeiten op één plek. Alleen feiten die door Jordy zijn bevestigd (zie seo/CLAUDE.md).
 
 export const site = {
   name: 'Schildersbedrijf040',

@@ -1,6 +1,6 @@
 // Eén bron voor alle prijzen op de site. Indicatief, inclusief materiaal, exclusief btw.
 // Bedragen komen van de bestaande dienstpagina's. Waar pagina's elkaar tegenspraken is één
-// waarde gekozen (zie schildersbedrijf040-seo/voortgang.md). [JORDY: bevestig tabel]
+// waarde gekozen (zie seo/voortgang.md). [JORDY: bevestig tabel]
 
 export type PriceRow = {
   wat: string
