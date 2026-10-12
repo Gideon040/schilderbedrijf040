@@ -1,998 +1,998 @@
 [
- {
-  "nr": 1,
-  "id": "home",
-  "url": "/",
-  "naam": "Homepage",
-  "status": "optimaliseren",
-  "pakket": "B",
-  "maand": "Oktober",
-  "fase": 1,
-  "alleen_na_scopecheck": false,
-  "rol": "Niveau 1",
-  "target": "schilder eindhoven, schildersbedrijf eindhoven (samen ca. 450 per maand in september, piek in maart). Titel aanpassen: merknaam één keer. Belangrijkste doelpagina voor links.",
-  "zoeker": "Zoekt een schilder in Eindhoven of komt via de naam binnen, en wil in tien seconden zien wat Jordy doet, waar, en of hij betrouwbaar is.",
-  "opbouw": [
-   "Direct antwoord in de hero: schilder in Eindhoven en omgeving voor binnen- en buitenschilderwerk, 5,0 op Google.",
-   "Van oktober tot en met februari een seizoensblok \"Nu inplannen: binnenwerk in de winter\" met link naar de winterpagina. Vanaf maart vervangen door buitenwerk.",
-   "Tegels naar binnenschilderwerk, latex spuiten, lakwerk, behangen, buitenschilderwerk.",
-   "Werkgebied met links naar de locatiepagina's, drie uitgelichte projecten, gekoppelde Google-reviews.",
-   "FAQ met drie kernvragen uit de GEO-lijst."
-  ],
-  "conversie": "Offerte-CTA boven de vouw en onderaan.",
-  "linkt_naar": [
-   "/diensten/binnenschilderwerk",
-   "/diensten/winterschilder",
-   "/diensten/buitenschilderwerk",
-   "/kosten/schilderwerk",
-   "/projecten",
-   "/locaties/ (6 plaatsen)",
-   "/contact"
-  ],
-  "krijgt_links_van": [
-   "/locaties/eindhoven-[wijk] (2)"
-  ],
-  "voortgang": "concept"
- },
- {
-  "nr": 2,
-  "id": "binnen",
-  "url": "/diensten/binnenschilderwerk",
-  "naam": "Binnenschilderwerk (hub)",
-  "status": "optimaliseren",
-  "pakket": "B",
-  "maand": "Oktober",
-  "fase": 1,
-  "alleen_na_scopecheck": false,
-  "rol": "Hub binnen",
-  "target": "binnenschilder eindhoven (100, piek januari tot en met maart). Secundair: binnenschilderwerk (700, KD 2), binnenschilder (350, KD 2), huis binnen laten schilderen.",
-  "zoeker": "Huiseigenaar die kamers, een verdieping of het hele huis binnen wil laten doen, vaak na een verhuizing of verbouwing.",
-  "opbouw": [
-   "Bestaande tekst blijft staan (ca. 2.800 woorden, prijzen, 8 FAQ's). Alleen toevoegen wat hieronder staat.",
-   "Blok met tegels naar latex spuiten, lakwerk en behangen (als die er nog niet staan).",
-   "H2 \"Binnenwerk in de winter\" kort, met link naar de winterpagina.",
-   "In de bestaande prijssectie een link naar de prijsgids.",
-   "Projectfoto's en gekoppelde Google-reviews. Bestaande winter-FAQ laten linken naar de winterpagina."
-  ],
-  "conversie": "",
-  "linkt_naar": [
-   "/diensten/winterschilder",
-   "/diensten/latex-spuiten",
-   "/diensten/lakwerk",
-   "/diensten/behangen",
-   "/kosten/schilderwerk",
-   "/blog/hoe-lang-duurt-binnenschilderwerk",
-   "/blog/ (5 bestaande)",
-   "/locaties/ (6 plaatsen)",
-   "/contact"
-  ],
-  "krijgt_links_van": [
-   "/",
-   "/diensten/winterschilder",
-   "/diensten/latex-spuiten",
-   "/kosten/schilderwerk",
-   "/diensten/lakwerk",
-   "/diensten/behangen",
-   "/locaties/ (6 plaatsen)",
-   "/projecten",
-   "/blog/ (5 bestaande)",
-   "/locaties/ (11 plaatsen)",
-   "/blog/hoe-lang-duurt-binnenschilderwerk",
-   "/locaties/ (3 nieuwe plaatsen)",
-   "/diensten/latex-spuiten/[plaats] (2)",
-   "/locaties/eindhoven-[wijk] (2)",
-   "/locaties/ (3 nieuwe plaatsen)"
-  ],
-  "voortgang": "concept"
- },
- {
-  "nr": 3,
-  "id": "winter",
-  "url": "/diensten/winterschilder",
-  "naam": "Winterschilder: binnenwerk in de winter",
-  "status": "nieuw",
-  "pakket": "B",
-  "maand": "Oktober",
-  "fase": 1,
-  "alleen_na_scopecheck": false,
-  "rol": "Dienst (seizoen)",
-  "target": "winterschilder (400 p/m landelijk, KD 2, piek september tot en met januari), winterschilder eindhoven (70, piek oktober tot en met januari). Secundair: schilderen in de winter, binnen schilderen winter.",
-  "zoeker": "Wil het schilderwerk binnen laten doen nu het buiten rustig is, en vraagt zich af of dat kan, of het goedkoper is en of de schilder sneller plek heeft.",
-  "opbouw": [
-   "Direct antwoord: binnenwerk kan prima in de winter, want de temperatuur binnen is te regelen. Voordelen: sneller plek in de planning en een schilder die niet onder de zomerdruk werkt.",
-   "H2 \"Waarom de winter een goed moment is voor binnenwerk\" (planning, verwarming, klaar voor het voorjaar).",
-   "H2 \"Wat kunnen we in de winter voor u doen?\" met tegels naar binnenschilderwerk, latex spuiten, lakwerk en behangen.",
-   "H2 \"Is een schilder in de winter goedkoper?\" eerlijk: alleen als Jordy een winteractie wil (scopecheck); anders het voordeel van planning en rust.",
-   "H2 \"Binnen en buiten combineren\": binnen nu, buiten in het voorjaar vastleggen.",
-   "FAQ: temperatuur en ventilatie, droogtijd, kerstperiode, kan ik thuis blijven."
-  ],
-  "conversie": "CTA \"Plan uw binnenwerk deze winter\". Belangrijke doelpagina voor links in oktober en november.",
-  "linkt_naar": [
-   "/diensten/binnenschilderwerk",
-   "/diensten/latex-spuiten",
-   "/kosten/schilderwerk",
-   "/blog/hoe-lang-duurt-binnenschilderwerk",
-   "/contact"
-  ],
-  "krijgt_links_van": [
-   "/",
-   "/diensten/binnenschilderwerk",
-   "/diensten/latex-spuiten",
-   "/locaties/ (6 plaatsen)",
-   "/blog/ (5 bestaande)",
-   "/blog/hoe-lang-duurt-binnenschilderwerk",
-   "/blog/wanneer-buiten-schilderen"
-  ],
-  "voortgang": "concept"
- },
- {
-  "nr": 4,
-  "id": "latex",
-  "url": "/diensten/latex-spuiten",
-  "naam": "Latex spuiten",
-  "status": "optimaliseren",
-  "pakket": "B",
-  "maand": "Oktober",
-  "fase": 1,
-  "alleen_na_scopecheck": false,
-  "rol": "Dienst (conversie)",
-  "target": "latex spuiten eindhoven (100) en latex spuiten (900, KD 61). Secundair: plafond spuiten (700, KD 0), latex spuiten per m2 (100), muren latex spuiten (30).",
-  "zoeker": "Wil strakke muren en plafonds, vaak in nieuwbouw of na stucwerk, en wil weten wat het kost per m².",
-  "opbouw": [
-   "Eerste alinea: direct antwoord met prijs per m² en hoeveel m² per dag.",
-   "Nieuw: H2 \"Wat kost latex spuiten?\" met tabel (muren, plafonds, nieuwbouw versus bestaande bouw).",
-   "Nieuw: H2 \"Plafond spuiten\" als eigen sectie (700 zoekopdrachten, nog niet afgedekt).",
-   "Nieuw: H2 \"Spuiten of rollen?\" kort, met link naar de blog.",
-   "FAQ aanvullen: winter, droogtijd, afplakken, meubels."
-  ],
-  "conversie": "",
-  "linkt_naar": [
-   "/diensten/binnenschilderwerk",
-   "/diensten/winterschilder",
-   "/kosten/schilderwerk",
-   "/blog/latex-spuiten-of-rollen",
-   "/contact"
-  ],
-  "krijgt_links_van": [
-   "/diensten/binnenschilderwerk",
-   "/diensten/winterschilder",
-   "/kosten/schilderwerk",
-   "/blog/ (5 bestaande)",
-   "/blog/latex-spuiten-of-rollen",
-   "/diensten/latex-spuiten/[plaats] (2)",
-   "/locaties/eindhoven-[wijk] (2)"
-  ],
-  "voortgang": "concept"
- },
- {
-  "nr": 5,
-  "id": "kosten",
-  "url": "/kosten/schilderwerk",
-  "naam": "Wat kost schilderwerk? (prijsgids)",
-  "status": "nieuw",
-  "pakket": "B",
-  "maand": "November",
-  "fase": 1,
-  "alleen_na_scopecheck": true,
-  "rol": "Conversie (prijsgids)",
-  "target": "wat kost een schilder (500, TP 1.400), latex spuiten kosten (300), kosten schilder per m2 (150, TP 1.200), plafond spuiten kosten (150). Secundair: binnenschilderwerk kosten (90), schilderwerk kosten (70), schilder uurtarief (60), en vanaf januari buitenschilderwerk kosten.",
-  "zoeker": "Wil een realistisch budget weten voordat hij offertes aanvraagt.",
-  "opbouw": [
-   "Direct antwoord met bandbreedtes (door Jordy aangeleverd).",
-   "Tabel binnen: muren per m², plafonds, latex spuiten, deuren en kozijnen binnen, trap.",
-   "Rekenvoorbeelden: woonkamer met hal; complete woning binnen.",
-   "H2 \"Wat bepaalt de prijs?\" en H2 \"Btw op schilderwerk\" (link naar bestaande blog).",
-   "Vanaf januari aanvullen met een tabel buiten (kozijnen, gevel, kitwerk, houtrot)."
-  ],
-  "conversie": "Offerte-CTA na elke prijssectie. Wil Jordy geen bedragen publiceren, dan alleen wat de prijs bepaalt. Dit wordt de doelpagina voor alle \"kosten\"-termen.",
-  "linkt_naar": [
-   "/diensten/binnenschilderwerk",
-   "/diensten/latex-spuiten",
-   "/diensten/buitenschilderwerk",
-   "/diensten/kozijnen-schilderen",
-   "/blog/btw-tarief-schilderwerk",
-   "/contact"
-  ],
-  "krijgt_links_van": [
-   "/",
-   "/diensten/binnenschilderwerk",
-   "/diensten/winterschilder",
-   "/diensten/latex-spuiten",
-   "/diensten/buitenschilderwerk",
-   "/diensten/kozijnen-schilderen",
-   "/diensten/gevel-schilderen"
-  ],
-  "voortgang": "todo"
- },
- {
-  "nr": 6,
-  "id": "lakwerk",
-  "url": "/diensten/lakwerk",
-  "naam": "Lakwerk",
-  "status": "optimaliseren",
-  "pakket": "B",
-  "maand": "November",
-  "fase": 1,
-  "alleen_na_scopecheck": false,
-  "rol": "Dienst",
-  "target": "deuren lakken (60, veel doe-het-zelf), deuren lakken kosten, trap laten schilderen kosten (100).",
-  "zoeker": "Wil deuren, kozijnen binnen of een trap strak laten lakken.",
-  "opbouw": [
-   "Eerste alinea: direct antwoord met prijs per deur.",
-   "Prijstabel per onderdeel.",
-   "Link naar de bestaande blog over deuren schilderen.",
-   "FAQ aanvullen."
-  ],
-  "conversie": "",
-  "linkt_naar": [
-   "/diensten/binnenschilderwerk",
-   "/diensten/kozijnen-schilderen",
-   "/contact"
-  ],
-  "krijgt_links_van": [
-   "/diensten/binnenschilderwerk"
-  ],
-  "voortgang": "todo"
- },
- {
-  "nr": 7,
-  "id": "behangen",
-  "url": "/diensten/behangen",
-  "naam": "Behangen",
-  "status": "optimaliseren",
-  "pakket": "B",
-  "maand": "November",
-  "fase": 1,
-  "alleen_na_scopecheck": false,
-  "rol": "Dienst",
-  "target": "behanger (900, KD 43), behanger helmond (80), behanger eindhoven (30), behangen kosten per m2 (30).",
-  "zoeker": "Wil behang laten plaatsen of verwijderen, vaak in combinatie met schilderwerk.",
-  "opbouw": [
-   "Eerste alinea: direct antwoord met prijs per m² of per rol.",
-   "H2 \"Behang verwijderen en daarna verven\" met link naar de blog verven na behang.",
-   "FAQ aanvullen."
-  ],
-  "conversie": "",
-  "linkt_naar": [
-   "/diensten/binnenschilderwerk",
-   "/blog/verven-na-behang",
-   "/contact"
-  ],
-  "krijgt_links_van": [
-   "/diensten/binnenschilderwerk"
-  ],
-  "voortgang": "todo"
- },
- {
-  "nr": 8,
-  "id": "loc6",
-  "url": "/locaties/ (6 plaatsen)",
-  "naam": "Veldhoven, Valkenswaard, Helmond, Best, Geldrop, Nuenen",
-  "status": "optimaliseren",
-  "pakket": "B",
-  "maand": "November",
-  "fase": 1,
-  "alleen_na_scopecheck": false,
-  "rol": "Locatie (optimaliseren)",
-  "target": "schilder [plaats], schildersbedrijf [plaats]. Binnen: latex spuiten helmond (90), behanger helmond (80), latex spuiten veldhoven (60). Veldhoven, Valkenswaard en Helmond krijgen in fase 1 links; Best, Geldrop en Nuenen in fase 2.",
-  "zoeker": "Zoekt een schilder dichtbij en wil zien of die ook echt in zijn plaats werkt.",
-  "opbouw": [
-   "Bestaande tekst blijft staan; unieke title en meta description.",
-   "Nieuw blok \"Binnen- en buitenschilderwerk in [plaats]\" (200 tot 300 woorden): typische woningen en wat daar speelt.",
-   "Twee lokale details die op geen andere locatiepagina staan: kernen, wijken, bouwperiode of een project.",
-   "Een project of review uit die plaats of de directe omgeving, als die er is.",
-   "Helmond: latex spuiten en behanger expliciet noemen, met link naar die dienstpagina's. Veldhoven: latex spuiten."
-  ],
-  "conversie": "",
-  "linkt_naar": [
-   "/diensten/binnenschilderwerk",
-   "/diensten/winterschilder",
-   "/diensten/buitenschilderwerk",
-   "/diensten/kozijnen-schilderen",
-   "/contact"
-  ],
-  "krijgt_links_van": [
-   "/",
-   "/diensten/binnenschilderwerk",
-   "/projecten",
-   "/diensten/buitenschilderwerk",
-   "/diensten/latex-spuiten/[plaats] (2)",
-   "/diensten/buitenschilderwerk/[plaats] (3)"
-  ],
-  "voortgang": "todo",
-  "urls": [
-   "/locaties/veldhoven",
-   "/locaties/valkenswaard",
-   "/locaties/helmond",
-   "/locaties/best",
-   "/locaties/geldrop",
-   "/locaties/nuenen"
-  ]
- },
- {
-  "nr": 9,
-  "id": "b-duur",
-  "url": "/blog/hoe-lang-duurt-binnenschilderwerk",
-  "naam": "Hoe lang duurt binnenschilderwerk?",
-  "status": "nieuw",
-  "pakket": "B",
-  "maand": "November",
-  "fase": 1,
-  "alleen_na_scopecheck": false,
-  "rol": "Kennis",
-  "target": "hoe lang duurt binnenschilderwerk, hoe lang duurt latex spuiten, hoe lang duurt het om een huis te schilderen.",
-  "zoeker": "Wil plannen: hoe lang is het huis bezet, kan ik er wonen.",
-  "opbouw": [
-   "Direct antwoord met tabel per ruimte en voor een hele woning.",
-   "H2 \"Wat maakt het sneller of langzamer?\"",
-   "H2 \"Wonen tijdens de klus\"."
-  ],
-  "conversie": "",
-  "linkt_naar": [
-   "/diensten/binnenschilderwerk",
-   "/diensten/winterschilder",
-   "/contact"
-  ],
-  "krijgt_links_van": [
-   "/diensten/binnenschilderwerk",
-   "/diensten/winterschilder"
-  ],
-  "voortgang": "todo"
- },
- {
-  "nr": 10,
-  "id": "latexloc",
-  "url": "/diensten/latex-spuiten/[plaats] (2)",
-  "naam": "Latex spuiten Helmond en Veldhoven",
-  "status": "nieuw",
-  "pakket": "M",
-  "maand": "November",
-  "fase": 1,
-  "alleen_na_scopecheck": false,
-  "rol": "Dienst x plaats",
-  "target": "latex spuiten helmond (90) en latex spuiten veldhoven (60).",
-  "zoeker": "Zoekt iemand voor latex spuiten in die plaats, vaak bij nieuwbouw of na een verbouwing.",
-  "opbouw": [
-   "Direct antwoord met prijs per m² en doorlooptijd.",
-   "Project in die plaats met foto's (liefst nieuwbouw of stucwerk).",
-   "Plafond spuiten als sectie, FAQ.",
-   "Alleen bouwen als er echt lokale inhoud is; anders een blok op de locatiepagina."
-  ],
-  "conversie": "",
-  "linkt_naar": [
-   "/diensten/latex-spuiten",
-   "/locaties/ (6 plaatsen)",
-   "/diensten/binnenschilderwerk",
-   "/contact"
-  ],
-  "krijgt_links_van": [],
-  "voortgang": "todo"
- },
- {
-  "nr": 11,
-  "id": "projecten",
-  "url": "/projecten",
-  "naam": "Projecten",
-  "status": "optimaliseren",
-  "pakket": "B",
-  "maand": "December",
-  "fase": 1,
-  "alleen_na_scopecheck": false,
-  "rol": "Vertrouwen",
-  "target": "Geen zoekterm; bewijs voor alle diensten en plaatsen, en bron voor AI-antwoorden.",
-  "zoeker": "Wil zien of Jordy dit werk eerder deed, in een vergelijkbaar huis, in de buurt.",
-  "opbouw": [
-   "Filter per dienst en per plaats.",
-   "Elke case in het format uit het uitvoeringsplan.",
-   "In de winter vooral binnenprojecten toevoegen."
-  ],
-  "conversie": "",
-  "linkt_naar": [
-   "/diensten/binnenschilderwerk",
-   "/diensten/buitenschilderwerk",
-   "/locaties/ (6 plaatsen)",
-   "/contact"
-  ],
-  "krijgt_links_van": [
-   "/"
-  ],
-  "voortgang": "todo"
- },
- {
-  "nr": 12,
-  "id": "blogs5",
-  "url": "/blog/ (5 bestaande)",
-  "naam": "Bestaande binnenblogs bijwerken",
-  "status": "optimaliseren",
-  "pakket": "B",
-  "maand": "December",
-  "fase": 1,
-  "alleen_na_scopecheck": false,
-  "rol": "Kennis (optimaliseren)",
-  "target": "Bestaande blogs: btw-tarief schilderwerk, hoe schilder je een deur, hoe verf je een muur, plafond schilderen, verven na behang.",
-  "zoeker": "Doe-het-zelver of iemand die twijfelt tussen zelf doen en laten doen.",
-  "opbouw": [
-   "Per blog een blok \"Liever laten doen?\" met link naar de passende dienst en de winterpagina.",
-   "Directe antwoorden bovenaan controleren; FAQ-schema toevoegen.",
-   "Jaartal en btw-informatie in de btw-blog controleren."
-  ],
-  "conversie": "",
-  "linkt_naar": [
-   "/diensten/binnenschilderwerk",
-   "/diensten/latex-spuiten",
-   "/diensten/winterschilder",
-   "/contact"
-  ],
-  "krijgt_links_van": [
-   "/diensten/binnenschilderwerk"
-  ],
-  "voortgang": "todo",
-  "urls": [
-   "/blog/btw-tarief-schilderwerk",
-   "/blog/hoe-schilder-je-een-deur",
-   "/blog/hoe-verf-je-een-muur",
-   "/blog/plafond-schilderen",
-   "/blog/verven-na-behang"
-  ]
- },
- {
-  "nr": 13,
-  "id": "loc11",
-  "url": "/locaties/ (11 plaatsen)",
-  "naam": "Overige 11 locatiepagina's",
-  "status": "optimaliseren",
-  "pakket": "B",
-  "maand": "December",
-  "fase": 1,
-  "alleen_na_scopecheck": false,
-  "rol": "Locatie (optimaliseren)",
-  "target": "schilder [plaats] voor Waalre, Son en Breugel, Oirschot, Heeze, Mierlo, Meerhoven, Deurne, Beek en Donk, Eersel, Bergeijk, Maarheeze.",
-  "zoeker": "Als bij de zes belangrijkste locaties.",
-  "opbouw": [
-   "Zelfde aanpak als de zes belangrijkste locaties."
-  ],
-  "conversie": "",
-  "linkt_naar": [
-   "/diensten/binnenschilderwerk",
-   "/diensten/buitenschilderwerk",
-   "/contact"
-  ],
-  "krijgt_links_van": [],
-  "voortgang": "todo",
-  "urls": [
-   "/locaties/waalre",
-   "/locaties/son-en-breugel",
-   "/locaties/oirschot",
-   "/locaties/heeze",
-   "/locaties/mierlo",
-   "/locaties/meerhoven",
-   "/locaties/deurne",
-   "/locaties/beek-en-donk",
-   "/locaties/eersel",
-   "/locaties/bergeijk",
-   "/locaties/maarheeze"
-  ]
- },
- {
-  "nr": 14,
-  "id": "b-latex",
-  "url": "/blog/latex-spuiten-of-rollen",
-  "naam": "Latex spuiten of rollen?",
-  "status": "nieuw",
-  "pakket": "P",
-  "maand": "December",
-  "fase": 1,
-  "alleen_na_scopecheck": false,
-  "rol": "Kennis",
-  "target": "latex spuiten of rollen, latex spuiten voordelen.",
-  "zoeker": "Twijfelt tussen spuiten en rollen.",
-  "opbouw": [
-   "Direct antwoord met vergelijkingstabel (strakheid, snelheid, prijs, afplakken).",
-   "H2 \"Wanneer kies je voor spuiten?\""
-  ],
-  "conversie": "",
-  "linkt_naar": [
-   "/diensten/latex-spuiten",
-   "/contact"
-  ],
-  "krijgt_links_van": [
-   "/diensten/latex-spuiten"
-  ],
-  "voortgang": "todo"
- },
- {
-  "nr": 15,
-  "id": "wijken",
-  "url": "/locaties/eindhoven-[wijk] (2)",
-  "naam": "Wijkpagina's Woensel en Stratum",
-  "status": "nieuw",
-  "pakket": "M",
-  "maand": "December",
-  "fase": 1,
-  "alleen_na_scopecheck": false,
-  "rol": "Locatie (wijk)",
-  "target": "schilder woensel, schilder stratum; ondersteunt schilder eindhoven en binnenschilder eindhoven.",
-  "zoeker": "Bewoner van de wijk die een schilder vlakbij zoekt.",
-  "opbouw": [
-   "Woensel: grootste stadsdeel, naoorlogse rijwoningen en jaren-70 buurten.",
-   "Stratum: veel vooroorlogse en jaren-30 woningen, zorgvuldig werk aan oudere deuren en kozijnen.",
-   "Jordy vult aan met eigen projecten in de wijk. 900 tot 1.200 woorden."
-  ],
-  "conversie": "",
-  "linkt_naar": [
-   "/",
-   "/diensten/binnenschilderwerk",
-   "/diensten/latex-spuiten",
-   "/contact"
-  ],
-  "krijgt_links_van": [],
-  "voortgang": "todo"
- },
- {
-  "nr": 16,
-  "id": "buiten",
-  "url": "/diensten/buitenschilderwerk",
-  "naam": "Buitenschilderwerk (hub)",
-  "status": "optimaliseren",
-  "pakket": "B",
-  "maand": "Januari",
-  "fase": 2,
-  "alleen_na_scopecheck": false,
-  "rol": "Hub buiten",
-  "target": "buitenschilderwerk eindhoven. Secundair: buitenschilder eindhoven, huis buiten laten schilderen, boeidelen schilderen, dakkapel schilderen.",
-  "zoeker": "Huiseigenaar die de buitenkant voor het voorjaar wil laten doen.",
-  "opbouw": [
-   "Bestaande tekst blijft staan (ca. 2.800 woorden, prijzen, 8 FAQ's).",
-   "Nieuw blok \"Alle buitenklussen\" met tegels naar kozijnen, kitwerk, gevel, houtrot.",
-   "Bij elke soort buitenschilderwerk een link naar de nieuwe pagina.",
-   "Boeidelen, dakkapellen en deuren als eigen sectie.",
-   "FAQ aanvullen met kitwerk en \"wanneer inplannen\"."
-  ],
-  "conversie": "Enige pagina voor \"buitenschilderwerk eindhoven\". Doelpagina voor links vanaf januari.",
-  "linkt_naar": [
-   "/diensten/kozijnen-schilderen",
-   "/diensten/kitwerk",
-   "/diensten/gevel-schilderen",
-   "/diensten/houtrot-sanering",
-   "/diensten/onderhoudsschilderwerk",
-   "/kosten/schilderwerk",
-   "/blog/wanneer-buiten-schilderen",
-   "/blog/hoe-vaak-buitenschilderwerk",
-   "/locaties/ (6 plaatsen)",
-   "/contact"
-  ],
-  "krijgt_links_van": [
-   "/",
-   "/kosten/schilderwerk",
-   "/locaties/ (6 plaatsen)",
-   "/projecten",
-   "/locaties/ (11 plaatsen)",
-   "/diensten/kozijnen-schilderen",
-   "/diensten/kitwerk",
-   "/diensten/houtrot-sanering",
-   "/diensten/gevel-schilderen",
-   "/blog/wanneer-buiten-schilderen",
-   "/blog/hoe-vaak-buitenschilderwerk",
-   "/locaties/ (3 nieuwe plaatsen)",
-   "/diensten/onderhoudsschilderwerk",
-   "/locaties/ (3 nieuwe plaatsen)",
-   "/diensten/gevelreiniging-impregneren",
-   "/diensten/buitenschilderwerk/[plaats] (3)"
-  ],
-  "voortgang": "todo"
- },
- {
-  "nr": 17,
-  "id": "kozijnen",
-  "url": "/diensten/kozijnen-schilderen",
-  "naam": "Kozijnen schilderen",
-  "status": "nieuw",
-  "pakket": "B",
-  "maand": "Januari",
-  "fase": 2,
-  "alleen_na_scopecheck": false,
-  "rol": "Dienst (conversie)",
-  "target": "kozijnen schilderen. Secundair: kozijnen verven, houten kozijnen schilderen, kozijnen schilderen kosten.",
-  "zoeker": "Ziet bladderende verf op de kozijnen en wil weten wat het kost en hoe lang het meegaat.",
-  "opbouw": [
-   "Direct antwoord met prijs per kozijn en levensduur.",
-   "Signalen, werkwijze in stappen (inclusief houtrotcheck en kitwerk), prijstabel, project, FAQ."
-  ],
-  "conversie": "",
-  "linkt_naar": [
-   "/diensten/buitenschilderwerk",
-   "/diensten/kitwerk",
-   "/diensten/houtrot-sanering",
-   "/kosten/schilderwerk",
-   "/blog/beitsen-of-lakken",
-   "/contact"
-  ],
-  "krijgt_links_van": [
-   "/kosten/schilderwerk",
-   "/diensten/lakwerk",
-   "/locaties/ (6 plaatsen)",
-   "/diensten/buitenschilderwerk",
-   "/diensten/kitwerk",
-   "/diensten/houtrot-sanering",
-   "/blog/hoe-vaak-buitenschilderwerk",
-   "/locaties/ (3 nieuwe plaatsen)",
-   "/diensten/onderhoudsschilderwerk",
-   "/blog/beitsen-of-lakken",
-   "/locaties/ (3 nieuwe plaatsen)",
-   "/diensten/buitenschilderwerk/[plaats] (3)"
-  ],
-  "voortgang": "todo"
- },
- {
-  "nr": 18,
-  "id": "houtrot",
-  "url": "/diensten/houtrot-sanering",
-  "naam": "Houtrot herstellen",
-  "status": "optimaliseren",
-  "pakket": "B",
-  "maand": "Januari",
-  "fase": 2,
-  "alleen_na_scopecheck": false,
-  "rol": "Dienst",
-  "target": "houtrot kozijn. Secundair: houtrot repareren, houtrot kosten.",
-  "zoeker": "Heeft zacht of rot hout ontdekt.",
-  "opbouw": [
-   "Eerste alinea: direct antwoord met prijs per reparatie.",
-   "Nieuw: \"Houtrot herkennen\" met foto's en \"Repareren of vervangen?\" met prijstabel."
-  ],
-  "conversie": "",
-  "linkt_naar": [
-   "/diensten/buitenschilderwerk",
-   "/diensten/kozijnen-schilderen",
-   "/diensten/kitwerk",
-   "/contact"
-  ],
-  "krijgt_links_van": [
-   "/diensten/buitenschilderwerk",
-   "/diensten/kozijnen-schilderen",
-   "/diensten/kitwerk",
-   "/blog/houtrot-herkennen-voorkomen"
-  ],
-  "voortgang": "todo"
- },
- {
-  "nr": 19,
-  "id": "nieuw3",
-  "url": "/locaties/ (3 nieuwe plaatsen)",
-  "naam": "Drie nieuwe plaatsen (keuze Jordy)",
-  "status": "nieuw",
-  "pakket": "P",
-  "maand": "Januari",
-  "fase": 2,
-  "alleen_na_scopecheck": true,
-  "rol": "Locatie (nieuw)",
-  "target": "schilder [plaats] voor drie plaatsen uit Veghel, Uden, Boxtel, Someren, Asten en Gemert (scopecheck).",
-  "zoeker": "Zoekt een schilder in een plaats waar Schildersbedrijf040 nu niet zichtbaar is.",
-  "opbouw": [
-   "Kernen noemen (Veghel: Erp, Mariaheide, Eerde; Uden: Volkel, Odiliapeel; Boxtel: Liempde, Lennisheuvel; Someren: Lierop; Asten: Heusden, Ommel; Gemert: Bakel, De Mortel).",
-   "Woningen en wat dat betekent (door Jordy aan te vullen), diensten, project of review, FAQ. Minimaal 40 procent plaatsspecifiek."
-  ],
-  "conversie": "",
-  "linkt_naar": [
-   "/diensten/binnenschilderwerk",
-   "/diensten/buitenschilderwerk",
-   "/diensten/kozijnen-schilderen",
-   "/contact"
-  ],
-  "krijgt_links_van": [],
-  "voortgang": "todo"
- },
- {
-  "nr": 20,
-  "id": "kitwerk",
-  "url": "/diensten/kitwerk",
-  "naam": "Kitwerk en kitnaden vervangen",
-  "status": "nieuw",
-  "pakket": "B",
-  "maand": "Februari",
-  "fase": 2,
-  "alleen_na_scopecheck": true,
-  "rol": "Dienst (conversie)",
-  "target": "kitwerk kozijnen. Secundair: kitnaden vervangen, kozijnen kitten, beglazingskit.",
-  "zoeker": "Heeft gescheurde kit, tocht of vochtplekken.",
-  "opbouw": [
-   "Direct antwoord: waarom kitwerk ertoe doet en of het los kan.",
-   "Signalen, soorten kitwerk, werkwijze, prijs per meter of per kozijn, FAQ."
-  ],
-  "conversie": "",
-  "linkt_naar": [
-   "/diensten/buitenschilderwerk",
-   "/diensten/kozijnen-schilderen",
-   "/diensten/houtrot-sanering",
-   "/blog/kitnaden-vervangen",
-   "/contact"
-  ],
-  "krijgt_links_van": [
-   "/diensten/buitenschilderwerk",
-   "/diensten/kozijnen-schilderen",
-   "/diensten/houtrot-sanering",
-   "/diensten/onderhoudsschilderwerk",
-   "/blog/kitnaden-vervangen",
-   "/diensten/buitenschilderwerk/[plaats] (3)",
-   "/blog/houtrot-herkennen-voorkomen"
-  ],
-  "voortgang": "todo"
- },
- {
-  "nr": 21,
-  "id": "gevel",
-  "url": "/diensten/gevel-schilderen",
-  "naam": "Gevel schilderen",
-  "status": "nieuw",
-  "pakket": "B",
-  "maand": "Februari",
-  "fase": 2,
-  "alleen_na_scopecheck": false,
-  "rol": "Dienst",
-  "target": "gevel schilderen. Secundair: gevel verven, stenen gevel schilderen, gevel schilderen kosten.",
-  "zoeker": "Twijfelt of de gevel geschilderd kan worden en wat het kost per m².",
-  "opbouw": [
-   "Direct antwoord met prijs per m².",
-   "Welke gevels kunnen, baksteen eerlijk besproken, prijs inclusief steiger, toestemming VvE of gemeente, FAQ."
-  ],
-  "conversie": "",
-  "linkt_naar": [
-   "/diensten/buitenschilderwerk",
-   "/kosten/schilderwerk",
-   "/contact"
-  ],
-  "krijgt_links_van": [
-   "/diensten/buitenschilderwerk",
-   "/diensten/gevelreiniging-impregneren"
-  ],
-  "voortgang": "todo"
- },
- {
-  "nr": 22,
-  "id": "b-wanneer",
-  "url": "/blog/wanneer-buiten-schilderen",
-  "naam": "Wanneer kun je het beste buiten schilderen?",
-  "status": "nieuw",
-  "pakket": "B",
-  "maand": "Februari",
-  "fase": 2,
-  "alleen_na_scopecheck": false,
-  "rol": "Kennis",
-  "target": "wanneer buiten schilderen, beste tijd buitenschilderwerk.",
-  "zoeker": "Wil het buitenwerk plannen.",
-  "opbouw": [
-   "Direct antwoord: voorjaar tot vroege herfst, droog weer.",
-   "H2 \"Waarom nu al inplannen\" (drukte in het seizoen)."
-  ],
-  "conversie": "",
-  "linkt_naar": [
-   "/diensten/buitenschilderwerk",
-   "/diensten/winterschilder",
-   "/contact"
-  ],
-  "krijgt_links_van": [
-   "/diensten/buitenschilderwerk"
-  ],
-  "voortgang": "todo"
- },
- {
-  "nr": 23,
-  "id": "onderhoud",
-  "url": "/diensten/onderhoudsschilderwerk",
-  "naam": "Onderhoudsschilderwerk",
-  "status": "nieuw",
-  "pakket": "P",
-  "maand": "Februari",
-  "fase": 2,
-  "alleen_na_scopecheck": true,
-  "rol": "Dienst",
-  "target": "onderhoudsschilderwerk, meerjarenonderhoudsplan schilderwerk, schilderwerk vve.",
-  "zoeker": "Huiseigenaar, VvE of verhuurder die vooruit wil plannen.",
-  "opbouw": [
-   "Direct antwoord, voor wie, hoe het werkt, onderhoudscyclus in een tabel, FAQ."
-  ],
-  "conversie": "",
-  "linkt_naar": [
-   "/diensten/buitenschilderwerk",
-   "/diensten/kozijnen-schilderen",
-   "/diensten/kitwerk",
-   "/contact"
-  ],
-  "krijgt_links_van": [
-   "/diensten/buitenschilderwerk",
-   "/blog/hoe-vaak-buitenschilderwerk"
-  ],
-  "voortgang": "todo"
- },
- {
-  "nr": 24,
-  "id": "nieuw3b",
-  "url": "/locaties/ (3 nieuwe plaatsen)",
-  "naam": "Overige drie nieuwe plaatsen",
-  "status": "nieuw",
-  "pakket": "M",
-  "maand": "Februari",
-  "fase": 2,
-  "alleen_na_scopecheck": true,
-  "rol": "Locatie (nieuw)",
-  "target": "schilder [plaats] voor de overige drie plaatsen uit de scopecheck.",
-  "zoeker": "Als bij de eerste drie nieuwe plaatsen.",
-  "opbouw": [
-   "Zelfde sjabloon als de eerste drie nieuwe plaatsen."
-  ],
-  "conversie": "",
-  "linkt_naar": [
-   "/diensten/binnenschilderwerk",
-   "/diensten/buitenschilderwerk",
-   "/diensten/kozijnen-schilderen",
-   "/contact"
-  ],
-  "krijgt_links_van": [],
-  "voortgang": "todo"
- },
- {
-  "nr": 25,
-  "id": "b-hoevaak",
-  "url": "/blog/hoe-vaak-buitenschilderwerk",
-  "naam": "Hoe vaak moet je buitenschilderwerk laten doen?",
-  "status": "nieuw",
-  "pakket": "B",
-  "maand": "Maart",
-  "fase": 2,
-  "alleen_na_scopecheck": false,
-  "rol": "Kennis",
-  "target": "hoe vaak buitenschilderwerk, hoe vaak kozijnen schilderen.",
-  "zoeker": "Wil weten of het al tijd is.",
-  "opbouw": [
-   "Direct antwoord met cyclus per onderdeel.",
-   "Tabel per onderdeel en verfsoort."
-  ],
-  "conversie": "",
-  "linkt_naar": [
-   "/diensten/buitenschilderwerk",
-   "/diensten/onderhoudsschilderwerk",
-   "/diensten/kozijnen-schilderen",
-   "/contact"
-  ],
-  "krijgt_links_van": [
-   "/diensten/buitenschilderwerk"
-  ],
-  "voortgang": "todo"
- },
- {
-  "nr": 26,
-  "id": "b-kit",
-  "url": "/blog/kitnaden-vervangen",
-  "naam": "Kitnaden vervangen: zelf doen of laten doen?",
-  "status": "nieuw",
-  "pakket": "P",
-  "maand": "Maart",
-  "fase": 2,
-  "alleen_na_scopecheck": false,
-  "rol": "Kennis",
-  "target": "kitnaden vervangen, oude kit verwijderen.",
-  "zoeker": "Twijfelt of hij het zelf kan.",
-  "opbouw": [
-   "Stappen voor een klein klusje zelf, en wanneer je het laat doen."
-  ],
-  "conversie": "",
-  "linkt_naar": [
-   "/diensten/kitwerk",
-   "/contact"
-  ],
-  "krijgt_links_van": [
-   "/diensten/kitwerk"
-  ],
-  "voortgang": "todo"
- },
- {
-  "nr": 27,
-  "id": "b-beits",
-  "url": "/blog/beitsen-of-lakken",
-  "naam": "Beitsen of lakken: wat past bij je kozijnen?",
-  "status": "nieuw",
-  "pakket": "P",
-  "maand": "Maart",
-  "fase": 2,
-  "alleen_na_scopecheck": false,
-  "rol": "Kennis",
-  "target": "beitsen of lakken, dekkend of transparant beitsen.",
-  "zoeker": "Twijfelt over de afwerking van kozijnen of gevelhout.",
-  "opbouw": [
-   "Direct antwoord met vergelijkingstabel.",
-   "Wat past bij welk hout."
-  ],
-  "conversie": "",
-  "linkt_naar": [
-   "/diensten/kozijnen-schilderen",
-   "/contact"
-  ],
-  "krijgt_links_van": [
-   "/diensten/kozijnen-schilderen"
-  ],
-  "voortgang": "todo"
- },
- {
-  "nr": 28,
-  "id": "reinigen",
-  "url": "/diensten/gevelreiniging-impregneren",
-  "naam": "Gevel reinigen en impregneren",
-  "status": "nieuw",
-  "pakket": "M",
-  "maand": "Maart",
-  "fase": 2,
-  "alleen_na_scopecheck": true,
-  "rol": "Dienst",
-  "target": "gevel reinigen, gevelreiniging, gevel impregneren.",
-  "zoeker": "Gevel is groen, vuil of neemt vocht op.",
-  "opbouw": [
-   "Direct antwoord: wat reinigen en impregneren oplevert.",
-   "Welke reiniging bij welke steen, wat impregneren wel en niet doet, prijs per m², FAQ."
-  ],
-  "conversie": "Alleen als Jordy dit zelf of via een vaste partner doet.",
-  "linkt_naar": [
-   "/diensten/buitenschilderwerk",
-   "/diensten/gevel-schilderen",
-   "/contact"
-  ],
-  "krijgt_links_van": [],
-  "voortgang": "todo"
- },
- {
-  "nr": 29,
-  "id": "perplaats",
-  "url": "/diensten/buitenschilderwerk/[plaats] (3)",
-  "naam": "Buitenschilderwerk Helmond, Veldhoven, Best",
-  "status": "nieuw",
-  "pakket": "M",
-  "maand": "Maart",
-  "fase": 2,
-  "alleen_na_scopecheck": true,
-  "rol": "Locatie x dienst",
-  "target": "buitenschilderwerk helmond, buitenschilderwerk veldhoven, buitenschilderwerk best.",
-  "zoeker": "Zoekt specifiek iemand voor buitenwerk in die plaats.",
-  "opbouw": [
-   "Intro met prijsindicatie voor een gemiddelde woning in die plaats.",
-   "Buitenklussen die daar het vaakst voorkomen.",
-   "Project in die plaats met foto's (voorwaarde).",
-   "Planning en seizoen, FAQ."
-  ],
-  "conversie": "Alleen bouwen als er een echt project in die plaats is.",
-  "linkt_naar": [
-   "/locaties/ (6 plaatsen)",
-   "/diensten/buitenschilderwerk",
-   "/diensten/kozijnen-schilderen",
-   "/diensten/kitwerk",
-   "/contact"
-  ],
-  "krijgt_links_van": [],
-  "voortgang": "todo"
- },
- {
-  "nr": 30,
-  "id": "b-houtrot",
-  "url": "/blog/houtrot-herkennen-voorkomen",
-  "naam": "Houtrot herkennen en voorkomen",
-  "status": "nieuw",
-  "pakket": "M",
-  "maand": "Maart",
-  "fase": 2,
-  "alleen_na_scopecheck": false,
-  "rol": "Kennis",
-  "target": "houtrot voorkomen, houtrot herkennen.",
-  "zoeker": "Wil houtrot voor zijn of heeft een vermoeden.",
-  "opbouw": [
-   "Signalen met foto's.",
-   "Waar houtrot ontstaat (onderdorpels, kitnaden).",
-   "Zo voorkomt u het."
-  ],
-  "conversie": "",
-  "linkt_naar": [
-   "/diensten/houtrot-sanering",
-   "/diensten/kitwerk",
-   "/contact"
-  ],
-  "krijgt_links_van": [],
-  "voortgang": "todo"
- }
+  {
+    "nr": 1,
+    "id": "home",
+    "url": "/",
+    "naam": "Homepage",
+    "status": "optimaliseren",
+    "pakket": "B",
+    "maand": "Oktober",
+    "fase": 1,
+    "alleen_na_scopecheck": false,
+    "rol": "Niveau 1",
+    "target": "schilder eindhoven, schildersbedrijf eindhoven (samen ca. 450 per maand in september, piek in maart). Titel aanpassen: merknaam één keer. Belangrijkste doelpagina voor links.",
+    "zoeker": "Zoekt een schilder in Eindhoven of komt via de naam binnen, en wil in tien seconden zien wat Jordy doet, waar, en of hij betrouwbaar is.",
+    "opbouw": [
+      "Direct antwoord in de hero: schilder in Eindhoven en omgeving voor binnen- en buitenschilderwerk, 5,0 op Google.",
+      "Van oktober tot en met februari een seizoensblok \"Nu inplannen: binnenwerk in de winter\" met link naar de winterpagina. Vanaf maart vervangen door buitenwerk.",
+      "Tegels naar binnenschilderwerk, latex spuiten, lakwerk, behangen, buitenschilderwerk.",
+      "Werkgebied met links naar de locatiepagina's, drie uitgelichte projecten, gekoppelde Google-reviews.",
+      "FAQ met drie kernvragen uit de GEO-lijst."
+    ],
+    "conversie": "Offerte-CTA boven de vouw en onderaan.",
+    "linkt_naar": [
+      "/diensten/binnenschilderwerk",
+      "/diensten/winterschilder",
+      "/diensten/buitenschilderwerk",
+      "/kosten/schilderwerk",
+      "/projecten",
+      "/locaties/ (6 plaatsen)",
+      "/contact"
+    ],
+    "krijgt_links_van": [
+      "/locaties/eindhoven-[wijk] (2)"
+    ],
+    "voortgang": "concept"
+  },
+  {
+    "nr": 2,
+    "id": "binnen",
+    "url": "/diensten/binnenschilderwerk",
+    "naam": "Binnenschilderwerk (hub)",
+    "status": "optimaliseren",
+    "pakket": "B",
+    "maand": "Oktober",
+    "fase": 1,
+    "alleen_na_scopecheck": false,
+    "rol": "Hub binnen",
+    "target": "binnenschilder eindhoven (100, piek januari tot en met maart). Secundair: binnenschilderwerk (700, KD 2), binnenschilder (350, KD 2), huis binnen laten schilderen.",
+    "zoeker": "Huiseigenaar die kamers, een verdieping of het hele huis binnen wil laten doen, vaak na een verhuizing of verbouwing.",
+    "opbouw": [
+      "Bestaande tekst blijft staan (ca. 2.800 woorden, prijzen, 8 FAQ's). Alleen toevoegen wat hieronder staat.",
+      "Blok met tegels naar latex spuiten, lakwerk en behangen (als die er nog niet staan).",
+      "H2 \"Binnenwerk in de winter\" kort, met link naar de winterpagina.",
+      "In de bestaande prijssectie een link naar de prijsgids.",
+      "Projectfoto's en gekoppelde Google-reviews. Bestaande winter-FAQ laten linken naar de winterpagina."
+    ],
+    "conversie": "",
+    "linkt_naar": [
+      "/diensten/winterschilder",
+      "/diensten/latex-spuiten",
+      "/diensten/lakwerk",
+      "/diensten/behangen",
+      "/kosten/schilderwerk",
+      "/blog/hoe-lang-duurt-binnenschilderwerk",
+      "/blog/ (5 bestaande)",
+      "/locaties/ (6 plaatsen)",
+      "/contact"
+    ],
+    "krijgt_links_van": [
+      "/",
+      "/diensten/winterschilder",
+      "/diensten/latex-spuiten",
+      "/kosten/schilderwerk",
+      "/diensten/lakwerk",
+      "/diensten/behangen",
+      "/locaties/ (6 plaatsen)",
+      "/projecten",
+      "/blog/ (5 bestaande)",
+      "/locaties/ (11 plaatsen)",
+      "/blog/hoe-lang-duurt-binnenschilderwerk",
+      "/locaties/ (3 nieuwe plaatsen)",
+      "/diensten/latex-spuiten/[plaats] (2)",
+      "/locaties/eindhoven-[wijk] (2)",
+      "/locaties/ (3 nieuwe plaatsen)"
+    ],
+    "voortgang": "concept"
+  },
+  {
+    "nr": 3,
+    "id": "winter",
+    "url": "/diensten/winterschilder",
+    "naam": "Winterschilder: binnenwerk in de winter",
+    "status": "nieuw",
+    "pakket": "B",
+    "maand": "Oktober",
+    "fase": 1,
+    "alleen_na_scopecheck": false,
+    "rol": "Dienst (seizoen)",
+    "target": "winterschilder (400 p/m landelijk, KD 2, piek september tot en met januari), winterschilder eindhoven (70, piek oktober tot en met januari). Secundair: schilderen in de winter, binnen schilderen winter.",
+    "zoeker": "Wil het schilderwerk binnen laten doen nu het buiten rustig is, en vraagt zich af of dat kan, of het goedkoper is en of de schilder sneller plek heeft.",
+    "opbouw": [
+      "Direct antwoord: binnenwerk kan prima in de winter, want de temperatuur binnen is te regelen. Voordelen: sneller plek in de planning en een schilder die niet onder de zomerdruk werkt.",
+      "H2 \"Waarom de winter een goed moment is voor binnenwerk\" (planning, verwarming, klaar voor het voorjaar).",
+      "H2 \"Wat kunnen we in de winter voor u doen?\" met tegels naar binnenschilderwerk, latex spuiten, lakwerk en behangen.",
+      "H2 \"Is een schilder in de winter goedkoper?\" eerlijk: alleen als Jordy een winteractie wil (scopecheck); anders het voordeel van planning en rust.",
+      "H2 \"Binnen en buiten combineren\": binnen nu, buiten in het voorjaar vastleggen.",
+      "FAQ: temperatuur en ventilatie, droogtijd, kerstperiode, kan ik thuis blijven."
+    ],
+    "conversie": "CTA \"Plan uw binnenwerk deze winter\". Belangrijke doelpagina voor links in oktober en november.",
+    "linkt_naar": [
+      "/diensten/binnenschilderwerk",
+      "/diensten/latex-spuiten",
+      "/kosten/schilderwerk",
+      "/blog/hoe-lang-duurt-binnenschilderwerk",
+      "/contact"
+    ],
+    "krijgt_links_van": [
+      "/",
+      "/diensten/binnenschilderwerk",
+      "/diensten/latex-spuiten",
+      "/locaties/ (6 plaatsen)",
+      "/blog/ (5 bestaande)",
+      "/blog/hoe-lang-duurt-binnenschilderwerk",
+      "/blog/wanneer-buiten-schilderen"
+    ],
+    "voortgang": "concept"
+  },
+  {
+    "nr": 4,
+    "id": "latex",
+    "url": "/diensten/latex-spuiten",
+    "naam": "Latex spuiten",
+    "status": "optimaliseren",
+    "pakket": "B",
+    "maand": "Oktober",
+    "fase": 1,
+    "alleen_na_scopecheck": false,
+    "rol": "Dienst (conversie)",
+    "target": "latex spuiten eindhoven (100) en latex spuiten (900, KD 61). Secundair: plafond spuiten (700, KD 0), latex spuiten per m2 (100), muren latex spuiten (30).",
+    "zoeker": "Wil strakke muren en plafonds, vaak in nieuwbouw of na stucwerk, en wil weten wat het kost per m².",
+    "opbouw": [
+      "Eerste alinea: direct antwoord met prijs per m² en hoeveel m² per dag.",
+      "Nieuw: H2 \"Wat kost latex spuiten?\" met tabel (muren, plafonds, nieuwbouw versus bestaande bouw).",
+      "Nieuw: H2 \"Plafond spuiten\" als eigen sectie (700 zoekopdrachten, nog niet afgedekt).",
+      "Nieuw: H2 \"Spuiten of rollen?\" kort, met link naar de blog.",
+      "FAQ aanvullen: winter, droogtijd, afplakken, meubels."
+    ],
+    "conversie": "",
+    "linkt_naar": [
+      "/diensten/binnenschilderwerk",
+      "/diensten/winterschilder",
+      "/kosten/schilderwerk",
+      "/blog/latex-spuiten-of-rollen",
+      "/contact"
+    ],
+    "krijgt_links_van": [
+      "/diensten/binnenschilderwerk",
+      "/diensten/winterschilder",
+      "/kosten/schilderwerk",
+      "/blog/ (5 bestaande)",
+      "/blog/latex-spuiten-of-rollen",
+      "/diensten/latex-spuiten/[plaats] (2)",
+      "/locaties/eindhoven-[wijk] (2)"
+    ],
+    "voortgang": "concept"
+  },
+  {
+    "nr": 5,
+    "id": "kosten",
+    "url": "/kosten/schilderwerk",
+    "naam": "Wat kost schilderwerk? (prijsgids)",
+    "status": "nieuw",
+    "pakket": "B",
+    "maand": "November",
+    "fase": 1,
+    "alleen_na_scopecheck": true,
+    "rol": "Conversie (prijsgids)",
+    "target": "wat kost een schilder (500, TP 1.400), latex spuiten kosten (300), kosten schilder per m2 (150, TP 1.200), plafond spuiten kosten (150). Secundair: binnenschilderwerk kosten (90), schilderwerk kosten (70), schilder uurtarief (60), en vanaf januari buitenschilderwerk kosten.",
+    "zoeker": "Wil een realistisch budget weten voordat hij offertes aanvraagt.",
+    "opbouw": [
+      "Direct antwoord met bandbreedtes (door Jordy aangeleverd).",
+      "Tabel binnen: muren per m², plafonds, latex spuiten, deuren en kozijnen binnen, trap.",
+      "Rekenvoorbeelden: woonkamer met hal; complete woning binnen.",
+      "H2 \"Wat bepaalt de prijs?\" en H2 \"Btw op schilderwerk\" (link naar bestaande blog).",
+      "Vanaf januari aanvullen met een tabel buiten (kozijnen, gevel, kitwerk, houtrot)."
+    ],
+    "conversie": "Offerte-CTA na elke prijssectie. Wil Jordy geen bedragen publiceren, dan alleen wat de prijs bepaalt. Dit wordt de doelpagina voor alle \"kosten\"-termen.",
+    "linkt_naar": [
+      "/diensten/binnenschilderwerk",
+      "/diensten/latex-spuiten",
+      "/diensten/buitenschilderwerk",
+      "/diensten/kozijnen-schilderen",
+      "/blog/btw-tarief-schilderwerk",
+      "/contact"
+    ],
+    "krijgt_links_van": [
+      "/",
+      "/diensten/binnenschilderwerk",
+      "/diensten/winterschilder",
+      "/diensten/latex-spuiten",
+      "/diensten/buitenschilderwerk",
+      "/diensten/kozijnen-schilderen",
+      "/diensten/gevel-schilderen"
+    ],
+    "voortgang": "todo"
+  },
+  {
+    "nr": 6,
+    "id": "lakwerk",
+    "url": "/diensten/lakwerk",
+    "naam": "Lakwerk",
+    "status": "optimaliseren",
+    "pakket": "B",
+    "maand": "November",
+    "fase": 1,
+    "alleen_na_scopecheck": false,
+    "rol": "Dienst",
+    "target": "deuren lakken (60, veel doe-het-zelf), deuren lakken kosten, trap laten schilderen kosten (100).",
+    "zoeker": "Wil deuren, kozijnen binnen of een trap strak laten lakken.",
+    "opbouw": [
+      "Eerste alinea: direct antwoord met prijs per deur.",
+      "Prijstabel per onderdeel.",
+      "Link naar de bestaande blog over deuren schilderen.",
+      "FAQ aanvullen."
+    ],
+    "conversie": "",
+    "linkt_naar": [
+      "/diensten/binnenschilderwerk",
+      "/diensten/kozijnen-schilderen",
+      "/contact"
+    ],
+    "krijgt_links_van": [
+      "/diensten/binnenschilderwerk"
+    ],
+    "voortgang": "todo"
+  },
+  {
+    "nr": 7,
+    "id": "behangen",
+    "url": "/diensten/behangen",
+    "naam": "Behangen",
+    "status": "optimaliseren",
+    "pakket": "B",
+    "maand": "November",
+    "fase": 1,
+    "alleen_na_scopecheck": false,
+    "rol": "Dienst",
+    "target": "behanger (900, KD 43), behanger helmond (80), behanger eindhoven (30), behangen kosten per m2 (30).",
+    "zoeker": "Wil behang laten plaatsen of verwijderen, vaak in combinatie met schilderwerk.",
+    "opbouw": [
+      "Eerste alinea: direct antwoord met prijs per m² of per rol.",
+      "H2 \"Behang verwijderen en daarna verven\" met link naar de blog verven na behang.",
+      "FAQ aanvullen."
+    ],
+    "conversie": "",
+    "linkt_naar": [
+      "/diensten/binnenschilderwerk",
+      "/blog/verven-na-behang",
+      "/contact"
+    ],
+    "krijgt_links_van": [
+      "/diensten/binnenschilderwerk"
+    ],
+    "voortgang": "todo"
+  },
+  {
+    "nr": 8,
+    "id": "loc6",
+    "url": "/locaties/ (6 plaatsen)",
+    "naam": "Veldhoven, Valkenswaard, Helmond, Best, Geldrop, Nuenen",
+    "status": "optimaliseren",
+    "pakket": "B",
+    "maand": "November",
+    "fase": 1,
+    "alleen_na_scopecheck": false,
+    "rol": "Locatie (optimaliseren)",
+    "target": "schilder [plaats], schildersbedrijf [plaats]. Binnen: latex spuiten helmond (90), behanger helmond (80), latex spuiten veldhoven (60). Veldhoven, Valkenswaard en Helmond krijgen in fase 1 links; Best, Geldrop en Nuenen in fase 2.",
+    "zoeker": "Zoekt een schilder dichtbij en wil zien of die ook echt in zijn plaats werkt.",
+    "opbouw": [
+      "Bestaande tekst blijft staan; unieke title en meta description.",
+      "Nieuw blok \"Binnen- en buitenschilderwerk in [plaats]\" (200 tot 300 woorden): typische woningen en wat daar speelt.",
+      "Twee lokale details die op geen andere locatiepagina staan: kernen, wijken, bouwperiode of een project.",
+      "Een project of review uit die plaats of de directe omgeving, als die er is.",
+      "Helmond: latex spuiten en behanger expliciet noemen, met link naar die dienstpagina's. Veldhoven: latex spuiten."
+    ],
+    "conversie": "",
+    "linkt_naar": [
+      "/diensten/binnenschilderwerk",
+      "/diensten/winterschilder",
+      "/diensten/buitenschilderwerk",
+      "/diensten/kozijnen-schilderen",
+      "/contact"
+    ],
+    "krijgt_links_van": [
+      "/",
+      "/diensten/binnenschilderwerk",
+      "/projecten",
+      "/diensten/buitenschilderwerk",
+      "/diensten/latex-spuiten/[plaats] (2)",
+      "/diensten/buitenschilderwerk/[plaats] (3)"
+    ],
+    "voortgang": "todo",
+    "urls": [
+      "/locaties/veldhoven",
+      "/locaties/valkenswaard",
+      "/locaties/helmond",
+      "/locaties/best",
+      "/locaties/geldrop",
+      "/locaties/nuenen"
+    ]
+  },
+  {
+    "nr": 9,
+    "id": "b-duur",
+    "url": "/blog/hoe-lang-duurt-binnenschilderwerk",
+    "naam": "Hoe lang duurt binnenschilderwerk?",
+    "status": "nieuw",
+    "pakket": "B",
+    "maand": "November",
+    "fase": 1,
+    "alleen_na_scopecheck": false,
+    "rol": "Kennis",
+    "target": "hoe lang duurt binnenschilderwerk, hoe lang duurt latex spuiten, hoe lang duurt het om een huis te schilderen.",
+    "zoeker": "Wil plannen: hoe lang is het huis bezet, kan ik er wonen.",
+    "opbouw": [
+      "Direct antwoord met tabel per ruimte en voor een hele woning.",
+      "H2 \"Wat maakt het sneller of langzamer?\"",
+      "H2 \"Wonen tijdens de klus\"."
+    ],
+    "conversie": "",
+    "linkt_naar": [
+      "/diensten/binnenschilderwerk",
+      "/diensten/winterschilder",
+      "/contact"
+    ],
+    "krijgt_links_van": [
+      "/diensten/binnenschilderwerk",
+      "/diensten/winterschilder"
+    ],
+    "voortgang": "todo"
+  },
+  {
+    "nr": 10,
+    "id": "latexloc",
+    "url": "/diensten/latex-spuiten/[plaats] (2)",
+    "naam": "Latex spuiten Helmond en Veldhoven",
+    "status": "nieuw",
+    "pakket": "M",
+    "maand": "November",
+    "fase": 1,
+    "alleen_na_scopecheck": false,
+    "rol": "Dienst x plaats",
+    "target": "latex spuiten helmond (90) en latex spuiten veldhoven (60).",
+    "zoeker": "Zoekt iemand voor latex spuiten in die plaats, vaak bij nieuwbouw of na een verbouwing.",
+    "opbouw": [
+      "Direct antwoord met prijs per m² en doorlooptijd.",
+      "Project in die plaats met foto's (liefst nieuwbouw of stucwerk).",
+      "Plafond spuiten als sectie, FAQ.",
+      "Alleen bouwen als er echt lokale inhoud is; anders een blok op de locatiepagina."
+    ],
+    "conversie": "",
+    "linkt_naar": [
+      "/diensten/latex-spuiten",
+      "/locaties/ (6 plaatsen)",
+      "/diensten/binnenschilderwerk",
+      "/contact"
+    ],
+    "krijgt_links_van": [],
+    "voortgang": "todo"
+  },
+  {
+    "nr": 11,
+    "id": "projecten",
+    "url": "/projecten",
+    "naam": "Projecten",
+    "status": "optimaliseren",
+    "pakket": "B",
+    "maand": "December",
+    "fase": 1,
+    "alleen_na_scopecheck": false,
+    "rol": "Vertrouwen",
+    "target": "Geen zoekterm; bewijs voor alle diensten en plaatsen, en bron voor AI-antwoorden.",
+    "zoeker": "Wil zien of Jordy dit werk eerder deed, in een vergelijkbaar huis, in de buurt.",
+    "opbouw": [
+      "Filter per dienst en per plaats.",
+      "Elke case in het format uit het uitvoeringsplan.",
+      "In de winter vooral binnenprojecten toevoegen."
+    ],
+    "conversie": "",
+    "linkt_naar": [
+      "/diensten/binnenschilderwerk",
+      "/diensten/buitenschilderwerk",
+      "/locaties/ (6 plaatsen)",
+      "/contact"
+    ],
+    "krijgt_links_van": [
+      "/"
+    ],
+    "voortgang": "todo"
+  },
+  {
+    "nr": 12,
+    "id": "blogs5",
+    "url": "/blog/ (5 bestaande)",
+    "naam": "Bestaande binnenblogs bijwerken",
+    "status": "optimaliseren",
+    "pakket": "B",
+    "maand": "December",
+    "fase": 1,
+    "alleen_na_scopecheck": false,
+    "rol": "Kennis (optimaliseren)",
+    "target": "Bestaande blogs: btw-tarief schilderwerk, hoe schilder je een deur, hoe verf je een muur, plafond schilderen, verven na behang.",
+    "zoeker": "Doe-het-zelver of iemand die twijfelt tussen zelf doen en laten doen.",
+    "opbouw": [
+      "Per blog een blok \"Liever laten doen?\" met link naar de passende dienst en de winterpagina.",
+      "Directe antwoorden bovenaan controleren; FAQ-schema toevoegen.",
+      "Jaartal en btw-informatie in de btw-blog controleren."
+    ],
+    "conversie": "",
+    "linkt_naar": [
+      "/diensten/binnenschilderwerk",
+      "/diensten/latex-spuiten",
+      "/diensten/winterschilder",
+      "/contact"
+    ],
+    "krijgt_links_van": [
+      "/diensten/binnenschilderwerk"
+    ],
+    "voortgang": "todo",
+    "urls": [
+      "/blog/btw-tarief-schilderwerk",
+      "/blog/hoe-schilder-je-een-deur",
+      "/blog/hoe-verf-je-een-muur",
+      "/blog/plafond-schilderen",
+      "/blog/verven-na-behang"
+    ]
+  },
+  {
+    "nr": 13,
+    "id": "loc11",
+    "url": "/locaties/ (11 plaatsen)",
+    "naam": "Overige 11 locatiepagina's",
+    "status": "optimaliseren",
+    "pakket": "B",
+    "maand": "December",
+    "fase": 1,
+    "alleen_na_scopecheck": false,
+    "rol": "Locatie (optimaliseren)",
+    "target": "schilder [plaats] voor Waalre, Son en Breugel, Oirschot, Heeze, Mierlo, Meerhoven, Deurne, Beek en Donk, Eersel, Bergeijk, Maarheeze.",
+    "zoeker": "Als bij de zes belangrijkste locaties.",
+    "opbouw": [
+      "Zelfde aanpak als de zes belangrijkste locaties."
+    ],
+    "conversie": "",
+    "linkt_naar": [
+      "/diensten/binnenschilderwerk",
+      "/diensten/buitenschilderwerk",
+      "/contact"
+    ],
+    "krijgt_links_van": [],
+    "voortgang": "todo",
+    "urls": [
+      "/locaties/waalre",
+      "/locaties/son-en-breugel",
+      "/locaties/oirschot",
+      "/locaties/heeze",
+      "/locaties/mierlo",
+      "/locaties/meerhoven",
+      "/locaties/deurne",
+      "/locaties/beek-en-donk",
+      "/locaties/eersel",
+      "/locaties/bergeijk",
+      "/locaties/maarheeze"
+    ]
+  },
+  {
+    "nr": 14,
+    "id": "b-latex",
+    "url": "/blog/latex-spuiten-of-rollen",
+    "naam": "Latex spuiten of rollen?",
+    "status": "nieuw",
+    "pakket": "P",
+    "maand": "December",
+    "fase": 1,
+    "alleen_na_scopecheck": false,
+    "rol": "Kennis",
+    "target": "latex spuiten of rollen, latex spuiten voordelen.",
+    "zoeker": "Twijfelt tussen spuiten en rollen.",
+    "opbouw": [
+      "Direct antwoord met vergelijkingstabel (strakheid, snelheid, prijs, afplakken).",
+      "H2 \"Wanneer kies je voor spuiten?\""
+    ],
+    "conversie": "",
+    "linkt_naar": [
+      "/diensten/latex-spuiten",
+      "/contact"
+    ],
+    "krijgt_links_van": [
+      "/diensten/latex-spuiten"
+    ],
+    "voortgang": "todo"
+  },
+  {
+    "nr": 15,
+    "id": "wijken",
+    "url": "/locaties/eindhoven-[wijk] (2)",
+    "naam": "Wijkpagina's Woensel en Stratum",
+    "status": "nieuw",
+    "pakket": "M",
+    "maand": "December",
+    "fase": 1,
+    "alleen_na_scopecheck": false,
+    "rol": "Locatie (wijk)",
+    "target": "schilder woensel, schilder stratum; ondersteunt schilder eindhoven en binnenschilder eindhoven.",
+    "zoeker": "Bewoner van de wijk die een schilder vlakbij zoekt.",
+    "opbouw": [
+      "Woensel: grootste stadsdeel, naoorlogse rijwoningen en jaren-70 buurten.",
+      "Stratum: veel vooroorlogse en jaren-30 woningen, zorgvuldig werk aan oudere deuren en kozijnen.",
+      "Jordy vult aan met eigen projecten in de wijk. 900 tot 1.200 woorden."
+    ],
+    "conversie": "",
+    "linkt_naar": [
+      "/",
+      "/diensten/binnenschilderwerk",
+      "/diensten/latex-spuiten",
+      "/contact"
+    ],
+    "krijgt_links_van": [],
+    "voortgang": "todo"
+  },
+  {
+    "nr": 16,
+    "id": "buiten",
+    "url": "/diensten/buitenschilderwerk",
+    "naam": "Buitenschilderwerk (hub)",
+    "status": "optimaliseren",
+    "pakket": "B",
+    "maand": "Januari",
+    "fase": 2,
+    "alleen_na_scopecheck": false,
+    "rol": "Hub buiten",
+    "target": "buitenschilderwerk eindhoven. Secundair: buitenschilder eindhoven, huis buiten laten schilderen, boeidelen schilderen, dakkapel schilderen.",
+    "zoeker": "Huiseigenaar die de buitenkant voor het voorjaar wil laten doen.",
+    "opbouw": [
+      "Bestaande tekst blijft staan (ca. 2.800 woorden, prijzen, 8 FAQ's).",
+      "Nieuw blok \"Alle buitenklussen\" met tegels naar kozijnen, kitwerk, gevel, houtrot.",
+      "Bij elke soort buitenschilderwerk een link naar de nieuwe pagina.",
+      "Boeidelen, dakkapellen en deuren als eigen sectie.",
+      "FAQ aanvullen met kitwerk en \"wanneer inplannen\"."
+    ],
+    "conversie": "Enige pagina voor \"buitenschilderwerk eindhoven\". Doelpagina voor links vanaf januari.",
+    "linkt_naar": [
+      "/diensten/kozijnen-schilderen",
+      "/diensten/kitwerk",
+      "/diensten/gevel-schilderen",
+      "/diensten/houtrot-sanering",
+      "/diensten/onderhoudsschilderwerk",
+      "/kosten/schilderwerk",
+      "/blog/wanneer-buiten-schilderen",
+      "/blog/hoe-vaak-buitenschilderwerk",
+      "/locaties/ (6 plaatsen)",
+      "/contact"
+    ],
+    "krijgt_links_van": [
+      "/",
+      "/kosten/schilderwerk",
+      "/locaties/ (6 plaatsen)",
+      "/projecten",
+      "/locaties/ (11 plaatsen)",
+      "/diensten/kozijnen-schilderen",
+      "/diensten/kitwerk",
+      "/diensten/houtrot-sanering",
+      "/diensten/gevel-schilderen",
+      "/blog/wanneer-buiten-schilderen",
+      "/blog/hoe-vaak-buitenschilderwerk",
+      "/locaties/ (3 nieuwe plaatsen)",
+      "/diensten/onderhoudsschilderwerk",
+      "/locaties/ (3 nieuwe plaatsen)",
+      "/diensten/gevelreiniging-impregneren",
+      "/diensten/buitenschilderwerk/[plaats] (3)"
+    ],
+    "voortgang": "todo"
+  },
+  {
+    "nr": 17,
+    "id": "kozijnen",
+    "url": "/diensten/kozijnen-schilderen",
+    "naam": "Kozijnen schilderen",
+    "status": "nieuw",
+    "pakket": "B",
+    "maand": "Januari",
+    "fase": 2,
+    "alleen_na_scopecheck": false,
+    "rol": "Dienst (conversie)",
+    "target": "kozijnen schilderen. Secundair: kozijnen verven, houten kozijnen schilderen, kozijnen schilderen kosten.",
+    "zoeker": "Ziet bladderende verf op de kozijnen en wil weten wat het kost en hoe lang het meegaat.",
+    "opbouw": [
+      "Direct antwoord met prijs per kozijn en levensduur.",
+      "Signalen, werkwijze in stappen (inclusief houtrotcheck en kitwerk), prijstabel, project, FAQ."
+    ],
+    "conversie": "",
+    "linkt_naar": [
+      "/diensten/buitenschilderwerk",
+      "/diensten/kitwerk",
+      "/diensten/houtrot-sanering",
+      "/kosten/schilderwerk",
+      "/blog/beitsen-of-lakken",
+      "/contact"
+    ],
+    "krijgt_links_van": [
+      "/kosten/schilderwerk",
+      "/diensten/lakwerk",
+      "/locaties/ (6 plaatsen)",
+      "/diensten/buitenschilderwerk",
+      "/diensten/kitwerk",
+      "/diensten/houtrot-sanering",
+      "/blog/hoe-vaak-buitenschilderwerk",
+      "/locaties/ (3 nieuwe plaatsen)",
+      "/diensten/onderhoudsschilderwerk",
+      "/blog/beitsen-of-lakken",
+      "/locaties/ (3 nieuwe plaatsen)",
+      "/diensten/buitenschilderwerk/[plaats] (3)"
+    ],
+    "voortgang": "todo"
+  },
+  {
+    "nr": 18,
+    "id": "houtrot",
+    "url": "/diensten/houtrot-sanering",
+    "naam": "Houtrot herstellen",
+    "status": "optimaliseren",
+    "pakket": "B",
+    "maand": "Januari",
+    "fase": 2,
+    "alleen_na_scopecheck": false,
+    "rol": "Dienst",
+    "target": "houtrot kozijn. Secundair: houtrot repareren, houtrot kosten.",
+    "zoeker": "Heeft zacht of rot hout ontdekt.",
+    "opbouw": [
+      "Eerste alinea: direct antwoord met prijs per reparatie.",
+      "Nieuw: \"Houtrot herkennen\" met foto's en \"Repareren of vervangen?\" met prijstabel."
+    ],
+    "conversie": "",
+    "linkt_naar": [
+      "/diensten/buitenschilderwerk",
+      "/diensten/kozijnen-schilderen",
+      "/diensten/kitwerk",
+      "/contact"
+    ],
+    "krijgt_links_van": [
+      "/diensten/buitenschilderwerk",
+      "/diensten/kozijnen-schilderen",
+      "/diensten/kitwerk",
+      "/blog/houtrot-herkennen-voorkomen"
+    ],
+    "voortgang": "todo"
+  },
+  {
+    "nr": 19,
+    "id": "nieuw3",
+    "url": "/locaties/ (3 nieuwe plaatsen)",
+    "naam": "Drie nieuwe plaatsen (keuze Jordy)",
+    "status": "nieuw",
+    "pakket": "P",
+    "maand": "Januari",
+    "fase": 2,
+    "alleen_na_scopecheck": true,
+    "rol": "Locatie (nieuw)",
+    "target": "schilder [plaats] voor drie plaatsen uit Veghel, Uden, Boxtel, Someren, Asten en Gemert (scopecheck).",
+    "zoeker": "Zoekt een schilder in een plaats waar Schildersbedrijf040 nu niet zichtbaar is.",
+    "opbouw": [
+      "Kernen noemen (Veghel: Erp, Mariaheide, Eerde; Uden: Volkel, Odiliapeel; Boxtel: Liempde, Lennisheuvel; Someren: Lierop; Asten: Heusden, Ommel; Gemert: Bakel, De Mortel).",
+      "Woningen en wat dat betekent (door Jordy aan te vullen), diensten, project of review, FAQ. Minimaal 40 procent plaatsspecifiek."
+    ],
+    "conversie": "",
+    "linkt_naar": [
+      "/diensten/binnenschilderwerk",
+      "/diensten/buitenschilderwerk",
+      "/diensten/kozijnen-schilderen",
+      "/contact"
+    ],
+    "krijgt_links_van": [],
+    "voortgang": "todo"
+  },
+  {
+    "nr": 20,
+    "id": "kitwerk",
+    "url": "/diensten/kitwerk",
+    "naam": "Kitwerk en kitnaden vervangen",
+    "status": "nieuw",
+    "pakket": "B",
+    "maand": "Februari",
+    "fase": 2,
+    "alleen_na_scopecheck": true,
+    "rol": "Dienst (conversie)",
+    "target": "kitwerk kozijnen. Secundair: kitnaden vervangen, kozijnen kitten, beglazingskit.",
+    "zoeker": "Heeft gescheurde kit, tocht of vochtplekken.",
+    "opbouw": [
+      "Direct antwoord: waarom kitwerk ertoe doet en of het los kan.",
+      "Signalen, soorten kitwerk, werkwijze, prijs per meter of per kozijn, FAQ."
+    ],
+    "conversie": "",
+    "linkt_naar": [
+      "/diensten/buitenschilderwerk",
+      "/diensten/kozijnen-schilderen",
+      "/diensten/houtrot-sanering",
+      "/blog/kitnaden-vervangen",
+      "/contact"
+    ],
+    "krijgt_links_van": [
+      "/diensten/buitenschilderwerk",
+      "/diensten/kozijnen-schilderen",
+      "/diensten/houtrot-sanering",
+      "/diensten/onderhoudsschilderwerk",
+      "/blog/kitnaden-vervangen",
+      "/diensten/buitenschilderwerk/[plaats] (3)",
+      "/blog/houtrot-herkennen-voorkomen"
+    ],
+    "voortgang": "todo"
+  },
+  {
+    "nr": 21,
+    "id": "gevel",
+    "url": "/diensten/gevel-schilderen",
+    "naam": "Gevel schilderen",
+    "status": "nieuw",
+    "pakket": "B",
+    "maand": "Februari",
+    "fase": 2,
+    "alleen_na_scopecheck": false,
+    "rol": "Dienst",
+    "target": "gevel schilderen. Secundair: gevel verven, stenen gevel schilderen, gevel schilderen kosten.",
+    "zoeker": "Twijfelt of de gevel geschilderd kan worden en wat het kost per m².",
+    "opbouw": [
+      "Direct antwoord met prijs per m².",
+      "Welke gevels kunnen, baksteen eerlijk besproken, prijs inclusief steiger, toestemming VvE of gemeente, FAQ."
+    ],
+    "conversie": "",
+    "linkt_naar": [
+      "/diensten/buitenschilderwerk",
+      "/kosten/schilderwerk",
+      "/contact"
+    ],
+    "krijgt_links_van": [
+      "/diensten/buitenschilderwerk",
+      "/diensten/gevelreiniging-impregneren"
+    ],
+    "voortgang": "todo"
+  },
+  {
+    "nr": 22,
+    "id": "b-wanneer",
+    "url": "/blog/wanneer-buiten-schilderen",
+    "naam": "Wanneer kun je het beste buiten schilderen?",
+    "status": "nieuw",
+    "pakket": "B",
+    "maand": "Februari",
+    "fase": 2,
+    "alleen_na_scopecheck": false,
+    "rol": "Kennis",
+    "target": "wanneer buiten schilderen, beste tijd buitenschilderwerk.",
+    "zoeker": "Wil het buitenwerk plannen.",
+    "opbouw": [
+      "Direct antwoord: voorjaar tot vroege herfst, droog weer.",
+      "H2 \"Waarom nu al inplannen\" (drukte in het seizoen)."
+    ],
+    "conversie": "",
+    "linkt_naar": [
+      "/diensten/buitenschilderwerk",
+      "/diensten/winterschilder",
+      "/contact"
+    ],
+    "krijgt_links_van": [
+      "/diensten/buitenschilderwerk"
+    ],
+    "voortgang": "todo"
+  },
+  {
+    "nr": 23,
+    "id": "onderhoud",
+    "url": "/diensten/onderhoudsschilderwerk",
+    "naam": "Onderhoudsschilderwerk",
+    "status": "nieuw",
+    "pakket": "P",
+    "maand": "Februari",
+    "fase": 2,
+    "alleen_na_scopecheck": true,
+    "rol": "Dienst",
+    "target": "onderhoudsschilderwerk, meerjarenonderhoudsplan schilderwerk, schilderwerk vve.",
+    "zoeker": "Huiseigenaar, VvE of verhuurder die vooruit wil plannen.",
+    "opbouw": [
+      "Direct antwoord, voor wie, hoe het werkt, onderhoudscyclus in een tabel, FAQ."
+    ],
+    "conversie": "",
+    "linkt_naar": [
+      "/diensten/buitenschilderwerk",
+      "/diensten/kozijnen-schilderen",
+      "/diensten/kitwerk",
+      "/contact"
+    ],
+    "krijgt_links_van": [
+      "/diensten/buitenschilderwerk",
+      "/blog/hoe-vaak-buitenschilderwerk"
+    ],
+    "voortgang": "todo"
+  },
+  {
+    "nr": 24,
+    "id": "nieuw3b",
+    "url": "/locaties/ (3 nieuwe plaatsen)",
+    "naam": "Overige drie nieuwe plaatsen",
+    "status": "nieuw",
+    "pakket": "M",
+    "maand": "Februari",
+    "fase": 2,
+    "alleen_na_scopecheck": true,
+    "rol": "Locatie (nieuw)",
+    "target": "schilder [plaats] voor de overige drie plaatsen uit de scopecheck.",
+    "zoeker": "Als bij de eerste drie nieuwe plaatsen.",
+    "opbouw": [
+      "Zelfde sjabloon als de eerste drie nieuwe plaatsen."
+    ],
+    "conversie": "",
+    "linkt_naar": [
+      "/diensten/binnenschilderwerk",
+      "/diensten/buitenschilderwerk",
+      "/diensten/kozijnen-schilderen",
+      "/contact"
+    ],
+    "krijgt_links_van": [],
+    "voortgang": "todo"
+  },
+  {
+    "nr": 25,
+    "id": "b-hoevaak",
+    "url": "/blog/hoe-vaak-buitenschilderwerk",
+    "naam": "Hoe vaak moet je buitenschilderwerk laten doen?",
+    "status": "nieuw",
+    "pakket": "B",
+    "maand": "Maart",
+    "fase": 2,
+    "alleen_na_scopecheck": false,
+    "rol": "Kennis",
+    "target": "hoe vaak buitenschilderwerk, hoe vaak kozijnen schilderen.",
+    "zoeker": "Wil weten of het al tijd is.",
+    "opbouw": [
+      "Direct antwoord met cyclus per onderdeel.",
+      "Tabel per onderdeel en verfsoort."
+    ],
+    "conversie": "",
+    "linkt_naar": [
+      "/diensten/buitenschilderwerk",
+      "/diensten/onderhoudsschilderwerk",
+      "/diensten/kozijnen-schilderen",
+      "/contact"
+    ],
+    "krijgt_links_van": [
+      "/diensten/buitenschilderwerk"
+    ],
+    "voortgang": "todo"
+  },
+  {
+    "nr": 26,
+    "id": "b-kit",
+    "url": "/blog/kitnaden-vervangen",
+    "naam": "Kitnaden vervangen: zelf doen of laten doen?",
+    "status": "nieuw",
+    "pakket": "P",
+    "maand": "Maart",
+    "fase": 2,
+    "alleen_na_scopecheck": false,
+    "rol": "Kennis",
+    "target": "kitnaden vervangen, oude kit verwijderen.",
+    "zoeker": "Twijfelt of hij het zelf kan.",
+    "opbouw": [
+      "Stappen voor een klein klusje zelf, en wanneer je het laat doen."
+    ],
+    "conversie": "",
+    "linkt_naar": [
+      "/diensten/kitwerk",
+      "/contact"
+    ],
+    "krijgt_links_van": [
+      "/diensten/kitwerk"
+    ],
+    "voortgang": "todo"
+  },
+  {
+    "nr": 27,
+    "id": "b-beits",
+    "url": "/blog/beitsen-of-lakken",
+    "naam": "Beitsen of lakken: wat past bij je kozijnen?",
+    "status": "nieuw",
+    "pakket": "P",
+    "maand": "Maart",
+    "fase": 2,
+    "alleen_na_scopecheck": false,
+    "rol": "Kennis",
+    "target": "beitsen of lakken, dekkend of transparant beitsen.",
+    "zoeker": "Twijfelt over de afwerking van kozijnen of gevelhout.",
+    "opbouw": [
+      "Direct antwoord met vergelijkingstabel.",
+      "Wat past bij welk hout."
+    ],
+    "conversie": "",
+    "linkt_naar": [
+      "/diensten/kozijnen-schilderen",
+      "/contact"
+    ],
+    "krijgt_links_van": [
+      "/diensten/kozijnen-schilderen"
+    ],
+    "voortgang": "todo"
+  },
+  {
+    "nr": 28,
+    "id": "reinigen",
+    "url": "/diensten/gevelreiniging-impregneren",
+    "naam": "Gevel reinigen en impregneren",
+    "status": "nieuw",
+    "pakket": "M",
+    "maand": "Maart",
+    "fase": 2,
+    "alleen_na_scopecheck": true,
+    "rol": "Dienst",
+    "target": "gevel reinigen, gevelreiniging, gevel impregneren.",
+    "zoeker": "Gevel is groen, vuil of neemt vocht op.",
+    "opbouw": [
+      "Direct antwoord: wat reinigen en impregneren oplevert.",
+      "Welke reiniging bij welke steen, wat impregneren wel en niet doet, prijs per m², FAQ."
+    ],
+    "conversie": "Alleen als Jordy dit zelf of via een vaste partner doet.",
+    "linkt_naar": [
+      "/diensten/buitenschilderwerk",
+      "/diensten/gevel-schilderen",
+      "/contact"
+    ],
+    "krijgt_links_van": [],
+    "voortgang": "todo"
+  },
+  {
+    "nr": 29,
+    "id": "perplaats",
+    "url": "/diensten/buitenschilderwerk/[plaats] (3)",
+    "naam": "Buitenschilderwerk Helmond, Veldhoven, Best",
+    "status": "nieuw",
+    "pakket": "M",
+    "maand": "Maart",
+    "fase": 2,
+    "alleen_na_scopecheck": true,
+    "rol": "Locatie x dienst",
+    "target": "buitenschilderwerk helmond, buitenschilderwerk veldhoven, buitenschilderwerk best.",
+    "zoeker": "Zoekt specifiek iemand voor buitenwerk in die plaats.",
+    "opbouw": [
+      "Intro met prijsindicatie voor een gemiddelde woning in die plaats.",
+      "Buitenklussen die daar het vaakst voorkomen.",
+      "Project in die plaats met foto's (voorwaarde).",
+      "Planning en seizoen, FAQ."
+    ],
+    "conversie": "Alleen bouwen als er een echt project in die plaats is.",
+    "linkt_naar": [
+      "/locaties/ (6 plaatsen)",
+      "/diensten/buitenschilderwerk",
+      "/diensten/kozijnen-schilderen",
+      "/diensten/kitwerk",
+      "/contact"
+    ],
+    "krijgt_links_van": [],
+    "voortgang": "todo"
+  },
+  {
+    "nr": 30,
+    "id": "b-houtrot",
+    "url": "/blog/houtrot-herkennen-voorkomen",
+    "naam": "Houtrot herkennen en voorkomen",
+    "status": "nieuw",
+    "pakket": "M",
+    "maand": "Maart",
+    "fase": 2,
+    "alleen_na_scopecheck": false,
+    "rol": "Kennis",
+    "target": "houtrot voorkomen, houtrot herkennen.",
+    "zoeker": "Wil houtrot voor zijn of heeft een vermoeden.",
+    "opbouw": [
+      "Signalen met foto's.",
+      "Waar houtrot ontstaat (onderdorpels, kitnaden).",
+      "Zo voorkomt u het."
+    ],
+    "conversie": "",
+    "linkt_naar": [
+      "/diensten/houtrot-sanering",
+      "/diensten/kitwerk",
+      "/contact"
+    ],
+    "krijgt_links_van": [],
+    "voortgang": "todo"
+  }
 ]
