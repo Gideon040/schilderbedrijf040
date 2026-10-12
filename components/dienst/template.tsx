@@ -2,13 +2,17 @@ import Image from 'next/image'
 import Link from 'next/link'
 import type { ReactNode } from 'react'
 import { JsonLd } from '@/components/json-ld'
-import { Stars } from '@/components/site/stars'
-import { CtaBanner } from '@/components/site/cta-banner'
-import { VoorNaKaart, type Project } from '@/components/site/voor-na'
+import { Offerte } from '@/components/site/offerte'
+import { VoorNa, type Project } from '@/components/site/voor-na'
+import { Winterband } from '@/components/site/winterband'
+import { Eyebrow, KnopBel, KnopOfferte, Pijl, Streek, StreekKop, staal } from '@/components/site/v2'
+import { Stappen } from '@/components/home/v2'
 import type { SiteImage } from '@/lib/images'
-import { plaatsen, PRIJSGIDS } from '@/lib/navigation'
+import { liveDiensten } from '@/lib/live-diensten'
+import { diensten, plaatsen, PRIJSGIDS } from '@/lib/navigation'
 import { prijsNoot, prijzen } from '@/lib/prices'
-import { reviews, reviewPlaceholder } from '@/lib/reviews'
+import { bronLabel, dienstQuotes } from '@/lib/reviews'
+import { jordy } from '@/lib/jordy'
 import { site } from '@/lib/site'
 
 export type DienstPagina = {
@@ -27,26 +31,48 @@ export type DienstPagina = {
   waarom: { h2: string; tekst: string; usps: { titel: string; beschrijving: string }[] }
   projecten: Project[]
   faqs: { question: string; answer: string; link?: { href: string; tekst: string } }[]
+  faqTitel: string
   // Prijstabel van een andere dienst tonen (bijv. winterschilder -> binnenschilderwerk)
   prijsSlug?: string
-  faqTitel: string
   cta: { titel: string; tekst: string }
   schema: object[]
 }
 
-const anker = (s: string) =>
-  s
-    .toLowerCase()
-    .normalize('NFD')
-    .replace(/[̀-ͯ]/g, '')
-    .replace(/[^a-z0-9]+/g, '-')
-    .replace(/^-|-$/g, '')
+// Lange samengestelde woorden in de H1 splitsen zoals in het prototype (tekst blijft gelijk)
+const splits: Record<string, [string, string]> = {
+  Binnenschilderwerk: ['Binnen', 'schilderwerk'],
+  Buitenschilderwerk: ['Buiten', 'schilderwerk'],
+  Winterschilder: ['Winter', 'schilder'],
+}
+
+const kleuren = ['var(--sw1)', 'var(--sw2)', 'var(--sw3)', 'var(--sw5)', 'var(--sw4)', 'var(--sw6)']
+
+// Getal vooraan laten oplopen als het een geheel getal is (tellers, ontwerp v2)
+function Kerncijfer({ waarde }: { waarde: string }) {
+  const m = waarde.match(/^(\d+)(.*)$/)
+  if (!m) return <>{waarde}</>
+  return (
+    <>
+      <span data-to={m[1]}>{m[1]}</span>
+      {m[2]}
+    </>
+  )
+}
+
+// Foto naast de FAQ: een tweede projectfoto als die er is, anders de herofoto
+function faqFoto(d: DienstPagina) {
+  return (d.projecten[1]?.na ?? d.projecten[0]?.na ?? d.heroImg).src
+}
 
 export function DienstTemplate({ d }: { d: DienstPagina }) {
   const tabel = prijzen[d.prijsSlug ?? d.slug] ?? []
   const tabelNaam = d.prijsSlug ? d.prijsSlug.replace('-', ' ') : d.naam.toLowerCase()
-  const dienstReviews = reviews.filter((r) => r.dienst === d.slug).slice(0, 2)
-  const reviewSlots = dienstReviews.length ? dienstReviews : [null, null]
+  const live = liveDiensten[d.slug]
+  const quotes = dienstQuotes[d.slug] ?? dienstQuotes[d.prijsSlug ?? ''] ?? null
+  const kleur = staal[d.slug] ?? staal.binnenschilderwerk
+  const [eersteWoord, ...rest] = d.h1.split(' ')
+  const anderen = diensten.filter((x) => !x.href.endsWith(`/${d.slug}`)).slice(0, 4)
+  const slot = live?.slot ?? d.cta.titel
 
   return (
     <main>
@@ -54,271 +80,389 @@ export function DienstTemplate({ d }: { d: DienstPagina }) {
         <JsonLd key={i} data={s} />
       ))}
 
-      {/* Hero */}
-      <section className="bg-zand">
-        <div className="grid lg:grid-cols-[minmax(0,760px)_1fr]">
-          <div className="flex flex-col gap-5 px-4 py-8 sm:px-6 md:py-10 lg:py-14 lg:pl-8 lg:pr-16 xl:pl-[max(2rem,calc((100vw-1440px)/2+2rem))]">
-            <nav aria-label="Kruimelpad" className="text-[15px] text-tekst-licht">
-              <Link href="/" className="hover:text-link">
-                Home
-              </Link>{' '}
-              / <span>Diensten</span> / <span aria-current="page">{d.naam}</span>
+      {/* Hero met kleurstaal */}
+      <section className="dp-hero" style={{ padding: 0 }}>
+        <div className="wrap grid">
+          <div>
+            <nav className="crumbs" aria-label="Kruimelpad">
+              <Link href="/">Home</Link>
+              <span>/</span>
+              <Link href="/#diensten">Diensten</Link>
+              <span>/</span>
+              <b aria-current="page">{d.naam}</b>
             </nav>
-            <h1 className="mt-2 font-heading text-[42px] font-bold leading-none text-navy md:text-[60px] xl:text-[72px]">{d.h1}</h1>
-            <div className="prose-links max-w-[600px] text-[18px] leading-relaxed text-tekst md:text-[20px] md:leading-[1.6]">{d.heroTekst}</div>
-            <div className="mt-1 flex flex-col gap-3 sm:flex-row sm:gap-3.5">
-              <Link href="/contact" className="btn-primary !px-7 !py-4">
-                Gratis offerte aanvragen
-              </Link>
-              <a href={site.phoneHref} className="btn-secondary !px-6 !py-[14px]">
-                Bel {site.phone}
-              </a>
+            <h1 className="disp">
+              {splits[eersteWoord] ? (
+                <>
+                  <span className="w">
+                    <span className="paint">{splits[eersteWoord][0]}</span>
+                  </span>
+                  <span className="w">
+                    <span>{splits[eersteWoord][1]}</span>
+                  </span>
+                </>
+              ) : (
+                <span className="w">
+                  <span className="paint">{eersteWoord}</span>
+                </span>
+              )}{' '}
+              <br />
+              <span className="w">
+                <span className="sm">{rest.join(' ')}</span>
+              </span>
+            </h1>
+            <div className="lead lopend">{d.heroTekst}</div>
+            <div className="cta-row">
+              <KnopOfferte />
+              <KnopBel />
             </div>
-            <div className="mt-2 flex flex-wrap items-center gap-x-6 gap-y-2 text-base text-tekst">
-              <span className="flex items-center gap-2">
-                <Stars className="h-4 w-4" color="text-[#C98A00]" />
-                <strong>{site.google.rating}</strong> Google ({site.google.reviewCount})
-              </span>
-              <span>
-                <strong>{site.werkspot.rating}</strong> Werkspot
-              </span>
-              <span>Boonstoppel-verf</span>
+            <div className="trust">
+              <div>
+                <span className="n">{site.google.rating}</span>
+                <span className="stars" aria-hidden="true">
+                  ★★★★★
+                </span>
+                <small>{site.google.reviewCount} reviews op Google</small>
+              </div>
+              <div>
+                <span className="n">{site.werkspot.rating}</span>
+                <small>op Werkspot</small>
+              </div>
+              <div>
+                <span className="n">Boonstoppel</span>
+                <small>verf op elk project</small>
+              </div>
             </div>
           </div>
-          <div className="relative h-[280px] sm:h-[380px] lg:h-auto lg:min-h-[600px]">
-            <Image
-              src={d.heroImg.src}
-              alt={d.heroImg.alt}
-              fill
-              priority
-              sizes="(max-width: 1024px) 100vw, 50vw"
-              className="object-cover object-[50%_45%]"
-            />
+          <div className="staal">
+            <div className="staal-card">
+              <div className="img" style={{ ['--sw1' as string]: kleur.c }}>
+                <Image src={d.heroImg.src} alt={live?.alts[0] ?? d.heroImg.alt} fill priority sizes="(max-width: 980px) 92vw, 560px" />
+              </div>
+              <div className="staal-label">
+                <div>
+                  <small>KLEURSTAAL {kleur.code}</small>
+                  <b>{d.naam}</b>
+                </div>
+                <span>Boonstoppel</span>
+              </div>
+            </div>
+            <div className="chips" aria-hidden="true">
+              {kleuren.slice(0, 4).map((c) => (
+                <i key={c} style={{ background: c }} />
+              ))}
+            </div>
           </div>
         </div>
       </section>
+
+      <Winterband />
 
       {/* Kerncijfers */}
-      <section aria-label={`Kerncijfers ${d.naam.toLowerCase()}`} className="container mt-8 md:mt-12">
-        <dl className="grid grid-cols-2 overflow-hidden rounded-[14px] border border-lijn lg:grid-cols-4">
-          {d.kerncijfers.map((k, i) => (
-            <div
-              key={k.label}
-              className={`flex flex-col-reverse gap-1 p-5 md:px-7 md:py-6 ${i % 2 === 0 ? 'border-r' : ''} ${i < 2 ? 'border-b lg:border-b-0' : ''} border-lijn lg:border-r lg:last:border-r-0`}
-            >
-              <dt className="text-[15px] text-tekst-zacht md:text-base">{k.label}</dt>
-              <dd className="font-heading text-[26px] font-bold text-navy md:text-[36px]">{k.waarde}</dd>
+      <section className="dp-facts" aria-label={`Kerncijfers ${d.naam.toLowerCase()}`}>
+        <div className="wrap">
+          <dl className="factrow rv counters">
+            {d.kerncijfers.map((k, i) => (
+              <div key={k.label}>
+                <dd className={`big${i === 3 ? ' blue' : ''}`}>
+                  <Kerncijfer waarde={k.waarde} />
+                </dd>
+                <dt>
+                  <small>{k.label}</small>
+                </dt>
+              </div>
+            ))}
+          </dl>
+        </div>
+      </section>
+
+      {/* Bestaande tekst naast de kleurenkaart met prijzen */}
+      <section style={{ paddingTop: 24 }}>
+        <div className="wrap dp-split">
+          <div className="rv lopend">
+            <Eyebrow>Onze expertise</Eyebrow>
+            <h2 id={d.watIs.id} className="disp dp-h2">
+              <StreekKop tekst={d.watIs.h2} />
+            </h2>
+            {d.watIs.body}
+            {live && (
+              <figure className="dp-fig">
+                <Image src={d.heroImg.src} alt={live.alts[1]} width={d.heroImg.width} height={d.heroImg.height} sizes="(max-width: 980px) 92vw, 640px" />
+              </figure>
+            )}
+            <Eyebrow style={{ marginTop: 40 }}>Transparante prijzen</Eyebrow>
+            <h2 id={d.kosten.id} className="disp dp-h2">
+              <StreekKop tekst={d.kosten.h2} />
+            </h2>
+            {d.kosten.body}
+            {d.extra}
+          </div>
+          <aside className="kaart rv" aria-labelledby={`${d.slug}-prijzen`}>
+            <div className="kaart-top">
+              <small>KLEURENKAART · {(live?.prijsTitel ?? 'Indicatie prijzen').toUpperCase()}</small>
+              <h3 id={`${d.slug}-prijzen`}>Prijzen {tabelNaam}</h3>
+            </div>
+            <ul>
+              {tabel.map((r, i) => (
+                <li key={r.wat}>
+                  <i style={{ background: kleuren[i % kleuren.length], boxShadow: i === 0 ? 'inset 0 0 0 1px var(--line)' : undefined }} />
+                  <span>{r.wat}</span>
+                  <b>{r.prijs.replace(' /', ' / ')}</b>
+                </li>
+              ))}
+            </ul>
+            <p>{prijsNoot}</p>
+            {live && <p>{live.prijsNoot}</p>}
+            <Link className="btn btn-blue" href="/contact" style={{ justifyContent: 'center' }}>
+              Gratis offerte aanvragen <Pijl />
+            </Link>
+            {PRIJSGIDS.live && (
+              <Link href={PRIJSGIDS.href} className="kaart-link">
+                Bekijk alle prijzen in de prijsgids →
+              </Link>
+            )}
+          </aside>
+        </div>
+      </section>
+
+      {/* Soorten werk als stalen */}
+      <section className="dp-types">
+        <div className="wrap">
+          <div className="head rv">
+            <div>
+              <Eyebrow>Diensten</Eyebrow>
+              <h2 id={d.soorten.id} className="disp">
+                <StreekKop tekst={d.soorten.h2} />
+              </h2>
+            </div>
+            <p>{d.soorten.intro}</p>
+          </div>
+          <div className="deck">
+            {d.soorten.kaarten.map((k, i) => (
+              <Link key={k.titel} className="card rv" href={k.link} style={{ ['--c' as string]: kleuren[i % kleuren.length] }}>
+                <i />
+                <small>
+                  {kleur.code}
+                  {String.fromCharCode(65 + i)}
+                </small>
+                <h3>{k.titel}</h3>
+                <p>{k.beschrijving}</p>
+                <span>{k.linkTekst} →</span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Voor en na, met de bannertekst van de live pagina */}
+      <section className="ba-sec on-dark">
+        <div className="wrap">
+          <div className="head rv">
+            <div>
+              <Eyebrow style={{ color: '#7FA3FF' }}>{d.naam}: voor en na</Eyebrow>
+              <h2 id={`${d.slug}-voor-en-na`} className="disp">
+                <StreekKop tekst={live?.banner.h2 ?? `${d.naam}: voor en na`} />
+              </h2>
+            </div>
+            {live && <p>{live.banner.p}</p>}
+          </div>
+          {d.projecten.map((p, i) => (
+            <div key={p.titel} style={i ? { marginTop: 48 } : undefined}>
+              <VoorNa
+                na={p.na}
+                voor={p.voor}
+                feiten={[
+                  ['Project', p.titel],
+                  ['Plaats', p.label],
+                  ...(p.tekst ? ([['Omschrijving', p.tekst]] as [string, string][]) : []),
+                ]}
+                knop={i === d.projecten.length - 1 ? { href: '/projecten', tekst: 'Alle projecten' } : undefined}
+              />
             </div>
           ))}
-        </dl>
-      </section>
-
-      {/* Bestaande tekst naast de prijstabel */}
-      <section className="container grid gap-10 py-14 md:py-[88px] lg:grid-cols-[1.25fr_1fr] lg:gap-[72px]">
-        <div className="flex max-w-[75ch] flex-col gap-[18px] prose-body">
-          <h2 id={d.watIs.id} className="h-section scroll-mt-28">
-            {d.watIs.h2}
-          </h2>
-          {d.watIs.body}
-          <h2 id={d.kosten.id} className="h-section mt-6 scroll-mt-28">
-            {d.kosten.h2}
-          </h2>
-          {d.kosten.body}
-          {d.extra}
-        </div>
-        <aside
-          className="flex flex-col gap-[18px] self-start rounded-card bg-zand p-6 md:p-9 lg:sticky lg:top-28"
-          aria-labelledby={`${d.slug}-prijzen`}
-        >
-          <h2 id={`${d.slug}-prijzen`} className="font-heading text-[30px] font-bold text-navy md:text-[36px]">
-            Prijzen {tabelNaam}
-          </h2>
-          <table className="w-full border-collapse text-[17px]">
-            <caption className="sr-only">Indicatieve prijzen {tabelNaam}</caption>
-            <tbody>
-              {tabel.map((r) => (
-                <tr key={r.wat} className="border-b border-[#DDD8CF]">
-                  <th scope="row" className="py-3.5 pr-3 text-left font-normal text-tekst">
-                    {r.wat}
-                  </th>
-                  <td className="whitespace-nowrap py-3.5 text-right font-bold text-navy">{r.prijs}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-          <p className="text-[15px] leading-relaxed text-tekst-zacht">{prijsNoot}</p>
-          <Link href="/contact" className="btn-primary">
-            Gratis offerte aanvragen
-          </Link>
-          {PRIJSGIDS.live && (
-            <Link href={PRIJSGIDS.href} className="link text-center">
-              Bekijk alle prijzen in de prijsgids →
-            </Link>
-          )}
-        </aside>
-      </section>
-
-      {/* Soorten werk */}
-      <section className="bg-zand py-14 md:py-[88px]">
-        <div className="container flex flex-col gap-6 md:gap-10">
-          <div className="flex max-w-3xl flex-col gap-3">
-            <h2 id={d.soorten.id} className="h-section scroll-mt-28">
-              {d.soorten.h2}
-            </h2>
-            <p className="text-[18px] leading-relaxed text-tekst-zacht">{d.soorten.intro}</p>
-          </div>
-          <ul className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3 lg:gap-6">
-            {d.soorten.kaarten.map((k) => (
-              <li key={k.titel} className="flex flex-col gap-2.5 rounded-[14px] bg-white p-6 md:p-7">
-                <h3 id={`${d.slug}-${anker(k.titel)}`} className="font-heading text-[24px] font-bold text-navy md:text-[26px]">
-                  {k.titel}
-                </h3>
-                <p className="text-[17px] leading-relaxed text-tekst-zacht">{k.beschrijving}</p>
-                <Link href={k.link} className="link mt-auto pt-1 text-base">
-                  {k.linkTekst} →
-                </Link>
-              </li>
-            ))}
-          </ul>
         </div>
       </section>
 
       {/* Werkwijze */}
-      <section className="py-14 md:py-[88px]">
-        <div className="container flex flex-col gap-8 md:gap-10">
-          <div className="flex max-w-3xl flex-col gap-3">
-            <h2 id={d.werkwijze.id} className="h-section scroll-mt-28">
-              {d.werkwijze.h2}
-            </h2>
-            <p className="text-[18px] leading-relaxed text-tekst-zacht">{d.werkwijze.intro}</p>
+      <section>
+        <div className="wrap">
+          <div className="head rv">
+            <div>
+              <Eyebrow>Hoe wij werken</Eyebrow>
+              <h2 id={d.werkwijze.id} className="disp">
+                <StreekKop tekst={d.werkwijze.h2} />
+              </h2>
+            </div>
+            <p>{d.werkwijze.intro}</p>
           </div>
-          <ol className="grid grid-cols-1 gap-7 sm:grid-cols-2 lg:grid-cols-4">
-            {d.werkwijze.stappen.map((s, i) => (
-              <li key={s.titel} className="flex flex-col gap-2.5 border-t-[3px] border-brand pt-5">
-                <span className="font-heading text-xl font-bold text-link">Stap {i + 1}</span>
-                <h3 className="font-heading text-[24px] font-bold text-navy md:text-[25px]">{s.titel}</h3>
-                <p className="text-[17px] leading-relaxed text-tekst-zacht">{s.beschrijving}</p>
-              </li>
-            ))}
-          </ol>
+          <Stappen stappen={d.werkwijze.stappen.map((s) => ({ titel: s.titel, tekst: s.beschrijving }))} />
         </div>
       </section>
 
-      {/* Projecten voor/na */}
-      <section className="pb-14 md:pb-[88px]">
-        <div className="container flex flex-col gap-8">
-          <div className="flex flex-col justify-between gap-3 md:flex-row md:items-end">
-            <h2 id={`${d.slug}-voor-en-na`} className="h-section">
-              {d.naam}: voor en na
-            </h2>
-            <Link href="/projecten" className="link text-[17px]">
-              Alle projecten →
-            </Link>
+      {/* Waarom, met de reviews van de live pagina */}
+      <section style={{ background: 'var(--paper-2)' }}>
+        <div className="wrap">
+          <div className="head rv">
+            <div>
+              <Eyebrow>Waarom wij</Eyebrow>
+              <h2 id="waarom-schildersbedrijf040" className="disp">
+                <StreekKop tekst={d.waarom.h2} />
+              </h2>
+            </div>
+            <p>{d.waarom.tekst}</p>
           </div>
-          <ul className="grid grid-cols-1 gap-7 md:grid-cols-2">
-            {d.projecten.map((p) => (
-              <li key={p.titel}>
-                <VoorNaKaart project={p} />
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
-
-      {/* Waarom */}
-      <section className="border-t border-lijn py-14 md:py-[88px]">
-        <div className="container grid gap-10 lg:grid-cols-[1fr_1.2fr] lg:gap-[72px]">
-          <div className="flex flex-col gap-4">
-            <h2 id="waarom-schildersbedrijf040" className="h-section">
-              {d.waarom.h2}
-            </h2>
-            <p className="text-[18px] leading-[1.7] text-tekst">{d.waarom.tekst}</p>
-          </div>
-          <ul className="flex flex-col gap-4">
+          <div className="why">
             {d.waarom.usps.map((u) => (
-              <li key={u.titel} className="flex gap-4">
-                <span
-                  className="mt-1 flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-brand text-sm font-bold text-white"
-                  aria-hidden="true"
-                >
-                  ✓
-                </span>
-                <div>
-                  <h3 className="font-sans text-[18px] font-bold text-navy">{u.titel}</h3>
-                  <p className="text-[17px] leading-relaxed text-tekst-zacht">{u.beschrijving}</p>
-                </div>
-              </li>
+              <div key={u.titel} className="rv">
+                <h3>{u.titel}</h3>
+                <span>{u.beschrijving}</span>
+              </div>
             ))}
-          </ul>
+            {live && (
+              <div className="rv">
+                <h3>{live.regio.h3}</h3>
+                <span>{live.regio.p}</span>
+              </div>
+            )}
+          </div>
+          {quotes && <h2 id={`${d.slug}-reviews`} className="mini-h2 rv">Klanten over ons {d.naam.toLowerCase()}</h2>}
+          {quotes && (
+            <div className="rev-strip">
+              <figure className="rv">
+                <div className="stars" aria-hidden="true">
+                  ★★★★★
+                </div>
+                <h3 className="rq">5,0 op Google</h3>
+                <blockquote>&ldquo;{quotes.google}&rdquo;</blockquote>
+                <figcaption>{bronLabel.google}</figcaption>
+              </figure>
+              <figure className="rv">
+                <div className="stars" aria-hidden="true">
+                  ★★★★★
+                </div>
+                <h3 className="rq">4,9 op Werkspot</h3>
+                <blockquote>&ldquo;{quotes.werkspot}&rdquo;</blockquote>
+                <figcaption>{bronLabel.werkspot}</figcaption>
+              </figure>
+            </div>
+          )}
         </div>
       </section>
 
-      {/* FAQ + reviews */}
-      <section className="bg-zand py-14 md:py-[88px]">
-        <div className="container grid gap-12 lg:grid-cols-[1.4fr_1fr] lg:gap-[72px]">
-          <div className="flex flex-col gap-[18px]">
-            <h2 id="veelgestelde-vragen" className="h-section mb-1.5">
-              {d.faqTitel}
+      {/* FAQ */}
+      <section style={{ background: 'var(--white)' }}>
+        <div className="wrap two">
+          <div className="rv">
+            <Eyebrow>Veelgestelde vragen</Eyebrow>
+            <h2 id="veelgestelde-vragen" className="disp dp-h2">
+              <StreekKop tekst={d.faqTitel} />
             </h2>
-            {d.faqs.map((f) => (
-              <div key={f.question} className="flex flex-col gap-2 border-b border-[#DDD8CF] pb-[18px]">
-                <h3 className="font-sans text-[19px] font-bold leading-snug text-navy md:text-[20px]">{f.question}</h3>
-                <p className="text-[17px] leading-relaxed text-tekst-zacht">
-                  {f.answer}
+            {live && <p style={{ margin: 0, color: 'var(--muted)' }}>{live.vragenIntro}</p>}
+            {live?.alts[2] && (
+              <div className="faq-img">
+                <Image src={faqFoto(d)} alt={live.alts[2]} fill sizes="(max-width: 980px) 92vw, 480px" />
+              </div>
+            )}
+            <div className="ask">
+              {live?.alts[3] && (
+                <div className="ask-foto">
+                  <Image src={d.heroImg.src} alt={live.alts[3]} fill sizes="120px" />
+                </div>
+              )}
+              <h3>Nog vragen?</h3>
+              {live && <span>{live.nogVragen}</span>}
+              <span>
+                Bel of app Jordy: <a href={site.phoneHref}>{site.phone}</a>
+              </span>
+            </div>
+          </div>
+          <div className="rv">
+            {d.faqs.map((f, i) => (
+              <details key={f.question} open={i === 0}>
+                <summary>
+                  <h3>{f.question}</h3>
+                </summary>
+                <p>
+                  {jordy(f.answer)}
                   {f.link && (
                     <>
                       {' '}
-                      <Link href={f.link.href} className="link">
-                        {f.link.tekst}
-                      </Link>
+                      <Link href={f.link.href}>{f.link.tekst}</Link>
                     </>
                   )}
                 </p>
-              </div>
+              </details>
             ))}
-          </div>
-          <div className="flex flex-col gap-5">
-            <h2 id={`${d.slug}-reviews`} className="font-heading text-[30px] font-bold text-navy md:text-[36px]">
-              Klanten over ons {d.naam.toLowerCase()}
-            </h2>
-            {reviewSlots.map((r, i) => (
-              <figure key={i} className="flex flex-col gap-3 rounded-[14px] bg-white p-6">
-                <Stars className="h-4 w-4" color="text-[#C98A00]" />
-                <blockquote className="text-[17px] leading-relaxed text-tekst">{r ? r.tekst : reviewPlaceholder}</blockquote>
-                <figcaption className="text-[15px] font-semibold text-navy">
-                  {r ? `${r.naam} · ${r.datum} · Google` : '[Naam] · [datum] · Google'}
-                </figcaption>
-              </figure>
-            ))}
-            <a href={site.google.reviewsUrl} target="_blank" rel="noopener noreferrer" className="link text-base">
-              Alle {site.google.reviewCount} reviews op Google →
-            </a>
           </div>
         </div>
       </section>
 
-      {/* Plaatsen */}
-      <section className="py-12 md:py-[72px]">
-        <div className="container flex flex-col gap-5">
-          <h2 id={`${d.slug}-in-de-buurt`} className="font-heading text-[28px] font-bold text-navy md:text-[36px]">
+      {/* Combineer en plaatsen */}
+      <section className="dp-more">
+        <div className="wrap">
+          <div className="head rv">
+            <div>
+              <Eyebrow>Ook interessant</Eyebrow>
+              <h2 id="combineer-met" className="disp">
+                Combineer <Streek>met</Streek>
+              </h2>
+            </div>
+          </div>
+          <div className="more rv">
+            {anderen.map((x, i) => (
+              <Link key={x.href} href={x.href} style={{ ['--c' as string]: kleuren[(i + 2) % kleuren.length] }}>
+                <i />
+                {x.name}
+                <span>→</span>
+              </Link>
+            ))}
+          </div>
+          <h2 id={`${d.slug}-in-de-buurt`} className="mini-h2 rv">
             {d.naam} bij u in de buurt
           </h2>
-          <ul className="flex flex-wrap gap-2.5">
+          <div className="places rv">
             {plaatsen.map((p) => (
-              <li key={p.href}>
-                <Link
-                  href={p.href}
-                  className="block rounded-full border border-[#CBD2DC] px-4 py-2.5 text-base font-medium text-tekst hover:border-brand hover:text-link"
-                >
-                  {p.name === 'Eindhoven' ? 'Schilder Eindhoven' : `Schilder ${p.name}`}
-                </Link>
-              </li>
+              <Link key={p.href} href={p.href}>
+                {p.name === 'Eindhoven' ? 'Schilder Eindhoven' : `Schilder ${p.name}`}
+              </Link>
             ))}
-          </ul>
+          </div>
         </div>
       </section>
 
-      <CtaBanner titel={d.cta.titel} tekst={d.cta.tekst} />
+      <Offerte
+        eyebrow={d.cta.titel}
+        titel={slot}
+        streek={slot.split(' ').slice(-1)[0]}
+        tekst={d.cta.tekst}
+        extra={
+          <div className="q-extra">
+            <dl className="q-contact">
+              <div>
+                <dt>Bel ons direct</dt>
+                <dd>
+                  <a href={site.phoneHref}>{site.phone}</a>
+                </dd>
+              </div>
+              <div>
+                <dt>Stuur een e-mail</dt>
+                <dd>
+                  <a href={`mailto:${site.email}`}>{site.email}</a>
+                </dd>
+              </div>
+              <div>
+                <dt>Bereikbaarheid</dt>
+                <dd>Ma t/m vr: 08:00 tot 17:30</dd>
+              </div>
+            </dl>
+            {live?.alts[4] && (
+              <div className="q-foto">
+                <Image src={d.heroImg.src} alt={live.alts[4]} fill sizes="320px" />
+              </div>
+            )}
+          </div>
+        }
+      />
     </main>
   )
 }

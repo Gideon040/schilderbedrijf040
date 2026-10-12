@@ -759,7 +759,8 @@ details summary h3{font:inherit;margin:0;color:inherit}
 }
 
 /* Tailwind zet standaardmarges op 0; het prototype rekent op de browserstandaard */
-:where(main) :where(p, ul, ol, dl, blockquote, figure){margin-block:1em}
+main :is(p, ul, ol, dl, blockquote, figure){margin-block:1em}
+main .lopend p:first-of-type{margin-top:0}
 /* penseelstreek nooit over twee regels */
 .paint,.p2{display:inline-block}
 .about h2{font-size:clamp(28px,3.2vw,44px)}
@@ -778,3 +779,31 @@ details summary h3{font:inherit;margin:0;color:inherit}
 .cards .ft b{color:var(--ink)}
 .boon{display:inline-flex;gap:10px;align-items:baseline;background:var(--ink);color:#C9D3E0;padding:12px 16px}
 .boon b{font-family:var(--display);font-stretch:112%;font-weight:850;text-transform:uppercase;color:var(--star)}
+/* dienstpagina-aanvullingen */
+.dp-hero .lead p{margin:0 0 12px}.dp-hero .lead p:last-child{margin:0}
+.dp-hero h1 .paint{max-width:100%}
+.factrow{margin:0}.factrow dd{margin:0}.factrow dt{margin:0}
+.dp-split h2.h-section{font-family:var(--display);font-stretch:112%;font-weight:850;text-transform:uppercase;letter-spacing:-.02em;font-size:clamp(28px,3.2vw,42px);line-height:.95;color:var(--ink);margin:44px 0 18px}
+.dp-split table{width:100%;border-collapse:collapse;font-size:16px;margin:8px 0 6px;background:var(--white)}
+.dp-split table th,.dp-split table td{padding:12px 14px;border-bottom:1px solid var(--line);text-align:left}
+.dp-split table td:last-child,.dp-split table th:last-child{text-align:right;white-space:nowrap}
+.dp-split ol{padding-left:22px}
+.dp-split li{margin:6px 0;font-size:18px;line-height:1.7}
+.dp-fig{margin:28px 0;max-width:560px;background:var(--white);padding:10px;box-shadow:0 20px 44px rgba(10,22,38,.12);transform:rotate(-1deg)}
+.dp-fig img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover}
+.kaart>p{padding-top:6px}
+.kaart-link{display:block;text-align:center;margin:-10px 26px 22px;font-weight:700;color:var(--blue)}
+.why h3{font-size:18px;color:var(--ink);font-weight:800;margin:0}
+.rev-strip h3.rq{font-size:14px;font-family:var(--mono);font-weight:500;letter-spacing:.08em;color:var(--muted);margin:0}
+.faq-img{position:relative;aspect-ratio:16/10;margin-top:24px;overflow:hidden}
+.faq-img img{object-fit:cover}
+.ask h3{font-size:18px;font-weight:800;margin:0}
+.ask a{color:var(--blue);font-weight:700}
+.mini-h2{font-size:18px;font-weight:800;margin:36px 0 0;font-stretch:104%}
+.q-foto{position:relative;aspect-ratio:16/9;margin-top:24px;max-width:360px;overflow:hidden;opacity:.85}
+.q-foto img{object-fit:cover}
+.staal-card .img{position:relative}
+.staal-card .img img{object-fit:cover}
+.dp-hero h1 .w2>span{display:inline-block}
+.dp-h2{font-size:clamp(30px,3.5vw,50px)}
+.ask-foto{position:relative;width:96px;height:72px;overflow:hidden;margin-bottom:8px}.ask-foto img{object-fit:cover}
