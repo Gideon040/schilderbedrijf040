@@ -130,6 +130,16 @@ const pagina: DienstPagina = {
           volledig naar buitenschilderwerk, de tuin of de verhuizing.
         </li>
       </ol>
+      <h2 id="woning-voorbereiden-in-de-winter" className="h-section mt-6 scroll-mt-28">
+        Hoe bereidt u uw woning voor op binnenwerk in de winter?
+      </h2>
+      <p>U hoeft weinig zelf te doen; Schildersbedrijf040 dekt meubels en vloeren af en doet de voorbereiding van muren en houtwerk. Wat helpt:</p>
+      <ol className="list-decimal space-y-2 pl-6 text-[18px] leading-[1.7] text-tekst">
+        <li>Houd de ruimtes die geschilderd worden op normale kamertemperatuur, ook &apos;s nachts.</li>
+        <li>Haal breekbare of waardevolle spullen van de muren en neem gordijnen af.</li>
+        <li>Zorg dat ventilatieroosters open kunnen en dat er een raam op een kier kan.</li>
+        <li>Bespreek bij de inspectie welke kamers u tijdens het werk nodig heeft, dan wordt de volgorde daarop afgestemd.</li>
+      </ol>
       <h2 id="binnen-en-buiten-combineren" className="h-section mt-6 scroll-mt-28">
         Binnen en buiten combineren
       </h2>

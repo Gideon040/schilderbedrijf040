@@ -43,6 +43,15 @@ Naast de tekst: prijstabel binnenschilderwerk uit `lib/prices.ts`.
 2. **De temperatuur is te regelen.** Een verwarmde woning heeft de juiste temperatuur voor muurverf en lak. Regen, vorst en korte dagen spelen binnen geen rol.
 3. **Klaar voor het voorjaar.** Is het binnenwerk in de winter gedaan, dan kan het voorjaar volledig naar buitenschilderwerk, de tuin of de verhuizing.
 
+## Hoe bereidt u uw woning voor op binnenwerk in de winter?
+
+U hoeft weinig zelf te doen; Schildersbedrijf040 dekt meubels en vloeren af en doet de voorbereiding van muren en houtwerk. Wat helpt:
+
+1. Houd de ruimtes die geschilderd worden op normale kamertemperatuur, ook 's nachts.
+2. Haal breekbare of waardevolle spullen van de muren en neem gordijnen af.
+3. Zorg dat ventilatieroosters open kunnen en dat er een raam op een kier kan.
+4. Bespreek bij de inspectie welke kamers u tijdens het werk nodig heeft, dan wordt de volgorde daarop afgestemd.
+
 ## Binnen en buiten combineren
 
 Laat binnen nu schilderen en leg het buitenwerk meteen vast voor het voorjaar. Buitenschilderwerk doet Schildersbedrijf040 bij droog weer tussen 15 en 25 °C, meestal in mei, juni en september. Vraag bij de inspectie voor het binnenwerk ook om een offerte voor het buitenwerk: dan staat de planning voor het voorjaar al vast en weet u vooraf waar u aan toe bent.
