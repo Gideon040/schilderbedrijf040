@@ -11,10 +11,11 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['var(--font-body)', 'system-ui', 'sans-serif'],
+        sans: ['var(--font-archivo)', 'system-ui', 'sans-serif'],
         // 'bebas' blijft als klassenaam bestaan voor bestaande pagina's, maar wijst nu naar Barlow Condensed
-        bebas: ['var(--font-heading)', 'system-ui', 'sans-serif'],
-        heading: ['var(--font-heading)', 'system-ui', 'sans-serif'],
+        bebas: ['var(--font-archivo)', 'system-ui', 'sans-serif'],
+        heading: ['var(--font-archivo)', 'system-ui', 'sans-serif'],
+        mono: ['var(--font-mono)', 'ui-monospace', 'monospace'],
       },
       borderRadius: {
         card: '16px',

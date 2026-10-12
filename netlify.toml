@@ -4,3 +4,10 @@
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
+
+# Open punten [JORDY: ...] alleen tonen op deploy previews en branch-deploys, nooit in productie
+[context.deploy-preview.environment]
+  NEXT_PUBLIC_TOON_JORDY = "true"
+
+[context.branch-deploy.environment]
+  NEXT_PUBLIC_TOON_JORDY = "true"

@@ -1,120 +1,94 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { Menu, X, ChevronDown } from 'lucide-react'
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu'
-import { Stars } from '@/components/site/stars'
+import { usePathname } from 'next/navigation'
 import { diensten } from '@/lib/navigation'
 import { site } from '@/lib/site'
 import { images } from '@/lib/images'
+import { Pijl } from '@/components/site/v2'
 
 const links = [
   { name: 'Projecten', href: '/projecten' },
-  { name: 'Werkgebied', href: '/#werkgebied' },
   { name: 'Blog', href: '/blog' },
+  { name: 'Werkgebied', href: '/#werkgebied' },
   { name: 'Over ons', href: '/over-ons' },
   { name: 'Contact', href: '/contact' },
 ]
 
 export function Header() {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-  const close = () => setIsMobileMenuOpen(false)
+  const [open, setOpen] = useState(false)
+  const pathname = usePathname()
+  useEffect(() => setOpen(false), [pathname])
 
   return (
     <>
-      {/* Topbar (alleen vanaf tablet; op mobiel staat bellen in de actiebalk onderaan) */}
-      <div className="hidden md:block bg-ink text-[#D5DDE8] text-sm">
-        <div className="container flex h-10 items-center justify-between">
-          <div className="flex items-center gap-7">
-            <span className="flex items-center gap-2">
-              <Stars className="h-3.5 w-3.5" />
-              {site.google.rating} op Google ({site.google.reviewCount} reviews)
-            </span>
-            <span>{site.werkspot.rating} op Werkspot</span>
-          </div>
-          <div className="flex items-center gap-7">
-            <a href={site.phoneHref} className="font-semibold text-white hover:text-verf">
-              {site.phone}
-            </a>
-            <a href={`mailto:${site.email}`} className="hover:text-white">
-              {site.email}
-            </a>
-          </div>
+      <div className="top">
+        <div className="wrap">
+          <span>
+            <span className="stars" aria-hidden="true">★★★★★</span> <b>{site.google.rating}</b> op Google ({site.google.reviewCount} reviews) ·{' '}
+            <b>{site.werkspot.rating}</b> op Werkspot
+          </span>
+          <span>
+            <a href={site.phoneHref}>{site.phone}</a> · <a href={`mailto:${site.email}`}>{site.email}</a>
+          </span>
         </div>
       </div>
-
-      <header className="sticky top-0 z-50 border-b border-[#E6E8EC] bg-white">
-        <div className="container flex h-16 items-center justify-between md:h-[84px]">
-          <Link href="/" className="relative block h-11 w-[100px] md:h-[58px] md:w-[130px]" aria-label="Schildersbedrijf040, naar de homepage">
-            <Image src={images.logo.src} alt={images.logo.alt} fill sizes="130px" className="object-contain object-left" priority />
+      <header className="nav" id="nav">
+        <div className="wrap">
+          <Link href="/" aria-label="Schildersbedrijf040, naar de homepage" className="logo">
+            <Image src={images.logo.src} alt={images.logo.alt} width={117} height={52} priority />
           </Link>
-
-          <nav className="hidden items-center gap-7 lg:flex" aria-label="Hoofdmenu">
-            <DropdownMenu>
-              <DropdownMenuTrigger className="flex items-center gap-1 text-base font-semibold text-tekst outline-none hover:text-link">
+          <nav aria-label="Hoofdmenu">
+            <div className="dd">
+              <Link className="l" href="/#diensten">
                 Diensten
-                <ChevronDown className="h-4 w-4" aria-hidden="true" />
-              </DropdownMenuTrigger>
-              <DropdownMenuContent align="start" className="w-60 rounded-xl border border-lijn bg-white p-1.5 shadow-lg">
+              </Link>
+              <div className="dd-menu">
                 {diensten.map((d) => (
-                  <DropdownMenuItem key={d.href} asChild className="rounded-lg focus:bg-zand">
-                    <Link href={d.href} className="w-full px-3 py-2.5 text-base text-tekst">
-                      {d.name}
-                    </Link>
-                  </DropdownMenuItem>
+                  <Link key={d.href} href={d.href}>
+                    {d.name}
+                  </Link>
                 ))}
-              </DropdownMenuContent>
-            </DropdownMenu>
+              </div>
+            </div>
             {links.map((l) => (
-              <Link key={l.href} href={l.href} className="text-base font-semibold text-tekst hover:text-link">
+              <Link key={l.href} className="l" href={l.href}>
                 {l.name}
               </Link>
             ))}
-            <Link href="/contact" className="btn-primary !py-3 !text-base">
-              Gratis offerte aanvragen
+            <Link className="btn btn-blue" href="/contact">
+              Gratis offerte aanvragen <Pijl />
             </Link>
+            <button className="menu-btn" type="button" aria-label={open ? 'Menu sluiten' : 'Menu openen'} aria-expanded={open} onClick={() => setOpen(!open)}>
+              {open ? '✕' : '☰'}
+            </button>
           </nav>
-
-          <button
-            className="flex h-11 w-11 items-center justify-center lg:hidden"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            aria-label={isMobileMenuOpen ? 'Menu sluiten' : 'Menu openen'}
-            aria-expanded={isMobileMenuOpen}
-          >
-            {isMobileMenuOpen ? <X className="h-6 w-6 text-navy" /> : <Menu className="h-6 w-6 text-navy" />}
-          </button>
         </div>
-
-        {isMobileMenuOpen && (
-          <div className="fixed inset-x-0 bottom-0 top-16 z-40 overflow-y-auto bg-white lg:hidden">
-            <nav className="container flex flex-col gap-1 py-6" aria-label="Mobiel menu">
-              <p className="eyebrow mb-1">Diensten</p>
+        {open && (
+          <nav className="mmenu" aria-label="Mobiel menu">
+            <div className="wrap">
+              <div className="eyebrow">Diensten</div>
               {diensten.map((d) => (
-                <Link key={d.href} href={d.href} onClick={close} className="py-2.5 text-lg text-tekst">
+                <Link key={d.href} href={d.href}>
                   {d.name}
                 </Link>
               ))}
-              <div className="my-3 h-px bg-lijn" />
+              <hr />
               {links.map((l) => (
-                <Link key={l.href} href={l.href} onClick={close} className="py-2.5 text-lg font-semibold text-navy">
+                <Link key={l.href} href={l.href} className="b">
                   {l.name}
                 </Link>
               ))}
-              <Link href="/contact" onClick={close} className="btn-primary mt-4 w-full">
-                Gratis offerte aanvragen
+              <Link className="btn btn-blue" href="/contact">
+                Gratis offerte aanvragen <Pijl />
               </Link>
-              <a href={site.phoneHref} className="btn-secondary mt-2 w-full">
+              <a className="btn btn-line" href={site.phoneHref}>
                 Bel {site.phone}
               </a>
-            </nav>
-          </div>
+            </div>
+          </nav>
         )}
       </header>
     </>

@@ -1,19 +1,20 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { Barlow, Barlow_Condensed } from 'next/font/google'
+import { Archivo, JetBrains_Mono } from 'next/font/google'
 import { cn } from '@/lib/utils'
 
-const barlow = Barlow({
-  weight: ['400', '500', '600', '700'],
+// Archivo als variabel font met breedte-as (wdth 62 tot 125), JetBrains Mono voor codes en labels
+const archivo = Archivo({
   subsets: ['latin'],
-  variable: '--font-body',
+  axes: ['wdth'],
+  variable: '--font-archivo',
   display: 'swap',
 })
 
-const barlowCondensed = Barlow_Condensed({
-  weight: ['600', '700'],
+const mono = JetBrains_Mono({
+  weight: '500',
   subsets: ['latin'],
-  variable: '--font-heading',
+  variable: '--font-mono',
   display: 'swap',
 })
 
@@ -82,8 +83,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="nl" className={cn(barlow.variable, barlowCondensed.variable)}>
-      <body className="min-h-screen bg-white font-sans antialiased flex flex-col">
+    <html lang="nl" className={cn(archivo.variable, mono.variable)}>
+      <body className="min-h-screen font-sans antialiased flex flex-col">
         {children}
       </body>
     </html>
