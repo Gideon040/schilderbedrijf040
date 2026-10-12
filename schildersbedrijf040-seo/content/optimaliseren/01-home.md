@@ -5,7 +5,7 @@ title_oud: "Schildersbedrijf040 | Vakkundig Schilderwerk in Eindhoven | Schilder
 title_nieuw: "Schilder Eindhoven | Schildersbedrijf040"   # 40 tekens
 meta_description_oud: "Professioneel schildersbedrijf in Eindhoven voor binnen- en buitenschilderwerk, behangen en houtrot sanering. Meer dan 5 jaar ervaring en 100% kwaliteitsgarantie."
 meta_description_nieuw: "Schilder in Eindhoven en omgeving voor binnen- en buitenschilderwerk, behangen en latex spuiten. Boonstoppel-verf, gratis inspectie en een vaste prijs."   # 151 tekens
-h1_oud: "Schildersbedrijf040 — Vakkundig schilderwerk in Eindhoven"
+h1_oud: "Schildersbedrijf040 [em dash] Vakkundig schilderwerk in Eindhoven"
 h1_nieuw: "Schilder in Eindhoven"
 open_punten:
   - "[JORDY: echte Google-reviews koppelen] (4 plekken in het reviewblok)"

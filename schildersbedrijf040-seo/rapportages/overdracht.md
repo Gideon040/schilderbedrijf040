@@ -16,7 +16,7 @@ Klaar: Prioriteit 1 (1.1 t/m 1.11), het redesign (gedeelde onderdelen, homepage,
 | `8c1fa16` | **1.2** H1 "Schilder in Eindhoven" + subregel, title "Schilder Eindhoven \| Schildersbedrijf040". Bug: merknaam stond 2x in de title van home en alle 17 locatiepagina's |
 | `fac1c17` | Voortgang: site-audit in jouw tabel |
 | `a721dc4` | **1.3** Cijferbalk: 98%, 100% en 100+ weg; bedrijfsfeiten in `lib/site.ts` |
-| `225e5e4` | **1.1** Latex spuiten: `—`, `€` e.d. stonden letterlijk op de live pagina (escapes in JSX). Opgelost |
+| `225e5e4` | **1.1** Latex spuiten: unicode-escapes (backslash-u plus code, bijv. voor het euroteken) stonden letterlijk als code op de live pagina, omdat JSX-tekst die niet omzet. Opgelost |
 | `9ce0a01` | **1.4** Alle prijzen uit `lib/prices.ts`; locatiepagina's en homepage-FAQ van uurtarief naar m² |
 | `46e1cf0` | **1.5** Dienstkaarten homepage: korte, complete zinnen |
 | `1b093fc` | **1.6** Beschrijvende linkteksten; namen voor menuknop en social-iconen |
