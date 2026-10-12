@@ -868,3 +868,20 @@ main .lopend p:first-of-type{margin-top:0}
 .blog-hero-foto{position:absolute;right:clamp(16px,4vw,40px);top:48px;width:min(28vw,340px);aspect-ratio:4/5;overflow:hidden;box-shadow:0 30px 60px -30px rgba(10,22,40,.45);transform:rotate(2deg)}
 @media (max-width:980px){.blog-hero-foto{position:relative;right:auto;top:auto;width:100%;aspect-ratio:16/9;margin-top:28px;transform:none}}
 @media (max-width:560px){.blog-hero h1{font-size:10.6vw}}
+
+/* Contact (v2): bestaande koppen als kaartlabels, echte kaart in de mapcard */
+.ct-hero .grid{align-items:start;padding-block:40px 90px}
+.cc-kop{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:500;margin-top:34px}
+.ct-hero .ccards{margin-top:14px}
+.cc h3{font-family:var(--mono);font-size:11px;letter-spacing:.12em;color:var(--blue);font-weight:500}
+.cc p{margin:0;color:var(--ink);font-size:17px;font-weight:700;overflow-wrap:anywhere}
+.cc p a{color:inherit;text-decoration:none}
+.cc p a:hover{color:var(--blue)}
+.cc p.cc-sub{font-size:14px;font-weight:400;color:var(--muted)}
+.ct-kaart{padding-block:0 90px}
+.ct-kaart-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:18px}
+.ct-foto{position:relative;min-height:360px;overflow:hidden}
+.mapcard iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:grayscale(.35) contrast(.95)}
+.mapcard .maplabel{left:auto;right:18px;top:auto;bottom:18px;transform:none}
+@media (max-width:980px){.ct-kaart-grid{grid-template-columns:1fr}.ct-foto{min-height:220px}.mapcard .maplabel{position:relative;right:auto;bottom:auto;max-width:none}.mapcard{height:auto;display:flex;flex-direction:column}.mapcard iframe{position:relative;height:300px}}
+@media (max-width:560px){footer.site .brand{font-size:clamp(18px,6.4vw,26px)}}

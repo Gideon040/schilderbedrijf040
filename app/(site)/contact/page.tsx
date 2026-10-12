@@ -1,7 +1,8 @@
 import type { Metadata } from 'next'
-import { ContactHero } from '@/components/sections/contact-hero'
-import { QuoteForm } from '@/components/sections/quote-form'
-import { ContactDetails } from '@/components/sections/contact-details'
+import Image from 'next/image'
+import Link from 'next/link'
+import { ContactFormulier } from '@/components/contact/formulier'
+import { site } from '@/lib/site'
 
 export const metadata: Metadata = {
   title: 'Contact | Gratis Offerte Aanvragen',
@@ -83,9 +84,92 @@ export default function ContactPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
-      <ContactHero />
-      <QuoteForm />
-      <ContactDetails />
+      <section className="dp-hero ct-hero" style={{ padding: 0 }}>
+        <div className="wrap grid">
+          <div>
+            <nav className="crumbs" aria-label="Kruimelpad">
+              <Link href="/">Home</Link>
+              <span>/</span>
+              <b aria-current="page">Contact</b>
+            </nav>
+            <h1 className="disp">
+              <span className="w">
+                <span>Neem</span>
+              </span>
+              <br />
+              <span className="w">
+                <span className="paint">contact</span>
+              </span>{' '}
+              <span className="w">
+                <span>op</span>
+              </span>
+            </h1>
+            <p className="lead">
+              Heeft u vragen over onze diensten of wilt u een offerte aanvragen? Neem gerust contact met ons op. We staan klaar om u te helpen.
+            </p>
+            <h2 className="cc-kop">Contactgegevens</h2>
+            <div className="ccards">
+              <div className="cc rv">
+                <h3>TELEFOON</h3>
+                <p>
+                  <a href={site.phoneHref}>{site.phone}</a>
+                </p>
+              </div>
+              <div className="cc rv">
+                <h3>EMAIL</h3>
+                <p>
+                  <a href={`mailto:${site.email}`}>{site.email}</a>
+                </p>
+              </div>
+              <div className="cc rv">
+                <h3>ADRES</h3>
+                <p>Straatsburglaan 26, 5627DB Eindhoven</p>
+              </div>
+              <div className="cc rv">
+                <h3>OPENINGSTIJDEN</h3>
+                <p>Ma-Vr: 08:00 - 17:30</p>
+                <p className="cc-sub">Za-Zo: Gesloten</p>
+              </div>
+            </div>
+          </div>
+          <ContactFormulier />
+        </div>
+      </section>
+
+      <section className="ct-kaart">
+        <div className="wrap ct-kaart-grid">
+          <div className="ct-foto rv">
+            <Image
+              src="/images/buitenschilderwerk-vrijstaande-woning-wit.jpg"
+              alt="Vrijstaande woning met wit geschilderde gevel en kozijnen"
+              fill
+              sizes="(max-width: 980px) 100vw, 400px"
+              className="object-cover"
+            />
+          </div>
+          <div className="mapcard rv">
+            <iframe
+              src="https://www.google.com/maps?q=Straatsburglaan+26,+5627+DB+Eindhoven&output=embed"
+              title="Kaart: Schildersbedrijf040, Straatsburglaan 26 in Eindhoven"
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+            <div className="maplabel">
+              <b>Schildersbedrijf040</b>
+              <span>Straatsburglaan 26, 5627 DB Eindhoven</span>
+              <a
+                className="btn btn-line"
+                href="https://www.google.com/maps/search/?api=1&query=Straatsburglaan+26+Eindhoven"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Open in Google Maps <span aria-hidden="true">→</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
   )
 }

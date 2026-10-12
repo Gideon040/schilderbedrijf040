@@ -12,7 +12,7 @@ Gemeten met `textContent` van de pagina zonder header, footer en mobiele balk (d
 |---|---|---|---|---|
 | `/` | 909 | 921 | 1704 | in orde |
 | `/over-ons` | 161 | 168 | 366 | in orde |
-| `/contact` | 60 | 67 | 71 | nog oud ontwerp |
+| `/contact` | 60 | 67 | 79 | in orde |
 | `/faq` | 82 | 442 | 446 | nog oud ontwerp |
 | `/projecten` | 48 | 54 | 58 | nog oud ontwerp |
 | `/diensten/binnenschilderwerk` | 1651 | 1850 | 2015 | in orde |
@@ -208,12 +208,12 @@ Geen: elke kop en elk tekstblok van main en voor staat op de nieuwe pagina's, en
 <details><summary><code>/contact</code> (7 koppen)</summary>
 
 - H1 Neemcontact op
-- H2 Vraag direct een offerte aan
 - H2 Contactgegevens
 - H3 TELEFOON
 - H3 EMAIL
 - H3 ADRES
 - H3 OPENINGSTIJDEN
+- H2 Vraag direct een offerte aan
 
 </details>
 
