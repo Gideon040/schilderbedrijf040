@@ -63,6 +63,20 @@ Branch `seo-redesign`, gestart 12-10-2026. Nulmeting in `rapportages/codestructu
 | 2.9 | klaar | `components/layout/mobile-action-bar.tsx` | Vaste balk Bellen / Gratis offerte onder 768px. |
 | 2.10 | klaar | `components/layout/footer.tsx`, `lib/navigation.ts` | Werkgebied in twee kolommen; nieuwe plaatsen via `lib/navigation.ts`. |
 
+## Redesign v2 (ontwerp seo/plan/design-v2, gestart 12-10-2026)
+
+Regel: alle bestaande SEO-teksten letterlijk behouden; controle in `rapportages/tekstcontrole-v2.md`. Screenshots in `rapportages/screenshots-v2/`.
+
+| Stap | Status | Bestanden | Opmerking |
+|---|---|---|---|
+| Basis (tokens, fonts, header, footer, actiebalk, winterband, penseelstreek, useReveal) | klaar | `app/(site)/v2.css`, `app/(site)/layout.tsx`, `hooks/use-reveal.ts`, `components/site/*`, `components/layout/*`, `lib/jordy.ts` | [JORDY]-punten alleen op preview en in development |
+| Homepage | klaar | `app/(site)/page.tsx`, `components/home/v2.tsx` | Live teksten terug (garanties, over ons, werkwijze, reviews, bel mij terug, social, contact) |
+| Dienstpagina's (6 + winterschilder) | klaar | `components/dienst/template.tsx`, `lib/live-diensten.ts` | Prijsnoot, banner, regio, nog vragen, afsluiter en alt-teksten uit main terug |
+| Locatiepagina's (17) | klaar | `app/(site)/locaties/[city]/page.tsx` | Routekaartje per plaats; live USP's, werkstappen, banner en quotes terug |
+| Over ons | todo | | |
+| Blog en artikel | todo | | |
+| Contact, projecten, FAQ | todo | | |
+
 ## Open punten voor Jordy
 
 | Waar | Vraag |
