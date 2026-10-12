@@ -12,7 +12,7 @@ import { RecentProjects } from '@/components/sections/recent-projects'
 import { Callback } from '@/components/sections/callback'
 import { SocialMedia } from '@/components/sections/social-media'
 import { ContactForm } from '@/components/sections/contact-form'
-import Script from 'next/script'
+import { JsonLd } from '@/components/json-ld'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -40,119 +40,6 @@ export const metadata: Metadata = {
 }
 
 export default function Home() {
-  const schemaData = {
-    '@context': 'https://schema.org',
-    '@type': 'PaintingCompany',
-    '@id': 'https://schildersbedrijf040.nl/#organization',
-    name: 'Schildersbedrijf040',
-    description: 'Schildersbedrijf040 is een professioneel schildersbedrijf in Eindhoven, gespecialiseerd in binnenschilderwerk, buitenschilderwerk, behangen, lakwerk, latex spuiten en houtrot sanering.',
-    image: 'https://res.cloudinary.com/dbtaisgda/image/upload/v1743873386/schildersbedrijf040_logo_aqxhxr.png',
-    url: 'https://schildersbedrijf040.nl',
-    telephone: '+31638903004',
-    email: 'info@schildersbedrijf040.nl',
-    priceRange: '€€',
-    address: {
-      '@type': 'PostalAddress',
-      streetAddress: 'Straatsburglaan 26',
-      addressLocality: 'Eindhoven',
-      addressRegion: 'Noord-Brabant',
-      postalCode: '5627DB',
-      addressCountry: 'NL'
-    },
-    geo: {
-      '@type': 'GeoCoordinates',
-      latitude: 51.4334,
-      longitude: 5.4834
-    },
-    openingHoursSpecification: {
-      '@type': 'OpeningHoursSpecification',
-      dayOfWeek: [
-        'Monday',
-        'Tuesday',
-        'Wednesday',
-        'Thursday',
-        'Friday'
-      ],
-      opens: '08:00',
-      closes: '17:30'
-    },
-    sameAs: [
-      'https://www.facebook.com/profile.php?id=100064851917826',
-      'https://www.instagram.com/schildersbedrijf040/'
-    ],
-    areaServed: [
-      { '@type': 'City', name: 'Eindhoven' },
-      { '@type': 'City', name: 'Waalre' },
-      { '@type': 'City', name: 'Veldhoven' },
-      { '@type': 'City', name: 'Best' },
-      { '@type': 'City', name: 'Son en Breugel' },
-      { '@type': 'City', name: 'Geldrop' },
-      { '@type': 'City', name: 'Nuenen' },
-      { '@type': 'City', name: 'Helmond' }
-    ],
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '5.0',
-      ratingCount: '41',
-      bestRating: '5',
-      worstRating: '1'
-    },
-    hasOfferCatalog: {
-      '@type': 'OfferCatalog',
-      name: 'Schilderdiensten',
-      itemListElement: [
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Service',
-            name: 'Binnenschilderwerk',
-            description: 'Professioneel binnenschilderwerk voor uw woning of bedrijfspand in Eindhoven'
-          }
-        },
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Service',
-            name: 'Buitenschilderwerk',
-            description: 'Vakkundig buitenschilderwerk met duurzame Boonstoppel verfproducten'
-          }
-        },
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Service',
-            name: 'Behangen',
-            description: 'Professioneel behangwerk voor een naadloze afwerking'
-          }
-        },
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Service',
-            name: 'Lakwerk',
-            description: 'Specialistisch lakwerk voor deuren, kozijnen en meubels'
-          }
-        },
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Service',
-            name: 'Latex Spuiten',
-            description: 'Efficiënt latex spuiten voor een egale, rolstreepvrije afwerking'
-          }
-        },
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Service',
-            name: 'Houtrot Sanering',
-            description: 'Preventieve en curatieve houtrot sanering om grotere schade te voorkomen'
-          }
-        }
-      ]
-    }
-  }
-
   const faqSchema = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
@@ -200,28 +87,9 @@ export default function Home() {
     ]
   }
 
-  const websiteSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'WebSite',
-    '@id': 'https://schildersbedrijf040.nl/#website',
-    name: 'Schildersbedrijf040',
-    url: 'https://schildersbedrijf040.nl',
-    publisher: {
-      '@id': 'https://schildersbedrijf040.nl/#organization'
-    }
-  }
-
   return (
     <main>
-      <Script id="schema-markup" type="application/ld+json">
-        {JSON.stringify(schemaData)}
-      </Script>
-      <Script id="faq-schema" type="application/ld+json">
-        {JSON.stringify(faqSchema)}
-      </Script>
-      <Script id="website-schema" type="application/ld+json">
-        {JSON.stringify(websiteSchema)}
-      </Script>
+      <JsonLd data={faqSchema} />
       <Header />
       <Hero />
       <Services />

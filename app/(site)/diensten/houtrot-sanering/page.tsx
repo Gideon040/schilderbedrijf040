@@ -4,6 +4,7 @@ import { Footer } from '@/components/layout/footer'
 import Image from 'next/image'
 import Link from 'next/link'
 import { prijzen as prijsTabel } from '@/lib/prices'
+import { orgRef, serviceOffers } from '@/lib/schema'
 import { ChevronDown, Phone, Mail, Clock, ArrowRight, Check } from 'lucide-react'
 
 export const metadata: Metadata = {
@@ -68,20 +69,7 @@ export default function HoutrotSaneringPage() {
     '@id': 'https://schildersbedrijf040.nl/diensten/houtrot-sanering/#service',
     name: 'Houtrot Sanering',
     description: 'Professionele houtrot sanering voor kozijnen, deuren en boeiboorden in Eindhoven en omgeving. Vakkundige houtrot reparatie met epoxy, tot 70% goedkoper dan volledig vervangen.',
-    provider: {
-      '@type': 'PaintingContractor',
-      '@id': 'https://schildersbedrijf040.nl/#organization',
-      name: 'Schildersbedrijf040',
-      telephone: '+31638903004',
-      url: 'https://schildersbedrijf040.nl',
-      address: {
-        '@type': 'PostalAddress',
-        streetAddress: 'Straatsburglaan 26',
-        addressLocality: 'Eindhoven',
-        postalCode: '5627DB',
-        addressCountry: 'NL',
-      },
-    },
+    provider: orgRef,
     areaServed: [
       { '@type': 'City', name: 'Eindhoven' },
       { '@type': 'City', name: 'Veldhoven' },
@@ -92,15 +80,7 @@ export default function HoutrotSaneringPage() {
       { '@type': 'City', name: 'Helmond' },
     ],
     serviceType: 'Houtrot Sanering',
-    offers: {
-      '@type': 'Offer',
-      priceSpecification: {
-        '@type': 'UnitPriceSpecification',
-        priceCurrency: 'EUR',
-        price: '45-55',
-        unitText: 'per uur',
-      },
-    },
+    offers: serviceOffers('houtrot-sanering'),
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
       name: 'Houtrot sanering diensten',
@@ -130,8 +110,7 @@ export default function HoutrotSaneringPage() {
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://schildersbedrijf040.nl' },
-      { '@type': 'ListItem', position: 2, name: 'Diensten', item: 'https://schildersbedrijf040.nl/diensten' },
-      { '@type': 'ListItem', position: 3, name: 'Houtrot Sanering', item: 'https://schildersbedrijf040.nl/diensten/houtrot-sanering' },
+      { '@type': 'ListItem', position: 2, name: 'Houtrot Sanering', item: 'https://schildersbedrijf040.nl/diensten/houtrot-sanering' },
     ],
   }
 

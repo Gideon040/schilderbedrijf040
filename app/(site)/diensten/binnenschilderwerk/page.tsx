@@ -4,6 +4,7 @@ import { Footer } from '@/components/layout/footer'
 import Image from 'next/image'
 import Link from 'next/link'
 import { prijzen as prijsTabel } from '@/lib/prices'
+import { orgRef, serviceOffers } from '@/lib/schema'
 import { ChevronDown, Phone, Mail, Clock, ArrowRight, Check } from 'lucide-react'
 
 export const metadata: Metadata = {
@@ -67,20 +68,7 @@ export default function BinnenschilderwerkPage() {
     '@id': 'https://schildersbedrijf040.nl/diensten/binnenschilderwerk/#service',
     name: 'Binnenschilderwerk',
     description: 'Professioneel binnenschilderwerk voor woningen en bedrijfspanden in Eindhoven en omgeving. Muren, plafonds, kozijnen en deuren vakkundig geschilderd met Boonstoppel verf.',
-    provider: {
-      '@type': 'PaintingContractor',
-      '@id': 'https://schildersbedrijf040.nl/#organization',
-      name: 'Schildersbedrijf040',
-      telephone: '+31638903004',
-      url: 'https://schildersbedrijf040.nl',
-      address: {
-        '@type': 'PostalAddress',
-        streetAddress: 'Straatsburglaan 26',
-        addressLocality: 'Eindhoven',
-        postalCode: '5627DB',
-        addressCountry: 'NL',
-      },
-    },
+    provider: orgRef,
     areaServed: [
       { '@type': 'City', name: 'Eindhoven' },
       { '@type': 'City', name: 'Veldhoven' },
@@ -91,15 +79,7 @@ export default function BinnenschilderwerkPage() {
       { '@type': 'City', name: 'Helmond' },
     ],
     serviceType: 'Binnenschilderwerk',
-    offers: {
-      '@type': 'Offer',
-      priceSpecification: {
-        '@type': 'UnitPriceSpecification',
-        priceCurrency: 'EUR',
-        price: '35-45',
-        unitText: 'per uur',
-      },
-    },
+    offers: serviceOffers('binnenschilderwerk'),
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
       name: 'Binnenschilderwerk diensten',
@@ -129,8 +109,7 @@ export default function BinnenschilderwerkPage() {
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://schildersbedrijf040.nl' },
-      { '@type': 'ListItem', position: 2, name: 'Diensten', item: 'https://schildersbedrijf040.nl/diensten' },
-      { '@type': 'ListItem', position: 3, name: 'Binnenschilderwerk', item: 'https://schildersbedrijf040.nl/diensten/binnenschilderwerk' },
+      { '@type': 'ListItem', position: 2, name: 'Binnenschilderwerk', item: 'https://schildersbedrijf040.nl/diensten/binnenschilderwerk' },
     ],
   }
 

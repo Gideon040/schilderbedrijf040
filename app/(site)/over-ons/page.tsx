@@ -34,7 +34,8 @@ export default function OverOnsPage() {
     '@type': 'AboutPage',
     '@id': 'https://schildersbedrijf040.nl/over-ons',
     mainEntity: {
-      '@type': 'PaintingContractor',
+      '@type': 'HousePainter',
+      '@id': 'https://schildersbedrijf040.nl/#organization',
       name: 'Schildersbedrijf040',
       description: 'Professioneel schildersbedrijf in Eindhoven met meer dan 5 jaar ervaring in binnen- en buitenschilderwerk, behangen en houtrot sanering.',
       foundingDate: '2019',

@@ -119,11 +119,13 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
       jobTitle: post.author.role,
       worksFor: {
         '@type': 'Organization',
+        '@id': 'https://schildersbedrijf040.nl/#organization',
         name: 'Schildersbedrijf040'
       }
     },
     publisher: {
       '@type': 'Organization',
+      '@id': 'https://schildersbedrijf040.nl/#organization',
       name: 'Schildersbedrijf040',
       url: 'https://schildersbedrijf040.nl',
       logo: {

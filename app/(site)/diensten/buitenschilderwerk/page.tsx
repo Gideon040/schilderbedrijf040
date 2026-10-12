@@ -3,6 +3,7 @@ import { Header } from '@/components/layout/header'
 import Image from 'next/image'
 import Link from 'next/link'
 import { prijzen as prijsTabel } from '@/lib/prices'
+import { orgRef, serviceOffers } from '@/lib/schema'
 import { ChevronDown, Phone, Mail, Clock, ArrowRight, Check } from 'lucide-react'
 
 export const metadata: Metadata = {
@@ -65,20 +66,7 @@ export default function BuitenschilderwerkPage() {
     '@id': 'https://schildersbedrijf040.nl/diensten/buitenschilderwerk/#service',
     name: 'Buitenschilderwerk',
     description: 'Professioneel buitenschilderwerk voor woningen en bedrijfspanden in Eindhoven en omgeving. Gevels, kozijnen en deuren duurzaam beschermd met Boonstoppel verf.',
-    provider: {
-      '@type': 'PaintingContractor',
-      '@id': 'https://schildersbedrijf040.nl/#organization',
-      name: 'Schildersbedrijf040',
-      telephone: '+31638903004',
-      url: 'https://schildersbedrijf040.nl',
-      address: {
-        '@type': 'PostalAddress',
-        streetAddress: 'Straatsburglaan 26',
-        addressLocality: 'Eindhoven',
-        postalCode: '5627DB',
-        addressCountry: 'NL',
-      },
-    },
+    provider: orgRef,
     areaServed: [
       { '@type': 'City', name: 'Eindhoven' },
       { '@type': 'City', name: 'Veldhoven' },
@@ -89,15 +77,7 @@ export default function BuitenschilderwerkPage() {
       { '@type': 'City', name: 'Helmond' },
     ],
     serviceType: 'Buitenschilderwerk',
-    offers: {
-      '@type': 'Offer',
-      priceSpecification: {
-        '@type': 'UnitPriceSpecification',
-        priceCurrency: 'EUR',
-        price: '40-55',
-        unitText: 'per uur',
-      },
-    },
+    offers: serviceOffers('buitenschilderwerk'),
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
       name: 'Buitenschilderwerk diensten',
@@ -115,8 +95,7 @@ export default function BuitenschilderwerkPage() {
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://schildersbedrijf040.nl' },
-      { '@type': 'ListItem', position: 2, name: 'Diensten', item: 'https://schildersbedrijf040.nl/diensten' },
-      { '@type': 'ListItem', position: 3, name: 'Buitenschilderwerk', item: 'https://schildersbedrijf040.nl/diensten/buitenschilderwerk' },
+      { '@type': 'ListItem', position: 2, name: 'Buitenschilderwerk', item: 'https://schildersbedrijf040.nl/diensten/buitenschilderwerk' },
     ],
   }
 

@@ -7,6 +7,7 @@ import Link from 'next/link'
 import { ChevronDown, Phone, Mail, Clock, ArrowRight, Check } from 'lucide-react'
 import { notFound } from 'next/navigation'
 import { vanafPrijzen, prijsNoot } from '@/lib/prices'
+import { orgRef } from '@/lib/schema'
 
 // Generate static params for all cities
 export function generateStaticParams() {
@@ -88,49 +89,18 @@ export default function LocationPage({ params }: { params: { city: string } }) {
     notFound()
   }
 
-  // PaintingContractor schema
+  // Lokale dienst; het bedrijf zelf (HousePainter) staat sitebreed in de layout
   const localBusinessSchema = {
     '@context': 'https://schema.org',
-    '@type': 'PaintingContractor',
-    name: 'Schildersbedrijf040',
-    image: 'https://res.cloudinary.com/dbtaisgda/image/upload/v1743873386/schildersbedrijf040_logo_aqxhxr.png',
-    '@id': `https://schildersbedrijf040.nl/locaties/${city}`,
+    '@type': 'Service',
+    '@id': `https://schildersbedrijf040.nl/locaties/${city}#service`,
+    name: `Schilderwerk in ${data.displayName}`,
+    serviceType: 'Schilderwerk',
     url: `https://schildersbedrijf040.nl/locaties/${city}`,
-    telephone: '+31638903004',
-    email: 'info@schildersbedrijf040.nl',
-    priceRange: '€€',
-    address: {
-      '@type': 'PostalAddress',
-      streetAddress: 'Straatsburglaan 26',
-      addressLocality: 'Eindhoven',
-      postalCode: '5627DB',
-      addressCountry: 'NL',
-    },
-    geo: {
-      '@type': 'GeoCoordinates',
-      latitude: 51.4334,
-      longitude: 5.4834,
-    },
-    openingHoursSpecification: {
-      '@type': 'OpeningHoursSpecification',
-      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-      opens: '08:00',
-      closes: '17:30',
-    },
-    sameAs: [
-      'https://www.facebook.com/profile.php?id=100064851917826',
-      'https://www.instagram.com/schildersbedrijf040/',
-    ],
+    provider: orgRef,
     areaServed: {
       '@type': 'City',
       name: data.displayName,
-    },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '5.0',
-      ratingCount: '41',
-      bestRating: '5',
-      worstRating: '1',
     },
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
@@ -161,12 +131,6 @@ export default function LocationPage({ params }: { params: { city: string } }) {
       {
         '@type': 'ListItem',
         position: 2,
-        name: 'Locaties',
-        item: 'https://schildersbedrijf040.nl/locaties',
-      },
-      {
-        '@type': 'ListItem',
-        position: 3,
         name: data.displayName,
         item: `https://schildersbedrijf040.nl/locaties/${city}`,
       },

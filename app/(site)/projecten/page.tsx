@@ -78,7 +78,8 @@ export default function ProjectenPage() {
       }))
     },
     provider: {
-      '@type': 'PaintingContractor',
+      '@type': 'HousePainter',
+      '@id': 'https://schildersbedrijf040.nl/#organization',
       name: 'Schildersbedrijf040',
       url: 'https://schildersbedrijf040.nl'
     }

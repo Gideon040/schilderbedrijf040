@@ -4,6 +4,7 @@ import { Footer } from '@/components/layout/footer'
 import Image from 'next/image'
 import Link from 'next/link'
 import { prijzen as prijsTabel } from '@/lib/prices'
+import { orgRef, serviceOffers } from '@/lib/schema'
 import { ChevronDown, Phone, Mail, Clock, ArrowRight, Check } from 'lucide-react'
 
 export const metadata: Metadata = {
@@ -67,20 +68,7 @@ export default function LatexSpuitenPage() {
     '@id': 'https://schildersbedrijf040.nl/diensten/latex-spuiten/#service',
     name: 'Latex Spuiten',
     description: 'Professioneel latex spuiten voor woningen en bedrijfspanden in Eindhoven en omgeving. Muren en plafonds 3-5x sneller en 100% egaal afgewerkt met airless spuittechniek.',
-    provider: {
-      '@type': 'PaintingContractor',
-      '@id': 'https://schildersbedrijf040.nl/#organization',
-      name: 'Schildersbedrijf040',
-      telephone: '+31638903004',
-      url: 'https://schildersbedrijf040.nl',
-      address: {
-        '@type': 'PostalAddress',
-        streetAddress: 'Straatsburglaan 26',
-        addressLocality: 'Eindhoven',
-        postalCode: '5627DB',
-        addressCountry: 'NL',
-      },
-    },
+    provider: orgRef,
     areaServed: [
       { '@type': 'City', name: 'Eindhoven' },
       { '@type': 'City', name: 'Veldhoven' },
@@ -91,15 +79,7 @@ export default function LatexSpuitenPage() {
       { '@type': 'City', name: 'Helmond' },
     ],
     serviceType: 'Latex Spuiten',
-    offers: {
-      '@type': 'Offer',
-      priceSpecification: {
-        '@type': 'UnitPriceSpecification',
-        priceCurrency: 'EUR',
-        price: '7-12',
-        unitText: 'per m²',
-      },
-    },
+    offers: serviceOffers('latex-spuiten'),
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
       name: 'Latex spuiten diensten',
@@ -129,8 +109,7 @@ export default function LatexSpuitenPage() {
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://schildersbedrijf040.nl' },
-      { '@type': 'ListItem', position: 2, name: 'Diensten', item: 'https://schildersbedrijf040.nl/diensten' },
-      { '@type': 'ListItem', position: 3, name: 'Latex Spuiten', item: 'https://schildersbedrijf040.nl/diensten/latex-spuiten' },
+      { '@type': 'ListItem', position: 2, name: 'Latex Spuiten', item: 'https://schildersbedrijf040.nl/diensten/latex-spuiten' },
     ],
   }
 

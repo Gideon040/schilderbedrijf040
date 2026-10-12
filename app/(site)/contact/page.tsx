@@ -25,7 +25,8 @@ export default function ContactPage() {
     '@type': 'ContactPage',
     '@id': 'https://schildersbedrijf040.nl/contact',
     mainEntity: {
-      '@type': 'PaintingContractor',
+      '@type': 'HousePainter',
+      '@id': 'https://schildersbedrijf040.nl/#organization',
       name: 'Schildersbedrijf040',
       telephone: '+31638903004',
       email: 'info@schildersbedrijf040.nl',

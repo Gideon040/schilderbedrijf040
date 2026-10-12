@@ -4,6 +4,7 @@ import { Footer } from '@/components/layout/footer'
 import Image from 'next/image'
 import Link from 'next/link'
 import { prijzen as prijsTabel } from '@/lib/prices'
+import { orgRef, serviceOffers } from '@/lib/schema'
 import { ChevronDown, Phone, Mail, Clock, ArrowRight, Check } from 'lucide-react'
 
 export const metadata: Metadata = {
@@ -67,20 +68,7 @@ export default function BehangenPage() {
     '@id': 'https://schildersbedrijf040.nl/diensten/behangen/#service',
     name: 'Behangen',
     description: 'Professioneel behangen voor woningen en bedrijfspanden in Eindhoven en omgeving. Vliesbehang, glasvezelbehang en fotobehang vakkundig aangebracht door Schildersbedrijf040.',
-    provider: {
-      '@type': 'PaintingContractor',
-      '@id': 'https://schildersbedrijf040.nl/#organization',
-      name: 'Schildersbedrijf040',
-      telephone: '+31638903004',
-      url: 'https://schildersbedrijf040.nl',
-      address: {
-        '@type': 'PostalAddress',
-        streetAddress: 'Straatsburglaan 26',
-        addressLocality: 'Eindhoven',
-        postalCode: '5627DB',
-        addressCountry: 'NL',
-      },
-    },
+    provider: orgRef,
     areaServed: [
       { '@type': 'City', name: 'Eindhoven' },
       { '@type': 'City', name: 'Veldhoven' },
@@ -91,15 +79,7 @@ export default function BehangenPage() {
       { '@type': 'City', name: 'Helmond' },
     ],
     serviceType: 'Behangen',
-    offers: {
-      '@type': 'Offer',
-      priceSpecification: {
-        '@type': 'UnitPriceSpecification',
-        priceCurrency: 'EUR',
-        price: '35-50',
-        unitText: 'per uur',
-      },
-    },
+    offers: serviceOffers('behangen'),
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
       name: 'Behangdiensten',
@@ -129,8 +109,7 @@ export default function BehangenPage() {
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://schildersbedrijf040.nl' },
-      { '@type': 'ListItem', position: 2, name: 'Diensten', item: 'https://schildersbedrijf040.nl/diensten' },
-      { '@type': 'ListItem', position: 3, name: 'Behangen', item: 'https://schildersbedrijf040.nl/diensten/behangen' },
+      { '@type': 'ListItem', position: 2, name: 'Behangen', item: 'https://schildersbedrijf040.nl/diensten/behangen' },
     ],
   }
 

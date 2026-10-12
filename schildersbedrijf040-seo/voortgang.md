@@ -47,7 +47,7 @@ Branch `seo-redesign`, gestart 12-10-2026. Nulmeting in `rapportages/codestructu
 | 1.4 | klaar | `lib/prices.ts` (nieuw), 6 dienstpagina's, `locaties/[city]/page.tsx` + 3 databestanden, `faq-section.tsx` | Alle prijstabellen lezen nu uit `lib/prices.ts`. Locatiepagina's en homepage-FAQ niet meer per uur (€35 tot €55) maar per m², gelijk aan de dienstpagina's (36 zinnen). Uurtarieven per dienst in de lopende tekst van dienstpagina's blijven staan. [JORDY: bevestig tabel] |
 | 1.5 | klaar | `components/sections/services.tsx` | Zes korte, complete zinnen (tekst uit het ontwerp), `line-clamp-3` weg. De lange teksten stonden alleen op deze kaarten; de dienstpagina's zelf zijn niet aangepast. |
 | 1.6 | klaar | `services.tsx`, `recent-projects.tsx`, `locaties/[city]/page.tsx`, `blog/page.tsx`, `blog/[slug]/page.tsx`, `footer.tsx`, `header.tsx` | "Meer info" werd "Meer over binnenschilderwerk" / "Latex spuiten bekijken"; locaties "Meer over lakwerk in Helmond"; blog "Lees het artikel". Social-iconen in de footer en de menuknop kregen een toegankelijke naam. |
-| 1.7 | todo |  |  |
+| 1.7 | klaar | `lib/schema.ts`, `components/json-ld.tsx` (nieuw), `app/(site)/layout.tsx`, homepage, 6 dienstpagina's, locatietemplate, contact/over-ons/projecten, blog, `components/ui/accordion.tsx` | HousePainter (adres, telefoon, openingstijden, 5,0/41, sameAs) sitebreed in de layout; pagina's verwijzen via @id. Ongeldige types PaintingCompany/PaintingContractor weg. Homepage-schema stond via next/script alleen client-side: nu in de HTML. FAQ-accordeon (home en /faq) rendert antwoorden nu altijd in de HTML. Service-offers met min/max per m²/stuk uit `lib/prices.ts` (was ongeldig "35-45 per uur"). Breadcrumbs wezen naar /diensten en /locaties (404): tussenstap weg. Lokaal gevalideerd op alle 34 URL's; Rich Results Test online nog doen vóór live. |
 | 1.8 | todo |  |  |
 | 1.9 | todo |  |  |
 | 1.10 | todo |  |  |
@@ -75,6 +75,7 @@ Branch `seo-redesign`, gestart 12-10-2026. Nulmeting in `rapportages/codestructu
 | Houtrot sanering | Waar komt "tot 70% goedkoper dan vervangen" vandaan? Graag bevestigen of afzwakken. |
 | Google-reviews | Link naar uw Google-bedrijfsprofiel (de reviewpagina), voor alle knoppen "Alle reviews op Google". |
 | Prijzen (lib/prices.ts) | Klopt de prijstabel? Twee dingen spraken elkaar tegen en zijn gelijkgetrokken: binnenkozijn lakken (€40 tot €55, lakwerkpagina zei €35 tot €75) en binnendeur lakken (€80 tot €120, lakwerkpagina zei €100 tot €150). Latex spuiten: muren €8 tot €12 per m² (tekst zei ook €7,50), meta zegt "vanaf €7". |
+| Schema (sameAs) | Wat is de link naar uw Werkspot-profiel? Die komt in de bedrijfsgegevens voor Google. |
 
 ## Ideeën
 
