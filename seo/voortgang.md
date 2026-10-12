@@ -73,8 +73,8 @@ Regel: alle bestaande SEO-teksten letterlijk behouden; controle in `rapportages/
 | Homepage | klaar | `app/(site)/page.tsx`, `components/home/v2.tsx` | Live teksten terug (garanties, over ons, werkwijze, reviews, bel mij terug, social, contact) |
 | Dienstpagina's (6 + winterschilder) | klaar | `components/dienst/template.tsx`, `lib/live-diensten.ts` | Prijsnoot, banner, regio, nog vragen, afsluiter en alt-teksten uit main terug |
 | Locatiepagina's (17) | klaar | `app/(site)/locaties/[city]/page.tsx` | Routekaartje per plaats; live USP's, werkstappen, banner en quotes terug |
-| Over ons | todo | | |
-| Blog en artikel | todo | | |
+| Over ons | klaar | `app/(site)/over-ons/page.tsx` | Alleen Jordy bij naam, 8+ vaste collega's; bestaande drie alinea's letterlijk |
+| Blog en artikel | klaar | `app/(site)/blog/page.tsx`, `app/(site)/blog/[slug]/page.tsx`, `components/blog/*` | Sanity-inhoud ongewijzigd; filter, leesbalk en inhoudsopgave; H1 "Schildertips & advies" en oude hero-alt uit main terug. Em dashes in Sanity-teksten: in Studio aanpassen (niet in code) |
 | Contact, projecten, FAQ | todo | | |
 
 ## Open punten voor Jordy

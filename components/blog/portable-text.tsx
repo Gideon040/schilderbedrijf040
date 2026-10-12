@@ -2,79 +2,64 @@ import { PortableText, type PortableTextComponents } from '@portabletext/react'
 import type { PortableTextBlock, Image as SanityImageType } from 'sanity'
 import { SanityImage } from './sanity-image'
 
+// Tekst uit een Sanity-blok (voor ankers en de inhoudsopgave)
+export function blokTekst(block: unknown): string {
+  const kinderen = (block as unknown as { children?: { text?: string }[] }).children ?? []
+  return kinderen.map((c) => c.text ?? '').join('')
+}
+
+export function anker(tekst: string): string {
+  return tekst
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[̀-ͯ]/g, '')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-|-$/g, '')
+}
+
+// Inhoud van het artikel komt ongewijzigd uit Sanity; alleen de opmaak is van ontwerp v2 (.prose in v2.css)
 const components: PortableTextComponents = {
   block: {
-    h2: ({ children }) => (
-      <h2 className="font-bebas text-[clamp(1.8rem,3vw,2.5rem)] leading-tight mt-12 mb-4">{children}</h2>
-    ),
-    h3: ({ children }) => (
-      <h3 className="font-bebas text-[clamp(1.4rem,2.5vw,2rem)] leading-tight mt-8 mb-3">{children}</h3>
-    ),
-    h4: ({ children }) => (
-      <h4 className="font-bebas text-xl mt-6 mb-2">{children}</h4>
-    ),
-    normal: ({ children }) => (
-      <p className="text-gray-600 text-[0.95rem] leading-relaxed">{children}</p>
-    ),
+    h2: ({ children, value }) => <h2 id={anker(blokTekst(value))}>{children}</h2>,
+    h3: ({ children }) => <h3>{children}</h3>,
+    h4: ({ children }) => <h4>{children}</h4>,
+    normal: ({ children }) => <p>{children}</p>,
   },
   list: {
-    bullet: ({ children }) => (
-      <ul className="space-y-2.5 my-5 ml-1">{children}</ul>
-    ),
-    number: ({ children }) => (
-      <ol className="space-y-2.5 my-5 list-decimal list-inside">{children}</ol>
-    ),
+    bullet: ({ children }) => <ul className="pt-ul">{children}</ul>,
+    number: ({ children }) => <ol className="steps-list">{children}</ol>,
   },
   listItem: {
-    bullet: ({ children }) => (
-      <li className="flex gap-3 text-gray-600 text-[0.95rem] leading-relaxed">
-        <span className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-[#1668E3] mt-[0.6rem]" />
+    bullet: ({ children }) => <li>{children}</li>,
+    number: ({ children }) => (
+      <li>
         <span>{children}</span>
       </li>
-    ),
-    number: ({ children }) => (
-      <li className="text-gray-600 text-[0.95rem] leading-relaxed">{children}</li>
     ),
   },
   marks: {
     link: ({ children, value }) => (
       <a
         href={value?.href}
-        className="text-[#1668E3] hover:underline font-medium"
         target={value?.href?.startsWith('http') ? '_blank' : undefined}
         rel={value?.href?.startsWith('http') ? 'noopener noreferrer' : undefined}
       >
         {children}
       </a>
     ),
-    strong: ({ children }) => <strong className="font-bold text-[#0B1B30]">{children}</strong>,
+    strong: ({ children }) => <b>{children}</b>,
     em: ({ children }) => <em>{children}</em>,
   },
   types: {
     image: ({ value }: { value: SanityImageType & { alt?: string; caption?: string } }) => (
-      <figure className="my-8 -mx-2">
-        <SanityImage
-          image={value}
-          alt={value.alt || ''}
-          width={800}
-          height={450}
-          sizes="(max-width: 768px) 100vw, 800px"
-          className="rounded-xl w-full"
-        />
-        {value.caption && (
-          <figcaption className="text-sm text-gray-400 mt-3 text-center">
-            {value.caption}
-          </figcaption>
-        )}
+      <figure className="pt-fig">
+        <SanityImage image={value} alt={value.alt || ''} width={800} height={450} sizes="(max-width: 768px) 100vw, 800px" />
+        {value.caption && <figcaption>{value.caption}</figcaption>}
       </figure>
     ),
   },
 }
 
 export function PortableTextRenderer({ content }: { content: PortableTextBlock[] }) {
-  return (
-    <div className="space-y-6">
-      <PortableText value={content} components={components} />
-    </div>
-  )
+  return <PortableText value={content} components={components} />
 }

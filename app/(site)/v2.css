@@ -831,3 +831,40 @@ main .lopend p:first-of-type{margin-top:0}
 .self-start{align-self:flex-start}
 .dp-hero .grid>*{min-width:0}
 .dp-hero h1.lang{font-size:clamp(38px,5.2vw,78px)}
+/* blog en artikel */
+.cats button{--c:var(--ink)}
+.feat .img{position:relative}
+.feat .img img{object-fit:cover}
+.feat h2{margin:0}
+.post .img{position:relative}
+.post .img img{object-fit:cover}
+.post h2.post-h,.post h3{font-size:19px;font-weight:800;line-height:1.2;padding-inline:6px;margin:0;font-stretch:100%;text-transform:none}
+.post-meta{font-size:13px;color:var(--muted);padding-inline:6px}
+.post .post-p{margin:0;padding-inline:6px;font-size:15px;color:var(--text)}
+.blog-hero h1{font-size:clamp(46px,6.4vw,100px)}
+.art-hero h1 .paint{display:inline-block}
+.meta-score{margin-left:auto;font-size:14px;color:#C4CEDB}.meta-score .stars{color:var(--star)}
+.prose ul.pt-ul{padding-left:22px;margin:0 0 20px}
+.prose ul.pt-ul li{font-size:18px;line-height:1.75;margin:6px 0}
+.prose h4{font-size:18px;font-weight:800;margin:24px 0 8px}
+.prose .pt-fig{margin:30px 0}.prose .pt-fig img{width:100%;height:auto}
+.prose .pt-fig figcaption{font-size:14px;color:var(--muted);margin-top:8px}
+.art-cta{margin-top:40px}
+.art-cta-h{color:var(--white);font-size:19px;margin:0 0 4px;font-weight:800}
+.art-cta-knoppen{display:flex;gap:10px;flex-wrap:wrap}
+.btn-line.on-ink{color:var(--white);box-shadow:inset 0 0 0 2px #3A4E6B}
+.art-faq{margin-top:56px;padding-top:36px;border-top:1px solid var(--line)}
+.art-faq h2{margin-top:14px}
+.author img{width:100%;height:auto}
+.au-l{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);padding-inline:6px}
+.au-h{font-size:19px;font-weight:800;margin:2px 0;padding-inline:6px}
+.help-h{color:var(--white);font-size:18px;margin:0;font-weight:800}
+.help .ph-n{text-decoration:none}
+.help-score{font-size:13px;color:#8EA0BA;text-align:center}.help-score .stars{color:var(--star)}
+.terug{padding-block:28px}.terug a{font-weight:700;color:var(--blue);text-decoration:none}
+
+/* Blog: hero-foto rechts (alt uit de oude blog-hero), alleen op brede schermen */
+.blog-hero{position:relative}
+.blog-hero-foto{position:absolute;right:clamp(16px,4vw,40px);top:48px;width:min(28vw,340px);aspect-ratio:4/5;overflow:hidden;box-shadow:0 30px 60px -30px rgba(10,22,40,.45);transform:rotate(2deg)}
+@media (max-width:980px){.blog-hero-foto{position:relative;right:auto;top:auto;width:100%;aspect-ratio:16/9;margin-top:28px;transform:none}}
+@media (max-width:560px){.blog-hero h1{font-size:10.6vw}}

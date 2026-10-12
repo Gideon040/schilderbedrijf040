@@ -39,12 +39,12 @@ Gemeten met `textContent` van de pagina zonder header, footer en mobiele balk (d
 | `/locaties/eersel` | 1172 | 1026 | 1291 | in orde |
 | `/locaties/bergeijk` | 1156 | 1009 | 1274 | in orde |
 | `/locaties/maarheeze` | 1153 | 1007 | 1271 | in orde |
-| `/blog` | 213 | 223 | 227 | nog oud ontwerp |
-| `/blog/btw-tarief-schilderwerk` | 1072 | 1080 | 1084 | nog oud ontwerp |
-| `/blog/hoe-schilder-je-een-deur` | 1624 | 1632 | 1636 | nog oud ontwerp |
-| `/blog/hoe-verf-je-een-muur` | 1398 | 1406 | 1410 | nog oud ontwerp |
-| `/blog/plafond-schilderen` | 2123 | 2132 | 2136 | nog oud ontwerp |
-| `/blog/verven-na-behang` | 1952 | 1960 | 1964 | nog oud ontwerp |
+| `/blog` | 213 | 223 | 268 | in orde |
+| `/blog/btw-tarief-schilderwerk` | 1072 | 1080 | 1174 | in orde |
+| `/blog/hoe-schilder-je-een-deur` | 1624 | 1632 | 1745 | in orde |
+| `/blog/hoe-verf-je-een-muur` | 1398 | 1406 | 1482 | in orde |
+| `/blog/plafond-schilderen` | 2123 | 2132 | 2226 | in orde |
+| `/blog/verven-na-behang` | 1952 | 1960 | 2049 | in orde |
 
 ## Bewuste uitzonderingen
 
@@ -125,6 +125,9 @@ Teksten die niet letterlijk terugkomen, met de reden. Alles hierbuiten moet teru
 | `/locaties/bergeijk` | [Naam] · Bergeijk · Google | Lege reviewplek uit ronde 1; vervangen door de reviewquotes van het live template. |
 | `/locaties/maarheeze` | SCHILDER MAARHEEZE | Ronde 1 (2.7): H1 werd 'Schilder in Maarheeze'. |
 | `/locaties/maarheeze` | [Naam] · Maarheeze · Google | Lege reviewplek uit ronde 1; vervangen door de reviewquotes van het live template. |
+| `/blog` | Schildertipsen advies | Ronde-1-formulering; v2 zet de letterlijke tekst van main (live) terug. |
+| `/blog/*` | Eigenaar Schildersbedrijf040 bij Schildersbedrijf040 | Ronde-1-formulering; v2 zet de letterlijke tekst van main (live) terug. |
+| `/blog/*` | Jordy Jacobs, eigenaar van Schildersbedrijf040 | Ronde-1-formulering; v2 zet de letterlijke tekst van main (live) terug. |
 
 ## Nog te controleren
 
@@ -1227,19 +1230,20 @@ Geen: elke kop en elk tekstblok van main en voor staat op de nieuwe pagina's, en
 
 </details>
 
-<details><summary><code>/blog</code> (7 koppen)</summary>
+<details><summary><code>/blog</code> (8 koppen)</summary>
 
-- H1 Schildertipsen advies
+- H1 Schildertips& advies
 - H2 Plafond Schilderen, uitleg en tips van een schilder
 - H2 Verven Na Behang: Alles Wat Je Moet Weten [2026 Gids]
 - H2 BTW Tarief Schilderwerk: Alle Regels voor 2026
 - H2 Hoe Schilder je een Deur? Stappenplan Zonder Strepen
 - H2 Hoe Verf je een Muur? Complete Handleiding van A tot Z
 - H2 Liever uitbesteden?
+- H3 Offerte aanvragen
 
 </details>
 
-<details><summary><code>/blog/btw-tarief-schilderwerk</code> (14 koppen)</summary>
+<details><summary><code>/blog/btw-tarief-schilderwerk</code> (21 koppen)</summary>
 
 - H1 BTW Tarief Schilderwerk: Alle Regels voor 2026
 - H2 Het verschil tussen 9% en 21% BTW bij schilderwerk
@@ -1251,14 +1255,21 @@ Geen: elke kop en elk tekstblok van main en voor staat op de nieuwe pagina's, en
 - H3 Voorbeeld 3: Buitenschilderwerk vrijstaande woning
 - H2 Veelgemaakte fouten en hoe je ze voorkomt
 - H2 Wat betekent dit voor jouw project?
-- H3 Hulp Nodig Bij Uw Project?
+- H3 Hulp nodig bij uw project?
 - H2 FAQ: BTW & Kosten
+- H3 Welk BTW-tarief geldt voor schilderwerk in 2026?
+- H3 Hoe weet ik of mijn woning oud genoeg is voor 9% BTW?
+- H3 Geldt 9% BTW ook voor materiaalkosten?
+- H3 Wat als mijn schilder geen gesplitste offerte geeft?
+- H3 Geldt het lage BTW-tarief ook voor buitenschilderwerk?
 - H3 Jordy Jacobs
-- H3 Hulp Nodig?
+- H3 Hulp nodig?
+- H2 Benieuwd wat uw klus kost?
+- H3 Offerte aanvragen
 
 </details>
 
-<details><summary><code>/blog/hoe-schilder-je-een-deur</code> (15 koppen)</summary>
+<details><summary><code>/blog/hoe-schilder-je-een-deur</code> (22 koppen)</summary>
 
 - H1 Hoe Schilder je een Deur? Stappenplan Zonder Strepen
 - H2 Dit heb je nodig
@@ -1271,14 +1282,21 @@ Geen: elke kop en elk tekstblok van main en voor staat op de nieuwe pagina's, en
 - H2 Stap 7: Drogen en monteren
 - H2 Veelgemaakte fouten en hoe je ze voorkomt
 - H2 Wanneer toch een professional inschakelen?
-- H3 Hulp Nodig Bij Uw Project?
+- H3 Hulp nodig bij uw project?
 - H2 FAQ: How-To
+- H3 Hoe lang moet een deur drogen tussen verflagen?
+- H3 Moet ik een deur altijd schuren voor het schilderen?
+- H3 Kan ik een deur schilderen zonder hem te demonteren?
+- H3 Hoeveel lagen verf heeft een deur nodig?
+- H3 Welke verf gebruik ik voor een binnendeur?
 - H3 Jordy Jacobs
-- H3 Hulp Nodig?
+- H3 Hulp nodig?
+- H2 Benieuwd wat uw klus kost?
+- H3 Offerte aanvragen
 
 </details>
 
-<details><summary><code>/blog/hoe-verf-je-een-muur</code> (24 koppen)</summary>
+<details><summary><code>/blog/hoe-verf-je-een-muur</code> (31 koppen)</summary>
 
 - H1 Hoe Verf je een Muur? Complete Handleiding van A tot Z
 - H2 De juiste muurverf kiezen
@@ -1300,14 +1318,21 @@ Geen: elke kop en elk tekstblok van main en voor staat op de nieuwe pagina's, en
 - H3 Schimmel op de muur
 - H2 Veelgemaakte fouten
 - H2 Wanneer een professional inschakelen?
-- H3 Hulp Nodig Bij Uw Project?
+- H3 Hulp nodig bij uw project?
 - H2 FAQ: How-To
+- H3 Hoeveel lagen muurverf heb ik nodig?
+- H3 Moet ik de muur voorbehandelen voor het schilderen?
+- H3 Hoe voorkom ik strepen bij het rollen?
+- H3 Wat is het verschil tussen latex en acrylaat muurverf?
+- H3 Kan ik over oud behang heen schilderen?
 - H3 Jordy Jacobs
-- H3 Hulp Nodig?
+- H3 Hulp nodig?
+- H2 Benieuwd wat uw klus kost?
+- H3 Offerte aanvragen
 
 </details>
 
-<details><summary><code>/blog/plafond-schilderen</code> (20 koppen)</summary>
+<details><summary><code>/blog/plafond-schilderen</code> (30 koppen)</summary>
 
 - H1 Plafond Schilderen, uitleg en tips van een schilder
 - H2 Plafond schilderen in de lengte of breedte?
@@ -1323,16 +1348,26 @@ Geen: elke kop en elk tekstblok van main en voor staat op de nieuwe pagina's, en
 - H2 Hoe lang duurt plafond witten?
 - H2 5 veelgemaakte fouten bij plafond schilderen
 - H2 Hulp nodig? Schakel een vakman in
-- H3 Hulp Nodig Bij Uw Project?
+- H3 Hulp nodig bij uw project?
 - H2 FAQ: How-To
+- H3 Hoeveel kost plafond schilderen?
+- H3 Moet je een plafond schuren voor het verven?
+- H3 Schilder je een plafond in de lengte of breedte?
+- H3 Hoeveel lagen verf heeft een plafond nodig?
+- H3 Welke verf gebruik je voor een plafond?
+- H3 Hoe voorkom je strepen bij plafond schilderen?
+- H3 Hoe lang duurt het om een plafond te witten?
+- H3 Kun je een plafond schilderen zonder schuren?
 - H3 Jordy Jacobs
-- H3 Hulp Nodig?
-- H2 Gerelateerde Artikelen
+- H3 Hulp nodig?
+- H2 Gerelateerde artikelen
 - H3 Hoe Schilder je een Deur? Stappenplan Zonder Strepen
+- H2 Benieuwd wat uw klus kost?
+- H3 Offerte aanvragen
 
 </details>
 
-<details><summary><code>/blog/verven-na-behang</code> (20 koppen)</summary>
+<details><summary><code>/blog/verven-na-behang</code> (25 koppen)</summary>
 
 - H1 Verven Na Behang: Alles Wat Je Moet Weten [2026 Gids]
 - H2 Kun je over behang heen verven?
@@ -1350,10 +1385,15 @@ Geen: elke kop en elk tekstblok van main en voor staat op de nieuwe pagina's, en
 - H3 Tips voor een strak resultaat
 - H2 Veelgemaakte fouten bij verven na behang
 - H2 Liever een professional? Vraag een offerte aan
-- H3 Hulp Nodig Bij Uw Project?
+- H3 Hulp nodig bij uw project?
 - H2 FAQ: How-To
+- H3 Kan je over behang verven?
+- H3 Moet je gronden na behang verwijderen?
+- H3 Hoeveel lagen verf na behang verwijderen?
 - H3 Jordy Jacobs
-- H3 Hulp Nodig?
+- H3 Hulp nodig?
+- H2 Benieuwd wat uw klus kost?
+- H3 Offerte aanvragen
 
 </details>
 

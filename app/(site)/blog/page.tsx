@@ -1,11 +1,15 @@
 import type { Metadata } from 'next'
-import Image from 'next/image'
 import Link from 'next/link'
-import { Calendar, Clock, ArrowRight } from 'lucide-react'
+import Image from 'next/image'
 import { sanityFetch } from '@/sanity/fetch'
 import { allPostsQuery } from '@/sanity/queries'
 import { SanityImage } from '@/components/blog/sanity-image'
 import type { SanityBlogPostCard } from '@/sanity/types'
+import { BlogFilter } from '@/components/blog/filter'
+import { catKleur } from '@/components/blog/categorie'
+import { JsonLd } from '@/components/json-ld'
+import { Offerte } from '@/components/site/offerte'
+import { Pijl } from '@/components/site/v2'
 
 export const metadata: Metadata = {
   title: 'Blog | Schildertips & Advies',
@@ -72,118 +76,96 @@ export default async function BlogPage() {
     ]
   }
 
+  const [uitgelicht, ...overige] = posts
+  const categorieen = posts.map((p) => p.category).filter((c, i, a) => c && a.indexOf(c) === i)
+  const datum = (d: string) => new Date(d).toLocaleDateString('nl-NL', { day: 'numeric', month: 'long', year: 'numeric' })
+
   return (
     <main>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
+      <JsonLd data={blogSchema} />
+      <JsonLd data={breadcrumbSchema} />
 
-      {/* Hero Section */}
-      <section className="relative min-h-[40vh] flex items-center">
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/images/buitenschilderwerk-dakkapel-wit-geschilderd.jpg"
-            alt="Schildersbedrijf040 Blog - Tips & Advies"
-            fill
-            sizes="100vw"
-            className="object-cover"
-            priority
-          />
-          <div className="absolute inset-0 bg-black/60" />
-        </div>
-
-        <div className="container relative z-10">
-          <div className="max-w-3xl">
-            <h1 className="text-5xl md:text-6xl font-bold mb-4">
-              <span className="text-white">Schildertips</span><br />
-              <span className="text-[#7FB2FF]">en advies</span>
-            </h1>
-            <p className="text-gray-200 text-lg leading-relaxed">
-              Praktische handleidingen, tips van een vakman en alles wat je moet weten over schilderwerk.
-            </p>
+      <section className="dp-hero" style={{ padding: 0 }}>
+        <div className="wrap blog-hero">
+          <nav className="crumbs" aria-label="Kruimelpad">
+            <Link href="/">Home</Link>
+            <span>/</span>
+            <b aria-current="page">Blog</b>
+          </nav>
+          <h1 className="disp">
+            <span className="w">
+              <span>Schildertips</span>
+            </span>
+            <br />
+            <span className="w">
+              <span>&amp;</span>
+            </span>{' '}
+            <span className="w">
+              <span className="paint">advies</span>
+            </span>
+          </h1>
+          <p className="lead">Praktische handleidingen, tips van een vakman en alles wat je moet weten over schilderwerk.</p>
+          <BlogFilter categorieen={categorieen} />
+          <div className="blog-hero-foto">
+            <Image
+              src="https://res.cloudinary.com/dbtaisgda/image/upload/v1743873386/WhatsApp_Image_2025-03-27_at_07.55.12_amqj6v.jpg"
+              alt="Schildersbedrijf040 Blog - Tips & Advies"
+              fill
+              sizes="(max-width: 980px) 100vw, 340px"
+              className="object-cover"
+            />
           </div>
         </div>
       </section>
 
-      {/* Blog Posts Grid */}
-      <section className="py-24">
-        <div className="container">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {posts.map((post) => (
-              <article key={post._id} className="bg-white rounded-xl shadow-lg overflow-hidden group hover:shadow-xl transition-shadow">
-                <Link href={`/blog/${post.slug.current}`}>
-                  <div className="relative h-48 overflow-hidden">
-                    <SanityImage
-                      image={post.coverImage}
-                      alt={post.title}
-                      fill
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                      className="object-cover group-hover:scale-105 transition-transform duration-300"
-                    />
-                    <div className="absolute top-4 left-4">
-                      <span className="bg-primary text-white text-xs font-medium px-3 py-1 rounded-full">
-                        {post.category}
-                      </span>
-                    </div>
-                  </div>
-
-                  <div className="p-6">
-                    <div className="flex items-center gap-4 text-sm text-gray-500 mb-3">
-                      <span className="flex items-center gap-1">
-                        <Calendar className="w-4 h-4" />
-                        {new Date(post.date).toLocaleDateString('nl-NL', {
-                          day: 'numeric',
-                          month: 'long',
-                          year: 'numeric'
-                        })}
-                      </span>
-                      <span className="flex items-center gap-1">
-                        <Clock className="w-4 h-4" />
-                        {post.readTime}
-                      </span>
-                    </div>
-
-                    <h2 className="text-xl font-bold mb-3 group-hover:text-primary transition-colors">
-                      {post.title}
-                    </h2>
-
-                    <p className="text-gray-600 mb-4 line-clamp-2">
-                      {post.excerpt}
-                    </p>
-
-                    <span className="inline-flex items-center text-primary font-medium group-hover:gap-2 transition-all">
-                      Lees het artikel
-                      <ArrowRight className="w-4 h-4 ml-1" />
-                    </span>
-                  </div>
-                </Link>
+      <section style={{ paddingTop: 24 }}>
+        <div className="wrap">
+          {uitgelicht && (
+            <Link className="feat rv" href={`/blog/${uitgelicht.slug.current}`} data-cat={uitgelicht.category}>
+              <div className="img">
+                <SanityImage image={uitgelicht.coverImage} alt={uitgelicht.title} fill sizes="(max-width: 980px) 100vw, 680px" priority />
+              </div>
+              <article className="txt">
+                <small>
+                  <i style={{ background: catKleur(uitgelicht.category) }} />
+                  {uitgelicht.category.toUpperCase()} · <time dateTime={uitgelicht.date}>{datum(uitgelicht.date)}</time> · {uitgelicht.readTime}
+                </small>
+                <h2>{uitgelicht.title}</h2>
+                <p>{uitgelicht.excerpt}</p>
+                <span className="btn btn-blue" style={{ alignSelf: 'flex-start' }}>
+                  Lees het artikel <Pijl />
+                </span>
               </article>
+            </Link>
+          )}
+          <div className="posts">
+            {overige.map((post) => (
+              <Link key={post._id} className="post rv" href={`/blog/${post.slug.current}`} data-cat={post.category}>
+                <div className="img">
+                  <SanityImage image={post.coverImage} alt={post.title} fill sizes="(max-width: 980px) 50vw, 300px" />
+                </div>
+                <small>
+                  <i style={{ background: catKleur(post.category) }} />
+                  {post.category.toUpperCase()}
+                </small>
+                <h2 className="post-h">{post.title}</h2>
+                <span className="post-meta">
+                  <time dateTime={post.date}>{datum(post.date)}</time> · {post.readTime}
+                </span>
+                <p className="post-p">{post.excerpt}</p>
+                <span className="more-l">Lees het artikel →</span>
+              </Link>
             ))}
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-16 bg-primary">
-        <div className="container text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">
-            Liever uitbesteden?
-          </h2>
-          <p className="text-white/90 mb-8 max-w-2xl mx-auto">
-            Geen tijd of zin om zelf te schilderen? Wij doen het graag voor je.
-            Vraag een vrijblijvende offerte aan en weet binnen 48 uur waar je aan toe bent.
-          </p>
-          <Link href="/contact" className="bg-white text-primary px-8 py-4 rounded-md inline-flex items-center font-bebas text-lg tracking-wider hover:bg-gray-100 transition-colors">
-            Gratis offerte aanvragen
-            <ArrowRight className="w-5 h-5 ml-2" />
-          </Link>
-        </div>
-      </section>
+      <Offerte
+        eyebrow="Gratis offerte"
+        titel="Liever uitbesteden?"
+        streek="uitbesteden?"
+        tekst="Geen tijd of zin om zelf te schilderen? Wij doen het graag voor je. Vraag een vrijblijvende offerte aan en weet binnen 48 uur waar je aan toe bent."
+      />
     </main>
   )
 }
