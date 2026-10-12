@@ -4,10 +4,10 @@ Status: `todo` → `concept` → `review Jordy` → `live`. Houd dit bestand bij
 
 | # | Maand | Pakket | Pagina | URL | Status | Opmerking |
 |---|---|---|---|---|---|---|
-| 1 | Oktober | B | Homepage | `/` | todo |  |
-| 2 | Oktober | B | Binnenschilderwerk (hub) | `/diensten/binnenschilderwerk` | todo |  |
-| 3 | Oktober | B | Winterschilder: binnenwerk in de winter | `/diensten/winterschilder` | todo |  |
-| 4 | Oktober | B | Latex spuiten | `/diensten/latex-spuiten` | todo |  |
+| 1 | Oktober | B | Homepage | `/` | concept | Gebouwd met het redesign. `content/optimaliseren/01-home.md`. 1.059 woorden. Open: reviews, projectplaats, reactietermijn. |
+| 2 | Oktober | B | Binnenschilderwerk (hub) | `/diensten/binnenschilderwerk` | concept | `content/optimaliseren/02-binnen.md`. 2.015 woorden. Link prijsgids volgt zodra die live is. |
+| 3 | Oktober | B | Winterschilder: binnenwerk in de winter | `/diensten/winterschilder` | concept | Nieuw. `content/nieuw/03-winter.md`. 1.260 woorden. GEO 1 en 2. Open: wachttijd, winteractie, feestdagen. |
+| 4 | Oktober | B | Latex spuiten | `/diensten/latex-spuiten` | concept | `content/optimaliseren/04-latex.md`. 2.016 woorden. GEO 4. Open: m² per dag. |
 | 5 | November | B | Wat kost schilderwerk? (prijsgids) | `/kosten/schilderwerk` | todo | scopecheck |
 | 6 | November | B | Lakwerk | `/diensten/lakwerk` | todo |  |
 | 7 | November | B | Behangen | `/diensten/behangen` | todo |  |
@@ -80,6 +80,11 @@ Branch `seo-redesign`, gestart 12-10-2026. Nulmeting in `rapportages/codestructu
 | Projecten homepage | Het project "Binnenwerk Restaria, Oude Gracht, Eindhoven": klopt die locatie, en mag de naam van de zaak genoemd worden? |
 | Projecten (dienst- en locatiepagina's) | Voor-foto's en gegevens (plaats, wijk, m²) bij de projectfoto's; per plaats graag één project met foto, vooral Helmond, Veldhoven, Best. |
 | Binnenschilderwerk, doorlooptijd | Hoe lang duurt een woonkamer? De dienstpagina zegt 1 tot 2 werkdagen, de homepage-FAQ 2 tot 3 dagen. |
+| Winterschilder | Hoe snel kunt u in de winter beginnen (wachttijd)? En zijn de prijzen in de winter gelijk, of wilt u een winteractie (scopecheckvraag 1)? |
+| Winterschilder, feestdagen | Werkt u tussen kerst en oud en nieuw? Tot wanneer kunt u een klus aannemen die vóór de feestdagen klaar moet zijn? |
+| Latex spuiten | Hoeveel m² spuit u gemiddeld per dag? (komt in het eerste antwoord op de pagina) |
+| Binnenschilderwerk, FAQ prijs | De FAQ zegt "woonkamer van 20 m² = €250 tot €400 voor muren en plafond"; dat past niet bij €30 tot €35 per m² en de tabelregel "complete kamer (20 m²) €500 tot €900". Welk bedrag klopt? |
+| Homepage, offerteblok | Klopt "reactie binnen één werkdag"? |
 
 ## Ideeën
 
