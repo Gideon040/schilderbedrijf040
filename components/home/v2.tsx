@@ -284,6 +284,9 @@ export function Bewijs() {
               planning. U heeft één aanspreekpunt van inspectie tot oplevering.
             </p>
             <p>Inmiddels werkt Schildersbedrijf040 met een vast team van meer dan acht collega&apos;s.</p>
+            <p className="boon">
+              <b>Boonstoppel</b> verf die 8 tot 10 jaar meegaat
+            </p>
             <Link className="btn btn-line" href="/over-ons" style={{ marginTop: 26 }}>
               Meer over Schildersbedrijf040 <Pijl />
             </Link>

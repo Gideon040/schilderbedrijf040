@@ -776,3 +776,5 @@ details summary h3{font:inherit;margin:0;color:inherit}
 }
 .cards .ft{display:flex;justify-content:space-between;gap:12px;font-size:14px;color:var(--muted)}
 .cards .ft b{color:var(--ink)}
+.boon{display:inline-flex;gap:10px;align-items:baseline;background:var(--ink);color:#C9D3E0;padding:12px 16px}
+.boon b{font-family:var(--display);font-stretch:112%;font-weight:850;text-transform:uppercase;color:var(--star)}
