@@ -77,7 +77,7 @@ Branch `seo-redesign`, gestart 12-10-2026. Nulmeting in `rapportages/codestructu
 | Prijzen (lib/prices.ts) | Klopt de prijstabel? Twee dingen spraken elkaar tegen en zijn gelijkgetrokken: binnenkozijn lakken (€40 tot €55, lakwerkpagina zei €35 tot €75) en binnendeur lakken (€80 tot €120, lakwerkpagina zei €100 tot €150). Latex spuiten: muren €8 tot €12 per m² (tekst zei ook €7,50), meta zegt "vanaf €7". |
 | Schema (sameAs) | Wat is de link naar uw Werkspot-profiel? Die komt in de bedrijfsgegevens voor Google. |
 | Foto's | Bij welke plaats/wijk hoort elke foto (binnendeur, tuinhuis, villa, dakkapel, zolder, voordeur, kozijnen, houtrot)? Dan kan de plaats in de alt-tekst en bij de projecten. |
-| Projecten homepage | Het project "Binnenwerk Restaria, Oude Gracht, Eindhoven": klopt die plaats? Er is geen Oude Gracht in Eindhoven bekend. |
+| Projecten homepage | Het project "Binnenwerk Restaria, Oude Gracht, Eindhoven": klopt die locatie, en mag de naam van de zaak genoemd worden? |
 
 ## Ideeën
 
