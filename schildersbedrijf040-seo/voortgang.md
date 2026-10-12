@@ -88,4 +88,7 @@ Branch `seo-redesign`, gestart 12-10-2026. Nulmeting in `rapportages/codestructu
 
 ## Ideeën
 
--
+- Google-reviews automatisch tonen via de Google Places API (nu handmatig in `lib/reviews.ts`), zodat naam, datum en sterren altijd kloppen.
+- Prijsgids `/kosten/schilderwerk` (november, scopecheck): zet daarna `PRIJSGIDS.live = true` in `lib/navigation.ts`; de links op dienst- en locatiepagina's verschijnen dan vanzelf.
+- Wijkkaarten voor de overige 16 plaatsen bij briefing 08 en 13, met dezelfde bronvermelding als Helmond (`data-lokaal.ts`).
+- De componenten van /contact (`quote-form`, `contact-hero`, `contact-details`) bij een volgende ronde in de nieuwe stijl zetten; /contact, /over-ons, /faq, /projecten en /blog hebben nu de nieuwe kleuren, fonts, header en footer maar nog hun oude opbouw.
