@@ -1,17 +1,20 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { Inter, Bebas_Neue } from 'next/font/google'
+import { Barlow, Barlow_Condensed } from 'next/font/google'
 import { cn } from '@/lib/utils'
 
-const inter = Inter({
+const barlow = Barlow({
+  weight: ['400', '500', '600', '700'],
   subsets: ['latin'],
-  variable: '--font-inter'
+  variable: '--font-body',
+  display: 'swap',
 })
 
-const bebasNeue = Bebas_Neue({
-  weight: '400',
+const barlowCondensed = Barlow_Condensed({
+  weight: ['600', '700'],
   subsets: ['latin'],
-  variable: '--font-bebas'
+  variable: '--font-heading',
+  display: 'swap',
 })
 
 export const metadata: Metadata = {
@@ -79,8 +82,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="nl" className={cn(inter.variable, bebasNeue.variable)}>
-      <body className={cn("min-h-screen bg-white font-sans antialiased flex flex-col", inter.className)}>
+    <html lang="nl" className={cn(barlow.variable, barlowCondensed.variable)}>
+      <body className="min-h-screen bg-white font-sans antialiased flex flex-col">
         {children}
       </body>
     </html>

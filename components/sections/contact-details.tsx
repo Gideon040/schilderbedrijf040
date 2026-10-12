@@ -31,7 +31,7 @@ export function ContactDetails() {
       <section className="py-24 bg-white">
         <div className="container">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-12">CONTACTGEGEVENS</h2>
+            <h2 className="text-4xl font-bold mb-12">Contactgegevens</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
               {contactInfo.map((item, index) => (
                 <div

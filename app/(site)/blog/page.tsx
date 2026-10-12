@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-import { Header } from '@/components/layout/header'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Calendar, Clock, ArrowRight } from 'lucide-react'
@@ -84,8 +83,6 @@ export default async function BlogPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
-      <Header />
-
       {/* Hero Section */}
       <section className="relative min-h-[40vh] flex items-center">
         <div className="absolute inset-0 z-0">
@@ -103,8 +100,8 @@ export default async function BlogPage() {
         <div className="container relative z-10">
           <div className="max-w-3xl">
             <h1 className="text-5xl md:text-6xl font-bold mb-4">
-              <span className="text-white">SCHILDER</span><br />
-              <span className="text-[#0088FF]">TIPS & ADVIES</span>
+              <span className="text-white">Schildertips</span><br />
+              <span className="text-[#7FB2FF]">en advies</span>
             </h1>
             <p className="text-gray-200 text-lg leading-relaxed">
               Praktische handleidingen, tips van een vakman en alles wat je moet weten over schilderwerk.

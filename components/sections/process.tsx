@@ -57,8 +57,8 @@ export function Process() {
                 key={index}
                 className="flex items-start gap-4"
               >
-                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-[#E6F3FF] flex items-center justify-center">
-                  <step.icon className="w-6 h-6 text-[#0088FF]" />
+                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-[#E8F0FC] flex items-center justify-center">
+                  <step.icon className="w-6 h-6 text-[#1668E3]" />
                 </div>
                 <div>
                   <h3 className="text-xl font-bebas tracking-wide mb-1">

@@ -92,7 +92,7 @@ export function QuoteForm() {
         <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              VRAAG DIRECT EEN OFFERTE AAN
+              Vraag direct een offerte aan
             </h2>
             <p className="text-gray-600">
               Vul het formulier in en ontvang binnen 24 uur een vrijblijvende offerte

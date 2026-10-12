@@ -28,7 +28,7 @@ const components: PortableTextComponents = {
   listItem: {
     bullet: ({ children }) => (
       <li className="flex gap-3 text-gray-600 text-[0.95rem] leading-relaxed">
-        <span className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-[#0088FF] mt-[0.6rem]" />
+        <span className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-[#1668E3] mt-[0.6rem]" />
         <span>{children}</span>
       </li>
     ),
@@ -40,14 +40,14 @@ const components: PortableTextComponents = {
     link: ({ children, value }) => (
       <a
         href={value?.href}
-        className="text-[#0088FF] hover:underline font-medium"
+        className="text-[#1668E3] hover:underline font-medium"
         target={value?.href?.startsWith('http') ? '_blank' : undefined}
         rel={value?.href?.startsWith('http') ? 'noopener noreferrer' : undefined}
       >
         {children}
       </a>
     ),
-    strong: ({ children }) => <strong className="font-bold text-[#001B32]">{children}</strong>,
+    strong: ({ children }) => <strong className="font-bold text-[#0B1B30]">{children}</strong>,
     em: ({ children }) => <em>{children}</em>,
   },
   types: {

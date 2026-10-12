@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
-import { Header } from '@/components/layout/header'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Calendar, Clock, ArrowLeft, ArrowRight, User, Phone, ChevronDown } from 'lucide-react'
@@ -197,10 +196,8 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
-      <Header />
-
       {/* ── Hero Section ── */}
-      <section className="relative min-h-[60vh] flex items-center bg-[#001B32] overflow-hidden">
+      <section className="relative min-h-[60vh] flex items-center bg-[#0B1B30] overflow-hidden">
         {/* Background cover image */}
         <div className="absolute inset-0 z-0 opacity-25">
           <SanityImage
@@ -213,9 +210,9 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
           />
         </div>
         {/* Gradient overlay */}
-        <div className="absolute inset-0 z-[1] bg-gradient-to-br from-[#001B32]/95 via-[#001B32]/60 to-[#0088FF]/15" />
+        <div className="absolute inset-0 z-[1] bg-gradient-to-br from-[#0B1B30]/95 via-[#0B1B30]/60 to-[#1668E3]/15" />
         {/* Decorative glow */}
-        <div className="absolute -right-20 top-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[radial-gradient(circle,rgba(0,136,255,0.12)_0%,transparent_70%)] rounded-full blur-[60px]" />
+        <div className="absolute -right-20 top-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[radial-gradient(circle,rgba(22,104,227,0.12)_0%,transparent_70%)] rounded-full blur-[60px]" />
 
         <div className="container relative z-10 pt-28 pb-16">
           <div className="max-w-3xl">
@@ -228,7 +225,7 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
               <span className="text-gray-300">{post.category}</span>
             </nav>
 
-            <span className="inline-block bg-[#0088FF] text-white text-sm font-semibold px-4 py-1.5 rounded-full mb-5 animate-fade-in-up">
+            <span className="inline-block bg-[#1668E3] text-white text-sm font-semibold px-4 py-1.5 rounded-full mb-5 animate-fade-in-up">
               {post.category}
             </span>
 
@@ -242,11 +239,11 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
 
             <div className="flex flex-wrap items-center gap-6 text-gray-300 animate-fade-in-up animation-delay-300">
               <div className="flex items-center gap-2">
-                <User className="w-5 h-5 text-[#0088FF]" />
+                <User className="w-5 h-5 text-[#1668E3]" />
                 <span>{post.author.name}</span>
               </div>
               <div className="flex items-center gap-2">
-                <Calendar className="w-5 h-5 text-[#0088FF]" />
+                <Calendar className="w-5 h-5 text-[#1668E3]" />
                 <time dateTime={post.date}>
                   {new Date(post.date).toLocaleDateString('nl-NL', {
                     day: 'numeric',
@@ -256,7 +253,7 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
                 </time>
               </div>
               <div className="flex items-center gap-2">
-                <Clock className="w-5 h-5 text-[#0088FF]" />
+                <Clock className="w-5 h-5 text-[#1668E3]" />
                 <span>{post.readTime} leestijd</span>
               </div>
             </div>
@@ -288,7 +285,7 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
       </section>
 
       {/* ── Article Content + Sidebar ── */}
-      <section className="py-20 bg-[#F7F8FA]">
+      <section className="py-20 bg-[#F5F3EF]">
         <div className="container">
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_340px] gap-12 items-start">
 
@@ -297,7 +294,7 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
 
               {/* Mobile Author Byline */}
               <div className="lg:hidden flex items-center gap-4 mb-8 pb-8 border-b border-gray-200">
-                <div className="relative w-14 h-14 rounded-full overflow-hidden flex-shrink-0 ring-2 ring-[#0088FF]/20">
+                <div className="relative w-14 h-14 rounded-full overflow-hidden flex-shrink-0 ring-2 ring-[#1668E3]/20">
                   <Image
                     src="/images/jordy-jacobs-schildersbedrijf040-op-ladder.jpg"
                     alt="Jordy Jacobs, eigenaar van Schildersbedrijf040"
@@ -308,7 +305,7 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
                 </div>
                 <div>
                   <p className="font-bold text-[0.95rem]">{post.author.name}</p>
-                  <p className="text-sm text-[#0088FF] font-medium">{post.author.role}</p>
+                  <p className="text-sm text-[#1668E3] font-medium">{post.author.role}</p>
                 </div>
               </div>
 
@@ -316,7 +313,7 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
               <PortableTextRenderer content={post.content} />
 
               {/* Mobile Inline CTA */}
-              <div className="lg:hidden mt-10 rounded-2xl overflow-hidden bg-gradient-to-br from-[#001B32] to-[#002B4F] p-7">
+              <div className="lg:hidden mt-10 rounded-2xl overflow-hidden bg-gradient-to-br from-[#0B1B30] to-[#13294A] p-7">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="relative w-10 h-10 rounded-full overflow-hidden flex-shrink-0">
                     <Image
@@ -338,7 +335,7 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
                 </p>
                 <Link
                   href="/contact"
-                  className="bg-[#0088FF] text-white px-6 py-3.5 rounded-lg inline-flex items-center gap-2 font-bebas text-base tracking-wider hover:bg-[#006ACC] transition-all duration-250 shadow-[0_4px_24px_rgba(0,136,255,0.3)] w-full justify-center"
+                  className="bg-[#1668E3] text-white px-6 py-3.5 rounded-lg inline-flex items-center gap-2 font-bebas text-base tracking-wider hover:bg-[#0F56C2] transition-all duration-250 shadow-[0_4px_24px_rgba(22,104,227,0.3)] w-full justify-center"
                 >
                   Gratis offerte aanvragen
                   <ArrowRight className="w-4 h-4" />
@@ -355,7 +352,7 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
               {/* FAQ Section */}
               {post.faq && post.faq.length > 0 && (
                 <div className="mt-16 pt-12 border-t border-gray-200">
-                  <span className="inline-block font-bebas text-sm tracking-[0.15em] text-[#0088FF] mb-3 uppercase">
+                  <span className="inline-block font-bebas text-sm tracking-[0.15em] text-[#1668E3] mb-3 uppercase">
                     Veelgestelde Vragen
                   </span>
                   <h2 className="font-bebas text-[clamp(2rem,4vw,3rem)] leading-tight mb-8">
@@ -365,10 +362,10 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
                     {post.faq.map((item, index) => (
                       <details
                         key={index}
-                        className="group border border-gray-200 rounded-xl overflow-hidden transition-all duration-300 open:border-[#0088FF] open:shadow-[0_4px_24px_rgba(0,136,255,0.06)]"
+                        className="group border border-gray-200 rounded-xl overflow-hidden transition-all duration-300 open:border-[#1668E3] open:shadow-[0_4px_24px_rgba(22,104,227,0.06)]"
                       >
-                        <summary className="relative flex items-center justify-between cursor-pointer px-7 py-[22px] font-semibold text-[1.05rem] hover:bg-[#F7F8FA] transition-colors list-none [&::-webkit-details-marker]:hidden">
-                          <div className="absolute left-0 top-0 bottom-0 w-[3px] bg-[#0088FF] opacity-0 group-open:opacity-100 transition-opacity duration-300" />
+                        <summary className="relative flex items-center justify-between cursor-pointer px-7 py-[22px] font-semibold text-[1.05rem] hover:bg-[#F5F3EF] transition-colors list-none [&::-webkit-details-marker]:hidden">
+                          <div className="absolute left-0 top-0 bottom-0 w-[3px] bg-[#1668E3] opacity-0 group-open:opacity-100 transition-opacity duration-300" />
                           <span>{item.question}</span>
                           <ChevronDown className="w-5 h-5 text-gray-400 flex-shrink-0 ml-4 transition-transform duration-300 group-open:rotate-180" />
                         </summary>
@@ -397,10 +394,10 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
                 </div>
                 <div className="p-6">
                   <div className="flex items-center gap-1.5 mb-2">
-                    <span className="text-xs font-semibold text-[#0088FF] uppercase tracking-wide">Geschreven door</span>
+                    <span className="text-xs font-semibold text-[#1668E3] uppercase tracking-wide">Geschreven door</span>
                   </div>
                   <h3 className="font-bebas text-xl mb-1">{post.author.name}</h3>
-                  <p className="text-sm text-[#0088FF] font-medium mb-3">{post.author.role} bij Schildersbedrijf040</p>
+                  <p className="text-sm text-[#1668E3] font-medium mb-3">{post.author.role} bij Schildersbedrijf040</p>
                   <p className="text-gray-600 text-sm leading-relaxed">
                     Met meer dan 5 jaar ervaring in het schildersvak deel ik graag mijn kennis en tips voor het beste resultaat.
                   </p>
@@ -408,14 +405,14 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
               </div>
 
               {/* CTA Card */}
-              <div className="rounded-2xl overflow-hidden bg-gradient-to-br from-[#001B32] to-[#002B4F] p-7">
+              <div className="rounded-2xl overflow-hidden bg-gradient-to-br from-[#0B1B30] to-[#13294A] p-7">
                 <h3 className="font-bebas text-2xl text-white mb-3">Hulp Nodig?</h3>
                 <p className="text-gray-300 text-sm leading-relaxed mb-5">
                   Neem vrijblijvend contact op voor advies of een offerte op maat.
                 </p>
                 <Link
                   href="/contact"
-                  className="bg-[#0088FF] text-white px-6 py-3 rounded-lg inline-flex items-center gap-2 font-bebas text-base tracking-wider hover:bg-[#006ACC] transition-all duration-250 shadow-[0_4px_24px_rgba(0,136,255,0.3)] w-full justify-center"
+                  className="bg-[#1668E3] text-white px-6 py-3 rounded-lg inline-flex items-center gap-2 font-bebas text-base tracking-wider hover:bg-[#0F56C2] transition-all duration-250 shadow-[0_4px_24px_rgba(22,104,227,0.3)] w-full justify-center"
                 >
                   Gratis offerte aanvragen
                   <ArrowRight className="w-4 h-4" />
@@ -430,7 +427,7 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
               </div>
 
               {/* Rating Cards */}
-              <div className="rounded-2xl border border-gray-200 bg-white p-6 hover:border-[#0088FF] hover:shadow-[0_8px_40px_rgba(0,136,255,0.08)] transition-all duration-300">
+              <div className="rounded-2xl border border-gray-200 bg-white p-6 hover:border-[#1668E3] hover:shadow-[0_8px_40px_rgba(22,104,227,0.08)] transition-all duration-300">
                 <div className="flex gap-1 mb-2">
                   {[...Array(5)].map((_, i) => (
                     <StarIcon key={i} className="w-4 h-4" />
@@ -451,7 +448,7 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
         <section className="py-20">
           <div className="container">
             <div className="text-center mb-12">
-              <span className="inline-block font-bebas text-sm tracking-[0.15em] text-[#0088FF] mb-3 uppercase">
+              <span className="inline-block font-bebas text-sm tracking-[0.15em] text-[#1668E3] mb-3 uppercase">
                 Meer Lezen
               </span>
               <h2 className="font-bebas text-[clamp(2rem,4vw,3rem)] leading-tight">
@@ -463,7 +460,7 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
                 <Link
                   key={relatedPost._id}
                   href={`/blog/${relatedPost.slug.current}`}
-                  className="group relative bg-white p-0 transition-all duration-350 hover:bg-[#001B32] overflow-hidden"
+                  className="group relative bg-white p-0 transition-all duration-350 hover:bg-[#0B1B30] overflow-hidden"
                 >
                   <div className="relative h-48 overflow-hidden">
                     <SanityImage
@@ -475,13 +472,13 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
                     />
                   </div>
                   <div className="p-6">
-                    <span className="text-xs text-[#0088FF] font-semibold uppercase tracking-wide">
+                    <span className="text-xs text-[#1668E3] font-semibold uppercase tracking-wide">
                       {relatedPost.category}
                     </span>
                     <h3 className="font-bebas text-xl mt-2 transition-colors duration-350 group-hover:text-white line-clamp-2">
                       {relatedPost.title}
                     </h3>
-                    <span className="inline-flex items-center gap-2 text-[#0088FF] font-semibold text-sm mt-4 transition-transform duration-300 group-hover:translate-x-1.5">
+                    <span className="inline-flex items-center gap-2 text-[#1668E3] font-semibold text-sm mt-4 transition-transform duration-300 group-hover:translate-x-1.5">
                       Lees het artikel
                       <ArrowRight className="w-4 h-4" />
                     </span>
@@ -498,7 +495,7 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
         <div className="container">
           <Link
             href="/blog"
-            className="inline-flex items-center gap-2 text-[#0088FF] font-semibold hover:translate-x-[-4px] transition-transform duration-300"
+            className="inline-flex items-center gap-2 text-[#1668E3] font-semibold hover:translate-x-[-4px] transition-transform duration-300"
           >
             <ArrowLeft className="w-4 h-4" />
             Terug naar alle artikelen

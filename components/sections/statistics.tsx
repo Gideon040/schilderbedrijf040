@@ -33,7 +33,7 @@ export function Statistics() {
               key={index}
               className="flex flex-col items-center justify-center min-h-[120px] text-center"
             >
-              <span className="text-5xl font-bold mb-2 font-bebas tracking-wide text-[#0088FF]">
+              <span className="text-5xl font-bold mb-2 font-bebas tracking-wide text-[#1668E3]">
                 {stat.value}
               </span>
               <span className="text-white text-base">

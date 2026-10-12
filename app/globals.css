@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --primary: 211 100% 50%;
+  --primary: 216 82% 49%;
   --secondary: 0 0% 12%;
   --background: 0 0% 100%;
   --accent-light: 0 0% 96%;
@@ -14,11 +14,16 @@
 
 @layer base {
   body {
-    @apply text-[#1E1E1E] bg-white;
+    @apply text-tekst bg-white text-[17px] leading-relaxed;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-bebas;
+    @apply font-heading font-bold;
+    letter-spacing: 0;
+  }
+
+  a {
+    @apply transition-colors;
   }
 }
 
@@ -28,11 +33,31 @@
   }
 
   .btn-primary {
-    @apply bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-md transition-colors duration-300 inline-flex items-center justify-center font-bebas text-lg tracking-wider;
+    @apply bg-brand hover:bg-brand-hover text-white px-6 py-3.5 rounded-btn transition-colors duration-200 inline-flex items-center justify-center gap-2 font-sans font-semibold text-[17px];
   }
 
   .btn-secondary {
-    @apply border-2 border-primary text-primary hover:bg-primary hover:text-white px-6 py-3 rounded-md transition-colors duration-300 inline-flex items-center justify-center font-bebas text-lg tracking-wider;
+    @apply border-2 border-navy text-navy hover:bg-navy hover:text-white px-6 py-3 rounded-btn transition-colors duration-200 inline-flex items-center justify-center gap-2 font-sans font-semibold text-[17px];
+  }
+
+  .btn-ghost-light {
+    @apply border-2 border-[#3A4C66] text-white hover:border-white px-6 py-3 rounded-btn transition-colors duration-200 inline-flex items-center justify-center gap-2 font-sans font-semibold text-[17px];
+  }
+
+  .eyebrow {
+    @apply text-[15px] font-bold tracking-[0.06em] uppercase text-link;
+  }
+
+  .h-section {
+    @apply font-heading font-bold text-navy text-[34px] leading-[1.05] md:text-[46px];
+  }
+
+  .prose-body p {
+    @apply text-[18px] leading-[1.7] text-tekst;
+  }
+
+  .link {
+    @apply text-link hover:text-link-hover font-semibold;
   }
 }
 

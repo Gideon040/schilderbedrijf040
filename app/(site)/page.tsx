@@ -1,4 +1,3 @@
-import { Header } from '@/components/layout/header'
 import { Hero } from '@/components/sections/hero'
 import { Services } from '@/components/sections/services'
 import { Statistics } from '@/components/sections/statistics'
@@ -90,7 +89,6 @@ export default function Home() {
   return (
     <main>
       <JsonLd data={faqSchema} />
-      <Header />
       <Hero />
       <Services />
       <Statistics />

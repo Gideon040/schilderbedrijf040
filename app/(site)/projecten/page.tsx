@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-import { Header } from '@/components/layout/header'
 import Image from 'next/image'
 import { Instagram, ExternalLink } from 'lucide-react'
 
@@ -115,8 +114,6 @@ export default function ProjectenPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       
-      <Header />
-      
       {/* Hero Section */}
       <section className="relative min-h-[50vh] flex items-center">
         <div className="absolute inset-0 z-0">
@@ -134,8 +131,8 @@ export default function ProjectenPage() {
         <div className="container relative z-10">
           <div className="max-w-3xl">
             <h1 className="text-5xl md:text-6xl font-bold mb-4">
-              <span className="text-white">ONZE</span><br />
-              <span className="text-[#0088FF]">PROJECTEN</span>
+              <span className="text-white">Onze</span><br />
+              <span className="text-[#7FB2FF]">projecten</span>
             </h1>
             <p className="text-gray-200 text-lg leading-relaxed">
               Bekijk onze meest recente projecten en volg ons op Instagram voor dagelijkse updates.
@@ -194,7 +191,7 @@ export default function ProjectenPage() {
               rel="noopener noreferrer"
               className="btn-primary inline-flex items-center group"
             >
-              VOLG ONS OP INSTAGRAM
+              Volg ons op Instagram
               <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
             </a>
           </div>

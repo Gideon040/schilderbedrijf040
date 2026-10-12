@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-import { Header } from '@/components/layout/header'
 import Image from 'next/image'
 import {
   Accordion,
@@ -111,8 +110,6 @@ export default function FAQPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       
-      <Header />
-      
       {/* Hero Section */}
       <section className="relative min-h-[50vh] flex items-center">
         <div className="absolute inset-0 z-0">
@@ -130,8 +127,8 @@ export default function FAQPage() {
         <div className="container relative z-10">
           <div className="max-w-3xl">
             <h1 className="text-5xl md:text-6xl font-bold mb-4">
-              <span className="text-white">VEELGESTELDE</span><br />
-              <span className="text-[#0088FF]">VRAGEN</span>
+              <span className="text-white">Veelgestelde</span><br />
+              <span className="text-[#7FB2FF]">vragen</span>
             </h1>
             <p className="text-gray-200 text-lg leading-relaxed">
               Hier vindt u antwoorden op de meest gestelde vragen over onze diensten en werkwijze.
@@ -161,7 +158,7 @@ export default function FAQPage() {
               Heeft u nog andere vragen? Neem gerust contact met ons op.
             </p>
             <a href="/contact" className="btn-primary">
-              STEL UW VRAAG
+              Stel uw vraag
               <span className="ml-2">→</span>
             </a>
           </div>

@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-import { Header } from '@/components/layout/header'
 import { ContactHero } from '@/components/sections/contact-hero'
 import { QuoteForm } from '@/components/sections/quote-form'
 import { ContactDetails } from '@/components/sections/contact-details'
@@ -84,7 +83,6 @@ export default function ContactPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
-      <Header />
       <ContactHero />
       <QuoteForm />
       <ContactDetails />

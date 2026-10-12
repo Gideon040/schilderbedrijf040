@@ -70,7 +70,7 @@ export function Callback() {
             <h2 id="bel-mij-terug" className="text-4xl md:text-5xl font-bold mb-2">
               BEL MIJ TERUG
             </h2>
-            <h3 className="text-3xl md:text-4xl font-bold mb-8 text-[#0088FF]">
+            <h3 className="text-3xl md:text-4xl font-bold mb-8 text-[#1668E3]">
               DOEN WE GRAAG!
             </h3>
             <div className="space-y-4 text-gray-300">
@@ -97,7 +97,7 @@ export function Callback() {
                     name="name"
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="w-full h-12 px-4 rounded-md bg-white/10 border border-white/20 text-white placeholder-white/50 focus:border-[#0088FF] focus:ring-2 focus:ring-[#0088FF]/20"
+                    className="w-full h-12 px-4 rounded-md bg-white/10 border border-white/20 text-white placeholder-white/50 focus:border-[#1668E3] focus:ring-2 focus:ring-[#1668E3]/20"
                     required
                   />
                 </div>
@@ -111,7 +111,7 @@ export function Callback() {
                     name="phone"
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    className="w-full h-12 px-4 rounded-md bg-white/10 border border-white/20 text-white placeholder-white/50 focus:border-[#0088FF] focus:ring-2 focus:ring-[#0088FF]/20"
+                    className="w-full h-12 px-4 rounded-md bg-white/10 border border-white/20 text-white placeholder-white/50 focus:border-[#1668E3] focus:ring-2 focus:ring-[#1668E3]/20"
                     required
                   />
                 </div>
@@ -127,7 +127,7 @@ export function Callback() {
                   name="email"
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="w-full h-12 px-4 rounded-md bg-white/10 border border-white/20 text-white placeholder-white/50 focus:border-[#0088FF] focus:ring-2 focus:ring-[#0088FF]/20"
+                  className="w-full h-12 px-4 rounded-md bg-white/10 border border-white/20 text-white placeholder-white/50 focus:border-[#1668E3] focus:ring-2 focus:ring-[#1668E3]/20"
                   required
                 />
               </div>
@@ -142,7 +142,7 @@ export function Callback() {
                       <button
                         type="button"
                         className={cn(
-                          "w-full h-12 px-4 rounded-md bg-white/10 border border-white/20 text-left focus:border-[#0088FF] focus:ring-2 focus:ring-[#0088FF]/20",
+                          "w-full h-12 px-4 rounded-md bg-white/10 border border-white/20 text-left focus:border-[#1668E3] focus:ring-2 focus:ring-[#1668E3]/20",
                           !date && "text-white/50",
                           date && "text-white"
                         )}
@@ -172,7 +172,7 @@ export function Callback() {
                     name="preferredTime"
                     value={formData.preferredTime}
                     onChange={(e) => setFormData({ ...formData, preferredTime: e.target.value })}
-                    className="w-full h-12 px-4 rounded-md bg-white/10 border border-white/20 text-white focus:border-[#0088FF] focus:ring-2 focus:ring-[#0088FF]/20"
+                    className="w-full h-12 px-4 rounded-md bg-white/10 border border-white/20 text-white focus:border-[#1668E3] focus:ring-2 focus:ring-[#1668E3]/20"
                     required
                   >
                     <option value="" className="text-gray-900">Selecteer tijd</option>
@@ -185,7 +185,7 @@ export function Callback() {
 
               <button
                 type="submit"
-                className="w-full h-12 bg-[#0088FF] hover:bg-[#0077E6] text-white font-bebas text-lg tracking-wider rounded-md transition-all duration-200 group"
+                className="w-full h-12 bg-[#1668E3] hover:bg-[#0077E6] text-white font-bebas text-lg tracking-wider rounded-md transition-all duration-200 group"
               >
                 VERSTUREN
                 <span className="ml-2 group-hover:translate-x-1 inline-block transition-transform">→</span>

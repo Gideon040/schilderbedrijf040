@@ -1,7 +1,5 @@
 import type { Metadata } from 'next'
 import { cityData } from './data'
-import { Header } from '@/components/layout/header'
-import { Footer } from '@/components/layout/footer'
 import Image from 'next/image'
 import Link from 'next/link'
 import { ChevronDown, Phone, Mail, Clock, ArrowRight, Check } from 'lucide-react'
@@ -191,10 +189,8 @@ export default function LocationPage({ params }: { params: { city: string } }) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
-      <Header />
-
       {/* ── Hero Section ── */}
-      <section className="relative min-h-[75vh] flex items-center bg-[#001B32] overflow-hidden">
+      <section className="relative min-h-[75vh] flex items-center bg-[#0B1B30] overflow-hidden">
         {/* Background image */}
         <div className="absolute inset-0 z-0 opacity-30">
           <Image
@@ -207,15 +203,15 @@ export default function LocationPage({ params }: { params: { city: string } }) {
           />
         </div>
         {/* Gradient overlay */}
-        <div className="absolute inset-0 z-[1] bg-gradient-to-br from-[#001B32]/95 via-[#001B32]/60 to-[#0088FF]/15" />
+        <div className="absolute inset-0 z-[1] bg-gradient-to-br from-[#0B1B30]/95 via-[#0B1B30]/60 to-[#1668E3]/15" />
         {/* Decorative glow */}
-        <div className="absolute -right-20 top-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[radial-gradient(circle,rgba(0,136,255,0.12)_0%,transparent_70%)] rounded-full blur-[60px]" />
+        <div className="absolute -right-20 top-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[radial-gradient(circle,rgba(22,104,227,0.12)_0%,transparent_70%)] rounded-full blur-[60px]" />
 
         <div className="container relative z-10 pt-28 pb-16">
           <div className="max-w-3xl">
             <h1 className="font-bebas text-[clamp(3.5rem,8vw,6.5rem)] leading-[0.95] mb-6 animate-fade-in-up">
               <span className="text-white">SCHILDER </span>
-              <span className="text-[#0088FF] block">{data.displayName.toUpperCase()}</span>
+              <span className="text-[#1668E3] block">{data.displayName.toUpperCase()}</span>
             </h1>
             <p className="text-gray-200 text-lg leading-relaxed max-w-[560px] mb-10 animate-fade-in-up animation-delay-150">
               {data.intro}
@@ -223,7 +219,7 @@ export default function LocationPage({ params }: { params: { city: string } }) {
             <div className="flex flex-wrap gap-4 animate-fade-in-up animation-delay-300">
               <Link
                 href="/contact"
-                className="bg-[#0088FF] text-white px-8 py-4 rounded-lg inline-flex items-center gap-2.5 font-bebas text-lg tracking-wider hover:bg-[#006ACC] transition-all duration-250 shadow-[0_4px_24px_rgba(0,136,255,0.3)] hover:shadow-[0_8px_32px_rgba(0,136,255,0.4)] hover:-translate-y-0.5"
+                className="bg-[#1668E3] text-white px-8 py-4 rounded-lg inline-flex items-center gap-2.5 font-bebas text-lg tracking-wider hover:bg-[#0F56C2] transition-all duration-250 shadow-[0_4px_24px_rgba(22,104,227,0.3)] hover:shadow-[0_8px_32px_rgba(22,104,227,0.4)] hover:-translate-y-0.5"
               >
                 Gratis offerte aanvragen
                 <ArrowRight className="w-[18px] h-[18px]" />
@@ -264,9 +260,9 @@ export default function LocationPage({ params }: { params: { city: string } }) {
       </section>
 
       {/* ── Diensten ── */}
-      <section id="diensten" className="py-24 bg-[#F7F8FA]">
+      <section id="diensten" className="py-24 bg-[#F5F3EF]">
         <div className="container">
-          <span className="inline-block font-bebas text-sm tracking-[0.15em] text-[#0088FF] mb-3 uppercase">
+          <span className="inline-block font-bebas text-sm tracking-[0.15em] text-[#1668E3] mb-3 uppercase">
             Onze Expertise
           </span>
           <h2 className="font-bebas text-[clamp(2rem,4vw,3rem)] leading-tight mb-4">
@@ -281,11 +277,11 @@ export default function LocationPage({ params }: { params: { city: string } }) {
               <Link
                 key={index}
                 href={`/diensten/${dienst.slug}`}
-                className="group relative bg-white p-10 transition-all duration-350 hover:bg-[#001B32] overflow-hidden"
+                className="group relative bg-white p-10 transition-all duration-350 hover:bg-[#0B1B30] overflow-hidden"
               >
                 {/* Left accent border */}
-                <div className="absolute top-0 left-0 w-1 h-0 bg-[#0088FF] transition-all duration-400 group-hover:h-full" />
-                <span className="block font-bebas text-4xl text-gray-200/50 leading-none mb-5 transition-all duration-350 group-hover:text-[#0088FF] group-hover:opacity-100">
+                <div className="absolute top-0 left-0 w-1 h-0 bg-[#1668E3] transition-all duration-400 group-hover:h-full" />
+                <span className="block font-bebas text-4xl text-gray-200/50 leading-none mb-5 transition-all duration-350 group-hover:text-[#1668E3] group-hover:opacity-100">
                   {String(index + 1).padStart(2, '0')}
                 </span>
                 <h3 className="font-bebas text-2xl mb-3 transition-colors duration-350 group-hover:text-white">
@@ -294,7 +290,7 @@ export default function LocationPage({ params }: { params: { city: string } }) {
                 <p className="text-gray-600 text-[0.95rem] leading-relaxed mb-6 transition-colors duration-350 group-hover:text-gray-300">
                   {dienst.description}
                 </p>
-                <span className="inline-flex items-center gap-2 text-[#0088FF] font-semibold text-sm transition-transform duration-300 group-hover:translate-x-1.5">
+                <span className="inline-flex items-center gap-2 text-[#1668E3] font-semibold text-sm transition-transform duration-300 group-hover:translate-x-1.5">
                   Meer over {dienst.title.toLowerCase()} in {data.displayName}
                   <ArrowRight className="w-4 h-4" />
                 </span>
@@ -309,7 +305,7 @@ export default function LocationPage({ params }: { params: { city: string } }) {
         <div className="container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div>
-              <span className="inline-block font-bebas text-sm tracking-[0.15em] text-[#0088FF] mb-3 uppercase">
+              <span className="inline-block font-bebas text-sm tracking-[0.15em] text-[#1668E3] mb-3 uppercase">
                 Transparante Prijzen
               </span>
               <h2 className="font-bebas text-[clamp(2rem,4vw,3rem)] leading-tight mb-4">
@@ -320,7 +316,7 @@ export default function LocationPage({ params }: { params: { city: string } }) {
               </p>
               <Link
                 href="/contact"
-                className="bg-[#0088FF] text-white px-7 py-3.5 rounded-lg inline-flex items-center gap-2.5 font-bebas text-base tracking-wider hover:bg-[#006ACC] transition-all duration-250"
+                className="bg-[#1668E3] text-white px-7 py-3.5 rounded-lg inline-flex items-center gap-2.5 font-bebas text-base tracking-wider hover:bg-[#0F56C2] transition-all duration-250"
               >
                 Gratis offerte aanvragen
                 <ArrowRight className="w-4 h-4" />
@@ -328,24 +324,24 @@ export default function LocationPage({ params }: { params: { city: string } }) {
             </div>
 
             <div className="rounded-2xl overflow-hidden shadow-[0_4px_40px_rgba(0,0,0,0.06)]">
-              <div className="bg-gradient-to-br from-[#001B32] to-[#002B4F] px-8 py-7 flex justify-between items-center">
+              <div className="bg-gradient-to-br from-[#0B1B30] to-[#13294A] px-8 py-7 flex justify-between items-center">
                 <h3 className="font-bebas text-2xl text-white">Indicatie Tarieven</h3>
-                <span className="bg-[#0088FF] text-white text-xs font-semibold px-3.5 py-1.5 rounded-full">
+                <span className="bg-[#1668E3] text-white text-xs font-semibold px-3.5 py-1.5 rounded-full">
                   2026
                 </span>
               </div>
               {prijzen.map((item, index) => (
                 <div
                   key={index}
-                  className={`flex justify-between items-center px-8 py-[18px] text-[0.95rem] hover:bg-[#0088FF]/[0.04] transition-colors ${
-                    index % 2 === 0 ? 'bg-white' : 'bg-[#F7F8FA]'
+                  className={`flex justify-between items-center px-8 py-[18px] text-[0.95rem] hover:bg-[#1668E3]/[0.04] transition-colors ${
+                    index % 2 === 0 ? 'bg-white' : 'bg-[#F5F3EF]'
                   }`}
                 >
                   <span className="text-gray-600">{item.dienst}</span>
-                  <span className="font-bold text-[#001B32]">{item.prijs}</span>
+                  <span className="font-bold text-[#0B1B30]">{item.prijs}</span>
                 </div>
               ))}
-              <div className="px-8 py-5 bg-[#F7F8FA] border-t border-gray-200">
+              <div className="px-8 py-5 bg-[#F5F3EF] border-t border-gray-200">
                 <p className="text-xs text-gray-400">
                   * {prijsNoot}
                 </p>
@@ -367,7 +363,7 @@ export default function LocationPage({ params }: { params: { city: string } }) {
             style={{ objectPosition: 'center 40%' }}
           />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-br from-[#001B32]/[0.92] via-[#001B32]/70 to-[#0088FF]/20" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#0B1B30]/[0.92] via-[#0B1B30]/70 to-[#1668E3]/20" />
         <div className="container relative z-10">
           <div className="max-w-xl">
             <span className="inline-block font-bebas text-sm tracking-[0.15em] text-gray-300 mb-3 uppercase">
@@ -382,7 +378,7 @@ export default function LocationPage({ params }: { params: { city: string } }) {
             <div className="flex flex-wrap gap-4">
               <Link
                 href="/contact"
-                className="bg-[#0088FF] text-white px-8 py-4 rounded-lg inline-flex items-center gap-2.5 font-bebas text-lg tracking-wider hover:bg-[#006ACC] transition-all duration-250 shadow-[0_4px_24px_rgba(0,136,255,0.3)] hover:shadow-[0_8px_32px_rgba(0,136,255,0.4)] hover:-translate-y-0.5"
+                className="bg-[#1668E3] text-white px-8 py-4 rounded-lg inline-flex items-center gap-2.5 font-bebas text-lg tracking-wider hover:bg-[#0F56C2] transition-all duration-250 shadow-[0_4px_24px_rgba(22,104,227,0.3)] hover:shadow-[0_8px_32px_rgba(22,104,227,0.4)] hover:-translate-y-0.5"
               >
                 Gratis offerte aanvragen
                 <ArrowRight className="w-[18px] h-[18px]" />
@@ -399,11 +395,11 @@ export default function LocationPage({ params }: { params: { city: string } }) {
       </section>
 
       {/* ── Waarom Schildersbedrijf040 ── */}
-      <section id="waarom-schildersbedrijf040" className="py-24 bg-[#F7F8FA]">
+      <section id="waarom-schildersbedrijf040" className="py-24 bg-[#F5F3EF]">
         <div className="container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div>
-              <span className="inline-block font-bebas text-sm tracking-[0.15em] text-[#0088FF] mb-3 uppercase">
+              <span className="inline-block font-bebas text-sm tracking-[0.15em] text-[#1668E3] mb-3 uppercase">
                 Waarom Wij
               </span>
               <h2 className="font-bebas text-[clamp(2rem,4vw,3rem)] leading-tight mb-4">
@@ -423,9 +419,9 @@ export default function LocationPage({ params }: { params: { city: string } }) {
                 ].map((usp, index) => (
                   <div
                     key={index}
-                    className="flex gap-4 items-start p-5 rounded-xl bg-white hover:bg-[#0088FF]/[0.06] transition-all duration-300 hover:translate-x-1"
+                    className="flex gap-4 items-start p-5 rounded-xl bg-white hover:bg-[#1668E3]/[0.06] transition-all duration-300 hover:translate-x-1"
                   >
-                    <div className="flex-shrink-0 w-10 h-10 bg-[#0088FF] rounded-[10px] flex items-center justify-center">
+                    <div className="flex-shrink-0 w-10 h-10 bg-[#1668E3] rounded-[10px] flex items-center justify-center">
                       <Check className="w-5 h-5 text-white" strokeWidth={2.5} />
                     </div>
                     <div>
@@ -439,7 +435,7 @@ export default function LocationPage({ params }: { params: { city: string } }) {
 
             <div className="flex flex-col gap-5">
               {/* Google rating card */}
-              <div className="p-9 rounded-2xl border border-gray-200 bg-white hover:border-[#0088FF] hover:shadow-[0_8px_40px_rgba(0,136,255,0.08)] transition-all duration-300">
+              <div className="p-9 rounded-2xl border border-gray-200 bg-white hover:border-[#1668E3] hover:shadow-[0_8px_40px_rgba(22,104,227,0.08)] transition-all duration-300">
                 <div className="flex gap-1 mb-3">
                   {[...Array(5)].map((_, i) => (
                     <svg key={i} className="w-[22px] h-[22px]" viewBox="0 0 24 24" fill="#FACC15">
@@ -458,7 +454,7 @@ export default function LocationPage({ params }: { params: { city: string } }) {
               </div>
 
               {/* Werkspot rating card */}
-              <div className="p-9 rounded-2xl border border-gray-200 bg-white hover:border-[#0088FF] hover:shadow-[0_8px_40px_rgba(0,136,255,0.08)] transition-all duration-300">
+              <div className="p-9 rounded-2xl border border-gray-200 bg-white hover:border-[#1668E3] hover:shadow-[0_8px_40px_rgba(22,104,227,0.08)] transition-all duration-300">
                 <div className="flex gap-1 mb-3">
                   {[...Array(5)].map((_, i) => (
                     <svg key={i} className="w-[22px] h-[22px]" viewBox="0 0 24 24" fill="#FACC15">
@@ -484,7 +480,7 @@ export default function LocationPage({ params }: { params: { city: string } }) {
       <section id="werkwijze" className="py-24">
         <div className="container">
           <div className="text-center mb-14">
-            <span className="inline-block font-bebas text-sm tracking-[0.15em] text-[#0088FF] mb-3 uppercase">
+            <span className="inline-block font-bebas text-sm tracking-[0.15em] text-[#1668E3] mb-3 uppercase">
               Hoe wij werken
             </span>
             <h2 className="font-bebas text-[clamp(2rem,4vw,3rem)] leading-tight mb-4">
@@ -497,15 +493,15 @@ export default function LocationPage({ params }: { params: { city: string } }) {
 
           <div className="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-0">
             {/* Connecting line (desktop only) */}
-            <div className="hidden lg:block absolute top-11 left-[10%] right-[10%] h-0.5 bg-gradient-to-r from-[#0088FF] via-gray-200 to-gray-200" />
+            <div className="hidden lg:block absolute top-11 left-[10%] right-[10%] h-0.5 bg-gradient-to-r from-[#1668E3] via-gray-200 to-gray-200" />
 
             {werkwijzeStappen.map((stap, index) => (
               <div key={index} className="group relative text-center px-5">
                 <div
                   className={`relative z-10 w-[88px] h-[88px] rounded-full mx-auto mb-6 flex items-center justify-center font-bebas text-[2rem] transition-all duration-350 ${
                     index === 0
-                      ? 'bg-[#0088FF] text-white border-2 border-[#0088FF] shadow-[0_0_0_8px_rgba(0,136,255,0.12)]'
-                      : 'bg-white text-gray-400 border-2 border-gray-200 group-hover:border-[#0088FF] group-hover:text-[#0088FF] group-hover:shadow-[0_0_0_8px_rgba(0,136,255,0.08)] group-hover:scale-[1.08]'
+                      ? 'bg-[#1668E3] text-white border-2 border-[#1668E3] shadow-[0_0_0_8px_rgba(22,104,227,0.12)]'
+                      : 'bg-white text-gray-400 border-2 border-gray-200 group-hover:border-[#1668E3] group-hover:text-[#1668E3] group-hover:shadow-[0_0_0_8px_rgba(22,104,227,0.08)] group-hover:scale-[1.08]'
                   }`}
                 >
                   {stap.nummer}
@@ -519,9 +515,9 @@ export default function LocationPage({ params }: { params: { city: string } }) {
       </section>
 
       {/* ── Veelgestelde Vragen ── */}
-      <section id="veelgestelde-vragen" className="py-24 bg-[#F7F8FA]">
+      <section id="veelgestelde-vragen" className="py-24 bg-[#F5F3EF]">
         <div className="container">
-          <span className="inline-block font-bebas text-sm tracking-[0.15em] text-[#0088FF] mb-3 uppercase">
+          <span className="inline-block font-bebas text-sm tracking-[0.15em] text-[#1668E3] mb-3 uppercase">
             Veelgestelde Vragen
           </span>
           <h2 className="font-bebas text-[clamp(2rem,4vw,3rem)] leading-tight mb-4">
@@ -535,11 +531,11 @@ export default function LocationPage({ params }: { params: { city: string } }) {
             {data.faqs.map((faq, index) => (
               <details
                 key={index}
-                className="group border border-gray-200 rounded-xl overflow-hidden transition-all duration-300 open:border-[#0088FF] open:shadow-[0_4px_24px_rgba(0,136,255,0.06)]"
+                className="group border border-gray-200 rounded-xl overflow-hidden transition-all duration-300 open:border-[#1668E3] open:shadow-[0_4px_24px_rgba(22,104,227,0.06)]"
               >
-                <summary className="relative flex items-center justify-between cursor-pointer px-7 py-[22px] font-semibold text-[1.05rem] hover:bg-[#F7F8FA] transition-colors list-none [&::-webkit-details-marker]:hidden">
+                <summary className="relative flex items-center justify-between cursor-pointer px-7 py-[22px] font-semibold text-[1.05rem] hover:bg-[#F5F3EF] transition-colors list-none [&::-webkit-details-marker]:hidden">
                   {/* Blue left border on open */}
-                  <div className="absolute left-0 top-0 bottom-0 w-[3px] bg-[#0088FF] opacity-0 group-open:opacity-100 transition-opacity duration-300" />
+                  <div className="absolute left-0 top-0 bottom-0 w-[3px] bg-[#1668E3] opacity-0 group-open:opacity-100 transition-opacity duration-300" />
                   <span>{faq.question}</span>
                   <ChevronDown className="w-5 h-5 text-gray-400 flex-shrink-0 ml-4 transition-transform duration-300 group-open:rotate-180" />
                 </summary>
@@ -563,12 +559,12 @@ export default function LocationPage({ params }: { params: { city: string } }) {
             className="object-cover"
           />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-br from-[#001B32]/95 via-[#001B32]/85 to-[#001B32]/75" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#0B1B30]/95 via-[#0B1B30]/85 to-[#0B1B30]/75" />
 
         <div className="container relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
-              <span className="inline-block font-bebas text-sm tracking-[0.15em] text-[#0088FF] mb-3 uppercase">
+              <span className="inline-block font-bebas text-sm tracking-[0.15em] text-[#1668E3] mb-3 uppercase">
                 Neem Contact Op
               </span>
               <h2 className="font-bebas text-[clamp(2.2rem,4vw,3rem)] text-white leading-tight mb-4">
@@ -579,7 +575,7 @@ export default function LocationPage({ params }: { params: { city: string } }) {
               </p>
               <Link
                 href="/contact"
-                className="bg-[#0088FF] text-white px-8 py-4 rounded-lg inline-flex items-center gap-2.5 font-bebas text-lg tracking-wider hover:bg-[#006ACC] transition-all duration-250 shadow-[0_4px_24px_rgba(0,136,255,0.3)] hover:shadow-[0_8px_32px_rgba(0,136,255,0.4)] hover:-translate-y-0.5"
+                className="bg-[#1668E3] text-white px-8 py-4 rounded-lg inline-flex items-center gap-2.5 font-bebas text-lg tracking-wider hover:bg-[#0F56C2] transition-all duration-250 shadow-[0_4px_24px_rgba(22,104,227,0.3)] hover:shadow-[0_8px_32px_rgba(22,104,227,0.4)] hover:-translate-y-0.5"
               >
                 Gratis offerte aanvragen
                 <ArrowRight className="w-[18px] h-[18px]" />
@@ -589,35 +585,35 @@ export default function LocationPage({ params }: { params: { city: string } }) {
             <div className="flex flex-col gap-3">
               <a
                 href="tel:+31638903004"
-                className="group flex items-center gap-4 p-5 rounded-[14px] bg-white/[0.05] border border-white/[0.08] hover:bg-white/10 hover:border-[#0088FF]/30 hover:translate-x-1.5 transition-all duration-300"
+                className="group flex items-center gap-4 p-5 rounded-[14px] bg-white/[0.05] border border-white/[0.08] hover:bg-white/10 hover:border-[#1668E3]/30 hover:translate-x-1.5 transition-all duration-300"
               >
-                <div className="flex-shrink-0 w-12 h-12 bg-[#0088FF]/[0.12] rounded-xl flex items-center justify-center">
-                  <Phone className="w-6 h-6 text-[#0088FF]" strokeWidth={1.5} />
+                <div className="flex-shrink-0 w-12 h-12 bg-[#1668E3]/[0.12] rounded-xl flex items-center justify-center">
+                  <Phone className="w-6 h-6 text-[#1668E3]" strokeWidth={1.5} />
                 </div>
                 <div>
                   <div className="text-xs text-gray-400 font-medium uppercase tracking-wide mb-0.5">Bel ons direct</div>
                   <div className="text-white font-semibold">06-38903004</div>
                 </div>
-                <ArrowRight className="w-5 h-5 ml-auto text-gray-500 group-hover:text-[#0088FF] group-hover:translate-x-1 transition-all duration-300" />
+                <ArrowRight className="w-5 h-5 ml-auto text-gray-500 group-hover:text-[#1668E3] group-hover:translate-x-1 transition-all duration-300" />
               </a>
 
               <a
                 href="mailto:info@schildersbedrijf040.nl"
-                className="group flex items-center gap-4 p-5 rounded-[14px] bg-white/[0.05] border border-white/[0.08] hover:bg-white/10 hover:border-[#0088FF]/30 hover:translate-x-1.5 transition-all duration-300"
+                className="group flex items-center gap-4 p-5 rounded-[14px] bg-white/[0.05] border border-white/[0.08] hover:bg-white/10 hover:border-[#1668E3]/30 hover:translate-x-1.5 transition-all duration-300"
               >
-                <div className="flex-shrink-0 w-12 h-12 bg-[#0088FF]/[0.12] rounded-xl flex items-center justify-center">
-                  <Mail className="w-6 h-6 text-[#0088FF]" strokeWidth={1.5} />
+                <div className="flex-shrink-0 w-12 h-12 bg-[#1668E3]/[0.12] rounded-xl flex items-center justify-center">
+                  <Mail className="w-6 h-6 text-[#1668E3]" strokeWidth={1.5} />
                 </div>
                 <div>
                   <div className="text-xs text-gray-400 font-medium uppercase tracking-wide mb-0.5">Stuur een e-mail</div>
                   <div className="text-white font-semibold">info@schildersbedrijf040.nl</div>
                 </div>
-                <ArrowRight className="w-5 h-5 ml-auto text-gray-500 group-hover:text-[#0088FF] group-hover:translate-x-1 transition-all duration-300" />
+                <ArrowRight className="w-5 h-5 ml-auto text-gray-500 group-hover:text-[#1668E3] group-hover:translate-x-1 transition-all duration-300" />
               </a>
 
               <div className="flex items-center gap-4 p-5 rounded-[14px] bg-white/[0.05] border border-white/[0.08]">
-                <div className="flex-shrink-0 w-12 h-12 bg-[#0088FF]/[0.12] rounded-xl flex items-center justify-center">
-                  <Clock className="w-6 h-6 text-[#0088FF]" strokeWidth={1.5} />
+                <div className="flex-shrink-0 w-12 h-12 bg-[#1668E3]/[0.12] rounded-xl flex items-center justify-center">
+                  <Clock className="w-6 h-6 text-[#1668E3]" strokeWidth={1.5} />
                 </div>
                 <div>
                   <div className="text-xs text-gray-400 font-medium uppercase tracking-wide mb-0.5">Bereikbaarheid</div>

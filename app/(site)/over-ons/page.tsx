@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-import { Header } from '@/components/layout/header'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Check } from 'lucide-react'
@@ -93,8 +92,6 @@ export default function OverOnsPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       
-      <Header />
-      
       {/* Hero Section */}
       <section className="relative min-h-[50vh] flex items-center">
         <div className="absolute inset-0 z-0">
@@ -112,11 +109,11 @@ export default function OverOnsPage() {
         <div className="container relative z-10">
           <div className="max-w-3xl">
             <h1 className="text-5xl md:text-6xl font-bold mb-4">
-              <span className="text-white">OVER</span><br />
-              <span className="text-[#0088FF]">SCHILDERSBEDRIJF040</span>
+              <span className="text-white">Over</span><br />
+              <span className="text-[#7FB2FF]">Schildersbedrijf040</span>
             </h1>
             <p className="text-gray-200 text-lg leading-relaxed">
-              MEER DAN EEN SCHILDERSBEDRIJF
+              Meer dan een schildersbedrijf
             </p>
           </div>
         </div>

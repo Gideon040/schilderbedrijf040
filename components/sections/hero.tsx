@@ -181,7 +181,7 @@ export function Hero() {
             </div>
             <button 
               type="submit" 
-              className="w-full h-12 bg-primary hover:bg-[#0061D1] active:bg-[#004FB2] text-white font-bebas text-lg uppercase tracking-wider transition-all duration-200 rounded-md hover:-translate-y-[1px] active:translate-y-0"
+              className="w-full h-12 bg-primary hover:bg-[#0F56C2] active:bg-[#0E4AA8] text-white font-bebas text-lg uppercase tracking-wider transition-all duration-200 rounded-md hover:-translate-y-[1px] active:translate-y-0"
             >
               Gratis offerte aanvragen
             </button>
