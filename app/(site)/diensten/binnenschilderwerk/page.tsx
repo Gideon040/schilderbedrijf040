@@ -1,12 +1,13 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import { DienstTemplate, type DienstPagina } from '@/components/dienst/template'
 import { images } from '@/lib/images'
 import { orgRef, serviceOffers } from '@/lib/schema'
 
 export const metadata: Metadata = {
-  title: 'Binnenschilderwerk Eindhoven | Muren, Plafonds & Kozijnen Vakkundig Geschilderd',
+  title: 'Binnenschilderwerk Eindhoven',
   description:
-    'Binnenschilderwerk door Schildersbedrijf040 in Eindhoven. Muren, plafonds, kozijnen en deuren professioneel geschilderd met Boonstoppel verf. ✓ Hoogst beoordeeld ✓ Gratis offerte.',
+    'Binnenschilder in Eindhoven: muren, plafonds, kozijnen en deuren voor €30 tot €35 per m², met Boonstoppel-verf. Gratis inspectie en een offerte met vaste prijs.',
   keywords: [
     'binnenschilderwerk eindhoven',
     'binnenschilder eindhoven',
@@ -53,6 +54,7 @@ const faqs = [
     question: 'Kan binnenschilderwerk ook in de winter uitgevoerd worden?',
     answer:
       'Binnenschilderwerk is het hele jaar door uitvoerbaar, omdat de temperatuur en luchtvochtigheid binnenshuis goed te regelen zijn. De ideale verwerkingstemperatuur voor muurverf en lakverf ligt tussen 10°C en 25°C, standaard in een verwarmde woning. Schildersbedrijf040 zorgt voor goede ventilatie tijdens het schilderen, zodat de verf optimaal droogt. In de winter is er bovendien vaak sneller beschikbaarheid, wat de planning vergemakkelijkt.',
+    link: { href: '/diensten/winterschilder', tekst: 'Lees meer over binnenwerk in de winter.' },
   },
   {
     question: 'Wat is het verschil tussen latex en acrylaat muurverf?',
@@ -231,7 +233,33 @@ const pagina: DienstPagina = {
       </>
     ),
   },
-  extra: undefined,
+  extra: (
+    <>
+      <p>
+        Het verlaagde btw-tarief geldt voor arbeid aan woningen die ouder zijn dan twee jaar. Hoe dat precies werkt, leest u in het artikel
+        over het <Link href="/blog/btw-tarief-schilderwerk">btw-tarief voor schilderwerk</Link>.
+      </p>
+      <h2 id="binnenwerk-in-de-winter" className="h-section mt-6 scroll-mt-28">
+        Binnenwerk in de winter
+      </h2>
+      <p>
+        Binnenschilderwerk kan het hele jaar door, omdat de temperatuur in een verwarmde woning goed te regelen is. In de winter is de
+        planning vaak ruimer dan in het voorjaar en de zomer, als het buitenwerk piekt. Wie in de wintermaanden de woonkamer, slaapkamers of
+        trap laat schilderen, is klaar voordat het buitenseizoen begint. Lees meer over{' '}
+        <Link href="/diensten/winterschilder">binnenwerk laten doen in de winter</Link>.
+      </p>
+      <h2 id="zelf-schilderen" className="h-section mt-6 scroll-mt-28">
+        Liever een deel zelf doen?
+      </h2>
+      <p>
+        Niet elke klus vraagt om een schilder. Voor kleinere klussen staan er stappenplannen op de blog:{' '}
+        <Link href="/blog/hoe-verf-je-een-muur">een muur verven</Link>, <Link href="/blog/plafond-schilderen">een plafond schilderen</Link>,{' '}
+        <Link href="/blog/hoe-schilder-je-een-deur">een deur schilderen zonder strepen</Link> en{' '}
+        <Link href="/blog/verven-na-behang">verven na het verwijderen van behang</Link>. Voor grotere oppervlakken, trappen en lakwerk aan
+        kozijnen en deuren loont vakwerk: de voorbereiding bepaalt hoe lang het resultaat meegaat.
+      </p>
+    </>
+  ),
   soorten: {
     id: 'soorten-binnenschilderwerk',
     h2: 'Soorten binnenschilderwerk',
@@ -279,6 +307,20 @@ const pagina: DienstPagina = {
           'Kantoren, praktijkruimtes en winkels vragen om binnenschilderwerk dat representatief is en tegen intensief gebruik bestand. Schildersbedrijf040 plant het schilderwerk buiten kantooruren of in fases, zodat uw bedrijfsvoering minimaal verstoord wordt. Professionele airless spuittechniek is hierbij een optie voor grote oppervlakken.',
         link: '/diensten/latex-spuiten',
         linkTekst: 'Bekijk latex spuiten',
+      },
+      {
+        titel: 'Behangen',
+        beschrijving:
+          'Behang plaatsen of verwijderen, samen met het schilderwerk in één planning. Schildersbedrijf040 brengt vliesbehang, glasvezelbehang en fotobehang aan, en maakt de muren vooraf glad en draagkrachtig.',
+        link: '/diensten/behangen',
+        linkTekst: 'Meer over behangen',
+      },
+      {
+        titel: 'Schilderen in de winter',
+        beschrijving:
+          'Binnenwerk kan het hele jaar door, ook als het buiten koud en nat is. De winter is een rustige periode om uw binnenschilderwerk in te plannen.',
+        link: '/diensten/winterschilder',
+        linkTekst: 'Winterschilderwerk',
       },
     ],
   },
