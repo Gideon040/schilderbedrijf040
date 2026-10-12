@@ -130,7 +130,7 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
       url: 'https://schildersbedrijf040.nl',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://res.cloudinary.com/dbtaisgda/image/upload/v1743873386/schildersbedrijf040_logo_aqxhxr.png'
+        url: 'https://schildersbedrijf040.nl/images/schildersbedrijf040-logo.png'
       }
     },
     mainEntityOfPage: {
@@ -299,7 +299,7 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
               <div className="lg:hidden flex items-center gap-4 mb-8 pb-8 border-b border-gray-200">
                 <div className="relative w-14 h-14 rounded-full overflow-hidden flex-shrink-0 ring-2 ring-[#0088FF]/20">
                   <Image
-                    src="https://res.cloudinary.com/dbtaisgda/image/upload/v1739556938/d46oqzht95tblkswur6p.jpg"
+                    src="/images/jordy-jacobs-schildersbedrijf040-op-ladder.jpg"
                     alt="Jordy Jacobs, eigenaar van Schildersbedrijf040"
                     fill
                     sizes="56px"
@@ -320,7 +320,7 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
                 <div className="flex items-center gap-3 mb-4">
                   <div className="relative w-10 h-10 rounded-full overflow-hidden flex-shrink-0">
                     <Image
-                      src="https://res.cloudinary.com/dbtaisgda/image/upload/v1739556938/d46oqzht95tblkswur6p.jpg"
+                      src="/images/jordy-jacobs-schildersbedrijf040-op-ladder.jpg"
                       alt="Jordy Jacobs"
                       fill
                       sizes="40px"
@@ -388,7 +388,7 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
               <div className="rounded-2xl overflow-hidden border border-gray-200 bg-white shadow-[0_2px_24px_rgba(0,0,0,0.06)]">
                 <div className="relative aspect-[4/3] overflow-hidden">
                   <Image
-                    src="https://res.cloudinary.com/dbtaisgda/image/upload/v1739556938/d46oqzht95tblkswur6p.jpg"
+                    src="/images/jordy-jacobs-schildersbedrijf040-op-ladder.jpg"
                     alt="Jordy Jacobs op een trap, eigenaar Schildersbedrijf040"
                     fill
                     sizes="340px"

@@ -90,7 +90,7 @@ export default async function BlogPage() {
       <section className="relative min-h-[40vh] flex items-center">
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://res.cloudinary.com/dbtaisgda/image/upload/v1743873386/WhatsApp_Image_2025-03-27_at_07.55.12_amqj6v.jpg"
+            src="/images/buitenschilderwerk-dakkapel-wit-geschilderd.jpg"
             alt="Schildersbedrijf040 Blog - Tips & Advies"
             fill
             sizes="100vw"

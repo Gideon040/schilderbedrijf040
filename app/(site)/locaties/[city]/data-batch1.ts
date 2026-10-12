@@ -5,7 +5,7 @@ export const batch1Data: Record<string, CityData> = {
   'valkenswaard': {
     title: 'Schildersbedrijf Valkenswaard',
     displayName: 'Valkenswaard',
-    heroImage: 'https://res.cloudinary.com/dbtaisgda/image/upload/v1743873386/WhatsApp_Image_2025-03-27_at_07.53.08_myzeda.jpg',
+    heroImage: '/images/buitenschilderwerk-vrijstaande-woning-wit.jpg',
     wijken: ['Dommelen', 'Borkel en Schaft', 'Centrum', 'Tuinwijk'],
     intro: 'Schildersbedrijf040, gevestigd in Eindhoven, is uw vakkundige schilder in Valkenswaard voor woningen en bedrijfspanden. Van de karakteristieke tuinwijkwoningen rond de Eksterlaan en Merellaan tot de vrijstaande en geschakelde huizen in Dommelen, Borkel en Schaft en het Centrum. Schildersbedrijf040 verzorgt binnenschilderwerk, buitenschilderwerk, behangen, houtrot sanering, lakwerk en latex spuiten. Met een klantbeoordeling van 5 sterren op Google en een 4,9 op Werkspot is Schildersbedrijf040 een bewezen keuze voor schilderwerk in Valkenswaard.',
     kosten: 'Schilderwerk in Valkenswaard kost gemiddeld €30 tot €35 per m² voor binnenschilderwerk en €35 tot €45 per m² voor buitenschilderwerk aan de gevel. Het verschil in prijs wordt bepaald door het type werk: buitenschilderwerk aan kozijnen en gevelelementen vraagt meer voorbereiding dan binnenschilderwerk. Veel woningen in de Tuinwijk van Valkenswaard dateren uit de jaren \'50 en \'60 en hebben houten kozijnen die regelmatig onderhoud vereisen. Schildersbedrijf040 werkt met Boonstoppel verf die 8 tot 10 jaar bescherming biedt, waar budgetverf al na 3 jaar verbleekt. In Valkenswaard is kwalitatieve verf een verstandige investering.',
@@ -71,7 +71,7 @@ export const batch1Data: Record<string, CityData> = {
   'oirschot': {
     title: 'Schildersbedrijf Oirschot',
     displayName: 'Oirschot',
-    heroImage: 'https://res.cloudinary.com/dbtaisgda/image/upload/v1743873386/WhatsApp_Image_2025-03-27_at_07.53.08_myzeda.jpg',
+    heroImage: '/images/buitenschilderwerk-vrijstaande-woning-wit.jpg',
     wijken: ['Centrum', 'De Bollen', 'Spoordonk', 'Middelbeers'],
     intro: 'Schildersbedrijf040, gevestigd in Eindhoven, is de specialist voor schilderwerk in Oirschot, een gemeente met maar liefst 189 rijksmonumenten en twee beschermde dorpsgezichten. Van de historische herenhuizen in het Centrum tot de Brabantse langhuisboerderijen in De Bollen, Spoordonk en Middelbeers. Schildersbedrijf040 levert binnenschilderwerk, buitenschilderwerk, behangen, houtrot sanering, lakwerk en latex spuiten. Met een klantbeoordeling van 5 sterren op Google en een 4,9 op Werkspot combineert Schildersbedrijf040 monumentale kennis met bewezen vakmanschap in Oirschot.',
     kosten: 'Schilderwerk in Oirschot kost gemiddeld €30 tot €35 per m² voor binnenschilderwerk en €35 tot €45 per m² voor buitenschilderwerk aan de gevel. Bij monumentale panden in Oirschot kan het tarief aan de bovenkant liggen, omdat historisch schilderwerk meer voorbereiding en specialistische kennis vereist. Schildersbedrijf040 werkt met Boonstoppel verf die 8 tot 10 jaar bescherming biedt, essentieel voor de beschermde panden in het Centrum en De Bollen. Woningeigenaren in Oirschot kunnen in veel gevallen subsidie aanvragen voor monumentenonderhoud, waarmee de investering aanzienlijk voordeliger uitvalt.',
@@ -137,7 +137,7 @@ export const batch1Data: Record<string, CityData> = {
   'heeze': {
     title: 'Schildersbedrijf Heeze',
     displayName: 'Heeze',
-    heroImage: 'https://res.cloudinary.com/dbtaisgda/image/upload/v1743873386/WhatsApp_Image_2025-03-27_at_07.53.08_myzeda.jpg',
+    heroImage: '/images/buitenschilderwerk-vrijstaande-woning-wit.jpg',
     wijken: ['Heeze-Centrum', 'Leende', 'Sterksel'],
     intro: 'Schildersbedrijf040, gevestigd in Eindhoven, is uw betrouwbare schilder in Heeze voor alle schilderwerk aan woningen en bedrijfspanden. Van de vrijstaande woningen op ruime kavels in Heeze-Centrum tot de dorpskernen Leende en Sterksel in het Kempische landschap. Schildersbedrijf040 levert binnenschilderwerk, buitenschilderwerk, behangen, houtrot sanering, lakwerk en latex spuiten. Met een klantbeoordeling van 5 sterren op Google en een 4,9 op Werkspot staat Schildersbedrijf040 garant voor kwaliteit in Heeze.',
     kosten: 'Schilderwerk in Heeze kost gemiddeld €30 tot €35 per m² voor binnenschilderwerk en €35 tot €45 per m² voor buitenschilderwerk aan de gevel bij Schildersbedrijf040. Buitenschilderwerk valt doorgaans hoger uit dan binnenschilderwerk, omdat gevelelementen en kozijnen meer voorbereiding vragen. Veel vrijstaande woningen in Heeze hebben ruime gevels met houten accenten die periodiek onderhoud nodig hebben. Schildersbedrijf040 werkt met Boonstoppel verf die 8 tot 10 jaar bescherming biedt, zodat uw investering in schilderwerk in Heeze zich dubbel terugbetaalt ten opzichte van budgetverf.',
@@ -203,7 +203,7 @@ export const batch1Data: Record<string, CityData> = {
   'mierlo': {
     title: 'Schildersbedrijf Mierlo',
     displayName: 'Mierlo',
-    heroImage: 'https://res.cloudinary.com/dbtaisgda/image/upload/v1743873386/WhatsApp_Image_2025-03-27_at_07.53.08_myzeda.jpg',
+    heroImage: '/images/buitenschilderwerk-vrijstaande-woning-wit.jpg',
     wijken: ['Mierlo-Centrum', 'Het Broek', 'Luchen'],
     intro: 'Schildersbedrijf040, gevestigd in Eindhoven, is uw vakkundige schilder in Mierlo voor alle schilderwerk aan woningen en bedrijfspanden. Van de historische thuiswevershuisjes in het beschermd dorpsgezicht Het Broek tot de dorpse woningen in Mierlo-Centrum en de nieuwere wijk Luchen. Schildersbedrijf040 verzorgt binnenschilderwerk, buitenschilderwerk, behangen, houtrot sanering, lakwerk en latex spuiten. Met een klantbeoordeling van 5 sterren op Google en een 4,9 op Werkspot levert Schildersbedrijf040 schilderwerk waar woningeigenaren in Mierlo op kunnen vertrouwen.',
     kosten: 'Schilderwerk in Mierlo kost gemiddeld €30 tot €35 per m² voor binnenschilderwerk en €35 tot €45 per m² voor buitenschilderwerk aan de gevel. Binnenschilderwerk valt doorgaans in het lagere segment, omdat de voorbereiding minder intensief is dan bij buitenwerk. De karakteristieke woningen in Het Broek en Mierlo-Centrum hebben vaak origineel houtwerk en binnenmuren die om een zorgvuldige aanpak vragen. Schildersbedrijf040 werkt met Boonstoppel verf die 8 tot 10 jaar bescherming biedt, zodat uw investering in schilderwerk in Mierlo zich ruimschoots terugbetaalt.',
@@ -269,7 +269,7 @@ export const batch1Data: Record<string, CityData> = {
   'meerhoven': {
     title: 'Schildersbedrijf Meerhoven',
     displayName: 'Meerhoven',
-    heroImage: 'https://res.cloudinary.com/dbtaisgda/image/upload/v1743873386/WhatsApp_Image_2025-03-27_at_07.53.08_myzeda.jpg',
+    heroImage: '/images/buitenschilderwerk-vrijstaande-woning-wit.jpg',
     wijken: ['Bosrijk', 'Waterrijk', 'Zandrijk', 'Park Forum'],
     intro: 'Schildersbedrijf040 is uw schilder in Meerhoven, de moderne nieuwbouwwijk in het westen van Eindhoven. Van de eigentijdse woningen in Bosrijk en Waterrijk tot de gezinshuizen in Zandrijk en de appartementen bij Park Forum. Schildersbedrijf040 verzorgt binnenschilderwerk, buitenschilderwerk, behangen, houtrot sanering, lakwerk en latex spuiten. Met een klantbeoordeling van 5 sterren op Google en een 4,9 op Werkspot is Schildersbedrijf040 de logische keuze voor schilderwerk in Meerhoven, recht uit het hart van Eindhoven.',
     kosten: 'Schilderwerk in Meerhoven kost gemiddeld €30 tot €35 per m² voor binnenschilderwerk en €35 tot €45 per m² voor buitenschilderwerk aan de gevel. Omdat Meerhoven een relatief jonge wijk is met woningen uit 2000 en later, is het schilderwerk vaak minder intensief dan bij oudere panden. Binnenschilderwerk en latex spuiten zijn de meest gevraagde diensten in Meerhoven. Schildersbedrijf040 werkt met Boonstoppel verf die 8 tot 10 jaar bescherming biedt, zodat uw moderne woning in Meerhoven er jarenlang strak en verzorgd uitziet.',

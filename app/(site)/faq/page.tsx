@@ -117,7 +117,7 @@ export default function FAQPage() {
       <section className="relative min-h-[50vh] flex items-center">
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://res.cloudinary.com/dbtaisgda/image/upload/v1743873386/WhatsApp_Image_2025-03-27_at_07.53.08_myzeda.jpg"
+            src="/images/buitenschilderwerk-vrijstaande-woning-wit.jpg"
             alt="Veelgestelde vragen over schilderwerk - Schildersbedrijf040"
             fill
             sizes="100vw"

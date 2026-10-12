@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   },
 }
 
-const heroImage = 'https://lh3.googleusercontent.com/p/AF1QipNXyfpYcsRHyYj-UkgdSInfmglcLJzMdNdm5g_1=s680-w680-h510'
+const heroImage = '/images/buitenschilderwerk-tuinhuis-wit-geschilderd.jpg'
 
 function StarIcon({ className = 'w-3.5 h-3.5' }: { className?: string }) {
   return (
@@ -444,7 +444,7 @@ export default function BuitenschilderwerkPage() {
       <section className="relative py-28 overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="https://res.cloudinary.com/dbtaisgda/image/upload/v1743873386/WhatsApp_Image_2025-03-27_at_08.02.00_o5xgwd.jpg"
+            src="/images/binnenschilderwerk-zolder-renovatie.jpg"
             alt="Buitenschilderwerk resultaat, beschermde kozijnen en gevels"
             fill
             sizes="100vw"
@@ -642,7 +642,7 @@ export default function BuitenschilderwerkPage() {
             <div className="space-y-6">
               <div className="rounded-2xl overflow-hidden relative h-[280px]">
                 <Image
-                  src="https://res.cloudinary.com/dbtaisgda/image/upload/v1743873387/WhatsApp_Image_2025-03-27_at_08.02.42_fdixmp.jpg"
+                  src="/images/lakwerk-voordeur-antraciet.jpg"
                   alt="Buitenschilderwerk resultaat, kozijnen en gevels beschermd door Schildersbedrijf040"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"

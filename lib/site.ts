@@ -17,8 +17,8 @@ export const site = {
   },
   geo: { latitude: 51.4334, longitude: 5.4834 },
   openingHours: { days: 'Ma t/m vr', opens: '08:00', closes: '17:30' },
-  logo: 'https://res.cloudinary.com/dbtaisgda/image/upload/v1739556474/pnex6bboplimq3s41db8.png',
-  ogImage: 'https://res.cloudinary.com/dbtaisgda/image/upload/v1743873386/schildersbedrijf040_logo_aqxhxr.png',
+  logo: 'https://schildersbedrijf040.nl/images/schildersbedrijf040-logo.png',
+  ogImage: 'https://schildersbedrijf040.nl/images/schildersbedrijf040-schilder-eindhoven.jpg',
   google: {
     rating: '5,0',
     ratingValue: 5.0,

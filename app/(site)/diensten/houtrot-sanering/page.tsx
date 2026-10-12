@@ -30,8 +30,8 @@ export const metadata: Metadata = {
   },
 }
 
-const heroImage = 'https://lh3.googleusercontent.com/p/AF1QipNXyfpYcsRHyYj-UkgdSInfmglcLJzMdNdm5g_1=s680-w680-h510'
-const faqImage = 'https://res.cloudinary.com/dbtaisgda/image/upload/v1743873387/WhatsApp_Image_2025-03-27_at_08.02.10_b2hjuj.jpg'
+const heroImage = '/images/buitenschilderwerk-tuinhuis-wit-geschilderd.jpg'
+const faqImage = '/images/latex-spuiten-benedenverdieping-blixembosch-eindhoven.jpg'
 
 // Star SVG component
 function StarIcon({ className = 'w-3.5 h-3.5' }: { className?: string }) {

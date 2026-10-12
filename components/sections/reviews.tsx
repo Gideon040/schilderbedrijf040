@@ -31,8 +31,8 @@ export function Reviews() {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="https://res.cloudinary.com/dbtaisgda/image/upload/v1743873386/WhatsApp_Image_2025-03-27_at_07.53.08_myzeda.jpg"
-          alt="Interior background"
+          src="/images/buitenschilderwerk-vrijstaande-woning-wit.jpg"
+          alt="Vrijstaande woning met wit geschilderde gevel en kozijnen"
           fill
           sizes="100vw"
           className="object-cover"

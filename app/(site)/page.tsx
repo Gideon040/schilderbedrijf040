@@ -28,10 +28,10 @@ export const metadata: Metadata = {
     siteName: 'Schildersbedrijf040',
     images: [
       {
-        url: 'https://res.cloudinary.com/dbtaisgda/image/upload/v1743873386/schildersbedrijf040_logo_aqxhxr.png',
-        width: 800,
-        height: 600,
-        alt: 'Schildersbedrijf040 Logo',
+        url: '/images/schildersbedrijf040-schilder-eindhoven.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Schildersbedrijf040, schilder in Eindhoven',
       },
     ],
     locale: 'nl_NL',

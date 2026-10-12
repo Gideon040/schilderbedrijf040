@@ -7,8 +7,8 @@ export function ContactHero() {
     <section className="relative min-h-[50vh] flex items-center">
       <div className="absolute inset-0 z-0">
         <Image
-          src="https://res.cloudinary.com/dbtaisgda/image/upload/v1743873386/WhatsApp_Image_2025-03-27_at_07.53.08_myzeda.jpg"
-          alt="Contact Hero"
+          src="/images/buitenschilderwerk-vrijstaande-woning-wit.jpg"
+          alt="Vrijstaande woning met wit geschilderde gevel en kozijnen"
           fill
           sizes="100vw"
           className="object-cover"

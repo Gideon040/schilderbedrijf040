@@ -9,19 +9,19 @@ const projects = [
     title: "BINNEN- EN BUITENSCHILDERWERK",
     location: "Eindhoven",
     service: "Complete Renovatie",
-    image: "https://res.cloudinary.com/dbtaisgda/image/upload/v1743873386/WhatsApp_Image_2025-03-27_at_07.55.12_amqj6v.jpg"
+    image: "/images/buitenschilderwerk-dakkapel-wit-geschilderd.jpg"
   },
   {
     title: "LATEX SPUITEN",
     location: "Blixembosch, Eindhoven",
     service: "Benedenverdieping",
-    image: "https://res.cloudinary.com/dbtaisgda/image/upload/v1743873387/WhatsApp_Image_2025-03-27_at_08.02.10_b2hjuj.jpg"
+    image: "/images/latex-spuiten-benedenverdieping-blixembosch-eindhoven.jpg"
   },
   {
     title: "BINNENWERK RESTARIA",
     location: "Oude Gracht, Eindhoven",
     service: "Houtrot Sanering",
-    image: "https://res.cloudinary.com/dbtaisgda/image/upload/v1743873386/WhatsApp_Image_2025-03-27_at_07.54.37_htpaan.jpg"
+    image: "/images/binnenschilderwerk-lambrisering-horeca-eindhoven.jpg"
   }
 ]
 
@@ -48,7 +48,7 @@ export function RecentProjects() {
                 <div className="relative aspect-video">
                   <Image
                     src={project.image}
-                    alt={project.title}
+                    alt={`${project.service}: ${project.title.toLowerCase()} in ${project.location}`}
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     className="object-cover"

@@ -21,37 +21,37 @@ export const metadata: Metadata = {
 const projects = [
   {
     href: "https://www.instagram.com/p/C4kHvkXIkR_/",
-    src: "https://res.cloudinary.com/dbtaisgda/image/upload/v1743873387/WhatsApp_Image_2025-03-27_at_08.02.42_fdixmp.jpg",
+    src: "/images/lakwerk-voordeur-antraciet.jpg",
     alt: "Afgelakte deur project Eindhoven",
     title: "Afgelakte deur 🚪"
   },
   {
     href: "https://www.instagram.com/p/C4kHt5mo3xR/",
-    src: "https://res.cloudinary.com/dbtaisgda/image/upload/v1743873386/WhatsApp_Image_2025-03-27_at_07.55.12_amqj6v.jpg",
+    src: "/images/buitenschilderwerk-dakkapel-wit-geschilderd.jpg",
     alt: "Houtrot reparatie met schilderwerk",
     title: "Houtrot reparatie met schilderwerk 🔨"
   },
   {
     href: "https://www.instagram.com/p/C4h2XkSI5Rw/",
-    src: "https://res.cloudinary.com/dbtaisgda/image/upload/v1743873386/WhatsApp_Image_2025-03-27_at_07.53.08_myzeda.jpg",
+    src: "/images/buitenschilderwerk-vrijstaande-woning-wit.jpg",
     alt: "Complete vrijstaande woning buitenschilderwerk",
     title: "Complete vrijstaande woning buitenschilderwerk 🏠"
   },
   {
     href: "https://www.instagram.com/p/C4h2V4-I1R4/",
-    src: "https://res.cloudinary.com/dbtaisgda/image/upload/v1743873386/WhatsApp_Image_2025-03-27_at_08.02.00_o5xgwd.jpg",
+    src: "/images/binnenschilderwerk-zolder-renovatie.jpg",
     alt: "Binnen- en buitenschilderwerk project",
     title: "Binnen- en buitenschilderwerk project afgerond! ✨"
   },
   {
     href: "https://www.instagram.com/p/C4h2UPyI3R2/",
-    src: "https://res.cloudinary.com/dbtaisgda/image/upload/v1743873387/WhatsApp_Image_2025-03-27_at_08.02.10_b2hjuj.jpg",
+    src: "/images/latex-spuiten-benedenverdieping-blixembosch-eindhoven.jpg",
     alt: "Latex spuiten project Blixembosch",
     title: "Latex spuiten project in Blixembosch 🎨"
   },
   {
     href: "https://www.instagram.com/p/C4h2SoUI1Rz/",
-    src: "https://res.cloudinary.com/dbtaisgda/image/upload/v1743873386/WhatsApp_Image_2025-03-27_at_07.54.37_htpaan.jpg",
+    src: "/images/binnenschilderwerk-lambrisering-horeca-eindhoven.jpg",
     alt: "Binnenwerk Restaria Oude Gracht",
     title: "Binnenwerk Restaria Oude Gracht 🚪"
   }
@@ -121,7 +121,7 @@ export default function ProjectenPage() {
       <section className="relative min-h-[50vh] flex items-center">
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://res.cloudinary.com/dbtaisgda/image/upload/v1743873386/WhatsApp_Image_2025-03-27_at_07.55.12_amqj6v.jpg"
+            src="/images/buitenschilderwerk-dakkapel-wit-geschilderd.jpg"
             alt="Schilderprojecten Eindhoven - Schildersbedrijf040"
             fill
             sizes="100vw"

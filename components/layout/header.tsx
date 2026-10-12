@@ -69,7 +69,7 @@ export function Header() {
         <div className="container flex items-center justify-between">
           <Link href="/" className="relative h-12 w-48">
             <Image
-              src="https://res.cloudinary.com/dbtaisgda/image/upload/v1739556474/pnex6bboplimq3s41db8.png"
+              src="/images/schildersbedrijf040-logo.png"
               alt="Schildersbedrijf040 Logo"
               fill
               sizes="192px"

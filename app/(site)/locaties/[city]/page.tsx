@@ -199,7 +199,7 @@ export default function LocationPage({ params }: { params: { city: string } }) {
         <div className="absolute inset-0 z-0 opacity-30">
           <Image
             src={data.heroImage}
-            alt={`Schildersbedrijf in ${data.displayName}. Schildersbedrijf040`}
+            alt="Vrijstaande woning met wit geschilderde gevel en kozijnen"
             fill
             sizes="100vw"
             className="object-cover"
@@ -360,7 +360,7 @@ export default function LocationPage({ params }: { params: { city: string } }) {
         <div className="absolute inset-0">
           <Image
             src={data.heroImage}
-            alt={`Schilderwerk in ${data.displayName}`}
+            alt="Vrijstaande woning met wit geschilderde gevel en kozijnen"
             fill
             sizes="100vw"
             className="object-cover"
@@ -557,7 +557,7 @@ export default function LocationPage({ params }: { params: { city: string } }) {
         <div className="absolute inset-0">
           <Image
             src={data.heroImage}
-            alt={`Contact Schildersbedrijf040 ${data.displayName}`}
+            alt=""
             fill
             sizes="100vw"
             className="object-cover"

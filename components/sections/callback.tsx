@@ -51,12 +51,11 @@ export function Callback() {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="https://lh3.googleusercontent.com/p/AF1QipOBHWs2PLHuHSORJ8PfbQULQpc2pKcdkV-eGr_2=s680-w680-h510"
-          alt="Callback background"
+          src="/images/binnenschilderwerk-woonkamer-met-tuindeuren.jpg"
+          alt="Woonkamer met strak geschilderde wanden en plafond na binnenschilderwerk"
           fill
           sizes="100vw"
           className="object-cover"
-          priority
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/80 to-black/90 backdrop-blur-sm" />
       </div>

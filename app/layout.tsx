@@ -43,10 +43,10 @@ export const metadata: Metadata = {
     description: 'Professioneel schildersbedrijf in Eindhoven met 5+ jaar ervaring. Specialisten in binnenschilderwerk, buitenschilderwerk, behangen en houtrot sanering.',
     images: [
       {
-        url: 'https://res.cloudinary.com/dbtaisgda/image/upload/v1743873386/schildersbedrijf040_logo_aqxhxr.png',
-        width: 800,
-        height: 600,
-        alt: 'Schildersbedrijf040 Logo',
+        url: '/images/schildersbedrijf040-schilder-eindhoven.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Schildersbedrijf040, schilder in Eindhoven',
       },
     ],
   },
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Schildersbedrijf040 | Vakkundig Schilderwerk in Eindhoven',
     description: 'Professioneel schildersbedrijf in Eindhoven met 5+ jaar ervaring.',
-    images: ['https://res.cloudinary.com/dbtaisgda/image/upload/v1743873386/schildersbedrijf040_logo_aqxhxr.png'],
+    images: ['/images/schildersbedrijf040-schilder-eindhoven.jpg'],
   },
   robots: {
     index: true,

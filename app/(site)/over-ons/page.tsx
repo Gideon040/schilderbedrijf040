@@ -99,7 +99,7 @@ export default function OverOnsPage() {
       <section className="relative min-h-[50vh] flex items-center">
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://res.cloudinary.com/dbtaisgda/image/upload/v1743873386/WhatsApp_Image_2025-03-27_at_07.55.12_amqj6v.jpg"
+            src="/images/buitenschilderwerk-dakkapel-wit-geschilderd.jpg"
             alt="Over Schildersbedrijf040 - Uw schilder in Eindhoven"
             fill
             sizes="100vw"
@@ -166,7 +166,7 @@ export default function OverOnsPage() {
               {/* Owner Image */}
               <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-xl">
                 <Image
-                  src="https://res.cloudinary.com/dbtaisgda/image/upload/v1743873386/WhatsApp_Image_2025-03-27_at_07.54.37_htpaan.jpg"
+                  src="/images/binnenschilderwerk-lambrisering-horeca-eindhoven.jpg"
                   alt="Jordy Jacobs - Eigenaar Schildersbedrijf040 Eindhoven"
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"

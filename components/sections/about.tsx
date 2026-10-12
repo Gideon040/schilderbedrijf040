@@ -8,8 +8,8 @@ export function About() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="https://res.cloudinary.com/dbtaisgda/image/upload/v1743873386/WhatsApp_Image_2025-03-27_at_07.55.12_amqj6v.jpg"
-          alt="Professional painting tools"
+          src="/images/buitenschilderwerk-dakkapel-wit-geschilderd.jpg"
+          alt="Wit geschilderde dakkapel na buitenschilderwerk"
           fill
           sizes="100vw"
           className="object-cover"

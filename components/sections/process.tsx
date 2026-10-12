@@ -42,7 +42,7 @@ export function Process() {
           {/* Image Column */}
           <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-lg">
             <Image
-              src="https://res.cloudinary.com/dbtaisgda/image/upload/v1739556938/d46oqzht95tblkswur6p.jpg"
+              src="/images/jordy-jacobs-schildersbedrijf040-op-ladder.jpg"
               alt="Jordy Jacobs - Eigenaar Schildersbedrijf040"
               fill
               sizes="(max-width: 768px) 100vw, 50vw"

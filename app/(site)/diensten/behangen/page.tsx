@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   },
 }
 
-const heroImage = 'https://lh3.googleusercontent.com/p/AF1QipNI8hPbuWSdgczF1ESCx3LJuCE1R20aoXhy4qw0=s680-w680-h510'
+const heroImage = '/images/behangen-woonkamer-accentwand-rond-haard.jpg'
 
 // Star SVG component
 function StarIcon({ className = 'w-3.5 h-3.5' }: { className?: string }) {
@@ -669,7 +669,7 @@ export default function BehangenPage() {
             <div className="space-y-6">
               <div className="rounded-2xl overflow-hidden relative h-[280px]">
                 <Image
-                  src="https://res.cloudinary.com/dbtaisgda/image/upload/v1743873386/WhatsApp_Image_2025-03-27_at_07.54.37_htpaan.jpg"
+                  src="/images/binnenschilderwerk-lambrisering-horeca-eindhoven.jpg"
                   alt="Behangwerk resultaat, professioneel aangebracht behang door Schildersbedrijf040 in Eindhoven"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"

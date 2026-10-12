@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   },
 }
 
-const heroImage = 'https://lh3.googleusercontent.com/p/AF1QipPXaEJ8_nFLFo8wrT1CHm7dEM7yNx9IWh1V0DFw=s680-w680-h510'
+const heroImage = '/images/binnenschilderwerk-binnendeur-wit-gelakt.jpg'
 
 // Star SVG component
 function StarIcon({ className = 'w-3.5 h-3.5' }: { className?: string }) {
@@ -669,7 +669,7 @@ export default function LatexSpuitenPage() {
             <div className="space-y-6">
               <div className="rounded-2xl overflow-hidden relative h-[280px]">
                 <Image
-                  src="https://res.cloudinary.com/dbtaisgda/image/upload/v1743873386/WhatsApp_Image_2025-03-27_at_08.02.00_o5xgwd.jpg"
+                  src="/images/binnenschilderwerk-zolder-renovatie.jpg"
                   alt="Latex spuiten resultaat, egaal gespoten muren en plafonds door Schildersbedrijf040"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"

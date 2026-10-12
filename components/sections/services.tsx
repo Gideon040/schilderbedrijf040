@@ -9,42 +9,48 @@ const services = [
     title: 'Binnenschilderwerk',
     description: 'Muren, plafonds, kozijnen, deuren en trappen, strak geschilderd en schoon opgeleverd.',
     linkText: 'Meer over binnenschilderwerk',
-    image: 'https://lh3.googleusercontent.com/p/AF1QipPXaEJ8_nFLFo8wrT1CHm7dEM7yNx9IWh1V0DFw=s680-w680-h510',
+    image: '/images/binnenschilderwerk-binnendeur-wit-gelakt.jpg',
+    alt: 'Wit gelakte binnendeur met glas en kozijn na binnenschilderwerk',
     link: '/diensten/binnenschilderwerk'
   },
   {
     title: 'Buitenschilderwerk',
     description: 'Gevels, kozijnen en boeidelen, goed beschermd tegen weer en houtrot.',
     linkText: 'Meer over buitenschilderwerk',
-    image: 'https://lh3.googleusercontent.com/p/AF1QipNXyfpYcsRHyYj-UkgdSInfmglcLJzMdNdm5g_1=s680-w680-h510',
+    image: '/images/buitenschilderwerk-tuinhuis-wit-geschilderd.jpg',
+    alt: 'Tuinhuis met wit geschilderde gevel, kozijnen en deuren',
     link: '/diensten/buitenschilderwerk'
   },
   {
     title: 'Behangen',
     description: 'Behang plaatsen of verwijderen, los of samen met het schilderwerk.',
     linkText: 'Meer over behangen',
-    image: 'https://lh3.googleusercontent.com/p/AF1QipNI8hPbuWSdgczF1ESCx3LJuCE1R20aoXhy4qw0=s680-w680-h510',
+    image: '/images/behangen-woonkamer-accentwand-rond-haard.jpg',
+    alt: 'Woonkamer met donker behang als accentwand rond de haard',
     link: '/diensten/behangen'
   },
   {
     title: 'Lakwerk',
     description: 'Deuren, trappen en kozijnen gelakt in zijdeglans of hoogglans.',
     linkText: 'Meer over lakwerk',
-    image: 'https://lh3.googleusercontent.com/p/AF1QipOr4IhxZqT7X5yggLlaVSJnnjH9PWYVIF5OE5TG=s680-w680-h510',
+    image: '/images/lakwerk-kozijnen-buiten-wit-gelakt.jpg',
+    alt: 'Wit gelakte kozijnen en deuren aan een bakstenen woning',
     link: '/diensten/lakwerk'
   },
   {
     title: 'Latex Spuiten',
     description: 'Muren en plafonds snel en egaal gespoten, ideaal bij nieuwbouw of na stucwerk.',
     linkText: 'Latex spuiten bekijken',
-    image: 'https://lh3.googleusercontent.com/p/AF1QipPWQlzzKHaEZif6B4lo5V6JnTsfDmR6_vbbTv7x=s680-w680-h510',
+    image: '/images/latex-spuiten-benedenverdieping-blixembosch-eindhoven.jpg',
+    alt: 'Benedenverdieping in Blixembosch, Eindhoven, met latex gespoten muren en plafond',
     link: '/diensten/latex-spuiten'
   },
   {
     title: 'Houtrot Sanering',
     description: 'Rot hout vakkundig herstellen of vervangen voordat we gaan schilderen.',
     linkText: 'Meer over houtrot sanering',
-    image: 'https://lh3.googleusercontent.com/p/AF1QipMZixn_Qv18YKLHSq9Y3tZvy3zD__7obCnKGGMF=s680-w680-h510',
+    image: '/images/houtrot-sanering-kozijn-hersteld-en-geschilderd.jpg',
+    alt: 'Kozijn na houtrot sanering hersteld en wit geschilderd',
     link: '/diensten/houtrot-sanering'
   }
 ]
@@ -70,7 +76,7 @@ export function Services() {
               <div className="relative h-48">
                 <Image
                   src={service.image}
-                  alt={service.title}
+                  alt={service.alt}
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="object-cover"

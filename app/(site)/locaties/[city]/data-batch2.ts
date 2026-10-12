@@ -4,7 +4,7 @@ export const batch2Data: Record<string, CityData> = {
   'deurne': {
     title: 'Schildersbedrijf Deurne',
     displayName: 'Deurne',
-    heroImage: 'https://res.cloudinary.com/dbtaisgda/image/upload/v1743873386/WhatsApp_Image_2025-03-27_at_07.53.08_myzeda.jpg',
+    heroImage: '/images/buitenschilderwerk-vrijstaande-woning-wit.jpg',
     wijken: ['Deurne-Centrum', 'Walsberg', 'Liessel', 'Vlierden'],
     intro: 'Schildersbedrijf040 is gevestigd in Eindhoven en uw betrouwbare schilder in Deurne voor zowel particulieren als bedrijven. Deurne is een Peelgemeente met een landelijk karakter, waar het historisch centrum en de kerkgebouwen vakkundig schilderwerk verdienen. Van Deurne-Centrum tot Walsberg, Liessel en Vlierden. Schildersbedrijf040 verzorgt binnenschilderwerk, buitenschilderwerk, behangen, houtrot sanering, lakwerk en latex spuiten op het hoogste niveau. Met 5 sterren op Google uit 41 beoordelingen en een 4,9 op Werkspot is Schildersbedrijf040 de best beoordeelde schilder voor Deurne en omgeving.',
     kosten: 'Schilderwerk in Deurne kost gemiddeld €30 tot €35 per m² voor binnenschilderwerk en €35 tot €45 per m² voor buitenschilderwerk aan de gevel, afhankelijk van het type werk. Buitenschilderwerk vraagt meer voorbereiding dan binnenschilderwerk, wat de prijs beïnvloedt. Veel woningen in Deurne-Centrum en de uitbreidingswijken hebben houten kozijnen die periodiek onderhoud nodig hebben. Schildersbedrijf040 werkt met Boonstoppel verf die 8 tot 10 jaar bescherming biedt, in tegenstelling tot budgetverf die al na 3 jaar verbleekt. In Deurne is kwalitatieve verf een investering die zichzelf ruimschoots terugbetaalt.',
@@ -70,7 +70,7 @@ export const batch2Data: Record<string, CityData> = {
   'beek-en-donk': {
     title: 'Schildersbedrijf Beek en Donk',
     displayName: 'Beek en Donk',
-    heroImage: 'https://res.cloudinary.com/dbtaisgda/image/upload/v1743873386/WhatsApp_Image_2025-03-27_at_07.53.08_myzeda.jpg',
+    heroImage: '/images/buitenschilderwerk-vrijstaande-woning-wit.jpg',
     wijken: ['Beek', 'Donk', 'Aarle-Rixtel', 'Lieshout'],
     intro: 'Schildersbedrijf040 is gevestigd in Eindhoven en uw vakkundige schilder in Beek en Donk en de gehele gemeente Laarbeek. Het dorpse karakter van Beek en Donk vraagt om een schilder die de lokale bouwstijlen begrijpt, van jaren \'60 en \'70 woningen tot karakteristieke boerderijen. Schildersbedrijf040 verzorgt binnenschilderwerk, buitenschilderwerk, behangen, houtrot sanering, lakwerk en latex spuiten in Beek, Donk, Aarle-Rixtel en Lieshout. Met 5 sterren op Google uit 41 beoordelingen en een 4,9 op Werkspot is Schildersbedrijf040 de best beoordeelde schilder voor Beek en Donk.',
     kosten: 'Schilderwerk in Beek en Donk kost gemiddeld €30 tot €35 per m² voor binnenschilderwerk en €35 tot €45 per m² voor buitenschilderwerk aan de gevel, vergelijkbaar met tarieven in de regio Eindhoven. Buitenschilderwerk vraagt meer voorbereiding dan binnenschilderwerk, wat de prijs beïnvloedt. Veel woningen in de gemeente Laarbeek dateren uit de jaren \'60 en \'70 en hebben houten kozijnen die periodiek geschilderd moeten worden. Schildersbedrijf040 gebruikt Boonstoppel verf die 8 tot 10 jaar bescherming biedt, een verstandige investering voor woningeigenaren in Beek en Donk.',
@@ -136,7 +136,7 @@ export const batch2Data: Record<string, CityData> = {
   'eersel': {
     title: 'Schildersbedrijf Eersel',
     displayName: 'Eersel',
-    heroImage: 'https://res.cloudinary.com/dbtaisgda/image/upload/v1743873386/WhatsApp_Image_2025-03-27_at_07.53.08_myzeda.jpg',
+    heroImage: '/images/buitenschilderwerk-vrijstaande-woning-wit.jpg',
     wijken: ['Eersel-Centrum', 'Duizel', 'Steensel', 'Knegsel'],
     intro: 'Schildersbedrijf040 is gevestigd in Eindhoven en uw vakkundige schilder in Eersel, het centrum van de Kempen. Het karakteristieke marktplein met zijn lindebomen en de monumentale Brabantse gevels maken Eersel tot een gemeente waar schilderwerk vakmanschap vraagt. Schildersbedrijf040 verzorgt binnenschilderwerk, buitenschilderwerk, behangen, houtrot sanering, lakwerk en latex spuiten in Eersel-Centrum, Duizel, Steensel en Knegsel. Met 5 sterren op Google uit 41 beoordelingen en een 4,9 op Werkspot is Schildersbedrijf040 de best beoordeelde schilder voor Eersel en omgeving.',
     kosten: 'Schilderwerk in Eersel kost gemiddeld €30 tot €35 per m² voor binnenschilderwerk en €35 tot €45 per m² voor buitenschilderwerk aan de gevel, afhankelijk van het type werk. Buitenschilderwerk en houtrot sanering vragen meer voorbereiding dan binnenschilderwerk, wat de prijs beïnvloedt. Veel Kempische boerderijen en woningen in het buitengebied van Eersel hebben uitgebreid houtwerk dat periodiek onderhoud nodig heeft. Schildersbedrijf040 gebruikt Boonstoppel verf die 8 tot 10 jaar bescherming biedt, een bijzonder verstandige investering voor het rijke houtwerk in de Kempen.',
@@ -202,7 +202,7 @@ export const batch2Data: Record<string, CityData> = {
   'bergeijk': {
     title: 'Schildersbedrijf Bergeijk',
     displayName: 'Bergeijk',
-    heroImage: 'https://res.cloudinary.com/dbtaisgda/image/upload/v1743873386/WhatsApp_Image_2025-03-27_at_07.53.08_myzeda.jpg',
+    heroImage: '/images/buitenschilderwerk-vrijstaande-woning-wit.jpg',
     wijken: ['Bergeijk-Centrum', 'Westerhoven', 'Riethoven', 'Luyksgestel'],
     intro: 'Schildersbedrijf040 is gevestigd in Eindhoven en uw betrouwbare schilder in Bergeijk, een Kempisch dorp met rijk agrarisch erfgoed. Bergeijk staat bekend om De Ploeg, de prachtig gerestaureerde textielfabriek die nu dient als cultureel centrum, en om de vele houten geveldelen die het dorpskarakter bepalen. Schildersbedrijf040 verzorgt binnenschilderwerk, buitenschilderwerk, behangen, houtrot sanering, lakwerk en latex spuiten in Bergeijk-Centrum, Westerhoven, Riethoven en Luyksgestel. Met 5 sterren op Google uit 41 beoordelingen en een 4,9 op Werkspot is Schildersbedrijf040 de best beoordeelde schilder voor Bergeijk.',
     kosten: 'Schilderwerk in Bergeijk kost gemiddeld €30 tot €35 per m² voor binnenschilderwerk en €35 tot €45 per m² voor buitenschilderwerk aan de gevel, afhankelijk van het type werk en de staat van de ondergrond. Buitenschilderwerk vraagt meer voorbereiding dan binnenschilderwerk, wat de prijs beïnvloedt. Veel woningen in Bergeijk en omliggende dorpen hebben houten geveldelen die periodiek onderhoud nodig hebben om het Kempische karakter te bewaren. Schildersbedrijf040 gebruikt Boonstoppel verf die 8 tot 10 jaar bescherming biedt, een verstandige investering voor het agrarisch erfgoed in Bergeijk.',
@@ -268,7 +268,7 @@ export const batch2Data: Record<string, CityData> = {
   'maarheeze': {
     title: 'Schildersbedrijf Maarheeze',
     displayName: 'Maarheeze',
-    heroImage: 'https://res.cloudinary.com/dbtaisgda/image/upload/v1743873386/WhatsApp_Image_2025-03-27_at_07.53.08_myzeda.jpg',
+    heroImage: '/images/buitenschilderwerk-vrijstaande-woning-wit.jpg',
     wijken: ['Maarheeze-Centrum', 'Soerendonk', 'Gastel'],
     intro: 'Schildersbedrijf040 is gevestigd in Eindhoven en uw vakkundige schilder in Maarheeze, een klein Kempisch dorp in de gemeente Cranendonck. De karakteristieke dorpskern van Maarheeze telt veel Brabantse boerderijen en woningen met uitgebreid houtwerk die vakkundig schilderwerk verdienen. Schildersbedrijf040 verzorgt binnenschilderwerk, buitenschilderwerk, behangen, houtrot sanering, lakwerk en latex spuiten in Maarheeze-Centrum, Soerendonk en Gastel. Met 5 sterren op Google uit 41 beoordelingen en een 4,9 op Werkspot is Schildersbedrijf040 de best beoordeelde schilder voor Maarheeze en omgeving.',
     kosten: 'Schilderwerk in Maarheeze kost gemiddeld €30 tot €35 per m² voor binnenschilderwerk en €35 tot €45 per m² voor buitenschilderwerk aan de gevel, vergelijkbaar met de regio Eindhoven. Buitenschilderwerk vraagt meer voorbereiding dan binnenschilderwerk, wat de prijs beïnvloedt. Veel Brabantse boerderijen en woningen in Maarheeze hebben uitgebreid houtwerk dat periodiek onderhoud nodig heeft om er mooi bij te blijven staan. Schildersbedrijf040 gebruikt Boonstoppel verf die 8 tot 10 jaar bescherming biedt, een verstandige investering voor het karakteristieke houtwerk in Maarheeze.',

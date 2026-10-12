@@ -9,7 +9,7 @@ export const cityData: Record<string, CityData> = {
   'waalre': {
     title: 'Schildersbedrijf Waalre',
     displayName: 'Waalre',
-    heroImage: 'https://res.cloudinary.com/dbtaisgda/image/upload/v1743873386/WhatsApp_Image_2025-03-27_at_07.53.08_myzeda.jpg',
+    heroImage: '/images/buitenschilderwerk-vrijstaande-woning-wit.jpg',
     wijken: ['Aalst', 'Waalre-Dorp', 'De Voldijn'],
     intro: 'Schildersbedrijf040 is de schilder voor Waalre die kwaliteit en persoonlijke service combineert. Van de karakteristieke villa\'s in Aalst tot de gezinswoningen in Waalre-Dorp en De Voldijn. Schildersbedrijf040 verzorgt binnenschilderwerk, buitenschilderwerk, behangen, houtrot sanering, lakwerk en latex spuiten. Met een klantbeoordeling van 5 sterren op Google en een 4,9 op Werkspot levert Schildersbedrijf040 schilderwerk waar Waalrese woningeigenaren op kunnen vertrouwen.',
     kosten: 'Schilderwerk in Waalre kost gemiddeld €30 tot €35 per m² voor binnenschilderwerk en €35 tot €45 per m² voor buitenschilderwerk aan de gevel, vergelijkbaar met de regio Eindhoven. De prijs verschilt per type werk: binnenschilderwerk valt doorgaans voordeliger uit dan buitenschilderwerk, omdat gevels en kozijnen meer voorbereiding vragen. In Waalre hebben veel woningen houten kozijnen die extra aandacht nodig hebben bij het schuren en gronden. Schildersbedrijf040 werkt met Boonstoppel verf, zodat uw schilderwerk 8 tot 10 jaar meegaat in plaats van 3 jaar bij budgetverf. Een investering in kwaliteitsverf betaalt zich in Waalre altijd terug.',
@@ -75,7 +75,7 @@ export const cityData: Record<string, CityData> = {
   'veldhoven': {
     title: 'Schildersbedrijf Veldhoven',
     displayName: 'Veldhoven',
-    heroImage: 'https://res.cloudinary.com/dbtaisgda/image/upload/v1743873386/WhatsApp_Image_2025-03-27_at_07.53.08_myzeda.jpg',
+    heroImage: '/images/buitenschilderwerk-vrijstaande-woning-wit.jpg',
     wijken: ['Veldhoven-Dorp', 'Oerle', 'Meerveldhoven'],
     intro: 'Schildersbedrijf040 is uw vakkundige schilder in Veldhoven voor alle schilderwerk aan woningen en bedrijfspanden. Van de rijtjeswoningen in Veldhoven-Dorp tot de vrijstaande huizen in Oerle en Meerveldhoven. Schildersbedrijf040 levert binnenschilderwerk, buitenschilderwerk, behangen, houtrot sanering, lakwerk en latex spuiten. Met een klantbeoordeling van 5 sterren op Google en een 4,9 op Werkspot is Schildersbedrijf040 een bewezen keuze voor schilderwerk in Veldhoven.',
     kosten: 'Schilderwerk in Veldhoven kost gemiddeld €30 tot €35 per m² voor binnenschilderwerk en €35 tot €45 per m² voor buitenschilderwerk aan de gevel. Het verschil in prijs ontstaat door het type werk: buitenschilderwerk vraagt meer voorbereiding dan binnenschilderwerk, wat de kosten beïnvloedt. Veel woningen in Veldhoven dateren uit de jaren 70 en 80 en hebben houten kozijnen die regelmatig onderhoud nodig hebben. Schildersbedrijf040 gebruikt Boonstoppel verf die 8 tot 10 jaar bescherming biedt, terwijl goedkopere verf al na 3 jaar verbleekt. Kwalitatieve verf is daarom een verstandige investering voor woningeigenaren in Veldhoven.',
@@ -141,7 +141,7 @@ export const cityData: Record<string, CityData> = {
   'geldrop': {
     title: 'Schildersbedrijf Geldrop',
     displayName: 'Geldrop',
-    heroImage: 'https://res.cloudinary.com/dbtaisgda/image/upload/v1743873386/WhatsApp_Image_2025-03-27_at_07.53.08_myzeda.jpg',
+    heroImage: '/images/buitenschilderwerk-vrijstaande-woning-wit.jpg',
     wijken: ['Geldrop-Centrum', 'Mierlo', 'Zesgehuchten'],
     intro: 'Schildersbedrijf040 levert professioneel schilderwerk in Geldrop-Mierlo voor particulieren en bedrijven. Van de woningen in Geldrop-Centrum tot de dorpskern van Mierlo en de huizen in Zesgehuchten. Schildersbedrijf040 verzorgt binnenschilderwerk, buitenschilderwerk, behangen, houtrot sanering, lakwerk en latex spuiten. Met een beoordeling van 5 sterren op Google en een 4,9 op Werkspot combineert Schildersbedrijf040 vakmanschap met klanttevredenheid in Geldrop.',
     kosten: 'Schilderwerk in Geldrop kost gemiddeld €30 tot €35 per m² voor binnenschilderwerk en €35 tot €45 per m² voor buitenschilderwerk aan de gevel. Binnenschilderwerk valt doorgaans in het lagere segment omdat de voorbereiding minder intensief is dan bij buitenschilderwerk. In Geldrop-Mierlo hebben veel woningen gemetselde gevels met houten kozijnen die periodiek schilderonderhoud nodig hebben om vocht en houtrot te voorkomen. Schildersbedrijf040 adviseert woningeigenaren in Geldrop om te investeren in Boonstoppel verf, omdat deze A-merken 8 tot 10 jaar bescherming bieden tegenover 3 jaar bij budgetverf.',
@@ -207,7 +207,7 @@ export const cityData: Record<string, CityData> = {
   'nuenen': {
     title: 'Schildersbedrijf Nuenen',
     displayName: 'Nuenen',
-    heroImage: 'https://res.cloudinary.com/dbtaisgda/image/upload/v1743873386/WhatsApp_Image_2025-03-27_at_07.53.08_myzeda.jpg',
+    heroImage: '/images/buitenschilderwerk-vrijstaande-woning-wit.jpg',
     wijken: ['Nuenen-Centrum', 'Gerwen', 'Nederwetten'],
     intro: 'Schildersbedrijf040 is uw schilder in Nuenen voor vakkundig schilderwerk aan woningen en bedrijfspanden. Van het historische centrum van Nuenen tot de dorpskernen Gerwen en Nederwetten. Schildersbedrijf040 levert binnenschilderwerk, buitenschilderwerk, behangen, houtrot sanering, lakwerk en latex spuiten. Met een klantbeoordeling van 5 sterren op Google uit een 4,9 op Werkspot staat Schildersbedrijf040 voor kwaliteit en betrouwbaarheid in Nuenen.',
     kosten: 'Schilderwerk in Nuenen kost gemiddeld €30 tot €35 per m² voor binnenschilderwerk en €35 tot €45 per m² voor buitenschilderwerk aan de gevel bij Schildersbedrijf040. De prijs verschilt per type werk: binnenschilderwerk is doorgaans voordeliger omdat de voorbereiding minder tijd kost dan bij buitenwerk. Nuenen heeft veel karakteristieke woningen met houten kozijnen en daklijsten die om regelmatig schilderonderhoud vragen. Schildersbedrijf040 raadt Boonstoppel verf aan voor woningen in Nuenen, omdat deze merken 8 tot 10 jaar meegaan. Goedkopere verf verbleekt al na 3 jaar en moet dan opnieuw worden aangebracht.',
@@ -273,7 +273,7 @@ export const cityData: Record<string, CityData> = {
   'best': {
     title: 'Schildersbedrijf Best',
     displayName: 'Best',
-    heroImage: 'https://res.cloudinary.com/dbtaisgda/image/upload/v1743873386/WhatsApp_Image_2025-03-27_at_07.53.08_myzeda.jpg',
+    heroImage: '/images/buitenschilderwerk-vrijstaande-woning-wit.jpg',
     wijken: ['Best-Centrum', 'De Vleut', 'Naastenbest'],
     intro: 'Schildersbedrijf040 verzorgt professioneel schilderwerk in Best voor woningeigenaren en bedrijven. Van de woonwijken in Best-Centrum tot De Vleut en Naastenbest. Schildersbedrijf040 levert binnenschilderwerk, buitenschilderwerk, behangen, houtrot sanering, lakwerk en latex spuiten. Met een klantbeoordeling van 5 sterren op Google en een 4,9 op Werkspot is Schildersbedrijf040 een bewezen schildersbedrijf voor heel Best.',
     kosten: 'Schilderwerk in Best kost gemiddeld €30 tot €35 per m² voor binnenschilderwerk en €35 tot €45 per m² voor buitenschilderwerk aan de gevel. Binnenschilderwerk is doorgaans voordeliger dan buitenschilderwerk, omdat gevels en kozijnen meer voorbereiding en beschermende verflagen nodig hebben. In Best staan veel eengezinswoningen uit de jaren 70 en 80 met houten kozijnen die periodiek onderhoud vragen. Schildersbedrijf040 werkt met Boonstoppel verf die 8 tot 10 jaar bescherming biedt. Budgetverf moet na 3 jaar opnieuw worden aangebracht, waardoor het op termijn juist duurder uitvalt voor woningeigenaren in Best.',
@@ -339,7 +339,7 @@ export const cityData: Record<string, CityData> = {
   'son-en-breugel': {
     title: 'Schildersbedrijf Son en Breugel',
     displayName: 'Son en Breugel',
-    heroImage: 'https://res.cloudinary.com/dbtaisgda/image/upload/v1743873386/WhatsApp_Image_2025-03-27_at_07.53.08_myzeda.jpg',
+    heroImage: '/images/buitenschilderwerk-vrijstaande-woning-wit.jpg',
     wijken: ['Son-Centrum', 'Breugel', 'Ekkersrijt'],
     intro: 'Schildersbedrijf040 is de schilder voor Son en Breugel die kwaliteitsschilderwerk levert aan particulieren en bedrijven. Van de woonwijken in Son-Centrum tot het pittoreske Breugel en het bedrijventerrein Ekkersrijt. Schildersbedrijf040 verzorgt binnenschilderwerk, buitenschilderwerk, behangen, houtrot sanering, lakwerk en latex spuiten. Met een beoordeling van 5 sterren op Google en een 4,9 op Werkspot is Schildersbedrijf040 een vertrouwde naam voor schilderwerk in Son en Breugel.',
     kosten: 'Schilderwerk in Son en Breugel kost gemiddeld €30 tot €35 per m² voor binnenschilderwerk en €35 tot €45 per m² voor buitenschilderwerk aan de gevel. Het verschil in prijs wordt bepaald door het type werk: binnenschilderwerk is voordeliger dan buitenschilderwerk vanwege de mindere voorbereiding. Woningen in Son en Breugel variëren van nieuwbouw tot jaren-60-woningen, die elk een eigen aanpak vragen. Schildersbedrijf040 werkt met Boonstoppel verf voor een levensduur van 8 tot 10 jaar, terwijl budgetverf al na 3 jaar moet worden vervangen. Voor woningeigenaren in Son en Breugel is kwalitatieve verf daarom altijd voordeliger op de lange termijn.',
@@ -405,7 +405,7 @@ export const cityData: Record<string, CityData> = {
   'helmond': {
     title: 'Schildersbedrijf Helmond',
     displayName: 'Helmond',
-    heroImage: 'https://res.cloudinary.com/dbtaisgda/image/upload/v1743873386/WhatsApp_Image_2025-03-27_at_07.53.08_myzeda.jpg',
+    heroImage: '/images/buitenschilderwerk-vrijstaande-woning-wit.jpg',
     wijken: ['Brandevoort', 'Helmond-West', 'Binnenstad', 'Rijpelberg'],
     intro: 'Schildersbedrijf040 levert vakkundig schilderwerk in Helmond voor woningeigenaren en bedrijven. Van de vinex-wijk Brandevoort tot Helmond-West, de historische Binnenstad en Rijpelberg. Schildersbedrijf040 verzorgt binnenschilderwerk, buitenschilderwerk, behangen, houtrot sanering, lakwerk en latex spuiten. Met een klantbeoordeling van 5 sterren op Google en een 4,9 op Werkspot combineert Schildersbedrijf040 vakmanschap met een persoonlijke aanpak in Helmond.',
     kosten: 'Schilderwerk in Helmond kost gemiddeld €30 tot €35 per m² voor binnenschilderwerk en €35 tot €45 per m² voor buitenschilderwerk aan de gevel. Binnenschilderwerk is doorgaans voordeliger dan buitenschilderwerk, omdat buitenwerk meer voorbereiding vraagt, zoals het herstellen van houtrot en het aanbrengen van meerdere beschermende lagen. Helmond kent een mix van nieuwbouw in Brandevoort en oudere woningen in de Binnenstad en Rijpelberg, die elk een verschillende aanpak vragen. Schildersbedrijf040 adviseert altijd Boonstoppel verf, omdat deze A-merken 8 tot 10 jaar meegaan en dus voordeliger zijn dan budgetverf die na 3 jaar verbleekt.',

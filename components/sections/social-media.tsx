@@ -6,15 +6,15 @@ import { Instagram, Facebook, ExternalLink } from 'lucide-react'
 
 const instagramPosts = [
   {
-    image: "https://res.cloudinary.com/dbtaisgda/image/upload/v1743873387/WhatsApp_Image_2025-03-27_at_08.02.42_fdixmp.jpg",
+    image: "/images/lakwerk-voordeur-antraciet.jpg",
     caption: "Afgelakte deur 🚪"
   },
   {
-    image: "https://res.cloudinary.com/dbtaisgda/image/upload/v1743873386/WhatsApp_Image_2025-03-27_at_07.55.12_amqj6v.jpg",
+    image: "/images/buitenschilderwerk-dakkapel-wit-geschilderd.jpg",
     caption: "Houtrot reparatie met schilderwerk 🔨"
   },
   {
-    image: "https://res.cloudinary.com/dbtaisgda/image/upload/v1743873386/WhatsApp_Image_2025-03-27_at_07.53.08_myzeda.jpg",
+    image: "/images/buitenschilderwerk-vrijstaande-woning-wit.jpg",
     caption: "Complete vrijstaande woning buitenschilderwerk 🏠"
   }
 ]

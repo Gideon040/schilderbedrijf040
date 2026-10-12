@@ -49,7 +49,7 @@ Branch `seo-redesign`, gestart 12-10-2026. Nulmeting in `rapportages/codestructu
 | 1.6 | klaar | `services.tsx`, `recent-projects.tsx`, `locaties/[city]/page.tsx`, `blog/page.tsx`, `blog/[slug]/page.tsx`, `footer.tsx`, `header.tsx` | "Meer info" werd "Meer over binnenschilderwerk" / "Latex spuiten bekijken"; locaties "Meer over lakwerk in Helmond"; blog "Lees het artikel". Social-iconen in de footer en de menuknop kregen een toegankelijke naam. |
 | 1.7 | klaar | `lib/schema.ts`, `components/json-ld.tsx` (nieuw), `app/(site)/layout.tsx`, homepage, 6 dienstpagina's, locatietemplate, contact/over-ons/projecten, blog, `components/ui/accordion.tsx` | HousePainter (adres, telefoon, openingstijden, 5,0/41, sameAs) sitebreed in de layout; pagina's verwijzen via @id. Ongeldige types PaintingCompany/PaintingContractor weg. Homepage-schema stond via next/script alleen client-side: nu in de HTML. FAQ-accordeon (home en /faq) rendert antwoorden nu altijd in de HTML. Service-offers met min/max per m²/stuk uit `lib/prices.ts` (was ongeldig "35-45 per uur"). Breadcrumbs wezen naar /diensten en /locaties (404): tussenstap weg. Lokaal gevalideerd op alle 34 URL's; Rich Results Test online nog doen vóór live. |
 | 1.8 | klaar | 14 bestanden (header, hero, process, quote-form, 6 dienstpagina's, locatietemplate, over-ons, blog) | 41 knoppen naar "Gratis offerte aanvragen" (was: Start uw project, Offerte op maat, Gratis offerte, Offerte aanvragen, Verstuur aanvraag, Contact). Belknoppen: "Bel 06-38903004". Contactformulier houdt "Verstuur bericht" (geen offerteformulier). Lopende tekst niet aangepast. |
-| 1.9 | todo |  |  |
+| 1.9 | klaar | `public/images/` (13 foto's + logo + deelafbeelding), `lib/images.ts` (nieuw), `next.config.js` (AVIF), 26 bestanden met afbeeldings-URL's | Foto's lokaal met beschrijvende bestandsnamen (bijv. `latex-spuiten-benedenverdieping-blixembosch-eindhoven.jpg`), Google-foto's in hogere resolutie. next/image levert AVIF/WebP; lazy onder de vouw (priority weg bij callback). Generieke/Engelse alt-teksten vervangen. Gevonden: og:image en schema-logo gaven 404 (deelafbeelding bij delen op social was kapot): nieuwe 1200x630 deelafbeelding. Latex-foto stond scheef (ca. 38°): rechtgezet. [JORDY: plaatsnamen bij de foto's] |
 | 1.10 | todo |  |  |
 | 1.11 | todo |  |  |
 | 2.1 | todo |  |  |
@@ -76,6 +76,8 @@ Branch `seo-redesign`, gestart 12-10-2026. Nulmeting in `rapportages/codestructu
 | Google-reviews | Link naar uw Google-bedrijfsprofiel (de reviewpagina), voor alle knoppen "Alle reviews op Google". |
 | Prijzen (lib/prices.ts) | Klopt de prijstabel? Twee dingen spraken elkaar tegen en zijn gelijkgetrokken: binnenkozijn lakken (€40 tot €55, lakwerkpagina zei €35 tot €75) en binnendeur lakken (€80 tot €120, lakwerkpagina zei €100 tot €150). Latex spuiten: muren €8 tot €12 per m² (tekst zei ook €7,50), meta zegt "vanaf €7". |
 | Schema (sameAs) | Wat is de link naar uw Werkspot-profiel? Die komt in de bedrijfsgegevens voor Google. |
+| Foto's | Bij welke plaats/wijk hoort elke foto (binnendeur, tuinhuis, villa, dakkapel, zolder, voordeur, kozijnen, houtrot)? Dan kan de plaats in de alt-tekst en bij de projecten. |
+| Projecten homepage | Het project "Binnenwerk Restaria, Oude Gracht, Eindhoven": klopt die plaats? Er is geen Oude Gracht in Eindhoven bekend. |
 
 ## Ideeën
 
