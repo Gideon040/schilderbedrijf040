@@ -69,7 +69,7 @@ Branch `seo-redesign`, gestart 12-10-2026. Nulmeting in `rapportages/codestructu
 |---|---|
 | Homepage, cijferbalk | Hoeveel projecten heeft u ongeveer gedaan? "100+ projecten" is weggehaald tot u het bevestigt. |
 | Sitebreed (diensten, locaties, werkwijze) | Klopt "offerte binnen 48 uur" na de inspectie en "reactie binnen 24 uur" (of "binnen één werkdag")? Staat op ca. 40 plekken. |
-| Homepage-FAQ, garanties | Welke garantie geeft u precies? Nu staat er binnen 3 tot 5 jaar en buiten 5 tot 7 jaar, en "100% kwaliteitsgarantie". |
+| Garantie (homepage en /faq) | Welke garantie geeft u precies? De site spreekt zichzelf tegen: /faq zegt "1 jaar", de homepage zei "binnen 3 tot 5 jaar, buiten 5 tot 7 jaar" en "100% kwaliteitsgarantie". Garantie staat tot uw antwoord niet meer op de nieuwe homepage. |
 | Homepage, blok Garanties | Klopt "gediplomeerde schilders", "gecertificeerd" en "regelmatig bijscholing"? Werkt u met personeel of alleen? Tot bevestiging niet overnemen in het redesign. |
 | Dienst- en locatiepagina's | Heeft u op Werkspot het label "Topvakman"? Zo niet, dan halen we het weg. |
 | Houtrot sanering | Waar komt "tot 70% goedkoper dan vervangen" vandaan? Graag bevestigen of afzwakken. |
