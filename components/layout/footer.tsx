@@ -30,13 +30,13 @@ export function Footer() {
           </p>
         </div>
         <div>
-          <h4>Diensten</h4>
+          <h2>Diensten</h2>
           {diensten.map((d) => (
             <Link key={d.href} href={d.href}>
               {d.name}
             </Link>
           ))}
-          <h4 style={{ marginTop: 22 }}>Snel naar</h4>
+          <h2 style={{ marginTop: 22 }}>Snel naar</h2>
           {snelleLinks.map((l) => (
             <Link key={l.href} href={l.href}>
               {l.name}
@@ -44,7 +44,7 @@ export function Footer() {
           ))}
         </div>
         <div>
-          <h4>Werkgebied</h4>
+          <h2>Werkgebied</h2>
           <div className="cols">
             {plaatsen.map((p) => (
               <Link key={p.href} href={p.href}>
@@ -54,7 +54,7 @@ export function Footer() {
           </div>
         </div>
         <div>
-          <h4>Contact</h4>
+          <h2>Contact</h2>
           <address style={{ fontStyle: 'normal', margin: 0 }}>
             {site.address.street}
             <br />

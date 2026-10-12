@@ -99,10 +99,12 @@ Regel: alle bestaande SEO-teksten letterlijk behouden; controle in `rapportages/
 | Latex spuiten | Hoeveel m² spuit u gemiddeld per dag? (komt in het eerste antwoord op de pagina) |
 | Binnenschilderwerk, FAQ prijs | De FAQ zegt "woonkamer van 20 m² = €250 tot €400 voor muren en plafond"; dat past niet bij €30 tot €35 per m² en de tabelregel "complete kamer (20 m²) €500 tot €900". Welk bedrag klopt? |
 | Homepage, offerteblok | Klopt "reactie binnen één werkdag"? |
+| Blog (Sanity) | De artikelen in Sanity bevatten nog em/en dashes (—, –) in tekst, excerpt en FAQ (alle 5 artikelen en de blog-intro). Volgens de huisregel vervangen door punt, komma of dubbele punt, in Sanity Studio; de code laat Sanity-inhoud bewust ongewijzigd. |
+| Contactformulier | Het formulier biedt "Traditioneel stucwerk" en "Exclusief stucdesign" aan. Doet u dat (nog)? Anders halen we die twee kleurstalen weg. |
+| /faq, prijs per m² | De FAQ zegt "€15 tot €35 per m2"; de dienstpagina's noemen €30 tot €35 per m² binnen en €35 tot €45 buiten. Welke bandbreedte klopt? |
 
 ## Ideeën
 
 - Google-reviews automatisch tonen via de Google Places API (nu handmatig in `lib/reviews.ts`), zodat naam, datum en sterren altijd kloppen.
 - Prijsgids `/kosten/schilderwerk` (november, scopecheck): zet daarna `PRIJSGIDS.live = true` in `lib/navigation.ts`; de links op dienst- en locatiepagina's verschijnen dan vanzelf.
 - Wijkkaarten voor de overige 16 plaatsen bij briefing 08 en 13, met dezelfde bronvermelding als Helmond (`data-lokaal.ts`).
-- De componenten van /contact (`quote-form`, `contact-hero`, `contact-details`) bij een volgende ronde in de nieuwe stijl zetten; /contact, /over-ons, /faq, /projecten en /blog hebben nu de nieuwe kleuren, fonts, header en footer maar nog hun oude opbouw.

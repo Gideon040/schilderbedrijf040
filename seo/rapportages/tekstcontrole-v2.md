@@ -139,8 +139,8 @@ Geen: elke kop en elk tekstblok van main en voor staat op de nieuwe pagina's, en
 
 - H1 Schilderin Eindhoven
 - H2 Wat kunnen we voor u schilderen?
-- H3 Binnenschilderwerk
-- H3 Buitenschilderwerk
+- H3 Binnen­schilder­werk
+- H3 Buiten­schilder­werk
 - H3 Behangen
 - H3 Lakwerk
 - H3 Latex spuiten
@@ -156,7 +156,7 @@ Geen: elke kop en elk tekstblok van main en voor staat op de nieuwe pagina's, en
 - H2 Binnenwerk deze winter?
 - H3 Ideaal voor de winter
 - H2 Klantenervaringen
-- H2 Over Schildersbedrijf040
+- H2 Over Schilders­bedrijf040
 - H3 Schildersbedrijf in Eindhoven
 - H3 Onze garanties
 - H4 Kwaliteitsgarantie
@@ -193,7 +193,7 @@ Geen: elke kop en elk tekstblok van main en voor staat op de nieuwe pagina's, en
 - H2 Eén team, elk vak
 - H2 De mensen achter de kwast
 - H3 Vaste collega's
-- H2 Waarom kiezen voor Schildersbedrijf040?
+- H2 Waarom kiezen voor Schilders­bedrijf040?
 - H3 Meer dan 5 jaar ervaring
 - H3 Alles onder één dak
 - H3 Vakkundig en betrouwbaar
@@ -248,18 +248,18 @@ Geen: elke kop en elk tekstblok van main en voor staat op de nieuwe pagina's, en
 <details><summary><code>/diensten/binnenschilderwerk</code> (45 koppen)</summary>
 
 - H1 Binnenschilderwerk in Eindhoven
-- H2 Wat is professioneel binnenschilderwerk?
-- H2 Wat kost binnenschilderwerk?
+- H2 Wat is professioneel binnen­schilder­werk?
+- H2 Wat kost binnen­schilder­werk?
 - H2 Binnenwerk in de winter
 - H2 Liever een deel zelf doen?
 - H3 Prijzen binnenschilderwerk
-- H2 Soorten binnenschilderwerk
+- H2 Soorten binnen­schilder­werk
 - H3 Muren & plafonds
 - H3 Kozijnen & deuren lakken
 - H3 Trappen & balustrades
 - H3 Houtwerk voorbehandelen
 - H3 Kleuradvies
-- H3 Schilderwerk bedrijfspanden
+- H3 Schilder­werk bedrijfspanden
 - H3 Behangen
 - H3 Schilderen in de winter
 - H2 Resultaat waar u trots op bent
@@ -267,8 +267,8 @@ Geen: elke kop en elk tekstblok van main en voor staat op de nieuwe pagina's, en
 - H3 Inspectie & advies
 - H3 Offerte op maat
 - H3 Voorbereiding
-- H3 Schilderwerk & oplevering
-- H2 Waarom Schildersbedrijf040 voor uw binnenschilderwerk?
+- H3 Schilder­werk & oplevering
+- H2 Waarom Schilders­bedrijf040 voor uw binnen­schilder­werk?
 - H3 Hoogst beoordeeld in de regio
 - H3 Uitsluitend Boonstoppel A-merk verf
 - H3 Vaste prijs, geen verrassingen
@@ -278,7 +278,7 @@ Geen: elke kop en elk tekstblok van main en voor staat op de nieuwe pagina's, en
 - H2 Klanten over ons binnenschilderwerk
 - H3 5,0 op Google
 - H3 4,9 op Werkspot
-- H2 Vragen over binnenschilderwerk
+- H2 Vragen over binnen­schilder­werk
 - H3 Nog vragen?
 - H3 Wat kost binnenschilderwerk per m² in Eindhoven?
 - H3 Hoe lang duurt het om een kamer te schilderen?
@@ -298,23 +298,23 @@ Geen: elke kop en elk tekstblok van main en voor staat op de nieuwe pagina's, en
 <details><summary><code>/diensten/buitenschilderwerk</code> (41 koppen)</summary>
 
 - H1 Buitenschilderwerk in Eindhoven
-- H2 Waarom is buitenschilderwerk zo belangrijk?
-- H2 Wat kost buitenschilderwerk?
+- H2 Waarom is buiten­schilder­werk zo belangrijk?
+- H2 Wat kost buiten­schilder­werk?
 - H3 Prijzen buitenschilderwerk
-- H2 Soorten buitenschilderwerk
+- H2 Soorten buiten­schilder­werk
 - H3 Kozijnen & deuren
-- H3 Gevels & buitenmuren
+- H3 Gevels & buiten­muren
 - H3 Boeiboorden & windveren
 - H3 Dakkapellen
 - H3 Houtrot behandeling
-- H3 Onderhoudscontract
+- H3 Onderhouds­contract
 - H2 Uw gevel verdient vakmanschap
 - H2 Ons werkproces in 4 stappen
 - H3 Inspectie & houtrot check
 - H3 Offerte op maat
 - H3 Voorbereiding
 - H3 Schilderen & oplevering
-- H2 Waarom Schildersbedrijf040 voor uw buitenschilderwerk?
+- H2 Waarom Schilders­bedrijf040 voor uw buiten­schilder­werk?
 - H3 Grondige houtrot inspectie inbegrepen
 - H3 Uitsluitend Boonstoppel buitenverf
 - H3 Weersafhankelijke planning
@@ -324,7 +324,7 @@ Geen: elke kop en elk tekstblok van main en voor staat op de nieuwe pagina's, en
 - H2 Klanten over ons buitenschilderwerk
 - H3 5,0 op Google
 - H3 4,9 op Werkspot
-- H2 Vragen over buitenschilderwerk
+- H2 Vragen over buiten­schilder­werk
 - H3 Nog vragen?
 - H3 Wat kost buitenschilderwerk per m² in 2026?
 - H3 Wanneer is het beste seizoen voor buitenschilderwerk?
@@ -360,7 +360,7 @@ Geen: elke kop en elk tekstblok van main en voor staat op de nieuwe pagina's, en
 - H3 Offerte op maat
 - H3 Voorbereiding
 - H3 Behangen & oplevering
-- H2 Waarom Schildersbedrijf040 voor uw behangwerk?
+- H2 Waarom Schilders­bedrijf040 voor uw behangwerk?
 - H3 Hoogst beoordeeld in de regio
 - H3 Advies over het juiste behangtype
 - H3 Vaste prijs, geen verrassingen
@@ -405,11 +405,11 @@ Geen: elke kop en elk tekstblok van main en voor staat op de nieuwe pagina's, en
 - H3 Inspectie
 - H3 Offerte
 - H3 Reparatie
-- H3 Schilderwerk & oplevering
-- H2 Waarom Schildersbedrijf040 voor uw houtrot sanering?
+- H3 Schilder­werk & oplevering
+- H2 Waarom Schilders­bedrijf040 voor uw houtrot sanering?
 - H3 Gratis houtrot inspectie
 - H3 Repareren waar mogelijk, vervangen waar nodig
-- H3 Houtrot sanering én schilderwerk in één
+- H3 Houtrot sanering én schilder­werk in één
 - H3 Vaste prijs, geen verrassingen
 - H3 Persoonlijke betrokkenheid
 - H3 Houtrot sanering in uw regio
@@ -452,7 +452,7 @@ Geen: elke kop en elk tekstblok van main en voor staat op de nieuwe pagina's, en
 - H3 Offerte op maat
 - H3 Voorbereiding & gronden
 - H3 Lakken & oplevering
-- H2 Waarom Schildersbedrijf040 voor uw lakwerk?
+- H2 Waarom Schilders­bedrijf040 voor uw lakwerk?
 - H3 Hoogst beoordeeld in de regio
 - H3 Uitsluitend Boonstoppel A-merk lak
 - H3 Vaste prijs, geen verrassingen
@@ -500,7 +500,7 @@ Geen: elke kop en elk tekstblok van main en voor staat op de nieuwe pagina's, en
 - H3 Offerte op maat
 - H3 Afplakken & voorbereiden
 - H3 Spuiten & oplevering
-- H2 Waarom Schildersbedrijf040 voor latex spuiten?
+- H2 Waarom Schilders­bedrijf040 voor latex spuiten?
 - H3 Professionele airless spuitapparatuur
 - H3 Hoogst beoordeeld in de regio
 - H3 3-5x sneller dan rollen
@@ -538,17 +538,17 @@ Geen: elke kop en elk tekstblok van main en voor staat op de nieuwe pagina's, en
 - H2 Binnen en buiten combineren
 - H3 Prijzen binnenschilderwerk
 - H2 Wat kunnen we in de winter voor u doen?
-- H3 Binnenschilderwerk
+- H3 Binnen­schilder­werk
 - H3 Latex spuiten
 - H3 Lakwerk
 - H3 Behangen
 - H2 Winterschilder: voor en na
-- H2 Zo verloopt binnenwerk in de winter
+- H2 Zo verloopt binnen­werk in de winter
 - H3 Aanvraag en inspectie
 - H3 Offerte en planning
 - H3 Voorbereiden en schilderen
 - H3 Schone oplevering
-- H2 Waarom Schildersbedrijf040 voor binnenwerk in de winter?
+- H2 Waarom Schilders­bedrijf040 voor binnen­werk in de winter?
 - H3 5,0 op Google
 - H3 Boonstoppel-verf
 - H3 Vaste prijs
@@ -564,7 +564,7 @@ Geen: elke kop en elk tekstblok van main en voor staat op de nieuwe pagina's, en
 - H3 Schildert Schildersbedrijf040 ook rond de feestdagen?
 - H2 Combineer met
 - H2 Winterschilder bij u in de buurt
-- H2 Plan uw binnenwerk deze winter
+- H2 Plan uw binnen­werk deze winter
 - H3 Offerte aanvragen
 
 </details>
@@ -574,8 +574,8 @@ Geen: elke kop en elk tekstblok van main en voor staat op de nieuwe pagina's, en
 - H1 Schilder in Waalre
 - H2 Binnen- en buitenschilderwerk in Waalre
 - H2 Schilderdiensten in Waalre
-- H3 Binnenschilderwerk
-- H3 Buitenschilderwerk
+- H3 Binnen­schilder­werk
+- H3 Buiten­schilder­werk
 - H3 Behangen
 - H3 Houtrot Sanering
 - H3 Lakwerk
@@ -613,8 +613,8 @@ Geen: elke kop en elk tekstblok van main en voor staat op de nieuwe pagina's, en
 - H1 Schilder in Veldhoven
 - H2 Binnen- en buitenschilderwerk in Veldhoven
 - H2 Schilderdiensten in Veldhoven
-- H3 Binnenschilderwerk
-- H3 Buitenschilderwerk
+- H3 Binnen­schilder­werk
+- H3 Buiten­schilder­werk
 - H3 Behangen
 - H3 Houtrot Sanering
 - H3 Lakwerk
@@ -652,8 +652,8 @@ Geen: elke kop en elk tekstblok van main en voor staat op de nieuwe pagina's, en
 - H1 Schilder in Geldrop
 - H2 Binnen- en buitenschilderwerk in Geldrop
 - H2 Schilderdiensten in Geldrop
-- H3 Binnenschilderwerk
-- H3 Buitenschilderwerk
+- H3 Binnen­schilder­werk
+- H3 Buiten­schilder­werk
 - H3 Behangen
 - H3 Houtrot Sanering
 - H3 Lakwerk
@@ -691,8 +691,8 @@ Geen: elke kop en elk tekstblok van main en voor staat op de nieuwe pagina's, en
 - H1 Schilder in Nuenen
 - H2 Binnen- en buitenschilderwerk in Nuenen
 - H2 Schilderdiensten in Nuenen
-- H3 Binnenschilderwerk
-- H3 Buitenschilderwerk
+- H3 Binnen­schilder­werk
+- H3 Buiten­schilder­werk
 - H3 Behangen
 - H3 Houtrot Sanering
 - H3 Lakwerk
@@ -730,8 +730,8 @@ Geen: elke kop en elk tekstblok van main en voor staat op de nieuwe pagina's, en
 - H1 Schilder in Best
 - H2 Binnen- en buitenschilderwerk in Best
 - H2 Schilderdiensten in Best
-- H3 Binnenschilderwerk
-- H3 Buitenschilderwerk
+- H3 Binnen­schilder­werk
+- H3 Buiten­schilder­werk
 - H3 Behangen
 - H3 Houtrot Sanering
 - H3 Lakwerk
@@ -769,8 +769,8 @@ Geen: elke kop en elk tekstblok van main en voor staat op de nieuwe pagina's, en
 - H1 Schilder in Son en Breugel
 - H2 Binnen- en buitenschilderwerk in Son en Breugel
 - H2 Schilderdiensten in Son en Breugel
-- H3 Binnenschilderwerk
-- H3 Buitenschilderwerk
+- H3 Binnen­schilder­werk
+- H3 Buiten­schilder­werk
 - H3 Behangen
 - H3 Houtrot Sanering
 - H3 Lakwerk
@@ -811,8 +811,8 @@ Geen: elke kop en elk tekstblok van main en voor staat op de nieuwe pagina's, en
 - H3 Dierdonk
 - H3 Brouwhuis en Rijpelberg
 - H2 Schilderdiensten in Helmond
-- H3 Binnenschilderwerk
-- H3 Buitenschilderwerk
+- H3 Binnen­schilder­werk
+- H3 Buiten­schilder­werk
 - H3 Behangen
 - H3 Houtrot Sanering
 - H3 Lakwerk
@@ -850,8 +850,8 @@ Geen: elke kop en elk tekstblok van main en voor staat op de nieuwe pagina's, en
 - H1 Schilder in Valkenswaard
 - H2 Binnen- en buitenschilderwerk in Valkenswaard
 - H2 Schilderdiensten in Valkenswaard
-- H3 Binnenschilderwerk
-- H3 Buitenschilderwerk
+- H3 Binnen­schilder­werk
+- H3 Buiten­schilder­werk
 - H3 Behangen
 - H3 Houtrot Sanering
 - H3 Lakwerk
@@ -889,8 +889,8 @@ Geen: elke kop en elk tekstblok van main en voor staat op de nieuwe pagina's, en
 - H1 Schilder in Oirschot
 - H2 Binnen- en buitenschilderwerk in Oirschot
 - H2 Schilderdiensten in Oirschot
-- H3 Binnenschilderwerk
-- H3 Buitenschilderwerk
+- H3 Binnen­schilder­werk
+- H3 Buiten­schilder­werk
 - H3 Behangen
 - H3 Houtrot Sanering
 - H3 Lakwerk
@@ -928,8 +928,8 @@ Geen: elke kop en elk tekstblok van main en voor staat op de nieuwe pagina's, en
 - H1 Schilder in Heeze
 - H2 Binnen- en buitenschilderwerk in Heeze
 - H2 Schilderdiensten in Heeze
-- H3 Binnenschilderwerk
-- H3 Buitenschilderwerk
+- H3 Binnen­schilder­werk
+- H3 Buiten­schilder­werk
 - H3 Behangen
 - H3 Houtrot Sanering
 - H3 Lakwerk
@@ -967,8 +967,8 @@ Geen: elke kop en elk tekstblok van main en voor staat op de nieuwe pagina's, en
 - H1 Schilder in Mierlo
 - H2 Binnen- en buitenschilderwerk in Mierlo
 - H2 Schilderdiensten in Mierlo
-- H3 Binnenschilderwerk
-- H3 Buitenschilderwerk
+- H3 Binnen­schilder­werk
+- H3 Buiten­schilder­werk
 - H3 Behangen
 - H3 Houtrot Sanering
 - H3 Lakwerk
@@ -1006,8 +1006,8 @@ Geen: elke kop en elk tekstblok van main en voor staat op de nieuwe pagina's, en
 - H1 Schilder in Meerhoven
 - H2 Binnen- en buitenschilderwerk in Meerhoven
 - H2 Schilderdiensten in Meerhoven
-- H3 Binnenschilderwerk
-- H3 Buitenschilderwerk
+- H3 Binnen­schilder­werk
+- H3 Buiten­schilder­werk
 - H3 Behangen
 - H3 Houtrot Sanering
 - H3 Lakwerk
@@ -1045,8 +1045,8 @@ Geen: elke kop en elk tekstblok van main en voor staat op de nieuwe pagina's, en
 - H1 Schilder in Deurne
 - H2 Binnen- en buitenschilderwerk in Deurne
 - H2 Schilderdiensten in Deurne
-- H3 Binnenschilderwerk
-- H3 Buitenschilderwerk
+- H3 Binnen­schilder­werk
+- H3 Buiten­schilder­werk
 - H3 Behangen
 - H3 Houtrot Sanering
 - H3 Lakwerk
@@ -1084,8 +1084,8 @@ Geen: elke kop en elk tekstblok van main en voor staat op de nieuwe pagina's, en
 - H1 Schilder in Beek en Donk
 - H2 Binnen- en buitenschilderwerk in Beek en Donk
 - H2 Schilderdiensten in Beek en Donk
-- H3 Binnenschilderwerk
-- H3 Buitenschilderwerk
+- H3 Binnen­schilder­werk
+- H3 Buiten­schilder­werk
 - H3 Behangen
 - H3 Houtrot Sanering
 - H3 Lakwerk
@@ -1123,8 +1123,8 @@ Geen: elke kop en elk tekstblok van main en voor staat op de nieuwe pagina's, en
 - H1 Schilder in Eersel
 - H2 Binnen- en buitenschilderwerk in Eersel
 - H2 Schilderdiensten in Eersel
-- H3 Binnenschilderwerk
-- H3 Buitenschilderwerk
+- H3 Binnen­schilder­werk
+- H3 Buiten­schilder­werk
 - H3 Behangen
 - H3 Houtrot Sanering
 - H3 Lakwerk
@@ -1162,8 +1162,8 @@ Geen: elke kop en elk tekstblok van main en voor staat op de nieuwe pagina's, en
 - H1 Schilder in Bergeijk
 - H2 Binnen- en buitenschilderwerk in Bergeijk
 - H2 Schilderdiensten in Bergeijk
-- H3 Binnenschilderwerk
-- H3 Buitenschilderwerk
+- H3 Binnen­schilder­werk
+- H3 Buiten­schilder­werk
 - H3 Behangen
 - H3 Houtrot Sanering
 - H3 Lakwerk
@@ -1201,8 +1201,8 @@ Geen: elke kop en elk tekstblok van main en voor staat op de nieuwe pagina's, en
 - H1 Schilder in Maarheeze
 - H2 Binnen- en buitenschilderwerk in Maarheeze
 - H2 Schilderdiensten in Maarheeze
-- H3 Binnenschilderwerk
-- H3 Buitenschilderwerk
+- H3 Binnen­schilder­werk
+- H3 Buiten­schilder­werk
 - H3 Behangen
 - H3 Houtrot Sanering
 - H3 Lakwerk

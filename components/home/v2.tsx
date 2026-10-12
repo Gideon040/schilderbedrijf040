@@ -7,7 +7,7 @@ import { reviews, dienstQuotes } from '@/lib/reviews'
 import { site } from '@/lib/site'
 import { jordy, toonBlok } from '@/lib/jordy'
 import type { Seizoensblok } from '@/lib/seizoen'
-import { Eyebrow, KnopBel, KnopOfferte, Pijl, Streek } from '@/components/site/v2'
+import { afbreek, Eyebrow, KnopBel, KnopOfferte, Pijl, Streek } from '@/components/site/v2'
 import { VoorNa } from '@/components/site/voor-na'
 
 const opt = (src: string, w = 640) => `/_next/image?url=${encodeURIComponent(src)}&w=${w}&q=75`
@@ -127,7 +127,7 @@ export function Diensten() {
               <span className="chip" style={r.slug === 'binnenschilderwerk' ? { boxShadow: 'inset 0 0 0 1px var(--line)' } : undefined} />
               <div>
                 <span className="code">{r.code}</span>
-                <h3>{r.titel}</h3>
+                <h3>{afbreek(r.titel)}</h3>
               </div>
               <div>
                 <p>{r.tekst}</p>
@@ -146,7 +146,7 @@ export function Diensten() {
       </div>
       <div className="peek" id="peek" aria-hidden="true">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img alt="" id="peekimg" src={opt(images.binnendeur.src)} />
+        <img alt="" id="peekimg" src={opt(images.binnendeur.src)} loading="lazy" decoding="async" />
       </div>
     </section>
   )
@@ -321,7 +321,7 @@ export function Stappen({ stappen }: { stappen: { titel: string; tekst: string }
       {stappen.map((s, i) => (
         <li key={s.titel} className="s">
           <span className="dot">{i + 1}</span>
-          <h3>{s.titel}</h3>
+          <h3>{afbreek(s.titel)}</h3>
           <p>{jordy(s.tekst)}</p>
         </li>
       ))}
@@ -584,7 +584,7 @@ export function Social() {
               {posts.map((p) => (
                 <a key={p.caption} href={site.sameAs[1]} target="_blank" rel="noopener noreferrer">
                   <Image src={p.img.src} alt={p.caption} fill sizes="(max-width: 980px) 30vw, 180px" />
-                  <span>{p.caption}</span>
+                  <span aria-hidden="true">{p.caption}</span>
                 </a>
               ))}
             </div>

@@ -4,6 +4,7 @@ import { useState, type ReactNode } from 'react'
 import { site } from '@/lib/site'
 import { bronpagina, trackEvent } from '@/lib/tracking'
 import { TOON_JORDY } from '@/lib/jordy'
+import { afbreek } from '@/components/site/v2'
 
 const diensten = ['Binnenschilderwerk', 'Buitenschilderwerk', 'Latex spuiten', 'Lakwerk', 'Behangen', 'Houtrot sanering']
 const leeg = { name: '', phone: '', email: '', service: diensten[0], message: '' }
@@ -50,12 +51,12 @@ export function Offerte({
   const kop =
     i >= 0 ? (
       <>
-        {titel.slice(0, i)}
-        <span className="p2">{streek}</span>
-        {titel.slice(i + streek.length)}
+        {afbreek(titel.slice(0, i))}
+        <span className="p2">{afbreek(streek)}</span>
+        {afbreek(titel.slice(i + streek.length))}
       </>
     ) : (
-      titel
+      afbreek(titel)
     )
 
   return (

@@ -5,7 +5,7 @@ import { JsonLd } from '@/components/json-ld'
 import { Offerte } from '@/components/site/offerte'
 import { VoorNa, type Project } from '@/components/site/voor-na'
 import { Winterband } from '@/components/site/winterband'
-import { Eyebrow, KnopBel, KnopOfferte, Pijl, Streek, StreekKop, staal } from '@/components/site/v2'
+import { afbreek, Eyebrow, KnopBel, KnopOfferte, Pijl, Streek, StreekKop, staal } from '@/components/site/v2'
 import { Stappen } from '@/components/home/v2'
 import type { SiteImage } from '@/lib/images'
 import { liveDiensten } from '@/lib/live-diensten'
@@ -245,7 +245,7 @@ export function DienstTemplate({ d }: { d: DienstPagina }) {
                   {kleur.code}
                   {String.fromCharCode(65 + i)}
                 </small>
-                <h3>{k.titel}</h3>
+                <h3>{afbreek(k.titel)}</h3>
                 <p>{k.beschrijving}</p>
                 <span>{k.linkTekst} →</span>
               </Link>
@@ -314,7 +314,7 @@ export function DienstTemplate({ d }: { d: DienstPagina }) {
           <div className="why">
             {d.waarom.usps.map((u) => (
               <div key={u.titel} className="rv">
-                <h3>{u.titel}</h3>
+                <h3>{afbreek(u.titel)}</h3>
                 <span>{u.beschrijving}</span>
               </div>
             ))}

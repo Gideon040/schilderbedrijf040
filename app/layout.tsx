@@ -1,4 +1,6 @@
+// Alle CSS in de root-layout: Next maakt er dan één stylesheet van (sneller eerste beeld)
 import './globals.css'
+import './(site)/v2.css'
 import type { Metadata } from 'next'
 import { Archivo, JetBrains_Mono } from 'next/font/google'
 import { cn } from '@/lib/utils'

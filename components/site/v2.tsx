@@ -3,21 +3,33 @@ import Link from 'next/link'
 import type { ReactNode } from 'react'
 import { site } from '@/lib/site'
 
+// Onzichtbare afbreekpunten (zacht koppelteken) in lange samengestelde woorden, zodat een kop als
+// "Binnenschilderwerk" op een smal scherm netjes als "Binnen-schilderwerk" afbreekt in plaats van buiten
+// de kolom te lopen. De tekst zelf verandert niet: het zachte koppelteken is alleen zichtbaar bij afbreken.
+const ZACHT = String.fromCharCode(0xad) // zacht koppelteken
+export function afbreek(t: string): string {
+  return t
+    .replace(/(binnen|buiten)(schilder|werk|muren|deuren)/gi, `$1${ZACHT}$2`)
+    .replace(/(schilders?)(werk|bedrijf|diensten)/gi, `$1${ZACHT}$2`)
+    .replace(/(onderhouds)(contract|schilderwerk)/gi, `$1${ZACHT}$2`)
+    .replace(/(kozijn|houtrot)(en)?(sanering|reparatie|schilderen)/gi, `$1$2${ZACHT}$3`)
+}
+
 // Penseelstreek achter één woord in een H2 (tekent bij in beeld scrollen)
 export function Streek({ children }: { children: ReactNode }) {
-  return <span className="p2">{children}</span>
+  return <span className="p2">{typeof children === 'string' ? afbreek(children) : children}</span>
 }
 
 // Kop met de penseelstreek op het laatste woord, zonder de tekst te veranderen
 export function StreekKop({ tekst, streek }: { tekst: string; streek?: string }) {
   const s = streek ?? tekst.split(' ').slice(-1)[0]
   const i = tekst.lastIndexOf(s)
-  if (i < 0) return <>{tekst}</>
+  if (i < 0) return <>{afbreek(tekst)}</>
   return (
     <>
-      {tekst.slice(0, i)}
+      {afbreek(tekst.slice(0, i))}
       <Streek>{s}</Streek>
-      {tekst.slice(i + s.length)}
+      {afbreek(tekst.slice(i + s.length))}
     </>
   )
 }

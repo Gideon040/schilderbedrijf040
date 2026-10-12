@@ -1,4 +1,3 @@
-import './v2.css'
 import { Header } from '@/components/layout/header'
 import { Footer } from '@/components/layout/footer'
 import { MobileActionBar } from '@/components/layout/mobile-action-bar'

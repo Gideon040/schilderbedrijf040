@@ -9,7 +9,7 @@ import { Stappen } from '@/components/home/v2'
 import { Offerte } from '@/components/site/offerte'
 import { VoorNa } from '@/components/site/voor-na'
 import { Winterband } from '@/components/site/winterband'
-import { Eyebrow, KnopBel, KnopOfferte, Pijl, Streek, staal } from '@/components/site/v2'
+import { afbreek, Eyebrow, KnopBel, KnopOfferte, Pijl, Streek, staal } from '@/components/site/v2'
 import { TOON_JORDY } from '@/lib/jordy'
 import { PRIJSGIDS } from '@/lib/navigation'
 import { prijzen } from '@/lib/prices'
@@ -289,7 +289,7 @@ export default function LocationPage({ params }: { params: { city: string } }) {
                 <Link key={dienst.slug} className="card rv" href={`/diensten/${dienst.slug}`} style={{ ['--c' as string]: st.c }}>
                   <i />
                   <small>{st.code}</small>
-                  <h3>{dienst.title}</h3>
+                  <h3>{afbreek(dienst.title)}</h3>
                   <p>{dienst.description}</p>
                   <span>
                     Meer over {dienst.title.toLowerCase()} in {X} →
@@ -345,12 +345,12 @@ export default function LocationPage({ params }: { params: { city: string } }) {
             extra={
               <div className="buurt-review">
                 <h3 id="review">Review uit de buurt</h3>
-                <dd>
+                <p className="bq">
                   &ldquo;{locatieQuotes.google}&rdquo;
                   <span className="rr">
                     <span aria-hidden="true">★★★★★</span> <span className="m">{bronLabel.google}</span>
                   </span>
-                </dd>
+                </p>
               </div>
             }
             knop={{ href: '/projecten', tekst: 'Bekijk projecten' }}
@@ -373,7 +373,7 @@ export default function LocationPage({ params }: { params: { city: string } }) {
           <div className="why">
             {usps.map((u) => (
               <div key={u.titel} className="rv">
-                <h3>{u.titel}</h3>
+                <h3>{afbreek(u.titel)}</h3>
                 <span>{u.beschrijving}</span>
               </div>
             ))}

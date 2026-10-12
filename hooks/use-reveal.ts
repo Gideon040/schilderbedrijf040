@@ -3,13 +3,12 @@
 import { useEffect } from 'react'
 
 // Eén kleine hook voor alle animaties (IntersectionObserver, geen libraries).
-// Zonder JS is alles zichtbaar: de klasse "js" op <html> zet de startstanden pas aan als deze hook draait,
-// en alleen voor elementen onder de vouw. Bij prefers-reduced-motion gebeurt er niets.
+// Zonder JS is alles zichtbaar: de klasse "js" zet de startstanden pas aan als deze hook draait,
+// en alleen op secties onder de vouw (niet op <html>, dat zou de hele pagina opnieuw laten opmaken).
+// Bij prefers-reduced-motion gebeurt er niets.
 export function useReveal(sleutel: string) {
   useEffect(() => {
-    const root = document.documentElement
     const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-    root.classList.add('js')
     const opruimen: (() => void)[] = []
 
     const zodraZichtbaar = (el: Element, fn: () => void, drempel = 0.35) => {
@@ -27,27 +26,30 @@ export function useReveal(sleutel: string) {
       opruimen.push(() => o.disconnect())
     }
 
-    // Onthullen bij scrollen
+    // Onthullen bij scrollen. De eerste melding van de observer zegt wat al in beeld is (direct tonen);
+    // pas daarna krijgt de sectie eromheen de klasse "js", zodat niets zichtbaars eerst verdwijnt.
+    const gezien = new WeakSet<Element>()
     const io =
       !reduce && 'IntersectionObserver' in window
         ? new IntersectionObserver(
             (es) =>
               es.forEach((e) => {
+                const eerste = !gezien.has(e.target)
+                gezien.add(e.target)
                 if (e.isIntersecting) {
                   e.target.classList.add('in')
                   io?.unobserve(e.target)
                 }
+                if (eerste) e.target.closest('section, main > div, main')?.classList.add('js')
               }),
             { rootMargin: '0px 0px -8% 0px' },
           )
         : null
     if (io) opruimen.push(() => io.disconnect())
     document.querySelectorAll<HTMLElement>('.rv:not(.in)').forEach((el, i) => {
-      if (!io || el.getBoundingClientRect().top < innerHeight * 0.95) el.classList.add('in')
-      else {
-        el.style.transitionDelay = `${(i % 4) * 0.07}s`
-        io.observe(el)
-      }
+      if (!io) return
+      el.style.transitionDelay = `${(i % 4) * 0.07}s`
+      io.observe(el)
     })
 
     // Tellers
