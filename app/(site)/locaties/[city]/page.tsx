@@ -5,13 +5,15 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { buren, heroFoto, lokaal } from './data-lokaal'
 import { JsonLd } from '@/components/json-ld'
-import { Stars } from '@/components/site/stars'
-import { CtaBanner } from '@/components/site/cta-banner'
-import { VoorNaKaart } from '@/components/site/voor-na'
-import { WerkgebiedKaart } from '@/components/werkgebied-kaart'
+import { Stappen } from '@/components/home/v2'
+import { Offerte } from '@/components/site/offerte'
+import { VoorNa } from '@/components/site/voor-na'
+import { Winterband } from '@/components/site/winterband'
+import { Eyebrow, KnopBel, KnopOfferte, Pijl, Streek, staal } from '@/components/site/v2'
+import { TOON_JORDY } from '@/lib/jordy'
 import { PRIJSGIDS } from '@/lib/navigation'
 import { prijzen } from '@/lib/prices'
-import { reviews, reviewPlaceholder } from '@/lib/reviews'
+import { bronLabel, locatieQuotes } from '@/lib/reviews'
 import { orgRef } from '@/lib/schema'
 import { site } from '@/lib/site'
 
@@ -129,7 +131,23 @@ export default function LocationPage({ params }: { params: { city: string } }) {
   const lok = lokaal[city]
   const foto = heroFoto(city)
   const buurplaatsen = (buren[city] ?? []).filter((b) => cityData[b])
-  const review = reviews.find((r) => r.plaats === data.displayName)
+  const X = data.displayName
+
+  // Teksten van het live template (main), letterlijk, em dashes vervangen
+  const usps = [
+    { titel: 'Hoogst beoordeeld in de regio', beschrijving: '5 sterren op Google en 4,9 op Werkspot met 41+ beoordelingen.' },
+    { titel: 'Premium Boonstoppel verf', beschrijving: '8 tot 10 jaar bescherming, de beste keuze voor langdurig resultaat.' },
+    { titel: 'Garantie op elk project', beschrijving: 'Kwaliteitsgarantie op al het schilderwerk, u bent altijd verzekerd.' },
+    { titel: 'Korte reistijd, lage kosten', beschrijving: `Gevestigd in Eindhoven, minimale voorrijkosten voor ${X}.` },
+    { titel: 'Kennis van lokale bouwstijlen', beschrijving: `Ervaring met woningen in ${data.wijken.join(', ')}.` },
+  ]
+  const stappen = [
+    { titel: 'Contact', tekst: `Bel, mail of vul het formulier in voor een vrijblijvend gesprek over uw schilderproject in ${X}.` },
+    { titel: 'Inspectie', tekst: `Wij komen langs bij uw woning in ${X} voor een inspectie en bespreking.` },
+    { titel: 'Offerte', tekst: 'Binnen 48 uur een gedetailleerde offerte met vaste prijs, zonder verborgen kosten.' },
+    { titel: 'Uitvoering', tekst: 'Netjes, op tijd en samen controleren wij het eindresultaat.' },
+  ]
+  const kleuren = ['var(--sw1)', 'var(--sw4)', 'var(--sw2)', 'var(--sw5)', 'var(--sw6)', 'var(--sw3)']
 
   return (
     <main>
@@ -137,75 +155,113 @@ export default function LocationPage({ params }: { params: { city: string } }) {
       <JsonLd data={breadcrumbSchema} />
       <JsonLd data={faqSchema} />
 
-      {/* Hero met eigen foto per plaats */}
-      <section className="bg-zand">
-        <div className="grid lg:grid-cols-[minmax(0,760px)_1fr]">
-          <div className="flex flex-col gap-5 px-4 py-8 sm:px-6 md:py-10 lg:py-14 lg:pl-8 lg:pr-16 xl:pl-[max(2rem,calc((100vw-1440px)/2+2rem))]">
-            <nav aria-label="Kruimelpad" className="text-[15px] text-tekst-licht">
-              <Link href="/" className="hover:text-link">
-                Home
-              </Link>{' '}
-              /{' '}
-              <Link href="/#werkgebied" className="hover:text-link">
-                Werkgebied
-              </Link>{' '}
-              / <span aria-current="page">{data.displayName}</span>
+      {/* Hero met foto en routekaartje vanuit Eindhoven */}
+      <section className="dp-hero" style={{ padding: 0 }}>
+        <div className="wrap grid">
+          <div>
+            <nav className="crumbs" aria-label="Kruimelpad">
+              <Link href="/">Home</Link>
+              <span>/</span>
+              <Link href="/#werkgebied">Werkgebied</Link>
+              <span>/</span>
+              <b aria-current="page">{X}</b>
             </nav>
-            <h1 className="mt-2 font-heading text-[42px] font-bold leading-none text-navy md:text-[60px] xl:text-[72px]">Schilder in {data.displayName}</h1>
-            <p className="max-w-[600px] text-[18px] leading-relaxed text-tekst md:text-[20px] md:leading-[1.6]">{data.intro}</p>
-            <div className="mt-1 flex flex-col gap-3 sm:flex-row sm:gap-3.5">
-              <Link href="/contact" className="btn-primary !px-7 !py-4">
-                Gratis offerte aanvragen
-              </Link>
-              <a href={site.phoneHref} className="btn-secondary !px-6 !py-[14px]">
-                Bel {site.phone}
-              </a>
+            <h1 className="disp">
+              <span className="w">
+                <span>Schilder in</span>
+              </span>{' '}
+              <br />
+              <span className="w">
+                <span className="paint">{X}</span>
+              </span>
+            </h1>
+            <p className="lead">{data.intro}</p>
+            <div className="cta-row">
+              <KnopOfferte />
+              <KnopBel />
             </div>
-            <div className="mt-2 flex flex-wrap items-center gap-x-6 gap-y-2 text-base text-tekst">
-              <span className="flex items-center gap-2">
-                <Stars className="h-4 w-4" color="text-[#C98A00]" />
-                <strong>{site.google.rating}</strong> Google ({site.google.reviewCount})
-              </span>
-              <span>
-                <strong>{site.werkspot.rating}</strong> Werkspot
-              </span>
-              <span>Gevestigd in Eindhoven</span>
+            <div className="trust">
+              <div>
+                <span className="n">{site.google.rating}</span>
+                <span className="stars" aria-hidden="true">
+                  ★★★★★
+                </span>
+                <small>
+                  {site.google.rating} uit {site.google.reviewCount} reviews
+                </small>
+              </div>
+              <div>
+                <span className="n">{site.werkspot.rating}</span>
+                <small>{site.werkspot.rating} op Werkspot</small>
+              </div>
+              <div>
+                <span className="n">040</span>
+                <small>Gevestigd in Eindhoven</small>
+              </div>
             </div>
           </div>
-          <div className="relative h-[280px] sm:h-[380px] lg:h-auto lg:min-h-[580px]">
-            <Image src={foto.src} alt={foto.alt} fill priority sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" />
-            <span className="absolute bottom-4 right-4 rounded-lg bg-[rgba(7,18,31,0.85)] px-3 py-2 text-sm text-white">
-              [JORDY: foto van een project in {data.displayName}]
-            </span>
+          <div className="loc-visual">
+            <div className="photo">
+              <div className="img">
+                <Image src={foto.src} alt={`Schildersbedrijf in ${X}. Schildersbedrijf040`} fill priority sizes="(max-width: 980px) 92vw, 560px" />
+              </div>
+            </div>
+            <div className="route" role="img" aria-label={`Route van Eindhoven naar ${X}`}>
+              <svg viewBox="0 0 300 150" aria-hidden="true">
+                <path className="road" d="M40 112 C 90 120, 120 60, 170 70 S 240 40, 262 38" />
+                <path className="drive" d="M40 112 C 90 120, 120 60, 170 70 S 240 40, 262 38" />
+                <circle cx="40" cy="112" r="7" fill="#0A1626" />
+                <g className="pin">
+                  <path d="M262 38c0-11-8-18-16-18s-16 7-16 18c0 12 16 26 16 26s16-14 16-26z" transform="translate(16 -26)" fill="#1A5BFF" />
+                  <circle cx="262" cy="30" r="5" fill="#fff" />
+                </g>
+                <text x="22" y="138" fontFamily="var(--mono)" fontSize="11" fill="#5B6676">
+                  EINDHOVEN
+                </text>
+                <text x={X.length > 9 ? 150 : 200} y="72" fontFamily="var(--mono)" fontSize="11" fill="#0A1626" fontWeight="700">
+                  {X.toUpperCase()}
+                </text>
+              </svg>
+              <div>
+                <b>Vanuit Eindhoven naar {X}</b>
+                <span>Straatsburglaan 26, Eindhoven</span>
+              </div>
+            </div>
+            {TOON_JORDY && <span className="ph-label">[JORDY: foto van een project in {X}]</span>}
           </div>
         </div>
       </section>
 
+      <Winterband />
+
       {/* Lokaal blok */}
-      <section className="py-14 md:py-[88px]">
-        <div className="container flex flex-col gap-9">
-          <div className="flex max-w-[860px] flex-col gap-3.5">
-            <h2 id="schilderwerk-lokaal" className="h-section">
-              Binnen- en buitenschilderwerk in {data.displayName}
-            </h2>
-            {lok && <p className="text-[18px] leading-[1.7] text-tekst">{lok.tekst}</p>}
-            <p className="text-[18px] leading-[1.7] text-tekst">{data.waarom}</p>
+      <section>
+        <div className="wrap">
+          <div className="head rv">
+            <div>
+              <Eyebrow>Lokaal</Eyebrow>
+              <h2 id="schilderwerk-lokaal" className="disp">
+                Binnen- en buitenschilderwerk in <Streek>{X}</Streek>
+              </h2>
+            </div>
+            {lok && <p>{lok.tekst}</p>}
           </div>
           {lok ? (
-            <ul className="grid grid-cols-1 gap-6 md:grid-cols-3">
-              {lok.wijken.map((w) => (
-                <li key={w.naam} className="flex flex-col gap-2.5 rounded-[14px] border border-lijn p-7">
-                  <span className="text-sm font-semibold text-link">{w.label}</span>
-                  <h3 className="font-heading text-[26px] font-bold text-navy md:text-[27px]">{w.naam}</h3>
-                  <p className="text-[17px] leading-relaxed text-tekst-zacht">{w.tekst}</p>
-                </li>
+            <div className="wijken">
+              {lok.wijken.map((w, i) => (
+                <article key={w.naam} className="rv" style={{ ['--c' as string]: kleuren[(i + 2) % kleuren.length] }}>
+                  <i />
+                  <small>{w.label.toUpperCase()}</small>
+                  <h3>{w.naam}</h3>
+                  <p>{w.tekst}</p>
+                </article>
               ))}
-            </ul>
+            </div>
           ) : (
-            <div className="flex flex-wrap items-center gap-2.5">
-              <span className="text-base font-semibold text-navy">Actief in onder andere:</span>
+            <div className="places rv" style={{ marginTop: 0 }}>
+              <span className="pl-label">Actief in onder andere:</span>
               {data.wijken.map((w) => (
-                <span key={w} className="rounded-full bg-zand px-4 py-2 text-[15px] font-semibold text-tekst">
+                <span key={w} className="pl">
                   {w}
                 </span>
               ))}
@@ -214,133 +270,219 @@ export default function LocationPage({ params }: { params: { city: string } }) {
         </div>
       </section>
 
-      {/* Diensten in deze plaats, geen prijstabel */}
-      <section className="bg-zand py-14 md:py-[88px]">
-        <div className="container flex flex-col gap-9">
-          <h2 id="diensten" className="h-section">
-            Onze diensten in {data.displayName}
-          </h2>
-          <ul className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
-            {data.diensten.map((dienst) => (
-              <li key={dienst.slug}>
-                <Link href={`/diensten/${dienst.slug}`} className="group flex h-full flex-col gap-2.5 rounded-[14px] bg-white p-6 md:p-7">
-                  <h3 className="font-heading text-[24px] font-bold text-navy md:text-[25px]">{dienst.title}</h3>
-                  <p className="text-[16px] leading-relaxed text-tekst-zacht">{dienst.description}</p>
-                  <span className="mt-auto pt-1 font-semibold text-link group-hover:text-link-hover">
-                    Meer over {dienst.title.toLowerCase()} in {data.displayName} →
+      {/* Diensten in deze plaats */}
+      <section style={{ background: 'var(--paper-2)' }}>
+        <div className="wrap">
+          <div className="head rv">
+            <div>
+              <Eyebrow>Onze diensten in {X}</Eyebrow>
+              <h2 id="diensten" className="disp">
+                Schilderdiensten in <Streek>{X}</Streek>
+              </h2>
+            </div>
+            <p>Van binnenschilderwerk tot houtrot sanering, elk project wordt vakkundig uitgevoerd met Boonstoppel verf en jarenlange ervaring.</p>
+          </div>
+          <div className="deck">
+            {data.diensten.map((dienst) => {
+              const st = staal[dienst.slug] ?? staal.binnenschilderwerk
+              return (
+                <Link key={dienst.slug} className="card rv" href={`/diensten/${dienst.slug}`} style={{ ['--c' as string]: st.c }}>
+                  <i />
+                  <small>{st.code}</small>
+                  <h3>{dienst.title}</h3>
+                  <p>{dienst.description}</p>
+                  <span>
+                    Meer over {dienst.title.toLowerCase()} in {X} →
                   </span>
                 </Link>
-              </li>
-            ))}
-          </ul>
-          <div className="flex flex-col gap-3 rounded-[14px] bg-white p-6 md:p-7">
-            <h3 id="kosten-schilder" className="font-heading text-[26px] font-bold text-navy">
-              Wat kost een schilder in {data.displayName}?
-            </h3>
-            <p className="text-[17px] leading-relaxed text-tekst">{data.kosten}</p>
-            <p className="text-[17px] text-tekst">
-              <strong className="text-navy">Prijzen in {data.displayName}</strong> zijn gelijk aan Eindhoven. Binnenschilderwerk vanaf{' '}
-              {prijzen.binnenschilderwerk[0].prijs.split(' tot ')[0]} per m², indicatief.{' '}
-              {PRIJSGIDS.live ? (
-                <Link href={PRIJSGIDS.href} className="link">
-                  Bekijk de prijsgids →
-                </Link>
-              ) : (
-                <Link href="/diensten/binnenschilderwerk#kosten-binnenschilderwerk" className="link">
-                  Bekijk de prijzen voor binnenschilderwerk →
-                </Link>
-              )}
-            </p>
+              )
+            })}
+          </div>
+          <div className="pricebar rv">
+            <div style={{ maxWidth: '72ch' }}>
+              <small className="pb-label">Indicatie tarieven</small>
+              <h3 id="kosten-schilder" className="pb-h">
+                Wat kost een schilder in {X}?
+              </h3>
+              <p>{data.kosten}</p>
+              <p>
+                <b>Prijzen in {X}</b> zijn gelijk aan Eindhoven. Binnenschilderwerk vanaf {prijzen.binnenschilderwerk[0].prijs.split(' tot ')[0]} per m²,
+                indicatief.
+              </p>
+            </div>
+            {PRIJSGIDS.live ? (
+              <Link className="btn btn-line" href={PRIJSGIDS.href}>
+                Bekijk de prijsgids <Pijl />
+              </Link>
+            ) : (
+              <Link className="btn btn-line" href="/diensten/binnenschilderwerk#kosten-binnenschilderwerk">
+                Bekijk de prijzen voor binnenschilderwerk <Pijl />
+              </Link>
+            )}
           </div>
         </div>
       </section>
 
-      {/* Project en review uit de plaats */}
-      <section className="py-14 md:py-[88px]">
-        <div className="container grid gap-10 lg:grid-cols-[1.5fr_1fr]">
-          <div className="flex flex-col gap-5">
-            <h2 id="project" className="h-section">
-              Project in {data.displayName}
-            </h2>
-            <VoorNaKaart
-              project={{
-                titel: `[JORDY: project in ${data.displayName}]`,
-                label: '[JORDY: wijk] · [dienst] · [m²]',
-                na: foto,
-                tekst: '[JORDY: 2 of 3 zinnen over het project]',
-              }}
-            />
+      {/* Project en review uit de plaats, met de bannertekst van de live pagina */}
+      <section className="ba-sec on-dark">
+        <div className="wrap">
+          <div className="head rv">
+            <div>
+              <Eyebrow style={{ color: '#7FA3FF' }}>Project in {X}</Eyebrow>
+              <h2 id="project" className="disp">
+                Resultaat waar u trots op <Streek>bent</Streek>
+              </h2>
+            </div>
+            <p>Van voorbereiding tot de laatste kwaststreek, wij leveren schilderwerk dat jarenlang meegaat. Bekijk onze projecten of vraag direct een offerte aan.</p>
           </div>
-          <div className="flex flex-col gap-5">
-            <h2 id="review" className="font-heading text-[30px] font-bold text-navy md:text-[36px]">
-              Review uit de buurt
-            </h2>
-            <figure className="flex flex-col gap-3 rounded-[14px] bg-zand p-7">
-              <Stars className="h-4 w-4" color="text-[#C98A00]" />
-              <blockquote className="text-[17px] leading-relaxed text-tekst">{review ? review.tekst : reviewPlaceholder}</blockquote>
-              <figcaption className="text-[15px] font-semibold text-navy">
-                {review ? `${review.naam} · ${data.displayName} · Google` : `[Naam] · ${data.displayName} · Google`}
-              </figcaption>
-            </figure>
-            <WerkgebiedKaart className="h-[200px]" />
-          </div>
+          <VoorNa
+            na={foto}
+            feiten={[
+              ['Wijk', '[JORDY: wijk]'],
+              ['Werk', `[JORDY: project in ${X}]`],
+              ['Oppervlak', '[JORDY: m²]'],
+            ]}
+            extra={
+              <div className="buurt-review">
+                <h3 id="review">Review uit de buurt</h3>
+                <dd>
+                  &ldquo;{locatieQuotes.google}&rdquo;
+                  <span className="rr">
+                    <span aria-hidden="true">★★★★★</span> <span className="m">{bronLabel.google}</span>
+                  </span>
+                </dd>
+              </div>
+            }
+            knop={{ href: '/projecten', tekst: 'Bekijk projecten' }}
+          />
         </div>
       </section>
 
-      {/* Werkwijze (bestaande tekst) */}
-      <section className="border-t border-lijn py-14 md:py-[72px]">
-        <div className="container flex flex-col gap-3.5">
-          <h2 id="werkwijze" className="h-section">
-            Zo werken we in {data.displayName}
-          </h2>
-          <p className="max-w-[860px] text-[18px] leading-[1.7] text-tekst">{data.werkwijze}</p>
-        </div>
-      </section>
-
-      {/* Lokale FAQ, antwoorden zichtbaar */}
-      <section className="bg-zand py-14 md:py-[88px]">
-        <div className="container flex flex-col gap-5">
-          <h2 id="veelgestelde-vragen" className="h-section mb-1.5">
-            Vragen over schilderwerk in {data.displayName}
-          </h2>
-          <div className="grid grid-cols-1 gap-x-14 gap-y-[18px] md:grid-cols-2">
-            {data.faqs.map((faq) => (
-              <div key={faq.question} className="flex flex-col gap-2 border-b border-[#DDD8CF] pb-[18px]">
-                <h3 className="font-sans text-[19px] font-bold leading-snug text-navy md:text-[20px]">{faq.question}</h3>
-                <p className="text-[17px] leading-relaxed text-tekst-zacht">{faq.answer}</p>
+      {/* Waarom, met de USP's en reviews van het live template */}
+      <section style={{ background: 'var(--paper-2)' }}>
+        <div className="wrap">
+          <div className="head rv">
+            <div>
+              <Eyebrow>Waarom wij</Eyebrow>
+              <h2 id="waarom-schildersbedrijf040" className="disp">
+                Waarom Schildersbedrijf040 in <Streek>{`${X}?`}</Streek>
+              </h2>
+            </div>
+            <p>{data.waarom}</p>
+          </div>
+          <div className="why">
+            {usps.map((u) => (
+              <div key={u.titel} className="rv">
+                <h3>{u.titel}</h3>
+                <span>{u.beschrijving}</span>
               </div>
             ))}
           </div>
+          <div className="rev-strip">
+            <figure className="rv">
+              <div className="stars" aria-hidden="true">
+                ★★★★★
+              </div>
+              <h3 className="rq">5,0 op Google</h3>
+              <blockquote>&ldquo;{locatieQuotes.google}&rdquo;</blockquote>
+              <figcaption>{bronLabel.google}</figcaption>
+            </figure>
+            <figure className="rv">
+              <div className="stars" aria-hidden="true">
+                ★★★★★
+              </div>
+              <h3 className="rq">4,9 op Werkspot</h3>
+              <blockquote>&ldquo;{locatieQuotes.werkspot}&rdquo;</blockquote>
+              <figcaption>{bronLabel.werkspot}</figcaption>
+            </figure>
+          </div>
         </div>
       </section>
 
-      {/* Buurplaatsen, met link naar de homepage (ankertekst "Schilder Eindhoven") */}
-      <section className="py-12 md:py-16">
-        <div className="container flex flex-col gap-[18px]">
-          <h2 id="omgeving" className="font-heading text-[28px] font-bold text-navy md:text-[32px]">
-            Ook actief rond {data.displayName}
-          </h2>
-          <ul className="flex flex-wrap gap-2.5">
-            <li>
-              <Link href="/" className="block rounded-full border border-[#CBD2DC] px-4 py-2.5 text-base font-medium text-tekst hover:border-brand hover:text-link">
-                Schilder Eindhoven
-              </Link>
-            </li>
-            {buurplaatsen.map((b) => (
-              <li key={b}>
-                <Link
-                  href={`/locaties/${b}`}
-                  className="block rounded-full border border-[#CBD2DC] px-4 py-2.5 text-base font-medium text-tekst hover:border-brand hover:text-link"
-                >
+      {/* Werkwijze (live template) */}
+      <section>
+        <div className="wrap">
+          <div className="head rv">
+            <div>
+              <Eyebrow>Zo werken we in {X}</Eyebrow>
+              <h2 id="werkwijze" className="disp">
+                Onze werkwijze in 4 <Streek>stappen</Streek>
+              </h2>
+            </div>
+            <p>{data.werkwijze}</p>
+          </div>
+          <Stappen stappen={stappen} />
+        </div>
+      </section>
+
+      {/* Lokale FAQ en buurplaatsen */}
+      <section style={{ background: 'var(--white)' }}>
+        <div className="wrap two">
+          <div className="rv">
+            <Eyebrow>Veelgestelde vragen</Eyebrow>
+            <h2 id="veelgestelde-vragen" className="disp dp-h2">
+              Vragen over schilderwerk in <Streek>{X}</Streek>
+            </h2>
+            <p style={{ margin: '0 0 18px', color: 'var(--muted)' }}>Staat uw vraag er niet bij? Neem gerust contact op, wij helpen u graag.</p>
+            <div className="faq-img">
+              <Image src={heroFoto(buurplaatsen[0] ?? city).src} alt={`Schilderwerk in ${X}`} fill sizes="(max-width: 980px) 92vw, 480px" />
+            </div>
+            <h2 id="omgeving" className="mini-h2">
+              Ook actief rond {X}
+            </h2>
+            <div className="places" style={{ marginTop: 12 }}>
+              <Link href="/">Schilder Eindhoven</Link>
+              {buurplaatsen.map((b) => (
+                <Link key={b} href={`/locaties/${b}`}>
                   Schilder {cityData[b].displayName}
                 </Link>
-              </li>
+              ))}
+            </div>
+          </div>
+          <div className="rv">
+            {data.faqs.map((faq, i) => (
+              <details key={faq.question} open={i === 0}>
+                <summary>
+                  <h3>{faq.question}</h3>
+                </summary>
+                <p>{faq.answer}</p>
+              </details>
             ))}
-          </ul>
+          </div>
         </div>
       </section>
 
-      <CtaBanner titel={`Schilder nodig in ${data.displayName}?`} tekst={data.contact} />
+      <Offerte
+        eyebrow={`Schilder nodig in ${X}?`}
+        titel="Klaar voor een frisse start?"
+        streek="start?"
+        tekst={data.contact}
+        extra={
+          <div className="q-extra">
+            <dl className="q-contact">
+              <div>
+                <dt>Bel ons direct</dt>
+                <dd>
+                  <a href={site.phoneHref}>{site.phone}</a>
+                </dd>
+              </div>
+              <div>
+                <dt>Stuur een e-mail</dt>
+                <dd>
+                  <a href={`mailto:${site.email}`}>{site.email}</a>
+                </dd>
+              </div>
+              <div>
+                <dt>Bereikbaarheid</dt>
+                <dd>Ma t/m vr: 08:00 tot 17:30</dd>
+              </div>
+            </dl>
+            <div className="q-foto">
+              <Image src={foto.src} alt={`Contact Schildersbedrijf040 ${X}`} fill sizes="320px" />
+            </div>
+          </div>
+        }
+      />
     </main>
   )
 }

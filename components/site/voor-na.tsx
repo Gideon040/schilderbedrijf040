@@ -44,24 +44,26 @@ export function VoorNa({
         )}
         {!voor && TOON_JORDY && <div className="demo">DEMO · de voor-foto is nagebootst. [JORDY: echte voor/na-foto&apos;s]</div>}
       </div>
-      <dl className="facts rv">
-        {feiten
-          .filter(([, w]) => toonBlok(w))
-          .map(([k, w]) => (
-            <div key={k}>
-              <dt>{k}</dt>
-              <dd>{jordy(w)}</dd>
-            </div>
-          ))}
+      <div className="facts-col rv">
+        <dl className="facts">
+          {feiten
+            .filter(([, w]) => toonBlok(w))
+            .map(([k, w]) => (
+              <div key={k}>
+                <dt>{k}</dt>
+                <dd>{jordy(w)}</dd>
+              </div>
+            ))}
+        </dl>
         {extra}
         {knop && (
-          <div style={{ border: 0, paddingTop: 28 }}>
+          <div style={{ paddingTop: 28 }}>
             <Link className="btn btn-line" href={knop.href}>
               {knop.tekst} <Pijl />
             </Link>
           </div>
         )}
-      </dl>
+      </div>
     </div>
   )
 }
