@@ -1,3 +1,5 @@
+> **ALLE BESTAANDE SEO-TEKSTEN BLIJVEN LETTERLIJK BEHOUDEN. Design en code mogen veranderen, tekst, koppen, FAQ's, links, meta en schema niet (behalve em dashes vervangen).**
+
 # CLAUDE.md: SEO/GEO-uitvoering Schildersbedrijf040
 
 Je voert het SEO- en GEO-traject uit voor **Schildersbedrijf040** (schildersbedrijf040.nl), oktober 2026 tot en met maart 2027. Regie: Gideon. Klant: Jordy Jacobs. Alles in het Nederlands.
