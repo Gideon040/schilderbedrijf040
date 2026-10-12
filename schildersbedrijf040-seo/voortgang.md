@@ -37,10 +37,12 @@ Status: `todo` → `concept` → `review Jordy` → `live`. Houd dit bestand bij
 
 ## Site-audit
 
+Branch `seo-redesign`, gestart 12-10-2026. Nulmeting in `rapportages/codestructuur.md` en `rapportages/lighthouse-voor.md`. Screenshots per stap in `rapportages/screenshots/` (prefix = stap).
+
 | Punt | Status | Bestanden | Open punten |
 |---|---|---|---|
-| 1.1 | todo |  |  |
-| 1.2 | todo |  |  |
+| 1.1 | klaar | 18 bestanden in `app/`, `components/` (312 vervangen); `scripts/fix-dashes-sanity.mjs` | Blogteksten in Sanity (63 dashes, 5 posts) niet aangepast: dat wijzigt de live blog. Script staat klaar, proefrun gedraaid. Na akkoord: `node scripts/fix-dashes-sanity.mjs --write`. |
+| 1.2 | klaar | `app/(site)/page.tsx`, `components/sections/hero.tsx`, `app/(site)/locaties/[city]/page.tsx` | H1 "Schilder in Eindhoven" + subregel; title "Schilder Eindhoven \| Schildersbedrijf040". Ook opgelost: merknaam stond 2x in de title van home en alle 17 locatiepagina's. |
 | 1.3 | todo |  |  |
 | 1.4 | todo |  |  |
 | 1.5 | todo |  |  |
@@ -61,23 +63,11 @@ Status: `todo` → `concept` → `review Jordy` → `live`. Houd dit bestand bij
 | 2.9 | todo |  |  |
 | 2.10 | todo |  |  |
 
-## Ideeën
-
-- 
-
-## Site-audit (branch `seo-redesign`, start 12-10-2026)
-
-Status per punt uit `plan/site-audit-en-redesign.md`. Screenshots in `rapportages/screenshots/` (prefix = stapnummer).
-
-| # | Punt | Status | Bestanden | Opmerking |
-|---|---|---|---|---|
-| 0 | Nulmeting | klaar | `rapportages/codestructuur.md`, `rapportages/lighthouse-voor.md` | Screenshots `00-voor-*` |
-| 1.1 | Em dashes | klaar | 18 bestanden in `app/` en `components/` (312 vervangen), `scripts/fix-dashes-sanity.mjs` | Blogteksten staan in Sanity (63 dashes in 5 posts): script klaar, proefrun gedraaid, **niet** uitgevoerd omdat het de live blog aanpast. Gideon: `node scripts/fix-dashes-sanity.mjs --write` na akkoord. |
-| 1.2 | H1 en title homepage | klaar | `app/(site)/page.tsx`, `components/sections/hero.tsx`, `app/(site)/locaties/[city]/page.tsx` | H1 "Schilder in Eindhoven" + subregel; title "Schilder Eindhoven \| Schildersbedrijf040" (absolute, merknaam 1x); meta zonder "100% kwaliteitsgarantie". Bug gevonden en opgelost: merknaam stond 2x in de title van home en alle 17 locatiepagina's (layout-template plus eigen suffix). |
-
 ## Open punten voor Jordy
 
 | Waar | Vraag |
 |---|---|
 
 ## Ideeën
+
+-
