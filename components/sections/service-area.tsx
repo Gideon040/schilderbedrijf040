@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import { MapPin } from 'lucide-react'
+import { WerkgebiedKaart } from '@/components/werkgebied-kaart'
 
 type Region = {
   name: string
@@ -49,17 +50,7 @@ export function ServiceArea() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Map */}
-          <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-lg">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d79586.85804700314!2d5.4834!3d51.4334!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c6d90575ca5e3d%3A0x55989f5f344b006!2sEindhoven!5e0!3m2!1sen!2snl!4v1647870000000!5m2!1sen!2snl"
-              width="100%"
-              height="100%"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            />
-          </div>
+          <WerkgebiedKaart className="aspect-[4/3] shadow-lg" />
 
           {/* Service Regions */}
           <div className="bg-accent-light rounded-xl p-8">

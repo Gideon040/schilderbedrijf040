@@ -59,7 +59,8 @@ export function ContactDetails() {
       {/* Map Section - Full Width */}
       <section className="w-full h-[500px]">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2487.0887565670387!2d5.4834!3d51.4334!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c6d91b5579c39f%3A0x73bce9a1f4a3c91a!2sJacob%20van%20Campenweg%2025%2C%205624%20CD%20Eindhoven!5e0!3m2!1sen!2snl!4v1647870000000!5m2!1sen!2snl"
+          src="https://www.google.com/maps?q=Straatsburglaan+26,+5627+DB+Eindhoven&output=embed"
+          title="Kaart: Schildersbedrijf040, Straatsburglaan 26 in Eindhoven"
           width="100%"
           height="100%"
           style={{ border: 0 }}
