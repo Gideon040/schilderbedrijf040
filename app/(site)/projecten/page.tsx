@@ -3,6 +3,9 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { Eyebrow, Pijl, Streek } from '@/components/site/v2'
 import { Offerte } from '@/components/site/offerte'
+import { ProjectFilter } from '@/components/projecten/filter'
+import { diensten as dienstMenu } from '@/lib/navigation'
+import { TOON_JORDY } from '@/lib/jordy'
 
 export const metadata: Metadata = {
   title: 'Projecten | Ons Schilderwerk in Beeld',
@@ -19,42 +22,56 @@ export const metadata: Metadata = {
   },
 }
 
-const projects = [
+// Dienst en plaats per project: alleen wat de site al noemt (alt-tekst, titel, homepage).
+// Onbekende plaats blijft leeg tot Jordy die aanlevert (zie seo/content/optimaliseren/11-projecten.md).
+const projects: { href: string; src: string; alt: string; title: string; diensten: string[]; plaats?: string }[] = [
   {
     href: "https://www.instagram.com/p/C4kHvkXIkR_/",
     src: "/images/lakwerk-voordeur-antraciet.jpg",
     alt: "Afgelakte deur project Eindhoven",
-    title: "Afgelakte deur 🚪"
+    title: "Afgelakte deur 🚪",
+    diensten: ['lakwerk'],
+    plaats: 'Eindhoven'
   },
   {
     href: "https://www.instagram.com/p/C4kHt5mo3xR/",
     src: "/images/buitenschilderwerk-dakkapel-wit-geschilderd.jpg",
     alt: "Houtrot reparatie met schilderwerk",
-    title: "Houtrot reparatie met schilderwerk 🔨"
+    title: "Houtrot reparatie met schilderwerk 🔨",
+    diensten: ['houtrot-sanering'],
+    plaats: undefined
   },
   {
     href: "https://www.instagram.com/p/C4h2XkSI5Rw/",
     src: "/images/buitenschilderwerk-vrijstaande-woning-wit.jpg",
     alt: "Complete vrijstaande woning buitenschilderwerk",
-    title: "Complete vrijstaande woning buitenschilderwerk 🏠"
+    title: "Complete vrijstaande woning buitenschilderwerk 🏠",
+    diensten: ['buitenschilderwerk'],
+    plaats: undefined
   },
   {
     href: "https://www.instagram.com/p/C4h2V4-I1R4/",
     src: "/images/binnenschilderwerk-zolder-renovatie.jpg",
     alt: "Binnen- en buitenschilderwerk project",
-    title: "Binnen- en buitenschilderwerk project afgerond! ✨"
+    title: "Binnen- en buitenschilderwerk project afgerond! ✨",
+    diensten: ['binnenschilderwerk', 'buitenschilderwerk'],
+    plaats: undefined
   },
   {
     href: "https://www.instagram.com/p/C4h2UPyI3R2/",
     src: "/images/latex-spuiten-benedenverdieping-blixembosch-eindhoven.jpg",
     alt: "Latex spuiten project Blixembosch",
-    title: "Latex spuiten project in Blixembosch 🎨"
+    title: "Latex spuiten project in Blixembosch 🎨",
+    diensten: ['latex-spuiten'],
+    plaats: 'Eindhoven'
   },
   {
     href: "https://www.instagram.com/p/C4h2SoUI1Rz/",
     src: "/images/binnenschilderwerk-lambrisering-horeca-eindhoven.jpg",
     alt: "Binnenwerk Restaria Oude Gracht",
-    title: "Binnenwerk Restaria Oude Gracht 🚪"
+    title: "Binnenwerk Restaria Oude Gracht 🚪",
+    diensten: ['binnenschilderwerk'],
+    plaats: 'Eindhoven'
   }
 ]
 
@@ -164,13 +181,25 @@ export default function ProjectenPage() {
               </a>
             </p>
           </div>
+          <ProjectFilter
+            diensten={dienstMenu.filter((d) => projects.some((p) => p.diensten.includes(d.href.split('/').pop() as string))).map((d) => ({ slug: d.href.split('/').pop() as string, naam: d.name }))}
+            plaatsen={projects.map((p) => p.plaats).filter((p, i, a): p is string => !!p && a.indexOf(p) === i)}
+          />
           <div className="collage proj">
             {projects.map((project) => (
-              <a key={project.href} className="rv" href={project.href} target="_blank" rel="noopener noreferrer">
+              <a
+                key={project.href}
+                className="rv"
+                href={project.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                data-diensten={project.diensten.join(' ')}
+                data-plaats={project.plaats ?? ''}
+              >
                 <figure>
                   <Image src={project.src} alt={project.alt} fill sizes="(max-width: 980px) 50vw, 400px" />
                   <figcaption>
-                    <small>INSTAGRAM</small>
+                    <small>INSTAGRAM{project.plaats ? ` · ${project.plaats.toUpperCase()}` : ''}</small>
                     <p>{project.title}</p>
                   </figcaption>
                 </figure>
@@ -181,6 +210,39 @@ export default function ProjectenPage() {
             <a className="btn btn-line" href="https://www.instagram.com/schildersbedrijf040/" target="_blank" rel="noopener noreferrer">
               Volg ons op Instagram <Pijl />
             </a>
+          </div>
+        </div>
+      </section>
+
+      <section style={{ background: 'var(--paper-2)' }}>
+        <div className="wrap two">
+          <div className="rv">
+            <Eyebrow>Per dienst en plaats</Eyebrow>
+            <h2 id="projecten-per-dienst-en-plaats" className="disp">
+              Ons werk in <Streek>de regio</Streek>
+            </h2>
+          </div>
+          <div className="lopend rv">
+            <p>
+              Schildersbedrijf040 werkt vanuit Eindhoven voor particulieren en bedrijven in de hele regio. De projecten op deze pagina laten
+              zien wat dat in de praktijk betekent: binnenwerk zoals een gelatexte benedenverdieping in Blixembosch en een gelakte
+              lambrisering in een horecazaak, en buitenwerk zoals een complete vrijstaande woning en houtrot dat is hersteld en
+              overgeschilderd. Met de filter hierboven ziet u alleen de projecten van één dienst of één plaats.
+            </p>
+            <p>
+              Meer over de aanpak per klus leest u op de pagina&apos;s over <Link href="/diensten/binnenschilderwerk">binnenschilderwerk</Link>{' '}
+              en <Link href="/diensten/buitenschilderwerk">buitenschilderwerk laten doen</Link>. Woont u buiten Eindhoven? Schildersbedrijf040
+              werkt onder meer in <Link href="/locaties/helmond">Helmond</Link>, <Link href="/locaties/veldhoven">Veldhoven</Link>,{' '}
+              <Link href="/locaties/best">Best</Link>, <Link href="/locaties/geldrop">Geldrop</Link>, <Link href="/locaties/nuenen">Nuenen</Link>{' '}
+              en <Link href="/locaties/valkenswaard">Valkenswaard</Link>. Vraag via <Link href="/contact">de contactpagina</Link> een gratis
+              inspectie aan, dan bekijkt Jordy Jacobs uw project ter plekke.
+            </p>
+            {TOON_JORDY && (
+              <p className="ph-label">
+                [JORDY: projectcases aanleveren via WhatsApp: plaats, woningtype, ruimtes, wat er gedaan is, minimaal drie foto&apos;s (voor,
+                tijdens, na) en een quote met voornaam en toestemming. Ook de plaats bij de houtrot-, buitenwerk- en zolderprojecten.]
+              </p>
+            )}
           </div>
         </div>
       </section>

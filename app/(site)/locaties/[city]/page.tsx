@@ -9,7 +9,7 @@ import { Stappen } from '@/components/home/v2'
 import { Offerte } from '@/components/site/offerte'
 import { VoorNa } from '@/components/site/voor-na'
 import { Winterband } from '@/components/site/winterband'
-import { afbreek, Eyebrow, KnopBel, KnopOfferte, Pijl, Streek, staal } from '@/components/site/v2'
+import { afbreek, MetLinks, Eyebrow, KnopBel, KnopOfferte, Pijl, Streek, staal } from '@/components/site/v2'
 import { TOON_JORDY } from '@/lib/jordy'
 import { PRIJSGIDS } from '@/lib/navigation'
 import { prijzen } from '@/lib/prices'
@@ -35,9 +35,13 @@ export async function generateMetadata({ params }: { params: { city: string } })
     }
   }
 
+  const beschrijving =
+    lokaal[city]?.metaDescription ??
+    `Schildersbedrijf040 is uw vakkundige schilder in ${data.displayName}. Binnenschilderwerk, buitenschilderwerk, behangen, lakwerk & houtrot sanering. ✓ Hoogst beoordeeld ✓ Gratis offerte.`
+
   return {
     title: `Op zoek naar een schilder in ${data.displayName}?`,
-    description: `Schildersbedrijf040 is uw vakkundige schilder in ${data.displayName}. Binnenschilderwerk, buitenschilderwerk, behangen, lakwerk & houtrot sanering. ✓ Hoogst beoordeeld ✓ Gratis offerte.`,
+    description: beschrijving,
     keywords: [
       `schilder ${data.displayName.toLowerCase()}`,
       `schildersbedrijf ${data.displayName.toLowerCase()}`,
@@ -48,7 +52,7 @@ export async function generateMetadata({ params }: { params: { city: string } })
     ],
     openGraph: {
       title: `Op zoek naar een schilder in ${data.displayName}? | Schildersbedrijf040`,
-      description: `Schildersbedrijf040 is uw vakkundige schilder in ${data.displayName}. Binnenschilderwerk, buitenschilderwerk, behangen, lakwerk & houtrot sanering. ✓ Hoogst beoordeeld ✓ Gratis offerte.`,
+      description: beschrijving,
       url: `https://schildersbedrijf040.nl/locaties/${city}`,
       type: 'website',
     },
@@ -243,6 +247,15 @@ export default function LocationPage({ params }: { params: { city: string } }) {
                 <span key={w} className="pl">
                   {w}
                 </span>
+              ))}
+            </div>
+          )}
+          {lok?.alineas && (
+            <div className="lopend lok-alineas rv">
+              {lok.alineas.map((a, i) => (
+                <p key={i}>
+                  <MetLinks tekst={a} />
+                </p>
               ))}
             </div>
           )}

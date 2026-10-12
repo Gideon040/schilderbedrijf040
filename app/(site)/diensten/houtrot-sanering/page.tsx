@@ -1,13 +1,19 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import { DienstTemplate, type DienstPagina } from '@/components/dienst/template'
 import { images } from '@/lib/images'
+import { TOON_JORDY } from '@/lib/jordy'
+import { prijzen } from '@/lib/prices'
 import { orgRef, serviceOffers } from '@/lib/schema'
 
 export const metadata: Metadata = {
-  title: 'Houtrot Sanering Eindhoven | Kozijnen Repareren met Epoxy. Vakkundig & Duurzaam',
+  title: 'Houtrot kozijn repareren in Eindhoven',
   description:
-    'Houtrot sanering door Schildersbedrijf040 in Eindhoven. Kozijnen, deuren en boeiboorden vakkundig gerepareerd met epoxy. ✓ Gratis inspectie ✓ 70% goedkoper dan vervangen.',
+    'Houtrot in uw kozijn? Repareren met epoxy kost €150 tot €250 per klein kozijn, vervangen €600 tot €1.500. Gratis houtrot-inspectie en vaste prijs per kozijn.',
   keywords: [
+    'houtrot kozijn',
+    'houtrot repareren',
+    'houtrot kosten',
     'houtrot sanering eindhoven',
     'houtrot reparatie eindhoven',
     'kozijnen repareren eindhoven',
@@ -69,6 +75,15 @@ const faqs = [
     answer:
       'Schildersbedrijf040 combineert houtrot sanering standaard met schilderwerk. Na de epoxy reparatie wordt het kozijn geschuurd, gegrond en afgelakt met duurzame buitenlak. Dit is niet alleen esthetisch beter, maar ook functioneel noodzakelijk: onbehandelde epoxy is gevoelig voor UV-straling en moet beschermd worden door een dekkende verflaag. Het schilderwerk na houtrot reparatie kost €75 tot €300 extra per kozijn, afhankelijk van de grootte. Door reparatie en schilderwerk te combineren bespaart u op de totale arbeidskosten.',
   },
+]
+
+// Repareren of vervangen: regels uit lib/prices.ts, aangevuld met bedragen die al in de tekst en FAQ van deze pagina staan
+const houtrot = prijzen['houtrot-sanering']
+const herstelPrijzen = [
+  { wat: 'Kleine epoxy reparatie (één plek)', prijs: '€80 tot €180' },
+  ...houtrot.slice(0, 5),
+  { wat: 'Kozijn gedeeltelijk vervangen', prijs: '€200 tot €500 /stuk' },
+  ...houtrot.slice(5),
 ]
 
 const werkwijzeStappen = [
@@ -153,7 +168,8 @@ const breadcrumbSchema = {
 const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
-  mainEntity: faqs.map((faq) => ({
+  // Antwoorden met een open punt voor Jordy niet in het schema
+  mainEntity: faqs.filter((f) => !f.answer.includes('[JORDY')).map((faq) => ({
     '@type': 'Question',
     name: faq.question,
     acceptedAnswer: {
@@ -169,8 +185,10 @@ const pagina: DienstPagina = {
   h1: 'Houtrot sanering in Eindhoven',
   heroTekst: (
     <p>
-      Houtrot sanering kost gemiddeld €150 tot €250 voor een klein kozijn en €300 tot €450 voor een groot kozijn, inclusief herstel en
+      Houtrot in een kozijn repareren kost €80 tot €180 voor een kleine epoxy reparatie op één plek. Houtrot sanering kost gemiddeld €150 tot €250 voor een klein kozijn en €300 tot €450 voor een groot kozijn, inclusief herstel en
       afwerking. De reparatie zelf duurt meestal 1 tot 3 werkdagen. Na een gratis inspectie krijgt u een offerte met vaste prijs per kozijn.
+      Het gerepareerde kozijn wordt direct meegenomen in het{' '}
+      <Link href="/diensten/buitenschilderwerk">buitenschilderwerk</Link>.
     </p>
   ),
   heroImg: images.houtrot,
@@ -233,7 +251,70 @@ const pagina: DienstPagina = {
       </>
     ),
   },
-  extra: undefined,
+  extra: (
+    <>
+      <h2 id="houtrot-herkennen" className="h-section mt-6 scroll-mt-28">
+        Houtrot herkennen: waar zit het in een kozijn?
+      </h2>
+      <p>
+        Houtrot in een kozijn begint bijna altijd op een plek waar regenwater blijft staan of via een scheurtje in de verf het hout in
+        trekt. Wie weet waar houtrot meestal zit, ziet het eerder en houdt de reparatie klein. Let bij uw kozijnen vooral op deze plekken:
+      </p>
+      <ul>
+        <li>
+          <strong>Onderdorpels.</strong> Het liggende deel onder het raam vangt het meeste water. Verf die hier loslaat is vaak het eerste
+          signaal.
+        </li>
+        <li>
+          <strong>Hoeken en verbindingen.</strong> Waar twee delen van het kozijn samenkomen, ontstaan fijne barstjes of blaasjes in de lak
+          waar vocht doorheen dringt.
+        </li>
+        <li>
+          <strong>Kitnaden en glaslatten.</strong> Een openstaande of gescheurde kitnaad tussen glas, glaslat en kozijn laat regenwater diep
+          in het hout lopen.
+        </li>
+      </ul>
+      <p>
+        Aan de buitenkant ziet u houtrot aan donkere verkleuringen of vale plekken in het schilderwerk, bladderende verf en hout dat bij
+        lichte druk meegeeft of vezelig aanvoelt. Omdat houtrot vaak onder een verflaag zit die er nog goed uitziet, controleert
+        Schildersbedrijf040 bij de gratis inspectie ook de plekken die u vanaf de grond niet ziet.
+      </p>
+      {TOON_JORDY && (
+        <p>[JORDY: 2 tot 3 eigen foto&apos;s van houtrot: zacht hout aan een onderdorpel, bladderende verf in een hoek, open kitnaad bij een glaslat]</p>
+      )}
+      <h2 id="repareren-of-vervangen" className="h-section mt-6 scroll-mt-28">
+        Houtrot repareren of het kozijn vervangen?
+      </h2>
+      <p>
+        Repareren met epoxy is de goedkoopste oplossing zolang de constructieve kern van het kozijn gezond is; dat geldt in ongeveer 80% van
+        de gevallen. Is meer dan 40 tot 50% van het kozijnhout aangetast of sluit het raam niet meer goed, dan is vervangen verstandiger. De
+        tabel zet de indicatieve prijzen naast elkaar, inclusief materiaal en exclusief btw.
+      </p>
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Herstel</th>
+            <th scope="col">Prijs</th>
+          </tr>
+        </thead>
+        <tbody>
+          {herstelPrijzen.map((r) => (
+            <tr key={r.wat}>
+              <td>{r.wat}</td>
+              <td>{r.prijs.replace(' /', ' per ').replace('m¹', 'meter')}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+      <p>
+        Na de reparatie wordt het kozijn geschuurd, gegrond en afgelakt; dat schilderwerk kost €75 tot €300 per kozijn. Gaat het om meerdere
+        kozijnen, dan is het vaak voordeliger om meteen alle{' '}
+        <Link href="/diensten/kozijnen-schilderen">kozijnen te laten schilderen</Link>, zodat de reparaties niet afsteken tegen oud
+        schilderwerk. Kitnaden die zijn gescheurd, worden bij het herstel vernieuwd. Twijfelt u of uw kozijn nog te redden is?{' '}
+        <Link href="/contact">Plan een gratis houtrot-inspectie</Link> en u weet per kozijn wat repareren of vervangen kost.
+      </p>
+    </>
+  ),
   soorten: {
     id: 'soorten-houtrot-sanering',
     h2: 'Soorten houtrot sanering',

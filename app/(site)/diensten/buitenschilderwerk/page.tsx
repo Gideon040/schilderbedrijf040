@@ -1,15 +1,22 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import { DienstTemplate, type DienstPagina } from '@/components/dienst/template'
 import { images } from '@/lib/images'
+import { afbreek } from '@/components/site/v2'
+import { TOON_JORDY } from '@/lib/jordy'
+import { prijzen } from '@/lib/prices'
 import { orgRef, serviceOffers } from '@/lib/schema'
 
 export const metadata: Metadata = {
-  title: 'Buitenschilderwerk Eindhoven | Gevels, Kozijnen & Deuren Duurzaam Geschilderd',
+  title: 'Buitenschilderwerk Eindhoven',
   description:
-    'Buitenschilderwerk door Schildersbedrijf040 in Eindhoven. Gevels, kozijnen en deuren beschermd met Boonstoppel verf. ✓ Houtrot inspectie ✓ Hoogst beoordeeld ✓ Gratis offerte.',
+    'Buitenschilder in Eindhoven: gevel €35 tot €45 per m², kozijnen €50 tot €100, boeidelen en dakkapellen. Boonstoppel-verf, gratis houtrot-inspectie, vaste prijs.',
   keywords: [
     'buitenschilderwerk eindhoven',
     'buitenschilder eindhoven',
+    'huis buiten laten schilderen',
+    'boeidelen schilderen',
+    'dakkapel schilderen',
     'kozijnen schilderen buiten',
     'gevel schilderen',
     'schildersbedrijf eindhoven',
@@ -43,6 +50,7 @@ const faqs = [
     question: 'Hoe lang gaat buitenschilderwerk mee?',
     answer:
       'Professioneel buitenschilderwerk met Boonstoppel verf gaat 8 tot 10 jaar mee. Budgetverf houdt gemiddeld 3 tot 5 jaar, waardoor u vaker moet laten schilderen en de totale kosten hoger uitvallen. De levensduur hangt ook af van de ligging van het houtwerk: kozijnen op het zuiden en westen krijgen meer zon en regen, waardoor de verf daar sneller slijt. Schildersbedrijf040 houdt hier rekening mee door op belaste delen een extra verflaag aan te brengen.',
+    link: { href: '/blog/hoe-vaak-buitenschilderwerk', tekst: 'Lees hoe vaak buitenschilderwerk nodig is.' },
   },
   {
     question: 'Controleert Schildersbedrijf040 op houtrot voor het schilderen?',
@@ -69,7 +77,53 @@ const faqs = [
     answer:
       'Eigenlijk hoeft u weinig zelf te doen. Schildersbedrijf040 verzorgt de volledige voorbereiding: loszittende verf wordt geschraapt en geschuurd, houtrot wordt behandeld, scheuren worden gevuld en alle oppervlakken worden ontvet. Het helpt als u planten en tuinmeubelen iets van de gevel af plaatst, zodat Schildersbedrijf040 vrij kan werken. De inspectie vooraf maakt duidelijk wat er precies moet gebeuren.',
   },
+  {
+    question: 'Vernieuwt Schildersbedrijf040 ook de kitnaden bij buitenschilderwerk?',
+    answer:
+      'Ja, gescheurde of losgelaten kitnaden rond kozijnen en glaslatten worden bij het buitenschilderwerk vernieuwd, voordat er geschilderd wordt. Een open kitnaad laat regenwater achter de verflaag in het hout lopen, en daar begint houtrot. Bij de inspectie kijkt Schildersbedrijf040 ook welke kit er zit: acrylaatkit en polymeerkit zijn overschilderbaar, terwijl verf op siliconenkit niet goed hecht. Waar nodig wordt de oude kit verwijderd en vervangen door een overschilderbare kit, zodat verf en kit samen één dichte laag vormen.',
+  },
+  {
+    question: 'Hoe ver van tevoren plant u buitenschilderwerk in?',
+    answer:
+      'Vraag de offerte voor buitenschilderwerk het liefst in de winter of het vroege voorjaar aan. Buiten schilderen gebeurt van april tot en met oktober, met mei, juni en september als beste maanden, en in die periode piekt de vraag. Wie in januari of februari een inspectie laat doen, heeft binnen 48 uur een offerte met vaste prijs en kan een startdatum vastleggen voordat de agenda volloopt. Schildersbedrijf040 plant de werkdagen daarna op droog weer, zodat de verf goed hecht en droogt.',
+    link: { href: '/blog/wanneer-buiten-schilderen', tekst: 'Lees wanneer u het beste buiten kunt schilderen.' },
+  },
 ]
+
+// Blok "Alle buitenklussen" en de secties boeidelen, dakkapel en deuren: prijzen uit lib/prices.ts
+const buiten = prijzen.buitenschilderwerk
+const vind = (wat: string) => buiten.find((r) => r.wat === wat)
+const boeidelen = vind('Boeiboorden & windveren')
+const dakkapel = vind('Dakkapel schilderen')
+const deuren = vind('Deuren buiten')
+
+const buitenklussen: { titel: string; tekst: string; prijs: string; href?: string }[] = [
+  {
+    titel: 'Kozijnen schilderen',
+    tekst: 'Houten kozijnen buiten schuren, herstellen, gronden en aflakken.',
+    prijs: vind('Kozijnen buiten')?.prijs.replace(' /stuk', ' per kozijn') ?? '',
+    href: '/diensten/kozijnen-schilderen',
+  },
+  {
+    titel: 'Gevel schilderen',
+    tekst: 'Gevels reinigen, scheuren herstellen en schilderen met ademende buitenmuurverf.',
+    prijs: vind('Gevel schilderen')?.prijs.replace(' /m²', ' per m²') ?? '',
+    href: '/diensten/gevel-schilderen',
+  },
+  {
+    titel: 'Houtrot sanering',
+    tekst: 'Rot hout verwijderen en herstellen met epoxy, daarna direct afgeschilderd.',
+    prijs: prijzen['houtrot-sanering'][0].prijs.replace(' /stuk', ' per klein kozijn'),
+    href: '/diensten/houtrot-sanering',
+  },
+  {
+    titel: 'Kitwerk',
+    tekst: 'Gescheurde kitnaden rond kozijnen en glaslatten vernieuwen, als onderdeel van het buitenschilderwerk.',
+    prijs: 'Prijs in de offerte',
+  },
+]
+
+// Tegelstijl inline: .lopend kleurt links blauw en onderstreept, de klasse .btn sluit dat uit
 
 const werkwijzeStappen = [
   {
@@ -141,7 +195,8 @@ const breadcrumbSchema = {
 const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
-  mainEntity: faqs.map((faq) => ({
+  // Antwoorden met een open punt voor Jordy niet in het schema
+  mainEntity: faqs.filter((f) => !f.answer.includes('[JORDY')).map((faq) => ({
     '@type': 'Question',
     name: faq.question,
     acceptedAnswer: { '@type': 'Answer', text: faq.answer },
@@ -173,12 +228,14 @@ const pagina: DienstPagina = {
       <>
         <p>
           Buitenschilderwerk beschermt uw woning tegen regen, zon en vorst, en bepaalt de uitstraling van uw gevel. Schildersbedrijf040
-          schildert gevels, kozijnen, deuren en boeiboorden in Eindhoven en omgeving met Boonstoppel verf voor een resultaat dat 8 tot 10
+          schildert <Link href="/diensten/gevel-schilderen">gevels</Link>, <Link href="/diensten/kozijnen-schilderen">kozijnen</Link>,
+          deuren en boeiboorden in Eindhoven en omgeving met Boonstoppel verf voor een resultaat dat 8 tot 10
           jaar meegaat.
         </p>
         <p>
           Buitenschilderwerk is de eerste verdedigingslinie van uw woning tegen het Nederlandse klimaat. Regen, zon, vorst en wind tasten
-          onbeschermd houtwerk aan, kozijnen zwellen op, verf bladdert en zonder tijdig onderhoud ontstaat houtrot. Een kozijn vervangen
+          onbeschermd houtwerk aan, kozijnen zwellen op, verf bladdert en zonder tijdig onderhoud ontstaat{' '}
+          <Link href="/diensten/houtrot-sanering">houtrot</Link>. Een kozijn vervangen
           kost al snel €500 tot €1.500, terwijl tijdig buitenschilderwerk met Boonstoppel verf uw houtwerk 8 tot 10 jaar beschermt voor een
           fractie van dat bedrag.
         </p>
@@ -204,7 +261,7 @@ const pagina: DienstPagina = {
         <p>
           Buitenschilderwerk kost gemiddeld €35 tot €45 per m² inclusief materiaal en exclusief btw. De uiteindelijke prijs hangt af van
           drie factoren: de staat van het houtwerk, de bereikbaarheid (ladder of steiger) en de hoeveelheid houtrotreparatie die nodig is.
-          Kozijnen schilderen buiten is duurder per stuk dan muurwerk, omdat elk kozijn individueel geschuurd, geground en gelakt moet
+          <Link href="/diensten/kozijnen-schilderen">Kozijnen schilderen buiten</Link> is duurder per stuk dan muurwerk, omdat elk kozijn individueel geschuurd, geground en gelakt moet
           worden.
         </p>
         <p>
@@ -219,7 +276,89 @@ const pagina: DienstPagina = {
       </>
     ),
   },
-  extra: undefined,
+  extra: (
+    <>
+      <h2 id="alle-buitenklussen" className="h-section mt-6 scroll-mt-28">
+        Alle buitenklussen
+      </h2>
+      <p>
+        Een huis buiten laten schilderen bestaat meestal uit een paar losse klussen: kozijnen, gevel, houtrotherstel en kitwerk. Elke klus
+        heeft een eigen aanpak en prijs. Schildersbedrijf040 combineert ze in één inspectie en één offerte, zodat ladders of steigers maar
+        één keer nodig zijn.
+      </p>
+      <div className="klus-tegels">
+        {buitenklussen.map((k) => {
+          const inhoud = (
+            <>
+              <b>{afbreek(k.titel)}</b>
+              <span className="kt">{k.tekst}</span>
+              <span className="kp">
+                {k.prijs}
+                {k.href ? ' →' : ''}
+              </span>
+            </>
+          )
+          return k.href ? (
+            <Link key={k.titel} href={k.href} className="klus">
+              {inhoud}
+            </Link>
+          ) : (
+            <div key={k.titel} className="klus">
+              {inhoud}
+            </div>
+          )
+        })}
+      </div>
+      {TOON_JORDY && <p>[JORDY: kitwerk als losse dienst? Dan krijgt deze tegel een link naar een eigen pagina.]</p>}
+      <h2 id="boeidelen-dakkapellen-en-deuren" className="h-section mt-6 scroll-mt-28">
+        Boeidelen, dakkapellen en buitendeuren
+      </h2>
+      <p>
+        Boeidelen, dakkapellen en buitendeuren zijn de onderdelen van het buitenwerk die het zwaarst te verduren hebben. Ze vangen de meeste
+        wind en regen of worden dagelijks gebruikt, en problemen zijn vanaf de grond vaak slecht te zien. Schildersbedrijf040 neemt ze mee in
+        hetzelfde buitenschilderwerk als de kozijnen en de gevel.
+      </p>
+      <h3 id="boeidelen-schilderen" className="klus-h3">
+        Boeidelen schilderen
+      </h3>
+      <p>
+        Boeidelen en windveren schilderen kost gemiddeld {boeidelen?.prijs.replace(' /m¹', ' per strekkende meter')}, inclusief
+        voorbereiding en Boonstoppel-verf. Boeiboorden zitten op de overgang van gevel naar dakrand, waar vocht zich gemakkelijk ophoopt.
+        Schildersbedrijf040 controleert boeidelen daarom altijd op houtrot voordat er geschilderd wordt. Zacht hout wordt eerst hersteld met
+        epoxy; daarover leest u meer bij <Link href="/diensten/houtrot-sanering">houtrot sanering</Link>. Voor boeidelen is vaak een
+        steiger nodig; die kosten staan apart in de offerte.
+      </p>
+      <h3 id="dakkapel-schilderen" className="klus-h3">
+        Dakkapel schilderen
+      </h3>
+      <p>
+        Een dakkapel laten schilderen kost gemiddeld {dakkapel?.prijs}, afhankelijk van de grootte en de staat van het houtwerk. Een dakkapel
+        heeft eigen kozijnen, boeiboorden en vaak een zinken of houten bekleding, en al die onderdelen hebben onderhoud nodig. Omdat een
+        dakkapel hoog zit, loont het om hem samen met de kozijnen en boeidelen te laten schilderen: dat scheelt in steiger- of ladderkosten en
+        geeft een gelijk eindresultaat.
+      </p>
+      <h3 id="buitendeuren-schilderen" className="klus-h3">
+        Voordeur en buitendeuren schilderen
+      </h3>
+      <p>
+        Een voordeur, achterdeur of tuindeur schilderen kost gemiddeld {deuren?.prijs.replace(' /stuk', ' per deur')}. Buitendeuren worden
+        dagelijks gebruikt en vangen weer en wind, dus de voorbereiding weegt zwaar: schuren, houtrot herstellen, gronden en twee lagen
+        weerbestendige lak. Schildersbedrijf040 spreekt vooraf af op welke dag de deur geschilderd wordt, omdat lak tijd nodig heeft om te
+        drogen. Over de juiste kleur bij uw kozijnen en gevel denkt Schildersbedrijf040 graag mee.
+      </p>
+      <h2 id="buitenschilderwerk-in-de-regio" className="h-section mt-6 scroll-mt-28">
+        Buitenschilderwerk in Eindhoven en omgeving
+      </h2>
+      <p>
+        Schildersbedrijf040 is gevestigd in Eindhoven en doet buitenschilderwerk in de hele regio, van rijtjeswoningen tot vrijstaande
+        woningen met veel houtwerk. Lees meer over onze <Link href="/locaties/helmond">schilder in Helmond</Link>, het werk in{' '}
+        <Link href="/locaties/veldhoven">Veldhoven</Link>, <Link href="/locaties/best">Best</Link>,{' '}
+        <Link href="/locaties/nuenen">Nuenen</Link> en <Link href="/locaties/geldrop">Geldrop</Link>, of over{' '}
+        <Link href="/locaties/waalre">schilderwerk in Waalre</Link>. Overal geldt dezelfde werkwijze:{' '}
+        <Link href="/contact">een gratis inspectie</Link> met houtrotcontrole en een offerte met vaste prijs.
+      </p>
+    </>
+  ),
   soorten: {
     id: 'soorten-buitenschilderwerk',
     h2: 'Soorten buitenschilderwerk',

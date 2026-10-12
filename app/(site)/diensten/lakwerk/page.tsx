@@ -1,16 +1,20 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import { DienstTemplate, type DienstPagina } from '@/components/dienst/template'
 import { images } from '@/lib/images'
+import { prijzen } from '@/lib/prices'
 import { orgRef, serviceOffers } from '@/lib/schema'
 
 export const metadata: Metadata = {
-  title: 'Lakwerk Eindhoven | Kozijnen, Deuren & Trappen Vakkundig Gelakt',
+  title: 'Deuren en kozijnen lakken Eindhoven',
   description:
-    'Lakwerk door Schildersbedrijf040 in Eindhoven. Kozijnen, deuren en trappen professioneel gelakt met Boonstoppel lak. ✓ Hoogglans & zijdeglans ✓ Gratis offerte.',
+    'Deuren, kozijnen en trappen laten lakken in Eindhoven: binnendeur €80 tot €120, trap €350 tot €600, met Boonstoppel-lak. Gratis inspectie en vaste prijs.',
   keywords: [
     'lakwerk eindhoven',
     'kozijnen lakken eindhoven',
     'deuren lakken eindhoven',
+    'deuren lakken kosten',
+    'trap laten schilderen kosten',
     'trappen lakken',
     'lakwerk kosten',
     'schildersbedrijf eindhoven',
@@ -65,11 +69,38 @@ const faqs = [
       'Schildersbedrijf040 lakt radiatoren, verwarmingsbuizen en waterleidingen met speciale hittebestendige lak die niet verkleurt door warmte. De radiator wordt eerst geschuurd en ontvet, waarna een hechtprimer en twee lagen lakverf worden aangebracht. Een radiator lakken kost gemiddeld €80 tot €120 per stuk. Het lakwerk wordt uitgevoerd wanneer de verwarming uit staat, zodat de lak gelijkmatig droogt.',
   },
   {
+    question: 'Wat kost het om een binnendeur te laten lakken?',
+    answer:
+      'Een binnendeur laten lakken kost gemiddeld €80 tot €120 per deur, inclusief voorbereiding en Boonstoppel-lak en exclusief btw. Een buitendeur kost €100 tot €150, omdat buitenlak meer moet verdragen en de voorbereiding zwaarder is. De prijs hangt vooral af van de staat van de oude laklaag en het type deur: een paneeldeur met profielen vraagt meer schuur- en kwastwerk dan een vlakke deur. Laat u meerdere deuren tegelijk lakken, dan worden ze in één planning meegenomen. Na de gratis inspectie krijgt u een vaste prijs per deur.',
+  },
+  {
+    question: 'Wat kost het om een trap te laten lakken of schilderen?',
+    answer:
+      'Een trap laten lakken kost gemiddeld €350 tot €600, inclusief schuren, gronden en meerdere lagen slijtvaste lak, exclusief btw. Het aantal treden en de staat van het hout bepalen waar u in die bandbreedte uitkomt: een trap met veel slijtplekken vraagt meer schuurwerk. Een geschilderde trap is binnen 2 tot 3 dagen klaar. Schildersbedrijf040 werkt om en om, zodat u de trap tussendoor kunt blijven gebruiken. De exacte prijs hoort u na de gratis inspectie, in een offerte met vaste prijs.',
+  },
+  {
+    question: 'Kan ik mijn deuren ook zelf lakken?',
+    answer:
+      'Een binnendeur zelf lakken kan prima, als u de tijd neemt voor de voorbereiding. Haal de deur uit de sponning en leg hem horizontaal, schuur de oude laag mat, ontvet en gebruik grondverf waar het hout kaal is. Breng daarna twee dunne laklagen aan en schuur tussendoor licht met korrel 240, na minimaal 16 uur droogtijd. Bij buitendeuren, meerdere deuren of hoogglans loont vakwerk vaak, omdat elke oneffenheid in het grote vlak zichtbaar blijft. Het volledige stappenplan staat op de blog.',
+    link: { href: '/blog/hoe-schilder-je-een-deur', tekst: 'Lees hoe u een deur schildert zonder strepen.' },
+  },
+  {
     question: 'Geeft Schildersbedrijf040 garantie op lakwerk?',
     answer:
       'Schildersbedrijf040 geeft garantie op al het uitgevoerde lakwerk, zowel binnen als buiten. De garantie dekt het vakmanschap en de gebruikte materialen. Door te werken met Boonstoppel lak, die 8 tot 10 jaar bescherming biedt op binnenwerk, is de kans op problemen binnen de garantieperiode minimaal. Mocht er onverhoopt een gebrek optreden, dan herstelt Schildersbedrijf040 dit kosteloos.',
   },
 ]
+
+// Toelichting per regel in de prijstabel (regels zelf komen uit lib/prices.ts)
+const prijsFactoren: Record<string, string> = {
+  'Kozijnen lakken (binnen)': 'Staat van het hout, aantal lagen',
+  'Kozijnen lakken (buiten)': 'Houtrot, weersinvloeden, bereikbaarheid',
+  'Binnendeuren lakken': 'Vlakke deur of paneeldeur, oude laklaag',
+  'Buitendeuren lakken': 'Staat van de lak, weerkant, beslag',
+  'Trap lakken': 'Aantal treden, staat van het hout',
+  'Radiator lakken': 'Formaat, hittebestendige lak',
+  'Keukenkasten spuiten': 'Aantal fronten, ondergrond',
+}
 
 const werkwijzeStappen = [
   {
@@ -153,7 +184,8 @@ const breadcrumbSchema = {
 const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
-  mainEntity: faqs.map((faq) => ({
+  // Antwoorden met een open punt voor Jordy niet in het schema
+  mainEntity: faqs.filter((f) => !f.answer.includes('[JORDY')).map((faq) => ({
     '@type': 'Question',
     name: faq.question,
     acceptedAnswer: {
@@ -171,7 +203,8 @@ const pagina: DienstPagina = {
     <p>
       Kozijnen, deuren en trappen laten lakken kost gemiddeld €40 tot €55 per binnenkozijn, €80 tot €120 per binnendeur en €350 tot €600
       voor een trap, inclusief voorbereiding en Boonstoppel-lak. De lak is na 4 tot 6 uur stofdroog. Na een gratis inspectie krijgt u een
-      offerte met vaste prijs.
+      offerte met vaste prijs. Lakwerk binnen combineert u eenvoudig met{' '}
+      <Link href="/diensten/binnenschilderwerk">binnenschilderwerk aan muren en plafonds</Link>.
     </p>
   ),
   heroImg: images.lakKozijnen,
@@ -232,7 +265,51 @@ const pagina: DienstPagina = {
       </>
     ),
   },
-  extra: undefined,
+  extra: (
+    <>
+      <h2 id="prijzen-lakwerk-per-onderdeel" className="h-section mt-6 scroll-mt-28">
+        Wat kost deuren, kozijnen of een trap lakken?
+      </h2>
+      <p>
+        Een binnendeur laten lakken kost gemiddeld €80 tot €120, een binnenkozijn €40 tot €55 en een trap €350 tot €600. De tabel hieronder
+        geeft de indicatieve prijzen per onderdeel, inclusief voorbereiding en Boonstoppel-lak en exclusief btw. Waar u binnen een
+        bandbreedte uitkomt, hangt vooral af van de staat van de oude laklaag en de vorm van het houtwerk.
+      </p>
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Onderdeel</th>
+            <th scope="col">Waar de prijs van afhangt</th>
+            <th scope="col">Prijs</th>
+          </tr>
+        </thead>
+        <tbody>
+          {prijzen.lakwerk.map((r) => (
+            <tr key={r.wat}>
+              <td>{r.wat}</td>
+              <td>{prijsFactoren[r.wat]}</td>
+              <td>{r.prijs.replace(' /', ' per ').replace('m¹', 'meter')}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+      <p>
+        Buitenkozijnen vragen een andere aanpak dan binnenkozijnen: weersbestendige lak, controle op houtrot en vaak een ladder of steiger.
+        Daarover leest u meer bij <Link href="/diensten/kozijnen-schilderen">kozijnen laten schilderen</Link>. Wilt u weten wat het lakwerk in
+        uw woning kost? <Link href="/contact">Vraag een gratis inspectie aan</Link>, dan krijgt u een offerte met een vaste prijs per onderdeel.
+      </p>
+      <h2 id="zelf-een-deur-lakken" className="h-section mt-6 scroll-mt-28">
+        Zelf een deur lakken of laten doen?
+      </h2>
+      <p>
+        Een binnendeur zelf lakken is een goede klus voor wie geduld heeft: het resultaat staat of valt met schuren, ontvetten en dunne lagen.
+        Op de blog staat een stappenplan om{' '}
+        <Link href="/blog/hoe-schilder-je-een-deur">een deur te schilderen zonder strepen</Link>, van demonteren tot tussenschuren. Bij
+        buitendeuren, een hele verdieping met deuren en kozijnen of een trap kiezen de meeste huiseigenaren voor een schilder. Een trap moet
+        immers bruikbaar blijven tijdens het werk, en een voordeur moet ook na de laatste laklaag weer dicht kunnen.
+      </p>
+    </>
+  ),
   soorten: {
     id: 'soorten-lakwerk',
     h2: 'Soorten lakwerk',

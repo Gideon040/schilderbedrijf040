@@ -15,6 +15,25 @@ export function afbreek(t: string): string {
     .replace(/(kozijn|houtrot)(en)?(sanering|reparatie|schilderen)/gi, `$1$2${ZACHT}$3`)
 }
 
+// Tekst met interne links in de vorm [ankertekst](/pad), voor lopende tekst uit databestanden
+export function MetLinks({ tekst }: { tekst: string }) {
+  const delen = tekst.split(/(\[[^\]]+\]\([^)]+\))/g)
+  return (
+    <>
+      {delen.map((d, i) => {
+        const m = d.match(/^\[([^\]]+)\]\(([^)]+)\)$/)
+        return m ? (
+          <Link key={i} href={m[2]}>
+            {m[1]}
+          </Link>
+        ) : (
+          d
+        )
+      })}
+    </>
+  )
+}
+
 // Penseelstreek achter één woord in een H2 (tekent bij in beeld scrollen)
 export function Streek({ children }: { children: ReactNode }) {
   return <span className="p2">{typeof children === 'string' ? afbreek(children) : children}</span>
@@ -83,4 +102,6 @@ export const staal: Record<string, { c: string; code: string; label: string; don
   buitenschilderwerk: { c: 'var(--sw4)', code: '040-05', label: 'BUITEN', donker: true },
   lakwerk: { c: 'var(--sw6)', code: '040-06', label: 'LAKWERK', donker: true },
   winterschilder: { c: 'var(--sw4)', code: '040-07', label: 'WINTER', donker: true },
+  'kozijnen-schilderen': { c: 'var(--sw6)', code: '040-08', label: 'KOZIJNEN', donker: true },
+  'gevel-schilderen': { c: 'var(--sw4)', code: '040-09', label: 'GEVEL', donker: true },
 }

@@ -232,7 +232,7 @@
     "krijgt_links_van": [
       "/diensten/binnenschilderwerk"
     ],
-    "voortgang": "todo"
+    "voortgang": "concept"
   },
   {
     "nr": 7,
@@ -261,7 +261,7 @@
     "krijgt_links_van": [
       "/diensten/binnenschilderwerk"
     ],
-    "voortgang": "todo"
+    "voortgang": "concept"
   },
   {
     "nr": 8,
@@ -299,7 +299,7 @@
       "/diensten/latex-spuiten/[plaats] (2)",
       "/diensten/buitenschilderwerk/[plaats] (3)"
     ],
-    "voortgang": "todo",
+    "voortgang": "concept",
     "urls": [
       "/locaties/veldhoven",
       "/locaties/valkenswaard",
@@ -337,7 +337,7 @@
       "/diensten/binnenschilderwerk",
       "/diensten/winterschilder"
     ],
-    "voortgang": "todo"
+    "voortgang": "concept"
   },
   {
     "nr": 10,
@@ -396,7 +396,7 @@
     "krijgt_links_van": [
       "/"
     ],
-    "voortgang": "todo"
+    "voortgang": "concept"
   },
   {
     "nr": 12,
@@ -426,7 +426,7 @@
     "krijgt_links_van": [
       "/diensten/binnenschilderwerk"
     ],
-    "voortgang": "todo",
+    "voortgang": "concept",
     "urls": [
       "/blog/btw-tarief-schilderwerk",
       "/blog/hoe-schilder-je-een-deur",
@@ -458,7 +458,7 @@
       "/contact"
     ],
     "krijgt_links_van": [],
-    "voortgang": "todo",
+    "voortgang": "concept",
     "urls": [
       "/locaties/waalre",
       "/locaties/son-en-breugel",
@@ -498,7 +498,7 @@
     "krijgt_links_van": [
       "/diensten/latex-spuiten"
     ],
-    "voortgang": "todo"
+    "voortgang": "concept"
   },
   {
     "nr": 15,
@@ -579,7 +579,7 @@
       "/diensten/gevelreiniging-impregneren",
       "/diensten/buitenschilderwerk/[plaats] (3)"
     ],
-    "voortgang": "todo"
+    "voortgang": "concept"
   },
   {
     "nr": 17,
@@ -621,7 +621,7 @@
       "/locaties/ (3 nieuwe plaatsen)",
       "/diensten/buitenschilderwerk/[plaats] (3)"
     ],
-    "voortgang": "todo"
+    "voortgang": "concept"
   },
   {
     "nr": 18,
@@ -653,7 +653,7 @@
       "/diensten/kitwerk",
       "/blog/houtrot-herkennen-voorkomen"
     ],
-    "voortgang": "todo"
+    "voortgang": "concept"
   },
   {
     "nr": 19,
@@ -745,7 +745,7 @@
       "/diensten/buitenschilderwerk",
       "/diensten/gevelreiniging-impregneren"
     ],
-    "voortgang": "todo"
+    "voortgang": "concept"
   },
   {
     "nr": 22,
@@ -773,7 +773,7 @@
     "krijgt_links_van": [
       "/diensten/buitenschilderwerk"
     ],
-    "voortgang": "todo"
+    "voortgang": "concept"
   },
   {
     "nr": 23,
@@ -857,7 +857,7 @@
     "krijgt_links_van": [
       "/diensten/buitenschilderwerk"
     ],
-    "voortgang": "todo"
+    "voortgang": "concept"
   },
   {
     "nr": 26,
@@ -883,7 +883,7 @@
     "krijgt_links_van": [
       "/diensten/kitwerk"
     ],
-    "voortgang": "todo"
+    "voortgang": "concept"
   },
   {
     "nr": 27,
@@ -910,7 +910,7 @@
     "krijgt_links_van": [
       "/diensten/kozijnen-schilderen"
     ],
-    "voortgang": "todo"
+    "voortgang": "concept"
   },
   {
     "nr": 28,

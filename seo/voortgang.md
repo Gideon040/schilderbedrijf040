@@ -9,28 +9,28 @@ Status: `todo` → `concept` → `review Jordy` → `live`. Houd dit bestand bij
 | 3 | Oktober | B | Winterschilder: binnenwerk in de winter | `/diensten/winterschilder` | concept | Nieuw. `content/nieuw/03-winter.md`. 1.260 woorden. GEO 1 en 2. Open: wachttijd, winteractie, feestdagen. |
 | 4 | Oktober | B | Latex spuiten | `/diensten/latex-spuiten` | concept | `content/optimaliseren/04-latex.md`. 2.016 woorden. GEO 4. Open: m² per dag. |
 | 5 | November | B | Wat kost schilderwerk? (prijsgids) | `/kosten/schilderwerk` | todo | scopecheck |
-| 6 | November | B | Lakwerk | `/diensten/lakwerk` | todo |  |
-| 7 | November | B | Behangen | `/diensten/behangen` | todo |  |
-| 8 | November | B | Veldhoven, Valkenswaard, Helmond, Best, Geldrop, Nuenen | `/locaties/ (6 plaatsen)` | todo |  |
-| 9 | November | B | Hoe lang duurt binnenschilderwerk? | `/blog/hoe-lang-duurt-binnenschilderwerk` | todo |  |
+| 6 | November | B | Lakwerk | `/diensten/lakwerk` | concept | `content/optimaliseren/06-lakwerk.md`. +600 woorden: prijstabel per onderdeel, "Zelf een deur lakken of laten doen?", 3 FAQ's. Open: lakprijzen spreken elkaar tegen (tekst €35 tot €75 kozijn / €100 tot €150 deur, tabel €40 tot €55 / €80 tot €120, deurblog €150 tot €200). |
+| 7 | November | B | Behangen | `/diensten/behangen` | concept | `content/optimaliseren/07-behangen.md`. +500 woorden: "Behang verwijderen en daarna verven", 3 FAQ's (o.a. behanger Helmond). Open: prijs per rol. |
+| 8 | November | B | Veldhoven, Valkenswaard, Helmond, Best, Geldrop, Nuenen | `/locaties/ (6 plaatsen)` | concept | `content/optimaliseren/08-loc6.md`. Per plaats intro, 3 wijkkaarten, 3 alinea's (234 tot 291 woorden) en unieke meta description, met bronnen. Open: project per plaats; Nuenen dorpsgezicht-grens nalopen. |
+| 9 | November | B | Hoe lang duurt binnenschilderwerk? | `/blog/hoe-lang-duurt-binnenschilderwerk` | concept (wacht op Sanity) | `content/nieuw/09-b-duur.md`, `scripts/create-blog-hoe-lang-duurt-binnenschilderwerk.mjs`. 947 woorden + 4 FAQ. GEO 6. Token in `.env.local` is alleen-lezen: draaien met Editor-token. Open: doorlooptijden bevestigen. |
 | 10 | November | M | Latex spuiten Helmond en Veldhoven | `/diensten/latex-spuiten/[plaats] (2)` | todo |  |
-| 11 | December | B | Projecten | `/projecten` | todo |  |
-| 12 | December | B | Bestaande binnenblogs bijwerken | `/blog/ (5 bestaande)` | todo |  |
-| 13 | December | B | Overige 11 locatiepagina's | `/locaties/ (11 plaatsen)` | todo |  |
-| 14 | December | P | Latex spuiten of rollen? | `/blog/latex-spuiten-of-rollen` | todo |  |
+| 11 | December | B | Projecten | `/projecten` | concept | `content/optimaliseren/11-projecten.md`. Filter per dienst en plaats, blok "Ons werk in de regio" met links. Open: projectcases (foto's, plaats, quote) en plaats bij 3 projecten. |
+| 12 | December | B | Bestaande binnenblogs bijwerken | `/blog/ (5 bestaande)` | concept (wacht op Sanity) | `content/optimaliseren/12-blogs5.md`, `scripts/update-blog-blogs5.mjs`. Direct antwoord bovenaan, "Liever laten doen?", 63 dashes weg. Btw-blog: fout gevonden (materiaal valt ook onder 9%), gecorrigeerd in concept met bron Belastingdienst. Draaien met Editor-token. |
+| 13 | December | B | Overige 11 locatiepagina's | `/locaties/ (11 plaatsen)` | concept | `content/optimaliseren/13-loc11.md`. Per plaats intro, 3 wijkkaarten, alinea's (206 tot 241 woorden) en unieke meta description, met bronnen. Open: superlatieven/reviewcijfers in bestaande intro's van 5 plaatsen; 3 bestaande feitjes wijken af van bronnen (zie md). |
+| 14 | December | P | Latex spuiten of rollen? | `/blog/latex-spuiten-of-rollen` | concept (wacht op Sanity) | `content/nieuw/14-b-latex.md`, script klaar. 937 woorden + 3 FAQ. GEO 5. |
 | 15 | December | M | Wijkpagina's Woensel en Stratum | `/locaties/eindhoven-[wijk] (2)` | todo |  |
-| 16 | Januari | B | Buitenschilderwerk (hub) | `/diensten/buitenschilderwerk` | todo |  |
-| 17 | Januari | B | Kozijnen schilderen | `/diensten/kozijnen-schilderen` | todo |  |
-| 18 | Januari | B | Houtrot herstellen | `/diensten/houtrot-sanering` | todo |  |
+| 16 | Januari | B | Buitenschilderwerk (hub) | `/diensten/buitenschilderwerk` | concept | `content/optimaliseren/16-buiten.md`. +850 woorden: "Alle buitenklussen" (tegels kozijnen, gevel, houtrot, kitwerk zonder link), boeidelen/dakkapellen/buitendeuren, regio met 6 plaatsen, 2 FAQ's. Links naar 2 buitenblogs verschijnen zodra die live zijn (`BLOGS_LIVE`). |
+| 17 | Januari | B | Kozijnen schilderen | `/diensten/kozijnen-schilderen` | concept | Nieuw. `content/nieuw/17-kozijnen.md`. Ca. 1.430 woorden, 5 FAQ's. GEO 11. Open: prijs klein/groot kozijn, kitwerk in prijs, kunststof/aluminium, project. |
+| 18 | Januari | B | Houtrot herstellen | `/diensten/houtrot-sanering` | concept | `content/optimaliseren/18-houtrot.md`. +450 woorden: "Houtrot herkennen" en "Repareren of vervangen?" met prijstabel. Open: foto's houtrot; claims "70% goedkoper" en "80% van de gevallen" onderbouwen. |
 | 19 | Januari | P | Drie nieuwe plaatsen (keuze Jordy) | `/locaties/ (3 nieuwe plaatsen)` | todo | scopecheck |
 | 20 | Februari | B | Kitwerk en kitnaden vervangen | `/diensten/kitwerk` | todo | scopecheck |
-| 21 | Februari | B | Gevel schilderen | `/diensten/gevel-schilderen` | todo |  |
-| 22 | Februari | B | Wanneer kun je het beste buiten schilderen? | `/blog/wanneer-buiten-schilderen` | todo |  |
+| 21 | Februari | B | Gevel schilderen | `/diensten/gevel-schilderen` | concept | Nieuw. `content/nieuw/21-gevel.md`. Ca. 1.510 woorden, 5 FAQ's, baksteen eerlijk besproken, vergunning/VvE met bronnen. Open: gevelverf, steiger, reiniging, doorlooptijd, project. |
+| 22 | Februari | B | Wanneer kun je het beste buiten schilderen? | `/blog/wanneer-buiten-schilderen` | concept (wacht op Sanity) | `content/nieuw/22-b-wanneer.md`, script klaar. 924 woorden + 3 FAQ. GEO 12. |
 | 23 | Februari | P | Onderhoudsschilderwerk | `/diensten/onderhoudsschilderwerk` | todo | scopecheck |
 | 24 | Februari | M | Overige drie nieuwe plaatsen | `/locaties/ (3 nieuwe plaatsen)` | todo | scopecheck |
-| 25 | Maart | B | Hoe vaak moet je buitenschilderwerk laten doen? | `/blog/hoe-vaak-buitenschilderwerk` | todo |  |
-| 26 | Maart | P | Kitnaden vervangen: zelf doen of laten doen? | `/blog/kitnaden-vervangen` | todo |  |
-| 27 | Maart | P | Beitsen of lakken: wat past bij je kozijnen? | `/blog/beitsen-of-lakken` | todo |  |
+| 25 | Maart | B | Hoe vaak moet je buitenschilderwerk laten doen? | `/blog/hoe-vaak-buitenschilderwerk` | concept (wacht op Sanity) | `content/nieuw/25-b-hoevaak.md`, script klaar. 928 woorden + 3 FAQ. Open: 6 tot 10 jaar (blog) vs 8 tot 10 jaar (dienstpagina) afstemmen. |
+| 26 | Maart | P | Kitnaden vervangen: zelf doen of laten doen? | `/blog/kitnaden-vervangen` | concept (wacht op Sanity) | `content/nieuw/26-b-kit.md`, script klaar. 953 woorden + 4 FAQ. Linkt (nog) niet naar kitwerk. |
+| 27 | Maart | P | Beitsen of lakken: wat past bij je kozijnen? | `/blog/beitsen-of-lakken` | concept (wacht op Sanity) | `content/nieuw/27-b-beits.md`, script klaar. 921 woorden + 3 FAQ. Open: prijs beitsen, Boonstoppel-producten. |
 | 28 | Maart | M | Gevel reinigen en impregneren | `/diensten/gevelreiniging-impregneren` | todo | scopecheck |
 | 29 | Maart | M | Buitenschilderwerk Helmond, Veldhoven, Best | `/diensten/buitenschilderwerk/[plaats] (3)` | todo | scopecheck |
 | 30 | Maart | M | Houtrot herkennen en voorkomen | `/blog/houtrot-herkennen-voorkomen` | todo |  |

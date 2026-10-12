@@ -1,5 +1,7 @@
 import type { SiteImage } from '@/lib/images'
 import { images } from '@/lib/images'
+import { lokaal08 } from './data-lokaal-08'
+import { lokaal13 } from './data-lokaal-13'
 
 // Lokaal blok per plaats (2.7). Alleen geverifieerde feiten, met bron.
 // Plaatsen zonder lokaal blok tonen hun wijken als lijst; de wijkkaarten volgen met briefing 08 (november) en 13 (december).
@@ -7,9 +9,14 @@ export type Lokaal = {
   tekst: string
   wijken: { label: string; naam: string; tekst: string }[]
   bronnen: string[]
+  // Briefing 08/13: extra alinea's onder de wijkkaarten (200 tot 300 woorden samen met tekst).
+  // Interne links als [ankertekst](/pad).
+  alineas?: string[]
+  // Unieke meta description per plaats (140 tot 160 tekens). De title volgt het vaste format.
+  metaDescription?: string
 }
 
-export const lokaal: Record<string, Lokaal> = {
+const basis: Record<string, Lokaal> = {
   helmond: {
     tekst:
       'Helmond groeide in een paar golven: in de jaren tachtig kwamen er als groeistad duizenden woningen bij in het oosten van de stad, in de jaren negentig volgde Dierdonk en vanaf 1997 Brandevoort. Daardoor staan er in Helmond woningen van heel verschillende leeftijd naast elkaar. Dat vraagt per wijk een andere aanpak: bij jongere woningen gaat het vaak om strak binnenwerk, bij woningen van rond de veertig jaar oud om onderhoud van kozijnen en ander buitenhoutwerk.',
@@ -40,6 +47,9 @@ export const lokaal: Record<string, Lokaal> = {
     ],
   },
 }
+
+// Briefing 08 (zes belangrijkste plaatsen) en 13 (overige elf) staan in eigen bestanden.
+export const lokaal: Record<string, Lokaal> = { ...basis, ...lokaal08, ...lokaal13 }
 
 // Buurplaatsen (blok "Ook actief rond ...")
 export const buren: Record<string, string[]> = {

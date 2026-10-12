@@ -14,31 +14,31 @@ Gemeten met `textContent` van de pagina zonder header, footer en mobiele balk (d
 | `/over-ons` | 161 | 168 | 366 | in orde |
 | `/contact` | 60 | 67 | 79 | in orde |
 | `/faq` | 82 | 442 | 501 | in orde |
-| `/projecten` | 48 | 54 | 108 | in orde |
-| `/diensten/binnenschilderwerk` | 1651 | 1850 | 2015 | in orde |
-| `/diensten/buitenschilderwerk` | 1687 | 1669 | 1846 | in orde |
-| `/diensten/behangen` | 1680 | 1649 | 1823 | in orde |
-| `/diensten/houtrot-sanering` | 1891 | 1868 | 2050 | in orde |
-| `/diensten/lakwerk` | 1698 | 1687 | 1861 | in orde |
-| `/diensten/latex-spuiten` | 1613 | 1847 | 2019 | in orde |
-| `/diensten/winterschilder` | - | 1079 | 1172 | in orde |
-| `/locaties/waalre` | 1166 | 1019 | 1279 | in orde |
-| `/locaties/veldhoven` | 1100 | 956 | 1215 | in orde |
-| `/locaties/geldrop` | 1063 | 910 | 1169 | in orde |
-| `/locaties/nuenen` | 1087 | 942 | 1201 | in orde |
-| `/locaties/best` | 1077 | 930 | 1190 | in orde |
-| `/locaties/son-en-breugel` | 1155 | 1024 | 1291 | in orde |
-| `/locaties/helmond` | 1099 | 1118 | 1378 | in orde |
-| `/locaties/valkenswaard` | 1200 | 1054 | 1316 | in orde |
-| `/locaties/oirschot` | 1185 | 1036 | 1297 | in orde |
-| `/locaties/heeze` | 1160 | 1016 | 1275 | in orde |
-| `/locaties/mierlo` | 1192 | 1048 | 1308 | in orde |
-| `/locaties/meerhoven` | 1186 | 1038 | 1299 | in orde |
-| `/locaties/deurne` | 1191 | 1045 | 1305 | in orde |
-| `/locaties/beek-en-donk` | 1205 | 1080 | 1348 | in orde |
-| `/locaties/eersel` | 1172 | 1026 | 1286 | in orde |
-| `/locaties/bergeijk` | 1156 | 1009 | 1269 | in orde |
-| `/locaties/maarheeze` | 1153 | 1007 | 1266 | in orde |
+| `/projecten` | 48 | 54 | 240 | in orde |
+| `/diensten/binnenschilderwerk` | 1651 | 1850 | 2016 | in orde |
+| `/diensten/buitenschilderwerk` | 1687 | 1669 | 2433 | in orde |
+| `/diensten/behangen` | 1680 | 1649 | 2283 | in orde |
+| `/diensten/houtrot-sanering` | 1891 | 1868 | 2425 | in orde |
+| `/diensten/lakwerk` | 1698 | 1687 | 2416 | in orde |
+| `/diensten/latex-spuiten` | 1613 | 1847 | 2021 | in orde |
+| `/diensten/winterschilder` | - | 1079 | 1174 | in orde |
+| `/locaties/waalre` | 1166 | 1019 | 1618 | in orde |
+| `/locaties/veldhoven` | 1100 | 956 | 1550 | in orde |
+| `/locaties/geldrop` | 1063 | 910 | 1515 | in orde |
+| `/locaties/nuenen` | 1087 | 942 | 1566 | in orde |
+| `/locaties/best` | 1077 | 930 | 1541 | in orde |
+| `/locaties/son-en-breugel` | 1155 | 1024 | 1628 | in orde |
+| `/locaties/helmond` | 1099 | 1118 | 1590 | in orde |
+| `/locaties/valkenswaard` | 1200 | 1054 | 1652 | in orde |
+| `/locaties/oirschot` | 1185 | 1036 | 1638 | in orde |
+| `/locaties/heeze` | 1160 | 1016 | 1596 | in orde |
+| `/locaties/mierlo` | 1192 | 1048 | 1644 | in orde |
+| `/locaties/meerhoven` | 1186 | 1038 | 1635 | in orde |
+| `/locaties/deurne` | 1191 | 1045 | 1639 | in orde |
+| `/locaties/beek-en-donk` | 1205 | 1080 | 1666 | in orde |
+| `/locaties/eersel` | 1172 | 1026 | 1615 | in orde |
+| `/locaties/bergeijk` | 1156 | 1009 | 1600 | in orde |
+| `/locaties/maarheeze` | 1153 | 1007 | 1591 | in orde |
 | `/blog` | 213 | 223 | 268 | in orde |
 | `/blog/btw-tarief-schilderwerk` | 1072 | 1080 | 1174 | in orde |
 | `/blog/hoe-schilder-je-een-deur` | 1624 | 1632 | 1745 | in orde |
@@ -236,10 +236,11 @@ Geen: elke kop en elk tekstblok van main en voor staat op de nieuwe pagina's, en
 
 </details>
 
-<details><summary><code>/projecten</code> (4 koppen)</summary>
+<details><summary><code>/projecten</code> (5 koppen)</summary>
 
 - H1 Onzeprojecten
 - H2 Laatste Projecten
+- H2 Ons werk in de regio
 - H2 Benieuwd wat uw klus kost?
 - H3 Offerte aanvragen
 
@@ -295,11 +296,17 @@ Geen: elke kop en elk tekstblok van main en voor staat op de nieuwe pagina's, en
 
 </details>
 
-<details><summary><code>/diensten/buitenschilderwerk</code> (41 koppen)</summary>
+<details><summary><code>/diensten/buitenschilderwerk</code> (49 koppen)</summary>
 
 - H1 Buitenschilderwerk in Eindhoven
 - H2 Waarom is buitenschilderwerk zo belangrijk?
 - H2 Wat kost buitenschilderwerk?
+- H2 Alle buitenklussen
+- H2 Boeidelen, dakkapellen en buitendeuren
+- H3 Boeidelen schilderen
+- H3 Dakkapel schilderen
+- H3 Voordeur en buitendeuren schilderen
+- H2 Buitenschilderwerk in Eindhoven en omgeving
 - H3 Prijzen buitenschilderwerk
 - H2 Soorten buitenschilderwerk
 - H3 Kozijnen & deuren
@@ -334,6 +341,8 @@ Geen: elke kop en elk tekstblok van main en voor staat op de nieuwe pagina's, en
 - H3 Welke verf gebruikt Schildersbedrijf040 voor buitenschilderwerk?
 - H3 Kan buitenschilderwerk ook in het najaar uitgevoerd worden?
 - H3 Hoe bereid ik mijn woning voor op buitenschilderwerk?
+- H3 Vernieuwt Schildersbedrijf040 ook de kitnaden bij buitenschilderwerk?
+- H3 Hoe ver van tevoren plant u buitenschilderwerk in?
 - H2 Combineer met
 - H2 Buitenschilderwerk bij u in de buurt
 - H2 Bescherm uw woning tegen de elementen
@@ -341,11 +350,12 @@ Geen: elke kop en elk tekstblok van main en voor staat op de nieuwe pagina's, en
 
 </details>
 
-<details><summary><code>/diensten/behangen</code> (41 koppen)</summary>
+<details><summary><code>/diensten/behangen</code> (45 koppen)</summary>
 
 - H1 Behangen in Eindhoven
 - H2 Wat is professioneel behangen?
 - H2 Wat kost behangen?
+- H2 Behang verwijderen en daarna verven
 - H3 Prijzen behangen
 - H2 Soorten behang
 - H3 Vliesbehang
@@ -379,6 +389,9 @@ Geen: elke kop en elk tekstblok van main en voor staat op de nieuwe pagina's, en
 - H3 Kan Schildersbedrijf040 ook glasvezelbehang aanbrengen en overschilderen?
 - H3 Moet de muur voorbehandeld worden voor behangen?
 - H3 Wat is het verschil tussen vliesbehang en vinylbehang?
+- H3 Hoeveel rollen behang heb ik nodig per m² muur?
+- H3 Kan ik behangen en schilderen in één klus laten doen?
+- H3 Werkt de behanger van Schildersbedrijf040 ook in Helmond?
 - H3 Geeft Schildersbedrijf040 garantie op behangwerk?
 - H2 Combineer met
 - H2 Behangen bij u in de buurt
@@ -387,11 +400,13 @@ Geen: elke kop en elk tekstblok van main en voor staat op de nieuwe pagina's, en
 
 </details>
 
-<details><summary><code>/diensten/houtrot-sanering</code> (41 koppen)</summary>
+<details><summary><code>/diensten/houtrot-sanering</code> (43 koppen)</summary>
 
 - H1 Houtrot sanering in Eindhoven
 - H2 Wat is houtrot en waarom is sanering urgent?
 - H2 Wat kost houtrot sanering?
+- H2 Houtrot herkennen: waar zit het in een kozijn?
+- H2 Houtrot repareren of het kozijn vervangen?
 - H3 Prijzen houtrot sanering
 - H2 Soorten houtrot sanering
 - H3 Kozijnen repareren
@@ -433,11 +448,13 @@ Geen: elke kop en elk tekstblok van main en voor staat op de nieuwe pagina's, en
 
 </details>
 
-<details><summary><code>/diensten/lakwerk</code> (41 koppen)</summary>
+<details><summary><code>/diensten/lakwerk</code> (46 koppen)</summary>
 
 - H1 Lakwerk in Eindhoven
 - H2 Wat is professioneel lakwerk?
 - H2 Wat kost lakwerk?
+- H2 Wat kost deuren, kozijnen of een trap lakken?
+- H2 Zelf een deur lakken of laten doen?
 - H3 Prijzen lakwerk
 - H2 Soorten lakwerk
 - H3 Kozijnen lakken
@@ -471,6 +488,9 @@ Geen: elke kop en elk tekstblok van main en voor staat op de nieuwe pagina's, en
 - H3 Hoeveel kost het om kozijnen te laten lakken in Eindhoven?
 - H3 Hoe vaak moeten kozijnen en deuren opnieuw gelakt worden?
 - H3 Kan Schildersbedrijf040 ook radiatoren en leidingen lakken?
+- H3 Wat kost het om een binnendeur te laten lakken?
+- H3 Wat kost het om een trap te laten lakken of schilderen?
+- H3 Kan ik mijn deuren ook zelf lakken?
 - H3 Geeft Schildersbedrijf040 garantie op lakwerk?
 - H2 Combineer met
 - H2 Lakwerk bij u in de buurt
@@ -569,10 +589,93 @@ Geen: elke kop en elk tekstblok van main en voor staat op de nieuwe pagina's, en
 
 </details>
 
-<details><summary><code>/locaties/waalre</code> (34 koppen)</summary>
+<details><summary><code>/diensten/kozijnen-schilderen</code> (34 koppen)</summary>
+
+- H1 Kozijnen schilderen in Eindhoven
+- H2 Wanneer moeten uw kozijnen geschilderd worden?
+- H2 Wat kost kozijnen schilderen per kozijn?
+- H2 Kozijnen schilderen, herstellen of vervangen?
+- H2 Gratis offerte voor uw kozijnen
+- H3 Prijzen buitenschilderwerk
+- H2 Wat hoort er bij het schilderen van kozijnen?
+- H3 Houtrot herstellen
+- H3 Het hele huis buiten
+- H2 Kozijnen schilderen: voor en na
+- H2 Hoe worden uw kozijnen geschilderd?
+- H3 Inspectie en houtrotcheck
+- H3 Schrapen, schuren en herstellen
+- H3 Gronden en kitwerk
+- H3 Aflakken en oplevering
+- H2 Waarom uw kozijnen laten schilderen door Schildersbedrijf040?
+- H3 5,0 op Google
+- H3 Houtrotcheck
+- H3 Boonstoppel-verf
+- H3 Vaste prijs per kozijn
+- H2 Klanten over ons kozijnen schilderen
+- H3 5,0 op Google
+- H3 4,9 op Werkspot
+- H2 Vragen over kozijnen schilderen
+- H3 Nog vragen?
+- H3 Waarom bladdert de verf op mijn kozijnen na een paar jaar alweer?
+- H3 Kan ik alleen de kozijnen aan de zon- en regenkant laten schilderen?
+- H3 Mag ik mijn kozijnen in een andere kleur laten schilderen?
+- H3 Kunnen de ramen dicht als de kozijnen net geschilderd zijn?
+- H3 Schildert Schildersbedrijf040 ook kunststof of aluminium kozijnen?
+- H2 Combineer met
+- H2 Kozijnen schilderen bij u in de buurt
+- H2 Kozijnen laten schilderen?
+- H3 Offerte aanvragen
+
+</details>
+
+<details><summary><code>/diensten/gevel-schilderen</code> (36 koppen)</summary>
+
+- H1 Gevel schilderen in Eindhoven
+- H2 Welke gevels kunnen geschilderd worden?
+- H2 Wat kost gevel schilderen per m², inclusief steiger?
+- H2 Kun je een bakstenen gevel beter niet schilderen?
+- H2 Heeft u toestemming nodig van de gemeente of de VvE?
+- H2 Gratis offerte voor uw gevel
+- H3 Prijzen buitenschilderwerk
+- H2 Wat kunt u combineren met de gevel?
+- H3 Kozijnen en boeidelen
+- H3 Prijzen buitenwerk
+- H3 Gratis inspectie
+- H2 Gevel schilderen: voor en na
+- H2 Hoe wordt uw gevel geschilderd?
+- H3 Inspectie van de ondergrond
+- H3 Reinigen en herstellen
+- H3 Afplakken en gronden
+- H3 Schilderen en oplevering
+- H2 Waarom uw gevel laten schilderen door Schildersbedrijf040?
+- H3 5,0 op Google
+- H3 Eerlijk advies
+- H3 Boonstoppel-verf
+- H3 Vaste prijs
+- H2 Klanten over ons gevel schilderen
+- H3 5,0 op Google
+- H3 4,9 op Werkspot
+- H2 Vragen over gevel schilderen
+- H3 Nog vragen?
+- H3 Kan een gevel met groene aanslag zomaar overgeschilderd worden?
+- H3 Kan ik een geschilderde gevel later weer terugbrengen naar kale baksteen?
+- H3 Welke kleur kiest u voor een geschilderde gevel?
+- H3 Is er een vergunning nodig als de steiger op de stoep staat?
+- H3 Hoe lang duurt het schilderen van een gevel?
+- H2 Combineer met
+- H2 Gevel schilderen bij u in de buurt
+- H2 Gevel laten schilderen?
+- H3 Offerte aanvragen
+
+</details>
+
+<details><summary><code>/locaties/waalre</code> (37 koppen)</summary>
 
 - H1 Schilder in Waalre
 - H2 Binnen- en buitenschilderwerk in Waalre
+- H3 Loon
+- H3 Waalre-dorp
+- H3 Ekenrooi (Aalst)
 - H2 Schilderdiensten in Waalre
 - H3 Binnenschilderwerk
 - H3 Buitenschilderwerk
@@ -608,10 +711,13 @@ Geen: elke kop en elk tekstblok van main en voor staat op de nieuwe pagina's, en
 
 </details>
 
-<details><summary><code>/locaties/veldhoven</code> (34 koppen)</summary>
+<details><summary><code>/locaties/veldhoven</code> (37 koppen)</summary>
 
 - H1 Schilder in Veldhoven
 - H2 Binnen- en buitenschilderwerk in Veldhoven
+- H3 Zonderwijk
+- H3 Heikant
+- H3 Zilverackers
 - H2 Schilderdiensten in Veldhoven
 - H3 Binnenschilderwerk
 - H3 Buitenschilderwerk
@@ -647,10 +753,13 @@ Geen: elke kop en elk tekstblok van main en voor staat op de nieuwe pagina's, en
 
 </details>
 
-<details><summary><code>/locaties/geldrop</code> (34 koppen)</summary>
+<details><summary><code>/locaties/geldrop</code> (37 koppen)</summary>
 
 - H1 Schilder in Geldrop
 - H2 Binnen- en buitenschilderwerk in Geldrop
+- H3 Geldrop-Centrum
+- H3 Coevering
+- H3 Zesgehuchten
 - H2 Schilderdiensten in Geldrop
 - H3 Binnenschilderwerk
 - H3 Buitenschilderwerk
@@ -686,10 +795,13 @@ Geen: elke kop en elk tekstblok van main en voor staat op de nieuwe pagina's, en
 
 </details>
 
-<details><summary><code>/locaties/nuenen</code> (34 koppen)</summary>
+<details><summary><code>/locaties/nuenen</code> (37 koppen)</summary>
 
 - H1 Schilder in Nuenen
 - H2 Binnen- en buitenschilderwerk in Nuenen
+- H3 Park en Berg
+- H3 Gerwen
+- H3 Nederwetten
 - H2 Schilderdiensten in Nuenen
 - H3 Binnenschilderwerk
 - H3 Buitenschilderwerk
@@ -725,10 +837,13 @@ Geen: elke kop en elk tekstblok van main en voor staat op de nieuwe pagina's, en
 
 </details>
 
-<details><summary><code>/locaties/best</code> (34 koppen)</summary>
+<details><summary><code>/locaties/best</code> (37 koppen)</summary>
 
 - H1 Schilder in Best
 - H2 Binnen- en buitenschilderwerk in Best
+- H3 Batadorp
+- H3 Hoge Akker
+- H3 Heivelden
 - H2 Schilderdiensten in Best
 - H3 Binnenschilderwerk
 - H3 Buitenschilderwerk
@@ -764,10 +879,13 @@ Geen: elke kop en elk tekstblok van main en voor staat op de nieuwe pagina's, en
 
 </details>
 
-<details><summary><code>/locaties/son-en-breugel</code> (34 koppen)</summary>
+<details><summary><code>/locaties/son-en-breugel</code> (37 koppen)</summary>
 
 - H1 Schilder in Son en Breugel
 - H2 Binnen- en buitenschilderwerk in Son en Breugel
+- H3 De Gentiaan
+- H3 Breugel
+- H3 Kerkplein Son
 - H2 Schilderdiensten in Son en Breugel
 - H3 Binnenschilderwerk
 - H3 Buitenschilderwerk
@@ -845,10 +963,13 @@ Geen: elke kop en elk tekstblok van main en voor staat op de nieuwe pagina's, en
 
 </details>
 
-<details><summary><code>/locaties/valkenswaard</code> (34 koppen)</summary>
+<details><summary><code>/locaties/valkenswaard</code> (37 koppen)</summary>
 
 - H1 Schilder in Valkenswaard
 - H2 Binnen- en buitenschilderwerk in Valkenswaard
+- H3 Valkenswaard-Centrum
+- H3 Dommelen
+- H3 Borkel en Schaft
 - H2 Schilderdiensten in Valkenswaard
 - H3 Binnenschilderwerk
 - H3 Buitenschilderwerk
@@ -884,10 +1005,13 @@ Geen: elke kop en elk tekstblok van main en voor staat op de nieuwe pagina's, en
 
 </details>
 
-<details><summary><code>/locaties/oirschot</code> (34 koppen)</summary>
+<details><summary><code>/locaties/oirschot</code> (37 koppen)</summary>
 
 - H1 Schilder in Oirschot
 - H2 Binnen- en buitenschilderwerk in Oirschot
+- H3 Markt
+- H3 Middelbeers en Oostelbeers
+- H3 Spoordonk
 - H2 Schilderdiensten in Oirschot
 - H3 Binnenschilderwerk
 - H3 Buitenschilderwerk
@@ -923,10 +1047,13 @@ Geen: elke kop en elk tekstblok van main en voor staat op de nieuwe pagina's, en
 
 </details>
 
-<details><summary><code>/locaties/heeze</code> (34 koppen)</summary>
+<details><summary><code>/locaties/heeze</code> (37 koppen)</summary>
 
 - H1 Schilder in Heeze
 - H2 Binnen- en buitenschilderwerk in Heeze
+- H3 Weibossen, Engelse Tuin en Nieuwe Hoeven
+- H3 Heeze-centrum
+- H3 Leende
 - H2 Schilderdiensten in Heeze
 - H3 Binnenschilderwerk
 - H3 Buitenschilderwerk
@@ -962,10 +1089,13 @@ Geen: elke kop en elk tekstblok van main en voor staat op de nieuwe pagina's, en
 
 </details>
 
-<details><summary><code>/locaties/mierlo</code> (34 koppen)</summary>
+<details><summary><code>/locaties/mierlo</code> (37 koppen)</summary>
 
 - H1 Schilder in Mierlo
 - H2 Binnen- en buitenschilderwerk in Mierlo
+- H3 Het Broek
+- H3 Luchen, Loeswijk en Trimpert
+- H3 Mierlo-dorp
 - H2 Schilderdiensten in Mierlo
 - H3 Binnenschilderwerk
 - H3 Buitenschilderwerk
@@ -1001,10 +1131,13 @@ Geen: elke kop en elk tekstblok van main en voor staat op de nieuwe pagina's, en
 
 </details>
 
-<details><summary><code>/locaties/meerhoven</code> (34 koppen)</summary>
+<details><summary><code>/locaties/meerhoven</code> (37 koppen)</summary>
 
 - H1 Schilder in Meerhoven
 - H2 Binnen- en buitenschilderwerk in Meerhoven
+- H3 Waterrijk
+- H3 Bosrijk
+- H3 Grasrijk, Zandrijk en Meerrijk
 - H2 Schilderdiensten in Meerhoven
 - H3 Binnenschilderwerk
 - H3 Buitenschilderwerk
@@ -1040,10 +1173,13 @@ Geen: elke kop en elk tekstblok van main en voor staat op de nieuwe pagina's, en
 
 </details>
 
-<details><summary><code>/locaties/deurne</code> (34 koppen)</summary>
+<details><summary><code>/locaties/deurne</code> (37 koppen)</summary>
 
 - H1 Schilder in Deurne
 - H2 Binnen- en buitenschilderwerk in Deurne
+- H3 Helenaveen
+- H3 Liessel
+- H3 Deurne-dorp
 - H2 Schilderdiensten in Deurne
 - H3 Binnenschilderwerk
 - H3 Buitenschilderwerk
@@ -1079,10 +1215,13 @@ Geen: elke kop en elk tekstblok van main en voor staat op de nieuwe pagina's, en
 
 </details>
 
-<details><summary><code>/locaties/beek-en-donk</code> (34 koppen)</summary>
+<details><summary><code>/locaties/beek-en-donk</code> (37 koppen)</summary>
 
 - H1 Schilder in Beek en Donk
 - H2 Binnen- en buitenschilderwerk in Beek en Donk
+- H3 Donk
+- H3 Beek
+- H3 Naoorlogse uitbreidingen
 - H2 Schilderdiensten in Beek en Donk
 - H3 Binnenschilderwerk
 - H3 Buitenschilderwerk
@@ -1118,10 +1257,13 @@ Geen: elke kop en elk tekstblok van main en voor staat op de nieuwe pagina's, en
 
 </details>
 
-<details><summary><code>/locaties/eersel</code> (34 koppen)</summary>
+<details><summary><code>/locaties/eersel</code> (37 koppen)</summary>
 
 - H1 Schilder in Eersel
 - H2 Binnen- en buitenschilderwerk in Eersel
+- H3 Markt en de Hint
+- H3 Langgevelboerderijen
+- H3 Duizel, Steensel, Knegsel, Vessem en Wintelre
 - H2 Schilderdiensten in Eersel
 - H3 Binnenschilderwerk
 - H3 Buitenschilderwerk
@@ -1157,10 +1299,13 @@ Geen: elke kop en elk tekstblok van main en voor staat op de nieuwe pagina's, en
 
 </details>
 
-<details><summary><code>/locaties/bergeijk</code> (34 koppen)</summary>
+<details><summary><code>/locaties/bergeijk</code> (37 koppen)</summary>
 
 - H1 Schilder in Bergeijk
 - H2 Binnen- en buitenschilderwerk in Bergeijk
+- H3 't Hof
+- H3 Weverij De Ploeg
+- H3 De Weebosch
 - H2 Schilderdiensten in Bergeijk
 - H3 Binnenschilderwerk
 - H3 Buitenschilderwerk
@@ -1196,10 +1341,13 @@ Geen: elke kop en elk tekstblok van main en voor staat op de nieuwe pagina's, en
 
 </details>
 
-<details><summary><code>/locaties/maarheeze</code> (34 koppen)</summary>
+<details><summary><code>/locaties/maarheeze</code> (37 koppen)</summary>
 
 - H1 Schilder in Maarheeze
 - H2 Binnen- en buitenschilderwerk in Maarheeze
+- H3 Kerkstraat
+- H3 Naoorlogse wijken
+- H3 Soerendonk
 - H2 Schilderdiensten in Maarheeze
 - H3 Binnenschilderwerk
 - H3 Buitenschilderwerk

@@ -9,7 +9,7 @@ import { afbreek, Eyebrow, KnopBel, KnopOfferte, Pijl, Streek, StreekKop, staal 
 import { Stappen } from '@/components/home/v2'
 import type { SiteImage } from '@/lib/images'
 import { liveDiensten } from '@/lib/live-diensten'
-import { diensten, plaatsen, PRIJSGIDS } from '@/lib/navigation'
+import { diensten, linkLive, plaatsen, PRIJSGIDS } from '@/lib/navigation'
 import { prijsNoot, prijzen } from '@/lib/prices'
 import { bronLabel, dienstQuotes } from '@/lib/reviews'
 import { jordy } from '@/lib/jordy'
@@ -238,7 +238,7 @@ export function DienstTemplate({ d }: { d: DienstPagina }) {
             <p>{d.soorten.intro}</p>
           </div>
           <div className="deck">
-            {d.soorten.kaarten.map((k, i) => (
+            {d.soorten.kaarten.filter((k) => linkLive(k.link)).map((k, i) => (
               <Link key={k.titel} className="card rv" href={k.link} style={{ ['--c' as string]: kleuren[i % kleuren.length] }}>
                 <i />
                 <small>
@@ -384,7 +384,7 @@ export function DienstTemplate({ d }: { d: DienstPagina }) {
                 </summary>
                 <p>
                   {jordy(f.answer)}
-                  {f.link && (
+                  {f.link && linkLive(f.link.href) && (
                     <>
                       {' '}
                       <Link href={f.link.href}>{f.link.tekst}</Link>

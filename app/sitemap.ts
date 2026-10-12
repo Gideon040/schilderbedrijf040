@@ -49,6 +49,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     'lakwerk',
     'latex-spuiten',
     'winterschilder',
+    'kozijnen-schilderen',
+    'gevel-schilderen',
   ]
 
   const dienstenPages: MetadataRoute.Sitemap = diensten.map((dienst) => ({

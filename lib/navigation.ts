@@ -3,6 +3,8 @@
 export const diensten = [
   { name: 'Binnenschilderwerk', href: '/diensten/binnenschilderwerk' },
   { name: 'Buitenschilderwerk', href: '/diensten/buitenschilderwerk' },
+  { name: 'Kozijnen schilderen', href: '/diensten/kozijnen-schilderen' },
+  { name: 'Gevel schilderen', href: '/diensten/gevel-schilderen' },
   { name: 'Behangen', href: '/diensten/behangen' },
   { name: 'Lakwerk', href: '/diensten/lakwerk' },
   { name: 'Latex spuiten', href: '/diensten/latex-spuiten' },
@@ -35,3 +37,19 @@ export const plaatsen = [
 // Prijsgids (/kosten/schilderwerk) staat gepland voor november en wacht op de scopecheck.
 // Zet live op true zodra de pagina bestaat; dan verschijnen de links op dienst- en locatiepagina's.
 export const PRIJSGIDS = { href: '/kosten/schilderwerk', live: false }
+
+// Nieuwe blogs staan als concept klaar (scripts/create-blog-*.mjs) en zijn nog niet gepubliceerd in Sanity.
+// Zet een blog op true zodra hij live staat; dan worden de links ernaartoe op dienstpagina's zichtbaar.
+export const BLOGS_LIVE: Record<string, boolean> = {
+  'hoe-lang-duurt-binnenschilderwerk': false,
+  'latex-spuiten-of-rollen': false,
+  'wanneer-buiten-schilderen': false,
+  'hoe-vaak-buitenschilderwerk': false,
+  'kitnaden-vervangen': false,
+  'beitsen-of-lakken': false,
+}
+
+// false voor een link naar een geplande blog die nog niet live staat; anders true
+export function linkLive(href: string): boolean {
+  return !(href.startsWith('/blog/') && BLOGS_LIVE[href.slice(6)] === false)
+}
