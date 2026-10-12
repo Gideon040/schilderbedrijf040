@@ -155,7 +155,7 @@ export default function LocationPage({ params }: { params: { city: string } }) {
       <JsonLd data={breadcrumbSchema} />
       <JsonLd data={faqSchema} />
 
-      {/* Hero met foto en routekaartje vanuit Eindhoven */}
+      {/* Hero met foto */}
       <section className="dp-hero" style={{ padding: 0 }}>
         <div className="wrap grid">
           <div>
@@ -204,27 +204,6 @@ export default function LocationPage({ params }: { params: { city: string } }) {
             <div className="photo">
               <div className="img">
                 <Image src={foto.src} alt={`Schildersbedrijf in ${X}. Schildersbedrijf040`} fill priority sizes="(max-width: 980px) 92vw, 560px" />
-              </div>
-            </div>
-            <div className="route" role="img" aria-label={`Route van Eindhoven naar ${X}`}>
-              <svg viewBox="0 0 300 150" aria-hidden="true">
-                <path className="road" d="M40 112 C 90 120, 120 60, 170 70 S 240 40, 262 38" />
-                <path className="drive" d="M40 112 C 90 120, 120 60, 170 70 S 240 40, 262 38" />
-                <circle cx="40" cy="112" r="7" fill="#0A1626" />
-                <g className="pin">
-                  <path d="M262 38c0-11-8-18-16-18s-16 7-16 18c0 12 16 26 16 26s16-14 16-26z" transform="translate(16 -26)" fill="#1A5BFF" />
-                  <circle cx="262" cy="30" r="5" fill="#fff" />
-                </g>
-                <text x="22" y="138" fontFamily="var(--mono)" fontSize="11" fill="#5B6676">
-                  EINDHOVEN
-                </text>
-                <text x={X.length > 9 ? 150 : 200} y="72" fontFamily="var(--mono)" fontSize="11" fill="#0A1626" fontWeight="700">
-                  {X.toUpperCase()}
-                </text>
-              </svg>
-              <div>
-                <b>Vanuit Eindhoven naar {X}</b>
-                <span>Straatsburglaan 26, Eindhoven</span>
               </div>
             </div>
             {TOON_JORDY && <span className="ph-label">[JORDY: foto van een project in {X}]</span>}

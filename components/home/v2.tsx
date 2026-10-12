@@ -584,7 +584,7 @@ export function Social() {
               {posts.map((p) => (
                 <a key={p.caption} href={site.sameAs[1]} target="_blank" rel="noopener noreferrer">
                   <Image src={p.img.src} alt={p.caption} fill sizes="(max-width: 980px) 30vw, 180px" />
-                  <span aria-hidden="true">{p.caption}</span>
+                  <span aria-hidden="true">{afbreek(p.caption)}</span>
                 </a>
               ))}
             </div>

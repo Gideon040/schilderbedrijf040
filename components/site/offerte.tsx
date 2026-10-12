@@ -6,6 +6,7 @@ import { bronpagina, trackEvent } from '@/lib/tracking'
 import { TOON_JORDY } from '@/lib/jordy'
 import { afbreek } from '@/components/site/v2'
 
+const FORMSPREE = 'https://formspree.io/f/mkgovyya'
 const diensten = ['Binnenschilderwerk', 'Buitenschilderwerk', 'Latex spuiten', 'Lakwerk', 'Behangen', 'Houtrot sanering']
 const leeg = { name: '', phone: '', email: '', service: diensten[0], message: '' }
 
@@ -33,7 +34,7 @@ export function Offerte({
     e.preventDefault()
     setStatus('bezig')
     try {
-      const res = await fetch('https://formspree.io/f/mkgovyya', {
+      const res = await fetch(FORMSPREE, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
         body: JSON.stringify({ ...form, bronpagina: bronpagina(), formulier: 'offerteblok' }),
@@ -86,23 +87,25 @@ export function Offerte({
           </a>
           {extra}
         </div>
-        <form className="qform rv" onSubmit={submit}>
+        {/* Zonder JavaScript post het formulier direct naar Formspree (action + name-attributen) */}
+        <form className="qform rv" action={FORMSPREE} method="POST" onSubmit={submit}>
+          <input type="hidden" name="formulier" value="offerteblok" />
           <h3 className="full">{formTitel}</h3>
           <label>
             Naam
-            <input required autoComplete="name" value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} />
+            <input required name="name" autoComplete="name" value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} />
           </label>
           <label>
             Telefoon
-            <input required type="tel" autoComplete="tel" value={form.phone} onChange={(e) => setForm({ ...form, phone: e.target.value })} />
+            <input required type="tel" name="phone" autoComplete="tel" value={form.phone} onChange={(e) => setForm({ ...form, phone: e.target.value })} />
           </label>
           <label className="full">
             E-mail
-            <input required type="email" autoComplete="email" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} />
+            <input required type="email" name="email" autoComplete="email" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} />
           </label>
           <label className="full">
             Wat wilt u laten doen?
-            <select value={form.service} onChange={(e) => setForm({ ...form, service: e.target.value })}>
+            <select name="service" value={form.service} onChange={(e) => setForm({ ...form, service: e.target.value })}>
               {diensten.map((d) => (
                 <option key={d}>{d}</option>
               ))}
@@ -110,7 +113,7 @@ export function Offerte({
           </label>
           <label className="full">
             Korte omschrijving
-            <textarea value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })} />
+            <textarea name="message" value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })} />
           </label>
           <button className="btn btn-blue full" type="submit" disabled={status === 'bezig'} style={{ justifyContent: 'center' }}>
             {status === 'bezig' ? 'Bezig met versturen...' : 'Gratis offerte aanvragen'} <span className="arr">→</span>

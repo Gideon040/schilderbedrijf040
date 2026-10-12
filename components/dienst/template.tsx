@@ -412,7 +412,7 @@ export function DienstTemplate({ d }: { d: DienstPagina }) {
             {anderen.map((x, i) => (
               <Link key={x.href} href={x.href} style={{ ['--c' as string]: kleuren[(i + 2) % kleuren.length] }}>
                 <i />
-                {x.name}
+                <b className="nm">{afbreek(x.name)}</b>
                 <span>→</span>
               </Link>
             ))}
