@@ -480,7 +480,7 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
                       {relatedPost.title}
                     </h3>
                     <span className="inline-flex items-center gap-2 text-[#0088FF] font-semibold text-sm mt-4 transition-transform duration-300 group-hover:translate-x-1.5">
-                      Lees meer
+                      Lees het artikel
                       <ArrowRight className="w-4 h-4" />
                     </span>
                   </div>

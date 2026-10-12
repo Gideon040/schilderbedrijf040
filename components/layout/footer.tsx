@@ -118,6 +118,7 @@ export function Footer() {
             <div className="flex gap-4">
               <a
                 href="https://www.facebook.com/profile.php?id=100064851917826"
+                aria-label="Schildersbedrijf040 op Facebook"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors"
@@ -126,6 +127,7 @@ export function Footer() {
               </a>
               <a
                 href="https://www.instagram.com/schildersbedrijf040/"
+                aria-label="Schildersbedrijf040 op Instagram"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors"

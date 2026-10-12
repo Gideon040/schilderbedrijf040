@@ -72,7 +72,7 @@ export function RecentProjects() {
               <div className="p-6">
                 <p className="text-gray-600 mb-4">{project.service}</p>
                 <span className="text-primary font-bebas tracking-wider group-hover:translate-x-1 inline-flex items-center transition-all duration-300">
-                  MEER DETAILS →
+                  BEKIJK ONZE PROJECTEN →
                 </span>
               </div>
             </Link>

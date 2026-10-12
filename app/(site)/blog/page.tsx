@@ -160,7 +160,7 @@ export default async function BlogPage() {
                     </p>
 
                     <span className="inline-flex items-center text-primary font-medium group-hover:gap-2 transition-all">
-                      Lees meer
+                      Lees het artikel
                       <ArrowRight className="w-4 h-4 ml-1" />
                     </span>
                   </div>

@@ -46,7 +46,7 @@ Branch `seo-redesign`, gestart 12-10-2026. Nulmeting in `rapportages/codestructu
 | 1.3 | klaar | `components/sections/statistics.tsx`, `lib/site.ts` (nieuw: bedrijfsfeiten op één plek) | Cijferbalk nu: 5,0 Google (41 reviews), 4,9 Werkspot, 5+ jaar ervaring, Boonstoppel. "100+ projecten", "98%" en "100%" weg. Andere claims elders op de site staan op de Jordy-lijst. |
 | 1.4 | klaar | `lib/prices.ts` (nieuw), 6 dienstpagina's, `locaties/[city]/page.tsx` + 3 databestanden, `faq-section.tsx` | Alle prijstabellen lezen nu uit `lib/prices.ts`. Locatiepagina's en homepage-FAQ niet meer per uur (€35 tot €55) maar per m², gelijk aan de dienstpagina's (36 zinnen). Uurtarieven per dienst in de lopende tekst van dienstpagina's blijven staan. [JORDY: bevestig tabel] |
 | 1.5 | klaar | `components/sections/services.tsx` | Zes korte, complete zinnen (tekst uit het ontwerp), `line-clamp-3` weg. De lange teksten stonden alleen op deze kaarten; de dienstpagina's zelf zijn niet aangepast. |
-| 1.6 | todo |  |  |
+| 1.6 | klaar | `services.tsx`, `recent-projects.tsx`, `locaties/[city]/page.tsx`, `blog/page.tsx`, `blog/[slug]/page.tsx`, `footer.tsx`, `header.tsx` | "Meer info" werd "Meer over binnenschilderwerk" / "Latex spuiten bekijken"; locaties "Meer over lakwerk in Helmond"; blog "Lees het artikel". Social-iconen in de footer en de menuknop kregen een toegankelijke naam. |
 | 1.7 | todo |  |  |
 | 1.8 | todo |  |  |
 | 1.9 | todo |  |  |

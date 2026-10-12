@@ -119,6 +119,8 @@ export function Header() {
 
           <button 
             className="md:hidden"
+            aria-label={isMobileMenuOpen ? 'Menu sluiten' : 'Menu openen'}
+            aria-expanded={isMobileMenuOpen}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? (

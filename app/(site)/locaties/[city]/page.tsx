@@ -331,7 +331,7 @@ export default function LocationPage({ params }: { params: { city: string } }) {
                   {dienst.description}
                 </p>
                 <span className="inline-flex items-center gap-2 text-[#0088FF] font-semibold text-sm transition-transform duration-300 group-hover:translate-x-1.5">
-                  Meer informatie
+                  Meer over {dienst.title.toLowerCase()} in {data.displayName}
                   <ArrowRight className="w-4 h-4" />
                 </span>
               </Link>
