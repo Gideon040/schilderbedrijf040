@@ -52,16 +52,16 @@ Branch `seo-redesign`, gestart 12-10-2026. Nulmeting in `rapportages/codestructu
 | 1.9 | klaar | `public/images/` (13 foto's + logo + deelafbeelding), `lib/images.ts` (nieuw), `next.config.js` (AVIF), 26 bestanden met afbeeldings-URL's | Foto's lokaal met beschrijvende bestandsnamen (bijv. `latex-spuiten-benedenverdieping-blixembosch-eindhoven.jpg`), Google-foto's in hogere resolutie. next/image levert AVIF/WebP; lazy onder de vouw (priority weg bij callback). Generieke/Engelse alt-teksten vervangen. Gevonden: og:image en schema-logo gaven 404 (deelafbeelding bij delen op social was kapot): nieuwe 1200x630 deelafbeelding. Latex-foto stond scheef (ca. 38°): rechtgezet. [JORDY: plaatsnamen bij de foto's] |
 | 1.10 | klaar | `components/werkgebied-kaart.tsx` (nieuw), `service-area.tsx`, `contact-details.tsx` | Google Maps-iframe op home vervangen door statische SVG-kaart (uit het ontwerp) met link naar Google Maps. Gevonden: de kaart op /contact wees nog naar het oude adres (Jacob van Campenweg 25): nu Straatsburglaan 26, met title-attribuut. |
 | 1.11 | klaar (meting nog aansluiten) | `lib/tracking.ts`, `components/tracking-listener.tsx` (nieuw), `app/(site)/layout.tsx`, 4 formulieren (hero, contact, terugbellen, offerte) | Elk formulier stuurt `bronpagina` en `formulier` mee naar Formspree. Na verzenden: dataLayer-event `generate_lead`; klik op telefoon/e-mail: `phone_click` / `email_click` (getest met onderschept formulier, er is niets verstuurd). Gekozen voor events i.p.v. een bedankpagina: geen nieuwe URL. **Gideon:** GTM/GA4-container toevoegen en de events als conversie markeren; uploadveld voor foto's niet gebouwd (Formspree-bestanden vragen een betaald plan, eerst checken). |
-| 2.1 | todo |  |  |
-| 2.2 | todo |  |  |
-| 2.3 | todo |  |  |
-| 2.4 | todo |  |  |
-| 2.5 | todo |  |  |
-| 2.6 | todo |  |  |
-| 2.7 | todo |  |  |
-| 2.8 | todo |  |  |
-| 2.9 | todo |  |  |
-| 2.10 | todo |  |  |
+| 2.1 | klaar | `tailwind.config.ts`, `app/globals.css`, `app/layout.tsx` | Barlow/Barlow Condensed, body 17px, tekst #2E3A48/#3B4755; grijstinten donkerder; oud blauw #0088FF (3,6:1) vervangen. Koppen in gewone hoofdletters. |
+| 2.2 | klaar | `components/home/hero.tsx` | Navy hero met foto Jordy op de ladder, kaartje en 5,0-badge, trustrij. Offerteformulier verhuisd naar het offerteblok onderaan (volgens ontwerp). |
+| 2.3 | klaar | `lib/seizoen.ts`, `components/home/sections.tsx` | Winterband okt t/m feb, daarna buitenwerk; homepage revalideert dagelijks. |
+| 2.4 | deels (wacht op Jordy) | `lib/reviews.ts`, homepage, dienst- en locatietemplate | Bronloze quotes weg (homepage 3 namen, dienst- en locatiepagina's 2 quotes). Plekken staan klaar met [JORDY: echte Google-review koppelen]. |
+| 2.5 | deels (wacht op Jordy) | `components/site/voor-na.tsx` | Voor/na-blok op dienst- en locatiepagina's; voor-foto's en projectgegevens [JORDY]. |
+| 2.6 | klaar | dienst- en locatietemplate | Donkere fotobanners ('Resultaat waar u trots op bent', contact-CTA met foto) vervangen door rustige effen blokken. |
+| 2.7 | deels | `app/(site)/locaties/[city]/*` | Template klaar: eigen hero (tijdelijk wisselende foto), lokaal blok, geen prijstabel, project/review, lokale FAQ, buurplaatsen. Wijkkaarten alleen Helmond (geverifieerd); andere plaatsen volgen met briefing 08/13. |
+| 2.8 | klaar | dienst- en locatietemplate, homepage | Stappen altijd met titel en tekst, ook op mobiel. |
+| 2.9 | klaar | `components/layout/mobile-action-bar.tsx` | Vaste balk Bellen / Gratis offerte onder 768px. |
+| 2.10 | klaar | `components/layout/footer.tsx`, `lib/navigation.ts` | Werkgebied in twee kolommen; nieuwe plaatsen via `lib/navigation.ts`. |
 
 ## Open punten voor Jordy
 
@@ -78,6 +78,8 @@ Branch `seo-redesign`, gestart 12-10-2026. Nulmeting in `rapportages/codestructu
 | Schema (sameAs) | Wat is de link naar uw Werkspot-profiel? Die komt in de bedrijfsgegevens voor Google. |
 | Foto's | Bij welke plaats/wijk hoort elke foto (binnendeur, tuinhuis, villa, dakkapel, zolder, voordeur, kozijnen, houtrot)? Dan kan de plaats in de alt-tekst en bij de projecten. |
 | Projecten homepage | Het project "Binnenwerk Restaria, Oude Gracht, Eindhoven": klopt die locatie, en mag de naam van de zaak genoemd worden? |
+| Projecten (dienst- en locatiepagina's) | Voor-foto's en gegevens (plaats, wijk, m²) bij de projectfoto's; per plaats graag één project met foto, vooral Helmond, Veldhoven, Best. |
+| Binnenschilderwerk, doorlooptijd | Hoe lang duurt een woonkamer? De dienstpagina zegt 1 tot 2 werkdagen, de homepage-FAQ 2 tot 3 dagen. |
 
 ## Ideeën
 
