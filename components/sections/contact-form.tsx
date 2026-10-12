@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { Phone, Mail, MapPin, Clock } from 'lucide-react'
+import { bronpagina, trackEvent } from '@/lib/tracking'
 
 const contactInfo = [
   {
@@ -41,10 +42,11 @@ export function ContactForm() {
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify(formData)
+        body: JSON.stringify({ ...formData, bronpagina: bronpagina(), formulier: 'contact' })
       })
       
       if (response.ok) {
+        trackEvent('generate_lead', { form: 'contact' })
         alert('Bedankt voor uw bericht! We nemen zo spoedig mogelijk contact met u op.')
         setFormData({
           name: '',

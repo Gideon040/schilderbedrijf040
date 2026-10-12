@@ -4,6 +4,7 @@ import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowRight, Phone } from 'lucide-react'
+import { bronpagina, trackEvent } from '@/lib/tracking'
 
 export function Hero() {
   const [formData, setFormData] = useState({
@@ -22,10 +23,11 @@ export function Hero() {
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify(formData)
+        body: JSON.stringify({ ...formData, bronpagina: bronpagina(), formulier: 'hero' })
       })
       
       if (response.ok) {
+        trackEvent('generate_lead', { form: 'hero' })
         alert('Bedankt voor uw aanvraag! We nemen zo spoedig mogelijk contact met u op.')
         setFormData({
           name: '',

@@ -7,6 +7,7 @@ import { format } from 'date-fns'
 import { nl } from 'date-fns/locale'
 import { CalendarIcon } from 'lucide-react'
 import { cn } from '@/lib/utils'
+import { bronpagina, trackEvent } from '@/lib/tracking'
 
 const buildingTypes = [
   'Appartement',
@@ -54,10 +55,11 @@ export function QuoteForm() {
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify(formattedData)
+        body: JSON.stringify({ ...formattedData, bronpagina: bronpagina(), formulier: 'offerte' })
       })
       
       if (response.ok) {
+        trackEvent('generate_lead', { form: 'offerte' })
         alert('Bedankt voor uw aanvraag! We nemen zo spoedig mogelijk contact met u op.')
         setFormData({
           buildingType: '',

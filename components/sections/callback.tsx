@@ -8,6 +8,7 @@ import { format } from 'date-fns'
 import { nl } from 'date-fns/locale'
 import { CalendarIcon } from 'lucide-react'
 import { cn } from '@/lib/utils'
+import { bronpagina, trackEvent } from '@/lib/tracking'
 
 export function Callback() {
   const [date, setDate] = useState<Date>()
@@ -26,10 +27,11 @@ export function Callback() {
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ ...formData, date: date ? format(date, 'dd-MM-yyyy') : null })
+        body: JSON.stringify({ ...formData, date: date ? format(date, 'dd-MM-yyyy') : null, bronpagina: bronpagina(), formulier: 'terugbelverzoek' })
       })
       
       if (response.ok) {
+        trackEvent('generate_lead', { form: 'terugbelverzoek' })
         alert('Bedankt voor uw aanvraag! We nemen zo spoedig mogelijk contact met u op.')
         setFormData({
           name: '',
