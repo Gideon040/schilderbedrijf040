@@ -41,12 +41,12 @@ export const PRIJSGIDS = { href: '/kosten/schilderwerk', live: false }
 // Nieuwe blogs staan als concept klaar (scripts/create-blog-*.mjs) en zijn nog niet gepubliceerd in Sanity.
 // Zet een blog op true zodra hij live staat; dan worden de links ernaartoe op dienstpagina's zichtbaar.
 export const BLOGS_LIVE: Record<string, boolean> = {
-  'hoe-lang-duurt-binnenschilderwerk': false,
-  'latex-spuiten-of-rollen': false,
-  'wanneer-buiten-schilderen': false,
-  'hoe-vaak-buitenschilderwerk': false,
-  'kitnaden-vervangen': false,
-  'beitsen-of-lakken': false,
+  'hoe-lang-duurt-binnenschilderwerk': true,
+  'latex-spuiten-of-rollen': true,
+  'wanneer-buiten-schilderen': true,
+  'hoe-vaak-buitenschilderwerk': true,
+  'kitnaden-vervangen': true,
+  'beitsen-of-lakken': true,
 }
 
 // false voor een link naar een geplande blog die nog niet live staat; anders true

@@ -12,12 +12,12 @@ Status: `todo` → `concept` → `review Jordy` → `live`. Houd dit bestand bij
 | 6 | November | B | Lakwerk | `/diensten/lakwerk` | concept | `content/optimaliseren/06-lakwerk.md`. +600 woorden: prijstabel per onderdeel, "Zelf een deur lakken of laten doen?", 3 FAQ's. Open: lakprijzen spreken elkaar tegen (tekst €35 tot €75 kozijn / €100 tot €150 deur, tabel €40 tot €55 / €80 tot €120, deurblog €150 tot €200). |
 | 7 | November | B | Behangen | `/diensten/behangen` | concept | `content/optimaliseren/07-behangen.md`. +500 woorden: "Behang verwijderen en daarna verven", 3 FAQ's (o.a. behanger Helmond). Open: prijs per rol. |
 | 8 | November | B | Veldhoven, Valkenswaard, Helmond, Best, Geldrop, Nuenen | `/locaties/ (6 plaatsen)` | concept | `content/optimaliseren/08-loc6.md`. Per plaats intro, 3 wijkkaarten, 3 alinea's (234 tot 291 woorden) en unieke meta description, met bronnen. Open: project per plaats; Nuenen dorpsgezicht-grens nalopen. |
-| 9 | November | B | Hoe lang duurt binnenschilderwerk? | `/blog/hoe-lang-duurt-binnenschilderwerk` | concept (wacht op Sanity) | `content/nieuw/09-b-duur.md`, `scripts/create-blog-hoe-lang-duurt-binnenschilderwerk.mjs`. 947 woorden + 4 FAQ. GEO 6. Token in `.env.local` is alleen-lezen: draaien met Editor-token. Open: doorlooptijden bevestigen. |
+| 9 | November | B | Hoe lang duurt binnenschilderwerk? | `/blog/hoe-lang-duurt-binnenschilderwerk` | concept | `content/nieuw/09-b-duur.md`, `scripts/create-blog-hoe-lang-duurt-binnenschilderwerk.mjs`. 947 woorden + 4 FAQ. GEO 6. Open: doorlooptijden bevestigen. |
 | 10 | November | M | Latex spuiten Helmond en Veldhoven | `/diensten/latex-spuiten/[plaats] (2)` | todo |  |
 | 11 | December | B | Projecten | `/projecten` | concept | `content/optimaliseren/11-projecten.md`. Filter per dienst en plaats, blok "Ons werk in de regio" met links. Open: projectcases (foto's, plaats, quote) en plaats bij 3 projecten. |
-| 12 | December | B | Bestaande binnenblogs bijwerken | `/blog/ (5 bestaande)` | concept (wacht op Sanity) | `content/optimaliseren/12-blogs5.md`, `scripts/update-blog-blogs5.mjs`. Direct antwoord bovenaan, "Liever laten doen?", 63 dashes weg. Btw-blog: fout gevonden (materiaal valt ook onder 9%), gecorrigeerd in concept met bron Belastingdienst. Draaien met Editor-token. |
+| 12 | December | B | Bestaande binnenblogs bijwerken | `/blog/ (5 bestaande)` | concept | `content/optimaliseren/12-blogs5.md`, `data/blog/*.json`. Direct antwoord bovenaan, "Liever laten doen?", 63 dashes weg. Btw-blog: fout gevonden (materiaal valt ook onder 9%), gecorrigeerd in concept met bron Belastingdienst. |
 | 13 | December | B | Overige 11 locatiepagina's | `/locaties/ (11 plaatsen)` | concept | `content/optimaliseren/13-loc11.md`. Per plaats intro, 3 wijkkaarten, alinea's (206 tot 241 woorden) en unieke meta description, met bronnen. Open: superlatieven/reviewcijfers in bestaande intro's van 5 plaatsen; 3 bestaande feitjes wijken af van bronnen (zie md). |
-| 14 | December | P | Latex spuiten of rollen? | `/blog/latex-spuiten-of-rollen` | concept (wacht op Sanity) | `content/nieuw/14-b-latex.md`, script klaar. 937 woorden + 3 FAQ. GEO 5. |
+| 14 | December | P | Latex spuiten of rollen? | `/blog/latex-spuiten-of-rollen` | concept | `content/nieuw/14-b-latex.md` Lokaal in `data/blog/`. 937 woorden + 3 FAQ. GEO 5. |
 | 15 | December | M | Wijkpagina's Woensel en Stratum | `/locaties/eindhoven-[wijk] (2)` | todo |  |
 | 16 | Januari | B | Buitenschilderwerk (hub) | `/diensten/buitenschilderwerk` | concept | `content/optimaliseren/16-buiten.md`. +850 woorden: "Alle buitenklussen" (tegels kozijnen, gevel, houtrot, kitwerk zonder link), boeidelen/dakkapellen/buitendeuren, regio met 6 plaatsen, 2 FAQ's. Links naar 2 buitenblogs verschijnen zodra die live zijn (`BLOGS_LIVE`). |
 | 17 | Januari | B | Kozijnen schilderen | `/diensten/kozijnen-schilderen` | concept | Nieuw. `content/nieuw/17-kozijnen.md`. Ca. 1.430 woorden, 5 FAQ's. GEO 11. Open: prijs klein/groot kozijn, kitwerk in prijs, kunststof/aluminium, project. |
@@ -25,12 +25,12 @@ Status: `todo` → `concept` → `review Jordy` → `live`. Houd dit bestand bij
 | 19 | Januari | P | Drie nieuwe plaatsen (keuze Jordy) | `/locaties/ (3 nieuwe plaatsen)` | todo | scopecheck |
 | 20 | Februari | B | Kitwerk en kitnaden vervangen | `/diensten/kitwerk` | todo | scopecheck |
 | 21 | Februari | B | Gevel schilderen | `/diensten/gevel-schilderen` | concept | Nieuw. `content/nieuw/21-gevel.md`. Ca. 1.510 woorden, 5 FAQ's, baksteen eerlijk besproken, vergunning/VvE met bronnen. Open: gevelverf, steiger, reiniging, doorlooptijd, project. |
-| 22 | Februari | B | Wanneer kun je het beste buiten schilderen? | `/blog/wanneer-buiten-schilderen` | concept (wacht op Sanity) | `content/nieuw/22-b-wanneer.md`, script klaar. 924 woorden + 3 FAQ. GEO 12. |
+| 22 | Februari | B | Wanneer kun je het beste buiten schilderen? | `/blog/wanneer-buiten-schilderen` | concept | `content/nieuw/22-b-wanneer.md` Lokaal in `data/blog/`. 924 woorden + 3 FAQ. GEO 12. |
 | 23 | Februari | P | Onderhoudsschilderwerk | `/diensten/onderhoudsschilderwerk` | todo | scopecheck |
 | 24 | Februari | M | Overige drie nieuwe plaatsen | `/locaties/ (3 nieuwe plaatsen)` | todo | scopecheck |
-| 25 | Maart | B | Hoe vaak moet je buitenschilderwerk laten doen? | `/blog/hoe-vaak-buitenschilderwerk` | concept (wacht op Sanity) | `content/nieuw/25-b-hoevaak.md`, script klaar. 928 woorden + 3 FAQ. Open: 6 tot 10 jaar (blog) vs 8 tot 10 jaar (dienstpagina) afstemmen. |
-| 26 | Maart | P | Kitnaden vervangen: zelf doen of laten doen? | `/blog/kitnaden-vervangen` | concept (wacht op Sanity) | `content/nieuw/26-b-kit.md`, script klaar. 953 woorden + 4 FAQ. Linkt (nog) niet naar kitwerk. |
-| 27 | Maart | P | Beitsen of lakken: wat past bij je kozijnen? | `/blog/beitsen-of-lakken` | concept (wacht op Sanity) | `content/nieuw/27-b-beits.md`, script klaar. 921 woorden + 3 FAQ. Open: prijs beitsen, Boonstoppel-producten. |
+| 25 | Maart | B | Hoe vaak moet je buitenschilderwerk laten doen? | `/blog/hoe-vaak-buitenschilderwerk` | concept | `content/nieuw/25-b-hoevaak.md` Lokaal in `data/blog/`. 928 woorden + 3 FAQ. Open: 6 tot 10 jaar (blog) vs 8 tot 10 jaar (dienstpagina) afstemmen. |
+| 26 | Maart | P | Kitnaden vervangen: zelf doen of laten doen? | `/blog/kitnaden-vervangen` | concept | `content/nieuw/26-b-kit.md` Lokaal in `data/blog/`. 953 woorden + 4 FAQ. Linkt (nog) niet naar kitwerk. |
+| 27 | Maart | P | Beitsen of lakken: wat past bij je kozijnen? | `/blog/beitsen-of-lakken` | concept | `content/nieuw/27-b-beits.md` Lokaal in `data/blog/`. 921 woorden + 3 FAQ. Open: prijs beitsen, Boonstoppel-producten. |
 | 28 | Maart | M | Gevel reinigen en impregneren | `/diensten/gevelreiniging-impregneren` | todo | scopecheck |
 | 29 | Maart | M | Buitenschilderwerk Helmond, Veldhoven, Best | `/diensten/buitenschilderwerk/[plaats] (3)` | todo | scopecheck |
 | 30 | Maart | M | Houtrot herkennen en voorkomen | `/blog/houtrot-herkennen-voorkomen` | todo |  |
@@ -76,6 +76,10 @@ Regel: alle bestaande SEO-teksten letterlijk behouden; controle in `rapportages/
 | Over ons | klaar | `app/(site)/over-ons/page.tsx` | Alleen Jordy bij naam, 8+ vaste collega's; bestaande drie alinea's letterlijk |
 | Blog en artikel | klaar | `app/(site)/blog/page.tsx`, `app/(site)/blog/[slug]/page.tsx`, `components/blog/*` | Sanity-inhoud ongewijzigd; filter, leesbalk en inhoudsopgave; H1 "Schildertips & advies" en oude hero-alt uit main terug. Em dashes in Sanity-teksten: in Studio aanpassen (niet in code) |
 | Contact, projecten, FAQ | klaar | `app/(site)/contact/page.tsx`, `components/contact/formulier.tsx`, `app/(site)/projecten/page.tsx`, `app/(site)/faq/page.tsx` | Contact: kleurstalen-formulier bovenaan (werkt zonder JS), echte kaart; telefoonnummer in contactkaart gecorrigeerd (06-36803004 was een typfout). FAQ: antwoorden in details, dus zonder JS leesbaar |
+
+## Blog zonder CMS (12-10-2026)
+
+Op verzoek van Gideon draait de blog niet meer op Sanity. Alle 11 blogs (5 bestaande met de updates uit briefing 12, 6 nieuwe) staan als bestanden in `data/blog/<slug>.json` (Portable Text), afbeeldingen in `public/images/blog/`. Nieuwe blog: JSON-bestand toevoegen en importeren in `data/blog/index.ts`. Omzetten opnieuw: `node scripts/blog-naar-lokaal.mjs` (leest `data/blog/ruw/`). De Sanity Studio-route (`/studio`) en de sanity-pakketten staan er nog, maar de site gebruikt ze niet meer.
 
 ## Open punten voor Jordy
 

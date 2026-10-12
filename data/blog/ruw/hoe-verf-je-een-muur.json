@@ -1,0 +1,850 @@
+{
+ "_id": "blogPost-hoe-verf-je-een-muur",
+ "_type": "blogPost",
+ "author": {
+  "name": "Jordy Jacobs",
+  "role": "Eigenaar Schildersbedrijf040"
+ },
+ "category": "How-To",
+ "content": [
+  {
+   "_type": "block",
+   "_key": "b5-blk-42",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "b5-s-41",
+     "text": "Een muur verf je in vaste stappen: kies de juiste muurverf, repareer en schuur de muur, strijk voor als de ondergrond zuigt en plak af. Werk eerst de randen bij met een kwast en rol daarna nat-in-nat in vakken van ongeveer 1 m². Na minimaal 4 uur droogtijd volgt de tweede laag.",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_key": "k125",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "k126",
+     "_type": "span",
+     "marks": [],
+     "text": "Een muur verven klinkt als de makkelijkste klus die er bestaat: roller in de verf, over de muur, klaar. Maar waarom krijg je dan strepen, dekt de verf niet na drie lagen, of zie je na een week al vlekken? Het antwoord: muurverf is vergevingsgezinder dan lakverf, maar de voorbereiding en techniek maken nog steeds het verschil."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "k127",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "k128",
+     "_type": "span",
+     "marks": [],
+     "text": "De juiste muurverf kiezen"
+    }
+   ],
+   "markDefs": [],
+   "style": "h2"
+  },
+  {
+   "_key": "k129",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "k130",
+     "_type": "span",
+     "marks": [],
+     "text": "Voordat je een kwast aanraakt, moet je de juiste verf kiezen. En hier gaat het al vaak mis, want \"muurverf\" is een breed begrip met grote verschillen in kwaliteit en toepasbaarheid."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "k131",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "k132",
+     "_type": "span",
+     "marks": [],
+     "text": "Latex vs. acrylaat: wat is het verschil?"
+    }
+   ],
+   "markDefs": [],
+   "style": "h3"
+  },
+  {
+   "_key": "k133",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "k134",
+     "_type": "span",
+     "marks": [],
+     "text": "Latex muurverf is de klassieke keuze voor binnenmuren. Het is betaalbaar (€25-50 voor 10 liter), makkelijk verwerkbaar en in elke bouwmarkt verkrijgbaar. De nadelen: latex is minder goed wasbaar en kan bij vocht vlekken gaan vertonen. Latex is prima voor slaapkamers en woonkamers met normale belasting."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "k135",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "k136",
+     "_type": "span",
+     "marks": [],
+     "text": "Acrylaat muurverf is de professionele keuze. Het is beter dekkend (je hebt vaak genoeg aan twee lagen waar latex er drie nodig heeft), beter wasbaar en vochtbestendiger. De meerprijs (€40-80 voor 10 liter) verdien je terug in minder verbruik en een duurzamer resultaat. Voor keukens, badkamers en intensief gebruikte ruimtes is acrylaat de betere investering."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "k137",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "k138",
+     "_type": "span",
+     "marks": [],
+     "text": "Glansgraad kiezen"
+    }
+   ],
+   "markDefs": [],
+   "style": "h3"
+  },
+  {
+   "_key": "k139",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "k140",
+     "_type": "span",
+     "marks": [],
+     "text": "Muurverf komt in verschillende glansgraden: mat, zijdemat en zijdeglans. Mat (glansgraad 2-5) verbergt oneffenheden het beste en geeft een rustige, moderne uitstraling. Het nadeel: matverf is lastig schoon te maken: wrijf je over een vlek, dan krijg je een glimmende plek."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "k141",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "k142",
+     "_type": "span",
+     "marks": [],
+     "text": "Zijdemat (glansgraad 7-10) is de gulden middenweg: nog steeds vrij egaal, maar beter reinigbaar. Dit is wat de meeste professionals adviseren voor woonruimtes. Zijdeglans (glansgraad 20-30) is goed afwasbaar maar benadrukt elke oneffenheid in de muur."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "k143",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "k144",
+     "_type": "span",
+     "marks": [],
+     "text": "Hoeveel verf heb je nodig?"
+    }
+   ],
+   "markDefs": [],
+   "style": "h3"
+  },
+  {
+   "_key": "k145",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "k146",
+     "_type": "span",
+     "marks": [],
+     "text": "Reken op 1 liter muurverf per 8-10 m² per laag, afhankelijk van de zuigkracht van de ondergrond. Een gemiddelde woonkamer (20m² muuroppervlak) heeft dus 4-5 liter nodig voor twee lagen. Koop 10-15% extra: je hebt liever verf over dan dat je halverwege naar de winkel moet."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "k147",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "k148",
+     "_type": "span",
+     "marks": [],
+     "text": "De muur voorbereiden"
+    }
+   ],
+   "markDefs": [],
+   "style": "h2"
+  },
+  {
+   "_key": "k149",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "k150",
+     "_type": "span",
+     "marks": [],
+     "text": "Een goede voorbereiding kost tijd, maar bespaart je dubbel werk achteraf. Skippen van deze stappen is de hoofdoorzaak van een teleurstellend resultaat."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "k151",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "k152",
+     "_type": "span",
+     "marks": [],
+     "text": "Stap 1: De muur inspecteren en repareren"
+    }
+   ],
+   "markDefs": [],
+   "style": "h3"
+  },
+  {
+   "_key": "k153",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "k154",
+     "_type": "span",
+     "marks": [],
+     "text": "Loop de muur af en markeer alle beschadigingen: gaatjes van pluggen, scheurtjes, beschadigde hoeken. Kleine gaatjes (tot 5mm) vul je met lichte muurvuller, direct uit de tube aan te brengen en binnen een uur schuurbaar. Grotere beschadigingen en scheuren vul je met vulmiddel dat je met een plamuurmes aanbrengt."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "k155",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "k156",
+     "_type": "span",
+     "marks": [],
+     "text": "Waarom is dit zo belangrijk? Verf vult geen gaten. Die gaatjes die je nu ziet, zie je na twee lagen verf nog steeds. Het kost je 30 minuten om alles te repareren, maar dat scheelt je de frustratie van een muur met zichtbare beschadigingen."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "k157",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "k158",
+     "_type": "span",
+     "marks": [],
+     "text": "Stap 2: Schuren en stof verwijderen"
+    }
+   ],
+   "markDefs": [],
+   "style": "h3"
+  },
+  {
+   "_key": "k159",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "k160",
+     "_type": "span",
+     "marks": [],
+     "text": "Schuur gerepareerde plekken vlak met korrel 120. Als de oude verflaag beschadigd of poederig is, schuur je de hele muur licht op. Dit verbetert de hechting van de nieuwe verflaag. Verwijder daarna al het stof met een vochtige doek of stofzuiger."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "k161",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "k162",
+     "_type": "span",
+     "marks": [],
+     "text": "Stap 3: Voorstrijken indien nodig"
+    }
+   ],
+   "markDefs": [],
+   "style": "h3"
+  },
+  {
+   "_key": "k163",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "k164",
+     "_type": "span",
+     "marks": [],
+     "text": "Voorstrijk (fixeer) is nodig bij zuigende of poederige ondergronden. Test dit door een natte spons tegen de muur te houden. Zuigt het water binnen 10 seconden weg? Dan is voorstrijken noodzakelijk. Zonder voorstrijk zuigt de muur de verf op, waardoor je 4-5 lagen nodig hebt in plaats van twee."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "k165",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "k166",
+     "_type": "span",
+     "marks": [],
+     "text": "Stap 4: Afplakken en afdekken"
+    }
+   ],
+   "markDefs": [],
+   "style": "h3"
+  },
+  {
+   "_key": "k167",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "k168",
+     "_type": "span",
+     "marks": [],
+     "text": "Plak alle kozijnen, plinten, stopcontacten en randen af met schilderstape. Gebruik kwaliteitstape (€5-8 per rol) en geen goedkope afplaktape van een euro. Goedkope tape laat verf onderlopen en trekt bij verwijdering de verflaag los. Dek de vloer af met afdekfolie of karton."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "k169",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "k170",
+     "_type": "span",
+     "marks": [],
+     "text": "De techniek: schilderen zonder strepen"
+    }
+   ],
+   "markDefs": [],
+   "style": "h2"
+  },
+  {
+   "_key": "k171",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "k172",
+     "_type": "span",
+     "marks": [],
+     "text": "Met de juiste voorbereiding is de verftechniek vrij rechttoe rechtaan, maar er zijn specifieke stappen die het verschil maken."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "k173",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "k174",
+     "_type": "span",
+     "marks": [],
+     "text": "Eerst bijwerken met de kwast"
+    }
+   ],
+   "markDefs": [],
+   "style": "h3"
+  },
+  {
+   "_key": "k175",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "k176",
+     "_type": "span",
+     "marks": [],
+     "text": "Begin met \"bijwerken\": schilder met een kwast alle randen, hoeken en moeilijke plekken die je met de roller niet bereikt. Dit zijn de hoeken tussen muur en plafond, rond kozijnen en stopcontacten, en de aansluiting met plinten. Werk een strook van ongeveer 5 centimeter breed."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "k177",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "k178",
+     "_type": "span",
+     "marks": [],
+     "text": "Dan rollen: de W-techniek"
+    }
+   ],
+   "markDefs": [],
+   "style": "h3"
+  },
+  {
+   "_key": "k179",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "k180",
+     "_type": "span",
+     "marks": [],
+     "text": "Laad de roller door hem door de verf te rollen en dan over het afstrijkrooster af te rollen tot de verf gelijkmatig verdeeld is. Breng de verf aan in een W- of M-patroon: maak eerst grote, diagonale halen om de verf te verdelen, rol dan horizontaal en verticaal uit om een egale laag te krijgen."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "k181",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "k182",
+     "_type": "span",
+     "marks": [],
+     "text": "Werk in vakken van ongeveer 1 m² en zorg dat de randen nat-in-nat aansluiten op het vorige vak. Wat gebeurt er als je dit niet doet? Als de rand van een vak al droog is voordat je het volgende vak begint, krijg je zichtbare overlappingen: strepen die zelfs door een tweede laag heen zichtbaar blijven."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "k183",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "k184",
+     "_type": "span",
+     "marks": [],
+     "text": "De tweede laag"
+    }
+   ],
+   "markDefs": [],
+   "style": "h3"
+  },
+  {
+   "_key": "k185",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "k186",
+     "_type": "span",
+     "marks": [],
+     "text": "Laat de eerste laag volledig drogen voordat je de tweede aanbrengt. De droogtijd staat op de verfpot, maar reken in de praktijk op minimaal 4 uur, liever 6-8 uur. Een halfdroge laag die je opnieuw overrolt, trekt los en geeft een rampzalig resultaat."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "k187",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "k188",
+     "_type": "span",
+     "marks": [],
+     "text": "Speciale situaties"
+    }
+   ],
+   "markDefs": [],
+   "style": "h2"
+  },
+  {
+   "_key": "k189",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "k190",
+     "_type": "span",
+     "marks": [],
+     "text": "Over behang heen schilderen"
+    }
+   ],
+   "markDefs": [],
+   "style": "h3"
+  },
+  {
+   "_key": "k191",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "k192",
+     "_type": "span",
+     "marks": [],
+     "text": "Kan je over behang heen verven? Ja, als het behang goed vastzit, vlak is en niet gestructureerd. Gladvinyl en vliesbehang zijn meestal geschikt. Test eerst of het behang vastzit door met een natte spons over de naden te gaan. Komen de naden los? Dan moet het behang er eerst af."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "k193",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "k194",
+     "_type": "span",
+     "marks": [],
+     "text": "Nicotinevlekken en waterschade"
+    }
+   ],
+   "markDefs": [],
+   "style": "h3"
+  },
+  {
+   "_key": "k195",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "k196",
+     "_type": "span",
+     "marks": [],
+     "text": "Nicotinevlekken en watervlekken (kringen) trekken door gewone muurverf heen. Hier heb je een isolerende voorstrijk nodig, zoals een schellakproduct. Dit sluit de vlek volledig af. Zonder isolatie blijf je die bruine kringen zien, ook na vijf lagen verf."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "k197",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "k198",
+     "_type": "span",
+     "marks": [],
+     "text": "Schimmel op de muur"
+    }
+   ],
+   "markDefs": [],
+   "style": "h3"
+  },
+  {
+   "_key": "k199",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "k200",
+     "_type": "span",
+     "marks": [],
+     "text": "Verven over schimmel is zinloos: de schimmel groeit gewoon door onder de verf en komt binnen een paar maanden terug. Verwijder eerst de schimmel met een chlooroplossing en pak de oorzaak aan (vaak: vochtprobleem of slechte ventilatie)."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "k201",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "k202",
+     "_type": "span",
+     "marks": [],
+     "text": "Veelgemaakte fouten"
+    }
+   ],
+   "markDefs": [],
+   "style": "h2"
+  },
+  {
+   "_key": "k203",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "k204",
+     "_type": "span",
+     "marks": [],
+     "text": "De meest voorkomende fout is te weinig verf op de roller. Een \"droge\" roller geeft strepen en een ongelijke dekking. Liever iets te veel verf, uitrollen tot hij egaal is, dan te weinig waardoor je over halfdroge verf gaat rollen."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "k205",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "k206",
+     "_type": "span",
+     "marks": [],
+     "text": "Fout twee: de tape te laat verwijderen. Schilderstape moet je verwijderen als de verf nog niet volledig droog is, na 1-2 uur. Is de verf uitgehard, dan trekt de tape de verflaag los en krijg je een rafelige rand."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "k207",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "k208",
+     "_type": "span",
+     "marks": [],
+     "text": "Fout drie: beginnen zonder de hoeken bij te werken. Als je eerst gaat rollen en dan de hoeken bijwerkt, krijg je zichtbare overgangen. Altijd eerst bijwerken, dan rollen."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "k209",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "k210",
+     "_type": "span",
+     "marks": [],
+     "text": "Wanneer een professional inschakelen?"
+    }
+   ],
+   "markDefs": [],
+   "style": "h2"
+  },
+  {
+   "_key": "k211",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "k212",
+     "_type": "span",
+     "marks": [],
+     "text": "Een woonkamer of slaapkamer schilderen is een prima weekendklus. Maar bij hoge ruimtes (trappenhuizen, vides), bijzondere ondergronden of wanneer je simpelweg geen tijd hebt, is uitbesteden vaak efficiënter."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "k213",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "k214",
+     "_type": "span",
+     "marks": [],
+     "text": "Wij schilderen een gemiddelde kamer (20m² muuroppervlak) voor €250-€400 inclusief materiaal, met een gegarandeerd resultaat. Benieuwd wat het voor jouw situatie kost? Vraag vrijblijvend een offerte aan."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_type": "block",
+   "_key": "b5-blk-44",
+   "style": "h2",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "b5-s-43",
+     "text": "Liever laten doen?",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "b5-blk-52",
+   "style": "normal",
+   "markDefs": [
+    {
+     "_type": "link",
+     "_key": "b5-l-46",
+     "href": "/diensten/binnenschilderwerk"
+    },
+    {
+     "_type": "link",
+     "_key": "b5-l-49",
+     "href": "/diensten/latex-spuiten"
+    }
+   ],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "b5-s-45",
+     "text": "Zie je op tegen een hoog trappenhuis, veel vierkante meters of muren met vlekken die eerst geïsoleerd moeten worden? Schildersbedrijf040 schildert muren en plafonds in woningen in Eindhoven en omgeving. Hoe we dat aanpakken en wat het kost, lees je op de pagina over ",
+     "marks": []
+    },
+    {
+     "_type": "span",
+     "_key": "b5-s-47",
+     "text": "binnenschilderwerk",
+     "marks": [
+      "b5-l-46"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "b5-s-48",
+     "text": ". Bij grote oppervlakken of nieuwbouw is ",
+     "marks": []
+    },
+    {
+     "_type": "span",
+     "_key": "b5-s-50",
+     "text": "latex spuiten",
+     "marks": [
+      "b5-l-49"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "b5-s-51",
+     "text": " vaak sneller dan rollen.",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "b5-blk-63",
+   "style": "normal",
+   "markDefs": [
+    {
+     "_type": "link",
+     "_key": "b5-l-54",
+     "href": "/diensten/winterschilder"
+    },
+    {
+     "_type": "link",
+     "_key": "b5-l-57",
+     "href": "/contact"
+    },
+    {
+     "_type": "link",
+     "_key": "b5-l-60",
+     "href": "tel:+31638903004"
+    }
+   ],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "b5-s-53",
+     "text": "Muren schilderen kan het hele jaar door, ook in de winter: in een verwarmde woning droogt muurverf gewoon goed. Lees meer over ",
+     "marks": []
+    },
+    {
+     "_type": "span",
+     "_key": "b5-s-55",
+     "text": "binnenschilderwerk in de winter",
+     "marks": [
+      "b5-l-54"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "b5-s-56",
+     "text": ". Benieuwd wat het schilderen van jouw muren kost? ",
+     "marks": []
+    },
+    {
+     "_type": "span",
+     "_key": "b5-s-58",
+     "text": "Neem contact op",
+     "marks": [
+      "b5-l-57"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "b5-s-59",
+     "text": " voor een gratis offerte of bel ",
+     "marks": []
+    },
+    {
+     "_type": "span",
+     "_key": "b5-s-61",
+     "text": "06-38903004",
+     "marks": [
+      "b5-l-60"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "b5-s-62",
+     "text": ".",
+     "marks": []
+    }
+   ]
+  }
+ ],
+ "coverImage": {
+  "_type": "image",
+  "asset": {
+   "_ref": "image-2f562ce11e6405f8de6f6c5792dce9fdca121d73-1179x868-jpg",
+   "_type": "reference"
+  }
+ },
+ "date": "2025-01-15",
+ "excerpt": "Een muur verven is de meest voorkomende verfklus, maar toch gaat het vaak mis. Leer hoe je het in één keer goed doet.",
+ "faq": [
+  {
+   "_key": "faq0",
+   "_type": "object",
+   "answer": "Bij een normale kleurverandering zijn twee lagen voldoende. Bij een drastische verandering (donker naar licht) kan een derde laag nodig zijn. Gebruik in dat geval een getinte primer als tussenlaag.",
+   "question": "Hoeveel lagen muurverf heb ik nodig?"
+  },
+  {
+   "_key": "faq1",
+   "_type": "object",
+   "answer": "Dat hangt af van de ondergrond. Test met een natte spons: zuigt het water snel weg? Dan is voorstrijken nodig. Bij een poederige muur moet je fixeren. Bij een schone, niet-zuigende muur kun je direct beginnen.",
+   "question": "Moet ik de muur voorbehandelen voor het schilderen?"
+  },
+  {
+   "_key": "faq2",
+   "_type": "object",
+   "answer": "Werk in vakken van 1m², breng de verf aan in een W-patroon en rol uit tot een egale laag. Zorg dat de randen nat-in-nat aansluiten op het vorige vak. Neem geen pauzes halverwege een muur.",
+   "question": "Hoe voorkom ik strepen bij het rollen?"
+  },
+  {
+   "_key": "faq3",
+   "_type": "object",
+   "answer": "Latex is goedkoper maar minder goed wasbaar en vochtbestendig. Acrylaat dekt beter (vaak 2 lagen in plaats van 3), is beter reinigbaar en geschikter voor keukens en badkamers.",
+   "question": "Wat is het verschil tussen latex en acrylaat muurverf?"
+  },
+  {
+   "_key": "faq4",
+   "_type": "object",
+   "answer": "Ja, als het behang glad is en goed vastzit. Test de naden met een natte spons. Komen ze los, dan moet het behang er eerst af. Gestructureerd behang kun je beter verwijderen.",
+   "question": "Kan ik over oud behang heen schilderen?"
+  }
+ ],
+ "keywords": [
+  "hoe verf je een muur",
+  "muur schilderen",
+  "muur verven",
+  "latex muur",
+  "muurverf aanbrengen"
+ ],
+ "metaDescription": "Muur schilderen als een pro: voorbereiding, juiste verf kiezen, techniek en tips. Handleiding van een vakman voor een streeploos resultaat.",
+ "metaTitle": "Hoe Verf je een Muur? | Complete Handleiding met Tips",
+ "readTime": "12 min",
+ "slug": {
+  "_type": "slug",
+  "current": "hoe-verf-je-een-muur"
+ },
+ "title": "Hoe Verf je een Muur? Complete Handleiding van A tot Z"
+}

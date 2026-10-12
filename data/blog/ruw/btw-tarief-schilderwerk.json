@@ -1,0 +1,550 @@
+{
+ "_id": "blogPost-btw-tarief-schilderwerk",
+ "_type": "blogPost",
+ "author": {
+  "name": "Jordy Jacobs",
+  "role": "Eigenaar Schildersbedrijf040"
+ },
+ "category": "BTW & Kosten",
+ "content": [
+  {
+   "_type": "block",
+   "_key": "b5-blk-2",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "b5-s-1",
+     "text": "Schilderwerk aan een woning die langer dan twee jaar in gebruik is, valt onder het lage BTW-tarief van 9%. Volgens de Belastingdienst geldt dat voor de arbeid, het voorbereidende werk en de materialen die de schilder gebruikt. Voor nieuwbouw jonger dan twee jaar, bedrijfspanden en verf die je zelf koopt, betaal je 21%.",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_key": "k1",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "k2",
+     "_type": "span",
+     "marks": [],
+     "text": "Als je een offerte ontvangt voor schilderwerk, zie je onderaan een BTW-bedrag staan. Maar waarom rekent de ene schilder 9% en de andere 21%? Het verschil kan bij een project van €3.000 maar liefst €360 schelen. In dit artikel leggen we precies uit welke regels gelden, zodat je nooit voor verrassingen komt te staan."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "k3",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "k4",
+     "_type": "span",
+     "marks": [],
+     "text": "Het verschil tussen 9% en 21% BTW bij schilderwerk"
+    }
+   ],
+   "markDefs": [],
+   "style": "h2"
+  },
+  {
+   "_key": "k5",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "k6",
+     "_type": "span",
+     "marks": [],
+     "text": "De Belastingdienst hanteert twee BTW-tarieven voor schilderwerk: het lage tarief van 9% en het hoge tarief van 21%. Welk tarief van toepassing is, hangt af van de leeftijd van je woning en het type werkzaamheden. Dit is geen vrije keuze van de schilder: de regels liggen wettelijk vast en worden gecontroleerd."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "k7",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "k8",
+     "_type": "span",
+     "marks": [],
+     "text": "Waarom bestaat dit verschil eigenlijk? De overheid wil woningonderhoud stimuleren, vooral bij oudere woningen. Door een lager BTW-tarief aan te bieden, worden onderhoudswerkzaamheden betaalbaarder. Het gevolg: meer mensen laten hun woning onderhouden, wat de levensduur van het woningbestand verlengt én werkgelegenheid creëert in de bouw- en onderhoudssector."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "k9",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "k10",
+     "_type": "span",
+     "marks": [],
+     "text": "Wanneer geldt het lage BTW-tarief van 9%?"
+    }
+   ],
+   "markDefs": [],
+   "style": "h2"
+  },
+  {
+   "_key": "k11",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "k12",
+     "_type": "span",
+     "marks": [],
+     "text": "Het lage BTW-tarief van 9% is van toepassing als je woning ouder is dan twee jaar. Volgens de Belastingdienst telt die termijn vanaf de datum waarop het pand voor het eerst als woning in gebruik is genomen. Een woning die in januari 2024 voor het eerst is bewoond, komt dus vanaf januari 2026 in aanmerking voor het lage tarief."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "k13",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "k14",
+     "_type": "span",
+     "marks": [],
+     "text": "Belangrijk: het lage tarief geldt niet alleen voor de arbeid. Volgens de Belastingdienst vallen ook de materialen die de schilder gebruikt en het voorbereidende werk onder 9%. Als je schilder een offerte maakt van €2.000, waarvan €1.400 arbeid en €600 materialen, dan betaal je 9% BTW over het hele bedrag: €180. Had het hoge tarief overal gegolden, dan was dit €420 geweest, een verschil van €240."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "k15",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "k16",
+     "_type": "span",
+     "marks": [],
+     "text": "Sommige schilders rekenen toch 21% over de materialen of over het hele bedrag. Dit is niet in jouw voordeel. Vraag dus altijd om een uitgesplitste offerte met apart de arbeidskosten en materiaalkosten, met per post het BTW-tarief. Een professioneel schildersbedrijf doet dit automatisch."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "k17",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "k18",
+     "_type": "span",
+     "marks": [],
+     "text": "Wanneer geldt het hoge BTW-tarief van 21%?"
+    }
+   ],
+   "markDefs": [],
+   "style": "h2"
+  },
+  {
+   "_key": "k19",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "k20",
+     "_type": "span",
+     "marks": [],
+     "text": "Het hoge tarief van 21% geldt in drie situaties. Ten eerste bij nieuwbouwwoningen jonger dan twee jaar: hier is geen uitzondering mogelijk. Ten tweede voor materialen die je zelf koopt, zoals verf uit de bouwmarkt: alleen materialen die de schilder bij het werk gebruikt, vallen onder 9%. En ten derde voor schilderwerk aan bedrijfspanden, winkels en andere niet-woonruimtes."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "k21",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "k22",
+     "_type": "span",
+     "marks": [],
+     "text": "Let op bij gemengd gebruik: heb je een woning met een praktijkruimte of kantoor aan huis? Dan geldt het lage tarief alleen voor het woongedeelte. De schilder moet dan de werkzaamheden splitsen, wat de administratie complexer maakt. Bespreek dit vooraf om misverstanden te voorkomen."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "k23",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "k24",
+     "_type": "span",
+     "marks": [],
+     "text": "Concrete rekenvoorbeelden"
+    }
+   ],
+   "markDefs": [],
+   "style": "h2"
+  },
+  {
+   "_key": "k25",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "k26",
+     "_type": "span",
+     "marks": [],
+     "text": "Voorbeeld 1: Binnenschilderwerk rijtjeshuis (bouwjaar 1985)"
+    }
+   ],
+   "markDefs": [],
+   "style": "h3"
+  },
+  {
+   "_key": "k27",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "k28",
+     "_type": "span",
+     "marks": [],
+     "text": "Je laat de woonkamer, hal en drie slaapkamers schilderen. De offerte bedraagt €2.800, waarvan €2.000 arbeid en €800 materialen. Omdat de woning ouder is dan twee jaar, geldt het lage tarief voor de arbeid en de materialen. Je betaalt €180 BTW over de arbeid en €72 over de materialen (beide 9%). Totale BTW: €252. Bij volledig hoog tarief was dit €588 geweest: je bespaart €336."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "k29",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "k30",
+     "_type": "span",
+     "marks": [],
+     "text": "Voorbeeld 2: Nieuwbouwwoning (opgeleverd 2025)"
+    }
+   ],
+   "markDefs": [],
+   "style": "h3"
+  },
+  {
+   "_key": "k31",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "k32",
+     "_type": "span",
+     "marks": [],
+     "text": "Dezelfde werkzaamheden in een nieuwbouwwoning. Omdat de woning jonger is dan twee jaar, geldt overal 21% BTW. Over de totale €2.800 betaal je €588 BTW. Tip: kun je het schilderwerk uitstellen tot de woning twee jaar oud is? Dan bespaar je €336."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "k33",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "k34",
+     "_type": "span",
+     "marks": [],
+     "text": "Voorbeeld 3: Buitenschilderwerk vrijstaande woning"
+    }
+   ],
+   "markDefs": [],
+   "style": "h3"
+  },
+  {
+   "_key": "k35",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "k36",
+     "_type": "span",
+     "marks": [],
+     "text": "Complete buitenschilderbeurt: kozijnen, deuren, boeidelen. Offerte: €6.500, waarvan €4.800 arbeid en €1.700 materialen. De woning is van 1978. Je betaalt €432 BTW over de arbeid en €153 over de materialen (beide 9%). Totaal: €585. Besparing ten opzichte van volledig hoog tarief: €780."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "k37",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "k38",
+     "_type": "span",
+     "marks": [],
+     "text": "Veelgemaakte fouten en hoe je ze voorkomt"
+    }
+   ],
+   "markDefs": [],
+   "style": "h2"
+  },
+  {
+   "_key": "k39",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "k40",
+     "_type": "span",
+     "marks": [],
+     "text": "De eerste fout die we vaak zien is dat mensen niet om een gesplitste offerte vragen. Daardoor betalen ze soms 21% over de materialen of over het totaalbedrag, terwijl bij een woning ouder dan twee jaar 9% geldt over arbeid en materialen. Dit kost je bij een gemiddeld project €150-€300 extra."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "k41",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "k42",
+     "_type": "span",
+     "marks": [],
+     "text": "Een tweede fout is aannemen dat alle werkzaamheden onder het lage tarief vallen. Sommige werkzaamheden, zoals het aanbrengen van nieuwe kozijnen (timmerwerkzaamheden), vallen onder andere regels. Schilderwerk, behangen en houtrotherstel vallen wel onder het lage tarief, maar vraag bij twijfel om verduidelijking."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "k43",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "k44",
+     "_type": "span",
+     "marks": [],
+     "text": "De derde fout is geen factuur bewaren. De Belastingdienst kan tot vijf jaar terug controles uitvoeren. Als blijkt dat ten onrechte het lage tarief is toegepast, kun jij als opdrachtgever aansprakelijk worden gesteld voor het verschil. Bewaar je facturen dus minimaal vijf jaar."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "k45",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "k46",
+     "_type": "span",
+     "marks": [],
+     "text": "Wat betekent dit voor jouw project?"
+    }
+   ],
+   "markDefs": [],
+   "style": "h2"
+  },
+  {
+   "_key": "k47",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "k48",
+     "_type": "span",
+     "marks": [],
+     "text": "Bij Schildersbedrijf040 ontvang je altijd een transparante offerte met gesplitste arbeids- en materiaalkosten. Zo profiteer je automatisch van het lage BTW-tarief waar je recht op hebt. Woon je in een nieuwbouwwoning? Dan adviseren we je eerlijk over de beste timing voor je schilderproject."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "k49",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "k50",
+     "_type": "span",
+     "marks": [],
+     "text": "Wil je precies weten wat schilderwerk voor jouw woning kost, inclusief de juiste BTW-berekening? Vraag dan een gratis, vrijblijvende offerte aan. We komen langs, nemen alles door en je weet binnen 48 uur waar je aan toe bent."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_type": "block",
+   "_key": "b5-blk-4",
+   "style": "h2",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "b5-s-3",
+     "text": "Liever laten doen?",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "b5-blk-9",
+   "style": "normal",
+   "markDefs": [
+    {
+     "_type": "link",
+     "_key": "b5-l-6",
+     "href": "/diensten/binnenschilderwerk"
+    }
+   ],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "b5-s-5",
+     "text": "Wil je je woning laten schilderen en meteen weten welk BTW-tarief op jouw offerte hoort? Schildersbedrijf040 schildert woningen in Eindhoven en omgeving en zet de BTW per post op de offerte. Wat we binnen doen en wat dat per vierkante meter kost, lees je op de pagina over ",
+     "marks": []
+    },
+    {
+     "_type": "span",
+     "_key": "b5-s-7",
+     "text": "binnenschilderwerk",
+     "marks": [
+      "b5-l-6"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "b5-s-8",
+     "text": ".",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "b5-blk-20",
+   "style": "normal",
+   "markDefs": [
+    {
+     "_type": "link",
+     "_key": "b5-l-11",
+     "href": "/diensten/winterschilder"
+    },
+    {
+     "_type": "link",
+     "_key": "b5-l-14",
+     "href": "/contact"
+    },
+    {
+     "_type": "link",
+     "_key": "b5-l-17",
+     "href": "tel:+31638903004"
+    }
+   ],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "b5-s-10",
+     "text": "Binnenschilderwerk loopt in de winter gewoon door, want verf droogt binnen bij kamertemperatuur goed en het BTW-tarief is in januari hetzelfde als in juni. Lees meer over ",
+     "marks": []
+    },
+    {
+     "_type": "span",
+     "_key": "b5-s-12",
+     "text": "binnen schilderen in de winter",
+     "marks": [
+      "b5-l-11"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "b5-s-13",
+     "text": ". Wil je een offerte met de juiste BTW? ",
+     "marks": []
+    },
+    {
+     "_type": "span",
+     "_key": "b5-s-15",
+     "text": "Vraag een gratis offerte aan",
+     "marks": [
+      "b5-l-14"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "b5-s-16",
+     "text": " of bel ",
+     "marks": []
+    },
+    {
+     "_type": "span",
+     "_key": "b5-s-18",
+     "text": "06-38903004",
+     "marks": [
+      "b5-l-17"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "b5-s-19",
+     "text": ".",
+     "marks": []
+    }
+   ]
+  }
+ ],
+ "coverImage": {
+  "_type": "image",
+  "asset": {
+   "_ref": "image-80fb4368869db0591078fc7e77b1d72fe6226a02-1536x2048-jpg",
+   "_type": "reference"
+  }
+ },
+ "date": "2026-01-20",
+ "excerpt": "Het verschil tussen 9% en 21% BTW kan honderden euro's schelen. Wij leggen alle regels helder uit.",
+ "faq": [
+  {
+   "_key": "faq0",
+   "_type": "object",
+   "answer": "Voor woningen ouder dan 2 jaar geldt 9% BTW op het schilderwerk, inclusief het voorbereidende werk en de materialen die de schilder gebruikt. Voor nieuwbouwwoningen (jonger dan 2 jaar) en bedrijfspanden geldt altijd 21% BTW op zowel arbeid als materialen.",
+   "question": "Welk BTW-tarief geldt voor schilderwerk in 2026?"
+  },
+  {
+   "_key": "faq1",
+   "_type": "object",
+   "answer": "Je woning moet minimaal 2 jaar geleden voor het eerst als woning in gebruik zijn genomen. Twijfel je? Het bouwjaar en de gegevens van je woning staan in de Basisregistratie Adressen en Gebouwen (BAG) van het Kadaster. Je schilder kan je ook een verklaring laten tekenen dat de woning ouder is dan 2 jaar.",
+   "question": "Hoe weet ik of mijn woning oud genoeg is voor 9% BTW?"
+  },
+  {
+   "_key": "faq2",
+   "_type": "object",
+   "answer": "Ja, als de schilder de materialen levert en gebruikt bij schilderwerk aan een woning ouder dan 2 jaar. De Belastingdienst noemt de gebruikte materialen en het voorbereiden uitdrukkelijk als onderdeel van het 9%-tarief voor schilderen. Koop je de verf zelf, bijvoorbeeld in de bouwmarkt, dan betaal je daarover 21% BTW.",
+   "question": "Geldt 9% BTW ook voor materiaalkosten?"
+  },
+  {
+   "_key": "faq3",
+   "_type": "object",
+   "answer": "Vraag hier expliciet om. Een professioneel schildersbedrijf splitst arbeids- en materiaalkosten standaard uit, zodat je ziet waar je voor betaalt. Controleer ook het tarief: bij schilderwerk aan een woning ouder dan 2 jaar hoort op zowel de arbeid als de materialen 9% BTW te staan. Staat er 21%, vraag dan waarom.",
+   "question": "Wat als mijn schilder geen gesplitste offerte geeft?"
+  },
+  {
+   "_key": "faq4",
+   "_type": "object",
+   "answer": "Ja, zowel binnen- als buitenschilderwerk komen in aanmerking voor 9% BTW op de arbeid en de gebruikte materialen, mits de woning ouder is dan 2 jaar. Dit geldt ook voor kozijnen, deuren, dakgoten en boeidelen.",
+   "question": "Geldt het lage BTW-tarief ook voor buitenschilderwerk?"
+  }
+ ],
+ "keywords": [
+  "btw tarief schilderwerk",
+  "btw schilder",
+  "9 procent btw",
+  "btw renovatie"
+ ],
+ "metaDescription": "Wanneer betaal je 9% of 21% BTW op schilderwerk? Complete uitleg over BTW tarieven voor schilderwerk in 2026. Inclusief voorbeelden en uitzonderingen.",
+ "metaTitle": "BTW Tarief Schilderwerk 2026 | 9% of 21%? Regels Uitgelegd",
+ "readTime": "6 min",
+ "slug": {
+  "_type": "slug",
+  "current": "btw-tarief-schilderwerk"
+ },
+ "title": "BTW Tarief Schilderwerk: Alle Regels voor 2026"
+}

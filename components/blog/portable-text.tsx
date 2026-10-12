@@ -1,8 +1,8 @@
 import { PortableText, type PortableTextComponents } from '@portabletext/react'
-import type { PortableTextBlock, Image as SanityImageType } from 'sanity'
-import { SanityImage } from './sanity-image'
+import Image from 'next/image'
+import type { PortableTextBlock } from '@portabletext/types'
 
-// Tekst uit een Sanity-blok (voor ankers en de inhoudsopgave)
+// Tekst uit een Portable Text-blok (voor ankers en de inhoudsopgave)
 export function blokTekst(block: unknown): string {
   const kinderen = (block as unknown as { children?: { text?: string }[] }).children ?? []
   return kinderen.map((c) => c.text ?? '').join('')
@@ -17,7 +17,7 @@ export function anker(tekst: string): string {
     .replace(/^-|-$/g, '')
 }
 
-// Inhoud van het artikel komt ongewijzigd uit Sanity; alleen de opmaak is van ontwerp v2 (.prose in v2.css)
+// Inhoud van het artikel komt uit data/blog (Portable Text); de opmaak is van ontwerp v2 (.prose in v2.css)
 const components: PortableTextComponents = {
   block: {
     h2: ({ children, value }) => <h2 id={anker(blokTekst(value))}>{children}</h2>,
@@ -51,9 +51,9 @@ const components: PortableTextComponents = {
     em: ({ children }) => <em>{children}</em>,
   },
   types: {
-    image: ({ value }: { value: SanityImageType & { alt?: string; caption?: string } }) => (
+    image: ({ value }: { value: { src: string; width: number; height: number; alt?: string; caption?: string } }) => (
       <figure className="pt-fig">
-        <SanityImage image={value} alt={value.alt || ''} width={800} height={450} sizes="(max-width: 768px) 100vw, 800px" />
+        <Image src={value.src} alt={value.alt || ''} width={value.width} height={value.height} sizes="(max-width: 768px) 100vw, 800px" />
         {value.caption && <figcaption>{value.caption}</figcaption>}
       </figure>
     ),

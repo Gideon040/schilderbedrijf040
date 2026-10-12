@@ -1,0 +1,754 @@
+{
+ "_id": "blogPost-hoe-lang-duurt-binnenschilderwerk",
+ "_type": "blogPost",
+ "title": "Hoe lang duurt binnenschilderwerk? Planning per ruimte",
+ "slug": {
+  "_type": "slug",
+  "current": "hoe-lang-duurt-binnenschilderwerk"
+ },
+ "metaTitle": "Hoe lang duurt binnenschilderwerk? | Schildersbedrijf040",
+ "metaDescription": "Hoe lang duurt binnenschilderwerk? Een kamer is vaak in 1 tot 2 werkdagen klaar, een hele woning in 5 tot 10. Zie de planning per ruimte en tips voor wonen.",
+ "excerpt": "Een kamer is meestal in 1 tot 2 werkdagen klaar, een complete woning in 5 tot 10 werkdagen. Zo ziet de planning eruit, dit maakt het sneller of langzamer en zo blijf je gewoon thuis wonen.",
+ "coverImage": {
+  "_type": "image",
+  "asset": {
+   "_type": "reference",
+   "_ref": "image-2f562ce11e6405f8de6f6c5792dce9fdca121d73-1179x868-jpg"
+  }
+ },
+ "date": "2026-10-12",
+ "readTime": "6 min",
+ "category": "Tips & Advies",
+ "keywords": [
+  "hoe lang duurt binnenschilderwerk",
+  "hoe lang duurt latex spuiten",
+  "hoe lang duurt het om een huis te schilderen",
+  "hoe lang duurt het om een kamer te schilderen",
+  "droogtijd muurverf",
+  "wonen tijdens schilderwerk"
+ ],
+ "author": {
+  "name": "Jordy Jacobs",
+  "role": "Eigenaar Schildersbedrijf040"
+ },
+ "content": [
+  {
+   "_type": "block",
+   "_key": "b5",
+   "style": "normal",
+   "markDefs": [
+    {
+     "_type": "link",
+     "_key": "link2",
+     "href": "/diensten/binnenschilderwerk"
+    }
+   ],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s1",
+     "text": "Binnenschilderwerk duurt korter dan veel mensen denken. Een slaapkamer of woonkamer is meestal in 1 tot 2 werkdagen klaar, een complete woning in ongeveer 5 tot 10 werkdagen. Muren drogen snel; vooral lakwerk aan kozijnen en deuren en de voorbereiding bepalen de doorlooptijd. Wonen kan gewoon door. Meer over de aanpak lees je op de pagina over ",
+     "marks": []
+    },
+    {
+     "_type": "span",
+     "_key": "s3",
+     "text": "binnenschilderwerk in Eindhoven",
+     "marks": [
+      "link2"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "s4",
+     "text": ".",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "b7",
+   "style": "h2",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s6",
+     "text": "Hoe lang duurt binnenschilderwerk per ruimte?",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "b9",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s8",
+     "text": "De doorlooptijd hangt vooral af van wat er geschilderd wordt: alleen muren en plafond, of ook kozijnen, deuren en plinten. Deze indicaties gaan uit van een normale ondergrond, twee lagen verf en een verwarmde woning:",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "b12",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s10",
+     "text": "Slaapkamer, muren en plafond:",
+     "marks": [
+      "strong"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "s11",
+     "text": " ongeveer 1 werkdag. Twee lagen muurverf passen op één dag, omdat muurverf na circa 4 uur overschilderbaar is.",
+     "marks": []
+    }
+   ],
+   "listItem": "bullet",
+   "level": 1
+  },
+  {
+   "_type": "block",
+   "_key": "b15",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s13",
+     "text": "Woonkamer, muren en plafond:",
+     "marks": [
+      "strong"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "s14",
+     "text": " 1 tot 2 werkdagen. Meer oppervlak en vaak meer kleine reparaties.",
+     "marks": []
+    }
+   ],
+   "listItem": "bullet",
+   "level": 1
+  },
+  {
+   "_type": "block",
+   "_key": "b18",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s16",
+     "text": "Kozijnen, deuren en plinten in één ruimte lakken:",
+     "marks": [
+      "strong"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "s17",
+     "text": " 2 tot 3 werkdagen, door schuren, gronden en aflakken met droogtijd tussen elke laag.",
+     "marks": []
+    }
+   ],
+   "listItem": "bullet",
+   "level": 1
+  },
+  {
+   "_type": "block",
+   "_key": "b21",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s19",
+     "text": "Woonkamer latex spuiten:",
+     "marks": [
+      "strong"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "s20",
+     "text": " meestal 1 werkdag. Het afplakken kost hier de meeste tijd, het spuiten zelf gaat snel.",
+     "marks": []
+    }
+   ],
+   "listItem": "bullet",
+   "level": 1
+  },
+  {
+   "_type": "block",
+   "_key": "b24",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s22",
+     "text": "Complete woning binnen:",
+     "marks": [
+      "strong"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "s23",
+     "text": " ongeveer 5 tot 10 werkdagen, afhankelijk van het aantal ruimtes en de hoeveelheid lakwerk.",
+     "marks": []
+    }
+   ],
+   "listItem": "bullet",
+   "level": 1
+  },
+  {
+   "_type": "block",
+   "_key": "b26",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s25",
+     "text": "Waarom muren sneller gaan dan lakwerk? Watergedragen muurverf is bij 20 °C na ongeveer 4 uur overschilderbaar en na 24 uur doorgehard. Een watergedragen binnenlak zoals Sikkens Rubbol BL Satura is pas na ongeveer 6 uur overschilderbaar, en tussen de lagen wordt licht geschuurd. Per laag lak gaat er dus al snel een halve werkdag heen. Een schilder vult die wachttijd door in een andere ruimte verder te werken, zodat de totale klus niet stil ligt.",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "b28",
+   "style": "h2",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s27",
+     "text": "Wat maakt binnenschilderwerk sneller of langzamer?",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "b30",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s29",
+     "text": "Vijf dingen bepalen of je planning aan de korte of de lange kant uitkomt.",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "b32",
+   "style": "h3",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s31",
+     "text": "De staat van muren en houtwerk",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "b34",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s33",
+     "text": "Scheurtjes, spijkergaten en loszittende verf moeten eerst gevuld, geschuurd en soms voorgestreken worden. Een muur waar net behang af is gehaald, vraagt meer voorbereiding dan een muur die vorig jaar nog geschilderd is. Nieuw stucwerk moet eerst goed droog zijn en krijgt een voorstrijkmiddel, zodat de muurverf gelijkmatig hecht. Hoe beter de ondergrond, hoe sneller de schilder bij de eerste laag verf is.",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "b36",
+   "style": "h3",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s35",
+     "text": "Een grote kleurwissel",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "b38",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s37",
+     "text": "Van een donkere naar een lichte kleur, of andersom, vraagt vaak een extra laag. Dat kost bij muurverf al snel een extra halve dag, omdat ook die laag eerst moet drogen.",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "b40",
+   "style": "h3",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s39",
+     "text": "Hoeveel lakwerk er is",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "b42",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s41",
+     "text": "Kozijnen, deuren, plinten en een trap zijn de tijdrovende onderdelen. Een kamer met één deur en een raam is anders dan een woonkamer met een open trap en een glazen tussendeur. Wil je het lakwerk later laten doen, dan ben je met alleen de muren veel sneller klaar.",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "b44",
+   "style": "h3",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s43",
+     "text": "Temperatuur en ventilatie",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "b49",
+   "style": "normal",
+   "markDefs": [
+    {
+     "_type": "link",
+     "_key": "link46",
+     "href": "/diensten/winterschilder"
+    }
+   ],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s45",
+     "text": "Verf droogt langzamer in een koude ruimte. Bij 10 °C is muurverf pas na ongeveer 8 uur overschilderbaar in plaats van 4, en onder de 10 °C raden fabrikanten verwerken af. In een verwarmde woning is dat geen probleem, ook niet in de winter. Daarom is ",
+     "marks": []
+    },
+    {
+     "_type": "span",
+     "_key": "s47",
+     "text": "schilderen in de winter",
+     "marks": [
+      "link46"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "s48",
+     "text": " voor binnenwerk een prima moment. Een beetje ventilatie helpt de verf om goed door te harden.",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "b51",
+   "style": "h3",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s50",
+     "text": "Spuiten of rollen",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "b56",
+   "style": "normal",
+   "markDefs": [
+    {
+     "_type": "link",
+     "_key": "link53",
+     "href": "/blog/latex-spuiten-of-rollen"
+    }
+   ],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s52",
+     "text": "Latex spuiten gaat bij grote, lege oppervlakken sneller dan rollen, maar vraagt meer afplakwerk. Voor één kamer met veel kozijnen weegt dat afplakken zwaarder. In de blog ",
+     "marks": []
+    },
+    {
+     "_type": "span",
+     "_key": "s54",
+     "text": "latex spuiten of rollen",
+     "marks": [
+      "link53"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "s55",
+     "text": " lees je wanneer welke methode tijd scheelt.",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "b58",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s57",
+     "text": "Hoe lang duurt latex spuiten dan? Een gemiddelde woonkamer, muren en plafond, is meestal in één werkdag gespoten. Het grootste deel van die dag gaat op aan afdekken en afplakken van vloer, kozijnen en stopcontacten. Het spuiten zelf gaat snel. De droogtijd is gelijk aan die van gerolde muurverf, dus ook na spuiten kun je de ruimte meestal de volgende dag weer inrichten.",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "b60",
+   "style": "h2",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s59",
+     "text": "Kun je thuis blijven wonen tijdens het schilderwerk?",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "b62",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s61",
+     "text": "Ja. De meeste mensen blijven gewoon thuis wonen, omdat een schilder ruimte voor ruimte werkt. Moderne watergedragen verf ruikt weinig, en een geschilderde kamer is na een dag meestal weer te gebruiken. Met een paar afspraken vooraf verloopt het soepel:",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "b65",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s63",
+     "text": "Begin met de ruimtes die je het minst gebruikt.",
+     "marks": [
+      "strong"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "s64",
+     "text": " Een logeerkamer of zolder eerst, de woonkamer en keuken aan het eind.",
+     "marks": []
+    }
+   ],
+   "listItem": "number",
+   "level": 1
+  },
+  {
+   "_type": "block",
+   "_key": "b68",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s66",
+     "text": "Plan slaapkamers slim.",
+     "marks": [
+      "strong"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "s67",
+     "text": " Laat een slaapkamer bij voorkeur 's ochtends schilderen, zodat de verf voor de avond droog is en de ruimte kan luchten.",
+     "marks": []
+    }
+   ],
+   "listItem": "number",
+   "level": 1
+  },
+  {
+   "_type": "block",
+   "_key": "b71",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s69",
+     "text": "Zet deuren en ramen op een kier.",
+     "marks": [
+      "strong"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "s70",
+     "text": " Ventilatie helpt bij het drogen en houdt de lucht fris.",
+     "marks": []
+    }
+   ],
+   "listItem": "number",
+   "level": 1
+  },
+  {
+   "_type": "block",
+   "_key": "b74",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s72",
+     "text": "Houd huisdieren en kinderen weg van natte verf.",
+     "marks": [
+      "strong"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "s73",
+     "text": " Vooral lak voelt snel droog aan, maar is dan nog niet hard.",
+     "marks": []
+    }
+   ],
+   "listItem": "number",
+   "level": 1
+  },
+  {
+   "_type": "block",
+   "_key": "b77",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s75",
+     "text": "Wees voorzichtig met vers lakwerk.",
+     "marks": [
+      "strong"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "s76",
+     "text": " Lak heeft na het droog aanvoelen nog enkele dagen nodig om volledig door te harden. Laat deuren in die tijd niet tegen deurstoppers of meubels slaan.",
+     "marks": []
+    }
+   ],
+   "listItem": "number",
+   "level": 1
+  },
+  {
+   "_type": "block",
+   "_key": "b79",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s78",
+     "text": "Gaat het om een complete woning en wil je de overlast zo kort mogelijk houden? Dan is het soms handiger om een paar dagen bij familie te logeren terwijl de benedenverdieping wordt gedaan. Dat is geen must, wel een keuze die de planning versnelt.",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "b81",
+   "style": "h2",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s80",
+     "text": "Hoe plan je binnenschilderwerk het slimst?",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "b83",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s82",
+     "text": "Vraag bij de offerte om een planning per dag. Dan weet je welke ruimte wanneer leeg moet zijn en wanneer je hem weer kunt gebruiken. Ruim vooraf kleine spullen, gordijnen en schilderijen op, dan kan de schilder direct beginnen met afdekken en voorbereiden. En combineer klussen: muren, plafonds en lakwerk in één keer laten doen gaat sneller dan drie losse afspraken, omdat de droogtijden dan overlappen.",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "b85",
+   "style": "h2",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s84",
+     "text": "Gratis offerte aanvragen",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "b93",
+   "style": "normal",
+   "markDefs": [
+    {
+     "_type": "link",
+     "_key": "link87",
+     "href": "/contact"
+    },
+    {
+     "_type": "link",
+     "_key": "link90",
+     "href": "tel:+31638903004"
+    }
+   ],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s86",
+     "text": "Wil je weten hoe lang jouw klus duurt? Schildersbedrijf040 kijkt gratis bij je langs en maakt een offerte met een duidelijke planning. Binnenschilderwerk kost gemiddeld €30 tot €35 per m². Schildersbedrijf040 werkt met Boonstoppel-verf en heeft een 5,0 op Google. ",
+     "marks": []
+    },
+    {
+     "_type": "span",
+     "_key": "s88",
+     "text": "Gratis offerte aanvragen",
+     "marks": [
+      "link87"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "s89",
+     "text": " of bel direct naar ",
+     "marks": []
+    },
+    {
+     "_type": "span",
+     "_key": "s91",
+     "text": "06-38903004",
+     "marks": [
+      "link90"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "s92",
+     "text": ".",
+     "marks": []
+    }
+   ]
+  }
+ ],
+ "faq": [
+  {
+   "_type": "object",
+   "_key": "faq1",
+   "question": "Wanneer kun je een geschilderde kamer weer gebruiken?",
+   "answer": "Een kamer waar alleen de muren en het plafond zijn geschilderd, kun je meestal dezelfde avond of de volgende dag weer gebruiken. Watergedragen muurverf is bij 20 °C na ongeveer een uur stofdroog en na 24 uur doorgehard. Zet meubels pas na die 24 uur weer tegen de muur, zodat er geen afdrukken in de verf komen. Is er ook gelakt, dan is de kamer na een dag bruikbaar, maar heeft het lakwerk nog enkele dagen nodig om volledig hard te worden. Ga in die periode voorzichtig om met deuren en kozijnen."
+  },
+  {
+   "_type": "object",
+   "_key": "faq2",
+   "question": "Waarom duurt lakwerk langer dan muren schilderen?",
+   "answer": "Lak heeft langere droogtijden en meer tussenstappen dan muurverf. Een watergedragen binnenlak is pas na ongeveer 6 uur overschilderbaar, tegen ongeveer 4 uur voor muurverf. Daarnaast wordt houtwerk eerst geschuurd, waar nodig gegrond of gerepareerd, en tussen de lagen opnieuw licht geschuurd en stofvrij gemaakt. Elk kozijn en elke deur heeft bovendien randen, sponningen en hoeken die met de kwast worden gedaan. Daardoor kost het lakken van de kozijnen en deuren in een kamer vaak meer tijd dan het schilderen van alle muren in diezelfde kamer."
+  },
+  {
+   "_type": "object",
+   "_key": "faq3",
+   "question": "Hoe lang duurt het om een heel huis te laten schilderen?",
+   "answer": "Voor een complete woning binnen, dus muren, plafonds en lakwerk, moet je rekenen op ongeveer 5 tot 10 werkdagen. Een appartement zonder veel lakwerk zit aan de korte kant, een eengezinswoning met trap, veel binnendeuren en oude kozijnen aan de lange kant. Buitenschilderwerk komt daar los bij en hangt sterk af van het weer. Lees daarover meer in de blog over wanneer je het beste buiten kunt schilderen. Vraag bij de offerte altijd om een planning per dag, dan weet je precies welke ruimte wanneer klaar is."
+  },
+  {
+   "_type": "object",
+   "_key": "faq4",
+   "question": "Hoeveel lagen verf komen er op een binnenmuur?",
+   "answer": "Op een binnenmuur komen meestal twee lagen muurverf. Bij nieuw of kaal stucwerk gaat daar eerst een voorstrijkmiddel onder, zodat de muur de verf gelijkmatig opneemt en er geen vlekken ontstaan. Bij een grote kleurwissel, bijvoorbeeld van donkerblauw naar gebroken wit, kan een derde laag nodig zijn. Elke extra laag betekent extra droogtijd, dus ook een iets langere planning. Een schilder ziet bij de inspectie vooraf hoeveel lagen jouw muren nodig hebben."
+  }
+ ],
+ "relatedPosts": [
+  {
+   "_type": "reference",
+   "_ref": "blogPost-hoe-verf-je-een-muur",
+   "_key": "rel1"
+  },
+  {
+   "_type": "reference",
+   "_ref": "blogPost-plafond-schilderen",
+   "_key": "rel2"
+  },
+  {
+   "_type": "reference",
+   "_ref": "blogPost-verven-na-behang",
+   "_key": "rel3"
+  }
+ ]
+}

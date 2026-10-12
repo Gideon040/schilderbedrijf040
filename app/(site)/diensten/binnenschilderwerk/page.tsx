@@ -39,6 +39,7 @@ const faqs = [
     question: 'Hoe lang duurt het om een kamer te schilderen?',
     answer:
       'Een gemiddelde woonkamer (20 m²) schilderen duurt 1 tot 2 werkdagen, afhankelijk van de staat van de ondergrond en het aantal lagen. Muurverf heeft een droogtijd van 4 tot 6 uur tussen lagen, waardoor Schildersbedrijf040 efficiënt kan werken door in die tussentijd kozijnen of andere onderdelen aan te pakken. Bij nieuwbouw of recent gestucte muren is de doorlooptijd korter, omdat minder voorbereidingswerk nodig is.',
+    link: { href: '/blog/hoe-lang-duurt-binnenschilderwerk', tekst: 'Lees hoe lang binnenschilderwerk per ruimte duurt.' },
   },
   {
     question: 'Welke verf gebruikt Schildersbedrijf040 voor binnenschilderwerk?',

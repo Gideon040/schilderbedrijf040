@@ -357,6 +357,17 @@ for (const [slug, cfg] of Object.entries(BLOGS)) {
   mutations.push({ createOrReplace: doc })
 }
 
+// Lokale blog (zonder Sanity): --json schrijft de bijgewerkte versies naar data/blog/ruw/<slug>.json
+if (process.argv.includes('--json')) {
+  const fs = await import('node:fs')
+  for (const m of mutations) {
+    const d = { ...m.createOrReplace, _id: m.createOrReplace._id.replace(/^drafts\./, '') }
+    fs.writeFileSync(`data/blog/ruw/${d.slug.current}.json`, JSON.stringify(d, null, 1))
+    console.log('JSON geschreven:', d.slug.current)
+  }
+  process.exit(0)
+}
+
 if (!WRITE) {
   console.log('\nProefrun: niets geschreven. Draai met --write om de drafts op te slaan.')
   process.exit(0)

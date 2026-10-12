@@ -211,6 +211,14 @@ if (process.argv.includes('--dry')) {
   process.exit(0)
 }
 
+// Lokale blog (zonder Sanity): node <script> --json schrijft data/blog/ruw/<slug>.json
+if (process.argv.includes('--json')) {
+  const fs = await import('node:fs')
+  fs.writeFileSync(`data/blog/ruw/${SLUG}.json`, JSON.stringify({ ...document, _id: `blogPost-${SLUG}` }, null, 1))
+  console.log('JSON geschreven:', SLUG)
+  process.exit(0)
+}
+
 async function createDraft() {
   const url = `https://${PROJECT_ID}.api.sanity.io/v${API_VERSION}/data/mutate/${DATASET}`
   const response = await fetch(url, {

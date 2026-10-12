@@ -10,41 +10,41 @@ Gemeten met `textContent` van de pagina zonder header, footer en mobiele balk (d
 
 | Pagina | main | voor | na | Status |
 |---|---|---|---|---|
-| `/` | 909 | 921 | 1704 | in orde |
-| `/over-ons` | 161 | 168 | 366 | in orde |
-| `/contact` | 60 | 67 | 79 | in orde |
-| `/faq` | 82 | 442 | 501 | in orde |
-| `/projecten` | 48 | 54 | 240 | in orde |
-| `/diensten/binnenschilderwerk` | 1651 | 1850 | 2016 | in orde |
-| `/diensten/buitenschilderwerk` | 1687 | 1669 | 2433 | in orde |
-| `/diensten/behangen` | 1680 | 1649 | 2283 | in orde |
-| `/diensten/houtrot-sanering` | 1891 | 1868 | 2425 | in orde |
-| `/diensten/lakwerk` | 1698 | 1687 | 2416 | in orde |
-| `/diensten/latex-spuiten` | 1613 | 1847 | 2021 | in orde |
-| `/diensten/winterschilder` | - | 1079 | 1174 | in orde |
-| `/locaties/waalre` | 1166 | 1019 | 1618 | in orde |
-| `/locaties/veldhoven` | 1100 | 956 | 1550 | in orde |
-| `/locaties/geldrop` | 1063 | 910 | 1515 | in orde |
-| `/locaties/nuenen` | 1087 | 942 | 1566 | in orde |
-| `/locaties/best` | 1077 | 930 | 1541 | in orde |
-| `/locaties/son-en-breugel` | 1155 | 1024 | 1628 | in orde |
-| `/locaties/helmond` | 1099 | 1118 | 1590 | in orde |
-| `/locaties/valkenswaard` | 1200 | 1054 | 1652 | in orde |
-| `/locaties/oirschot` | 1185 | 1036 | 1638 | in orde |
-| `/locaties/heeze` | 1160 | 1016 | 1596 | in orde |
-| `/locaties/mierlo` | 1192 | 1048 | 1644 | in orde |
-| `/locaties/meerhoven` | 1186 | 1038 | 1635 | in orde |
-| `/locaties/deurne` | 1191 | 1045 | 1639 | in orde |
-| `/locaties/beek-en-donk` | 1205 | 1080 | 1666 | in orde |
-| `/locaties/eersel` | 1172 | 1026 | 1615 | in orde |
-| `/locaties/bergeijk` | 1156 | 1009 | 1600 | in orde |
-| `/locaties/maarheeze` | 1153 | 1007 | 1591 | in orde |
-| `/blog` | 213 | 223 | 268 | in orde |
-| `/blog/btw-tarief-schilderwerk` | 1072 | 1080 | 1174 | in orde |
-| `/blog/hoe-schilder-je-een-deur` | 1624 | 1632 | 1745 | in orde |
-| `/blog/hoe-verf-je-een-muur` | 1398 | 1406 | 1482 | in orde |
-| `/blog/plafond-schilderen` | 2123 | 2132 | 2226 | in orde |
-| `/blog/verven-na-behang` | 1952 | 1960 | 2049 | in orde |
+| `/` | 909 | 921 | 1709 | in orde |
+| `/over-ons` | 161 | 168 | 371 | in orde |
+| `/contact` | 60 | 67 | 84 | in orde |
+| `/faq` | 82 | 442 | 506 | in orde |
+| `/projecten` | 48 | 54 | 245 | in orde |
+| `/diensten/binnenschilderwerk` | 1651 | 1850 | 2028 | in orde |
+| `/diensten/buitenschilderwerk` | 1687 | 1669 | 2452 | in orde |
+| `/diensten/behangen` | 1680 | 1649 | 2288 | in orde |
+| `/diensten/houtrot-sanering` | 1891 | 1868 | 2430 | in orde |
+| `/diensten/lakwerk` | 1698 | 1687 | 2421 | in orde |
+| `/diensten/latex-spuiten` | 1613 | 1847 | 2033 | in orde |
+| `/diensten/winterschilder` | - | 1079 | 1184 | in orde |
+| `/locaties/waalre` | 1166 | 1019 | 1623 | in orde |
+| `/locaties/veldhoven` | 1100 | 956 | 1555 | in orde |
+| `/locaties/geldrop` | 1063 | 910 | 1520 | in orde |
+| `/locaties/nuenen` | 1087 | 942 | 1571 | in orde |
+| `/locaties/best` | 1077 | 930 | 1546 | in orde |
+| `/locaties/son-en-breugel` | 1155 | 1024 | 1633 | in orde |
+| `/locaties/helmond` | 1099 | 1118 | 1595 | in orde |
+| `/locaties/valkenswaard` | 1200 | 1054 | 1657 | in orde |
+| `/locaties/oirschot` | 1185 | 1036 | 1643 | in orde |
+| `/locaties/heeze` | 1160 | 1016 | 1601 | in orde |
+| `/locaties/mierlo` | 1192 | 1048 | 1649 | in orde |
+| `/locaties/meerhoven` | 1186 | 1038 | 1640 | in orde |
+| `/locaties/deurne` | 1191 | 1045 | 1644 | in orde |
+| `/locaties/beek-en-donk` | 1205 | 1080 | 1671 | in orde |
+| `/locaties/eersel` | 1172 | 1026 | 1620 | in orde |
+| `/locaties/bergeijk` | 1156 | 1009 | 1605 | in orde |
+| `/locaties/maarheeze` | 1153 | 1007 | 1596 | in orde |
+| `/blog` | 213 | 223 | 576 | in orde |
+| `/blog/btw-tarief-schilderwerk` | 1072 | 1080 | 1436 | in orde |
+| `/blog/hoe-schilder-je-een-deur` | 1624 | 1632 | 1885 | in orde |
+| `/blog/hoe-verf-je-een-muur` | 1398 | 1406 | 1634 | in orde |
+| `/blog/plafond-schilderen` | 2123 | 2132 | 2356 | in orde |
+| `/blog/verven-na-behang` | 1952 | 1960 | 2191 | in orde |
 
 ## Bewuste uitzonderingen
 
@@ -128,6 +128,19 @@ Teksten die niet letterlijk terugkomen, met de reden. Alles hierbuiten moet teru
 | `/blog` | Schildertipsen advies | Ronde-1-formulering; v2 zet de letterlijke tekst van main (live) terug. |
 | `/blog/*` | Eigenaar Schildersbedrijf040 bij Schildersbedrijf040 | Ronde-1-formulering; v2 zet de letterlijke tekst van main (live) terug. |
 | `/blog/*` | Jordy Jacobs, eigenaar van Schildersbedrijf040 | Ronde-1-formulering; v2 zet de letterlijke tekst van main (live) terug. |
+| `/blog/btw-tarief-schilderwerk` | Het lage BTW-tarief van 9% is van toepassing als je woning o | Feitcorrectie btw (Belastingdienst): schilderwerk aan woningen ouder dan 2 jaar valt inclusief materiaal onder 9%. Oud en nieuw naast elkaar in seo/content/optimaliseren/12-blogs5.md. |
+| `/blog/btw-tarief-schilderwerk` | Belangrijk: het lage tarief geldt alleen voor de arbeid, nie | Feitcorrectie btw (Belastingdienst): schilderwerk aan woningen ouder dan 2 jaar valt inclusief materiaal onder 9%. Oud en nieuw naast elkaar in seo/content/optimaliseren/12-blogs5.md. |
+| `/blog/btw-tarief-schilderwerk` | Sommige schilders splitsen de offerte niet uit en rekenen ov | Feitcorrectie btw (Belastingdienst): schilderwerk aan woningen ouder dan 2 jaar valt inclusief materiaal onder 9%. Oud en nieuw naast elkaar in seo/content/optimaliseren/12-blogs5.md. |
+| `/blog/btw-tarief-schilderwerk` | Het hoge tarief van 21% geldt in drie situaties. Ten eerste  | Feitcorrectie btw (Belastingdienst): schilderwerk aan woningen ouder dan 2 jaar valt inclusief materiaal onder 9%. Oud en nieuw naast elkaar in seo/content/optimaliseren/12-blogs5.md. |
+| `/blog/btw-tarief-schilderwerk` | Je laat de woonkamer, hal en drie slaapkamers schilderen. De | Feitcorrectie btw (Belastingdienst): schilderwerk aan woningen ouder dan 2 jaar valt inclusief materiaal onder 9%. Oud en nieuw naast elkaar in seo/content/optimaliseren/12-blogs5.md. |
+| `/blog/btw-tarief-schilderwerk` | Dezelfde werkzaamheden in een nieuwbouwwoning. Omdat de woni | Feitcorrectie btw (Belastingdienst): schilderwerk aan woningen ouder dan 2 jaar valt inclusief materiaal onder 9%. Oud en nieuw naast elkaar in seo/content/optimaliseren/12-blogs5.md. |
+| `/blog/btw-tarief-schilderwerk` | Complete buitenschilderbeurt: kozijnen, deuren, boeidelen. O | Feitcorrectie btw (Belastingdienst): schilderwerk aan woningen ouder dan 2 jaar valt inclusief materiaal onder 9%. Oud en nieuw naast elkaar in seo/content/optimaliseren/12-blogs5.md. |
+| `/blog/btw-tarief-schilderwerk` | De eerste fout die we vaak zien is dat mensen niet om een ge | Feitcorrectie btw (Belastingdienst): schilderwerk aan woningen ouder dan 2 jaar valt inclusief materiaal onder 9%. Oud en nieuw naast elkaar in seo/content/optimaliseren/12-blogs5.md. |
+| `/blog/btw-tarief-schilderwerk` | Voor woningen ouder dan 2 jaar geldt 9% BTW op arbeidskosten | Feitcorrectie btw (Belastingdienst): schilderwerk aan woningen ouder dan 2 jaar valt inclusief materiaal onder 9%. Oud en nieuw naast elkaar in seo/content/optimaliseren/12-blogs5.md. |
+| `/blog/btw-tarief-schilderwerk` | Je woning moet minimaal 2 jaar geleden zijn opgeleverd. De d | Feitcorrectie btw (Belastingdienst): schilderwerk aan woningen ouder dan 2 jaar valt inclusief materiaal onder 9%. Oud en nieuw naast elkaar in seo/content/optimaliseren/12-blogs5.md. |
+| `/blog/btw-tarief-schilderwerk` | Nee, voor materialen geldt altijd 21% BTW, ongeacht de leeft | Feitcorrectie btw (Belastingdienst): schilderwerk aan woningen ouder dan 2 jaar valt inclusief materiaal onder 9%. Oud en nieuw naast elkaar in seo/content/optimaliseren/12-blogs5.md. |
+| `/blog/btw-tarief-schilderwerk` | Vraag hier expliciet om. Een professioneel schildersbedrijf  | Feitcorrectie btw (Belastingdienst): schilderwerk aan woningen ouder dan 2 jaar valt inclusief materiaal onder 9%. Oud en nieuw naast elkaar in seo/content/optimaliseren/12-blogs5.md. |
+| `/blog/btw-tarief-schilderwerk` | Ja, zowel binnen- als buitenschilderwerk komen in aanmerking | Feitcorrectie btw (Belastingdienst): schilderwerk aan woningen ouder dan 2 jaar valt inclusief materiaal onder 9%. Oud en nieuw naast elkaar in seo/content/optimaliseren/12-blogs5.md. |
 
 ## Nog te controleren
 
@@ -589,7 +602,7 @@ Geen: elke kop en elk tekstblok van main en voor staat op de nieuwe pagina's, en
 
 </details>
 
-<details><summary><code>/diensten/kozijnen-schilderen</code> (34 koppen)</summary>
+<details><summary><code>/diensten/kozijnen-schilderen</code> (35 koppen)</summary>
 
 - H1 Kozijnen schilderen in Eindhoven
 - H2 Wanneer moeten uw kozijnen geschilderd worden?
@@ -600,6 +613,7 @@ Geen: elke kop en elk tekstblok van main en voor staat op de nieuwe pagina's, en
 - H2 Wat hoort er bij het schilderen van kozijnen?
 - H3 Houtrot herstellen
 - H3 Het hele huis buiten
+- H3 Beitsen of lakken
 - H2 Kozijnen schilderen: voor en na
 - H2 Hoe worden uw kozijnen geschilderd?
 - H3 Inspectie en houtrotcheck
@@ -1383,9 +1397,15 @@ Geen: elke kop en elk tekstblok van main en voor staat op de nieuwe pagina's, en
 
 </details>
 
-<details><summary><code>/blog</code> (8 koppen)</summary>
+<details><summary><code>/blog</code> (14 koppen)</summary>
 
 - H1 Schildertips& advies
+- H2 Beitsen of lakken: wat past bij je kozijnen?
+- H2 Hoe lang duurt binnenschilderwerk? Planning per ruimte
+- H2 Hoe vaak moet je buitenschilderwerk laten doen?
+- H2 Kitnaden vervangen: zelf doen of laten doen?
+- H2 Latex spuiten of rollen? Zo maak je de juiste keuze
+- H2 Wanneer kun je het beste buiten schilderen?
 - H2 Plafond Schilderen, uitleg en tips van een schilder
 - H2 Verven Na Behang: Alles Wat Je Moet Weten [2026 Gids]
 - H2 BTW Tarief Schilderwerk: Alle Regels voor 2026
@@ -1396,7 +1416,239 @@ Geen: elke kop en elk tekstblok van main en voor staat op de nieuwe pagina's, en
 
 </details>
 
-<details><summary><code>/blog/btw-tarief-schilderwerk</code> (21 koppen)</summary>
+<details><summary><code>/blog/beitsen-of-lakken</code> (22 koppen)</summary>
+
+- H1 Beitsen of lakken: wat past bij je kozijnen?
+- H2 Wat is het verschil tussen beitsen en lakken?
+- H2 Wat past bij welk hout en welk onderdeel?
+- H3 Kozijnen, ramen en deuren
+- H3 Gevelbetimmering, rabatdelen en boeidelen van naaldhout
+- H3 Hardhout
+- H3 Blank of kleurloos buiten?
+- H2 Hoe ziet het onderhoud eruit bij beits en bij lak?
+- H2 Kun je overstappen van beits naar lak, of andersom?
+- H2 Wat kost het om kozijnen te laten lakken of beitsen?
+- H2 Gratis offerte aanvragen
+- H3 Hulp nodig bij uw project?
+- H2 FAQ: Materialen
+- H3 Is beitsen goedkoper dan lakken?
+- H3 Kun je dekkende verf over transparante beits zetten?
+- H3 Waarom wordt blanke of kleurloze beits buiten afgeraden?
+- H3 Jordy Jacobs
+- H3 Hulp nodig?
+- H2 Gerelateerde artikelen
+- H3 Hoe Schilder je een Deur? Stappenplan Zonder Strepen
+- H2 Benieuwd wat uw klus kost?
+- H3 Offerte aanvragen
+
+</details>
+
+<details><summary><code>/blog/hoe-lang-duurt-binnenschilderwerk</code> (25 koppen)</summary>
+
+- H1 Hoe lang duurt binnenschilderwerk? Planning per ruimte
+- H2 Hoe lang duurt binnenschilderwerk per ruimte?
+- H2 Wat maakt binnenschilderwerk sneller of langzamer?
+- H3 De staat van muren en houtwerk
+- H3 Een grote kleurwissel
+- H3 Hoeveel lakwerk er is
+- H3 Temperatuur en ventilatie
+- H3 Spuiten of rollen
+- H2 Kun je thuis blijven wonen tijdens het schilderwerk?
+- H2 Hoe plan je binnenschilderwerk het slimst?
+- H2 Gratis offerte aanvragen
+- H3 Hulp nodig bij uw project?
+- H2 FAQ: Tips & Advies
+- H3 Wanneer kun je een geschilderde kamer weer gebruiken?
+- H3 Waarom duurt lakwerk langer dan muren schilderen?
+- H3 Hoe lang duurt het om een heel huis te laten schilderen?
+- H3 Hoeveel lagen verf komen er op een binnenmuur?
+- H3 Jordy Jacobs
+- H3 Hulp nodig?
+- H2 Gerelateerde artikelen
+- H3 Hoe Verf je een Muur? Complete Handleiding van A tot Z
+- H3 Plafond Schilderen, uitleg en tips van een schilder
+- H3 Verven Na Behang: Alles Wat Je Moet Weten [2026 Gids]
+- H2 Benieuwd wat uw klus kost?
+- H3 Offerte aanvragen
+
+</details>
+
+<details><summary><code>/blog/hoe-vaak-buitenschilderwerk</code> (20 koppen)</summary>
+
+- H1 Hoe vaak moet je buitenschilderwerk laten doen?
+- H2 Hoe vaak moet je buiten schilderen per onderdeel?
+- H2 Waarom slijt de ene kant sneller dan de andere?
+- H2 Hoe herken je dat je buitenschilderwerk aan de beurt is?
+- H2 Kun je het onderhoud over meerdere jaren spreiden?
+- H2 Wat gebeurt er als je te lang wacht?
+- H2 Wat kost buitenschilderwerk als je op tijd bent?
+- H2 Gratis offerte aanvragen
+- H3 Hulp nodig bij uw project?
+- H2 FAQ: Tips & Advies
+- H3 Verlengt schoonmaken de levensduur van buitenschilderwerk?
+- H3 Gaat een lichte kleur buiten langer mee dan een donkere?
+- H3 Moeten nieuwe houten kozijnen of deuren snel geschilderd worden?
+- H3 Jordy Jacobs
+- H3 Hulp nodig?
+- H2 Gerelateerde artikelen
+- H3 Hoe Schilder je een Deur? Stappenplan Zonder Strepen
+- H3 BTW Tarief Schilderwerk: Alle Regels voor 2026
+- H2 Benieuwd wat uw klus kost?
+- H3 Offerte aanvragen
+
+</details>
+
+<details><summary><code>/blog/kitnaden-vervangen</code> (19 koppen)</summary>
+
+- H1 Kitnaden vervangen: zelf doen of laten doen?
+- H2 Welke kit gebruik je waar?
+- H2 Hoe vervang je een kitnaad? Stap voor stap
+- H3 Hoe breed en diep moet een kitnaad zijn?
+- H2 Hoe herken je een kitnaad die vervangen moet worden?
+- H2 Wanneer laat je kitnaden vervangen?
+- H2 Gratis offerte aanvragen
+- H3 Hulp nodig bij uw project?
+- H2 FAQ: How-To
+- H3 Kun je nieuwe kit over oude kit aanbrengen?
+- H3 Hoe lang moet kit uitharden voordat je kunt schilderen?
+- H3 Waarom scheurt de verf op een kitnaad?
+- H3 Welke kit gebruik je tussen een kozijn en de muur binnen?
+- H3 Jordy Jacobs
+- H3 Hulp nodig?
+- H2 Gerelateerde artikelen
+- H3 Hoe Schilder je een Deur? Stappenplan Zonder Strepen
+- H2 Benieuwd wat uw klus kost?
+- H3 Offerte aanvragen
+
+</details>
+
+<details><summary><code>/blog/latex-spuiten-of-rollen</code> (26 koppen)</summary>
+
+- H1 Latex spuiten of rollen? Zo maak je de juiste keuze
+- H2 Wat is het verschil tussen latex spuiten en rollen?
+- H2 Wanneer kies je voor spuiten?
+- H3 Nieuwbouw of een lege woning
+- H3 Grote plafonds en hoge wanden
+- H3 Vers stucwerk
+- H2 Wanneer is rollen de betere keuze?
+- H3 Eén kamer in een bewoond huis
+- H3 Veel kozijnen, ramen en deuren
+- H3 Accentmuren en meerdere kleuren
+- H2 Wat merk je als bewoner van het verschil?
+- H2 Latex spuiten of rollen: wat is beter?
+- H2 Wat kost latex spuiten vergeleken met rollen?
+- H2 Gratis offerte aanvragen
+- H3 Hulp nodig bij uw project?
+- H2 FAQ: Tips & Advies
+- H3 Kun je spuiten en rollen in één ruimte combineren?
+- H3 Wordt een gespoten muur gladder dan een gerolde muur?
+- H3 Kan ik zelf latex spuiten met een gehuurde verfspuit?
+- H3 Jordy Jacobs
+- H3 Hulp nodig?
+- H2 Gerelateerde artikelen
+- H3 Plafond Schilderen, uitleg en tips van een schilder
+- H3 Hoe Verf je een Muur? Complete Handleiding van A tot Z
+- H2 Benieuwd wat uw klus kost?
+- H3 Offerte aanvragen
+
+</details>
+
+<details><summary><code>/blog/wanneer-buiten-schilderen</code> (23 koppen)</summary>
+
+- H1 Wanneer kun je het beste buiten schilderen?
+- H2 Welk weer heb je nodig om buiten te schilderen?
+- H3 Temperatuur: tussen ongeveer 10 en 25 °C
+- H3 Luchtvochtigheid en dauwpunt
+- H3 Droog hout
+- H3 Geen regen tot de verf droog is
+- H2 In welke maanden kun je buiten schilderen?
+- H2 Op welk moment van de dag schilder je welke gevel?
+- H2 Waarom nu al buitenschilderwerk inplannen?
+- H2 Wat kun je in de winter wel laten doen?
+- H2 Gratis offerte aanvragen
+- H3 Hulp nodig bij uw project?
+- H2 FAQ: Tips & Advies
+- H3 Kun je buiten schilderen na een regenbui?
+- H3 Is het te warm om buiten te schilderen bij 30 graden?
+- H3 Hoe lang moet buitenverf droog blijven na het schilderen?
+- H3 Jordy Jacobs
+- H3 Hulp nodig?
+- H2 Gerelateerde artikelen
+- H3 Hoe Schilder je een Deur? Stappenplan Zonder Strepen
+- H3 BTW Tarief Schilderwerk: Alle Regels voor 2026
+- H2 Benieuwd wat uw klus kost?
+- H3 Offerte aanvragen
+
+</details>
+
+<details><summary><code>/blog/plafond-schilderen</code> (31 koppen)</summary>
+
+- H1 Plafond Schilderen, uitleg en tips van een schilder
+- H2 Plafond schilderen in de lengte of breedte?
+- H3 De vuistregel: richting van het licht
+- H3 Waarom dit uitmaakt voor het eindresultaat
+- H2 Voorbereiding: plafond schuren voor verven
+- H3 Wanneer schuren noodzakelijk is
+- H3 Hoe schuur je een plafond goed?
+- H2 Welke plafondverf kies je?
+- H3 Latex vs muurverf vs kalkverf
+- H3 Mat, zijdeglans of hoogglans?
+- H2 Plafond schilderen: stap voor stap
+- H2 Hoe lang duurt plafond witten?
+- H2 5 veelgemaakte fouten bij plafond schilderen
+- H2 Hulp nodig? Schakel een vakman in
+- H2 Liever laten doen?
+- H3 Hulp nodig bij uw project?
+- H2 FAQ: How-To
+- H3 Hoeveel kost plafond schilderen?
+- H3 Moet je een plafond schuren voor het verven?
+- H3 Schilder je een plafond in de lengte of breedte?
+- H3 Hoeveel lagen verf heeft een plafond nodig?
+- H3 Welke verf gebruik je voor een plafond?
+- H3 Hoe voorkom je strepen bij plafond schilderen?
+- H3 Hoe lang duurt het om een plafond te witten?
+- H3 Kun je een plafond schilderen zonder schuren?
+- H3 Jordy Jacobs
+- H3 Hulp nodig?
+- H2 Gerelateerde artikelen
+- H3 Hoe Schilder je een Deur? Stappenplan Zonder Strepen
+- H2 Benieuwd wat uw klus kost?
+- H3 Offerte aanvragen
+
+</details>
+
+<details><summary><code>/blog/verven-na-behang</code> (26 koppen)</summary>
+
+- H1 Verven Na Behang: Alles Wat Je Moet Weten [2026 Gids]
+- H2 Kun je over behang heen verven?
+- H3 Wanneer wel: vliesbehang en glad behang
+- H3 Wanneer niet: structuurbehang en los behang
+- H2 Behang verwijderen: stap-voor-stap
+- H3 Benodigdheden
+- H3 Behang weken en verwijderen
+- H3 Lijmresten verwijderen
+- H2 Muur voorbereiden na behang verwijderen
+- H3 Schuren en egaliseren
+- H3 Primer of voorstrijk aanbrengen
+- H2 Behang sauzen: wanneer en hoe?
+- H3 Welke verf gebruik je op behang?
+- H3 Tips voor een strak resultaat
+- H2 Veelgemaakte fouten bij verven na behang
+- H2 Liever een professional? Vraag een offerte aan
+- H2 Liever laten doen?
+- H3 Hulp nodig bij uw project?
+- H2 FAQ: How-To
+- H3 Kan je over behang verven?
+- H3 Moet je gronden na behang verwijderen?
+- H3 Hoeveel lagen verf na behang verwijderen?
+- H3 Jordy Jacobs
+- H3 Hulp nodig?
+- H2 Benieuwd wat uw klus kost?
+- H3 Offerte aanvragen
+
+</details>
+
+<details><summary><code>/blog/btw-tarief-schilderwerk</code> (22 koppen)</summary>
 
 - H1 BTW Tarief Schilderwerk: Alle Regels voor 2026
 - H2 Het verschil tussen 9% en 21% BTW bij schilderwerk
@@ -1408,6 +1660,7 @@ Geen: elke kop en elk tekstblok van main en voor staat op de nieuwe pagina's, en
 - H3 Voorbeeld 3: Buitenschilderwerk vrijstaande woning
 - H2 Veelgemaakte fouten en hoe je ze voorkomt
 - H2 Wat betekent dit voor jouw project?
+- H2 Liever laten doen?
 - H3 Hulp nodig bij uw project?
 - H2 FAQ: BTW & Kosten
 - H3 Welk BTW-tarief geldt voor schilderwerk in 2026?
@@ -1422,12 +1675,12 @@ Geen: elke kop en elk tekstblok van main en voor staat op de nieuwe pagina's, en
 
 </details>
 
-<details><summary><code>/blog/hoe-schilder-je-een-deur</code> (22 koppen)</summary>
+<details><summary><code>/blog/hoe-schilder-je-een-deur</code> (23 koppen)</summary>
 
 - H1 Hoe Schilder je een Deur? Stappenplan Zonder Strepen
 - H2 Dit heb je nodig
 - H2 Stap 1: De deur demonteren en voorbereiden
-- H2 Stap 2: Schuren – de basis van elk goed resultaat
+- H2 Stap 2: Schuren, de basis van elk goed resultaat
 - H2 Stap 3: Ontvetten en repareren
 - H2 Stap 4: Gronden met primer
 - H2 Stap 5: De eerste laklaag aanbrengen
@@ -1435,6 +1688,7 @@ Geen: elke kop en elk tekstblok van main en voor staat op de nieuwe pagina's, en
 - H2 Stap 7: Drogen en monteren
 - H2 Veelgemaakte fouten en hoe je ze voorkomt
 - H2 Wanneer toch een professional inschakelen?
+- H2 Liever laten doen?
 - H3 Hulp nodig bij uw project?
 - H2 FAQ: How-To
 - H3 Hoe lang moet een deur drogen tussen verflagen?
@@ -1449,7 +1703,7 @@ Geen: elke kop en elk tekstblok van main en voor staat op de nieuwe pagina's, en
 
 </details>
 
-<details><summary><code>/blog/hoe-verf-je-een-muur</code> (31 koppen)</summary>
+<details><summary><code>/blog/hoe-verf-je-een-muur</code> (32 koppen)</summary>
 
 - H1 Hoe Verf je een Muur? Complete Handleiding van A tot Z
 - H2 De juiste muurverf kiezen
@@ -1471,6 +1725,7 @@ Geen: elke kop en elk tekstblok van main en voor staat op de nieuwe pagina's, en
 - H3 Schimmel op de muur
 - H2 Veelgemaakte fouten
 - H2 Wanneer een professional inschakelen?
+- H2 Liever laten doen?
 - H3 Hulp nodig bij uw project?
 - H2 FAQ: How-To
 - H3 Hoeveel lagen muurverf heb ik nodig?
@@ -1478,71 +1733,6 @@ Geen: elke kop en elk tekstblok van main en voor staat op de nieuwe pagina's, en
 - H3 Hoe voorkom ik strepen bij het rollen?
 - H3 Wat is het verschil tussen latex en acrylaat muurverf?
 - H3 Kan ik over oud behang heen schilderen?
-- H3 Jordy Jacobs
-- H3 Hulp nodig?
-- H2 Benieuwd wat uw klus kost?
-- H3 Offerte aanvragen
-
-</details>
-
-<details><summary><code>/blog/plafond-schilderen</code> (30 koppen)</summary>
-
-- H1 Plafond Schilderen, uitleg en tips van een schilder
-- H2 Plafond schilderen in de lengte of breedte?
-- H3 De vuistregel: richting van het licht
-- H3 Waarom dit uitmaakt voor het eindresultaat
-- H2 Voorbereiding: plafond schuren voor verven
-- H3 Wanneer schuren noodzakelijk is
-- H3 Hoe schuur je een plafond goed?
-- H2 Welke plafondverf kies je?
-- H3 Latex vs muurverf vs kalkverf
-- H3 Mat, zijdeglans of hoogglans?
-- H2 Plafond schilderen: stap voor stap
-- H2 Hoe lang duurt plafond witten?
-- H2 5 veelgemaakte fouten bij plafond schilderen
-- H2 Hulp nodig? Schakel een vakman in
-- H3 Hulp nodig bij uw project?
-- H2 FAQ: How-To
-- H3 Hoeveel kost plafond schilderen?
-- H3 Moet je een plafond schuren voor het verven?
-- H3 Schilder je een plafond in de lengte of breedte?
-- H3 Hoeveel lagen verf heeft een plafond nodig?
-- H3 Welke verf gebruik je voor een plafond?
-- H3 Hoe voorkom je strepen bij plafond schilderen?
-- H3 Hoe lang duurt het om een plafond te witten?
-- H3 Kun je een plafond schilderen zonder schuren?
-- H3 Jordy Jacobs
-- H3 Hulp nodig?
-- H2 Gerelateerde artikelen
-- H3 Hoe Schilder je een Deur? Stappenplan Zonder Strepen
-- H2 Benieuwd wat uw klus kost?
-- H3 Offerte aanvragen
-
-</details>
-
-<details><summary><code>/blog/verven-na-behang</code> (25 koppen)</summary>
-
-- H1 Verven Na Behang: Alles Wat Je Moet Weten [2026 Gids]
-- H2 Kun je over behang heen verven?
-- H3 Wanneer wel: vliesbehang en glad behang
-- H3 Wanneer niet: structuurbehang en los behang
-- H2 Behang verwijderen: stap-voor-stap
-- H3 Benodigdheden
-- H3 Behang weken en verwijderen
-- H3 Lijmresten verwijderen
-- H2 Muur voorbereiden na behang verwijderen
-- H3 Schuren en egaliseren
-- H3 Primer of voorstrijk aanbrengen
-- H2 Behang sauzen – wanneer en hoe?
-- H3 Welke verf gebruik je op behang?
-- H3 Tips voor een strak resultaat
-- H2 Veelgemaakte fouten bij verven na behang
-- H2 Liever een professional? Vraag een offerte aan
-- H3 Hulp nodig bij uw project?
-- H2 FAQ: How-To
-- H3 Kan je over behang verven?
-- H3 Moet je gronden na behang verwijderen?
-- H3 Hoeveel lagen verf na behang verwijderen?
 - H3 Jordy Jacobs
 - H3 Hulp nodig?
 - H2 Benieuwd wat uw klus kost?

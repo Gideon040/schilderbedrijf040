@@ -1,0 +1,740 @@
+{
+ "_id": "blogPost-hoe-vaak-buitenschilderwerk",
+ "_type": "blogPost",
+ "title": "Hoe vaak moet je buitenschilderwerk laten doen?",
+ "slug": {
+  "_type": "slug",
+  "current": "hoe-vaak-buitenschilderwerk"
+ },
+ "metaTitle": "Hoe vaak moet je buiten schilderen? | Schildersbedrijf040",
+ "metaDescription": "Hoe vaak buitenschilderwerk? Dekkend gelakte kozijnen gemiddeld elke 6 tot 10 jaar, gebeitst hout vaker. Zie de cyclus per onderdeel en wanneer het tijd is.",
+ "excerpt": "Dekkend gelakte kozijnen en deuren gaan gemiddeld 6 tot 10 jaar mee, transparant gebeitst hout 2 tot 4 jaar. Bekijk de onderhoudscyclus per onderdeel en de signalen dat je buitenschilderwerk aan de beurt is.",
+ "coverImage": {
+  "_type": "image",
+  "asset": {
+   "_type": "reference",
+   "_ref": "image-80fb4368869db0591078fc7e77b1d72fe6226a02-1536x2048-jpg"
+  }
+ },
+ "date": "2026-10-12",
+ "readTime": "6 min",
+ "category": "Tips & Advies",
+ "keywords": [
+  "hoe vaak buitenschilderwerk",
+  "hoe vaak kozijnen schilderen",
+  "hoe vaak buiten schilderen",
+  "onderhoudscyclus schilderwerk",
+  "hoe vaak huis schilderen",
+  "wanneer kozijnen schilderen"
+ ],
+ "author": {
+  "name": "Jordy Jacobs",
+  "role": "Eigenaar Schildersbedrijf040"
+ },
+ "content": [
+  {
+   "_type": "block",
+   "_key": "b5",
+   "style": "normal",
+   "markDefs": [
+    {
+     "_type": "link",
+     "_key": "link2",
+     "href": "/diensten/buitenschilderwerk"
+    }
+   ],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s1",
+     "text": "Dekkend geschilderde kozijnen, ramen en deuren hebben gemiddeld elke 6 tot 10 jaar een nieuwe verflaag nodig, met een controle na ongeveer 2 jaar. Transparant gebeitst hout vraagt vaker onderhoud: ongeveer elke 2 tot 4 jaar. De zon- en regenkant slijt sneller. Kijk dus niet alleen naar de jaren, maar ook naar de signalen. Meer over de aanpak lees je bij ",
+     "marks": []
+    },
+    {
+     "_type": "span",
+     "_key": "s3",
+     "text": "buitenschilderwerk",
+     "marks": [
+      "link2"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "s4",
+     "text": ".",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "b7",
+   "style": "h2",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s6",
+     "text": "Hoe vaak moet je buiten schilderen per onderdeel?",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "b9",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s8",
+     "text": "Hoe vaak een onderdeel aan de beurt is, hangt vooral af van de afwerking: een dichte, dekkende lak gaat langer mee dan een transparante beits, die meer zonlicht doorlaat. Fabrikanten en de branche geven deze richtlijnen:",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "b12",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s10",
+     "text": "Houten kozijnen en ramen, dekkend gelakt:",
+     "marks": [
+      "strong"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "s11",
+     "text": " onderhoudscyclus van doorgaans 8 tot 10 jaar met een hoogwaardige buitenlak, zoals Sikkens opgeeft voor Rubbol XD High Gloss. Een controle tussendoor vangt kleine schade op tijd af.",
+     "marks": []
+    }
+   ],
+   "listItem": "bullet",
+   "level": 1
+  },
+  {
+   "_type": "block",
+   "_key": "b15",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s13",
+     "text": "Houten buitendeur, dekkend afgewerkt:",
+     "marks": [
+      "strong"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "s14",
+     "text": " volgens het onderhoudsschema van GND (Garantie Nederlandse Deuren) een kwaliteitscontrole in jaar 2 en overschilderen in jaar 6.",
+     "marks": []
+    }
+   ],
+   "listItem": "bullet",
+   "level": 1
+  },
+  {
+   "_type": "block",
+   "_key": "b18",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s16",
+     "text": "Houten buitendeur, transparant afgewerkt:",
+     "marks": [
+      "strong"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "s17",
+     "text": " volgens GND om de 2 jaar overschilderen.",
+     "marks": []
+    }
+   ],
+   "listItem": "bullet",
+   "level": 1
+  },
+  {
+   "_type": "block",
+   "_key": "b21",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s19",
+     "text": "Gevelbetimmering en rabatdelen, gebeitst:",
+     "marks": [
+      "strong"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "s20",
+     "text": " een watergedragen gevelbeits als CetaBever Gevel Hout Snel Beits beschermt in een systeem van 3 lagen tot ongeveer 7 jaar, zowel dekkend als transparant.",
+     "marks": []
+    }
+   ],
+   "listItem": "bullet",
+   "level": 1
+  },
+  {
+   "_type": "block",
+   "_key": "b24",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s22",
+     "text": "Gevelbetimmering met een transparante, licht filmvormende beits:",
+     "marks": [
+      "strong"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "s23",
+     "text": " Sikkens Cetol Novatech noemt een buitenduurzaamheid van 3 tot 4 jaar, met een onderhoudsbeurt om de ongeveer 2 jaar.",
+     "marks": []
+    }
+   ],
+   "listItem": "bullet",
+   "level": 1
+  },
+  {
+   "_type": "block",
+   "_key": "b27",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s25",
+     "text": "Kitnaden rond glas:",
+     "marks": [
+      "strong"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "s26",
+     "text": " bij elke controle nakijken, vooral in de hoeken, en herstellen zodra er scheurtjes of loslatende kit te zien zijn.",
+     "marks": []
+    }
+   ],
+   "listItem": "bullet",
+   "level": 1
+  },
+  {
+   "_type": "block",
+   "_key": "b29",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s28",
+     "text": "Dit zijn richtlijnen voor goed aangebracht schilderwerk. Werk dat ooit in een te dunne laag of op nat hout is gezet, is vaak eerder aan de beurt. Het omgekeerde geldt ook: een kozijn onder een overstek op het noorden kan langer mee.",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "b31",
+   "style": "h2",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s30",
+     "text": "Waarom slijt de ene kant sneller dan de andere?",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "b33",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s32",
+     "text": "Zon en regen zijn de grootste slijters van buitenschilderwerk. GND noemt de ligging op het zuiden en westen, beschut of onbeschut, het gebruik en hoe vaak je schoonmaakt als de factoren die bepalen hoe vaak onderhoud nodig is. Op het zuiden breekt UV-licht de verf sneller af, op het westen krijgt het houtwerk de meeste regen te verduren.",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "b35",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s34",
+     "text": "Ook de kleur speelt mee. Lichte kleuren houden het langer vol dan (zeer) donkere kleuren. Een donkere kleur wordt in de zon veel warmer, waardoor de verf sneller veroudert en het hout meer gaat werken. Het gevolg is dat je zelden het hele huis tegelijk hoeft te doen: vaak is de zon- en regenkant eerder aan de beurt dan de noordgevel.",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "b37",
+   "style": "h2",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s36",
+     "text": "Hoe herken je dat je buitenschilderwerk aan de beurt is?",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "b39",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s38",
+     "text": "Een paar minuten rond het huis lopen vertelt je meer dan de datum van de vorige schilderbeurt. Let op deze signalen:",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "b42",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s40",
+     "text": "Krijten:",
+     "marks": [
+      "strong"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "s41",
+     "text": " veeg met je vinger over de verf. Blijft er een poederig laagje aan je vinger, dan breekt de verf af en neemt de bescherming af.",
+     "marks": []
+    }
+   ],
+   "listItem": "number",
+   "level": 1
+  },
+  {
+   "_type": "block",
+   "_key": "b45",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s43",
+     "text": "Doffe of verbleekte verf:",
+     "marks": [
+      "strong"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "s44",
+     "text": " de glans is weg of de kleur is zichtbaar lichter op de zonzijde.",
+     "marks": []
+    }
+   ],
+   "listItem": "number",
+   "level": 1
+  },
+  {
+   "_type": "block",
+   "_key": "b48",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s46",
+     "text": "Haarscheurtjes:",
+     "marks": [
+      "strong"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "s47",
+     "text": " fijne scheurtjes in de verf, vaak op de verbindingen van kozijnen en bij onderdorpels.",
+     "marks": []
+    }
+   ],
+   "listItem": "number",
+   "level": 1
+  },
+  {
+   "_type": "block",
+   "_key": "b51",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s49",
+     "text": "Bladderen en kale plekken:",
+     "marks": [
+      "strong"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "s50",
+     "text": " de verf laat los en het hout ligt bloot. Hier komt vocht direct in het hout.",
+     "marks": []
+    }
+   ],
+   "listItem": "number",
+   "level": 1
+  },
+  {
+   "_type": "block",
+   "_key": "b54",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s52",
+     "text": "Gescheurde of losse kit:",
+     "marks": [
+      "strong"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "s53",
+     "text": " kitnaden rond het glas of het kozijn die scheuren of loskomen, laten water door.",
+     "marks": []
+    }
+   ],
+   "listItem": "number",
+   "level": 1
+  },
+  {
+   "_type": "block",
+   "_key": "b57",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s55",
+     "text": "Zachte plekken in het hout:",
+     "marks": [
+      "strong"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "s56",
+     "text": " druk met een schroevendraaier op de onderdorpel en de hoeken. Geeft het hout mee, dan is er waarschijnlijk houtrot.",
+     "marks": []
+    }
+   ],
+   "listItem": "number",
+   "level": 1
+  },
+  {
+   "_type": "block",
+   "_key": "b59",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s58",
+     "text": "Zie je alleen de eerste twee signalen, dan ben je op tijd voor een gewone onderhoudsbeurt. Bij bladderen, open naden of zachte plekken is het tijd om snel te handelen.",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "b61",
+   "style": "h2",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s60",
+     "text": "Kun je het onderhoud over meerdere jaren spreiden?",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "b63",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s62",
+     "text": "Ja, en dat is vaak verstandig. Omdat de zon- en regenkant sneller slijt, kun je die gevels eerder laten doen en de beschutte kanten een of twee jaar later. Zo spreid je de kosten en voorkom je dat de zwaarst belaste kozijnen te lang wachten. Laat in de tussenliggende jaren wel een controle doen, zoals GND die na 2 jaar aanbeveelt: kleine beschadigingen en open kitnaden direct bijwerken houdt de volgende grote beurt beperkt.",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "b65",
+   "style": "h2",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s64",
+     "text": "Wat gebeurt er als je te lang wacht?",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "b70",
+   "style": "normal",
+   "markDefs": [
+    {
+     "_type": "link",
+     "_key": "link67",
+     "href": "/diensten/houtrot-sanering"
+    }
+   ],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s66",
+     "text": "Wacht je te lang, dan wordt de volgende beurt groter en duurder. Waar verf loslaat, trekt vocht het hout in. Dat geeft eerst grijs, verweerd hout en op termijn houtrot, die eerst hersteld moet worden met ",
+     "marks": []
+    },
+    {
+     "_type": "span",
+     "_key": "s68",
+     "text": "houtrotsanering",
+     "marks": [
+      "link67"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "s69",
+     "text": " voordat er geschilderd kan worden.",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "b72",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s71",
+     "text": "Bij transparant gebeitst hout is wachten extra riskant. Transparante beits laat zonlicht door, waardoor het hout eronder langzaam verweert. Sikkens geeft aan dat transparante systemen die ouder zijn dan 5 tot 6 jaar vrijwel altijd helemaal verwijderd moeten worden voordat er dekkend over geschilderd kan worden. Een tijdige onderhoudsbeurt, waarbij je alleen schoonmaakt, licht schuurt en een nieuwe laag zet, is dan veel minder werk.",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "b74",
+   "style": "h2",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s73",
+     "text": "Wat kost buitenschilderwerk als je op tijd bent?",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "b82",
+   "style": "normal",
+   "markDefs": [
+    {
+     "_type": "link",
+     "_key": "link76",
+     "href": "/diensten/kozijnen-schilderen"
+    },
+    {
+     "_type": "link",
+     "_key": "link79",
+     "href": "/blog/wanneer-buiten-schilderen"
+    }
+   ],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s75",
+     "text": "Op tijd schilderen is goedkoper, omdat er minder voorbereiding nodig is. Bij Schildersbedrijf040 kost het schilderen van kozijnen buiten €50 tot €100 per kozijn, afhankelijk van de grootte en de staat. Lees meer over ",
+     "marks": []
+    },
+    {
+     "_type": "span",
+     "_key": "s77",
+     "text": "kozijnen laten schilderen",
+     "marks": [
+      "link76"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "s78",
+     "text": ". Een geschilderde gevel kost €35 tot €45 per m². Wil je weten welk moment in het jaar het meest geschikt is? Lees dan de blog over ",
+     "marks": []
+    },
+    {
+     "_type": "span",
+     "_key": "s80",
+     "text": "wanneer je het beste buiten kunt schilderen",
+     "marks": [
+      "link79"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "s81",
+     "text": ".",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "b84",
+   "style": "h2",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s83",
+     "text": "Gratis offerte aanvragen",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "b92",
+   "style": "normal",
+   "markDefs": [
+    {
+     "_type": "link",
+     "_key": "link86",
+     "href": "/contact"
+    },
+    {
+     "_type": "link",
+     "_key": "link89",
+     "href": "tel:+31638903004"
+    }
+   ],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s85",
+     "text": "Twijfel je of je buitenschilderwerk al aan de beurt is? Schildersbedrijf040 komt gratis kijken, beoordeelt de staat van je kozijnen, deuren en gevel en adviseert wat nu nodig is en wat nog kan wachten. Schildersbedrijf040 werkt met Boonstoppel-verf en heeft een 5,0 op Google. ",
+     "marks": []
+    },
+    {
+     "_type": "span",
+     "_key": "s87",
+     "text": "Gratis offerte aanvragen",
+     "marks": [
+      "link86"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "s88",
+     "text": " of bel ",
+     "marks": []
+    },
+    {
+     "_type": "span",
+     "_key": "s90",
+     "text": "06-38903004",
+     "marks": [
+      "link89"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "s91",
+     "text": ".",
+     "marks": []
+    }
+   ]
+  }
+ ],
+ "faq": [
+  {
+   "_type": "object",
+   "_key": "faq1",
+   "question": "Verlengt schoonmaken de levensduur van buitenschilderwerk?",
+   "answer": "Ja. GND schrijft in de onderhoudsvoorschriften voor buitendeuren dat reinigen sterk bijdraagt aan een langere levensduur, omdat vuile deuren sneller verweren. Maak kozijnen, deuren en boeidelen daarom een of twee keer per jaar schoon met water en eventueel een zachte zeepoplossing. Spoel na met schoon water en droog af met een zachte doek. Neem ook het glas en de kit rond de ruiten mee. Vermijd schuurmiddelen en schuursponsjes, want die beschadigen de verflaag en halen juist de beschermende toplaag weg."
+  },
+  {
+   "_type": "object",
+   "_key": "faq2",
+   "question": "Gaat een lichte kleur buiten langer mee dan een donkere?",
+   "answer": "Ja. Lichte kleuren geven een gunstiger onderhoudsresultaat dan (zeer) donkere kleuren, schrijft GND. Hoe lichter de kleur, hoe langer de afwerklaag zijn beschermende functie blijft vervullen. Donkere kleuren worden in de zon veel warmer. Daardoor veroudert de verf sneller en gaat het hout meer werken, wat bij deuren ook de vormvastheid niet ten goede komt. Kies je toch voor antraciet of zwart op een zonnige gevel, houd dan rekening met een kortere onderhoudscyclus en controleer de zonzijde vaker."
+  },
+  {
+   "_type": "object",
+   "_key": "faq3",
+   "question": "Moeten nieuwe houten kozijnen of deuren snel geschilderd worden?",
+   "answer": "Vaak wel. Veel nieuwe houten deuren worden geleverd met een grond- of voorlaklaag, en die is niet bedoeld als eindafwerking. Volgens het GND-garantiereglement moeten deuren met een voorlaksysteem binnen 6 maanden (transparant) of 18 maanden (dekkend) na levering of plaatsing worden afgelakt. Daarna geldt het normale onderhoudsschema. Vraag bij nieuwe kozijnen of deuren altijd na in welke afwerking ze geleverd worden en wat de fabrikant voorschrijft, zodat je de garantie niet verliest."
+  }
+ ],
+ "relatedPosts": [
+  {
+   "_type": "reference",
+   "_ref": "blogPost-hoe-schilder-je-een-deur",
+   "_key": "rel1"
+  },
+  {
+   "_type": "reference",
+   "_ref": "blogPost-btw-tarief-schilderwerk",
+   "_key": "rel2"
+  }
+ ]
+}

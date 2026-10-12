@@ -1,0 +1,829 @@
+{
+ "_id": "blogPost-kitnaden-vervangen",
+ "_type": "blogPost",
+ "title": "Kitnaden vervangen: zelf doen of laten doen?",
+ "slug": {
+  "_type": "slug",
+  "current": "kitnaden-vervangen"
+ },
+ "metaTitle": "Kitnaden vervangen: zo doe je dat | Schildersbedrijf040",
+ "metaDescription": "Kitnaden vervangen? Oude kit verwijderen, de juiste kit kiezen en strak afwerken in 8 stappen. Plus: wanneer je kitwerk rond buitenkozijnen beter laat doen.",
+ "excerpt": "Oude kit verwijderen en een nieuwe kitnaad zetten kun je bij een klein klusje prima zelf. Zo kies je de juiste kit, zo werk je in 8 stappen en zo weet je wanneer je het beter laat doen.",
+ "coverImage": {
+  "_type": "image",
+  "asset": {
+   "_type": "reference",
+   "_ref": "image-184e607570e9241eaac1990fb6d0ae2a6c580435-1179x1534-jpg"
+  }
+ },
+ "date": "2026-10-12",
+ "readTime": "7 min",
+ "category": "How-To",
+ "keywords": [
+  "kitnaden vervangen",
+  "oude kit verwijderen",
+  "kitnaad vervangen",
+  "kit verwijderen",
+  "siliconenkit verwijderen",
+  "acrylaatkit of siliconenkit",
+  "kitnaden kozijnen"
+ ],
+ "author": {
+  "name": "Jordy Jacobs",
+  "role": "Eigenaar Schildersbedrijf040"
+ },
+ "content": [
+  {
+   "_type": "block",
+   "_key": "b5",
+   "style": "normal",
+   "markDefs": [
+    {
+     "_type": "link",
+     "_key": "link2",
+     "href": "/diensten/buitenschilderwerk"
+    }
+   ],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s1",
+     "text": "Een kitnaad vervang je door de oude kit volledig weg te snijden, resten en vet te verwijderen, de juiste kit aan te brengen en die strak af te werken. Een kitrand in de badkamer of een paar meter langs een binnenkozijn kun je prima zelf doen. Kitnaden rond buitenkozijnen en glas laat je het best meenemen bij het ",
+     "marks": []
+    },
+    {
+     "_type": "span",
+     "_key": "s3",
+     "text": "buitenschilderwerk",
+     "marks": [
+      "link2"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "s4",
+     "text": ".",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "b7",
+   "style": "h2",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s6",
+     "text": "Welke kit gebruik je waar?",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "b9",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s8",
+     "text": "De juiste kit kiezen is de halve klus. Er zijn drie soorten die je in en om het huis tegenkomt, en ze zijn niet uitwisselbaar:",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "b12",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s10",
+     "text": "Acrylaatkit:",
+     "marks": [
+      "strong"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "s11",
+     "text": " overschilderbaar en glad af te werken met water. Geschikt voor naden tussen kozijn en muur, langs plinten en in hoeken die je daarna schildert. Acrylaatkit kan beperkt bewegen; de buitenvariant Zwaluw Acryl Exterior+ heeft een bewegingsopname van 12,5%. Tijdens het uitharden krimpt acrylaatkit iets.",
+     "marks": []
+    }
+   ],
+   "listItem": "bullet",
+   "level": 1
+  },
+  {
+   "_type": "block",
+   "_key": "b15",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s13",
+     "text": "Siliconenkit:",
+     "marks": [
+      "strong"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "s14",
+     "text": " water- en schimmelbestendig, elastisch en bestand tegen temperatuurwisselingen. Dé kit voor de badkamer, het aanrecht en de douche. Siliconenkit is niet overschilderbaar: verf hecht er niet op.",
+     "marks": []
+    }
+   ],
+   "listItem": "bullet",
+   "level": 1
+  },
+  {
+   "_type": "block",
+   "_key": "b18",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s16",
+     "text": "Hybride kit (MS-polymeer):",
+     "marks": [
+      "strong"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "s17",
+     "text": " blijvend elastisch, hecht op vrijwel elke ondergrond en is overschilderbaar. Er zijn speciale varianten voor beglazing, zoals Zwaluw Hybriseal 2PS, een overschilderbare beglazingskit voor glas- en aansluitvoegen.",
+     "marks": []
+    }
+   ],
+   "listItem": "bullet",
+   "level": 1
+  },
+  {
+   "_type": "block",
+   "_key": "b20",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s19",
+     "text": "De vuistregel: wil je er later overheen schilderen, gebruik dan nooit siliconenkit. Op houten kozijnen die geschilderd worden, hoort een overschilderbare kit.",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "b22",
+   "style": "h2",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s21",
+     "text": "Hoe vervang je een kitnaad? Stap voor stap",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "b24",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s23",
+     "text": "Voor een kleine klus heb je een scherp afbreekmes, een kitpistool, de juiste kit, afplaktape, een ontvetter of spiritus, een doek en bij siliconenkit een kitverwijderaar nodig. Werk bij een temperatuur van minimaal 5 °C; veel kitten mogen niet kouder worden aangebracht.",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "b27",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s25",
+     "text": "Oude kit wegsnijden.",
+     "marks": [
+      "strong"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "s26",
+     "text": " Snijd met een scherp mesje langs beide zijkanten van de naad. Trek de kit daarna in een zo lang mogelijke strook los of rol hem op. Werk voorzichtig langs glas en geschilderd hout.",
+     "marks": []
+    }
+   ],
+   "listItem": "number",
+   "level": 1
+  },
+  {
+   "_type": "block",
+   "_key": "b30",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s28",
+     "text": "Resten verwijderen.",
+     "marks": [
+      "strong"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "s29",
+     "text": " Haal de laatste resten weg met het mesje of een kunststof schraper. Siliconenresten zijn hardnekkig: breng een kitverwijderaar aan, laat die inwerken tot de resten zacht zijn en neem ze af met een doek.",
+     "marks": []
+    }
+   ],
+   "listItem": "number",
+   "level": 1
+  },
+  {
+   "_type": "block",
+   "_key": "b33",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s31",
+     "text": "Schoonmaken en ontvetten.",
+     "marks": [
+      "strong"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "s32",
+     "text": " De naad moet schoon, droog, vet- en stofvrij zijn. Nieuwe kit hecht niet op oude kitresten, vet of stof.",
+     "marks": []
+    }
+   ],
+   "listItem": "number",
+   "level": 1
+  },
+  {
+   "_type": "block",
+   "_key": "b36",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s34",
+     "text": "Diepe naden opvullen met rugvulling.",
+     "marks": [
+      "strong"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "s35",
+     "text": " Is de naad dieper dan nodig, druk dan eerst een rond schuimkoord in de naad. Dat zorgt voor de juiste diepte en voorkomt dat de kit aan drie kanten hecht, zodat de kit vrij kan meebewegen.",
+     "marks": []
+    }
+   ],
+   "listItem": "number",
+   "level": 1
+  },
+  {
+   "_type": "block",
+   "_key": "b39",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s37",
+     "text": "Afplakken.",
+     "marks": [
+      "strong"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "s38",
+     "text": " Plak beide randen strak af met tape. Dan krijg je een rechte lijn en blijft er geen kit op de ondergrond achter.",
+     "marks": []
+    }
+   ],
+   "listItem": "number",
+   "level": 1
+  },
+  {
+   "_type": "block",
+   "_key": "b42",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s40",
+     "text": "Kit aanbrengen.",
+     "marks": [
+      "strong"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "s41",
+     "text": " Snijd de spuitmond schuin af op de breedte van de naad en spuit de kit in één vloeiende beweging in de naad.",
+     "marks": []
+    }
+   ],
+   "listItem": "number",
+   "level": 1
+  },
+  {
+   "_type": "block",
+   "_key": "b45",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s43",
+     "text": "Afwerken.",
+     "marks": [
+      "strong"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "s44",
+     "text": " Strijk de kit glad met een afwerkspatel of een natte vinger, voordat er een huidje op komt. Bij Zwaluw Acryl Exterior+ is dat na ongeveer 10 minuten. Trek de tape direct daarna los.",
+     "marks": []
+    }
+   ],
+   "listItem": "number",
+   "level": 1
+  },
+  {
+   "_type": "block",
+   "_key": "b48",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s46",
+     "text": "Laten uitharden.",
+     "marks": [
+      "strong"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "s47",
+     "text": " Kit hardt van buiten naar binnen uit. Acryl Exterior+ hardt bij 23 °C ongeveer 2 mm per 24 uur uit. Schilder pas na volledige uitharding.",
+     "marks": []
+    }
+   ],
+   "listItem": "number",
+   "level": 1
+  },
+  {
+   "_type": "block",
+   "_key": "b50",
+   "style": "h3",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s49",
+     "text": "Hoe breed en diep moet een kitnaad zijn?",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "b52",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s51",
+     "text": "Een kitnaad werkt alleen als de verhouding tussen breedte en diepte klopt. Zwaluw geeft als regel: tot 10 mm breed is de diepte gelijk aan de breedte, met een minimum van 5 mm. Bij bredere naden is de diepte de breedte gedeeld door 3, plus 6 mm. Een naad van 18 mm breed is dus 12 mm diep. Een te dikke laag kit kan minder goed meebewegen en scheurt eerder.",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "b54",
+   "style": "h2",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s53",
+     "text": "Hoe herken je een kitnaad die vervangen moet worden?",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "b56",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s55",
+     "text": "Kitnaden verouderen door zon, kou en beweging van het hout en het glas. Vervang een naad als je dit ziet:",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "b59",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s57",
+     "text": "Scheurtjes in de kit",
+     "marks": [
+      "strong"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "s58",
+     "text": ", vooral in de hoeken van een raam of kozijn.",
+     "marks": []
+    }
+   ],
+   "listItem": "bullet",
+   "level": 1
+  },
+  {
+   "_type": "block",
+   "_key": "b62",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s60",
+     "text": "Kit die loslaat",
+     "marks": [
+      "strong"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "s61",
+     "text": " van het glas, het hout of de muur, zodat er een spleet ontstaat.",
+     "marks": []
+    }
+   ],
+   "listItem": "bullet",
+   "level": 1
+  },
+  {
+   "_type": "block",
+   "_key": "b65",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s63",
+     "text": "Harde, brosse kit",
+     "marks": [
+      "strong"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "s64",
+     "text": " die niet meer veert als je erop drukt.",
+     "marks": []
+    }
+   ],
+   "listItem": "bullet",
+   "level": 1
+  },
+  {
+   "_type": "block",
+   "_key": "b68",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s66",
+     "text": "Zwarte plekken",
+     "marks": [
+      "strong"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "s67",
+     "text": " in siliconenkit in de badkamer die niet meer weg te poetsen zijn.",
+     "marks": []
+    }
+   ],
+   "listItem": "bullet",
+   "level": 1
+  },
+  {
+   "_type": "block",
+   "_key": "b70",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s69",
+     "text": "Rond het glas van buitenkozijnen is dit extra belangrijk. GND adviseert de beglazingskit bij elke onderhoudsbeurt te controleren op scheurtjes en loslatende kit, met name in de hoeken, en die te herstellen zodat er geen vocht binnendringt. Vocht dat langs het glas het kozijn in loopt, tast het isolatieglas en het hout aan.",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "b72",
+   "style": "h2",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s71",
+     "text": "Wanneer laat je kitnaden vervangen?",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "b74",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s73",
+     "text": "Zelf doen is prima voor een badkamerrand, een keukenblad of een paar meter naad langs een binnenkozijn. Laat het doen als het om meer gaat dan een klein klusje:",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "b77",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s75",
+     "text": "Buitenkozijnen en beglazing.",
+     "marks": [
+      "strong"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "s76",
+     "text": " Een slecht aangebrachte kitnaad rond glas laat water door, met houtrot als gevolg. Bovendien moet de kit dan in hetzelfde systeem passen als de verf.",
+     "marks": []
+    }
+   ],
+   "listItem": "bullet",
+   "level": 1
+  },
+  {
+   "_type": "block",
+   "_key": "b80",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s78",
+     "text": "Werk op hoogte.",
+     "marks": [
+      "strong"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "s79",
+     "text": " Kozijnen op de verdieping of een dakkapel betekenen werken op een ladder of steiger.",
+     "marks": []
+    }
+   ],
+   "listItem": "bullet",
+   "level": 1
+  },
+  {
+   "_type": "block",
+   "_key": "b83",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s81",
+     "text": "Siliconenkit op geschilderd houtwerk.",
+     "marks": [
+      "strong"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "s82",
+     "text": " Is er ooit siliconenkit gebruikt waar geschilderd moet worden, dan moet alles eruit en moeten de resten grondig worden verwijderd, anders hecht de verf niet.",
+     "marks": []
+    }
+   ],
+   "listItem": "bullet",
+   "level": 1
+  },
+  {
+   "_type": "block",
+   "_key": "b86",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s84",
+     "text": "Veel strekkende meters.",
+     "marks": [
+      "strong"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "s85",
+     "text": " Bij een hele gevel loont het om de kitnaden in één keer met het schilderwerk mee te nemen.",
+     "marks": []
+    }
+   ],
+   "listItem": "bullet",
+   "level": 1
+  },
+  {
+   "_type": "block",
+   "_key": "b91",
+   "style": "normal",
+   "markDefs": [
+    {
+     "_type": "link",
+     "_key": "link88",
+     "href": "/blog/hoe-vaak-buitenschilderwerk"
+    }
+   ],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s87",
+     "text": "Laat je je buitenschilderwerk doen, vraag dan of het controleren en vervangen van de kitnaden is opgenomen in de offerte. Dan worden de naden vervangen vóór het schilderen en is alles in één keer goed afgesloten. Wanneer je buitenwerk aan de beurt is, lees je in de blog ",
+     "marks": []
+    },
+    {
+     "_type": "span",
+     "_key": "s89",
+     "text": "hoe vaak moet je buiten schilderen",
+     "marks": [
+      "link88"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "s90",
+     "text": ".",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "b93",
+   "style": "h2",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s92",
+     "text": "Gratis offerte aanvragen",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "b101",
+   "style": "normal",
+   "markDefs": [
+    {
+     "_type": "link",
+     "_key": "link95",
+     "href": "/contact"
+    },
+    {
+     "_type": "link",
+     "_key": "link98",
+     "href": "tel:+31638903004"
+    }
+   ],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s94",
+     "text": "Zijn je kozijnen buiten toe aan nieuw schilderwerk en nieuwe kitnaden? Schildersbedrijf040 komt gratis kijken en maakt een offerte op maat. Kozijnen buiten schilderen kost €50 tot €100 per kozijn. Schildersbedrijf040 werkt met Boonstoppel-verf en heeft een 5,0 op Google. ",
+     "marks": []
+    },
+    {
+     "_type": "span",
+     "_key": "s96",
+     "text": "Gratis offerte aanvragen",
+     "marks": [
+      "link95"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "s97",
+     "text": " of bel ",
+     "marks": []
+    },
+    {
+     "_type": "span",
+     "_key": "s99",
+     "text": "06-38903004",
+     "marks": [
+      "link98"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "s100",
+     "text": ".",
+     "marks": []
+    }
+   ]
+  }
+ ],
+ "faq": [
+  {
+   "_type": "object",
+   "_key": "faq1",
+   "question": "Kun je nieuwe kit over oude kit aanbrengen?",
+   "answer": "Nee, dat is geen goed idee. Nieuwe kit hecht slecht op oude kit, en zeker niet op siliconenkit. De oude naad is bovendien vaak al gescheurd of losgekomen; als je daar een nieuwe laag overheen zet, zit het probleem er nog steeds onder. Na een paar maanden laat de nieuwe laag dan op dezelfde plekken los. Snijd de oude kit daarom altijd volledig weg, verwijder de resten en ontvet de naad. Dat is het meeste werk van de klus, maar het bepaalt hoe lang de nieuwe kitnaad meegaat."
+  },
+  {
+   "_type": "object",
+   "_key": "faq2",
+   "question": "Hoe lang moet kit uitharden voordat je kunt schilderen?",
+   "answer": "Dat hangt af van de kit en de dikte van de naad. Kit hardt van buiten naar binnen uit. Zwaluw Acryl Exterior+ hardt bij 23 °C en 50% luchtvochtigheid ongeveer 2 mm per 24 uur uit, dus een naad van 6 mm diep heeft al gauw een paar dagen nodig. De fabrikant adviseert om pas na volledige uitharding te schilderen, omdat de kit tijdens het doorharden krimpt en de verf anders kan scheuren. Bij kou en vocht duurt het langer. Kijk altijd op het technisch blad van de kit die je gebruikt."
+  },
+  {
+   "_type": "object",
+   "_key": "faq3",
+   "question": "Waarom scheurt de verf op een kitnaad?",
+   "answer": "Er zijn twee veelvoorkomende oorzaken. De eerste is te vroeg schilderen: acrylaatkit krimpt tijdens het doorharden, en verf die er al op zit, kan daardoor scheuren of barsten. De tweede is de verkeerde verf of kit: Zwaluw waarschuwt dat hooggevulde dispersieverven op acrylaatkit kunnen gaan scheuren, en daarom adviseert de fabrikant om de verf vooraf te testen. Op siliconenkit hecht verf helemaal niet. Ook een naad die meer beweegt dan de kit aankan, scheurt na verloop van tijd."
+  },
+  {
+   "_type": "object",
+   "_key": "faq4",
+   "question": "Welke kit gebruik je tussen een kozijn en de muur binnen?",
+   "answer": "Binnen gebruik je tussen een kozijn en een gestucte of geschilderde muur meestal acrylaatkit. Acrylaatkit is overschilderbaar, laat zich glad afwerken met water en is goed te gebruiken op hout, stucwerk en beton. Daardoor schilder je de naad daarna gewoon mee met de muur of het kozijn. Gebruik binnen geen siliconenkit op plekken die je wilt schilderen. Siliconenkit is bedoeld voor natte plekken zoals de douche, het bad en het aanrecht, en is niet overschilderbaar."
+  }
+ ],
+ "relatedPosts": [
+  {
+   "_type": "reference",
+   "_ref": "blogPost-hoe-schilder-je-een-deur",
+   "_key": "rel1"
+  }
+ ]
+}

@@ -34,6 +34,7 @@ const faqs = [
     question: 'Wat is het verschil tussen latex spuiten en rollen?',
     answer:
       'Latex spuiten met een airless spuitmachine brengt de verf onder hoge druk aan als een fijne nevel, waardoor het resultaat 100% egaal is zonder rolstrepen of structuurverschillen. Latex spuiten is 3 tot 5 keer sneller dan rollen, wat vooral bij grote oppervlakken een aanzienlijk tijd- en kostenvoordeel oplevert. Schildersbedrijf040 in Eindhoven adviseert airless spuiten voor nieuwbouw, renovatieprojecten en ruimtes met veel muur- en plafondoppervlak.',
+    link: { href: '/blog/latex-spuiten-of-rollen', tekst: 'Lees de vergelijking latex spuiten of rollen.' },
   },
   {
     question: 'Maakt latex spuiten veel rommel of overspray?',

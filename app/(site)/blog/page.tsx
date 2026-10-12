@@ -1,10 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
-import { sanityFetch } from '@/sanity/fetch'
-import { allPostsQuery } from '@/sanity/queries'
-import { SanityImage } from '@/components/blog/sanity-image'
-import type { SanityBlogPostCard } from '@/sanity/types'
+import { blogs } from '@/lib/blog'
 import { BlogFilter } from '@/components/blog/filter'
 import { catKleur } from '@/components/blog/categorie'
 import { JsonLd } from '@/components/json-ld'
@@ -26,11 +23,8 @@ export const metadata: Metadata = {
   },
 }
 
-export default async function BlogPage() {
-  const posts = await sanityFetch<SanityBlogPostCard[]>({
-    query: allPostsQuery,
-    tags: ['blog'],
-  })
+export default function BlogPage() {
+  const posts = blogs()
 
   const blogSchema = {
     '@context': 'https://schema.org',
@@ -49,7 +43,7 @@ export default async function BlogPage() {
       headline: post.title,
       description: post.excerpt,
       datePublished: post.date,
-      url: `https://schildersbedrijf040.nl/blog/${post.slug.current}`,
+      url: `https://schildersbedrijf040.nl/blog/${post.slug}`,
       author: {
         '@type': 'Person',
         name: post.author?.name || 'Jordy Jacobs'
@@ -121,9 +115,9 @@ export default async function BlogPage() {
       <section style={{ paddingTop: 24 }}>
         <div className="wrap">
           {uitgelicht && (
-            <Link className="feat rv" href={`/blog/${uitgelicht.slug.current}`} data-cat={uitgelicht.category}>
+            <Link className="feat rv" href={`/blog/${uitgelicht.slug}`} data-cat={uitgelicht.category}>
               <div className="img">
-                <SanityImage image={uitgelicht.coverImage} alt={uitgelicht.title} fill sizes="(max-width: 980px) 100vw, 680px" priority />
+                <Image src={uitgelicht.cover.src} alt={uitgelicht.title} fill sizes="(max-width: 980px) 100vw, 680px" priority />
               </div>
               <article className="txt">
                 <small>
@@ -140,9 +134,9 @@ export default async function BlogPage() {
           )}
           <div className="posts">
             {overige.map((post) => (
-              <Link key={post._id} className="post rv" href={`/blog/${post.slug.current}`} data-cat={post.category}>
+              <Link key={post.slug} className="post rv" href={`/blog/${post.slug}`} data-cat={post.category}>
                 <div className="img">
-                  <SanityImage image={post.coverImage} alt={post.title} fill sizes="(max-width: 980px) 50vw, 300px" />
+                  <Image src={post.cover.src} alt={post.title} fill sizes="(max-width: 980px) 50vw, 300px" />
                 </div>
                 <small>
                   <i style={{ background: catKleur(post.category) }} />

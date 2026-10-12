@@ -1,0 +1,551 @@
+{
+ "_id": "blogPost-beitsen-of-lakken",
+ "_type": "blogPost",
+ "title": "Beitsen of lakken: wat past bij je kozijnen?",
+ "slug": {
+  "_type": "slug",
+  "current": "beitsen-of-lakken"
+ },
+ "metaTitle": "Beitsen of lakken? Zo kies je | Schildersbedrijf040",
+ "metaDescription": "Beitsen of lakken? Lak is slijtvast en gaat op kozijnen het langst mee, beits is vochtregulerend en past bij gevelhout. Vergelijk dekkend, transparant en lak.",
+ "excerpt": "Lak gaat op kozijnen het langst mee, beits is vochtregulerend en laat de nerf zien. Zo verschillen lak, dekkende en transparante beits, en zo kies je wat past bij jouw hout.",
+ "coverImage": {
+  "_type": "image",
+  "asset": {
+   "_type": "reference",
+   "_ref": "image-551f89a6382a7472405dcaf5a8eb5fc03c1603fd-1179x851-jpg"
+  }
+ },
+ "date": "2026-10-12",
+ "readTime": "6 min",
+ "category": "Materialen",
+ "keywords": [
+  "beitsen of lakken",
+  "dekkend of transparant beitsen",
+  "beits of lak kozijnen",
+  "verschil beits en lak",
+  "dekkende beits",
+  "transparante beits",
+  "gevelhout beitsen"
+ ],
+ "author": {
+  "name": "Jordy Jacobs",
+  "role": "Eigenaar Schildersbedrijf040"
+ },
+ "content": [
+  {
+   "_type": "block",
+   "_key": "b5",
+   "style": "normal",
+   "markDefs": [
+    {
+     "_type": "link",
+     "_key": "link2",
+     "href": "/diensten/kozijnen-schilderen"
+    }
+   ],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s1",
+     "text": "Lak vormt een dichte, slijtvaste laag op het hout en gaat op kozijnen het langst mee: met een hoogwaardige buitenlak gemiddeld 8 tot 10 jaar. Beits trekt deels in het hout, is vochtregulerend en laat bij transparante beits de houtnerf zien, maar vraagt vaker onderhoud. Voor kozijnen, ramen en deuren kies je meestal lak, voor gevelhout vaak beits. Meer over ",
+     "marks": []
+    },
+    {
+     "_type": "span",
+     "_key": "s3",
+     "text": "kozijnen laten schilderen",
+     "marks": [
+      "link2"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "s4",
+     "text": " lees je op de dienstpagina.",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "b7",
+   "style": "h2",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s6",
+     "text": "Wat is het verschil tussen beitsen en lakken?",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "b9",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s8",
+     "text": "Het belangrijkste verschil is waar de afwerking zit. Lak ligt als een gesloten film op het hout. Beits dringt deels in het hout en vormt een dunnere laag die vocht beter doorlaat. Daaruit volgen de verschillen in uiterlijk, bescherming en onderhoud:",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "b12",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s10",
+     "text": "Lak (dekkende verf):",
+     "marks": [
+      "strong"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "s11",
+     "text": " egale kleur in elke gewenste tint, van mat tot hoogglans. Vormt een dichte laag die slijtvast is en goed tegen weer bestand is. Vraagt een grondverf als eerste laag. Onderhoudscyclus van een hoogwaardige buitenlak: doorgaans 8 tot 10 jaar.",
+     "marks": []
+    }
+   ],
+   "listItem": "bullet",
+   "level": 1
+  },
+  {
+   "_type": "block",
+   "_key": "b15",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s13",
+     "text": "Dekkende beits:",
+     "marks": [
+      "strong"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "s14",
+     "text": " egale kleur, maar met een zijdematte uitstraling en de structuur van het hout zichtbaar. Vochtregulerend en zonder aparte grondverf aan te brengen. Een gevelbeits als CetaBever Gevel Hout Snel Beits Dekkend beschermt in 3 lagen tot ongeveer 7 jaar.",
+     "marks": []
+    }
+   ],
+   "listItem": "bullet",
+   "level": 1
+  },
+  {
+   "_type": "block",
+   "_key": "b18",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s16",
+     "text": "Transparante beits:",
+     "marks": [
+      "strong"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "s17",
+     "text": " kleurt het hout, maar laat de nerf zien. Vochtregulerend, met minder pigment en daardoor minder bescherming tegen zonlicht. Afhankelijk van het product en de ondergrond is onderhoud elke 2 tot 7 jaar nodig.",
+     "marks": []
+    }
+   ],
+   "listItem": "bullet",
+   "level": 1
+  },
+  {
+   "_type": "block",
+   "_key": "b20",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s19",
+     "text": "Een vochtregulerende afwerking laat vocht uit het hout ontsnappen. Dat is de kracht van beits op hout dat veel werkt of nat wordt. Lak sluit het hout beter af en is harder, en dat past bij onderdelen die maatvast moeten blijven, zoals ramen en deuren die goed moeten sluiten.",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "b22",
+   "style": "h2",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s21",
+     "text": "Wat past bij welk hout en welk onderdeel?",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "b24",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s23",
+     "text": "Niet de voorkeur voor een uiterlijk bepaalt de keuze, maar het onderdeel en de houtsoort.",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "b26",
+   "style": "h3",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s25",
+     "text": "Kozijnen, ramen en deuren",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "b28",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s27",
+     "text": "Dit zijn maatvaste onderdelen: ze moeten passen, sluiten en waterdicht blijven. Een dekkend laksysteem is hier de gangbare keuze, omdat de dichte laag het hout het beste afsluit en lang meegaat. Transparant kan ook, maar vraagt veel vaker onderhoud. GND, de garantie-instelling voor houten buitendeuren, schrijft voor transparant afgewerkte buitendeuren om de 2 jaar een nieuwe laag voor, tegen een controle in jaar 2 en overschilderen in jaar 6 bij dekkend.",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "b30",
+   "style": "h3",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s29",
+     "text": "Gevelbetimmering, rabatdelen en boeidelen van naaldhout",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "b32",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s31",
+     "text": "Gevelbekleding en rabatdelen van zachthout, zoals vuren, douglas of ceder, werken meer en worden eerder nat. Hier is beits vaak de betere keuze, omdat het vocht kan ontsnappen. Sikkens Cetol Novatech noemt zich bijvoorbeeld bijzonder geschikt voor naaldhout en gevelbeschietingen, en CetaBever Gevel Hout Snel Beits is bedoeld voor gevelbetimmeringen en rabatdelen van onder meer douglas, ceder, teak en bankirai.",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "b34",
+   "style": "h3",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s33",
+     "text": "Hardhout",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "b36",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s35",
+     "text": "Hardhout zoals meranti kun je zowel lakken als beitsen. Belangrijk is de voorbereiding: vette houtsoorten als teak en meranti moeten extra worden ontvet voordat de eerste laag erop gaat, anders hecht de afwerking slecht.",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "b38",
+   "style": "h3",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s37",
+     "text": "Blank of kleurloos buiten?",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "b40",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s39",
+     "text": "Een volledig kleurloze afwerking wordt buiten afgeraden. Kleurloze systemen beschermen te weinig tegen UV-licht en zijn daardoor minder duurzaam. Fabrikanten adviseren een kleurloze laag alleen als er eerst minstens 3 lagen transparante beits in een houtkleur zijn aangebracht.",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "b42",
+   "style": "h2",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s41",
+     "text": "Hoe ziet het onderhoud eruit bij beits en bij lak?",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "b44",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s43",
+     "text": "Bij beits is het onderhoud vaker nodig, maar per keer eenvoudig. Voor een gevelbeits schrijft CetaBever voor: de intacte laag reinigen, kale of beschadigde plekken schuren tot op het kale hout en die als nieuw hout behandelen, de rest licht opschuren en afwerken met 2 nieuwe lagen. Bij een transparante beits als Cetol Novatech noemt Sikkens een onderhoudsbeurt om de ongeveer 2 jaar: reinigen, schuren, gebreken herstellen en het geheel opnieuw overstrijken. Omdat beits grotendeels in het hout trekt en geen dikke film vormt, hoef je bij tijdig onderhoud zelden alles kaal te maken.",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "b46",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s45",
+     "text": "Bij lak is het onderhoud minder vaak nodig, maar per keer grondiger. Een dekkend laksysteem gaat lang mee, zolang je kleine beschadigingen tussendoor bijwerkt. Wacht je te lang, dan laat lak plaatselijk los en kruipt er vocht onder de laag. Dan moet er meer worden geschuurd, bijgegrond en soms hersteld voordat de nieuwe laag erop kan.",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "b48",
+   "style": "h2",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s47",
+     "text": "Kun je overstappen van beits naar lak, of andersom?",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "b50",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s49",
+     "text": "Dat kan, maar het is meer werk dan een gewone onderhoudsbeurt. Van transparante beits naar dekkend is het lastigst. Transparante beits laat zonlicht door, waardoor het hout eronder langzaam verweert. Sikkens schrijft dat de hechting van een oud transparant systeem vaak onvoldoende is, ook als het er nog goed uitziet. Bij systemen ouder dan 5 tot 6 jaar moeten vrijwel altijd alle lagen worden verwijderd, en ook het verweerde, grijze hout moet worden weggeschuurd tot op gezond hout.",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "b52",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s51",
+     "text": "Andersom, van lak naar beits, vraagt kaal hout. Beits moet in het hout kunnen trekken, en dat lukt niet door een laklaag heen. Een gevelbeits als die van CetaBever is bedoeld voor kaal hout of hout dat eerder met hetzelfde soort afwerking is behandeld.",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "b54",
+   "style": "h2",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s53",
+     "text": "Wat kost het om kozijnen te laten lakken of beitsen?",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "b59",
+   "style": "normal",
+   "markDefs": [
+    {
+     "_type": "link",
+     "_key": "link56",
+     "href": "/blog/hoe-vaak-buitenschilderwerk"
+    }
+   ],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s55",
+     "text": "Bij Schildersbedrijf040 kost het schilderen van kozijnen buiten €50 tot €100 per kozijn, afhankelijk van de grootte en de staat van het houtwerk. Wil je overstappen van transparant naar dekkend, houd dan rekening met extra voorbereiding. Hoe vaak je daarna terug moet, lees je in de blog ",
+     "marks": []
+    },
+    {
+     "_type": "span",
+     "_key": "s57",
+     "text": "hoe vaak moet je buiten schilderen",
+     "marks": [
+      "link56"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "s58",
+     "text": ".",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "b61",
+   "style": "h2",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s60",
+     "text": "Gratis offerte aanvragen",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "b69",
+   "style": "normal",
+   "markDefs": [
+    {
+     "_type": "link",
+     "_key": "link63",
+     "href": "/contact"
+    },
+    {
+     "_type": "link",
+     "_key": "link66",
+     "href": "tel:+31638903004"
+    }
+   ],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s62",
+     "text": "Twijfel je tussen beitsen en lakken? Schildersbedrijf040 komt gratis kijken, beoordeelt het hout en de huidige afwerking en adviseert wat het beste past. Schildersbedrijf040 werkt met Boonstoppel-verf en heeft een 5,0 op Google. ",
+     "marks": []
+    },
+    {
+     "_type": "span",
+     "_key": "s64",
+     "text": "Gratis offerte aanvragen",
+     "marks": [
+      "link63"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "s65",
+     "text": " of bel ",
+     "marks": []
+    },
+    {
+     "_type": "span",
+     "_key": "s67",
+     "text": "06-38903004",
+     "marks": [
+      "link66"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "s68",
+     "text": ".",
+     "marks": []
+    }
+   ]
+  }
+ ],
+ "faq": [
+  {
+   "_type": "object",
+   "_key": "faq1",
+   "question": "Is beitsen goedkoper dan lakken?",
+   "answer": "Per keer vaak wel, op de lange termijn meestal niet. Beits heeft geen aparte grondverf nodig en is in minder stappen aan te brengen. Maar transparante beits vraagt veel vaker onderhoud: GND rekent bij transparant afgewerkte buitendeuren met een nieuwe laag om de 2 jaar, tegen overschilderen in jaar 6 bij dekkend. Over tien of twaalf jaar betekent dat meerdere beurten extra. Voor kozijnen die je zo min mogelijk wilt onderhouden, is een dekkend systeem daarom meestal de voordeligere keuze."
+  },
+  {
+   "_type": "object",
+   "_key": "faq2",
+   "question": "Kun je dekkende verf over transparante beits zetten?",
+   "answer": "Alleen als de hechting van de oude beits goed is, en dat is vaak niet zo. Transparante beits laat UV-licht door, waardoor het hout eronder verweert en de beits minder goed hecht. Sikkens adviseert daarom eerst een hechtingsproef en bij de minste twijfel alle transparante lagen te verwijderen, inclusief het verweerde hout. Bij transparante systemen ouder dan 5 tot 6 jaar is dat volgens Sikkens vrijwel altijd nodig. Sla je die stap over, dan is de kans op blaasjes en afbladderen groot."
+  },
+  {
+   "_type": "object",
+   "_key": "faq3",
+   "question": "Waarom wordt blanke of kleurloze beits buiten afgeraden?",
+   "answer": "Omdat kleurloze beits het hout te weinig beschermt tegen zonlicht. Pigment in de beits houdt een deel van het UV-licht tegen, en een kleurloze beits heeft dat niet. Het hout eronder vergrijst en verweert daardoor sneller, en de beits laat eerder los. CetaBever en Sikkens adviseren buiten daarom geen volledig kleurloos systeem. Een kleurloze laag mag alleen als afwerking op minstens 3 lagen transparante beits in een houtkleur. Wil je de natuurlijke uitstraling van het hout, kies dan een transparante beits in een lichte houtkleur."
+  }
+ ],
+ "relatedPosts": [
+  {
+   "_type": "reference",
+   "_ref": "blogPost-hoe-schilder-je-een-deur",
+   "_key": "rel1"
+  }
+ ]
+}

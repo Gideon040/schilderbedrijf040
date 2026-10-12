@@ -1,0 +1,719 @@
+{
+ "_id": "blogPost-hoe-schilder-je-een-deur",
+ "_type": "blogPost",
+ "author": {
+  "name": "Jordy Jacobs",
+  "role": "Eigenaar Schildersbedrijf040"
+ },
+ "category": "How-To",
+ "content": [
+  {
+   "_type": "block",
+   "_key": "b5-blk-22",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "b5-s-21",
+     "text": "Een deur schilder je zo: haal de deur uit de sponning en leg hem plat, verwijder het beslag, schuur met korrel 180, ontvet en plamuur, grond waar het hout kaal is en breng twee dunne laklagen aan met tussenschuren op korrel 240. Door de droogtijden ben je met één binnendeur minstens twee dagen bezig.",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_key": "k51",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "k52",
+     "_type": "span",
+     "marks": [],
+     "text": "Een deur schilderen lijkt een van de makkelijkste klusjes in huis. Kwast erbij, verf erop, klaar. Maar waarom zit je dan vaak met strepen, druppels aan de onderkant of een resultaat dat er na een jaar alweer afbladdert? Het antwoord: de voorbereiding en techniek maken het verschil tussen amateurwerk en een professioneel resultaat dat 7-10 jaar meegaat."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "k53",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "k54",
+     "_type": "span",
+     "marks": [],
+     "text": "Dit heb je nodig"
+    }
+   ],
+   "markDefs": [],
+   "style": "h2"
+  },
+  {
+   "_key": "k55",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "k56",
+     "_type": "span",
+     "marks": [],
+     "text": "Voordat je begint, verzamel je alle materialen. Niets is vervelender dan halverwege naar de bouwmarkt te moeten omdat je de primer vergeten bent. Je hebt nodig: schuurpapier (korrel 180 voor voorschuren, korrel 240 voor tussenschuren), een schuurspons voor de profileringen, afplaktape, afdekfolie, ontvetter of ammoniak, plamuur voor eventuele gaten, een grondverf of primer, lakverf in de gewenste kleur en glansgraad, een kwast van 5-7 cm breed (geen goedkope: investeer minimaal €8-12 in een kwaliteitskwast), en een kleine roller voor de vlakke delen."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "k57",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "k58",
+     "_type": "span",
+     "marks": [],
+     "text": "Waarom een kwaliteitskwast zo belangrijk is? Een goedkope kwast verliest haren die in je verflaag blijven plakken. Bovendien houdt een goedkope kwast minder verf vast, waardoor je vaker moet bijdopen en meer kans hebt op strepen. Een kwast van €10 bespaart je uren frustratie en levert een zichtbaar beter resultaat."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "k59",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "k60",
+     "_type": "span",
+     "marks": [],
+     "text": "Stap 1: De deur demonteren en voorbereiden"
+    }
+   ],
+   "markDefs": [],
+   "style": "h2"
+  },
+  {
+   "_key": "k61",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "k62",
+     "_type": "span",
+     "marks": [],
+     "text": "Haal de deur uit de sponning en leg hem horizontaal op twee schragen of bokken. Waarom horizontaal? Omdat verf de neiging heeft om naar beneden te zakken. Bij een staande deur krijg je druppels aan de onderkant en ophopingen bij de profileringen. Horizontaal schilderen voorkomt dit probleem volledig."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "k63",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "k64",
+     "_type": "span",
+     "marks": [],
+     "text": "Verwijder alle beslag: deurkruk, slotplaat, scharnieren. Dit kost je 10 minuten, maar bespaart een uur afplakken en corrigeren achteraf. Tape de slotopening en scharnieruitsparing af zodat hier geen verf in komt. Dit voorkomt dat de deur straks niet meer goed sluit."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "k65",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "k66",
+     "_type": "span",
+     "marks": [],
+     "text": "Kun je de deur niet demonteren, bijvoorbeeld bij een ingebouwde schuifdeur? Schilder dan in dunne lagen en werk snel van boven naar beneden. Accepteer dat het resultaat iets minder perfect wordt, of overweeg een professional in te schakelen."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "k67",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "k68",
+     "_type": "span",
+     "marks": [],
+     "text": "Stap 2: Schuren, de basis van elk goed resultaat"
+    }
+   ],
+   "markDefs": [],
+   "style": "h2"
+  },
+  {
+   "_key": "k69",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "k70",
+     "_type": "span",
+     "marks": [],
+     "text": "Dit is de stap die de meeste mensen overslaan of te snel doen, en precies hier gaat het mis. Schuren zorgt ervoor dat de nieuwe verflaag zich hecht aan de ondergrond. Zonder schuren bladdert je verf binnen 1-2 jaar af, ongeacht hoe duur de verf was."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "k71",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "k72",
+     "_type": "span",
+     "marks": [],
+     "text": "Begin met korrel 180 en schuur alle vlakke delen en profileringen. Schuur mee met de draad van het hout, nooit dwars erop. Bij profileringen gebruik je een schuurspons die zich aanpast aan de vorm. Schuur tot de gehele deur mat aanvoelt: glanzende plekken betekent dat de verf daar niet goed zal hechten."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "k73",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "k74",
+     "_type": "span",
+     "marks": [],
+     "text": "Hoeveel tijd kost dit? Reken op 20-30 minuten per zijde bij een standaard binnendeur. Ja, dat is lang. Maar deze investering bepaalt of je resultaat 2 jaar of 10 jaar meegaat. Na het schuren verwijder je al het stof met een vochtige doek of plakdoek. Stofdeeltjes in je verflaag zorgen voor een ruw, onprofessioneel resultaat."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "k75",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "k76",
+     "_type": "span",
+     "marks": [],
+     "text": "Stap 3: Ontvetten en repareren"
+    }
+   ],
+   "markDefs": [],
+   "style": "h2"
+  },
+  {
+   "_key": "k77",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "k78",
+     "_type": "span",
+     "marks": [],
+     "text": "Ook een geschuurde deur kan nog vet- of vuilresten bevatten van jarenlang aanraken. Neem de deur af met een ontvetter of een sopje van ammoniak (1 eetlepel op 1 liter water). Laat volledig drogen: minimaal 30 minuten."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "k79",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "k80",
+     "_type": "span",
+     "marks": [],
+     "text": "Inspecteer nu de deur op beschadigingen. Kleine deukjes en gaatjes vul je met houtplamuur. Breng de plamuur aan met een plamuurmes, iets boller dan het oppervlak. Na droging (check de verpakking, meestal 1-2 uur) schuur je de plamuur vlak met korrel 240. Vergeet je deze stap? Dan blijven de beschadigingen zichtbaar door de nieuwe verflaag heen: verf vult geen gaten."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "k81",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "k82",
+     "_type": "span",
+     "marks": [],
+     "text": "Stap 4: Gronden met primer"
+    }
+   ],
+   "markDefs": [],
+   "style": "h2"
+  },
+  {
+   "_key": "k83",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "k84",
+     "_type": "span",
+     "marks": [],
+     "text": "Een primer of grondverf zorgt voor hechting tussen het hout en de aflaklaag en voorkomt dat het hout de verf opzuigt. Bij een nieuwe, onbehandelde deur is primer verplicht. Bij een eerder geschilderde deur is primer nodig als je tot op het kale hout hebt geschuurd of als de oude verflaag sterk beschadigd was."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "k85",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "k86",
+     "_type": "span",
+     "marks": [],
+     "text": "Breng de primer aan in een dunne, egale laag. Begin bij de profileringen met een kleine kwast en werk dan de vlakke delen met een roller of bredere kwast. Werk systematisch: eerst alle verdiepte delen, dan de vlakke panelen, dan de stijlen en regels. Zo voorkom je dat je natte delen aanraakt."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "k87",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "k88",
+     "_type": "span",
+     "marks": [],
+     "text": "Droogtijd: minimaal 4 uur, liever 24 uur. Een niet volledig gedroogde primer geeft problemen bij de aflaklaag. Na droging licht opschuren met korrel 240. Dit kost 5 minuten en zorgt voor een gladde basis."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "k89",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "k90",
+     "_type": "span",
+     "marks": [],
+     "text": "Stap 5: De eerste laklaag aanbrengen"
+    }
+   ],
+   "markDefs": [],
+   "style": "h2"
+  },
+  {
+   "_key": "k91",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "k92",
+     "_type": "span",
+     "marks": [],
+     "text": "Nu komt het echte werk. De techniek is cruciaal: werk altijd in de richting van de houtnerf en zet je streken door tot aan de rand. Stop nooit halverwege een vlak deel. Dit geeft zichtbare overgangen."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "k93",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "k94",
+     "_type": "span",
+     "marks": [],
+     "text": "Begin weer bij de profileringen. Dip je kwast voor maximaal een derde in de verf en strijk het overtollige af aan de rand van het blik, niet aan de binnenkant, want dan droogt daar verf in die later als klontjes in je werk komt. Werk de profileringen met lichte, gelijkmatige streken. Gebruik niet te veel verf: twee dunne lagen zijn altijd beter dan één dikke laag die gaat druipen."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "k95",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "k96",
+     "_type": "span",
+     "marks": [],
+     "text": "Voor de vlakke delen kun je een kleine lakroller gebruiken. Dit geeft een egaler resultaat dan een kwast, maar werk de randen wel na met een kwast om rolstructuur te voorkomen. Laat de roller niet te snel draaien. Dit veroorzaakt spatten en luchtbelletjes."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "k97",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "k98",
+     "_type": "span",
+     "marks": [],
+     "text": "Na het aanbrengen inspecteer je de deur op druppels en ophopingen. Verwijder deze direct met een droge kwast door licht over het oppervlak te \"tippen\". Na 10 minuten is de verf te ver uitgehard om nog te corrigeren."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "k99",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "k100",
+     "_type": "span",
+     "marks": [],
+     "text": "Stap 6: Tussenschuren en de tweede laklaag"
+    }
+   ],
+   "markDefs": [],
+   "style": "h2"
+  },
+  {
+   "_key": "k101",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "k102",
+     "_type": "span",
+     "marks": [],
+     "text": "Hier zit het geheim van een echt professioneel resultaat. Na volledige droging van de eerste laag (minimaal 16 uur, check de verfverpakking) schuur je licht over het gehele oppervlak met korrel 240. Dit voelt contraproductief, je schuurt je eigen werk weg, maar het verwijdert kleine oneffenheden en zorgt voor perfecte hechting van de tweede laag."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "k103",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "k104",
+     "_type": "span",
+     "marks": [],
+     "text": "De tweede laklaag breng je aan met dezelfde techniek als de eerste. Omdat de ondergrond nu al egaal is, gaat dit sneller en krijg je een nog gladder resultaat. Bij hoogglans lak is een derde laag aan te raden voor een echt spiegelend effect."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "k105",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "k106",
+     "_type": "span",
+     "marks": [],
+     "text": "Stap 7: Drogen en monteren"
+    }
+   ],
+   "markDefs": [],
+   "style": "h2"
+  },
+  {
+   "_key": "k107",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "k108",
+     "_type": "span",
+     "marks": [],
+     "text": "Laat de deur minimaal 24 uur drogen voordat je het beslag monteert en de deur terughangt. Ja, dit is lang, maar lakverf is na 16 uur \"droog\" maar nog niet \"uitgehard\". Als je te vroeg beslag monteert of de deur sluit, plakken oppervlakken aan elkaar en beschadig je je verse verflaag."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "k109",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "k110",
+     "_type": "span",
+     "marks": [],
+     "text": "Bij het terugplaatsen: controleer of de deur niet langs de sponning schuurt. Een paar verflagen extra kunnen net genoeg zijn om de deur te laten klemmen. Zo ja, schuur de sponning licht bij."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "k111",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "k112",
+     "_type": "span",
+     "marks": [],
+     "text": "Veelgemaakte fouten en hoe je ze voorkomt"
+    }
+   ],
+   "markDefs": [],
+   "style": "h2"
+  },
+  {
+   "_key": "k113",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "k114",
+     "_type": "span",
+     "marks": [],
+     "text": "De nummer één fout is te dik schilderen. Het lijkt efficiënter om in één keer een dikke laag aan te brengen, maar dikke lagen drogen ongelijkmatig, gaan druipen en bladderen sneller af. Twee dunne lagen kosten nauwelijks meer tijd en leveren een resultaat dat drie keer zo lang meegaat."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "k115",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "k116",
+     "_type": "span",
+     "marks": [],
+     "text": "Fout twee: schilderen bij verkeerde temperatuur of luchtvochtigheid. Onder 10°C of boven 25°C droogt verf te langzaam of juist te snel, wat leidt tot een slechte hechting. Boven 70% luchtvochtigheid droogt verf niet goed uit. Ideale omstandigheden: 15-20°C en 50-65% luchtvochtigheid."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "k117",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "k118",
+     "_type": "span",
+     "marks": [],
+     "text": "Fout drie: oude verf niet testen op hechting. Als de oude verflaag al los zit, hecht je nieuwe laag daar ook niet op. Test door een stuk tape stevig aan te drukken en met een ruk los te trekken. Komt er verf mee? Dan moet je de oude laag verder verwijderen."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "k119",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "k120",
+     "_type": "span",
+     "marks": [],
+     "text": "Wanneer toch een professional inschakelen?"
+    }
+   ],
+   "markDefs": [],
+   "style": "h2"
+  },
+  {
+   "_key": "k121",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "k122",
+     "_type": "span",
+     "marks": [],
+     "text": "Een binnendeur schilderen is een prima doe-het-zelfklus als je de tijd en het geduld hebt. Maar bij buitendeuren, monumentale panden of wanneer je meerdere deuren wilt aanpakken, is een professional vaak voordeliger dan je denkt. Wij schilderen een standaard binnendeur voor €150-€200 inclusief materiaal, en dan heb je een gegarandeerd resultaat zonder een heel weekend kwijt te zijn."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "k123",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "k124",
+     "_type": "span",
+     "marks": [],
+     "text": "Wil je advies over jouw situatie of een vrijblijvende offerte? Neem gerust contact met ons op."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_type": "block",
+   "_key": "b5-blk-24",
+   "style": "h2",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "b5-s-23",
+     "text": "Liever laten doen?",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "b5-blk-29",
+   "style": "normal",
+   "markDefs": [
+    {
+     "_type": "link",
+     "_key": "b5-l-26",
+     "href": "/diensten/lakwerk"
+    }
+   ],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "b5-s-25",
+     "text": "Heb je geen zin in dagen schuren, gronden en lakken, of wil je meerdere deuren tegelijk aanpakken? Dan kun je het lakken van je deuren uitbesteden aan Schildersbedrijf040. Op de pagina over ",
+     "marks": []
+    },
+    {
+     "_type": "span",
+     "_key": "b5-s-27",
+     "text": "lakwerk voor deuren, kozijnen en trappen",
+     "marks": [
+      "b5-l-26"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "b5-s-28",
+     "text": " lees je hoe we werken en wat het kost.",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "b5-blk-40",
+   "style": "normal",
+   "markDefs": [
+    {
+     "_type": "link",
+     "_key": "b5-l-31",
+     "href": "/diensten/winterschilder"
+    },
+    {
+     "_type": "link",
+     "_key": "b5-l-34",
+     "href": "/contact"
+    },
+    {
+     "_type": "link",
+     "_key": "b5-l-37",
+     "href": "tel:+31638903004"
+    }
+   ],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "b5-s-30",
+     "text": "Binnendeuren lakken is binnenwerk en kan dus ook in de wintermaanden: lak droogt binnen bij kamertemperatuur goed. Meer daarover lees je op de pagina over ",
+     "marks": []
+    },
+    {
+     "_type": "span",
+     "_key": "b5-s-32",
+     "text": "schilderen in de winter",
+     "marks": [
+      "b5-l-31"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "b5-s-33",
+     "text": ". Wil je weten wat het lakken van jouw deuren kost? ",
+     "marks": []
+    },
+    {
+     "_type": "span",
+     "_key": "b5-s-35",
+     "text": "Vraag een vrijblijvende offerte aan",
+     "marks": [
+      "b5-l-34"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "b5-s-36",
+     "text": " of bel ",
+     "marks": []
+    },
+    {
+     "_type": "span",
+     "_key": "b5-s-38",
+     "text": "06-38903004",
+     "marks": [
+      "b5-l-37"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "b5-s-39",
+     "text": ".",
+     "marks": []
+    }
+   ]
+  }
+ ],
+ "coverImage": {
+  "_type": "image",
+  "asset": {
+   "_ref": "image-184e607570e9241eaac1990fb6d0ae2a6c580435-1179x1534-jpg",
+   "_type": "reference"
+  }
+ },
+ "date": "2025-01-18",
+ "excerpt": "Een deur schilderen lijkt simpel, maar zonder de juiste techniek krijg je strepen. Volg dit stappenplan voor een professionele afwerking.",
+ "faq": [
+  {
+   "_key": "faq0",
+   "_type": "object",
+   "answer": "Minimaal 16 uur, maar liever 24 uur. De verf voelt na een paar uur droog, maar is nog niet uitgehard. Tussendoor schuren op een niet volledig gedroogde laag beschadigt het oppervlak en geeft een slecht eindresultaat.",
+   "question": "Hoe lang moet een deur drogen tussen verflagen?"
+  },
+  {
+   "_key": "faq1",
+   "_type": "object",
+   "answer": "Ja, altijd. Schuren zorgt voor hechting tussen de oude en nieuwe verflaag. Zonder schuren bladdert je nieuwe verf binnen 1-2 jaar af, ongeacht de kwaliteit van de verf. Reken op 20-30 minuten schuren per deurzijde.",
+   "question": "Moet ik een deur altijd schuren voor het schilderen?"
+  },
+  {
+   "_key": "faq2",
+   "_type": "object",
+   "answer": "Ja, maar het resultaat is minder goed. Bij een hangende deur zakt de verf naar beneden, wat druppels en ophopingen geeft. Kun je de deur echt niet demonteren, werk dan in extra dunne lagen en van boven naar beneden.",
+   "question": "Kan ik een deur schilderen zonder hem te demonteren?"
+  },
+  {
+   "_key": "faq3",
+   "_type": "object",
+   "answer": "Minimaal twee laklagen, bij hoogglans liever drie. Daaronder komt een grondlaag als je tot op het kale hout hebt geschuurd. Twee dunne lagen zijn altijd beter dan één dikke laag.",
+   "question": "Hoeveel lagen verf heeft een deur nodig?"
+  },
+  {
+   "_key": "faq4",
+   "_type": "object",
+   "answer": "Voor binnendeur gebruik je alkyd- of acryllak. Alkydlak (terpentinebasis) geeft het meest bestendige resultaat maar geurt sterker. Acryllak (waterbasis) is geurarm en makkelijker te verwerken, maar iets minder slijtvast.",
+   "question": "Welke verf gebruik ik voor een binnendeur?"
+  }
+ ],
+ "keywords": [
+  "hoe schilder je een deur",
+  "deur schilderen",
+  "deur verven",
+  "deur lakken",
+  "binnendeur schilderen"
+ ],
+ "metaDescription": "Leer hoe je een deur schildert zonder strepen. Compleet stappenplan met tips van een vakman: voorbereiding, schuren, gronden en lakken.",
+ "metaTitle": "Hoe Schilder je een Deur? | Stappenplan Zonder Strepen",
+ "readTime": "10 min",
+ "slug": {
+  "_type": "slug",
+  "current": "hoe-schilder-je-een-deur"
+ },
+ "title": "Hoe Schilder je een Deur? Stappenplan Zonder Strepen"
+}

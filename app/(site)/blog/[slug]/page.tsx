@@ -2,10 +2,6 @@ import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import Image from 'next/image'
-import { sanityFetch } from '@/sanity/fetch'
-import { postBySlugQuery, postSlugsQuery } from '@/sanity/queries'
-import { urlForImage } from '@/sanity/image'
-import { SanityImage } from '@/components/blog/sanity-image'
 import { PortableTextRenderer, anker, blokTekst } from '@/components/blog/portable-text'
 import { ArtikelVoortgang } from '@/components/blog/artikel-voortgang'
 import { catKleur } from '@/components/blog/categorie'
@@ -13,28 +9,22 @@ import { JsonLd } from '@/components/json-ld'
 import { Offerte } from '@/components/site/offerte'
 import { Eyebrow, Pijl, Streek } from '@/components/site/v2'
 import { site } from '@/lib/site'
-import type { SanityBlogPost } from '@/sanity/types'
+import { blog, blogs, gerelateerd } from '@/lib/blog'
 
-export async function generateStaticParams() {
-  const slugs = await sanityFetch<{ slug: string }[]>({
-    query: postSlugsQuery,
-    tags: ['blog'],
-  })
-  return slugs.map((s) => ({ slug: s.slug }))
+export function generateStaticParams() {
+  return blogs().map((b) => ({ slug: b.slug }))
 }
 
-export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
-  const post = await sanityFetch<SanityBlogPost | null>({
-    query: postBySlugQuery,
-    params: { slug: params.slug },
-    tags: ['blog'],
-  })
+export const dynamicParams = false
+
+export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
+  const post = blog(params.slug)
 
   if (!post) {
     return { title: 'Artikel niet gevonden' }
   }
 
-  const imageUrl = urlForImage(post.coverImage)?.width(1200).height(630).url()
+  const imageUrl = `https://schildersbedrijf040.nl${post.cover.src}`
 
   return {
     title: post.metaTitle,
@@ -44,43 +34,39 @@ export async function generateMetadata({ params }: { params: { slug: string } })
     openGraph: {
       title: post.metaTitle,
       description: post.metaDescription,
-      url: `https://schildersbedrijf040.nl/blog/${post.slug.current}`,
+      url: `https://schildersbedrijf040.nl/blog/${post.slug}`,
       type: 'article',
       publishedTime: post.date,
       modifiedTime: post.date,
       authors: [post.author.name],
-      images: imageUrl ? [{ url: imageUrl, width: 1200, height: 630, alt: post.title }] : [],
+      images: [{ url: imageUrl, width: post.cover.width, height: post.cover.height, alt: post.title }],
     },
     twitter: {
       card: 'summary_large_image',
       title: post.metaTitle,
       description: post.metaDescription,
-      images: imageUrl ? [imageUrl] : [],
+      images: [imageUrl],
     },
     alternates: {
-      canonical: `https://schildersbedrijf040.nl/blog/${post.slug.current}`,
+      canonical: `https://schildersbedrijf040.nl/blog/${post.slug}`,
     },
   }
 }
 
-export default async function BlogPostPage({ params }: { params: { slug: string } }) {
-  const post = await sanityFetch<SanityBlogPost | null>({
-    query: postBySlugQuery,
-    params: { slug: params.slug },
-    tags: ['blog'],
-  })
+export default function BlogPostPage({ params }: { params: { slug: string } }) {
+  const post = blog(params.slug)
 
   if (!post) {
     notFound()
   }
 
-  const coverImageUrl = urlForImage(post.coverImage)?.url()
+  const coverImageUrl = `https://schildersbedrijf040.nl${post.cover.src}`
 
   // Article schema for rich snippets
   const articleSchema = {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    '@id': `https://schildersbedrijf040.nl/blog/${post.slug.current}`,
+    '@id': `https://schildersbedrijf040.nl/blog/${post.slug}`,
     headline: post.title,
     description: post.excerpt,
     image: coverImageUrl,
@@ -108,7 +94,7 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
     },
     mainEntityOfPage: {
       '@type': 'WebPage',
-      '@id': `https://schildersbedrijf040.nl/blog/${post.slug.current}`
+      '@id': `https://schildersbedrijf040.nl/blog/${post.slug}`
     },
     keywords: post.keywords?.join(', ')
   }
@@ -148,12 +134,12 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
         '@type': 'ListItem',
         position: 3,
         name: post.title,
-        item: `https://schildersbedrijf040.nl/blog/${post.slug.current}`
+        item: `https://schildersbedrijf040.nl/blog/${post.slug}`
       }
     ]
   }
 
-  const relatedPosts = post.relatedPosts || []
+  const relatedPosts = gerelateerd(post)
   const inhoud = (post.content || []).filter((b) => (b as { style?: string }).style === 'h2').map((b) => blokTekst(b))
   const woorden = post.title.split(' ')
   const datum = new Date(post.date).toLocaleDateString('nl-NL', { day: 'numeric', month: 'long', year: 'numeric' })
@@ -293,9 +279,9 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
             </div>
             <div className="posts">
               {relatedPosts.map((r) => (
-                <Link key={r._id} className="post rv" href={`/blog/${r.slug.current}`}>
+                <Link key={r.slug} className="post rv" href={`/blog/${r.slug}`}>
                   <div className="img">
-                    <SanityImage image={r.coverImage} alt={r.title} fill sizes="(max-width: 980px) 50vw, 300px" />
+                    <Image src={r.cover.src} alt={r.title} fill sizes="(max-width: 980px) 50vw, 300px" />
                   </div>
                   <small>
                     <i style={{ background: catKleur(r.category) }} />

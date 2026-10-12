@@ -1,7 +1,6 @@
 import { MetadataRoute } from 'next'
 import { cityData } from './(site)/locaties/[city]/data'
-import { sanityFetch } from '@/sanity/fetch'
-import { sitemapPostsQuery } from '@/sanity/queries'
+import { blogs } from '@/lib/blog'
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = 'https://schildersbedrijf040.nl'
@@ -68,7 +67,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.8,
   }))
 
-  // Blog pages (from Sanity)
+  // Blog pages (lokale bestanden in data/blog)
   const blogOverview: MetadataRoute.Sitemap = [
     {
       url: `${baseUrl}/blog`,
@@ -78,14 +77,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
   ]
 
-  const posts = await sanityFetch<{ slug: string; date: string; _updatedAt: string }[]>({
-    query: sitemapPostsQuery,
-    tags: ['blog'],
-  })
-
-  const blogPages: MetadataRoute.Sitemap = posts.map((post) => ({
+  const blogPages: MetadataRoute.Sitemap = blogs().map((post) => ({
     url: `${baseUrl}/blog/${post.slug}`,
-    lastModified: new Date(post._updatedAt || post.date),
+    lastModified: new Date(post.date),
     changeFrequency: 'monthly' as const,
     priority: 0.7,
   }))

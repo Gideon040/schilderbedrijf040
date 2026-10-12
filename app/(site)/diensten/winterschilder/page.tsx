@@ -30,6 +30,7 @@ const faqs = [
     question: 'Droogt verf in de winter langzamer?',
     answer:
       'Binnen niet merkbaar, zolang de ruimte verwarmd is. Muurverf heeft 4 tot 6 uur droogtijd per laag. Lak is na 4 tot 6 uur stofdroog, maar volledig uitharden duurt 5 tot 7 dagen; ga in die tijd voorzichtig om met deuren en kozijnen.',
+    link: { href: '/blog/hoe-lang-duurt-binnenschilderwerk', tekst: 'Lees hoe lang binnenschilderwerk duurt.' },
   },
   {
     question: 'Kan ik thuis blijven tijdens het schilderen?',
