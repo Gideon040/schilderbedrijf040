@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<title>Homepage mobiel Schildersbedrijf040</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&amp;family=Barlow+Condensed:wght@600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:'Barlow',sans-serif;color:#1C2733;background:#ffffff}
+a{color:#1561D6;text-decoration:none}a:hover{color:#0E4AA8}
+.ph{background:repeating-linear-gradient(135deg,#E4E0D8 0 14px,#ECE9E3 14px 28px);display:flex;align-items:center;justify-content:center;text-align:center;color:#5B5548;font-size:13px;font-weight:600;line-height:1.4;box-sizing:border-box;padding:12px}
+.cond{font-family:'Barlow Condensed',sans-serif}
+</style>
+</helmet>
+<div style="width: 390px; height: 3000px; position: relative; display: flex; flex-direction: column; background: #ffffff; overflow: hidden">
+
+<div style="height: 64px; border-bottom: 1px solid #E6E8EC; display: flex; align-items: center; justify-content: space-between; padding: 0 16px; box-sizing: border-box; flex-shrink: 0">
+<a href="#" style="display: flex; align-items: center; gap: 8px; color: #0B1B30"><img src="images/logo2.png" alt="Schildersbedrijf040" style="height: 44px; width: auto; display: block"></a>
+<button type="button" aria-label="Menu openen" style="width: 44px; height: 44px; border: 0; background: transparent; display: flex; align-items: center; justify-content: center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0B1B30" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+</div>
+
+<div style="background: #0B1B30; display: flex; flex-direction: column; flex-shrink: 0">
+<img src="images/c-jordy.jpg" alt="Jordy Jacobs van Schildersbedrijf040 op een ladder" style="width: 390px; height: 260px; object-fit: cover; object-position: 50% 35%; display: block">
+<div style="padding: 28px 16px 32px; display: flex; flex-direction: column; gap: 16px">
+<h1 class="cond" style="margin: 0; font-size: 48px; line-height: 1; font-weight: 700; color: #ffffff">Schilder in Eindhoven</h1>
+<p style="margin: 0; font-size: 17px; line-height: 1.6; color: #C9D3E0">Binnen- en buitenschilderwerk, behangen en latex spuiten. Vakwerk met Boonstoppel-verf.</p>
+<a href="#" style="background: #1668E3; color: #ffffff; height: 52px; border-radius: 8px; font-size: 17px; font-weight: 600; display: flex; align-items: center; justify-content: center">Gratis offerte aanvragen</a>
+<div style="display: flex; gap: 18px; font-size: 15px; color: #C9D3E0"><span><span style="color: #F2B632">★★★★★</span> <strong>5,0</strong> Google (41)</span><span><strong>4,9</strong> Werkspot</span></div>
+</div>
+</div>
+
+<div style="margin: 20px 16px 0; background: #FDF3DC; border-radius: 12px; padding: 20px; display: flex; flex-direction: column; gap: 8px; flex-shrink: 0">
+<div class="cond" style="font-size: 24px; font-weight: 700; color: #0B1B30">Binnenwerk deze winter inplannen</div>
+<div style="font-size: 16px; line-height: 1.55; color: #2E3A48">Binnen gaat het werk gewoon door, ook als het buiten koud is.</div>
+<a href="#" style="font-size: 16px; font-weight: 600; margin-top: 4px">Meer over winterschilderwerk →</a>
+</div>
+
+<div style="padding: 40px 16px; display: flex; flex-direction: column; gap: 16px; flex-shrink: 0">
+<h2 class="cond" style="margin: 0; font-size: 34px; line-height: 1.05; font-weight: 700; color: #0B1B30">Wat kunnen we voor u schilderen?</h2>
+<sc-for list="{{diensten}}" as="d" hint-placeholder-count="6">
+<a href="#" style="display: flex; gap: 14px; align-items: center; border: 1px solid #E3E6EB; border-radius: 12px; padding: 12px; color: #1C2733">
+<img src="{{d.img}}" alt="{{d.titel}}" style="width: 88px; height: 88px; border-radius: 10px; object-fit: cover; flex-shrink: 0; display: block">
+<div style="display: flex; flex-direction: column; gap: 4px">
+<span class="cond" style="font-size: 22px; font-weight: 700; color: #0B1B30">{{d.titel}}</span>
+<span style="font-size: 15px; line-height: 1.45; color: #3B4755">{{d.tekst}}</span>
+</div>
+</a>
+</sc-for>
+</div>
+
+<div style="background: #0B1B30; padding: 32px 16px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; flex-shrink: 0">
+<div style="display: flex; flex-direction: column; gap: 2px"><span class="cond" style="font-size: 38px; font-weight: 700; color: #ffffff">5,0</span><span style="font-size: 15px; color: #C4CEDB">Google, 41 reviews</span></div>
+<div style="display: flex; flex-direction: column; gap: 2px"><span class="cond" style="font-size: 38px; font-weight: 700; color: #ffffff">4,9</span><span style="font-size: 15px; color: #C4CEDB">op Werkspot</span></div>
+<div style="display: flex; flex-direction: column; gap: 2px"><span class="cond" style="font-size: 38px; font-weight: 700; color: #ffffff">5+ jaar</span><span style="font-size: 15px; color: #C4CEDB">ervaring</span></div>
+<div style="display: flex; flex-direction: column; gap: 2px"><span class="cond" style="font-size: 30px; font-weight: 700; color: #ffffff; line-height: 1.25">Boonstoppel</span><span style="font-size: 15px; color: #C4CEDB">verf</span></div>
+</div>
+
+<div style="padding: 40px 16px; display: flex; flex-direction: column; gap: 16px; background: #F5F3EF; flex-shrink: 0">
+<h2 class="cond" style="margin: 0; font-size: 34px; font-weight: 700; color: #0B1B30">Recente projecten</h2>
+<div style="background: #ffffff; border-radius: 12px; overflow: hidden">
+<img src="images/c-deur.jpg" alt="Gelakte binnendeur" style="width: 100%; height: 220px; object-fit: cover; display: block">
+<div style="padding: 16px; display: flex; flex-direction: column; gap: 4px"><span style="font-size: 13px; font-weight: 600; color: #1561D6">Binnenschilderwerk · [plaats]</span><span class="cond" style="font-size: 22px; font-weight: 700; color: #0B1B30">[JORDY: projecttitel]</span></div>
+</div>
+<div style="display: flex; gap: 8px; justify-content: center"><span style="width: 8px; height: 8px; border-radius: 50%; background: #1668E3"></span><span style="width: 8px; height: 8px; border-radius: 50%; background: #C9CFD8"></span><span style="width: 8px; height: 8px; border-radius: 50%; background: #C9CFD8"></span></div>
+</div>
+
+<div style="padding: 40px 16px; display: flex; flex-direction: column; gap: 18px; flex-shrink: 0">
+<h2 class="cond" style="margin: 0; font-size: 34px; font-weight: 700; color: #0B1B30">Zo werken we</h2>
+<sc-for list="{{stappen}}" as="s" hint-placeholder-count="4">
+<div style="display: flex; gap: 14px">
+<span class="cond" style="width: 40px; height: 40px; border-radius: 50%; background: #1668E3; color: #ffffff; font-size: 20px; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0">{{s.nr}}</span>
+<div style="display: flex; flex-direction: column; gap: 4px"><span style="font-size: 18px; font-weight: 700; color: #0B1B30">{{s.titel}}</span><span style="font-size: 16px; line-height: 1.55; color: #3B4755">{{s.tekst}}</span></div>
+</div>
+</sc-for>
+</div>
+
+<div style="padding: 40px 16px; background: #F5F3EF; display: flex; flex-direction: column; gap: 14px; flex-shrink: 0">
+<h2 class="cond" style="margin: 0; font-size: 34px; font-weight: 700; color: #0B1B30">Veelgestelde vragen</h2>
+<div style="border-bottom: 1px solid #DDD8CF; padding-bottom: 14px"><h3 style="margin: 0 0 6px; font-size: 18px; color: #0B1B30">Wat kost binnenschilderwerk in Eindhoven?</h3><p style="margin: 0; font-size: 16px; line-height: 1.55; color: #3B4755">Reken op 30 tot 35 euro per m², indicatief, inclusief voorbereiding en verf.</p></div>
+<div style="border-bottom: 1px solid #DDD8CF; padding-bottom: 14px"><h3 style="margin: 0 0 6px; font-size: 18px; color: #0B1B30">Kun je in de winter binnen laten schilderen?</h3><p style="margin: 0; font-size: 16px; line-height: 1.55; color: #3B4755">Ja, binnen droogt verf goed bij normale kamertemperatuur.</p></div>
+</div>
+
+<div style="flex-grow: 1; background: #0B1B30; color: #C4CEDB; padding: 32px 16px 110px; box-sizing: border-box; display: flex; flex-direction: column; gap: 10px; font-size: 15px">
+<span class="cond" style="font-size: 24px; font-weight: 700; color: #ffffff">Schildersbedrijf040</span>
+<span>Straatsburglaan 26, 5627 DB Eindhoven</span>
+<a href="tel:0638903004" style="color: #ffffff; font-weight: 600">06-38903004</a>
+</div>
+
+<!-- Vaste actiebalk (fixed onderaan scherm, hier getoond op schermhoogte 844) -->
+<div style="position: absolute; left: 0; top: 772px; width: 390px; height: 72px; background: #ffffff; border-top: 1px solid #E3E6EB; box-shadow: 0 -6px 20px rgba(11,27,48,0.10); display: flex; gap: 10px; padding: 10px 16px; box-sizing: border-box">
+<a href="tel:0638903004" style="flex-grow: 1; flex-basis: 0; border: 2px solid #0B1B30; color: #0B1B30; border-radius: 8px; font-size: 16px; font-weight: 700; display: flex; align-items: center; justify-content: center; gap: 8px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>Bellen</a>
+<a href="#" style="flex-grow: 1.4; flex-basis: 0; background: #1668E3; color: #ffffff; border-radius: 8px; font-size: 16px; font-weight: 700; display: flex; align-items: center; justify-content: center">Gratis offerte</a>
+</div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":3000}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      diensten: [
+        { titel: 'Binnenschilderwerk', img: 'images/c-binnen.jpg', tekst: 'Muren, plafonds, kozijnen en deuren. €30 tot €35 per m².' },
+        { titel: 'Buitenschilderwerk', img: 'images/c-buiten.jpg', tekst: 'Gevels, kozijnen en boeidelen.' },
+        { titel: 'Behangen', img: 'images/c-behang.jpg', tekst: 'Plaatsen of verwijderen.' },
+        { titel: 'Lakwerk', img: 'images/c-lak.jpg', tekst: 'Deuren, trappen en kasten.' },
+        { titel: 'Latex spuiten', img: 'images/c-latex.jpg', tekst: 'Snel en egaal, ideaal bij nieuwbouw.' },
+        { titel: 'Houtrot sanering', img: 'images/c-houtrot.jpg', tekst: 'Herstellen voordat we schilderen.' }
+      ],
+      stappen: [
+        { nr: 1, titel: 'Aanvraag en inspectie', tekst: 'Gratis langs om te bekijken en te adviseren.' },
+        { nr: 2, titel: 'Offerte met vaste prijs', tekst: 'Werk, materialen en planning op een rij.' },
+        { nr: 3, titel: 'Voorbereiden en schilderen', tekst: 'Afdekken, schuren, repareren, schilderen.' },
+        { nr: 4, titel: 'Oplevering', tekst: 'Samen nalopen en schoon opleveren.' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>
