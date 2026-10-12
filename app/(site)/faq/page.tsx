@@ -1,11 +1,8 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion"
+import Link from 'next/link'
+import { site } from '@/lib/site'
+import { Offerte } from '@/components/site/offerte'
 
 export const metadata: Metadata = {
   title: 'Veelgestelde Vragen | Schildersbedrijf Eindhoven',
@@ -110,60 +107,66 @@ export default function FAQPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       
-      {/* Hero Section */}
-      <section className="relative min-h-[50vh] flex items-center">
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/images/buitenschilderwerk-vrijstaande-woning-wit.jpg"
-            alt="Veelgestelde vragen over schilderwerk - Schildersbedrijf040"
-            fill
-            sizes="100vw"
-            className="object-cover"
-            priority
-          />
-          <div className="absolute inset-0 bg-black/60" />
-        </div>
-        
-        <div className="container relative z-10">
-          <div className="max-w-3xl">
-            <h1 className="text-5xl md:text-6xl font-bold mb-4">
-              <span className="text-white">Veelgestelde</span><br />
-              <span className="text-[#7FB2FF]">vragen</span>
+      <section className="dp-hero" style={{ padding: 0 }}>
+        <div className="wrap pg-hero">
+          <div>
+            <nav className="crumbs" aria-label="Kruimelpad">
+              <Link href="/">Home</Link>
+              <span>/</span>
+              <b aria-current="page">Veelgestelde vragen</b>
+            </nav>
+            <h1 className="disp pg-lang">
+              <span className="w">
+                <span>Veelgestelde</span>
+              </span>
+              <br />
+              <span className="w">
+                <span className="paint">vragen</span>
+              </span>
             </h1>
-            <p className="text-gray-200 text-lg leading-relaxed">
-              Hier vindt u antwoorden op de meest gestelde vragen over onze diensten en werkwijze.
-            </p>
+            <p className="lead">Hier vindt u antwoorden op de meest gestelde vragen over onze diensten en werkwijze.</p>
+          </div>
+          <div className="pg-foto">
+            <Image
+              src="/images/buitenschilderwerk-vrijstaande-woning-wit.jpg"
+              alt="Veelgestelde vragen over schilderwerk - Schildersbedrijf040"
+              fill
+              sizes="(max-width: 980px) 100vw, 420px"
+              className="object-cover"
+              priority
+            />
           </div>
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <section className="py-24">
-        <div className="container max-w-4xl">
-          <Accordion type="single" collapsible className="space-y-6">
+      <section style={{ background: 'var(--white)' }}>
+        <div className="wrap two">
+          <div className="rv">
+            <div className="ask">
+              <h3>Nog vragen?</h3>
+              <span>Heeft u nog andere vragen? Neem gerust contact met ons op.</span>
+              <span>
+                Bel of app Jordy: <a href={site.phoneHref}>{site.phone}</a>
+              </span>
+              <Link className="btn btn-blue" href="/contact" style={{ alignSelf: 'flex-start' }}>
+                Stel uw vraag <span aria-hidden="true">→</span>
+              </Link>
+            </div>
+          </div>
+          <div className="rv">
             {faqs.map((faq, index) => (
-              <AccordionItem key={index} value={`item-${index}`} className="bg-white rounded-lg border border-gray-200">
-                <AccordionTrigger className="px-6 hover:no-underline">
-                  <span className="text-left font-medium">{faq.question}</span>
-                </AccordionTrigger>
-                <AccordionContent className="px-6 pb-6 text-gray-600">
-                  {faq.answer}
-                </AccordionContent>
-              </AccordionItem>
+              <details key={faq.question} open={index === 0}>
+                <summary>
+                  <h2 className="faq-q">{faq.question}</h2>
+                </summary>
+                <p>{faq.answer}</p>
+              </details>
             ))}
-          </Accordion>
-
-          <div className="mt-12 text-center">
-            <p className="text-gray-600 mb-6">
-              Heeft u nog andere vragen? Neem gerust contact met ons op.
-            </p>
-            <a href="/contact" className="btn-primary">
-              Stel uw vraag
-              <span className="ml-2">→</span>
-            </a>
           </div>
         </div>
       </section>
+
+      <Offerte />
     </main>
   )
 }

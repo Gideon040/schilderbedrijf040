@@ -13,8 +13,8 @@ Gemeten met `textContent` van de pagina zonder header, footer en mobiele balk (d
 | `/` | 909 | 921 | 1704 | in orde |
 | `/over-ons` | 161 | 168 | 366 | in orde |
 | `/contact` | 60 | 67 | 79 | in orde |
-| `/faq` | 82 | 442 | 446 | nog oud ontwerp |
-| `/projecten` | 48 | 54 | 58 | nog oud ontwerp |
+| `/faq` | 82 | 442 | 501 | in orde |
+| `/projecten` | 48 | 54 | 108 | in orde |
 | `/diensten/binnenschilderwerk` | 1651 | 1850 | 2015 | in orde |
 | `/diensten/buitenschilderwerk` | 1687 | 1669 | 1846 | in orde |
 | `/diensten/behangen` | 1680 | 1649 | 1823 | in orde |
@@ -217,26 +217,31 @@ Geen: elke kop en elk tekstblok van main en voor staat op de nieuwe pagina's, en
 
 </details>
 
-<details><summary><code>/faq</code> (11 koppen)</summary>
+<details><summary><code>/faq</code> (14 koppen)</summary>
 
 - H1 Veelgesteldevragen
-- H3 Wat kost een schilder per m2 in Eindhoven?
-- H3 Hoe lang duurt een schilderproject gemiddeld?
-- H3 Welke garantie bieden jullie op het schilderwerk?
-- H3 Werken jullie met hoogwaardige materialen?
-- H3 Kan er het hele jaar door geschilderd worden?
-- H3 Hoe bereiden jullie de ondergrond voor?
-- H3 Maken jullie gebruik van steigers bij buitenschilderwerk?
-- H3 Hoe gaan jullie om met meubilair en vloerbedekking?
-- H3 Bieden jullie kleuradvies aan?
-- H3 In welke plaatsen zijn jullie actief?
+- H3 Nog vragen?
+- H2 Wat kost een schilder per m2 in Eindhoven?
+- H2 Hoe lang duurt een schilderproject gemiddeld?
+- H2 Welke garantie bieden jullie op het schilderwerk?
+- H2 Werken jullie met hoogwaardige materialen?
+- H2 Kan er het hele jaar door geschilderd worden?
+- H2 Hoe bereiden jullie de ondergrond voor?
+- H2 Maken jullie gebruik van steigers bij buitenschilderwerk?
+- H2 Hoe gaan jullie om met meubilair en vloerbedekking?
+- H2 Bieden jullie kleuradvies aan?
+- H2 In welke plaatsen zijn jullie actief?
+- H2 Benieuwd wat uw klus kost?
+- H3 Offerte aanvragen
 
 </details>
 
-<details><summary><code>/projecten</code> (2 koppen)</summary>
+<details><summary><code>/projecten</code> (4 koppen)</summary>
 
 - H1 Onzeprojecten
 - H2 Laatste Projecten
+- H2 Benieuwd wat uw klus kost?
+- H3 Offerte aanvragen
 
 </details>
 

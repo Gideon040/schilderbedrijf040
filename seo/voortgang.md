@@ -75,7 +75,7 @@ Regel: alle bestaande SEO-teksten letterlijk behouden; controle in `rapportages/
 | Locatiepagina's (17) | klaar | `app/(site)/locaties/[city]/page.tsx` | Routekaartje per plaats; live USP's, werkstappen, banner en quotes terug |
 | Over ons | klaar | `app/(site)/over-ons/page.tsx` | Alleen Jordy bij naam, 8+ vaste collega's; bestaande drie alinea's letterlijk |
 | Blog en artikel | klaar | `app/(site)/blog/page.tsx`, `app/(site)/blog/[slug]/page.tsx`, `components/blog/*` | Sanity-inhoud ongewijzigd; filter, leesbalk en inhoudsopgave; H1 "Schildertips & advies" en oude hero-alt uit main terug. Em dashes in Sanity-teksten: in Studio aanpassen (niet in code) |
-| Contact, projecten, FAQ | todo | | |
+| Contact, projecten, FAQ | klaar | `app/(site)/contact/page.tsx`, `components/contact/formulier.tsx`, `app/(site)/projecten/page.tsx`, `app/(site)/faq/page.tsx` | Contact: kleurstalen-formulier bovenaan (werkt zonder JS), echte kaart; telefoonnummer in contactkaart gecorrigeerd (06-36803004 was een typfout). FAQ: antwoorden in details, dus zonder JS leesbaar |
 
 ## Open punten voor Jordy
 

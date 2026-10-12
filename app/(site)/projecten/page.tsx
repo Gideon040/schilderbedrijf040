@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
-import { Instagram, ExternalLink } from 'lucide-react'
+import Link from 'next/link'
+import { Eyebrow, Pijl, Streek } from '@/components/site/v2'
+import { Offerte } from '@/components/site/offerte'
 
 export const metadata: Metadata = {
   title: 'Projecten | Ons Schilderwerk in Beeld',
@@ -114,89 +116,76 @@ export default function ProjectenPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       
-      {/* Hero Section */}
-      <section className="relative min-h-[50vh] flex items-center">
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/images/buitenschilderwerk-dakkapel-wit-geschilderd.jpg"
-            alt="Schilderprojecten Eindhoven - Schildersbedrijf040"
-            fill
-            sizes="100vw"
-            className="object-cover"
-            priority
-          />
-          <div className="absolute inset-0 bg-black/60" />
-        </div>
-        
-        <div className="container relative z-10">
-          <div className="max-w-3xl">
-            <h1 className="text-5xl md:text-6xl font-bold mb-4">
-              <span className="text-white">Onze</span><br />
-              <span className="text-[#7FB2FF]">projecten</span>
+      <section className="dp-hero" style={{ padding: 0 }}>
+        <div className="wrap pg-hero">
+          <div>
+            <nav className="crumbs" aria-label="Kruimelpad">
+              <Link href="/">Home</Link>
+              <span>/</span>
+              <b aria-current="page">Projecten</b>
+            </nav>
+            <h1 className="disp">
+              <span className="w">
+                <span>Onze</span>
+              </span>
+              <br />
+              <span className="w">
+                <span className="paint">projecten</span>
+              </span>
             </h1>
-            <p className="text-gray-200 text-lg leading-relaxed">
-              Bekijk onze meest recente projecten en volg ons op Instagram voor dagelijkse updates.
-            </p>
+            <p className="lead">Bekijk onze meest recente projecten en volg ons op Instagram voor dagelijkse updates.</p>
+          </div>
+          <div className="pg-foto">
+            <Image
+              src="/images/buitenschilderwerk-dakkapel-wit-geschilderd.jpg"
+              alt="Schilderprojecten Eindhoven - Schildersbedrijf040"
+              fill
+              sizes="(max-width: 980px) 100vw, 420px"
+              className="object-cover"
+              priority
+            />
           </div>
         </div>
       </section>
 
-      {/* Instagram Feed Section */}
-      <section className="py-24">
-        <div className="container">
-          <div className="flex items-center justify-between mb-12">
+      <section>
+        <div className="wrap">
+          <div className="head rv">
             <div>
-              <h2 className="text-3xl font-bold mb-2">Laatste Projecten</h2>
-              <p className="text-gray-600">Volg ons op Instagram voor dagelijkse updates</p>
+              <Eyebrow>Instagram</Eyebrow>
+              <h2 id="laatste-projecten" className="disp">
+                Laatste <Streek>Projecten</Streek>
+              </h2>
             </div>
-            <a
-              href="https://www.instagram.com/schildersbedrijf040/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 text-primary hover:text-primary/80 transition-colors"
-            >
-              <Instagram className="w-5 h-5" />
-              <span>@schildersbedrijf040</span>
-              <ExternalLink className="w-4 h-4" />
-            </a>
+            <p>
+              Volg ons op Instagram voor dagelijkse updates{' '}
+              <a href="https://www.instagram.com/schildersbedrijf040/" target="_blank" rel="noopener noreferrer">
+                <span>@schildersbedrijf040</span>
+              </a>
+            </p>
           </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {projects.map((project, index) => (
-              <a
-                key={index}
-                href={project.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="relative aspect-square group overflow-hidden rounded-xl"
-              >
-                <Image
-                  src={project.src}
-                  alt={project.alt}
-                  fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  className="object-cover transition-transform duration-300 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <p className="text-white text-center p-4">{project.title}</p>
-                </div>
+          <div className="collage proj">
+            {projects.map((project) => (
+              <a key={project.href} className="rv" href={project.href} target="_blank" rel="noopener noreferrer">
+                <figure>
+                  <Image src={project.src} alt={project.alt} fill sizes="(max-width: 980px) 50vw, 400px" />
+                  <figcaption>
+                    <small>INSTAGRAM</small>
+                    <p>{project.title}</p>
+                  </figcaption>
+                </figure>
               </a>
             ))}
           </div>
-
-          <div className="mt-12 text-center">
-            <a
-              href="https://www.instagram.com/schildersbedrijf040/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-primary inline-flex items-center group"
-            >
-              Volg ons op Instagram
-              <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
+          <div className="rv" style={{ marginTop: 28 }}>
+            <a className="btn btn-line" href="https://www.instagram.com/schildersbedrijf040/" target="_blank" rel="noopener noreferrer">
+              Volg ons op Instagram <Pijl />
             </a>
           </div>
         </div>
       </section>
+
+      <Offerte />
     </main>
   )
 }

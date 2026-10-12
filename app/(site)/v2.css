@@ -885,3 +885,22 @@ main .lopend p:first-of-type{margin-top:0}
 .mapcard .maplabel{left:auto;right:18px;top:auto;bottom:18px;transform:none}
 @media (max-width:980px){.ct-kaart-grid{grid-template-columns:1fr}.ct-foto{min-height:220px}.mapcard .maplabel{position:relative;right:auto;bottom:auto;max-width:none}.mapcard{height:auto;display:flex;flex-direction:column}.mapcard iframe{position:relative;height:300px}}
 @media (max-width:560px){footer.site .brand{font-size:clamp(18px,6.4vw,26px)}}
+
+/* Projecten en FAQ (v2): hero met foto rechts, projectraster */
+.pg-hero{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:48px;align-items:center;padding-block:40px 90px}
+.pg-hero h1{font-size:clamp(46px,6.4vw,100px)}
+.pg-foto{position:relative;aspect-ratio:4/5;overflow:hidden;box-shadow:0 30px 60px -30px rgba(10,22,40,.45);transform:rotate(2deg)}
+.collage.proj{grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:none;grid-auto-rows:320px}
+.collage.proj>a{display:block;text-decoration:none}
+.collage.proj figure{height:100%}
+.collage.proj figcaption p{margin:0}
+.head p a{font-weight:700}
+.faq-q{font:inherit;margin:0}
+@media (max-width:980px){.pg-hero{grid-template-columns:1fr;gap:28px}.pg-foto{aspect-ratio:16/9;transform:none}}
+@media (max-width:560px){.pg-hero h1{font-size:10.6vw}.collage.proj{grid-template-columns:1fr 1fr;grid-auto-rows:auto}.collage.proj figure{aspect-ratio:1/1}}
+.pg-hero{padding-block:64px 90px}
+.pg-hero h1{font-size:clamp(40px,5.4vw,84px)}
+.ask .btn{color:var(--white);text-decoration:none}
+@media (max-width:560px){.pg-hero h1{font-size:10.6vw}}
+.pg-hero h1.pg-lang{font-size:clamp(36px,4.5vw,70px)}
+@media (max-width:560px){.pg-hero h1.pg-lang{font-size:8.4vw}}
