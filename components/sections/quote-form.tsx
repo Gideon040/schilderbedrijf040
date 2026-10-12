@@ -205,7 +205,7 @@ export function QuoteForm() {
               type="submit"
               className="w-full h-12 bg-primary hover:bg-primary/90 text-white font-bebas text-lg tracking-wider rounded-md transition-all duration-200 group"
             >
-              OFFERTE AANVRAGEN
+              Gratis offerte aanvragen
               <span className="ml-2 group-hover:translate-x-1 inline-block transition-transform">→</span>
             </button>
           </form>

@@ -113,7 +113,7 @@ export function Header() {
             </nav>
             
             <Link href="/contact" className="btn-primary">
-              Offerte Aanvragen
+              Gratis offerte aanvragen
             </Link>
           </div>
 
@@ -178,7 +178,7 @@ export function Header() {
               </Link>
               <div className="pt-4">
                 <Link href="/contact" className="btn-primary w-full text-center">
-                  Offerte Aanvragen
+                  Gratis offerte aanvragen
                 </Link>
               </div>
             </nav>

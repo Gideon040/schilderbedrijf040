@@ -76,7 +76,7 @@ export function Process() {
                 href="/contact"
                 className="btn-primary mt-8 group"
               >
-                START UW PROJECT
+                Gratis offerte aanvragen
                 <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
               </Link>
             </div>

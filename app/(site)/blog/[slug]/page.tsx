@@ -340,7 +340,7 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
                   href="/contact"
                   className="bg-[#0088FF] text-white px-6 py-3.5 rounded-lg inline-flex items-center gap-2 font-bebas text-base tracking-wider hover:bg-[#006ACC] transition-all duration-250 shadow-[0_4px_24px_rgba(0,136,255,0.3)] w-full justify-center"
                 >
-                  GRATIS OFFERTE AANVRAGEN
+                  Gratis offerte aanvragen
                   <ArrowRight className="w-4 h-4" />
                 </Link>
                 <a
@@ -348,7 +348,7 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
                   className="mt-3 border border-white/20 bg-white/[0.04] text-white px-6 py-3.5 rounded-lg inline-flex items-center gap-2 font-bebas text-base tracking-wider hover:border-white/40 hover:bg-white/[0.08] transition-all duration-250 w-full justify-center"
                 >
                   <Phone className="w-4 h-4" />
-                  06-38903004
+                  Bel 06-38903004
                 </a>
               </div>
 
@@ -417,7 +417,7 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
                   href="/contact"
                   className="bg-[#0088FF] text-white px-6 py-3 rounded-lg inline-flex items-center gap-2 font-bebas text-base tracking-wider hover:bg-[#006ACC] transition-all duration-250 shadow-[0_4px_24px_rgba(0,136,255,0.3)] w-full justify-center"
                 >
-                  GRATIS OFFERTE
+                  Gratis offerte aanvragen
                   <ArrowRight className="w-4 h-4" />
                 </Link>
                 <a
@@ -425,7 +425,7 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
                   className="mt-3 border border-white/20 bg-white/[0.04] text-white px-6 py-3 rounded-lg inline-flex items-center gap-2 font-bebas text-base tracking-wider hover:border-white/40 hover:bg-white/[0.08] transition-all duration-250 w-full justify-center"
                 >
                   <Phone className="w-4 h-4" />
-                  06-38903004
+                  Bel 06-38903004
                 </a>
               </div>
 

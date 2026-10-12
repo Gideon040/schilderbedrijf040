@@ -181,7 +181,7 @@ export default function OverOnsPage() {
                   Neem contact met ons op voor een vrijblijvende offerte.
                 </p>
                 <Link href="/contact" className="bg-white text-primary px-6 py-3 rounded-md inline-flex items-center font-bebas text-lg tracking-wider hover:bg-gray-100 transition-colors">
-                  OFFERTE AANVRAGEN
+                  Gratis offerte aanvragen
                   <span className="ml-2">→</span>
                 </Link>
               </div>

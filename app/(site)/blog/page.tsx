@@ -182,7 +182,7 @@ export default async function BlogPage() {
             Vraag een vrijblijvende offerte aan en weet binnen 48 uur waar je aan toe bent.
           </p>
           <Link href="/contact" className="bg-white text-primary px-8 py-4 rounded-md inline-flex items-center font-bebas text-lg tracking-wider hover:bg-gray-100 transition-colors">
-            GRATIS OFFERTE AANVRAGEN
+            Gratis offerte aanvragen
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </div>

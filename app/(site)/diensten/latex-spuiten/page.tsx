@@ -232,7 +232,7 @@ export default function LatexSpuitenPage() {
                 href="/contact"
                 className="bg-[#0088FF] text-white px-8 py-4 rounded-lg inline-flex items-center gap-2.5 font-bebas text-lg tracking-wider hover:bg-[#006ACC] transition-all duration-250 shadow-[0_4px_24px_rgba(0,136,255,0.3)] hover:shadow-[0_8px_32px_rgba(0,136,255,0.4)] hover:-translate-y-0.5"
               >
-                GRATIS OFFERTE AANVRAGEN
+                Gratis offerte aanvragen
                 <ArrowRight className="w-[18px] h-[18px]" />
               </Link>
               <a
@@ -240,7 +240,7 @@ export default function LatexSpuitenPage() {
                 className="border-[1.5px] border-white/25 bg-white/[0.04] text-white px-8 py-4 rounded-lg inline-flex items-center gap-2.5 font-bebas text-lg tracking-wider hover:border-white/50 hover:bg-white/[0.08] transition-all duration-250"
               >
                 <Phone className="w-[18px] h-[18px]" />
-                06-38903004
+                Bel 06-38903004
               </a>
             </div>
 
@@ -429,7 +429,7 @@ export default function LatexSpuitenPage() {
                 href="/contact"
                 className="bg-[#0088FF] text-white px-7 py-3.5 rounded-lg inline-flex items-center gap-2.5 font-bebas text-base tracking-wider hover:bg-[#006ACC] transition-all duration-250"
               >
-                OFFERTE OP MAAT
+                Gratis offerte aanvragen
                 <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
@@ -491,7 +491,7 @@ export default function LatexSpuitenPage() {
                 href="/contact"
                 className="bg-[#0088FF] text-white px-8 py-4 rounded-lg inline-flex items-center gap-2.5 font-bebas text-lg tracking-wider hover:bg-[#006ACC] transition-all duration-250 shadow-[0_4px_24px_rgba(0,136,255,0.3)] hover:shadow-[0_8px_32px_rgba(0,136,255,0.4)] hover:-translate-y-0.5"
               >
-                GRATIS OFFERTE
+                Gratis offerte aanvragen
                 <ArrowRight className="w-[18px] h-[18px]" />
               </Link>
               <Link
@@ -687,13 +687,13 @@ export default function LatexSpuitenPage() {
                     className="bg-[#0088FF] text-white px-5 py-2.5 rounded-lg inline-flex items-center gap-2 font-bebas text-sm tracking-wider hover:bg-[#006ACC] transition-colors"
                   >
                     <Phone className="w-4 h-4" />
-                    06-38903004
+                    Bel 06-38903004
                   </a>
                   <Link
                     href="/contact"
                     className="border border-gray-300 text-gray-700 px-5 py-2.5 rounded-lg inline-flex items-center gap-2 font-bebas text-sm tracking-wider hover:border-[#0088FF] hover:text-[#0088FF] transition-colors"
                   >
-                    CONTACT
+                    Gratis offerte aanvragen
                     <ArrowRight className="w-4 h-4" />
                   </Link>
                 </div>
@@ -751,7 +751,7 @@ export default function LatexSpuitenPage() {
                 href="/contact"
                 className="bg-[#0088FF] text-white px-8 py-4 rounded-lg inline-flex items-center gap-2.5 font-bebas text-lg tracking-wider hover:bg-[#006ACC] transition-all duration-250 shadow-[0_4px_24px_rgba(0,136,255,0.3)] hover:shadow-[0_8px_32px_rgba(0,136,255,0.4)] hover:-translate-y-0.5"
               >
-                GRATIS OFFERTE AANVRAGEN
+                Gratis offerte aanvragen
                 <ArrowRight className="w-[18px] h-[18px]" />
               </Link>
             </div>

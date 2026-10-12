@@ -75,7 +75,7 @@ export function Hero() {
           </p>
           <div className="flex flex-wrap gap-4">
             <Link href="/contact" className="btn-primary">
-              Start Uw Project
+              Gratis offerte aanvragen
               <ArrowRight className="ml-2 w-5 h-5" />
             </Link>
             <a 
@@ -83,7 +83,7 @@ export function Hero() {
               className="btn-secondary text-white border-white hover:bg-white hover:text-primary"
             >
               <Phone className="mr-2 w-5 h-5" />
-              BEL DIRECT
+              Bel 06-38903004
             </a>
           </div>
         </div>
@@ -91,7 +91,7 @@ export function Hero() {
         {/* Contact Form */}
         <div className="w-full max-w-[400px] bg-black/40 backdrop-blur-md rounded-xl shadow-lg p-8 transition-all duration-200 sm:w-full md:w-[480px]">
           <h3 className="text-2xl font-bebas text-white tracking-wider uppercase mb-6">
-            Vraag een offerte aan
+            Gratis offerte aanvragen
           </h3>
           <form onSubmit={handleSubmit} className="space-y-5">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -181,7 +181,7 @@ export function Hero() {
               type="submit" 
               className="w-full h-12 bg-primary hover:bg-[#0061D1] active:bg-[#004FB2] text-white font-bebas text-lg uppercase tracking-wider transition-all duration-200 rounded-md hover:-translate-y-[1px] active:translate-y-0"
             >
-              Verstuur Aanvraag
+              Gratis offerte aanvragen
             </button>
           </form>
         </div>
