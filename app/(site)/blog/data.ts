@@ -40,7 +40,7 @@ export const blogPosts: Record<string, BlogPost> = {
 
 <h2>Het verschil tussen 9% en 21% BTW bij schilderwerk</h2>
 
-<p>De Belastingdienst hanteert twee BTW-tarieven voor schilderwerk: het lage tarief van 9% en het hoge tarief van 21%. Welk tarief van toepassing is, hangt af van de leeftijd van je woning en het type werkzaamheden. Dit is geen vrije keuze van de schilder – de regels liggen wettelijk vast en worden gecontroleerd.</p>
+<p>De Belastingdienst hanteert twee BTW-tarieven voor schilderwerk: het lage tarief van 9% en het hoge tarief van 21%. Welk tarief van toepassing is, hangt af van de leeftijd van je woning en het type werkzaamheden. Dit is geen vrije keuze van de schilder, de regels liggen wettelijk vast en worden gecontroleerd.</p>
 
 <p>Waarom bestaat dit verschil eigenlijk? De overheid wil woningonderhoud stimuleren, vooral bij oudere woningen. Door een lager BTW-tarief aan te bieden, worden onderhoudswerkzaamheden betaalbaarder. Het gevolg: meer mensen laten hun woning onderhouden, wat de levensduur van het woningbestand verlengt én werkgelegenheid creëert in de bouw- en onderhoudssector.</p>
 
@@ -48,13 +48,13 @@ export const blogPosts: Record<string, BlogPost> = {
 
 <p>Het lage BTW-tarief van 9% is van toepassing als je woning ouder is dan twee jaar én het gaat om arbeidskosten. Dit betekent dat de woning minimaal twee jaar geleden is opgeleverd door de aannemer. Een woning die in januari 2024 is opgeleverd, komt dus vanaf januari 2026 in aanmerking voor het lage tarief.</p>
 
-<p>Belangrijk: het lage tarief geldt alleen voor de arbeid, niet voor de materialen. Als je schilder een offerte maakt van €2.000, waarvan €1.400 arbeid en €600 materialen, dan betaal je 9% BTW over de €1.400 (€126) en 21% over de €600 (€126). Totaal: €252 BTW. Had het hoge tarief overal gegolden, dan was dit €420 geweest – een verschil van €168.</p>
+<p>Belangrijk: het lage tarief geldt alleen voor de arbeid, niet voor de materialen. Als je schilder een offerte maakt van €2.000, waarvan €1.400 arbeid en €600 materialen, dan betaal je 9% BTW over de €1.400 (€126) en 21% over de €600 (€126). Totaal: €252 BTW. Had het hoge tarief overal gegolden, dan was dit €420 geweest, een verschil van €168.</p>
 
 <p>Sommige schilders splitsen de offerte niet uit en rekenen overal 21%. Dit is niet in jouw voordeel. Vraag dus altijd om een uitgesplitste offerte met apart de arbeidskosten en materiaalkosten. Een professioneel schildersbedrijf doet dit automatisch.</p>
 
 <h2>Wanneer geldt het hoge BTW-tarief van 21%?</h2>
 
-<p>Het hoge tarief van 21% geldt in drie situaties. Ten eerste bij nieuwbouwwoningen jonger dan twee jaar – hier is geen uitzondering mogelijk. Ten tweede voor alle materiaalkosten, ongeacht de leeftijd van de woning. En ten derde voor schilderwerk aan bedrijfspanden, winkels en andere niet-woonruimtes.</p>
+<p>Het hoge tarief van 21% geldt in drie situaties. Ten eerste bij nieuwbouwwoningen jonger dan twee jaar, hier is geen uitzondering mogelijk. Ten tweede voor alle materiaalkosten, ongeacht de leeftijd van de woning. En ten derde voor schilderwerk aan bedrijfspanden, winkels en andere niet-woonruimtes.</p>
 
 <p>Let op bij gemengd gebruik: heb je een woning met een praktijkruimte of kantoor aan huis? Dan geldt het lage tarief alleen voor het woongedeelte. De schilder moet dan de werkzaamheden splitsen, wat de administratie complexer maakt. Bespreek dit vooraf om misverstanden te voorkomen.</p>
 
@@ -62,7 +62,7 @@ export const blogPosts: Record<string, BlogPost> = {
 
 <h3>Voorbeeld 1: Binnenschilderwerk rijtjeshuis (bouwjaar 1985)</h3>
 
-<p>Je laat de woonkamer, hal en drie slaapkamers schilderen. De offerte bedraagt €2.800, waarvan €2.000 arbeid en €800 materialen. Omdat de woning ouder is dan twee jaar, geldt het lage tarief voor de arbeid. Je betaalt €180 BTW over de arbeid (9%) en €168 over de materialen (21%). Totale BTW: €348. Bij volledig hoog tarief was dit €588 geweest – je bespaart €240.</p>
+<p>Je laat de woonkamer, hal en drie slaapkamers schilderen. De offerte bedraagt €2.800, waarvan €2.000 arbeid en €800 materialen. Omdat de woning ouder is dan twee jaar, geldt het lage tarief voor de arbeid. Je betaalt €180 BTW over de arbeid (9%) en €168 over de materialen (21%). Totale BTW: €348. Bij volledig hoog tarief was dit €588 geweest, je bespaart €240.</p>
 
 <h3>Voorbeeld 2: Nieuwbouwwoning (opgeleverd 2025)</h3>
 
@@ -90,7 +90,7 @@ export const blogPosts: Record<string, BlogPost> = {
       { question: 'Welk BTW-tarief geldt voor schilderwerk in 2026?', answer: 'Voor woningen ouder dan 2 jaar geldt 9% BTW op arbeidskosten en 21% op materialen. Voor nieuwbouwwoningen (jonger dan 2 jaar) en bedrijfspanden geldt altijd 21% BTW op zowel arbeid als materialen.' },
       { question: 'Hoe weet ik of mijn woning oud genoeg is voor 9% BTW?', answer: 'Je woning moet minimaal 2 jaar geleden zijn opgeleverd. De datum van oplevering staat in je koopakte of kun je opvragen bij de gemeente. Twijfel je? Je schilder kan dit voor je controleren aan de hand van het bouwjaar.' },
       { question: 'Geldt 9% BTW ook voor materiaalkosten?', answer: 'Nee, voor materialen geldt altijd 21% BTW, ongeacht de leeftijd van je woning. Alleen de arbeidskosten komen in aanmerking voor het lage tarief. Vraag daarom altijd een offerte met gesplitste kosten.' },
-      { question: 'Wat als mijn schilder geen gesplitste offerte geeft?', answer: 'Vraag hier expliciet om. Een professioneel schildersbedrijf splitst arbeids- en materiaalkosten standaard uit. Als een schilder dit weigert of niet kan, is dat een rode vlag – je betaalt dan waarschijnlijk te veel BTW.' },
+      { question: 'Wat als mijn schilder geen gesplitste offerte geeft?', answer: 'Vraag hier expliciet om. Een professioneel schildersbedrijf splitst arbeids- en materiaalkosten standaard uit. Als een schilder dit weigert of niet kan, is dat een rode vlag, je betaalt dan waarschijnlijk te veel BTW.' },
       { question: 'Geldt het lage BTW-tarief ook voor buitenschilderwerk?', answer: 'Ja, zowel binnen- als buitenschilderwerk komen in aanmerking voor 9% BTW op de arbeidskosten, mits de woning ouder is dan 2 jaar. Dit geldt ook voor kozijnen, deuren, dakgoten en boeidelen.' }
     ],
     relatedSlugs: ['hoe-schilder-je-een-deur', 'hoe-verf-je-een-muur']
@@ -113,7 +113,7 @@ export const blogPosts: Record<string, BlogPost> = {
 
 <h2>Dit heb je nodig</h2>
 
-<p>Voordat je begint, verzamel je alle materialen. Niets is vervelender dan halverwege naar de bouwmarkt te moeten omdat je de primer vergeten bent. Je hebt nodig: schuurpapier (korrel 180 voor voorschuren, korrel 240 voor tussenschuren), een schuurspons voor de profileringen, afplaktape, afdekfolie, ontvetter of ammoniak, plamuur voor eventuele gaten, een grondverf of primer, lakverf in de gewenste kleur en glansgraad, een kwast van 5-7 cm breed (geen goedkope – investeer minimaal €8-12 in een kwaliteitskwast), en een kleine roller voor de vlakke delen.</p>
+<p>Voordat je begint, verzamel je alle materialen. Niets is vervelender dan halverwege naar de bouwmarkt te moeten omdat je de primer vergeten bent. Je hebt nodig: schuurpapier (korrel 180 voor voorschuren, korrel 240 voor tussenschuren), een schuurspons voor de profileringen, afplaktape, afdekfolie, ontvetter of ammoniak, plamuur voor eventuele gaten, een grondverf of primer, lakverf in de gewenste kleur en glansgraad, een kwast van 5-7 cm breed (geen goedkope, investeer minimaal €8-12 in een kwaliteitskwast), en een kleine roller voor de vlakke delen.</p>
 
 <p>Waarom een kwaliteitskwast zo belangrijk is? Een goedkope kwast verliest haren die in je verflaag blijven plakken. Bovendien houdt een goedkope kwast minder verf vast, waardoor je vaker moet bijdopen en meer kans hebt op strepen. Een kwast van €10 bespaart je uren frustratie en levert een zichtbaar beter resultaat.</p>
 
@@ -121,23 +121,23 @@ export const blogPosts: Record<string, BlogPost> = {
 
 <p>Haal de deur uit de sponning en leg hem horizontaal op twee schragen of bokken. Waarom horizontaal? Omdat verf de neiging heeft om naar beneden te zakken. Bij een staande deur krijg je druppels aan de onderkant en ophopingen bij de profileringen. Horizontaal schilderen voorkomt dit probleem volledig.</p>
 
-<p>Verwijder alle beslag: deurkruk, slotplaat, scharnieren. Dit kost je 10 minuten, maar bespaart een uur afplakken en corrigeren achteraf. Tape de slotopening en scharnieruitsparing af zodat hier geen verf in komt – dit voorkomt dat de deur straks niet meer goed sluit.</p>
+<p>Verwijder alle beslag: deurkruk, slotplaat, scharnieren. Dit kost je 10 minuten, maar bespaart een uur afplakken en corrigeren achteraf. Tape de slotopening en scharnieruitsparing af zodat hier geen verf in komt, dit voorkomt dat de deur straks niet meer goed sluit.</p>
 
 <p>Kun je de deur niet demonteren, bijvoorbeeld bij een ingebouwde schuifdeur? Schilder dan in dunne lagen en werk snel van boven naar beneden. Accepteer dat het resultaat iets minder perfect wordt, of overweeg een professional in te schakelen.</p>
 
-<h2>Stap 2: Schuren – de basis van elk goed resultaat</h2>
+<h2>Stap 2: Schuren, de basis van elk goed resultaat</h2>
 
 <p>Dit is de stap die de meeste mensen overslaan of te snel doen, en precies hier gaat het mis. Schuren zorgt ervoor dat de nieuwe verflaag zich hecht aan de ondergrond. Zonder schuren bladdert je verf binnen 1-2 jaar af, ongeacht hoe duur de verf was.</p>
 
-<p>Begin met korrel 180 en schuur alle vlakke delen en profileringen. Schuur mee met de draad van het hout, nooit dwars erop. Bij profileringen gebruik je een schuurspons die zich aanpast aan de vorm. Schuur tot de gehele deur mat aanvoelt – glanzende plekken betekent dat de verf daar niet goed zal hechten.</p>
+<p>Begin met korrel 180 en schuur alle vlakke delen en profileringen. Schuur mee met de draad van het hout, nooit dwars erop. Bij profileringen gebruik je een schuurspons die zich aanpast aan de vorm. Schuur tot de gehele deur mat aanvoelt, glanzende plekken betekent dat de verf daar niet goed zal hechten.</p>
 
 <p>Hoeveel tijd kost dit? Reken op 20-30 minuten per zijde bij een standaard binnendeur. Ja, dat is lang. Maar deze investering bepaalt of je resultaat 2 jaar of 10 jaar meegaat. Na het schuren verwijder je al het stof met een vochtige doek of plakdoek. Stofdeeltjes in je verflaag zorgen voor een ruw, onprofessioneel resultaat.</p>
 
 <h2>Stap 3: Ontvetten en repareren</h2>
 
-<p>Ook een geschuurde deur kan nog vet- of vuilresten bevatten van jarenlang aanraken. Neem de deur af met een ontvetter of een sopje van ammoniak (1 eetlepel op 1 liter water). Laat volledig drogen – minimaal 30 minuten.</p>
+<p>Ook een geschuurde deur kan nog vet- of vuilresten bevatten van jarenlang aanraken. Neem de deur af met een ontvetter of een sopje van ammoniak (1 eetlepel op 1 liter water). Laat volledig drogen, minimaal 30 minuten.</p>
 
-<p>Inspecteer nu de deur op beschadigingen. Kleine deukjes en gaatjes vul je met houtplamuur. Breng de plamuur aan met een plamuurmes, iets boller dan het oppervlak. Na droging (check de verpakking, meestal 1-2 uur) schuur je de plamuur vlak met korrel 240. Vergeet je deze stap? Dan blijven de beschadigingen zichtbaar door de nieuwe verflaag heen – verf vult geen gaten.</p>
+<p>Inspecteer nu de deur op beschadigingen. Kleine deukjes en gaatjes vul je met houtplamuur. Breng de plamuur aan met een plamuurmes, iets boller dan het oppervlak. Na droging (check de verpakking, meestal 1-2 uur) schuur je de plamuur vlak met korrel 240. Vergeet je deze stap? Dan blijven de beschadigingen zichtbaar door de nieuwe verflaag heen, verf vult geen gaten.</p>
 
 <h2>Stap 4: Gronden met primer</h2>
 
@@ -145,21 +145,21 @@ export const blogPosts: Record<string, BlogPost> = {
 
 <p>Breng de primer aan in een dunne, egale laag. Begin bij de profileringen met een kleine kwast en werk dan de vlakke delen met een roller of bredere kwast. Werk systematisch: eerst alle verdiepte delen, dan de vlakke panelen, dan de stijlen en regels. Zo voorkom je dat je natte delen aanraakt.</p>
 
-<p>Droogtijd: minimaal 4 uur, liever 24 uur. Een niet volledig gedroogde primer geeft problemen bij de aflaklaag. Na droging licht opschuren met korrel 240 – dit kost 5 minuten en zorgt voor een gladde basis.</p>
+<p>Droogtijd: minimaal 4 uur, liever 24 uur. Een niet volledig gedroogde primer geeft problemen bij de aflaklaag. Na droging licht opschuren met korrel 240, dit kost 5 minuten en zorgt voor een gladde basis.</p>
 
 <h2>Stap 5: De eerste laklaag aanbrengen</h2>
 
-<p>Nu komt het echte werk. De techniek is cruciaal: werk altijd in de richting van de houtnerf en zet je streken door tot aan de rand. Stop nooit halverwege een vlak deel – dit geeft zichtbare overgangen.</p>
+<p>Nu komt het echte werk. De techniek is cruciaal: werk altijd in de richting van de houtnerf en zet je streken door tot aan de rand. Stop nooit halverwege een vlak deel, dit geeft zichtbare overgangen.</p>
 
-<p>Begin weer bij de profileringen. Dip je kwast voor maximaal een derde in de verf en strijk het overtollige af aan de rand van het blik – niet aan de binnenkant, want dan droogt daar verf in die later als klontjes in je werk komt. Werk de profileringen met lichte, gelijkmatige streken. Gebruik niet te veel verf: twee dunne lagen zijn altijd beter dan één dikke laag die gaat druipen.</p>
+<p>Begin weer bij de profileringen. Dip je kwast voor maximaal een derde in de verf en strijk het overtollige af aan de rand van het blik, niet aan de binnenkant, want dan droogt daar verf in die later als klontjes in je werk komt. Werk de profileringen met lichte, gelijkmatige streken. Gebruik niet te veel verf: twee dunne lagen zijn altijd beter dan één dikke laag die gaat druipen.</p>
 
-<p>Voor de vlakke delen kun je een kleine lakroller gebruiken. Dit geeft een egaler resultaat dan een kwast, maar werk de randen wel na met een kwast om rolstructuur te voorkomen. Laat de roller niet te snel draaien – dit veroorzaakt spatten en luchtbelletjes.</p>
+<p>Voor de vlakke delen kun je een kleine lakroller gebruiken. Dit geeft een egaler resultaat dan een kwast, maar werk de randen wel na met een kwast om rolstructuur te voorkomen. Laat de roller niet te snel draaien, dit veroorzaakt spatten en luchtbelletjes.</p>
 
 <p>Na het aanbrengen inspecteer je de deur op druppels en ophopingen. Verwijder deze direct met een droge kwast door licht over het oppervlak te "tippen". Na 10 minuten is de verf te ver uitgehard om nog te corrigeren.</p>
 
 <h2>Stap 6: Tussenschuren en de tweede laklaag</h2>
 
-<p>Hier zit het geheim van een echt professioneel resultaat. Na volledige droging van de eerste laag (minimaal 16 uur, check de verfverpakking) schuur je licht over het gehele oppervlak met korrel 240. Dit voelt contraproductief – je schuurt je eigen werk weg – maar het verwijdert kleine oneffenheden en zorgt voor perfecte hechting van de tweede laag.</p>
+<p>Hier zit het geheim van een echt professioneel resultaat. Na volledige droging van de eerste laag (minimaal 16 uur, check de verfverpakking) schuur je licht over het gehele oppervlak met korrel 240. Dit voelt contraproductief, je schuurt je eigen werk weg, maar het verwijdert kleine oneffenheden en zorgt voor perfecte hechting van de tweede laag.</p>
 
 <p>De tweede laklaag breng je aan met dezelfde techniek als de eerste. Omdat de ondergrond nu al egaal is, gaat dit sneller en krijg je een nog gladder resultaat. Bij hoogglans lak is een derde laag aan te raden voor een echt spiegelend effect.</p>
 
@@ -179,7 +179,7 @@ export const blogPosts: Record<string, BlogPost> = {
 
 <h2>Wanneer toch een professional inschakelen?</h2>
 
-<p>Een binnendeur schilderen is een prima doe-het-zelfklus als je de tijd en het geduld hebt. Maar bij buitendeuren, monumentale panden of wanneer je meerdere deuren wilt aanpakken, is een professional vaak voordeliger dan je denkt. Wij schilderen een standaard binnendeur voor €150-€200 inclusief materiaal – en dan heb je een gegarandeerd resultaat zonder een heel weekend kwijt te zijn.</p>
+<p>Een binnendeur schilderen is een prima doe-het-zelfklus als je de tijd en het geduld hebt. Maar bij buitendeuren, monumentale panden of wanneer je meerdere deuren wilt aanpakken, is een professional vaak voordeliger dan je denkt. Wij schilderen een standaard binnendeur voor €150-€200 inclusief materiaal, en dan heb je een gegarandeerd resultaat zonder een heel weekend kwijt te zijn.</p>
 
 <p>Wil je advies over jouw situatie of een vrijblijvende offerte? Neem gerust contact met ons op.</p>
 `,
@@ -220,13 +220,13 @@ export const blogPosts: Record<string, BlogPost> = {
 
 <h3>Glansgraad kiezen</h3>
 
-<p>Muurverf komt in verschillende glansgraden: mat, zijdemat en zijdeglans. Mat (glansgraad 2-5) verbergt oneffenheden het beste en geeft een rustige, moderne uitstraling. Het nadeel: matverf is lastig schoon te maken – wrijf je over een vlek, dan krijg je een glimmende plek.</p>
+<p>Muurverf komt in verschillende glansgraden: mat, zijdemat en zijdeglans. Mat (glansgraad 2-5) verbergt oneffenheden het beste en geeft een rustige, moderne uitstraling. Het nadeel: matverf is lastig schoon te maken, wrijf je over een vlek, dan krijg je een glimmende plek.</p>
 
 <p>Zijdemat (glansgraad 7-10) is de gulden middenweg: nog steeds vrij egaal, maar beter reinigbaar. Dit is wat de meeste professionals adviseren voor woonruimtes. Zijdeglans (glansgraad 20-30) is goed afwasbaar maar benadrukt elke oneffenheid in de muur.</p>
 
 <h3>Hoeveel verf heb je nodig?</h3>
 
-<p>Reken op 1 liter muurverf per 8-10 m² per laag, afhankelijk van de zuigkracht van de ondergrond. Een gemiddelde woonkamer (20m² muuroppervlak) heeft dus 4-5 liter nodig voor twee lagen. Koop 10-15% extra – je hebt liever verf over dan dat je halverwege naar de winkel moet.</p>
+<p>Reken op 1 liter muurverf per 8-10 m² per laag, afhankelijk van de zuigkracht van de ondergrond. Een gemiddelde woonkamer (20m² muuroppervlak) heeft dus 4-5 liter nodig voor twee lagen. Koop 10-15% extra, je hebt liever verf over dan dat je halverwege naar de winkel moet.</p>
 
 <h2>De muur voorbereiden</h2>
 
@@ -234,7 +234,7 @@ export const blogPosts: Record<string, BlogPost> = {
 
 <h3>Stap 1: De muur inspecteren en repareren</h3>
 
-<p>Loop de muur af en markeer alle beschadigingen: gaatjes van pluggen, scheurtjes, beschadigde hoeken. Kleine gaatjes (tot 5mm) vul je met lichte muurvuller – direct uit de tube aan te brengen en binnen een uur schuurbaar. Grotere beschadigingen en scheuren vul je met vulmiddel dat je met een plamuurmes aanbrengt.</p>
+<p>Loop de muur af en markeer alle beschadigingen: gaatjes van pluggen, scheurtjes, beschadigde hoeken. Kleine gaatjes (tot 5mm) vul je met lichte muurvuller, direct uit de tube aan te brengen en binnen een uur schuurbaar. Grotere beschadigingen en scheuren vul je met vulmiddel dat je met een plamuurmes aanbrengt.</p>
 
 <p>Waarom is dit zo belangrijk? Verf vult geen gaten. Die gaatjes die je nu ziet, zie je na twee lagen verf nog steeds. Het kost je 30 minuten om alles te repareren, maar dat scheelt je de frustratie van een muur met zichtbare beschadigingen.</p>
 
@@ -262,7 +262,7 @@ export const blogPosts: Record<string, BlogPost> = {
 
 <p>Laad de roller door hem door de verf te rollen en dan over het afstrijkrooster af te rollen tot de verf gelijkmatig verdeeld is. Breng de verf aan in een W- of M-patroon: maak eerst grote, diagonale halen om de verf te verdelen, rol dan horizontaal en verticaal uit om een egale laag te krijgen.</p>
 
-<p>Werk in vakken van ongeveer 1 m² en zorg dat de randen nat-in-nat aansluiten op het vorige vak. Wat gebeurt er als je dit niet doet? Als de rand van een vak al droog is voordat je het volgende vak begint, krijg je zichtbare overlappingen – strepen die zelfs door een tweede laag heen zichtbaar blijven.</p>
+<p>Werk in vakken van ongeveer 1 m² en zorg dat de randen nat-in-nat aansluiten op het vorige vak. Wat gebeurt er als je dit niet doet? Als de rand van een vak al droog is voordat je het volgende vak begint, krijg je zichtbare overlappingen, strepen die zelfs door een tweede laag heen zichtbaar blijven.</p>
 
 <h3>De tweede laag</h3>
 
@@ -280,13 +280,13 @@ export const blogPosts: Record<string, BlogPost> = {
 
 <h3>Schimmel op de muur</h3>
 
-<p>Verven over schimmel is zinloos – de schimmel groeit gewoon door onder de verf en komt binnen een paar maanden terug. Verwijder eerst de schimmel met een chlooroplossing en pak de oorzaak aan (vaak: vochtprobleem of slechte ventilatie).</p>
+<p>Verven over schimmel is zinloos, de schimmel groeit gewoon door onder de verf en komt binnen een paar maanden terug. Verwijder eerst de schimmel met een chlooroplossing en pak de oorzaak aan (vaak: vochtprobleem of slechte ventilatie).</p>
 
 <h2>Veelgemaakte fouten</h2>
 
 <p>De meest voorkomende fout is te weinig verf op de roller. Een "droge" roller geeft strepen en een ongelijke dekking. Liever iets te veel verf, uitrollen tot hij egaal is, dan te weinig waardoor je over halfdroge verf gaat rollen.</p>
 
-<p>Fout twee: de tape te laat verwijderen. Schilderstape moet je verwijderen als de verf nog niet volledig droog is – na 1-2 uur. Is de verf uitgehard, dan trekt de tape de verflaag los en krijg je een rafelige rand.</p>
+<p>Fout twee: de tape te laat verwijderen. Schilderstape moet je verwijderen als de verf nog niet volledig droog is, na 1-2 uur. Is de verf uitgehard, dan trekt de tape de verflaag los en krijg je een rafelige rand.</p>
 
 <p>Fout drie: beginnen zonder de hoeken bij te werken. Als je eerst gaat rollen en dan de hoeken bijwerkt, krijg je zichtbare overgangen. Altijd eerst bijwerken, dan rollen.</p>
 
@@ -301,7 +301,7 @@ export const blogPosts: Record<string, BlogPost> = {
       { question: 'Moet ik de muur voorbehandelen voor het schilderen?', answer: 'Dat hangt af van de ondergrond. Test met een natte spons: zuigt het water snel weg? Dan is voorstrijken nodig. Bij een poederige muur moet je fixeren. Bij een schone, niet-zuigende muur kun je direct beginnen.' },
       { question: 'Hoe voorkom ik strepen bij het rollen?', answer: 'Werk in vakken van 1m², breng de verf aan in een W-patroon en rol uit tot een egale laag. Zorg dat de randen nat-in-nat aansluiten op het vorige vak. Neem geen pauzes halverwege een muur.' },
       { question: 'Wat is het verschil tussen latex en acrylaat muurverf?', answer: 'Latex is goedkoper maar minder goed wasbaar en vochtbestendig. Acrylaat dekt beter (vaak 2 lagen in plaats van 3), is beter reinigbaar en geschikter voor keukens en badkamers.' },
-      { question: 'Kan ik over oud behang heen schilderen?', answer: 'Ja, als het behang glad is en goed vastzit. Test de naden met een natte spons – komen ze los, dan moet het behang er eerst af. Gestructureerd behang kun je beter verwijderen.' }
+      { question: 'Kan ik over oud behang heen schilderen?', answer: 'Ja, als het behang glad is en goed vastzit. Test de naden met een natte spons, komen ze los, dan moet het behang er eerst af. Gestructureerd behang kun je beter verwijderen.' }
     ],
     relatedSlugs: ['hoe-schilder-je-een-deur', 'btw-tarief-schilderwerk']
   }

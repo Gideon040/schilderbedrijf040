@@ -46,7 +46,7 @@ export function Reviews() {
             KLANTENERVARINGEN
           </h2>
           <p className="text-gray-300 max-w-2xl mx-auto">
-            5 sterren op Google en 4,9 op Werkspot — ontdek wat klanten over Schildersbedrijf040 zeggen
+            5 sterren op Google en 4,9 op Werkspot, ontdek wat klanten over Schildersbedrijf040 zeggen
           </p>
         </div>
 

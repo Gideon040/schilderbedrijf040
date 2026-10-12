@@ -12,7 +12,7 @@ const faqs = [
   {
     question: 'Wat kost een schilder in Eindhoven?',
     answer:
-      'Een schilder in Eindhoven kost gemiddeld tussen € 35 en € 55 per uur, afhankelijk van het type schilderwerk en de staat van de ondergrond. Binnenschilderwerk valt doorgaans lager uit dan buitenschilderwerk, omdat buitenwerk meer voorbereiding vereist zoals schuren, gronden en eventueel houtrot sanering. Schildersbedrijf040 brengt altijd eerst een gratis inspectie uit en levert een gedetailleerde offerte op maat, zodat u vooraf precies weet wat de kosten zijn — zonder verrassingen achteraf.',
+      'Een schilder in Eindhoven kost gemiddeld tussen € 35 en € 55 per uur, afhankelijk van het type schilderwerk en de staat van de ondergrond. Binnenschilderwerk valt doorgaans lager uit dan buitenschilderwerk, omdat buitenwerk meer voorbereiding vereist zoals schuren, gronden en eventueel houtrot sanering. Schildersbedrijf040 brengt altijd eerst een gratis inspectie uit en levert een gedetailleerde offerte op maat, zodat u vooraf precies weet wat de kosten zijn, zonder verrassingen achteraf.',
   },
   {
     question: 'Hoe lang duurt een schilderproject?',
@@ -69,8 +69,7 @@ export function FAQ() {
             Staat uw vraag er niet tussen?{' '}
             <Link href="/contact" className="text-primary hover:underline font-medium">
               Neem contact op met Schildersbedrijf040
-            </Link>{' '}
-            — wij helpen u graag verder.
+            </Link>. Wij helpen u graag verder.
           </p>
         </div>
       </div>

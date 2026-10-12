@@ -6,7 +6,7 @@ import Link from 'next/link'
 import { ChevronDown, Phone, Mail, Clock, ArrowRight, Check } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Houtrot Sanering Eindhoven | Kozijnen Repareren met Epoxy — Vakkundig & Duurzaam',
+  title: 'Houtrot Sanering Eindhoven | Kozijnen Repareren met Epoxy. Vakkundig & Duurzaam',
   description: 'Houtrot sanering door Schildersbedrijf040 in Eindhoven. Kozijnen, deuren en boeiboorden vakkundig gerepareerd met epoxy. ✓ Gratis inspectie ✓ 70% goedkoper dan vervangen.',
   keywords: [
     'houtrot sanering eindhoven',
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Houtrot Sanering Eindhoven | Schildersbedrijf040',
-    description: 'Houtrot sanering in Eindhoven en omgeving. Kozijnen, deuren en boeiboorden vakkundig gerepareerd met epoxy — 70% goedkoper dan volledig vervangen.',
+    description: 'Houtrot sanering in Eindhoven en omgeving. Kozijnen, deuren en boeiboorden vakkundig gerepareerd met epoxy. 70% goedkoper dan volledig vervangen.',
     url: 'https://schildersbedrijf040.nl/diensten/houtrot-sanering',
     type: 'website',
   },
@@ -66,7 +66,7 @@ export default function HoutrotSaneringPage() {
     '@type': 'Service',
     '@id': 'https://schildersbedrijf040.nl/diensten/houtrot-sanering/#service',
     name: 'Houtrot Sanering',
-    description: 'Professionele houtrot sanering voor kozijnen, deuren en boeiboorden in Eindhoven en omgeving. Vakkundige houtrot reparatie met epoxy — tot 70% goedkoper dan volledig vervangen.',
+    description: 'Professionele houtrot sanering voor kozijnen, deuren en boeiboorden in Eindhoven en omgeving. Vakkundige houtrot reparatie met epoxy, tot 70% goedkoper dan volledig vervangen.',
     provider: {
       '@type': 'PaintingContractor',
       '@id': 'https://schildersbedrijf040.nl/#organization',
@@ -137,7 +137,7 @@ export default function HoutrotSaneringPage() {
   const faqs = [
     {
       question: 'Hoe herken ik houtrot in mijn kozijnen?',
-      answer: 'Houtrot in kozijnen is te herkennen aan verfblaren, verkleuring van het hout, een zachte of sponsachtige structuur en zichtbare scheuren waarin vocht binnendringt. De eenvoudigste test is een schroevendraaier in het hout drukken: gaat de punt moeiteloos naar binnen, dan is het hout aangetast door houtrot. Schildersbedrijf040 voert een grondige houtrot inspectie uit waarbij ook verborgen houtrot wordt opgespoord — bijvoorbeeld achter kitvoegen of onder verflagen die er aan de buitenkant nog goed uitzien.',
+      answer: 'Houtrot in kozijnen is te herkennen aan verfblaren, verkleuring van het hout, een zachte of sponsachtige structuur en zichtbare scheuren waarin vocht binnendringt. De eenvoudigste test is een schroevendraaier in het hout drukken: gaat de punt moeiteloos naar binnen, dan is het hout aangetast door houtrot. Schildersbedrijf040 voert een grondige houtrot inspectie uit waarbij ook verborgen houtrot wordt opgespoord, bijvoorbeeld achter kitvoegen of onder verflagen die er aan de buitenkant nog goed uitzien.',
     },
     {
       question: 'Wat kost houtrot sanering per kozijn?',
@@ -153,15 +153,15 @@ export default function HoutrotSaneringPage() {
     },
     {
       question: 'In welk seizoen kan houtrot sanering het beste worden uitgevoerd?',
-      answer: 'Houtrot sanering wordt bij voorkeur uitgevoerd in het droge seizoen, tussen april en oktober. Epoxyhars heeft een omgevingstemperatuur van minimaal 10°C nodig voor een goede uitharding, en het hout moet droog zijn voor optimale hechting. Schildersbedrijf040 plant houtrot sanering daarom in de lente of zomer. Urgente reparaties — bijvoorbeeld wanneer vocht via een aangetast kozijn naar binnen lekt — kunnen ook in de winter worden uitgevoerd met aangepaste werkmethoden.',
+      answer: 'Houtrot sanering wordt bij voorkeur uitgevoerd in het droge seizoen, tussen april en oktober. Epoxyhars heeft een omgevingstemperatuur van minimaal 10°C nodig voor een goede uitharding, en het hout moet droog zijn voor optimale hechting. Schildersbedrijf040 plant houtrot sanering daarom in de lente of zomer. Urgente reparaties, bijvoorbeeld wanneer vocht via een aangetast kozijn naar binnen lekt, kunnen ook in de winter worden uitgevoerd met aangepaste werkmethoden.',
     },
     {
       question: 'Hoe voorkom ik houtrot aan mijn kozijnen?',
-      answer: 'Houtrot voorkomen begint met goed schilderonderhoud: buitenschilderwerk vernieuwen elke 5 tot 7 jaar beschermt het hout tegen vocht. Daarnaast is het belangrijk dat kitvoegen intact blijven, dat regenwater goed afloopt van dorpels en onderdorpels, en dat ventilatieopeningen niet geblokkeerd zijn. Schildersbedrijf040 brengt bij elke houtrot sanering een preventieve houtprimer aan die het hout beschermt tegen schimmels en vochtopname. Regelmatig een visuele inspectie uitvoeren — vooral aan de onderzijde van kozijnen en op plekken waar hout en steen samenkomen — helpt om houtrot vroegtijdig te signaleren.',
+      answer: 'Houtrot voorkomen begint met goed schilderonderhoud: buitenschilderwerk vernieuwen elke 5 tot 7 jaar beschermt het hout tegen vocht. Daarnaast is het belangrijk dat kitvoegen intact blijven, dat regenwater goed afloopt van dorpels en onderdorpels, en dat ventilatieopeningen niet geblokkeerd zijn. Schildersbedrijf040 brengt bij elke houtrot sanering een preventieve houtprimer aan die het hout beschermt tegen schimmels en vochtopname. Regelmatig een visuele inspectie uitvoeren, vooral aan de onderzijde van kozijnen en op plekken waar hout en steen samenkomen, helpt om houtrot vroegtijdig te signaleren.',
     },
     {
       question: 'Hoe lang duurt houtrot sanering?',
-      answer: 'Een houtrot inspectie duurt 30 tot 60 minuten. De reparatie zelf kost gemiddeld 1 tot 3 werkdagen, afhankelijk van het aantal aangetaste kozijnen en de ernst van de houtrot. Epoxyhars heeft een droogtijd van 24 uur voordat het geschuurd en geschilderd kan worden. Schildersbedrijf040 combineert houtrot sanering vaak met buitenschilderwerk, zodat het kozijn direct na reparatie wordt afgewerkt en beschermd — dat bespaart tijd en kosten.',
+      answer: 'Een houtrot inspectie duurt 30 tot 60 minuten. De reparatie zelf kost gemiddeld 1 tot 3 werkdagen, afhankelijk van het aantal aangetaste kozijnen en de ernst van de houtrot. Epoxyhars heeft een droogtijd van 24 uur voordat het geschuurd en geschilderd kan worden. Schildersbedrijf040 combineert houtrot sanering vaak met buitenschilderwerk, zodat het kozijn direct na reparatie wordt afgewerkt en beschermd, dat bespaart tijd en kosten.',
     },
     {
       question: 'Combineert Schildersbedrijf040 houtrot sanering met schilderwerk?',
@@ -183,12 +183,12 @@ export default function HoutrotSaneringPage() {
   }
 
   const prijzen = [
-    { dienst: 'Klein kozijn repareren', prijs: '€150 – €250 /stuk' },
-    { dienst: 'Groot kozijn repareren', prijs: '€300 – €450 /stuk' },
-    { dienst: 'Deurkozijn houtrot', prijs: '€200 – €400 /stuk' },
-    { dienst: 'Dorpel vervangen', prijs: '€150 – €350 /stuk' },
-    { dienst: 'Boeiboord reparatie', prijs: '€20 – €40 /m¹' },
-    { dienst: 'Kozijn volledig vervangen', prijs: '€600 – €1.500 /stuk' },
+    { dienst: 'Klein kozijn repareren', prijs: '€150 tot €250 /stuk' },
+    { dienst: 'Groot kozijn repareren', prijs: '€300 tot €450 /stuk' },
+    { dienst: 'Deurkozijn houtrot', prijs: '€200 tot €400 /stuk' },
+    { dienst: 'Dorpel vervangen', prijs: '€150 tot €350 /stuk' },
+    { dienst: 'Boeiboord reparatie', prijs: '€20 tot €40 /m¹' },
+    { dienst: 'Kozijn volledig vervangen', prijs: '€600 tot €1.500 /stuk' },
   ]
 
   const werkwijzeStappen = [
@@ -200,7 +200,7 @@ export default function HoutrotSaneringPage() {
     {
       nummer: 2,
       titel: 'Offerte',
-      beschrijving: 'U ontvangt een gedetailleerde offerte met vaste prijs — per kozijn uitgesplitst, inclusief materiaal en schilderwerk na reparatie.',
+      beschrijving: 'U ontvangt een gedetailleerde offerte met vaste prijs, per kozijn uitgesplitst, inclusief materiaal en schilderwerk na reparatie.',
     },
     {
       nummer: 3,
@@ -236,7 +236,7 @@ export default function HoutrotSaneringPage() {
         <div className="absolute inset-0 z-0 opacity-30">
           <Image
             src={heroImage}
-            alt="Houtrot sanering in Eindhoven — kozijnen vakkundig gerepareerd met epoxy door Schildersbedrijf040"
+            alt="Houtrot sanering in Eindhoven, kozijnen vakkundig gerepareerd met epoxy door Schildersbedrijf040"
             fill
             sizes="100vw"
             className="object-cover"
@@ -253,7 +253,7 @@ export default function HoutrotSaneringPage() {
               <span className="text-[#0088FF] block">SANERING</span>
             </h1>
             <p className="text-gray-200 text-lg leading-relaxed max-w-[560px] mb-10 animate-fade-in-up animation-delay-150">
-              Houtrot sanering door Schildersbedrijf040 herstelt aangetaste kozijnen, deuren en boeiboorden in Eindhoven en omgeving. Met professionele epoxy reparatie is houtrot sanering tot 70% goedkoper dan volledig vervangen — en het resultaat gaat 15 tot 20 jaar mee.
+              Houtrot sanering door Schildersbedrijf040 herstelt aangetaste kozijnen, deuren en boeiboorden in Eindhoven en omgeving. Met professionele epoxy reparatie is houtrot sanering tot 70% goedkoper dan volledig vervangen, en het resultaat gaat 15 tot 20 jaar mee.
             </p>
             <div className="flex flex-wrap gap-4 animate-fade-in-up animation-delay-300">
               <Link
@@ -281,7 +281,7 @@ export default function HoutrotSaneringPage() {
                     <StarIcon key={i} />
                   ))}
                 </div>
-                <span className="text-sm text-gray-300 font-medium">5.0 — 41 reviews</span>
+                <span className="text-sm text-gray-300 font-medium">5,0 uit 41 reviews</span>
               </div>
               <div className="w-px h-7 bg-white/15" />
               <div className="flex items-center gap-2.5">
@@ -291,7 +291,7 @@ export default function HoutrotSaneringPage() {
                     <StarIcon key={i} />
                   ))}
                 </div>
-                <span className="text-sm text-gray-300 font-medium">4.9 — Topvakman</span>
+                <span className="text-sm text-gray-300 font-medium">4,9 op Werkspot</span>
               </div>
             </div>
           </div>
@@ -310,7 +310,7 @@ export default function HoutrotSaneringPage() {
                 Wat Is Houtrot en Waarom Is Sanering Urgent?
               </h2>
               <p className="text-gray-600 leading-relaxed mb-5">
-                Houtrot is een aantasting van hout door schimmels die gedijen op vocht. Kozijnen, deurkozijnen, dorpels en boeiboorden zijn het meest kwetsbaar omdat deze onderdelen direct blootgesteld zijn aan regen, condensatie en temperatuurverschillen. Zodra houtrot begint, breidt de schimmel zich uit naar het gezonde hout eromheen — en dat proces versnelt naarmate er meer vocht binnendringt via scheurtjes in de verflaag.
+                Houtrot is een aantasting van hout door schimmels die gedijen op vocht. Kozijnen, deurkozijnen, dorpels en boeiboorden zijn het meest kwetsbaar omdat deze onderdelen direct blootgesteld zijn aan regen, condensatie en temperatuurverschillen. Zodra houtrot begint, breidt de schimmel zich uit naar het gezonde hout eromheen, en dat proces versnelt naarmate er meer vocht binnendringt via scheurtjes in de verflaag.
               </p>
               <p className="text-gray-600 leading-relaxed mb-5">
                 Schildersbedrijf040 voert houtrot sanering uit voor woningeigenaren in Eindhoven en omgeving. Houtrot reparatie met epoxy is tot 70% goedkoper dan het volledig vervangen van een kozijn en biedt een even duurzaam resultaat. Door houtrot vroegtijdig te saneren voorkomt u dat de aantasting zich uitbreidt naar het draagconstructie van het kozijn, wat de reparatiekosten verveelvoudigt.
@@ -324,7 +324,7 @@ export default function HoutrotSaneringPage() {
               <div className="rounded-2xl overflow-hidden">
                 <Image
                   src={heroImage}
-                  alt="Houtrot sanering door Schildersbedrijf040 — kozijnen gerepareerd met epoxy in Eindhoven"
+                  alt="Houtrot sanering door Schildersbedrijf040, kozijnen gerepareerd met epoxy in Eindhoven"
                   width={600}
                   height={400}
                   className="w-full h-auto object-cover rounded-2xl"
@@ -333,7 +333,7 @@ export default function HoutrotSaneringPage() {
               <div className="grid grid-cols-2 gap-4">
                 {[
                   { label: 'Reparatie vs vervangen', waarde: '70% goedkoper' },
-                  { label: 'Inspectietijd', waarde: '30–60 min' },
+                  { label: 'Inspectietijd', waarde: '30 tot 60 min' },
                   { label: 'Droogtijd epoxy', waarde: '24 uur' },
                   { label: 'BTW woningen 2+ jaar', waarde: '9%' },
                 ].map((item, index) => (
@@ -380,7 +380,7 @@ export default function HoutrotSaneringPage() {
               {
                 nummer: '03',
                 titel: 'Boeiboorden & Windveren',
-                beschrijving: 'Boeiboorden en windveren zitten op de overgang van gevel naar dakrand — een plek waar vocht zich gemakkelijk ophoopt. Houtrot in boeiboorden is vaak pas zichtbaar als de schade al fors is, omdat deze onderdelen minder goed bereikbaar zijn voor visuele inspectie. Schildersbedrijf040 repareert aangetaste boeiboorden met epoxy of vervangt secties waar het hout te ver is aangetast.',
+                beschrijving: 'Boeiboorden en windveren zitten op de overgang van gevel naar dakrand, een plek waar vocht zich gemakkelijk ophoopt. Houtrot in boeiboorden is vaak pas zichtbaar als de schade al fors is, omdat deze onderdelen minder goed bereikbaar zijn voor visuele inspectie. Schildersbedrijf040 repareert aangetaste boeiboorden met epoxy of vervangt secties waar het hout te ver is aangetast.',
                 link: '/diensten/buitenschilderwerk',
                 linkTekst: 'Meer over buitenschilderwerk',
               },
@@ -445,7 +445,7 @@ export default function HoutrotSaneringPage() {
                 Wat Kost Houtrot Sanering?
               </h2>
               <p className="text-gray-600 leading-relaxed mb-5">
-                Houtrot sanering kost gemiddeld €150 tot €450 per kozijn, afhankelijk van de grootte van het kozijn en de ernst van de aantasting. Een kleine epoxy reparatie op een enkele plek begint bij €80, terwijl het volledig vervangen van een kozijn €600 tot €1.500 kost. In de meeste gevallen is reparatie met epoxy de meest kostenefficiënte oplossing — tot 70% goedkoper dan volledig vervangen.
+                Houtrot sanering kost gemiddeld €150 tot €450 per kozijn, afhankelijk van de grootte van het kozijn en de ernst van de aantasting. Een kleine epoxy reparatie op een enkele plek begint bij €80, terwijl het volledig vervangen van een kozijn €600 tot €1.500 kost. In de meeste gevallen is reparatie met epoxy de meest kostenefficiënte oplossing, tot 70% goedkoper dan volledig vervangen.
               </p>
               <p className="text-gray-600 leading-relaxed mb-5">
                 Schildersbedrijf040 hanteert een uurtarief van €45 tot €55 voor houtrot sanering, inclusief materiaal. Voor woningen ouder dan 2 jaar geldt het verlaagde btw-tarief van 9%, wat een merkbaar verschil maakt op de eindfactuur. Bij drie of meer kozijnen biedt Schildersbedrijf040 een korting van 10 tot 20% op de totale reparatiekosten.
@@ -495,7 +495,7 @@ export default function HoutrotSaneringPage() {
         <div className="absolute inset-0">
           <Image
             src={heroImage}
-            alt="Houtrot sanering resultaat — kozijnen gerepareerd met epoxy door Schildersbedrijf040"
+            alt="Houtrot sanering resultaat, kozijnen gerepareerd met epoxy door Schildersbedrijf040"
             fill
             sizes="100vw"
             className="object-cover"
@@ -544,7 +544,7 @@ export default function HoutrotSaneringPage() {
               Ons Werkproces in 4 Stappen
             </h2>
             <p className="text-gray-600 leading-relaxed max-w-xl mx-auto">
-              Elk houtrot sanering project bij Schildersbedrijf040 volgt een vast werkproces — van inspectie tot oplevering. Zo weet u precies wat u kunt verwachten.
+              Elk houtrot sanering project bij Schildersbedrijf040 volgt een vast werkproces, van inspectie tot oplevering. Zo weet u precies wat u kunt verwachten.
             </p>
           </div>
 
@@ -582,16 +582,16 @@ export default function HoutrotSaneringPage() {
                 Waarom Schildersbedrijf040 voor Uw Houtrot Sanering?
               </h2>
               <p className="text-gray-600 leading-relaxed mb-8">
-                Schildersbedrijf040 onderscheidt zich door vakmanschap, eerlijk advies en het combineren van houtrot sanering met professioneel schilderwerk. Eigenaar Jordy Jacobs is persoonlijk betrokken bij elk project — van de eerste inspectie tot de eindcontrole. Dat vertaalt zich in een klantbeoordeling van 5 sterren op Google en een 4,9 op Werkspot.
+                Schildersbedrijf040 onderscheidt zich door vakmanschap, eerlijk advies en het combineren van houtrot sanering met professioneel schilderwerk. Eigenaar Jordy Jacobs is persoonlijk betrokken bij elk project, van de eerste inspectie tot de eindcontrole. Dat vertaalt zich in een klantbeoordeling van 5 sterren op Google en een 4,9 op Werkspot.
               </p>
 
               <div className="flex flex-col gap-4">
                 {[
                   { titel: 'Gratis houtrot inspectie', beschrijving: 'Schildersbedrijf040 inspecteert uw kozijnen, deuren en boeiboorden gratis en vrijblijvend. U weet vooraf exact welke kozijnen aangetast zijn en wat de reparatie kost.' },
-                  { titel: 'Repareren waar mogelijk, vervangen waar nodig', beschrijving: 'Schildersbedrijf040 adviseert altijd de meest kostenefficiënte oplossing. In circa 80% van de gevallen is epoxy reparatie mogelijk — tot 70% goedkoper dan volledig vervangen.' },
+                  { titel: 'Repareren waar mogelijk, vervangen waar nodig', beschrijving: 'Schildersbedrijf040 adviseert altijd de meest kostenefficiënte oplossing. In circa 80% van de gevallen is epoxy reparatie mogelijk, tot 70% goedkoper dan volledig vervangen.' },
                   { titel: 'Houtrot sanering én schilderwerk in één', beschrijving: 'Schildersbedrijf040 combineert houtrot reparatie met buitenschilderwerk, zodat het kozijn direct beschermd is. Dat bespaart tijd, kosten en een tweede steigeropbouw.' },
-                  { titel: 'Vaste prijs — geen verrassingen', beschrijving: 'Gedetailleerde offerte per kozijn uitgesplitst, inclusief materiaal en schilderwerk. Geen verborgen kosten achteraf.' },
-                  { titel: 'Persoonlijke betrokkenheid', beschrijving: 'Eigenaar Jordy Jacobs is bij elk houtrot sanering project betrokken — u hebt altijd een vast aanspreekpunt dat uw woning kent.' },
+                  { titel: 'Vaste prijs, geen verrassingen', beschrijving: 'Gedetailleerde offerte per kozijn uitgesplitst, inclusief materiaal en schilderwerk. Geen verborgen kosten achteraf.' },
+                  { titel: 'Persoonlijke betrokkenheid', beschrijving: 'Eigenaar Jordy Jacobs is bij elk houtrot sanering project betrokken, u hebt altijd een vast aanspreekpunt dat uw woning kent.' },
                 ].map((usp, index) => (
                   <div
                     key={index}
@@ -625,7 +625,7 @@ export default function HoutrotSaneringPage() {
                 </p>
                 <div className="flex items-center gap-2 mt-3 text-xs font-semibold text-gray-400 uppercase tracking-wide">
                   <GoogleLogo />
-                  Google Reviews — 41 beoordelingen
+                  Google Reviews: 41 beoordelingen
                 </div>
               </div>
 
@@ -644,7 +644,7 @@ export default function HoutrotSaneringPage() {
                 </p>
                 <div className="flex items-center gap-2 mt-3 text-xs font-semibold text-gray-400 uppercase tracking-wide">
                   <WerkspotLogo />
-                  Werkspot — Topvakman
+                  Werkspot: Topvakman
                 </div>
               </div>
 
@@ -689,7 +689,7 @@ export default function HoutrotSaneringPage() {
             Vragen over Houtrot Sanering
           </h2>
           <p className="text-gray-600 leading-relaxed mb-12 max-w-2xl">
-            Staat uw vraag er niet bij? Neem gerust contact op — Schildersbedrijf040 helpt u graag verder.
+            Staat uw vraag er niet bij? Neem gerust contact op. Schildersbedrijf040 helpt u graag verder.
           </p>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
@@ -698,7 +698,7 @@ export default function HoutrotSaneringPage() {
               <div className="rounded-2xl overflow-hidden relative h-[280px]">
                 <Image
                   src={faqImage}
-                  alt="Houtrot sanering resultaat — kozijnen gerepareerd met epoxy door Schildersbedrijf040 in Eindhoven"
+                  alt="Houtrot sanering resultaat, kozijnen gerepareerd met epoxy door Schildersbedrijf040 in Eindhoven"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-cover"
@@ -773,7 +773,7 @@ export default function HoutrotSaneringPage() {
                 Houtrot Ontdekt? Wacht Niet Langer
               </h2>
               <p className="text-gray-300 leading-relaxed mb-8">
-                Houtrot breidt zich uit als het niet wordt aangepakt. Schildersbedrijf040 komt graag langs voor een gratis inspectie en vrijblijvende offerte. Bel, mail of vul het contactformulier in — u ontvangt binnen 48 uur een offerte op maat.
+                Houtrot breidt zich uit als het niet wordt aangepakt. Schildersbedrijf040 komt graag langs voor een gratis inspectie en vrijblijvende offerte. Bel, mail of vul het contactformulier in, u ontvangt binnen 48 uur een offerte op maat.
               </p>
               <Link
                 href="/contact"
@@ -819,7 +819,7 @@ export default function HoutrotSaneringPage() {
                 </div>
                 <div>
                   <div className="text-xs text-gray-400 font-medium uppercase tracking-wide mb-0.5">Bereikbaarheid</div>
-                  <div className="text-white font-semibold">Ma – Vr: 08:00 – 17:30</div>
+                  <div className="text-white font-semibold">Ma t/m vr: 08:00 tot 17:30</div>
                 </div>
               </div>
             </div>

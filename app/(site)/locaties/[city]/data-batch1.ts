@@ -7,7 +7,7 @@ export const batch1Data: Record<string, CityData> = {
     displayName: 'Valkenswaard',
     heroImage: 'https://res.cloudinary.com/dbtaisgda/image/upload/v1743873386/WhatsApp_Image_2025-03-27_at_07.53.08_myzeda.jpg',
     wijken: ['Dommelen', 'Borkel en Schaft', 'Centrum', 'Tuinwijk'],
-    intro: 'Schildersbedrijf040, gevestigd in Eindhoven, is uw vakkundige schilder in Valkenswaard voor woningen en bedrijfspanden. Van de karakteristieke tuinwijkwoningen rond de Eksterlaan en Merellaan tot de vrijstaande en geschakelde huizen in Dommelen, Borkel en Schaft en het Centrum — Schildersbedrijf040 verzorgt binnenschilderwerk, buitenschilderwerk, behangen, houtrot sanering, lakwerk en latex spuiten. Met een klantbeoordeling van 5 sterren op Google en een 4,9 op Werkspot is Schildersbedrijf040 een bewezen keuze voor schilderwerk in Valkenswaard.',
+    intro: 'Schildersbedrijf040, gevestigd in Eindhoven, is uw vakkundige schilder in Valkenswaard voor woningen en bedrijfspanden. Van de karakteristieke tuinwijkwoningen rond de Eksterlaan en Merellaan tot de vrijstaande en geschakelde huizen in Dommelen, Borkel en Schaft en het Centrum. Schildersbedrijf040 verzorgt binnenschilderwerk, buitenschilderwerk, behangen, houtrot sanering, lakwerk en latex spuiten. Met een klantbeoordeling van 5 sterren op Google en een 4,9 op Werkspot is Schildersbedrijf040 een bewezen keuze voor schilderwerk in Valkenswaard.',
     kosten: 'Schilderwerk in Valkenswaard kost gemiddeld tussen €35 en €55 per uur. Het verschil in prijs wordt bepaald door het type werk: buitenschilderwerk aan kozijnen en gevelelementen vraagt meer voorbereiding dan binnenschilderwerk. Veel woningen in de Tuinwijk van Valkenswaard dateren uit de jaren \'50 en \'60 en hebben houten kozijnen die regelmatig onderhoud vereisen. Schildersbedrijf040 werkt met Boonstoppel verf die 8 tot 10 jaar bescherming biedt, waar budgetverf al na 3 jaar verbleekt. In Valkenswaard is kwalitatieve verf een verstandige investering.',
     diensten: [
       {
@@ -42,7 +42,7 @@ export const batch1Data: Record<string, CityData> = {
       }
     ],
     waarom: 'Schildersbedrijf040 is gevestigd in Eindhoven en bereikt Valkenswaard binnen een kwartier, waardoor de voorrijkosten laag blijven en er snel gestart kan worden. Het team kent de bouwstijlen in Dommelen, Borkel en Schaft, het Centrum en de Tuinwijk en weet welke aanpak bij elke woning past. Met een beoordeling van 5 sterren op Google, een 4,9 op Werkspot, het gebruik van Boonstoppel verf en garantie op elk project is Schildersbedrijf040 een betrouwbare keuze voor woningeigenaren in Valkenswaard.',
-    werkwijze: 'Het schilderproces van Schildersbedrijf040 in Valkenswaard begint met een vrijblijvend telefonisch of digitaal contact om uw wensen te bespreken. Schildersbedrijf040 plant een inspectie bij uw woning in Valkenswaard en levert binnen 48 uur een heldere offerte. Na akkoord start de uitvoering op de afgesproken datum — meubels en vloeren worden zorgvuldig afgedekt. Bij oplevering controleert Schildersbedrijf040 samen met u het resultaat.',
+    werkwijze: 'Het schilderproces van Schildersbedrijf040 in Valkenswaard begint met een vrijblijvend telefonisch of digitaal contact om uw wensen te bespreken. Schildersbedrijf040 plant een inspectie bij uw woning in Valkenswaard en levert binnen 48 uur een heldere offerte. Na akkoord start de uitvoering op de afgesproken datum, meubels en vloeren worden zorgvuldig afgedekt. Bij oplevering controleert Schildersbedrijf040 samen met u het resultaat.',
     contact: 'Zoekt u een schilder in Valkenswaard? Neem contact op met Schildersbedrijf040 voor een vrijblijvende offerte. Bel 06-38903004, mail naar info@schildersbedrijf040.nl of vul het contactformulier in op de contactpagina.',
     faqs: [
       {
@@ -73,8 +73,8 @@ export const batch1Data: Record<string, CityData> = {
     displayName: 'Oirschot',
     heroImage: 'https://res.cloudinary.com/dbtaisgda/image/upload/v1743873386/WhatsApp_Image_2025-03-27_at_07.53.08_myzeda.jpg',
     wijken: ['Centrum', 'De Bollen', 'Spoordonk', 'Middelbeers'],
-    intro: 'Schildersbedrijf040, gevestigd in Eindhoven, is de specialist voor schilderwerk in Oirschot — een gemeente met maar liefst 189 rijksmonumenten en twee beschermde dorpsgezichten. Van de historische herenhuizen in het Centrum tot de Brabantse langhuisboerderijen in De Bollen, Spoordonk en Middelbeers — Schildersbedrijf040 levert binnenschilderwerk, buitenschilderwerk, behangen, houtrot sanering, lakwerk en latex spuiten. Met een klantbeoordeling van 5 sterren op Google en een 4,9 op Werkspot combineert Schildersbedrijf040 monumentale kennis met bewezen vakmanschap in Oirschot.',
-    kosten: 'Schilderwerk in Oirschot kost gemiddeld tussen €35 en €55 per uur. Bij monumentale panden in Oirschot kan het tarief aan de bovenkant liggen, omdat historisch schilderwerk meer voorbereiding en specialistische kennis vereist. Schildersbedrijf040 werkt met Boonstoppel verf die 8 tot 10 jaar bescherming biedt — essentieel voor de beschermde panden in het Centrum en De Bollen. Woningeigenaren in Oirschot kunnen in veel gevallen subsidie aanvragen voor monumentenonderhoud, waarmee de investering aanzienlijk voordeliger uitvalt.',
+    intro: 'Schildersbedrijf040, gevestigd in Eindhoven, is de specialist voor schilderwerk in Oirschot, een gemeente met maar liefst 189 rijksmonumenten en twee beschermde dorpsgezichten. Van de historische herenhuizen in het Centrum tot de Brabantse langhuisboerderijen in De Bollen, Spoordonk en Middelbeers. Schildersbedrijf040 levert binnenschilderwerk, buitenschilderwerk, behangen, houtrot sanering, lakwerk en latex spuiten. Met een klantbeoordeling van 5 sterren op Google en een 4,9 op Werkspot combineert Schildersbedrijf040 monumentale kennis met bewezen vakmanschap in Oirschot.',
+    kosten: 'Schilderwerk in Oirschot kost gemiddeld tussen €35 en €55 per uur. Bij monumentale panden in Oirschot kan het tarief aan de bovenkant liggen, omdat historisch schilderwerk meer voorbereiding en specialistische kennis vereist. Schildersbedrijf040 werkt met Boonstoppel verf die 8 tot 10 jaar bescherming biedt, essentieel voor de beschermde panden in het Centrum en De Bollen. Woningeigenaren in Oirschot kunnen in veel gevallen subsidie aanvragen voor monumentenonderhoud, waarmee de investering aanzienlijk voordeliger uitvalt.',
     diensten: [
       {
         title: 'Binnenschilderwerk',
@@ -99,7 +99,7 @@ export const batch1Data: Record<string, CityData> = {
       {
         title: 'Lakwerk',
         slug: 'lakwerk',
-        description: 'Lakwerk door Schildersbedrijf040 beschermt en verfraait het houtwerk van woningen in Oirschot. Van originele paneeldeuren in monumentale herenhuizen tot kozijnen van Brabantse langhuisboerderijen in Spoordonk — Schildersbedrijf040 schuurt, primet en lakt met aandacht voor het historische karakter. Professioneel lakwerk gaat jarenlang mee bij de juiste voorbereiding.'
+        description: 'Lakwerk door Schildersbedrijf040 beschermt en verfraait het houtwerk van woningen in Oirschot. Van originele paneeldeuren in monumentale herenhuizen tot kozijnen van Brabantse langhuisboerderijen in Spoordonk. Schildersbedrijf040 schuurt, primet en lakt met aandacht voor het historische karakter. Professioneel lakwerk gaat jarenlang mee bij de juiste voorbereiding.'
       },
       {
         title: 'Latex Spuiten',
@@ -108,7 +108,7 @@ export const batch1Data: Record<string, CityData> = {
       }
     ],
     waarom: 'Schildersbedrijf040 is gevestigd in Eindhoven en bereikt Oirschot binnen twintig minuten, waardoor de voorrijkosten laag blijven. Het team heeft ervaring met monumentaal schilderwerk en kent de specifieke eisen die de beschermde dorpsgezichten van Oirschot stellen. Met een beoordeling van 5 sterren op Google, een 4,9 op Werkspot, Boonstoppel verf en garantie op elk project is Schildersbedrijf040 de juiste keuze voor woningeigenaren en monumentenbezitters in Oirschot.',
-    werkwijze: 'Schildersbedrijf040 begint in Oirschot met een vrijblijvend contact per telefoon of e-mail om uw wensen te inventariseren. Daarna volgt een inspectie ter plaatse in Oirschot, waarna Schildersbedrijf040 binnen 48 uur een gedetailleerde offerte levert. Na akkoord start de uitvoering op de geplande datum — Schildersbedrijf040 werkt netjes en beschermt uw interieur zorgvuldig. Bij oplevering controleert u samen met het team het resultaat.',
+    werkwijze: 'Schildersbedrijf040 begint in Oirschot met een vrijblijvend contact per telefoon of e-mail om uw wensen te inventariseren. Daarna volgt een inspectie ter plaatse in Oirschot, waarna Schildersbedrijf040 binnen 48 uur een gedetailleerde offerte levert. Na akkoord start de uitvoering op de geplande datum. Schildersbedrijf040 werkt netjes en beschermt uw interieur zorgvuldig. Bij oplevering controleert u samen met het team het resultaat.',
     contact: 'Zoekt u een schilder in Oirschot? Neem contact op met Schildersbedrijf040 voor deskundig advies en een vrijblijvende offerte. Bel 06-38903004, mail naar info@schildersbedrijf040.nl of vul het contactformulier in op de contactpagina.',
     faqs: [
       {
@@ -139,7 +139,7 @@ export const batch1Data: Record<string, CityData> = {
     displayName: 'Heeze',
     heroImage: 'https://res.cloudinary.com/dbtaisgda/image/upload/v1743873386/WhatsApp_Image_2025-03-27_at_07.53.08_myzeda.jpg',
     wijken: ['Heeze-Centrum', 'Leende', 'Sterksel'],
-    intro: 'Schildersbedrijf040, gevestigd in Eindhoven, is uw betrouwbare schilder in Heeze voor alle schilderwerk aan woningen en bedrijfspanden. Van de vrijstaande woningen op ruime kavels in Heeze-Centrum tot de dorpskernen Leende en Sterksel in het Kempische landschap — Schildersbedrijf040 levert binnenschilderwerk, buitenschilderwerk, behangen, houtrot sanering, lakwerk en latex spuiten. Met een klantbeoordeling van 5 sterren op Google en een 4,9 op Werkspot staat Schildersbedrijf040 garant voor kwaliteit in Heeze.',
+    intro: 'Schildersbedrijf040, gevestigd in Eindhoven, is uw betrouwbare schilder in Heeze voor alle schilderwerk aan woningen en bedrijfspanden. Van de vrijstaande woningen op ruime kavels in Heeze-Centrum tot de dorpskernen Leende en Sterksel in het Kempische landschap. Schildersbedrijf040 levert binnenschilderwerk, buitenschilderwerk, behangen, houtrot sanering, lakwerk en latex spuiten. Met een klantbeoordeling van 5 sterren op Google en een 4,9 op Werkspot staat Schildersbedrijf040 garant voor kwaliteit in Heeze.',
     kosten: 'Schilderwerk in Heeze kost gemiddeld tussen €35 en €55 per uur bij Schildersbedrijf040. Buitenschilderwerk valt doorgaans hoger uit dan binnenschilderwerk, omdat gevelelementen en kozijnen meer voorbereiding vragen. Veel vrijstaande woningen in Heeze hebben ruime gevels met houten accenten die periodiek onderhoud nodig hebben. Schildersbedrijf040 werkt met Boonstoppel verf die 8 tot 10 jaar bescherming biedt, zodat uw investering in schilderwerk in Heeze zich dubbel terugbetaalt ten opzichte van budgetverf.',
     diensten: [
       {
@@ -174,7 +174,7 @@ export const batch1Data: Record<string, CityData> = {
       }
     ],
     waarom: 'Schildersbedrijf040 is gevestigd in Eindhoven en bereikt Heeze binnen een kwartier, wat de voorrijkosten laag houdt en snelle service mogelijk maakt. Het team kent de bouwstijlen in Heeze-Centrum, Leende en Sterksel en weet precies welke aanpak bij elke woning past. Met een beoordeling van 5 sterren op Google, een 4,9 op Werkspot, het gebruik van Boonstoppel verf en garantie op elk project is Schildersbedrijf040 een betrouwbare partner voor schilderwerk in Heeze.',
-    werkwijze: 'Schildersbedrijf040 begint in Heeze met een vrijblijvend telefonisch of digitaal contact om uw wensen te bespreken. Daarna plant Schildersbedrijf040 een inspectie bij uw woning in Heeze en levert binnen 48 uur een heldere offerte. Na akkoord start de uitvoering op de afgesproken datum — meubels en vloeren worden zorgvuldig afgedekt en er wordt netjes gewerkt. Bij oplevering controleert Schildersbedrijf040 samen met u het resultaat.',
+    werkwijze: 'Schildersbedrijf040 begint in Heeze met een vrijblijvend telefonisch of digitaal contact om uw wensen te bespreken. Daarna plant Schildersbedrijf040 een inspectie bij uw woning in Heeze en levert binnen 48 uur een heldere offerte. Na akkoord start de uitvoering op de afgesproken datum, meubels en vloeren worden zorgvuldig afgedekt en er wordt netjes gewerkt. Bij oplevering controleert Schildersbedrijf040 samen met u het resultaat.',
     contact: 'Op zoek naar een schilder in Heeze? Neem contact op met Schildersbedrijf040 voor een vrijblijvende offerte. Bel 06-38903004, mail naar info@schildersbedrijf040.nl of vul het contactformulier in op de contactpagina.',
     faqs: [
       {
@@ -205,7 +205,7 @@ export const batch1Data: Record<string, CityData> = {
     displayName: 'Mierlo',
     heroImage: 'https://res.cloudinary.com/dbtaisgda/image/upload/v1743873386/WhatsApp_Image_2025-03-27_at_07.53.08_myzeda.jpg',
     wijken: ['Mierlo-Centrum', 'Het Broek', 'Luchen'],
-    intro: 'Schildersbedrijf040, gevestigd in Eindhoven, is uw vakkundige schilder in Mierlo voor alle schilderwerk aan woningen en bedrijfspanden. Van de historische thuiswevershuisjes in het beschermd dorpsgezicht Het Broek tot de dorpse woningen in Mierlo-Centrum en de nieuwere wijk Luchen — Schildersbedrijf040 verzorgt binnenschilderwerk, buitenschilderwerk, behangen, houtrot sanering, lakwerk en latex spuiten. Met een klantbeoordeling van 5 sterren op Google en een 4,9 op Werkspot levert Schildersbedrijf040 schilderwerk waar woningeigenaren in Mierlo op kunnen vertrouwen.',
+    intro: 'Schildersbedrijf040, gevestigd in Eindhoven, is uw vakkundige schilder in Mierlo voor alle schilderwerk aan woningen en bedrijfspanden. Van de historische thuiswevershuisjes in het beschermd dorpsgezicht Het Broek tot de dorpse woningen in Mierlo-Centrum en de nieuwere wijk Luchen. Schildersbedrijf040 verzorgt binnenschilderwerk, buitenschilderwerk, behangen, houtrot sanering, lakwerk en latex spuiten. Met een klantbeoordeling van 5 sterren op Google en een 4,9 op Werkspot levert Schildersbedrijf040 schilderwerk waar woningeigenaren in Mierlo op kunnen vertrouwen.',
     kosten: 'Schilderwerk in Mierlo kost gemiddeld tussen €35 en €55 per uur. Binnenschilderwerk valt doorgaans in het lagere segment, omdat de voorbereiding minder intensief is dan bij buitenwerk. De karakteristieke woningen in Het Broek en Mierlo-Centrum hebben vaak origineel houtwerk en binnenmuren die om een zorgvuldige aanpak vragen. Schildersbedrijf040 werkt met Boonstoppel verf die 8 tot 10 jaar bescherming biedt, zodat uw investering in schilderwerk in Mierlo zich ruimschoots terugbetaalt.',
     diensten: [
       {
@@ -240,7 +240,7 @@ export const batch1Data: Record<string, CityData> = {
       }
     ],
     waarom: 'Schildersbedrijf040 is gevestigd in Eindhoven en bereikt Mierlo binnen een kwartier, waardoor de voorrijkosten laag blijven en er snel gestart kan worden. Het team kent de bouwstijlen in Mierlo-Centrum, Het Broek en Luchen en past de werkwijze aan op elk woningtype. Met een beoordeling van 5 sterren op Google, een 4,9 op Werkspot, het gebruik van Boonstoppel verf en garantie op elk project is Schildersbedrijf040 een betrouwbare keuze voor schilderwerk in Mierlo.',
-    werkwijze: 'Het schilderproces van Schildersbedrijf040 in Mierlo start met een vrijblijvend telefonisch of digitaal contact om uw wensen te bespreken. Schildersbedrijf040 plant een inspectie bij uw woning in Mierlo en levert binnen 48 uur een heldere offerte. Na akkoord begint de uitvoering op de afgesproken datum — Schildersbedrijf040 beschermt uw interieur zorgvuldig en werkt netjes. Bij oplevering controleert u samen met het team het resultaat.',
+    werkwijze: 'Het schilderproces van Schildersbedrijf040 in Mierlo start met een vrijblijvend telefonisch of digitaal contact om uw wensen te bespreken. Schildersbedrijf040 plant een inspectie bij uw woning in Mierlo en levert binnen 48 uur een heldere offerte. Na akkoord begint de uitvoering op de afgesproken datum. Schildersbedrijf040 beschermt uw interieur zorgvuldig en werkt netjes. Bij oplevering controleert u samen met het team het resultaat.',
     contact: 'Zoekt u een schilder in Mierlo? Neem contact op met Schildersbedrijf040 voor een vrijblijvende offerte. Bel 06-38903004, mail naar info@schildersbedrijf040.nl of vul het contactformulier in op de contactpagina.',
     faqs: [
       {
@@ -271,7 +271,7 @@ export const batch1Data: Record<string, CityData> = {
     displayName: 'Meerhoven',
     heroImage: 'https://res.cloudinary.com/dbtaisgda/image/upload/v1743873386/WhatsApp_Image_2025-03-27_at_07.53.08_myzeda.jpg',
     wijken: ['Bosrijk', 'Waterrijk', 'Zandrijk', 'Park Forum'],
-    intro: 'Schildersbedrijf040 is uw schilder in Meerhoven, de moderne nieuwbouwwijk in het westen van Eindhoven. Van de eigentijdse woningen in Bosrijk en Waterrijk tot de gezinshuizen in Zandrijk en de appartementen bij Park Forum — Schildersbedrijf040 verzorgt binnenschilderwerk, buitenschilderwerk, behangen, houtrot sanering, lakwerk en latex spuiten. Met een klantbeoordeling van 5 sterren op Google en een 4,9 op Werkspot is Schildersbedrijf040 de logische keuze voor schilderwerk in Meerhoven, recht uit het hart van Eindhoven.',
+    intro: 'Schildersbedrijf040 is uw schilder in Meerhoven, de moderne nieuwbouwwijk in het westen van Eindhoven. Van de eigentijdse woningen in Bosrijk en Waterrijk tot de gezinshuizen in Zandrijk en de appartementen bij Park Forum. Schildersbedrijf040 verzorgt binnenschilderwerk, buitenschilderwerk, behangen, houtrot sanering, lakwerk en latex spuiten. Met een klantbeoordeling van 5 sterren op Google en een 4,9 op Werkspot is Schildersbedrijf040 de logische keuze voor schilderwerk in Meerhoven, recht uit het hart van Eindhoven.',
     kosten: 'Schilderwerk in Meerhoven kost gemiddeld tussen €35 en €55 per uur. Omdat Meerhoven een relatief jonge wijk is met woningen uit 2000 en later, is het schilderwerk vaak minder intensief dan bij oudere panden. Binnenschilderwerk en latex spuiten zijn de meest gevraagde diensten in Meerhoven. Schildersbedrijf040 werkt met Boonstoppel verf die 8 tot 10 jaar bescherming biedt, zodat uw moderne woning in Meerhoven er jarenlang strak en verzorgd uitziet.',
     diensten: [
       {
@@ -306,7 +306,7 @@ export const batch1Data: Record<string, CityData> = {
       }
     ],
     waarom: 'Schildersbedrijf040 is gevestigd in Eindhoven en bereikt Meerhoven binnen tien minuten, aangezien Meerhoven een wijk van Eindhoven zelf is. Het team kent de moderne bouwstijlen in Bosrijk, Waterrijk, Zandrijk en Park Forum en weet precies welke aanpak bij deze nieuwbouwwoningen past. Met een beoordeling van 5 sterren op Google, een 4,9 op Werkspot, het gebruik van Boonstoppel verf en garantie op elk project is Schildersbedrijf040 de ideale schilder voor bewoners van Meerhoven.',
-    werkwijze: 'Schildersbedrijf040 begint in Meerhoven met een vrijblijvend telefonisch of digitaal contact om uw wensen te bespreken. Daarna plant Schildersbedrijf040 een inspectie bij uw woning in Meerhoven en levert binnen 48 uur een heldere offerte. Na akkoord start de uitvoering op de afgesproken datum — meubels en vloeren worden zorgvuldig afgedekt. Bij oplevering controleert Schildersbedrijf040 samen met u het resultaat.',
+    werkwijze: 'Schildersbedrijf040 begint in Meerhoven met een vrijblijvend telefonisch of digitaal contact om uw wensen te bespreken. Daarna plant Schildersbedrijf040 een inspectie bij uw woning in Meerhoven en levert binnen 48 uur een heldere offerte. Na akkoord start de uitvoering op de afgesproken datum, meubels en vloeren worden zorgvuldig afgedekt. Bij oplevering controleert Schildersbedrijf040 samen met u het resultaat.',
     contact: 'Zoekt u een schilder in Meerhoven? Neem contact op met Schildersbedrijf040 voor een vrijblijvende offerte. Bel 06-38903004, mail naar info@schildersbedrijf040.nl of vul het contactformulier in op de contactpagina.',
     faqs: [
       {
@@ -323,7 +323,7 @@ export const batch1Data: Record<string, CityData> = {
       },
       {
         question: 'Heeft Schildersbedrijf040 ervaring met nieuwbouwwoningen in Meerhoven?',
-        answer: 'Schildersbedrijf040 heeft ruime ervaring met nieuwbouwwoningen in Meerhoven en vergelijkbare moderne wijken in Eindhoven. Nieuwbouw vraagt om een andere aanpak dan oudere woningen — denk aan het juist voorbehandelen van nieuwe wanden en het kiezen van verf die goed hecht op moderne ondergronden. Schildersbedrijf040 adviseert over de beste aanpak voor uw specifieke woning in Meerhoven.'
+        answer: 'Schildersbedrijf040 heeft ruime ervaring met nieuwbouwwoningen in Meerhoven en vergelijkbare moderne wijken in Eindhoven. Nieuwbouw vraagt om een andere aanpak dan oudere woningen, denk aan het juist voorbehandelen van nieuwe wanden en het kiezen van verf die goed hecht op moderne ondergronden. Schildersbedrijf040 adviseert over de beste aanpak voor uw specifieke woning in Meerhoven.'
       },
       {
         question: 'Werkt Schildersbedrijf040 in alle deelwijken van Meerhoven?',

@@ -148,7 +148,7 @@ export default function LakwerkPage() {
     },
     {
       question: 'Wat is beter: watergedragen of oplosmiddelhoudende lak?',
-      answer: 'Watergedragen lak is tegenwoordig de standaard voor binnenwerk: vrijwel geurloos, sneller droog en beter voor de luchtkwaliteit. Boonstoppel Garantie Interieurlak is een watergedragen lak die qua dekking en hardheid vergelijkbaar is met traditionele oplosmiddelhoudende lakken. Schildersbedrijf040 gebruikt watergedragen lak voor al het binnenlakwerk. Voor buitenhoutwerk zet Schildersbedrijf040 de Boonstoppel Garantie Zijdeglans SB in — een hybride lak die extra bestendig is tegen weersinvloeden.',
+      answer: 'Watergedragen lak is tegenwoordig de standaard voor binnenwerk: vrijwel geurloos, sneller droog en beter voor de luchtkwaliteit. Boonstoppel Garantie Interieurlak is een watergedragen lak die qua dekking en hardheid vergelijkbaar is met traditionele oplosmiddelhoudende lakken. Schildersbedrijf040 gebruikt watergedragen lak voor al het binnenlakwerk. Voor buitenhoutwerk zet Schildersbedrijf040 de Boonstoppel Garantie Zijdeglans SB in, een hybride lak die extra bestendig is tegen weersinvloeden.',
     },
     {
       question: 'Hoeveel kost het om kozijnen te laten lakken in Eindhoven?',
@@ -164,7 +164,7 @@ export default function LakwerkPage() {
     },
     {
       question: 'Geeft Schildersbedrijf040 garantie op lakwerk?',
-      answer: 'Schildersbedrijf040 geeft garantie op al het uitgevoerde lakwerk, zowel binnen als buiten. De garantie dekt het vakmanschap en de gebruikte materialen. Door te werken met Boonstoppel lak — die 8 tot 10 jaar bescherming biedt op binnenwerk — is de kans op problemen binnen de garantieperiode minimaal. Mocht er onverhoopt een gebrek optreden, dan herstelt Schildersbedrijf040 dit kosteloos.',
+      answer: 'Schildersbedrijf040 geeft garantie op al het uitgevoerde lakwerk, zowel binnen als buiten. De garantie dekt het vakmanschap en de gebruikte materialen. Door te werken met Boonstoppel lak, die 8 tot 10 jaar bescherming biedt op binnenwerk, is de kans op problemen binnen de garantieperiode minimaal. Mocht er onverhoopt een gebrek optreden, dan herstelt Schildersbedrijf040 dit kosteloos.',
     },
   ]
 
@@ -182,12 +182,12 @@ export default function LakwerkPage() {
   }
 
   const prijzen = [
-    { dienst: 'Kozijnen lakken (binnen)', prijs: '€35 – €75 /stuk' },
-    { dienst: 'Kozijnen lakken (buiten)', prijs: '€50 – €100 /stuk' },
-    { dienst: 'Deuren lakken', prijs: '€100 – €150 /stuk' },
-    { dienst: 'Trap lakken', prijs: '€350 – €600' },
-    { dienst: 'Radiator lakken', prijs: '€80 – €120 /stuk' },
-    { dienst: 'Keukenkasten spuiten', prijs: '€150 – €300 /m¹' },
+    { dienst: 'Kozijnen lakken (binnen)', prijs: '€35 tot €75 /stuk' },
+    { dienst: 'Kozijnen lakken (buiten)', prijs: '€50 tot €100 /stuk' },
+    { dienst: 'Deuren lakken', prijs: '€100 tot €150 /stuk' },
+    { dienst: 'Trap lakken', prijs: '€350 tot €600' },
+    { dienst: 'Radiator lakken', prijs: '€80 tot €120 /stuk' },
+    { dienst: 'Keukenkasten spuiten', prijs: '€150 tot €300 /m¹' },
   ]
 
   const werkwijzeStappen = [
@@ -199,12 +199,12 @@ export default function LakwerkPage() {
     {
       nummer: 2,
       titel: 'Offerte op Maat',
-      beschrijving: 'Binnen 48 uur ontvangt u een gedetailleerde offerte met vaste prijs — inclusief voorbereiding, materialen en het aantal laklagen.',
+      beschrijving: 'Binnen 48 uur ontvangt u een gedetailleerde offerte met vaste prijs, inclusief voorbereiding, materialen en het aantal laklagen.',
     },
     {
       nummer: 3,
       titel: 'Voorbereiding & Gronden',
-      beschrijving: 'Oude laklagen schuren, loszittende verf verwijderen, beschadigingen plamuren en een grondlaag aanbrengen — de basis voor duurzaam lakwerk.',
+      beschrijving: 'Oude laklagen schuren, loszittende verf verwijderen, beschadigingen plamuren en een grondlaag aanbrengen, de basis voor duurzaam lakwerk.',
     },
     {
       nummer: 4,
@@ -235,7 +235,7 @@ export default function LakwerkPage() {
         <div className="absolute inset-0 z-0 opacity-30">
           <Image
             src={heroImage}
-            alt="Professioneel lakwerk in Eindhoven — kozijnen en deuren vakkundig gelakt door Schildersbedrijf040"
+            alt="Professioneel lakwerk in Eindhoven, kozijnen en deuren vakkundig gelakt door Schildersbedrijf040"
             fill
             sizes="100vw"
             className="object-cover"
@@ -280,7 +280,7 @@ export default function LakwerkPage() {
                     <StarIcon key={i} />
                   ))}
                 </div>
-                <span className="text-sm text-gray-300 font-medium">5.0 — 41 reviews</span>
+                <span className="text-sm text-gray-300 font-medium">5,0 uit 41 reviews</span>
               </div>
               <div className="w-px h-7 bg-white/15" />
               <div className="flex items-center gap-2.5">
@@ -290,7 +290,7 @@ export default function LakwerkPage() {
                     <StarIcon key={i} />
                   ))}
                 </div>
-                <span className="text-sm text-gray-300 font-medium">4.9 — Topvakman</span>
+                <span className="text-sm text-gray-300 font-medium">4,9 op Werkspot</span>
               </div>
             </div>
           </div>
@@ -309,10 +309,10 @@ export default function LakwerkPage() {
                 Wat is Professioneel Lakwerk?
               </h2>
               <p className="text-gray-600 leading-relaxed mb-5">
-                Lakwerk is het aanbrengen van lakverf op houtwerk zoals kozijnen, deuren, trappen, plinten en radiatoren. Professioneel lakwerk verschilt van zelf lakken doordat de voorbereiding — schuren, plamuren, gronden — minstens 60% van de totale werktijd in beslag neemt. Die voorbereiding bepaalt of het lakwerk 8 tot 10 jaar meegaat of al na 2 tot 3 jaar bladdert en loslaat. Schildersbedrijf040 werkt uitsluitend met Boonstoppel Interieurlak voor binnenwerk en Boonstoppel Garantie Zijdeglans SB voor buitenhoutwerk.
+                Lakwerk is het aanbrengen van lakverf op houtwerk zoals kozijnen, deuren, trappen, plinten en radiatoren. Professioneel lakwerk verschilt van zelf lakken doordat de voorbereiding (schuren, plamuren, gronden) minstens 60% van de totale werktijd in beslag neemt. Die voorbereiding bepaalt of het lakwerk 8 tot 10 jaar meegaat of al na 2 tot 3 jaar bladdert en loslaat. Schildersbedrijf040 werkt uitsluitend met Boonstoppel Interieurlak voor binnenwerk en Boonstoppel Garantie Zijdeglans SB voor buitenhoutwerk.
               </p>
               <p className="text-gray-600 leading-relaxed mb-5">
-                Schildersbedrijf040 voert lakwerk uit voor woningen en bedrijfspanden in Eindhoven en omgeving. Of het gaat om een enkel kozijn of het complete houtwerk van een woning — elk lakproject begint met een inspectie van het houtwerk, advies over glansgraden en een gedetailleerde offerte met vaste prijs.
+                Schildersbedrijf040 voert lakwerk uit voor woningen en bedrijfspanden in Eindhoven en omgeving. Of het gaat om een enkel kozijn of het complete houtwerk van een woning, elk lakproject begint met een inspectie van het houtwerk, advies over glansgraden en een gedetailleerde offerte met vaste prijs.
               </p>
               <p className="text-gray-600 leading-relaxed">
                 Naast de esthetische verbetering beschermt lakwerk uw houtwerk tegen vocht, slijtage en UV-straling. Ongelakt of slecht onderhouden houtwerk droogt uit, gaat scheuren en is vatbaar voor houtrot. Tijdig lakwerk voorkomt kostbare houtrot sanering op termijn.
@@ -323,7 +323,7 @@ export default function LakwerkPage() {
               <div className="rounded-2xl overflow-hidden">
                 <Image
                   src={heroImage}
-                  alt="Professioneel lakwerk door Schildersbedrijf040 — kozijnen en deuren lakken in Eindhoven"
+                  alt="Professioneel lakwerk door Schildersbedrijf040, kozijnen en deuren lakken in Eindhoven"
                   width={600}
                   height={400}
                   className="w-full h-auto object-cover rounded-2xl"
@@ -331,8 +331,8 @@ export default function LakwerkPage() {
               </div>
               <div className="grid grid-cols-2 gap-4">
                 {[
-                  { label: 'Levensduur', waarde: '8–10 jaar' },
-                  { label: 'Droogtijd lak', waarde: '16–24 uur' },
+                  { label: 'Levensduur', waarde: '8 tot 10 jaar' },
+                  { label: 'Droogtijd lak', waarde: '16 tot 24 uur' },
                   { label: 'Glansgraden', waarde: '3 opties' },
                   { label: 'BTW woningen 2+ jaar', waarde: '9%' },
                 ].map((item, index) => (
@@ -393,14 +393,14 @@ export default function LakwerkPage() {
               {
                 nummer: '05',
                 titel: 'Keukenkasten & Meubels',
-                beschrijving: 'Keukenkasten en meubels lakken geeft uw interieur een compleet nieuwe uitstraling zonder de kosten van vervanging. Schildersbedrijf040 spuit keukenkasten met Boonstoppel lak voor een fabrieksmatige, gladde afwerking zonder kwaststrepen. Keukenkasten spuiten kost €150 tot €300 per strekkende meter — een fractie van de kosten van een nieuwe keuken.',
+                beschrijving: 'Keukenkasten en meubels lakken geeft uw interieur een compleet nieuwe uitstraling zonder de kosten van vervanging. Schildersbedrijf040 spuit keukenkasten met Boonstoppel lak voor een fabrieksmatige, gladde afwerking zonder kwaststrepen. Keukenkasten spuiten kost €150 tot €300 per strekkende meter, een fractie van de kosten van een nieuwe keuken.',
                 link: '/diensten/latex-spuiten',
                 linkTekst: 'Bekijk latex spuiten',
               },
               {
                 nummer: '06',
                 titel: 'Buitenhoutwerk Lakken',
-                beschrijving: 'Buitenkozijnen, boeidelen en dakgoten van hout vragen om weerbestendige lak die beschermt tegen regen, UV-straling en temperatuurwisselingen. Schildersbedrijf040 gebruikt Boonstoppel Garantie Zijdeglans SB voor buitenhoutwerk — een hybride lakverf met uitstekende hechting en duurzaamheid. Buitenkozijnen lakken kost €50 tot €100 per stuk.',
+                beschrijving: 'Buitenkozijnen, boeidelen en dakgoten van hout vragen om weerbestendige lak die beschermt tegen regen, UV-straling en temperatuurwisselingen. Schildersbedrijf040 gebruikt Boonstoppel Garantie Zijdeglans SB voor buitenhoutwerk, een hybride lakverf met uitstekende hechting en duurzaamheid. Buitenkozijnen lakken kost €50 tot €100 per stuk.',
                 link: '/diensten/buitenschilderwerk',
                 linkTekst: 'Meer over buitenschilderwerk',
               },
@@ -450,7 +450,7 @@ export default function LakwerkPage() {
                 Schildersbedrijf040 hanteert een uurtarief van €40 tot €50 voor lakwerk, inclusief materiaal. Voor woningen ouder dan 2 jaar geldt het verlaagde btw-tarief van 9%, wat een merkbaar verschil maakt op de eindfactuur. Bij een lakproject van €2.000 bespaart u daarmee ruim €200 ten opzichte van het standaard btw-tarief van 21%.
               </p>
               <p className="text-gray-600 leading-relaxed mb-6">
-                Schildersbedrijf040 werkt altijd met een vaste offerte — geen verrassingen achteraf. De investering in Boonstoppel lak betaalt zich terug: doordat het lakwerk 8 tot 10 jaar meegaat in plaats van 3 jaar bij budgetlak, zijn de kosten per jaar aanzienlijk lager.
+                Schildersbedrijf040 werkt altijd met een vaste offerte, geen verrassingen achteraf. De investering in Boonstoppel lak betaalt zich terug: doordat het lakwerk 8 tot 10 jaar meegaat in plaats van 3 jaar bij budgetlak, zijn de kosten per jaar aanzienlijk lager.
               </p>
               <Link
                 href="/contact"
@@ -494,7 +494,7 @@ export default function LakwerkPage() {
         <div className="absolute inset-0">
           <Image
             src={heroImage}
-            alt="Lakwerk resultaat — strak gelakte kozijnen en deuren door Schildersbedrijf040"
+            alt="Lakwerk resultaat, strak gelakte kozijnen en deuren door Schildersbedrijf040"
             fill
             sizes="100vw"
             className="object-cover"
@@ -511,7 +511,7 @@ export default function LakwerkPage() {
               Lakwerk Waar U Trots Op Bent
             </h2>
             <p className="text-gray-300 leading-relaxed mb-8">
-              Van voorbereiding tot de laatste laklaag — Schildersbedrijf040 levert lakwerk dat jarenlang beschermt en er strak uitziet. Bekijk onze projecten of vraag direct een offerte aan.
+              Van voorbereiding tot de laatste laklaag. Schildersbedrijf040 levert lakwerk dat jarenlang beschermt en er strak uitziet. Bekijk onze projecten of vraag direct een offerte aan.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link
@@ -543,7 +543,7 @@ export default function LakwerkPage() {
               Ons Werkproces in 4 Stappen
             </h2>
             <p className="text-gray-600 leading-relaxed max-w-xl mx-auto">
-              Elk lakproject bij Schildersbedrijf040 volgt een vast werkproces — van inspectie tot oplevering. Zo weet u precies wat u kunt verwachten.
+              Elk lakproject bij Schildersbedrijf040 volgt een vast werkproces, van inspectie tot oplevering. Zo weet u precies wat u kunt verwachten.
             </p>
           </div>
 
@@ -581,16 +581,16 @@ export default function LakwerkPage() {
                 Waarom Schildersbedrijf040 voor Uw Lakwerk?
               </h2>
               <p className="text-gray-600 leading-relaxed mb-8">
-                Schildersbedrijf040 onderscheidt zich door vakmanschap, transparantie en het gebruik van uitsluitend Boonstoppel A-merk lak. Eigenaar Jordy Jacobs is persoonlijk betrokken bij elk lakproject — van de eerste inspectie tot de eindcontrole. Dat vertaalt zich in een klantbeoordeling van 5 sterren op Google en een 4,9 op Werkspot.
+                Schildersbedrijf040 onderscheidt zich door vakmanschap, transparantie en het gebruik van uitsluitend Boonstoppel A-merk lak. Eigenaar Jordy Jacobs is persoonlijk betrokken bij elk lakproject, van de eerste inspectie tot de eindcontrole. Dat vertaalt zich in een klantbeoordeling van 5 sterren op Google en een 4,9 op Werkspot.
               </p>
 
               <div className="flex flex-col gap-4">
                 {[
-                  { titel: 'Hoogst beoordeeld in de regio', beschrijving: '5 sterren op Google en 4,9 op Werkspot — gebaseerd op 60+ beoordelingen van woningeigenaren in Eindhoven en omgeving.' },
+                  { titel: 'Hoogst beoordeeld in de regio', beschrijving: '5 sterren op Google en 4,9 op Werkspot, gebaseerd op 60+ beoordelingen van woningeigenaren in Eindhoven en omgeving.' },
                   { titel: 'Uitsluitend Boonstoppel A-merk lak', beschrijving: 'Boonstoppel Interieurlak Zijdeglans en Hoogglans voor binnenwerk, Garantie Zijdeglans SB voor buitenwerk. 8 tot 10 jaar bescherming.' },
-                  { titel: 'Vaste prijs — geen verrassingen', beschrijving: 'Gedetailleerde offerte binnen 48 uur met vaste prijs. Inclusief materiaal, voorbereiding en oplevering.' },
+                  { titel: 'Vaste prijs, geen verrassingen', beschrijving: 'Gedetailleerde offerte binnen 48 uur met vaste prijs. Inclusief materiaal, voorbereiding en oplevering.' },
                   { titel: 'Grondige voorbereiding', beschrijving: 'Schuren, plamuren en gronden vormen 60% van het werk. Die investering in voorbereiding bepaalt de levensduur van het lakwerk.' },
-                  { titel: 'Persoonlijke betrokkenheid', beschrijving: 'Eigenaar Jordy Jacobs is bij elk project betrokken — u hebt altijd een vast aanspreekpunt dat uw wensen kent.' },
+                  { titel: 'Persoonlijke betrokkenheid', beschrijving: 'Eigenaar Jordy Jacobs is bij elk project betrokken, u hebt altijd een vast aanspreekpunt dat uw wensen kent.' },
                 ].map((usp, index) => (
                   <div
                     key={index}
@@ -624,7 +624,7 @@ export default function LakwerkPage() {
                 </p>
                 <div className="flex items-center gap-2 mt-3 text-xs font-semibold text-gray-400 uppercase tracking-wide">
                   <GoogleLogo />
-                  Google Reviews — 41 beoordelingen
+                  Google Reviews: 41 beoordelingen
                 </div>
               </div>
 
@@ -643,7 +643,7 @@ export default function LakwerkPage() {
                 </p>
                 <div className="flex items-center gap-2 mt-3 text-xs font-semibold text-gray-400 uppercase tracking-wide">
                   <WerkspotLogo />
-                  Werkspot — Topvakman
+                  Werkspot: Topvakman
                 </div>
               </div>
 
@@ -688,7 +688,7 @@ export default function LakwerkPage() {
             Vragen over Lakwerk
           </h2>
           <p className="text-gray-600 leading-relaxed mb-12 max-w-2xl">
-            Staat uw vraag er niet bij? Neem gerust contact op — Schildersbedrijf040 helpt u graag verder.
+            Staat uw vraag er niet bij? Neem gerust contact op. Schildersbedrijf040 helpt u graag verder.
           </p>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
@@ -697,7 +697,7 @@ export default function LakwerkPage() {
               <div className="rounded-2xl overflow-hidden relative h-[280px]">
                 <Image
                   src="https://res.cloudinary.com/dbtaisgda/image/upload/v1743873386/WhatsApp_Image_2025-03-27_at_07.53.08_myzeda.jpg"
-                  alt="Lakwerk resultaat — strak gelakte kozijnen en deuren door Schildersbedrijf040"
+                  alt="Lakwerk resultaat, strak gelakte kozijnen en deuren door Schildersbedrijf040"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-cover"
@@ -772,7 +772,7 @@ export default function LakwerkPage() {
                 Klaar voor Strak Lakwerk?
               </h2>
               <p className="text-gray-300 leading-relaxed mb-8">
-                Wilt u weten wat professioneel lakwerk voor uw kozijnen, deuren of trappen kost? Schildersbedrijf040 komt graag langs voor een gratis inspectie en vrijblijvende offerte. Bel, mail of vul het contactformulier in — u ontvangt binnen 48 uur een offerte op maat.
+                Wilt u weten wat professioneel lakwerk voor uw kozijnen, deuren of trappen kost? Schildersbedrijf040 komt graag langs voor een gratis inspectie en vrijblijvende offerte. Bel, mail of vul het contactformulier in, u ontvangt binnen 48 uur een offerte op maat.
               </p>
               <Link
                 href="/contact"
@@ -818,7 +818,7 @@ export default function LakwerkPage() {
                 </div>
                 <div>
                   <div className="text-xs text-gray-400 font-medium uppercase tracking-wide mb-0.5">Bereikbaarheid</div>
-                  <div className="text-white font-semibold">Ma – Vr: 08:00 – 17:30</div>
+                  <div className="text-white font-semibold">Ma t/m vr: 08:00 tot 17:30</div>
                 </div>
               </div>
             </div>

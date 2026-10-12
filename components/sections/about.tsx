@@ -37,7 +37,7 @@ export function About() {
             <p className="leading-relaxed">
               Het team van Schildersbedrijf040 voert binnenschilderwerk, buitenschilderwerk,
               behangen, lakwerk, latex spuiten en houtrot sanering uit. Schildersbedrijf040
-              werkt uitsluitend met Boonstoppel verf — verf die 8 tot 10 jaar
+              werkt uitsluitend met Boonstoppel verf, verf die 8 tot 10 jaar
               meegaat in plaats van de 3 tot 5 jaar van budgetverf.
             </p>
 

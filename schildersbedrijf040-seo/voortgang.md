@@ -34,3 +34,49 @@ Status: `todo` → `concept` → `review Jordy` → `live`. Houd dit bestand bij
 | 28 | Maart | M | Gevel reinigen en impregneren | `/diensten/gevelreiniging-impregneren` | todo | scopecheck |
 | 29 | Maart | M | Buitenschilderwerk Helmond, Veldhoven, Best | `/diensten/buitenschilderwerk/[plaats] (3)` | todo | scopecheck |
 | 30 | Maart | M | Houtrot herkennen en voorkomen | `/blog/houtrot-herkennen-voorkomen` | todo |  |
+
+## Site-audit
+
+| Punt | Status | Bestanden | Open punten |
+|---|---|---|---|
+| 1.1 | todo |  |  |
+| 1.2 | todo |  |  |
+| 1.3 | todo |  |  |
+| 1.4 | todo |  |  |
+| 1.5 | todo |  |  |
+| 1.6 | todo |  |  |
+| 1.7 | todo |  |  |
+| 1.8 | todo |  |  |
+| 1.9 | todo |  |  |
+| 1.10 | todo |  |  |
+| 1.11 | todo |  |  |
+| 2.1 | todo |  |  |
+| 2.2 | todo |  |  |
+| 2.3 | todo |  |  |
+| 2.4 | todo |  |  |
+| 2.5 | todo |  |  |
+| 2.6 | todo |  |  |
+| 2.7 | todo |  |  |
+| 2.8 | todo |  |  |
+| 2.9 | todo |  |  |
+| 2.10 | todo |  |  |
+
+## Ideeën
+
+- 
+
+## Site-audit (branch `seo-redesign`, start 12-10-2026)
+
+Status per punt uit `plan/site-audit-en-redesign.md`. Screenshots in `rapportages/screenshots/` (prefix = stapnummer).
+
+| # | Punt | Status | Bestanden | Opmerking |
+|---|---|---|---|---|
+| 0 | Nulmeting | klaar | `rapportages/codestructuur.md`, `rapportages/lighthouse-voor.md` | Screenshots `00-voor-*` |
+| 1.1 | Em dashes | klaar | 18 bestanden in `app/` en `components/` (312 vervangen), `scripts/fix-dashes-sanity.mjs` | Blogteksten staan in Sanity (63 dashes in 5 posts): script klaar, proefrun gedraaid, **niet** uitgevoerd omdat het de live blog aanpast. Gideon: `node scripts/fix-dashes-sanity.mjs --write` na akkoord. |
+
+## Open punten voor Jordy
+
+| Waar | Vraag |
+|---|---|
+
+## Ideeën

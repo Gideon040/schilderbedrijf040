@@ -136,7 +136,7 @@ export default function BinnenschilderwerkPage() {
   const faqs = [
     {
       question: 'Wat kost binnenschilderwerk per m² in Eindhoven?',
-      answer: 'Binnenschilderwerk kost gemiddeld €30 tot €35 per m², inclusief materiaal en exclusief btw. Voor een gemiddelde woonkamer van 20 m² komt dat neer op €250 tot €400 voor muren en plafond. Schildersbedrijf040 werkt met Boonstoppel verf, waardoor het resultaat 8 tot 10 jaar meegaat — aanzienlijk langer dan de 3 jaar die budgetverf biedt. Bij woningen ouder dan 2 jaar geldt het verlaagde btw-tarief van 9% in plaats van 21%.',
+      answer: 'Binnenschilderwerk kost gemiddeld €30 tot €35 per m², inclusief materiaal en exclusief btw. Voor een gemiddelde woonkamer van 20 m² komt dat neer op €250 tot €400 voor muren en plafond. Schildersbedrijf040 werkt met Boonstoppel verf, waardoor het resultaat 8 tot 10 jaar meegaat, aanzienlijk langer dan de 3 jaar die budgetverf biedt. Bij woningen ouder dan 2 jaar geldt het verlaagde btw-tarief van 9% in plaats van 21%.',
     },
     {
       question: 'Hoe lang duurt het om een kamer te schilderen?',
@@ -148,11 +148,11 @@ export default function BinnenschilderwerkPage() {
     },
     {
       question: 'Moet ik mijn meubels zelf verplaatsen voor het schilderwerk?',
-      answer: 'Schildersbedrijf040 neemt de volledige voorbereiding voor zijn rekening: meubels worden afgedekt of verplaatst, vloeren worden beschermd met afdekmateriaal en plinten en kozijnen worden zorgvuldig afgeplakt. Na afloop wordt alles netjes teruggeplaatst en de werkplek opgeruimd. Een schone oplevering hoort bij professioneel binnenschilderwerk — dat scheelt u tijd en voorkomt verfvlekken op uw interieur.',
+      answer: 'Schildersbedrijf040 neemt de volledige voorbereiding voor zijn rekening: meubels worden afgedekt of verplaatst, vloeren worden beschermd met afdekmateriaal en plinten en kozijnen worden zorgvuldig afgeplakt. Na afloop wordt alles netjes teruggeplaatst en de werkplek opgeruimd. Een schone oplevering hoort bij professioneel binnenschilderwerk, dat scheelt u tijd en voorkomt verfvlekken op uw interieur.',
     },
     {
       question: 'Kan binnenschilderwerk ook in de winter uitgevoerd worden?',
-      answer: 'Binnenschilderwerk is het hele jaar door uitvoerbaar, omdat de temperatuur en luchtvochtigheid binnenshuis goed te regelen zijn. De ideale verwerkingstemperatuur voor muurverf en lakverf ligt tussen 10°C en 25°C — standaard in een verwarmde woning. Schildersbedrijf040 zorgt voor goede ventilatie tijdens het schilderen, zodat de verf optimaal droogt. In de winter is er bovendien vaak sneller beschikbaarheid, wat de planning vergemakkelijkt.',
+      answer: 'Binnenschilderwerk is het hele jaar door uitvoerbaar, omdat de temperatuur en luchtvochtigheid binnenshuis goed te regelen zijn. De ideale verwerkingstemperatuur voor muurverf en lakverf ligt tussen 10°C en 25°C, standaard in een verwarmde woning. Schildersbedrijf040 zorgt voor goede ventilatie tijdens het schilderen, zodat de verf optimaal droogt. In de winter is er bovendien vaak sneller beschikbaarheid, wat de planning vergemakkelijkt.',
     },
     {
       question: 'Wat is het verschil tussen latex en acrylaat muurverf?',
@@ -182,12 +182,12 @@ export default function BinnenschilderwerkPage() {
   }
 
   const prijzen = [
-    { dienst: 'Muren schilderen', prijs: '€30 – €35 /m²' },
-    { dienst: 'Plafond schilderen', prijs: '€32 – €38 /m²' },
-    { dienst: 'Kozijnen lakken', prijs: '€40 – €55 /stuk' },
-    { dienst: 'Deuren lakken', prijs: '€80 – €120 /stuk' },
-    { dienst: 'Trap schilderen', prijs: '€350 – €600' },
-    { dienst: 'Complete kamer (20 m²)', prijs: '€500 – €900' },
+    { dienst: 'Muren schilderen', prijs: '€30 tot €35 /m²' },
+    { dienst: 'Plafond schilderen', prijs: '€32 tot €38 /m²' },
+    { dienst: 'Kozijnen lakken', prijs: '€40 tot €55 /stuk' },
+    { dienst: 'Deuren lakken', prijs: '€80 tot €120 /stuk' },
+    { dienst: 'Trap schilderen', prijs: '€350 tot €600' },
+    { dienst: 'Complete kamer (20 m²)', prijs: '€500 tot €900' },
   ]
 
   const werkwijzeStappen = [
@@ -199,12 +199,12 @@ export default function BinnenschilderwerkPage() {
     {
       nummer: 2,
       titel: 'Offerte op Maat',
-      beschrijving: 'Binnen 48 uur ontvangt u een gedetailleerde offerte met vaste prijs — zonder verborgen kosten en inclusief materialen.',
+      beschrijving: 'Binnen 48 uur ontvangt u een gedetailleerde offerte met vaste prijs, zonder verborgen kosten en inclusief materialen.',
     },
     {
       nummer: 3,
       titel: 'Voorbereiding',
-      beschrijving: 'Meubels afdekken, vloeren beschermen, scheuren vullen, oude verflagen schuren en ondergronden gronden — de basis voor een strak resultaat.',
+      beschrijving: 'Meubels afdekken, vloeren beschermen, scheuren vullen, oude verflagen schuren en ondergronden gronden, de basis voor een strak resultaat.',
     },
     {
       nummer: 4,
@@ -235,7 +235,7 @@ export default function BinnenschilderwerkPage() {
         <div className="absolute inset-0 z-0 opacity-30">
           <Image
             src={heroImage}
-            alt="Binnenschilderwerk in Eindhoven — muren en kozijnen professioneel geschilderd door Schildersbedrijf040"
+            alt="Binnenschilderwerk in Eindhoven, muren en kozijnen professioneel geschilderd door Schildersbedrijf040"
             fill
             sizes="100vw"
             className="object-cover"
@@ -252,7 +252,7 @@ export default function BinnenschilderwerkPage() {
               <span className="text-[#0088FF] block">SCHILDERWERK</span>
             </h1>
             <p className="text-gray-200 text-lg leading-relaxed max-w-[560px] mb-10 animate-fade-in-up animation-delay-150">
-              Binnenschilderwerk van Schildersbedrijf040 geeft uw woning in Eindhoven en omgeving een frisse uitstraling die jarenlang meegaat. Van muren en plafonds tot kozijnen en deuren — Schildersbedrijf040 schildert met Boonstoppel verf voor een strak en duurzaam resultaat.
+              Binnenschilderwerk van Schildersbedrijf040 geeft uw woning in Eindhoven en omgeving een frisse uitstraling die jarenlang meegaat. Van muren en plafonds tot kozijnen en deuren. Schildersbedrijf040 schildert met Boonstoppel verf voor een strak en duurzaam resultaat.
             </p>
             <div className="flex flex-wrap gap-4 animate-fade-in-up animation-delay-300">
               <Link
@@ -280,7 +280,7 @@ export default function BinnenschilderwerkPage() {
                     <StarIcon key={i} />
                   ))}
                 </div>
-                <span className="text-sm text-gray-300 font-medium">5.0 — 41 reviews</span>
+                <span className="text-sm text-gray-300 font-medium">5,0 uit 41 reviews</span>
               </div>
               <div className="w-px h-7 bg-white/15" />
               <div className="flex items-center gap-2.5">
@@ -290,7 +290,7 @@ export default function BinnenschilderwerkPage() {
                     <StarIcon key={i} />
                   ))}
                 </div>
-                <span className="text-sm text-gray-300 font-medium">4.9 — Topvakman</span>
+                <span className="text-sm text-gray-300 font-medium">4,9 op Werkspot</span>
               </div>
             </div>
           </div>
@@ -309,10 +309,10 @@ export default function BinnenschilderwerkPage() {
                 Wat is Professioneel Binnenschilderwerk?
               </h2>
               <p className="text-gray-600 leading-relaxed mb-5">
-                Binnenschilderwerk omvat het schilderen, lakken en afwerken van alle oppervlakken in uw woning: muren, plafonds, kozijnen, deuren, trappen en plinten. Professioneel binnenschilderwerk verschilt van zelf schilderen doordat de voorbereiding — schuren, plamuren, gronden — minstens de helft van de tijd in beslag neemt. Die voorbereiding is bepalend voor hoe lang het resultaat meegaat: goed voorbereid binnenschilderwerk met Boonstoppel verf houdt 8 tot 10 jaar, terwijl schilderwerk zonder degelijke voorbereiding al na 2 tot 3 jaar loslaat of verkleurt.
+                Binnenschilderwerk omvat het schilderen, lakken en afwerken van alle oppervlakken in uw woning: muren, plafonds, kozijnen, deuren, trappen en plinten. Professioneel binnenschilderwerk verschilt van zelf schilderen doordat de voorbereiding (schuren, plamuren, gronden) minstens de helft van de tijd in beslag neemt. Die voorbereiding is bepalend voor hoe lang het resultaat meegaat: goed voorbereid binnenschilderwerk met Boonstoppel verf houdt 8 tot 10 jaar, terwijl schilderwerk zonder degelijke voorbereiding al na 2 tot 3 jaar loslaat of verkleurt.
               </p>
               <p className="text-gray-600 leading-relaxed mb-5">
-                Schildersbedrijf040 voert binnenschilderwerk uit voor woningen, appartementen en bedrijfspanden in Eindhoven en omgeving. Of het gaat om een enkele kamer of een volledige woning — elk project begint met een inspectie van de ondergrond, advies over kleuren en materialen, en een gedetailleerde offerte met vaste prijs.
+                Schildersbedrijf040 voert binnenschilderwerk uit voor woningen, appartementen en bedrijfspanden in Eindhoven en omgeving. Of het gaat om een enkele kamer of een volledige woning, elk project begint met een inspectie van de ondergrond, advies over kleuren en materialen, en een gedetailleerde offerte met vaste prijs.
               </p>
               <p className="text-gray-600 leading-relaxed">
                 Naast het esthetische aspect beschermt binnenschilderwerk uw houtwerk tegen slijtage en vocht. Onbehandelde kozijnen en deurkozijnen drogen uit, gaan werken en zijn gevoeliger voor schade. Regelmatig schilderonderhoud voorkomt dure reparaties op termijn.
@@ -323,7 +323,7 @@ export default function BinnenschilderwerkPage() {
               <div className="rounded-2xl overflow-hidden">
                 <Image
                   src={heroImage}
-                  alt="Professioneel binnenschilderwerk door Schildersbedrijf040 — muren en kozijnen in Eindhoven"
+                  alt="Professioneel binnenschilderwerk door Schildersbedrijf040, muren en kozijnen in Eindhoven"
                   width={600}
                   height={400}
                   className="w-full h-auto object-cover rounded-2xl"
@@ -331,9 +331,9 @@ export default function BinnenschilderwerkPage() {
               </div>
               <div className="grid grid-cols-2 gap-4">
                 {[
-                  { label: 'Levensduur', waarde: '8–10 jaar' },
-                  { label: 'Droogtijd per laag', waarde: '4–6 uur' },
-                  { label: 'Dekking per liter', waarde: '8–10 m²' },
+                  { label: 'Levensduur', waarde: '8 tot 10 jaar' },
+                  { label: 'Droogtijd per laag', waarde: '4 tot 6 uur' },
+                  { label: 'Dekking per liter', waarde: '8 tot 10 m²' },
                   { label: 'BTW woningen 2+ jaar', waarde: '9%' },
                 ].map((item, index) => (
                   <div key={index} className="bg-[#F7F8FA] rounded-xl p-5 text-center">
@@ -365,7 +365,7 @@ export default function BinnenschilderwerkPage() {
               {
                 nummer: '01',
                 titel: 'Muren & Plafonds',
-                beschrijving: 'Muren en plafonds schilderen is het meest voorkomende binnenschilderwerk. Schildersbedrijf040 gebruikt de Boonstoppel Garantietex-lijn: watergedragen muurverf die oplosmiddelvrij is en geen geur achterlaat. Beschikbaar in mat, zijdemat en zijdeglans — afhankelijk van de ruimte en uw voorkeur. Een gemiddelde woonkamer is binnen 1 tot 2 dagen geschilderd.',
+                beschrijving: 'Muren en plafonds schilderen is het meest voorkomende binnenschilderwerk. Schildersbedrijf040 gebruikt de Boonstoppel Garantietex-lijn: watergedragen muurverf die oplosmiddelvrij is en geen geur achterlaat. Beschikbaar in mat, zijdemat en zijdeglans, afhankelijk van de ruimte en uw voorkeur. Een gemiddelde woonkamer is binnen 1 tot 2 dagen geschilderd.',
                 link: '/diensten/latex-spuiten',
                 linkTekst: 'Bekijk ook latex spuiten',
               },
@@ -450,7 +450,7 @@ export default function BinnenschilderwerkPage() {
                 Schildersbedrijf040 hanteert een uurtarief van €35 tot €45 voor binnenschilderwerk, inclusief materiaal. Voor woningen ouder dan 2 jaar geldt het verlaagde btw-tarief van 9%, wat een merkbaar verschil maakt op de eindfactuur. Bij een schilderproject van €2.000 bespaart u daarmee ruim €200 ten opzichte van het standaard btw-tarief van 21%.
               </p>
               <p className="text-gray-600 leading-relaxed mb-6">
-                Schildersbedrijf040 werkt altijd met een vaste offerte — geen verrassingen achteraf. De investering in Boonstoppel verf betaalt zich terug: doordat het schilderwerk 8 tot 10 jaar meegaat in plaats van 3 jaar bij budgetverf, zijn de kosten per jaar lager.
+                Schildersbedrijf040 werkt altijd met een vaste offerte, geen verrassingen achteraf. De investering in Boonstoppel verf betaalt zich terug: doordat het schilderwerk 8 tot 10 jaar meegaat in plaats van 3 jaar bij budgetverf, zijn de kosten per jaar lager.
               </p>
               <Link
                 href="/contact"
@@ -494,7 +494,7 @@ export default function BinnenschilderwerkPage() {
         <div className="absolute inset-0">
           <Image
             src={heroImage}
-            alt="Binnenschilderwerk resultaat — strak geschilderde muren en kozijnen"
+            alt="Binnenschilderwerk resultaat, strak geschilderde muren en kozijnen"
             fill
             sizes="100vw"
             className="object-cover"
@@ -511,7 +511,7 @@ export default function BinnenschilderwerkPage() {
               Resultaat Waar U Trots Op Bent
             </h2>
             <p className="text-gray-300 leading-relaxed mb-8">
-              Van voorbereiding tot de laatste kwaststreek — Schildersbedrijf040 levert binnenschilderwerk dat jarenlang meegaat. Bekijk onze projecten of vraag direct een offerte aan.
+              Van voorbereiding tot de laatste kwaststreek. Schildersbedrijf040 levert binnenschilderwerk dat jarenlang meegaat. Bekijk onze projecten of vraag direct een offerte aan.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link
@@ -543,7 +543,7 @@ export default function BinnenschilderwerkPage() {
               Ons Werkproces in 4 Stappen
             </h2>
             <p className="text-gray-600 leading-relaxed max-w-xl mx-auto">
-              Elk binnenschilderproject bij Schildersbedrijf040 volgt een vast werkproces — van inspectie tot oplevering. Zo weet u precies wat u kunt verwachten.
+              Elk binnenschilderproject bij Schildersbedrijf040 volgt een vast werkproces, van inspectie tot oplevering. Zo weet u precies wat u kunt verwachten.
             </p>
           </div>
 
@@ -581,16 +581,16 @@ export default function BinnenschilderwerkPage() {
                 Waarom Schildersbedrijf040 voor Uw Binnenschilderwerk?
               </h2>
               <p className="text-gray-600 leading-relaxed mb-8">
-                Schildersbedrijf040 onderscheidt zich door vakmanschap, transparantie en het gebruik van uitsluitend Boonstoppel A-merk verf. Eigenaar Jordy Jacobs is persoonlijk betrokken bij elk project — van de eerste inspectie tot de eindcontrole. Dat vertaalt zich in een klantbeoordeling van 5 sterren op Google en een 4,9 op Werkspot.
+                Schildersbedrijf040 onderscheidt zich door vakmanschap, transparantie en het gebruik van uitsluitend Boonstoppel A-merk verf. Eigenaar Jordy Jacobs is persoonlijk betrokken bij elk project, van de eerste inspectie tot de eindcontrole. Dat vertaalt zich in een klantbeoordeling van 5 sterren op Google en een 4,9 op Werkspot.
               </p>
 
               <div className="flex flex-col gap-4">
                 {[
-                  { titel: 'Hoogst beoordeeld in de regio', beschrijving: '5 sterren op Google en 4,9 op Werkspot — gebaseerd op 60+ beoordelingen van woningeigenaren in Eindhoven en omgeving.' },
+                  { titel: 'Hoogst beoordeeld in de regio', beschrijving: '5 sterren op Google en 4,9 op Werkspot, gebaseerd op 60+ beoordelingen van woningeigenaren in Eindhoven en omgeving.' },
                   { titel: 'Uitsluitend Boonstoppel A-merk verf', beschrijving: 'Watergedragen, oplosmiddelvrij en 8 tot 10 jaar bescherming. Beter voor de luchtkwaliteit en duurzamer dan budgetverf.' },
-                  { titel: 'Vaste prijs — geen verrassingen', beschrijving: 'Gedetailleerde offerte binnen 48 uur met vaste prijs. Inclusief materiaal, voorbereiding en oplevering.' },
+                  { titel: 'Vaste prijs, geen verrassingen', beschrijving: 'Gedetailleerde offerte binnen 48 uur met vaste prijs. Inclusief materiaal, voorbereiding en oplevering.' },
                   { titel: 'Nette en schone werkplek', beschrijving: 'Meubels afdekken, vloeren beschermen en na afloop alles netjes achterlaten. Uw woning blijft leefbaar tijdens het schilderwerk.' },
-                  { titel: 'Persoonlijke betrokkenheid', beschrijving: 'Eigenaar Jordy Jacobs is bij elk project betrokken — u hebt altijd een vast aanspreekpunt dat uw wensen kent.' },
+                  { titel: 'Persoonlijke betrokkenheid', beschrijving: 'Eigenaar Jordy Jacobs is bij elk project betrokken, u hebt altijd een vast aanspreekpunt dat uw wensen kent.' },
                 ].map((usp, index) => (
                   <div
                     key={index}
@@ -624,7 +624,7 @@ export default function BinnenschilderwerkPage() {
                 </p>
                 <div className="flex items-center gap-2 mt-3 text-xs font-semibold text-gray-400 uppercase tracking-wide">
                   <GoogleLogo />
-                  Google Reviews — 41 beoordelingen
+                  Google Reviews: 41 beoordelingen
                 </div>
               </div>
 
@@ -643,7 +643,7 @@ export default function BinnenschilderwerkPage() {
                 </p>
                 <div className="flex items-center gap-2 mt-3 text-xs font-semibold text-gray-400 uppercase tracking-wide">
                   <WerkspotLogo />
-                  Werkspot — Topvakman
+                  Werkspot: Topvakman
                 </div>
               </div>
 
@@ -688,7 +688,7 @@ export default function BinnenschilderwerkPage() {
             Vragen over Binnenschilderwerk
           </h2>
           <p className="text-gray-600 leading-relaxed mb-12 max-w-2xl">
-            Staat uw vraag er niet bij? Neem gerust contact op — Schildersbedrijf040 helpt u graag verder.
+            Staat uw vraag er niet bij? Neem gerust contact op. Schildersbedrijf040 helpt u graag verder.
           </p>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
@@ -697,7 +697,7 @@ export default function BinnenschilderwerkPage() {
               <div className="rounded-2xl overflow-hidden relative h-[280px]">
                 <Image
                   src="https://res.cloudinary.com/dbtaisgda/image/upload/v1743873386/WhatsApp_Image_2025-03-27_at_07.55.12_amqj6v.jpg"
-                  alt="Binnenschilderwerk resultaat — strak geschilderde muren en kozijnen door Schildersbedrijf040"
+                  alt="Binnenschilderwerk resultaat, strak geschilderde muren en kozijnen door Schildersbedrijf040"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-cover"
@@ -772,7 +772,7 @@ export default function BinnenschilderwerkPage() {
                 Klaar voor een Frisse Start?
               </h2>
               <p className="text-gray-300 leading-relaxed mb-8">
-                Wilt u weten wat professioneel binnenschilderwerk voor uw woning kost? Schildersbedrijf040 komt graag langs voor een gratis inspectie en vrijblijvende offerte. Bel, mail of vul het contactformulier in — u ontvangt binnen 48 uur een offerte op maat.
+                Wilt u weten wat professioneel binnenschilderwerk voor uw woning kost? Schildersbedrijf040 komt graag langs voor een gratis inspectie en vrijblijvende offerte. Bel, mail of vul het contactformulier in, u ontvangt binnen 48 uur een offerte op maat.
               </p>
               <Link
                 href="/contact"
@@ -818,7 +818,7 @@ export default function BinnenschilderwerkPage() {
                 </div>
                 <div>
                   <div className="text-xs text-gray-400 font-medium uppercase tracking-wide mb-0.5">Bereikbaarheid</div>
-                  <div className="text-white font-semibold">Ma – Vr: 08:00 – 17:30</div>
+                  <div className="text-white font-semibold">Ma t/m vr: 08:00 tot 17:30</div>
                 </div>
               </div>
             </div>

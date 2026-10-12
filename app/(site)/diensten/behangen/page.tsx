@@ -140,11 +140,11 @@ export default function BehangenPage() {
     },
     {
       question: 'Welk type behang is het beste voor mijn woning?',
-      answer: 'Vliesbehang is de populairste keuze voor woningen in Eindhoven omdat vliesbehang eenvoudig te verwerken is, niet krimpt en scheuren in de ondergrond overbrugt. Voor ruimtes met veel slijtage — zoals hallen en kinderkamers — adviseert Schildersbedrijf040 glasvezelbehang, omdat glasvezelbehang het meest duurzaam is en meerdere keren overschilderd kan worden. Fotobehang is ideaal als accentwand in woon- of slaapkamers.',
+      answer: 'Vliesbehang is de populairste keuze voor woningen in Eindhoven omdat vliesbehang eenvoudig te verwerken is, niet krimpt en scheuren in de ondergrond overbrugt. Voor ruimtes met veel slijtage, zoals hallen en kinderkamers, adviseert Schildersbedrijf040 glasvezelbehang, omdat glasvezelbehang het meest duurzaam is en meerdere keren overschilderd kan worden. Fotobehang is ideaal als accentwand in woon- of slaapkamers.',
     },
     {
       question: 'Moet oud behang eerst verwijderd worden?',
-      answer: 'In de meeste gevallen verwijdert Schildersbedrijf040 het oude behang volledig voordat nieuw behang wordt aangebracht. Oud behang dat loslaat of blaasjes vertoont, veroorzaakt oneffenheden onder het nieuwe behang. Het verwijderen van oud behang kost €5 tot €10 per m². Bij vliesbehang kan de vlieslaag soms als ondergrond blijven zitten als deze nog goed hecht — Schildersbedrijf040 beoordeelt dat tijdens de inspectie.',
+      answer: 'In de meeste gevallen verwijdert Schildersbedrijf040 het oude behang volledig voordat nieuw behang wordt aangebracht. Oud behang dat loslaat of blaasjes vertoont, veroorzaakt oneffenheden onder het nieuwe behang. Het verwijderen van oud behang kost €5 tot €10 per m². Bij vliesbehang kan de vlieslaag soms als ondergrond blijven zitten als deze nog goed hecht. Schildersbedrijf040 beoordeelt dat tijdens de inspectie.',
     },
     {
       question: 'Hoe lang duurt het behangen van een kamer?',
@@ -160,11 +160,11 @@ export default function BehangenPage() {
     },
     {
       question: 'Wat is het verschil tussen vliesbehang en vinylbehang?',
-      answer: 'Vliesbehang heeft een vliesdrager die direct op de muur gelijmd wordt — de lijm gaat op de muur, niet op het behang. Dat maakt vliesbehang makkelijker te verwerken en voorkomt krimpen. Vinylbehang heeft een kunststof toplaag die vochtbestendig en afwasbaar is, waardoor vinylbehang geschikt is voor keukens en badkamers. Schildersbedrijf040 adviseert het juiste behangtype op basis van de ruimte en het gewenste gebruik.',
+      answer: 'Vliesbehang heeft een vliesdrager die direct op de muur gelijmd wordt, de lijm gaat op de muur, niet op het behang. Dat maakt vliesbehang makkelijker te verwerken en voorkomt krimpen. Vinylbehang heeft een kunststof toplaag die vochtbestendig en afwasbaar is, waardoor vinylbehang geschikt is voor keukens en badkamers. Schildersbedrijf040 adviseert het juiste behangtype op basis van de ruimte en het gewenste gebruik.',
     },
     {
       question: 'Geeft Schildersbedrijf040 garantie op behangwerk?',
-      answer: 'Schildersbedrijf040 geeft garantie op al het uitgevoerde behangwerk. De garantie dekt zowel het vakmanschap — correcte hechting, strakke naden, naadloos patroonverloop — als de voorbereiding van de ondergrond. Mocht er onverhoopt een naad loslaten of een blaasje ontstaan, dan herstelt Schildersbedrijf040 het kosteloos. Door professionele voorbereiding en het gebruik van kwalitatieve behanglijm is de kans op problemen minimaal.',
+      answer: 'Schildersbedrijf040 geeft garantie op al het uitgevoerde behangwerk. De garantie dekt zowel het vakmanschap, correcte hechting, strakke naden, naadloos patroonverloop, als de voorbereiding van de ondergrond. Mocht er onverhoopt een naad loslaten of een blaasje ontstaan, dan herstelt Schildersbedrijf040 het kosteloos. Door professionele voorbereiding en het gebruik van kwalitatieve behanglijm is de kans op problemen minimaal.',
     },
   ]
 
@@ -182,12 +182,12 @@ export default function BehangenPage() {
   }
 
   const prijzen = [
-    { dienst: 'Vliesbehang aanbrengen', prijs: '€15 – €25 /m²' },
-    { dienst: 'Glasvezelbehang', prijs: '€18 – €30 /m²' },
-    { dienst: 'Fotobehang plaatsen', prijs: '€25 – €40 /m²' },
-    { dienst: 'Oud behang verwijderen', prijs: '€5 – €10 /m²' },
-    { dienst: 'Muren voorbehandelen', prijs: '€8 – €12 /m²' },
-    { dienst: 'Complete kamer (20 m²)', prijs: '€400 – €800' },
+    { dienst: 'Vliesbehang aanbrengen', prijs: '€15 tot €25 /m²' },
+    { dienst: 'Glasvezelbehang', prijs: '€18 tot €30 /m²' },
+    { dienst: 'Fotobehang plaatsen', prijs: '€25 tot €40 /m²' },
+    { dienst: 'Oud behang verwijderen', prijs: '€5 tot €10 /m²' },
+    { dienst: 'Muren voorbehandelen', prijs: '€8 tot €12 /m²' },
+    { dienst: 'Complete kamer (20 m²)', prijs: '€400 tot €800' },
   ]
 
   const werkwijzeStappen = [
@@ -199,12 +199,12 @@ export default function BehangenPage() {
     {
       nummer: 2,
       titel: 'Offerte op Maat',
-      beschrijving: 'Binnen 48 uur ontvangt u een gedetailleerde offerte met vaste prijs — inclusief behang, lijm, voorbehandeling en arbeidskosten.',
+      beschrijving: 'Binnen 48 uur ontvangt u een gedetailleerde offerte met vaste prijs, inclusief behang, lijm, voorbehandeling en arbeidskosten.',
     },
     {
       nummer: 3,
       titel: 'Voorbereiding',
-      beschrijving: 'Oud behang verwijderen, muren gladmaken, scheuren vullen en een grondlaag aanbrengen — de basis voor behangwerk dat jarenlang blijft zitten.',
+      beschrijving: 'Oud behang verwijderen, muren gladmaken, scheuren vullen en een grondlaag aanbrengen, de basis voor behangwerk dat jarenlang blijft zitten.',
     },
     {
       nummer: 4,
@@ -235,7 +235,7 @@ export default function BehangenPage() {
         <div className="absolute inset-0 z-0 opacity-30">
           <Image
             src={heroImage}
-            alt="Professioneel behangen in Eindhoven — vliesbehang vakkundig aangebracht door Schildersbedrijf040"
+            alt="Professioneel behangen in Eindhoven, vliesbehang vakkundig aangebracht door Schildersbedrijf040"
             fill
             sizes="100vw"
             className="object-cover"
@@ -252,7 +252,7 @@ export default function BehangenPage() {
               <span className="text-[#0088FF] block">BEHANGEN</span>
             </h1>
             <p className="text-gray-200 text-lg leading-relaxed max-w-[560px] mb-10 animate-fade-in-up animation-delay-150">
-              Behangen door Schildersbedrijf040 geeft uw woning in Eindhoven en omgeving een compleet nieuwe uitstraling. Van vliesbehang en glasvezelbehang tot fotobehang — Schildersbedrijf040 brengt elk behangtype vakkundig aan met strakke naden en een duurzaam resultaat.
+              Behangen door Schildersbedrijf040 geeft uw woning in Eindhoven en omgeving een compleet nieuwe uitstraling. Van vliesbehang en glasvezelbehang tot fotobehang. Schildersbedrijf040 brengt elk behangtype vakkundig aan met strakke naden en een duurzaam resultaat.
             </p>
             <div className="flex flex-wrap gap-4 animate-fade-in-up animation-delay-300">
               <Link
@@ -280,7 +280,7 @@ export default function BehangenPage() {
                     <StarIcon key={i} />
                   ))}
                 </div>
-                <span className="text-sm text-gray-300 font-medium">5.0 — 41 reviews</span>
+                <span className="text-sm text-gray-300 font-medium">5,0 uit 41 reviews</span>
               </div>
               <div className="w-px h-7 bg-white/15" />
               <div className="flex items-center gap-2.5">
@@ -290,7 +290,7 @@ export default function BehangenPage() {
                     <StarIcon key={i} />
                   ))}
                 </div>
-                <span className="text-sm text-gray-300 font-medium">4.9 — Topvakman</span>
+                <span className="text-sm text-gray-300 font-medium">4,9 op Werkspot</span>
               </div>
             </div>
           </div>
@@ -309,10 +309,10 @@ export default function BehangenPage() {
                 Wat is Professioneel Behangen?
               </h2>
               <p className="text-gray-600 leading-relaxed mb-5">
-                Behangen is het vakkundig aanbrengen van wandbekleding — van vliesbehang en glasvezelbehang tot fotobehang en textiel — op muren en plafonds in woningen en bedrijfspanden. Professioneel behangen verschilt van zelf behangen doordat de voorbereiding van de ondergrond en het nauwkeurige uitlijnen van patronen het verschil maken tussen een resultaat dat 15 jaar meegaat en behangwerk dat na 2 jaar loslaat of blaasjes vertoont.
+                Behangen is het vakkundig aanbrengen van wandbekleding, van vliesbehang en glasvezelbehang tot fotobehang en textiel, op muren en plafonds in woningen en bedrijfspanden. Professioneel behangen verschilt van zelf behangen doordat de voorbereiding van de ondergrond en het nauwkeurige uitlijnen van patronen het verschil maken tussen een resultaat dat 15 jaar meegaat en behangwerk dat na 2 jaar loslaat of blaasjes vertoont.
               </p>
               <p className="text-gray-600 leading-relaxed mb-5">
-                Schildersbedrijf040 voert behangwerk uit voor woningen, appartementen en bedrijfspanden in Eindhoven en omgeving. Of het gaat om een accentwand met fotobehang of een volledige woning met vliesbehang — elk behangproject begint met een inspectie van de ondergrond, advies over het juiste behangtype en een gedetailleerde offerte met vaste prijs.
+                Schildersbedrijf040 voert behangwerk uit voor woningen, appartementen en bedrijfspanden in Eindhoven en omgeving. Of het gaat om een accentwand met fotobehang of een volledige woning met vliesbehang, elk behangproject begint met een inspectie van de ondergrond, advies over het juiste behangtype en een gedetailleerde offerte met vaste prijs.
               </p>
               <p className="text-gray-600 leading-relaxed">
                 Naast het esthetische aspect biedt behang praktische voordelen: vliesbehang overbrugt hairline scheuren in de ondergrond, glasvezelbehang versterkt kwetsbare muren en vinylbehang is vochtbestendig en afwasbaar. Behangen is daarmee niet alleen een stijlkeuze, maar ook een functionele investering in het onderhoud van uw woning.
@@ -323,7 +323,7 @@ export default function BehangenPage() {
               <div className="rounded-2xl overflow-hidden">
                 <Image
                   src={heroImage}
-                  alt="Professioneel behangen door Schildersbedrijf040 — vliesbehang aangebracht in Eindhoven"
+                  alt="Professioneel behangen door Schildersbedrijf040, vliesbehang aangebracht in Eindhoven"
                   width={600}
                   height={400}
                   className="w-full h-auto object-cover rounded-2xl"
@@ -331,9 +331,9 @@ export default function BehangenPage() {
               </div>
               <div className="grid grid-cols-2 gap-4">
                 {[
-                  { label: 'Levensduur vliesbehang', waarde: '15–20 jaar' },
+                  { label: 'Levensduur vliesbehang', waarde: '15 tot 20 jaar' },
                   { label: 'Glasvezel overschilderbaar', waarde: '10x' },
-                  { label: 'Prijs per m²', waarde: '€15–€30' },
+                  { label: 'Prijs per m²', waarde: '€15 tot €30' },
                   { label: 'BTW woningen 2+ jaar', waarde: '9%' },
                 ].map((item, index) => (
                   <div key={index} className="bg-[#F7F8FA] rounded-xl p-5 text-center">
@@ -365,7 +365,7 @@ export default function BehangenPage() {
               {
                 nummer: '01',
                 titel: 'Vliesbehang',
-                beschrijving: 'Vliesbehang is de populairste keuze voor woningen in Eindhoven. De vliesdrager maakt vliesbehang dimensioneel stabiel — vliesbehang krimpt niet, scheurt niet en overbrugt kleine scheuren in de ondergrond. De behanglijm wordt direct op de muur aangebracht in plaats van op het behang, waardoor vliesbehang sneller en schoner te verwerken is. Schildersbedrijf040 brengt vliesbehang aan vanaf €15 per m².',
+                beschrijving: 'Vliesbehang is de populairste keuze voor woningen in Eindhoven. De vliesdrager maakt vliesbehang dimensioneel stabiel, vliesbehang krimpt niet, scheurt niet en overbrugt kleine scheuren in de ondergrond. De behanglijm wordt direct op de muur aangebracht in plaats van op het behang, waardoor vliesbehang sneller en schoner te verwerken is. Schildersbedrijf040 brengt vliesbehang aan vanaf €15 per m².',
                 link: '/contact',
                 linkTekst: 'Offerte vliesbehang',
               },
@@ -379,21 +379,21 @@ export default function BehangenPage() {
               {
                 nummer: '03',
                 titel: 'Vinylbehang',
-                beschrijving: 'Vinylbehang heeft een kunststof toplaag die vochtbestendig, afwasbaar en slijtvast is. Dat maakt vinylbehang bijzonder geschikt voor keukens, badkamers en kinderkamers — ruimtes waar muren vaker vuil worden of in contact komen met vocht. Schildersbedrijf040 brengt vinylbehang professioneel aan, inclusief het zorgvuldig afwerken rond stopcontacten, ramen en hoeken.',
+                beschrijving: 'Vinylbehang heeft een kunststof toplaag die vochtbestendig, afwasbaar en slijtvast is. Dat maakt vinylbehang bijzonder geschikt voor keukens, badkamers en kinderkamers, ruimtes waar muren vaker vuil worden of in contact komen met vocht. Schildersbedrijf040 brengt vinylbehang professioneel aan, inclusief het zorgvuldig afwerken rond stopcontacten, ramen en hoeken.',
                 link: '/contact',
                 linkTekst: 'Vraag advies aan',
               },
               {
                 nummer: '04',
                 titel: 'Fotobehang',
-                beschrijving: 'Fotobehang creëert een unieke accentwand met een fotografisch beeld, patroon of kunstwerk op groot formaat. Fotobehang vereist millimeternauwkeurig paswerk om de banen naadloos op elkaar aan te laten sluiten. Schildersbedrijf040 heeft ruime ervaring met het plaatsen van fotobehang en zorgt voor een vlekkeloos eindresultaat — zonder zichtbare naden of verschuivingen in het beeld.',
+                beschrijving: 'Fotobehang creëert een unieke accentwand met een fotografisch beeld, patroon of kunstwerk op groot formaat. Fotobehang vereist millimeternauwkeurig paswerk om de banen naadloos op elkaar aan te laten sluiten. Schildersbedrijf040 heeft ruime ervaring met het plaatsen van fotobehang en zorgt voor een vlekkeloos eindresultaat, zonder zichtbare naden of verschuivingen in het beeld.',
                 link: '/projecten',
                 linkTekst: 'Bekijk projecten',
               },
               {
                 nummer: '05',
                 titel: 'Textiel & Natuurbehang',
-                beschrijving: 'Textiel- en natuurbehang — zoals jute, linnen, bamboe en gras — geeft muren een warme, organische uitstraling met een tactiele structuur. Natuurbehang is een premium keuze die sfeer toevoegt aan woon- en slaapkamers. Schildersbedrijf040 verwerkt textiel- en natuurbehang met speciale lijm en techniek, omdat natuurlijke materialen gevoeliger zijn voor vocht en vlekken tijdens het aanbrengen.',
+                beschrijving: 'Textiel- en natuurbehang, zoals jute, linnen, bamboe en gras, geeft muren een warme, organische uitstraling met een tactiele structuur. Natuurbehang is een premium keuze die sfeer toevoegt aan woon- en slaapkamers. Schildersbedrijf040 verwerkt textiel- en natuurbehang met speciale lijm en techniek, omdat natuurlijke materialen gevoeliger zijn voor vocht en vlekken tijdens het aanbrengen.',
                 link: '/contact',
                 linkTekst: 'Vraag offerte aan',
               },
@@ -450,7 +450,7 @@ export default function BehangenPage() {
                 Schildersbedrijf040 hanteert een uurtarief van €35 tot €50 voor behangwerk, inclusief materiaal. Voor woningen ouder dan 2 jaar geldt het verlaagde btw-tarief van 9%, wat een merkbaar verschil maakt op de eindfactuur. Bij een behangproject van €1.500 bespaart u daarmee bijna €180 ten opzichte van het standaard btw-tarief van 21%.
               </p>
               <p className="text-gray-600 leading-relaxed mb-6">
-                Schildersbedrijf040 werkt altijd met een vaste offerte — geen verrassingen achteraf. De investering in professioneel behangen betaalt zich terug: vakkundig aangebracht vliesbehang gaat 15 tot 20 jaar mee, terwijl zelf aangebracht behang vaak al na 5 jaar loslaat door onjuiste voorbereiding of verkeerde lijm.
+                Schildersbedrijf040 werkt altijd met een vaste offerte, geen verrassingen achteraf. De investering in professioneel behangen betaalt zich terug: vakkundig aangebracht vliesbehang gaat 15 tot 20 jaar mee, terwijl zelf aangebracht behang vaak al na 5 jaar loslaat door onjuiste voorbereiding of verkeerde lijm.
               </p>
               <Link
                 href="/contact"
@@ -494,7 +494,7 @@ export default function BehangenPage() {
         <div className="absolute inset-0">
           <Image
             src={heroImage}
-            alt="Behangwerk resultaat — vakkundig aangebracht vliesbehang door Schildersbedrijf040"
+            alt="Behangwerk resultaat, vakkundig aangebracht vliesbehang door Schildersbedrijf040"
             fill
             sizes="100vw"
             className="object-cover"
@@ -511,7 +511,7 @@ export default function BehangenPage() {
               Behangwerk Waar U Trots Op Bent
             </h2>
             <p className="text-gray-300 leading-relaxed mb-8">
-              Van het verwijderen van oud behang tot de laatste baan — Schildersbedrijf040 levert behangwerk dat jarenlang meegaat. Bekijk onze projecten of vraag direct een offerte aan.
+              Van het verwijderen van oud behang tot de laatste baan. Schildersbedrijf040 levert behangwerk dat jarenlang meegaat. Bekijk onze projecten of vraag direct een offerte aan.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link
@@ -543,7 +543,7 @@ export default function BehangenPage() {
               Ons Werkproces in 4 Stappen
             </h2>
             <p className="text-gray-600 leading-relaxed max-w-xl mx-auto">
-              Elk behangproject bij Schildersbedrijf040 volgt een vast werkproces — van inspectie tot oplevering. Zo weet u precies wat u kunt verwachten.
+              Elk behangproject bij Schildersbedrijf040 volgt een vast werkproces, van inspectie tot oplevering. Zo weet u precies wat u kunt verwachten.
             </p>
           </div>
 
@@ -581,16 +581,16 @@ export default function BehangenPage() {
                 Waarom Schildersbedrijf040 voor Uw Behangwerk?
               </h2>
               <p className="text-gray-600 leading-relaxed mb-8">
-                Schildersbedrijf040 onderscheidt zich door vakmanschap, transparantie en persoonlijke betrokkenheid bij elk behangproject. Eigenaar Jordy Jacobs is aanwezig bij de inspectie en eindcontrole — dat vertaalt zich in een klantbeoordeling van 5 sterren op Google en een 4,9 op Werkspot.
+                Schildersbedrijf040 onderscheidt zich door vakmanschap, transparantie en persoonlijke betrokkenheid bij elk behangproject. Eigenaar Jordy Jacobs is aanwezig bij de inspectie en eindcontrole, dat vertaalt zich in een klantbeoordeling van 5 sterren op Google en een 4,9 op Werkspot.
               </p>
 
               <div className="flex flex-col gap-4">
                 {[
-                  { titel: 'Hoogst beoordeeld in de regio', beschrijving: '5 sterren op Google en 4,9 op Werkspot — gebaseerd op 60+ beoordelingen van woningeigenaren in Eindhoven en omgeving.' },
-                  { titel: 'Advies over het juiste behangtype', beschrijving: 'Vliesbehang, glasvezelbehang, fotobehang of vinylbehang — Schildersbedrijf040 adviseert op basis van de ruimte, het gebruik en uw budget.' },
-                  { titel: 'Vaste prijs — geen verrassingen', beschrijving: 'Gedetailleerde offerte binnen 48 uur met vaste prijs. Inclusief behang, lijm, voorbehandeling en oplevering.' },
-                  { titel: 'Zorgvuldige voorbereiding', beschrijving: 'Oud behang verwijderen, muren gladmaken en gronden — de basis voor behangwerk dat 15 tot 20 jaar blijft zitten.' },
-                  { titel: 'Persoonlijke betrokkenheid', beschrijving: 'Eigenaar Jordy Jacobs is bij elk project betrokken — u hebt altijd een vast aanspreekpunt dat uw wensen kent.' },
+                  { titel: 'Hoogst beoordeeld in de regio', beschrijving: '5 sterren op Google en 4,9 op Werkspot, gebaseerd op 60+ beoordelingen van woningeigenaren in Eindhoven en omgeving.' },
+                  { titel: 'Advies over het juiste behangtype', beschrijving: 'Vliesbehang, glasvezelbehang, fotobehang of vinylbehang. Schildersbedrijf040 adviseert op basis van de ruimte, het gebruik en uw budget.' },
+                  { titel: 'Vaste prijs, geen verrassingen', beschrijving: 'Gedetailleerde offerte binnen 48 uur met vaste prijs. Inclusief behang, lijm, voorbehandeling en oplevering.' },
+                  { titel: 'Zorgvuldige voorbereiding', beschrijving: 'Oud behang verwijderen, muren gladmaken en gronden, de basis voor behangwerk dat 15 tot 20 jaar blijft zitten.' },
+                  { titel: 'Persoonlijke betrokkenheid', beschrijving: 'Eigenaar Jordy Jacobs is bij elk project betrokken, u hebt altijd een vast aanspreekpunt dat uw wensen kent.' },
                 ].map((usp, index) => (
                   <div
                     key={index}
@@ -624,7 +624,7 @@ export default function BehangenPage() {
                 </p>
                 <div className="flex items-center gap-2 mt-3 text-xs font-semibold text-gray-400 uppercase tracking-wide">
                   <GoogleLogo />
-                  Google Reviews — 41 beoordelingen
+                  Google Reviews: 41 beoordelingen
                 </div>
               </div>
 
@@ -643,7 +643,7 @@ export default function BehangenPage() {
                 </p>
                 <div className="flex items-center gap-2 mt-3 text-xs font-semibold text-gray-400 uppercase tracking-wide">
                   <WerkspotLogo />
-                  Werkspot — Topvakman
+                  Werkspot: Topvakman
                 </div>
               </div>
 
@@ -688,7 +688,7 @@ export default function BehangenPage() {
             Vragen over Behangen
           </h2>
           <p className="text-gray-600 leading-relaxed mb-12 max-w-2xl">
-            Staat uw vraag er niet bij? Neem gerust contact op — Schildersbedrijf040 helpt u graag verder.
+            Staat uw vraag er niet bij? Neem gerust contact op. Schildersbedrijf040 helpt u graag verder.
           </p>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
@@ -697,7 +697,7 @@ export default function BehangenPage() {
               <div className="rounded-2xl overflow-hidden relative h-[280px]">
                 <Image
                   src="https://res.cloudinary.com/dbtaisgda/image/upload/v1743873386/WhatsApp_Image_2025-03-27_at_07.54.37_htpaan.jpg"
-                  alt="Behangwerk resultaat — professioneel aangebracht behang door Schildersbedrijf040 in Eindhoven"
+                  alt="Behangwerk resultaat, professioneel aangebracht behang door Schildersbedrijf040 in Eindhoven"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-cover"
@@ -772,7 +772,7 @@ export default function BehangenPage() {
                 Klaar voor een Nieuwe Wand?
               </h2>
               <p className="text-gray-300 leading-relaxed mb-8">
-                Wilt u weten wat professioneel behangen voor uw woning kost? Schildersbedrijf040 komt graag langs voor een gratis inspectie en vrijblijvende offerte. Bel, mail of vul het contactformulier in — u ontvangt binnen 48 uur een offerte op maat.
+                Wilt u weten wat professioneel behangen voor uw woning kost? Schildersbedrijf040 komt graag langs voor een gratis inspectie en vrijblijvende offerte. Bel, mail of vul het contactformulier in, u ontvangt binnen 48 uur een offerte op maat.
               </p>
               <Link
                 href="/contact"
@@ -818,7 +818,7 @@ export default function BehangenPage() {
                 </div>
                 <div>
                   <div className="text-xs text-gray-400 font-medium uppercase tracking-wide mb-0.5">Bereikbaarheid</div>
-                  <div className="text-white font-semibold">Ma – Vr: 08:00 – 17:30</div>
+                  <div className="text-white font-semibold">Ma t/m vr: 08:00 tot 17:30</div>
                 </div>
               </div>
             </div>

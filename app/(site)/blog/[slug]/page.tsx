@@ -298,7 +298,7 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
                 <div className="relative w-14 h-14 rounded-full overflow-hidden flex-shrink-0 ring-2 ring-[#0088FF]/20">
                   <Image
                     src="https://res.cloudinary.com/dbtaisgda/image/upload/v1739556938/d46oqzht95tblkswur6p.jpg"
-                    alt="Jordy Jacobs — Schildersbedrijf040"
+                    alt="Jordy Jacobs, eigenaar van Schildersbedrijf040"
                     fill
                     sizes="56px"
                     className="object-cover object-top"
@@ -357,7 +357,7 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
                     Veelgestelde Vragen
                   </span>
                   <h2 className="font-bebas text-[clamp(2rem,4vw,3rem)] leading-tight mb-8">
-                    FAQ — {post.category}
+                    FAQ: {post.category}
                   </h2>
                   <div className="flex flex-col gap-2">
                     {post.faq.map((item, index) => (
@@ -387,7 +387,7 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
                 <div className="relative aspect-[4/3] overflow-hidden">
                   <Image
                     src="https://res.cloudinary.com/dbtaisgda/image/upload/v1739556938/d46oqzht95tblkswur6p.jpg"
-                    alt="Jordy Jacobs op een trap — Eigenaar Schildersbedrijf040"
+                    alt="Jordy Jacobs op een trap, eigenaar Schildersbedrijf040"
                     fill
                     sizes="340px"
                     className="object-cover object-center"
@@ -398,7 +398,7 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
                     <span className="text-xs font-semibold text-[#0088FF] uppercase tracking-wide">Geschreven door</span>
                   </div>
                   <h3 className="font-bebas text-xl mb-1">{post.author.name}</h3>
-                  <p className="text-sm text-[#0088FF] font-medium mb-3">{post.author.role} — Schildersbedrijf040</p>
+                  <p className="text-sm text-[#0088FF] font-medium mb-3">{post.author.role} bij Schildersbedrijf040</p>
                   <p className="text-gray-600 text-sm leading-relaxed">
                     Met meer dan 5 jaar ervaring in het schildersvak deel ik graag mijn kennis en tips voor het beste resultaat.
                   </p>
@@ -436,7 +436,7 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
                 </div>
                 <div className="flex items-center gap-2 text-xs font-semibold text-gray-400 uppercase tracking-wide">
                   <GoogleLogo />
-                  5.0 — 41 reviews
+                  5,0 uit 41 reviews
                 </div>
               </div>
             </aside>

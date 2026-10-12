@@ -19,7 +19,7 @@ const services = [
   },
   {
     title: 'Behangen',
-    description: 'Van klassiek behang tot moderne wandbekleding — Schildersbedrijf040 zorgt voor een naadloze afwerking. Behang geeft uw interieur direct karakter en is beschikbaar in honderden dessins.',
+    description: 'Van klassiek behang tot moderne wandbekleding. Schildersbedrijf040 zorgt voor een naadloze afwerking. Behang geeft uw interieur direct karakter en is beschikbaar in honderden dessins.',
     image: 'https://lh3.googleusercontent.com/p/AF1QipNI8hPbuWSdgczF1ESCx3LJuCE1R20aoXhy4qw0=s680-w680-h510',
     link: '/diensten/behangen'
   },

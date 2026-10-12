@@ -187,12 +187,12 @@ export default function LocationPage({ params }: { params: { city: string } }) {
   }
 
   const prijzen = [
-    { dienst: 'Binnenschilderwerk', prijs: '€35 – €45 /uur' },
-    { dienst: 'Buitenschilderwerk', prijs: '€40 – €55 /uur' },
-    { dienst: 'Behangen', prijs: '€35 – €50 /uur' },
-    { dienst: 'Houtrot sanering', prijs: '€45 – €55 /uur' },
-    { dienst: 'Lakwerk', prijs: '€40 – €50 /uur' },
-    { dienst: 'Latex spuiten', prijs: '€35 – €50 /uur' },
+    { dienst: 'Binnenschilderwerk', prijs: '€35 tot €45 /uur' },
+    { dienst: 'Buitenschilderwerk', prijs: '€40 tot €55 /uur' },
+    { dienst: 'Behangen', prijs: '€35 tot €50 /uur' },
+    { dienst: 'Houtrot sanering', prijs: '€45 tot €55 /uur' },
+    { dienst: 'Lakwerk', prijs: '€40 tot €50 /uur' },
+    { dienst: 'Latex spuiten', prijs: '€35 tot €50 /uur' },
   ]
 
   const werkwijzeStappen = [
@@ -209,7 +209,7 @@ export default function LocationPage({ params }: { params: { city: string } }) {
     {
       nummer: 3,
       titel: 'Offerte',
-      beschrijving: 'Binnen 48 uur een gedetailleerde offerte met vaste prijs — zonder verborgen kosten.',
+      beschrijving: 'Binnen 48 uur een gedetailleerde offerte met vaste prijs, zonder verborgen kosten.',
     },
     {
       nummer: 4,
@@ -241,7 +241,7 @@ export default function LocationPage({ params }: { params: { city: string } }) {
         <div className="absolute inset-0 z-0 opacity-30">
           <Image
             src={data.heroImage}
-            alt={`Schildersbedrijf in ${data.displayName} — Schildersbedrijf040`}
+            alt={`Schildersbedrijf in ${data.displayName}. Schildersbedrijf040`}
             fill
             sizes="100vw"
             className="object-cover"
@@ -288,7 +288,7 @@ export default function LocationPage({ params }: { params: { city: string } }) {
                     <StarIcon key={i} />
                   ))}
                 </div>
-                <span className="text-sm text-gray-300 font-medium">5.0 — 41 reviews</span>
+                <span className="text-sm text-gray-300 font-medium">5,0 uit 41 reviews</span>
               </div>
               <div className="w-px h-7 bg-white/15" />
               <div className="flex items-center gap-2.5">
@@ -298,7 +298,7 @@ export default function LocationPage({ params }: { params: { city: string } }) {
                     <StarIcon key={i} />
                   ))}
                 </div>
-                <span className="text-sm text-gray-300 font-medium">4.9 — Topvakman</span>
+                <span className="text-sm text-gray-300 font-medium">4,9 op Werkspot</span>
               </div>
             </div>
           </div>
@@ -315,7 +315,7 @@ export default function LocationPage({ params }: { params: { city: string } }) {
             Schilderdiensten in {data.displayName}
           </h2>
           <p className="text-gray-600 leading-relaxed mb-12 max-w-2xl">
-            Van binnenschilderwerk tot houtrot sanering — elk project wordt vakkundig uitgevoerd met Boonstoppel verf en jarenlange ervaring.
+            Van binnenschilderwerk tot houtrot sanering, elk project wordt vakkundig uitgevoerd met Boonstoppel verf en jarenlange ervaring.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0.5 rounded-2xl overflow-hidden">
@@ -419,7 +419,7 @@ export default function LocationPage({ params }: { params: { city: string } }) {
               Resultaat Waar U Trots Op Bent
             </h2>
             <p className="text-gray-300 leading-relaxed mb-8">
-              Van voorbereiding tot de laatste kwaststreek — wij leveren schilderwerk dat jarenlang meegaat. Bekijk onze projecten of vraag direct een offerte aan.
+              Van voorbereiding tot de laatste kwaststreek, wij leveren schilderwerk dat jarenlang meegaat. Bekijk onze projecten of vraag direct een offerte aan.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link
@@ -458,9 +458,9 @@ export default function LocationPage({ params }: { params: { city: string } }) {
               <div className="flex flex-col gap-4">
                 {[
                   { titel: 'Hoogst beoordeeld in de regio', beschrijving: '5 sterren op Google en 4,9 op Werkspot met 41+ beoordelingen.' },
-                  { titel: 'Premium Boonstoppel verf', beschrijving: '8 tot 10 jaar bescherming — de beste keuze voor langdurig resultaat.' },
-                  { titel: 'Garantie op elk project', beschrijving: 'Kwaliteitsgarantie op al het schilderwerk — u bent altijd verzekerd.' },
-                  { titel: 'Korte reistijd — lage kosten', beschrijving: `Gevestigd in Eindhoven, minimale voorrijkosten voor ${data.displayName}.` },
+                  { titel: 'Premium Boonstoppel verf', beschrijving: '8 tot 10 jaar bescherming, de beste keuze voor langdurig resultaat.' },
+                  { titel: 'Garantie op elk project', beschrijving: 'Kwaliteitsgarantie op al het schilderwerk, u bent altijd verzekerd.' },
+                  { titel: 'Korte reistijd, lage kosten', beschrijving: `Gevestigd in Eindhoven, minimale voorrijkosten voor ${data.displayName}.` },
                   { titel: `Kennis van lokale bouwstijlen`, beschrijving: `Ervaring met woningen in ${data.wijken.join(', ')}.` },
                 ].map((usp, index) => (
                   <div
@@ -495,7 +495,7 @@ export default function LocationPage({ params }: { params: { city: string } }) {
                 </p>
                 <div className="flex items-center gap-2 mt-3 text-xs font-semibold text-gray-400 uppercase tracking-wide">
                   <GoogleLogo />
-                  Google Reviews — 41 beoordelingen
+                  Google Reviews: 41 beoordelingen
                 </div>
               </div>
 
@@ -514,7 +514,7 @@ export default function LocationPage({ params }: { params: { city: string } }) {
                 </p>
                 <div className="flex items-center gap-2 mt-3 text-xs font-semibold text-gray-400 uppercase tracking-wide">
                   <WerkspotLogo />
-                  Werkspot — Topvakman
+                  Werkspot: Topvakman
                 </div>
               </div>
             </div>
@@ -570,7 +570,7 @@ export default function LocationPage({ params }: { params: { city: string } }) {
             Vragen over Schilderwerk in {data.displayName}
           </h2>
           <p className="text-gray-600 leading-relaxed mb-12 max-w-2xl">
-            Staat uw vraag er niet bij? Neem gerust contact op — wij helpen u graag.
+            Staat uw vraag er niet bij? Neem gerust contact op, wij helpen u graag.
           </p>
 
           <div className="max-w-3xl flex flex-col gap-2">
@@ -663,7 +663,7 @@ export default function LocationPage({ params }: { params: { city: string } }) {
                 </div>
                 <div>
                   <div className="text-xs text-gray-400 font-medium uppercase tracking-wide mb-0.5">Bereikbaarheid</div>
-                  <div className="text-white font-semibold">Ma – Vr: 08:00 – 17:30</div>
+                  <div className="text-white font-semibold">Ma t/m vr: 08:00 tot 17:30</div>
                 </div>
               </div>
             </div>

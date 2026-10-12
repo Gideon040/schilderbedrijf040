@@ -6,7 +6,7 @@ export const batch2Data: Record<string, CityData> = {
     displayName: 'Deurne',
     heroImage: 'https://res.cloudinary.com/dbtaisgda/image/upload/v1743873386/WhatsApp_Image_2025-03-27_at_07.53.08_myzeda.jpg',
     wijken: ['Deurne-Centrum', 'Walsberg', 'Liessel', 'Vlierden'],
-    intro: 'Schildersbedrijf040 is gevestigd in Eindhoven en uw betrouwbare schilder in Deurne voor zowel particulieren als bedrijven. Deurne is een Peelgemeente met een landelijk karakter, waar het historisch centrum en de kerkgebouwen vakkundig schilderwerk verdienen. Van Deurne-Centrum tot Walsberg, Liessel en Vlierden — Schildersbedrijf040 verzorgt binnenschilderwerk, buitenschilderwerk, behangen, houtrot sanering, lakwerk en latex spuiten op het hoogste niveau. Met 5 sterren op Google uit 41 beoordelingen en een 4,9 op Werkspot is Schildersbedrijf040 de best beoordeelde schilder voor Deurne en omgeving.',
+    intro: 'Schildersbedrijf040 is gevestigd in Eindhoven en uw betrouwbare schilder in Deurne voor zowel particulieren als bedrijven. Deurne is een Peelgemeente met een landelijk karakter, waar het historisch centrum en de kerkgebouwen vakkundig schilderwerk verdienen. Van Deurne-Centrum tot Walsberg, Liessel en Vlierden. Schildersbedrijf040 verzorgt binnenschilderwerk, buitenschilderwerk, behangen, houtrot sanering, lakwerk en latex spuiten op het hoogste niveau. Met 5 sterren op Google uit 41 beoordelingen en een 4,9 op Werkspot is Schildersbedrijf040 de best beoordeelde schilder voor Deurne en omgeving.',
     kosten: 'Schilderwerk in Deurne kost gemiddeld tussen €35 en €55 per uur, afhankelijk van het type werk. Buitenschilderwerk vraagt meer voorbereiding dan binnenschilderwerk, wat de prijs beïnvloedt. Veel woningen in Deurne-Centrum en de uitbreidingswijken hebben houten kozijnen die periodiek onderhoud nodig hebben. Schildersbedrijf040 werkt met Boonstoppel verf die 8 tot 10 jaar bescherming biedt, in tegenstelling tot budgetverf die al na 3 jaar verbleekt. In Deurne is kwalitatieve verf een investering die zichzelf ruimschoots terugbetaalt.',
     diensten: [
       {
@@ -22,7 +22,7 @@ export const batch2Data: Record<string, CityData> = {
       {
         title: 'Behangen',
         slug: 'behangen',
-        description: 'Behangen geeft uw woning in Deurne een geheel nieuwe uitstraling zonder te hoeven schilderen. Schildersbedrijf040 verwijdert bestaand behang, bereidt de muren voor en brengt nieuw vlies- of printbehang naadloos aan. Van modern behang in een nieuwbouwwoning tot klassiek behang in een historisch pand in Deurne-Centrum — Schildersbedrijf040 levert maatwerk.'
+        description: 'Behangen geeft uw woning in Deurne een geheel nieuwe uitstraling zonder te hoeven schilderen. Schildersbedrijf040 verwijdert bestaand behang, bereidt de muren voor en brengt nieuw vlies- of printbehang naadloos aan. Van modern behang in een nieuwbouwwoning tot klassiek behang in een historisch pand in Deurne-Centrum. Schildersbedrijf040 levert maatwerk.'
       },
       {
         title: 'Houtrot Sanering',
@@ -41,7 +41,7 @@ export const batch2Data: Record<string, CityData> = {
       }
     ],
     waarom: 'Schildersbedrijf040 opereert vanuit Eindhoven en bereikt Deurne binnen een korte rijtijd, waardoor er geen hoge voorrijkosten zijn. Het team kent de bouwstijlen in Deurne-Centrum, Walsberg, Liessel en Vlierden en past de aanpak aan op het landelijke karakter van de Peelgemeente. Met een beoordeling van 5 sterren op Google en een 4,9 op Werkspot, het gebruik van Boonstoppel verf en garantie op elk project is Schildersbedrijf040 de logische keuze voor schilderwerk in Deurne.',
-    werkwijze: 'Het schilderproces van Schildersbedrijf040 in Deurne begint met een vrijblijvend telefonisch of digitaal contact om uw wensen te bespreken. Daarna volgt een inspectie bij u ter plaatse in Deurne, waarna Schildersbedrijf040 binnen 48 uur een heldere offerte stuurt. Na akkoord start de uitvoering op de afgesproken datum — meubels en vloeren worden afgedekt en er wordt netjes gewerkt.',
+    werkwijze: 'Het schilderproces van Schildersbedrijf040 in Deurne begint met een vrijblijvend telefonisch of digitaal contact om uw wensen te bespreken. Daarna volgt een inspectie bij u ter plaatse in Deurne, waarna Schildersbedrijf040 binnen 48 uur een heldere offerte stuurt. Na akkoord start de uitvoering op de afgesproken datum, meubels en vloeren worden afgedekt en er wordt netjes gewerkt.',
     contact: 'Zoekt u een schilder in Deurne? Neem contact op met Schildersbedrijf040 voor een vrijblijvende offerte. Bel 06-38903004, mail naar info@schildersbedrijf040.nl of vul het contactformulier in.',
     faqs: [
       {
@@ -107,7 +107,7 @@ export const batch2Data: Record<string, CityData> = {
       }
     ],
     waarom: 'Schildersbedrijf040 is gevestigd in Eindhoven en bereikt Beek en Donk binnen een korte rijtijd, waardoor er geen hoge voorrijkosten zijn. Het team kent de woningtypen in Beek, Donk, Aarle-Rixtel en Lieshout en weet welke aanpak het dorpse karakter van de gemeente Laarbeek vraagt. Met 5 sterren op Google en een 4,9 op Werkspot, het gebruik van Boonstoppel verf en garantie op elk project is Schildersbedrijf040 een betrouwbare keuze voor schilderwerk in Beek en Donk.',
-    werkwijze: 'Schildersbedrijf040 start in Beek en Donk met een vrijblijvend telefonisch of digitaal contact om uw wensen te bespreken. Vervolgens plant Schildersbedrijf040 een inspectie ter plaatse in de gemeente Laarbeek en levert binnen 48 uur een heldere offerte. Na akkoord begint de uitvoering op de afgesproken datum — Schildersbedrijf040 beschermt uw interieur zorgvuldig en werkt netjes.',
+    werkwijze: 'Schildersbedrijf040 start in Beek en Donk met een vrijblijvend telefonisch of digitaal contact om uw wensen te bespreken. Vervolgens plant Schildersbedrijf040 een inspectie ter plaatse in de gemeente Laarbeek en levert binnen 48 uur een heldere offerte. Na akkoord begint de uitvoering op de afgesproken datum. Schildersbedrijf040 beschermt uw interieur zorgvuldig en werkt netjes.',
     contact: 'Op zoek naar een schilder in Beek en Donk? Neem contact op met Schildersbedrijf040 voor een vrijblijvende offerte. Bel 06-38903004, mail naar info@schildersbedrijf040.nl of vul het contactformulier in.',
     faqs: [
       {
@@ -154,7 +154,7 @@ export const batch2Data: Record<string, CityData> = {
       {
         title: 'Behangen',
         slug: 'behangen',
-        description: 'Behangen geeft uw woning in Eersel een vernieuwde uitstraling die past bij het Kempische karakter. Schildersbedrijf040 verwijdert bestaand behang, egalisert de muren en brengt nieuw vlies- of printbehang naadloos aan. Van een modern interieur in Knegsel tot een klassiek behangen kamer in een woning aan het Eerselse marktplein — Schildersbedrijf040 levert maatwerk.'
+        description: 'Behangen geeft uw woning in Eersel een vernieuwde uitstraling die past bij het Kempische karakter. Schildersbedrijf040 verwijdert bestaand behang, egalisert de muren en brengt nieuw vlies- of printbehang naadloos aan. Van een modern interieur in Knegsel tot een klassiek behangen kamer in een woning aan het Eerselse marktplein. Schildersbedrijf040 levert maatwerk.'
       },
       {
         title: 'Houtrot Sanering',
@@ -173,7 +173,7 @@ export const batch2Data: Record<string, CityData> = {
       }
     ],
     waarom: 'Schildersbedrijf040 opereert vanuit Eindhoven en bereikt Eersel binnen een korte rijtijd, waardoor er geen hoge voorrijkosten zijn. Het team kent de Kempische bouwstijlen in Eersel-Centrum, Duizel, Steensel en Knegsel en begrijpt welke aanpak monumentale gevels en uitgebreid houtwerk vragen. Met 5 sterren op Google en een 4,9 op Werkspot, het gebruik van Boonstoppel verf en garantie op elk project is Schildersbedrijf040 de logische keuze voor schilderwerk in Eersel.',
-    werkwijze: 'Het schilderproces van Schildersbedrijf040 in Eersel start met een vrijblijvend telefonisch of digitaal contact om uw wensen te bespreken. Daarna volgt een inspectie ter plaatse in Eersel, waarna Schildersbedrijf040 binnen 48 uur een heldere offerte stuurt. Na akkoord start de uitvoering op de afgesproken datum — meubels en vloeren worden afgedekt en er wordt netjes gewerkt.',
+    werkwijze: 'Het schilderproces van Schildersbedrijf040 in Eersel start met een vrijblijvend telefonisch of digitaal contact om uw wensen te bespreken. Daarna volgt een inspectie ter plaatse in Eersel, waarna Schildersbedrijf040 binnen 48 uur een heldere offerte stuurt. Na akkoord start de uitvoering op de afgesproken datum, meubels en vloeren worden afgedekt en er wordt netjes gewerkt.',
     contact: 'Zoekt u een schilder in Eersel? Neem contact op met Schildersbedrijf040 voor een vrijblijvende offerte. Bel 06-38903004, mail naar info@schildersbedrijf040.nl of vul het contactformulier in op de contactpagina.',
     faqs: [
       {
@@ -220,7 +220,7 @@ export const batch2Data: Record<string, CityData> = {
       {
         title: 'Behangen',
         slug: 'behangen',
-        description: 'Behangen geeft uw woning in Bergeijk een geheel nieuwe uitstraling. Schildersbedrijf040 verwijdert bestaand behang, egalisert de muren en brengt nieuw vlies- of printbehang naadloos aan. Van een modern interieur in Riethoven tot een klassiek behangen kamer in een karakteristiek pand in Bergeijk-Centrum — Schildersbedrijf040 levert vakkundig behangwerk.'
+        description: 'Behangen geeft uw woning in Bergeijk een geheel nieuwe uitstraling. Schildersbedrijf040 verwijdert bestaand behang, egalisert de muren en brengt nieuw vlies- of printbehang naadloos aan. Van een modern interieur in Riethoven tot een klassiek behangen kamer in een karakteristiek pand in Bergeijk-Centrum. Schildersbedrijf040 levert vakkundig behangwerk.'
       },
       {
         title: 'Houtrot Sanering',
@@ -239,7 +239,7 @@ export const batch2Data: Record<string, CityData> = {
       }
     ],
     waarom: 'Schildersbedrijf040 opereert vanuit Eindhoven en bereikt Bergeijk binnen een korte rijtijd, waardoor er geen hoge voorrijkosten zijn. Het team kent de Kempische bouwstijlen in Bergeijk-Centrum, Westerhoven, Riethoven en Luyksgestel en begrijpt welke aanpak houten geveldelen en agrarisch erfgoed vragen. Met 5 sterren op Google en een 4,9 op Werkspot, het gebruik van Boonstoppel verf en garantie op elk project is Schildersbedrijf040 een betrouwbare keuze voor schilderwerk in Bergeijk.',
-    werkwijze: 'Schildersbedrijf040 start in Bergeijk met een vrijblijvend telefonisch of digitaal contact om uw wensen te bespreken. Vervolgens plant Schildersbedrijf040 een inspectie bij u ter plaatse in Bergeijk en levert binnen 48 uur een heldere offerte. Na akkoord begint de uitvoering op de afgesproken datum — meubels en vloeren worden afgedekt en er wordt netjes gewerkt.',
+    werkwijze: 'Schildersbedrijf040 start in Bergeijk met een vrijblijvend telefonisch of digitaal contact om uw wensen te bespreken. Vervolgens plant Schildersbedrijf040 een inspectie bij u ter plaatse in Bergeijk en levert binnen 48 uur een heldere offerte. Na akkoord begint de uitvoering op de afgesproken datum, meubels en vloeren worden afgedekt en er wordt netjes gewerkt.',
     contact: 'Op zoek naar een schilder in Bergeijk? Neem contact op met Schildersbedrijf040 voor een vrijblijvende offerte. Bel 06-38903004, mail naar info@schildersbedrijf040.nl of vul het contactformulier in.',
     faqs: [
       {
@@ -286,7 +286,7 @@ export const batch2Data: Record<string, CityData> = {
       {
         title: 'Behangen',
         slug: 'behangen',
-        description: 'Behangen geeft uw woning in Maarheeze een vernieuwde uitstraling die past bij het dorpse karakter. Schildersbedrijf040 verwijdert bestaand behang, bereidt de muren voor en brengt nieuw vlies- of printbehang naadloos aan. Van een moderne woning in Gastel tot een karakteristiek pand in de dorpskern van Maarheeze — Schildersbedrijf040 levert vakkundig behangwerk.'
+        description: 'Behangen geeft uw woning in Maarheeze een vernieuwde uitstraling die past bij het dorpse karakter. Schildersbedrijf040 verwijdert bestaand behang, bereidt de muren voor en brengt nieuw vlies- of printbehang naadloos aan. Van een moderne woning in Gastel tot een karakteristiek pand in de dorpskern van Maarheeze. Schildersbedrijf040 levert vakkundig behangwerk.'
       },
       {
         title: 'Houtrot Sanering',
@@ -305,7 +305,7 @@ export const batch2Data: Record<string, CityData> = {
       }
     ],
     waarom: 'Schildersbedrijf040 opereert vanuit Eindhoven en bereikt Maarheeze binnen een korte rijtijd, waardoor er geen hoge voorrijkosten zijn. Het team kent de Brabantse bouwstijlen in Maarheeze-Centrum, Soerendonk en Gastel en begrijpt welke aanpak het uitgebreide houtwerk in de gemeente Cranendonck vraagt. Met 5 sterren op Google en een 4,9 op Werkspot, het gebruik van Boonstoppel verf en garantie op elk project is Schildersbedrijf040 de logische keuze voor schilderwerk in Maarheeze.',
-    werkwijze: 'Het schilderproces van Schildersbedrijf040 in Maarheeze begint met een vrijblijvend telefonisch of digitaal contact om uw wensen te bespreken. Daarna volgt een inspectie ter plaatse in Maarheeze, waarna Schildersbedrijf040 binnen 48 uur een heldere offerte stuurt. Na akkoord start de uitvoering op de afgesproken datum — meubels en vloeren worden afgedekt en er wordt netjes gewerkt.',
+    werkwijze: 'Het schilderproces van Schildersbedrijf040 in Maarheeze begint met een vrijblijvend telefonisch of digitaal contact om uw wensen te bespreken. Daarna volgt een inspectie ter plaatse in Maarheeze, waarna Schildersbedrijf040 binnen 48 uur een heldere offerte stuurt. Na akkoord start de uitvoering op de afgesproken datum, meubels en vloeren worden afgedekt en er wordt netjes gewerkt.',
     contact: 'Zoekt u een schilder in Maarheeze? Neem contact op met Schildersbedrijf040 voor een vrijblijvende offerte. Bel 06-38903004, mail naar info@schildersbedrijf040.nl of vul het contactformulier in.',
     faqs: [
       {

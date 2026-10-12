@@ -32,7 +32,7 @@ export function Guarantees() {
         <div className="text-center mb-16">
           <h2 id="onze-garanties" className="text-4xl md:text-5xl font-bold mb-4">ONZE GARANTIES</h2>
           <p className="text-gray-600 max-w-3xl mx-auto">
-            Schilderwerk is een investering in uw woning — dan wilt u zekerheid over het resultaat. Schildersbedrijf040 biedt daarom duidelijke garanties op materiaal, vakmanschap en planning, zodat u zonder zorgen kunt genieten van uw vernieuwde woning.
+            Schilderwerk is een investering in uw woning, dan wilt u zekerheid over het resultaat. Schildersbedrijf040 biedt daarom duidelijke garanties op materiaal, vakmanschap en planning, zodat u zonder zorgen kunt genieten van uw vernieuwde woning.
           </p>
         </div>
 

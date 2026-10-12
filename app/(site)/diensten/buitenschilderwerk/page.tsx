@@ -130,7 +130,7 @@ export default function BuitenschilderwerkPage() {
     },
     {
       question: 'Hoe lang gaat buitenschilderwerk mee?',
-      answer: 'Professioneel buitenschilderwerk met Boonstoppel verf gaat 8 tot 10 jaar mee. Budgetverf houdt gemiddeld 3 tot 5 jaar — waardoor u vaker moet laten schilderen en de totale kosten hoger uitvallen. De levensduur hangt ook af van de ligging van het houtwerk: kozijnen op het zuiden en westen krijgen meer zon en regen, waardoor de verf daar sneller slijt. Schildersbedrijf040 houdt hier rekening mee door op belaste delen een extra verflaag aan te brengen.',
+      answer: 'Professioneel buitenschilderwerk met Boonstoppel verf gaat 8 tot 10 jaar mee. Budgetverf houdt gemiddeld 3 tot 5 jaar, waardoor u vaker moet laten schilderen en de totale kosten hoger uitvallen. De levensduur hangt ook af van de ligging van het houtwerk: kozijnen op het zuiden en westen krijgen meer zon en regen, waardoor de verf daar sneller slijt. Schildersbedrijf040 houdt hier rekening mee door op belaste delen een extra verflaag aan te brengen.',
     },
     {
       question: 'Controleert Schildersbedrijf040 op houtrot voor het schilderen?',
@@ -142,7 +142,7 @@ export default function BuitenschilderwerkPage() {
     },
     {
       question: 'Welke verf gebruikt Schildersbedrijf040 voor buitenschilderwerk?',
-      answer: 'Schildersbedrijf040 werkt uitsluitend met de Boonstoppel Garantie-lijn voor buitenschilderwerk. De Boonstoppel Garantie Systeemverf is een duurzame zijdeglans buitenverf die zowel als grond- en aflak kan dienen — ideaal voor onderhoudswerk. Voor nieuw houtwerk gebruikt Schildersbedrijf040 de Boonstoppel Garantie Grondlakverf 2000 als basis. Boonstoppel buitenverf is bestand tegen zon, regen en vorst zonder te bladderen of verkleuren.',
+      answer: 'Schildersbedrijf040 werkt uitsluitend met de Boonstoppel Garantie-lijn voor buitenschilderwerk. De Boonstoppel Garantie Systeemverf is een duurzame zijdeglans buitenverf die zowel als grond- en aflak kan dienen, ideaal voor onderhoudswerk. Voor nieuw houtwerk gebruikt Schildersbedrijf040 de Boonstoppel Garantie Grondlakverf 2000 als basis. Boonstoppel buitenverf is bestand tegen zon, regen en vorst zonder te bladderen of verkleuren.',
     },
     {
       question: 'Kan buitenschilderwerk ook in het najaar uitgevoerd worden?',
@@ -165,12 +165,12 @@ export default function BuitenschilderwerkPage() {
   }
 
   const prijzen = [
-    { dienst: 'Gevel schilderen', prijs: '€35 – €45 /m²' },
-    { dienst: 'Kozijnen buiten', prijs: '€50 – €100 /stuk' },
-    { dienst: 'Deuren buiten', prijs: '€100 – €150 /stuk' },
-    { dienst: 'Boeiboorden & windveren', prijs: '€20 – €35 /m¹' },
-    { dienst: 'Dakkapel schilderen', prijs: '€400 – €800' },
-    { dienst: 'Complete woning buiten', prijs: '€2.500 – €6.000' },
+    { dienst: 'Gevel schilderen', prijs: '€35 tot €45 /m²' },
+    { dienst: 'Kozijnen buiten', prijs: '€50 tot €100 /stuk' },
+    { dienst: 'Deuren buiten', prijs: '€100 tot €150 /stuk' },
+    { dienst: 'Boeiboorden & windveren', prijs: '€20 tot €35 /m¹' },
+    { dienst: 'Dakkapel schilderen', prijs: '€400 tot €800' },
+    { dienst: 'Complete woning buiten', prijs: '€2.500 tot €6.000' },
   ]
 
   const werkwijzeStappen = [
@@ -182,12 +182,12 @@ export default function BuitenschilderwerkPage() {
     {
       nummer: 2,
       titel: 'Offerte op Maat',
-      beschrijving: 'Binnen 48 uur ontvangt u een gedetailleerde offerte met vaste prijs — inclusief materiaal, eventuele steigerhuur en houtrotreparatie.',
+      beschrijving: 'Binnen 48 uur ontvangt u een gedetailleerde offerte met vaste prijs, inclusief materiaal, eventuele steigerhuur en houtrotreparatie.',
     },
     {
       nummer: 3,
       titel: 'Voorbereiding',
-      beschrijving: 'Schrapen, schuren, ontvetten, houtrot behandelen en gronden. De voorbereiding is bij buitenschilderwerk minstens de helft van het werk — en bepalend voor de levensduur.',
+      beschrijving: 'Schrapen, schuren, ontvetten, houtrot behandelen en gronden. De voorbereiding is bij buitenschilderwerk minstens de helft van het werk, en bepalend voor de levensduur.',
     },
     {
       nummer: 4,
@@ -218,7 +218,7 @@ export default function BuitenschilderwerkPage() {
         <div className="absolute inset-0 z-0 opacity-30">
           <Image
             src={heroImage}
-            alt="Buitenschilderwerk in Eindhoven — kozijnen en gevels professioneel geschilderd door Schildersbedrijf040"
+            alt="Buitenschilderwerk in Eindhoven, kozijnen en gevels professioneel geschilderd door Schildersbedrijf040"
             fill
             sizes="100vw"
             className="object-cover"
@@ -235,7 +235,7 @@ export default function BuitenschilderwerkPage() {
               <span className="text-[#0088FF] block">SCHILDERWERK</span>
             </h1>
             <p className="text-gray-200 text-lg leading-relaxed max-w-[560px] mb-10 animate-fade-in-up animation-delay-150">
-              Buitenschilderwerk beschermt uw woning tegen regen, zon en vorst — en bepaalt de uitstraling van uw gevel. Schildersbedrijf040 schildert gevels, kozijnen, deuren en boeiboorden in Eindhoven en omgeving met Boonstoppel verf voor een resultaat dat 8 tot 10 jaar meegaat.
+              Buitenschilderwerk beschermt uw woning tegen regen, zon en vorst, en bepaalt de uitstraling van uw gevel. Schildersbedrijf040 schildert gevels, kozijnen, deuren en boeiboorden in Eindhoven en omgeving met Boonstoppel verf voor een resultaat dat 8 tot 10 jaar meegaat.
             </p>
             <div className="flex flex-wrap gap-4 animate-fade-in-up animation-delay-300">
               <Link
@@ -260,7 +260,7 @@ export default function BuitenschilderwerkPage() {
                 <div className="flex gap-0.5">
                   {[...Array(5)].map((_, i) => <StarIcon key={i} />)}
                 </div>
-                <span className="text-sm text-gray-300 font-medium">5.0 — 41 reviews</span>
+                <span className="text-sm text-gray-300 font-medium">5,0 uit 41 reviews</span>
               </div>
               <div className="w-px h-7 bg-white/15" />
               <div className="flex items-center gap-2.5">
@@ -268,7 +268,7 @@ export default function BuitenschilderwerkPage() {
                 <div className="flex gap-0.5">
                   {[...Array(5)].map((_, i) => <StarIcon key={i} />)}
                 </div>
-                <span className="text-sm text-gray-300 font-medium">4.9 — Topvakman</span>
+                <span className="text-sm text-gray-300 font-medium">4,9 op Werkspot</span>
               </div>
             </div>
           </div>
@@ -287,13 +287,13 @@ export default function BuitenschilderwerkPage() {
                 Waarom is Buitenschilderwerk zo Belangrijk?
               </h2>
               <p className="text-gray-600 leading-relaxed mb-5">
-                Buitenschilderwerk is de eerste verdedigingslinie van uw woning tegen het Nederlandse klimaat. Regen, zon, vorst en wind tasten onbeschermd houtwerk aan — kozijnen zwellen op, verf bladdert en zonder tijdig onderhoud ontstaat houtrot. Een kozijn vervangen kost al snel €500 tot €1.500, terwijl tijdig buitenschilderwerk met Boonstoppel verf uw houtwerk 8 tot 10 jaar beschermt voor een fractie van dat bedrag.
+                Buitenschilderwerk is de eerste verdedigingslinie van uw woning tegen het Nederlandse klimaat. Regen, zon, vorst en wind tasten onbeschermd houtwerk aan, kozijnen zwellen op, verf bladdert en zonder tijdig onderhoud ontstaat houtrot. Een kozijn vervangen kost al snel €500 tot €1.500, terwijl tijdig buitenschilderwerk met Boonstoppel verf uw houtwerk 8 tot 10 jaar beschermt voor een fractie van dat bedrag.
               </p>
               <p className="text-gray-600 leading-relaxed mb-5">
-                Schildersbedrijf040 voert buitenschilderwerk uit voor woningen, appartementen en bedrijfspanden in Eindhoven en omgeving. Elk project begint met een grondige inspectie op houtrot en de staat van bestaande verflagen. Schildersbedrijf040 schraapt, schuurt en grondverf voordat er ook maar één laag aflak aangebracht wordt — want de voorbereiding bepaalt of het buitenschilderwerk 3 jaar of 10 jaar meegaat.
+                Schildersbedrijf040 voert buitenschilderwerk uit voor woningen, appartementen en bedrijfspanden in Eindhoven en omgeving. Elk project begint met een grondige inspectie op houtrot en de staat van bestaande verflagen. Schildersbedrijf040 schraapt, schuurt en grondverf voordat er ook maar één laag aflak aangebracht wordt, want de voorbereiding bepaalt of het buitenschilderwerk 3 jaar of 10 jaar meegaat.
               </p>
               <p className="text-gray-600 leading-relaxed">
-                Naast bescherming bepaalt buitenschilderwerk de uitstraling van uw woning. Een vers geschilderde gevel verhoogt de waarde en geeft een verzorgde indruk. Schildersbedrijf040 adviseert over kleuren die passen bij de bouwstijl en de omgeving — van klassieke Eindhovense rijtjeswoningen tot vrijstaande villa's in Waalre.
+                Naast bescherming bepaalt buitenschilderwerk de uitstraling van uw woning. Een vers geschilderde gevel verhoogt de waarde en geeft een verzorgde indruk. Schildersbedrijf040 adviseert over kleuren die passen bij de bouwstijl en de omgeving, van klassieke Eindhovense rijtjeswoningen tot vrijstaande villa's in Waalre.
               </p>
             </div>
 
@@ -301,7 +301,7 @@ export default function BuitenschilderwerkPage() {
               <div className="rounded-2xl overflow-hidden">
                 <Image
                   src={heroImage}
-                  alt="Buitenschilderwerk door Schildersbedrijf040 — kozijnen en gevels in Eindhoven"
+                  alt="Buitenschilderwerk door Schildersbedrijf040, kozijnen en gevels in Eindhoven"
                   width={600}
                   height={400}
                   className="w-full h-auto object-cover rounded-2xl"
@@ -309,9 +309,9 @@ export default function BuitenschilderwerkPage() {
               </div>
               <div className="grid grid-cols-2 gap-4">
                 {[
-                  { label: 'Levensduur', waarde: '8–10 jaar' },
-                  { label: 'Ideale temperatuur', waarde: '15–25°C' },
-                  { label: 'Beste maanden', waarde: 'Mei–Sep' },
+                  { label: 'Levensduur', waarde: '8 tot 10 jaar' },
+                  { label: 'Ideale temperatuur', waarde: '15 tot 25°C' },
+                  { label: 'Beste maanden', waarde: 'Mei tot sep' },
                   { label: 'BTW woningen 2+ jaar', waarde: '9%' },
                 ].map((item, index) => (
                   <div key={index} className="bg-[#F7F8FA] rounded-xl p-5 text-center">
@@ -371,7 +371,7 @@ export default function BuitenschilderwerkPage() {
               {
                 nummer: '05',
                 titel: 'Houtrot Behandeling',
-                beschrijving: 'Houtrot is de grootste vijand van buitenhoutwerk. Schildersbedrijf040 spoort houtrot op door het hout systematisch af te tikken en te prikken met een priem. Aangetast hout wordt uitgefreesd, behandeld met houtharder en opgebouwd met professionele epoxyvulling. Pas daarna wordt het houtwerk geschilderd — zodat de reparatie onzichtbaar is en het kozijn weer jarenlang meegaat.',
+                beschrijving: 'Houtrot is de grootste vijand van buitenhoutwerk. Schildersbedrijf040 spoort houtrot op door het hout systematisch af te tikken en te prikken met een priem. Aangetast hout wordt uitgefreesd, behandeld met houtharder en opgebouwd met professionele epoxyvulling. Pas daarna wordt het houtwerk geschilderd, zodat de reparatie onzichtbaar is en het kozijn weer jarenlang meegaat.',
                 link: '/diensten/houtrot-sanering',
                 linkTekst: 'Meer over houtrot sanering',
               },
@@ -472,7 +472,7 @@ export default function BuitenschilderwerkPage() {
         <div className="absolute inset-0">
           <Image
             src="https://res.cloudinary.com/dbtaisgda/image/upload/v1743873386/WhatsApp_Image_2025-03-27_at_08.02.00_o5xgwd.jpg"
-            alt="Buitenschilderwerk resultaat — beschermde kozijnen en gevels"
+            alt="Buitenschilderwerk resultaat, beschermde kozijnen en gevels"
             fill
             sizes="100vw"
             className="object-cover"
@@ -489,7 +489,7 @@ export default function BuitenschilderwerkPage() {
               Uw Gevel Verdient Vakmanschap
             </h2>
             <p className="text-gray-300 leading-relaxed mb-8">
-              Buitenschilderwerk is meer dan een esthetische keuze — het beschermt uw woning tegen de elementen. Schildersbedrijf040 levert buitenschilderwerk dat jarenlang meegaat. Bekijk onze projecten of vraag direct een offerte aan.
+              Buitenschilderwerk is meer dan een esthetische keuze, het beschermt uw woning tegen de elementen. Schildersbedrijf040 levert buitenschilderwerk dat jarenlang meegaat. Bekijk onze projecten of vraag direct een offerte aan.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link
@@ -521,7 +521,7 @@ export default function BuitenschilderwerkPage() {
               Ons Werkproces in 4 Stappen
             </h2>
             <p className="text-gray-600 leading-relaxed max-w-xl mx-auto">
-              Buitenschilderwerk vraagt om een zorgvuldige aanpak. Schildersbedrijf040 volgt een vast werkproces — van inspectie tot oplevering — zodat u weet wat u kunt verwachten.
+              Buitenschilderwerk vraagt om een zorgvuldige aanpak. Schildersbedrijf040 volgt een vast werkproces, van inspectie tot oplevering, zodat u weet wat u kunt verwachten.
             </p>
           </div>
 
@@ -558,16 +558,16 @@ export default function BuitenschilderwerkPage() {
                 Waarom Schildersbedrijf040 voor Uw Buitenschilderwerk?
               </h2>
               <p className="text-gray-600 leading-relaxed mb-8">
-                Buitenschilderwerk is een vak apart — het vergt kennis van weersomstandigheden, houtsoorten en verfsystemen. Schildersbedrijf040 combineert die expertise met transparante communicatie en persoonlijke betrokkenheid van eigenaar Jordy Jacobs. Het resultaat: een klantbeoordeling van 5 sterren op Google en een 4,9 op Werkspot.
+                Buitenschilderwerk is een vak apart, het vergt kennis van weersomstandigheden, houtsoorten en verfsystemen. Schildersbedrijf040 combineert die expertise met transparante communicatie en persoonlijke betrokkenheid van eigenaar Jordy Jacobs. Het resultaat: een klantbeoordeling van 5 sterren op Google en een 4,9 op Werkspot.
               </p>
 
               <div className="flex flex-col gap-4">
                 {[
-                  { titel: 'Grondige houtrot inspectie inbegrepen', beschrijving: 'Elk buitenschilderproject begint met een systematische controle op houtrot — zodat problemen worden opgelost vóór het schilderen, niet erna.' },
-                  { titel: 'Uitsluitend Boonstoppel buitenverf', beschrijving: 'Bestand tegen zon, regen en vorst. 8 tot 10 jaar bescherming — aanzienlijk langer dan budgetverf die na 3 jaar al bladdert.' },
+                  { titel: 'Grondige houtrot inspectie inbegrepen', beschrijving: 'Elk buitenschilderproject begint met een systematische controle op houtrot, zodat problemen worden opgelost vóór het schilderen, niet erna.' },
+                  { titel: 'Uitsluitend Boonstoppel buitenverf', beschrijving: 'Bestand tegen zon, regen en vorst. 8 tot 10 jaar bescherming, aanzienlijk langer dan budgetverf die na 3 jaar al bladdert.' },
                   { titel: 'Weersafhankelijke planning', beschrijving: 'Schildersbedrijf040 plant buitenschilderwerk op de juiste weersomstandigheden: tussen 15°C en 25°C, luchtvochtigheid onder 85%.' },
-                  { titel: 'Vaste prijs — geen verrassingen', beschrijving: 'Gedetailleerde offerte binnen 48 uur met vaste prijs. Inclusief materiaal, voorbereiding en eventuele steigerhuur apart vermeld.' },
-                  { titel: 'Ervaring met lokale bouwstijlen', beschrijving: 'Van naoorlogse rijtjeswoningen in Woensel-Zuid tot villa\'s in Waalre — Schildersbedrijf040 kent de bouwstijlen en het houtwerk in de regio Eindhoven.' },
+                  { titel: 'Vaste prijs, geen verrassingen', beschrijving: 'Gedetailleerde offerte binnen 48 uur met vaste prijs. Inclusief materiaal, voorbereiding en eventuele steigerhuur apart vermeld.' },
+                  { titel: 'Ervaring met lokale bouwstijlen', beschrijving: 'Van naoorlogse rijtjeswoningen in Woensel-Zuid tot villa\'s in Waalre. Schildersbedrijf040 kent de bouwstijlen en het houtwerk in de regio Eindhoven.' },
                 ].map((usp, index) => (
                   <div
                     key={index}
@@ -600,7 +600,7 @@ export default function BuitenschilderwerkPage() {
                 </p>
                 <div className="flex items-center gap-2 mt-3 text-xs font-semibold text-gray-400 uppercase tracking-wide">
                   <GoogleLogo />
-                  Google Reviews — 41 beoordelingen
+                  Google Reviews: 41 beoordelingen
                 </div>
               </div>
 
@@ -618,7 +618,7 @@ export default function BuitenschilderwerkPage() {
                 </p>
                 <div className="flex items-center gap-2 mt-3 text-xs font-semibold text-gray-400 uppercase tracking-wide">
                   <WerkspotLogo />
-                  Werkspot — Topvakman
+                  Werkspot: Topvakman
                 </div>
               </div>
 
@@ -662,7 +662,7 @@ export default function BuitenschilderwerkPage() {
             Vragen over Buitenschilderwerk
           </h2>
           <p className="text-gray-600 leading-relaxed mb-12 max-w-2xl">
-            Staat uw vraag er niet bij? Neem gerust contact op — Schildersbedrijf040 helpt u graag verder.
+            Staat uw vraag er niet bij? Neem gerust contact op. Schildersbedrijf040 helpt u graag verder.
           </p>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
@@ -670,7 +670,7 @@ export default function BuitenschilderwerkPage() {
               <div className="rounded-2xl overflow-hidden relative h-[280px]">
                 <Image
                   src="https://res.cloudinary.com/dbtaisgda/image/upload/v1743873387/WhatsApp_Image_2025-03-27_at_08.02.42_fdixmp.jpg"
-                  alt="Buitenschilderwerk resultaat — kozijnen en gevels beschermd door Schildersbedrijf040"
+                  alt="Buitenschilderwerk resultaat, kozijnen en gevels beschermd door Schildersbedrijf040"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-cover"
@@ -744,7 +744,7 @@ export default function BuitenschilderwerkPage() {
                 Bescherm Uw Woning Tegen de Elementen
               </h2>
               <p className="text-gray-300 leading-relaxed mb-8">
-                Wilt u weten wat professioneel buitenschilderwerk voor uw woning kost? Schildersbedrijf040 komt graag langs voor een gratis houtrot inspectie en vrijblijvende offerte. Bel, mail of vul het contactformulier in — u ontvangt binnen 48 uur een offerte op maat.
+                Wilt u weten wat professioneel buitenschilderwerk voor uw woning kost? Schildersbedrijf040 komt graag langs voor een gratis houtrot inspectie en vrijblijvende offerte. Bel, mail of vul het contactformulier in, u ontvangt binnen 48 uur een offerte op maat.
               </p>
               <Link
                 href="/contact"
@@ -790,7 +790,7 @@ export default function BuitenschilderwerkPage() {
                 </div>
                 <div>
                   <div className="text-xs text-gray-400 font-medium uppercase tracking-wide mb-0.5">Bereikbaarheid</div>
-                  <div className="text-white font-semibold">Ma – Vr: 08:00 – 17:30</div>
+                  <div className="text-white font-semibold">Ma t/m vr: 08:00 tot 17:30</div>
                 </div>
               </div>
             </div>
