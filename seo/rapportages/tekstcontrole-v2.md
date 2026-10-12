@@ -11,7 +11,7 @@ Gemeten met `textContent` van de pagina zonder header, footer en mobiele balk (d
 | Pagina | main | voor | na | Status |
 |---|---|---|---|---|
 | `/` | 909 | 921 | 1704 | in orde |
-| `/over-ons` | 161 | 168 | 172 | nog oud ontwerp |
+| `/over-ons` | 161 | 168 | 366 | in orde |
 | `/contact` | 60 | 67 | 71 | nog oud ontwerp |
 | `/faq` | 82 | 442 | 446 | nog oud ontwerp |
 | `/projecten` | 48 | 54 | 58 | nog oud ontwerp |
@@ -183,12 +183,22 @@ Geen: elke kop en elk tekstblok van main en voor staat op de nieuwe pagina's, en
 
 </details>
 
-<details><summary><code>/over-ons</code> (4 koppen)</summary>
+<details><summary><code>/over-ons</code> (14 koppen)</summary>
 
-- H1 OverSchildersbedrijf040
-- H2 Onze Geschiedenis
-- H3 Waarom Kiezen voor Schildersbedrijf040?
-- H3 Klaar voor uw Project?
+- H1 Over Schildersbedrijf040
+- H2 Onze geschiedenis
+- H2 Eén team, elk vak
+- H2 De mensen achter de kwast
+- H3 Vaste collega's
+- H2 Waarom kiezen voor Schildersbedrijf040?
+- H3 Meer dan 5 jaar ervaring
+- H3 Alles onder één dak
+- H3 Vakkundig en betrouwbaar
+- H3 Persoonlijke aanpak
+- H3 Flexibele planning
+- H3 Kwaliteitsgarantie
+- H2 Klaar voor uw project?
+- H3 Offerte aanvragen
 
 </details>
 
