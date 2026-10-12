@@ -7,7 +7,7 @@ export const batch2Data: Record<string, CityData> = {
     heroImage: 'https://res.cloudinary.com/dbtaisgda/image/upload/v1743873386/WhatsApp_Image_2025-03-27_at_07.53.08_myzeda.jpg',
     wijken: ['Deurne-Centrum', 'Walsberg', 'Liessel', 'Vlierden'],
     intro: 'Schildersbedrijf040 is gevestigd in Eindhoven en uw betrouwbare schilder in Deurne voor zowel particulieren als bedrijven. Deurne is een Peelgemeente met een landelijk karakter, waar het historisch centrum en de kerkgebouwen vakkundig schilderwerk verdienen. Van Deurne-Centrum tot Walsberg, Liessel en Vlierden. Schildersbedrijf040 verzorgt binnenschilderwerk, buitenschilderwerk, behangen, houtrot sanering, lakwerk en latex spuiten op het hoogste niveau. Met 5 sterren op Google uit 41 beoordelingen en een 4,9 op Werkspot is Schildersbedrijf040 de best beoordeelde schilder voor Deurne en omgeving.',
-    kosten: 'Schilderwerk in Deurne kost gemiddeld tussen €35 en €55 per uur, afhankelijk van het type werk. Buitenschilderwerk vraagt meer voorbereiding dan binnenschilderwerk, wat de prijs beïnvloedt. Veel woningen in Deurne-Centrum en de uitbreidingswijken hebben houten kozijnen die periodiek onderhoud nodig hebben. Schildersbedrijf040 werkt met Boonstoppel verf die 8 tot 10 jaar bescherming biedt, in tegenstelling tot budgetverf die al na 3 jaar verbleekt. In Deurne is kwalitatieve verf een investering die zichzelf ruimschoots terugbetaalt.',
+    kosten: 'Schilderwerk in Deurne kost gemiddeld €30 tot €35 per m² voor binnenschilderwerk en €35 tot €45 per m² voor buitenschilderwerk aan de gevel, afhankelijk van het type werk. Buitenschilderwerk vraagt meer voorbereiding dan binnenschilderwerk, wat de prijs beïnvloedt. Veel woningen in Deurne-Centrum en de uitbreidingswijken hebben houten kozijnen die periodiek onderhoud nodig hebben. Schildersbedrijf040 werkt met Boonstoppel verf die 8 tot 10 jaar bescherming biedt, in tegenstelling tot budgetverf die al na 3 jaar verbleekt. In Deurne is kwalitatieve verf een investering die zichzelf ruimschoots terugbetaalt.',
     diensten: [
       {
         title: 'Binnenschilderwerk',
@@ -46,7 +46,7 @@ export const batch2Data: Record<string, CityData> = {
     faqs: [
       {
         question: 'Wat kost een schilder in Deurne?',
-        answer: 'Een schilder in Deurne kost gemiddeld tussen €35 en €55 per uur. De exacte prijs hangt af van het type schilderwerk, de staat van de ondergrond en de omvang van het project. Buitenschilderwerk is in Deurne vaak iets duurder dan binnenschilderwerk, omdat gevels en kozijnen meer voorbereiding vragen. Schildersbedrijf040 uit Eindhoven maakt altijd een offerte op maat voor uw woning in Deurne, zodat u vooraf weet waar u aan toe bent.'
+        answer: 'Een schilder in Deurne kost gemiddeld €30 tot €35 per m² voor binnenschilderwerk en €35 tot €45 per m² voor buitenschilderwerk aan de gevel. De exacte prijs hangt af van het type schilderwerk, de staat van de ondergrond en de omvang van het project. Buitenschilderwerk is in Deurne vaak iets duurder dan binnenschilderwerk, omdat gevels en kozijnen meer voorbereiding vragen. Schildersbedrijf040 uit Eindhoven maakt altijd een offerte op maat voor uw woning in Deurne, zodat u vooraf weet waar u aan toe bent.'
       },
       {
         question: 'Hoe snel kan Schildersbedrijf040 starten met schilderwerk in Deurne?',
@@ -73,7 +73,7 @@ export const batch2Data: Record<string, CityData> = {
     heroImage: 'https://res.cloudinary.com/dbtaisgda/image/upload/v1743873386/WhatsApp_Image_2025-03-27_at_07.53.08_myzeda.jpg',
     wijken: ['Beek', 'Donk', 'Aarle-Rixtel', 'Lieshout'],
     intro: 'Schildersbedrijf040 is gevestigd in Eindhoven en uw vakkundige schilder in Beek en Donk en de gehele gemeente Laarbeek. Het dorpse karakter van Beek en Donk vraagt om een schilder die de lokale bouwstijlen begrijpt, van jaren \'60 en \'70 woningen tot karakteristieke boerderijen. Schildersbedrijf040 verzorgt binnenschilderwerk, buitenschilderwerk, behangen, houtrot sanering, lakwerk en latex spuiten in Beek, Donk, Aarle-Rixtel en Lieshout. Met 5 sterren op Google uit 41 beoordelingen en een 4,9 op Werkspot is Schildersbedrijf040 de best beoordeelde schilder voor Beek en Donk.',
-    kosten: 'Schilderwerk in Beek en Donk kost gemiddeld tussen €35 en €55 per uur, vergelijkbaar met tarieven in de regio Eindhoven. Buitenschilderwerk vraagt meer voorbereiding dan binnenschilderwerk, wat de prijs beïnvloedt. Veel woningen in de gemeente Laarbeek dateren uit de jaren \'60 en \'70 en hebben houten kozijnen die periodiek geschilderd moeten worden. Schildersbedrijf040 gebruikt Boonstoppel verf die 8 tot 10 jaar bescherming biedt, een verstandige investering voor woningeigenaren in Beek en Donk.',
+    kosten: 'Schilderwerk in Beek en Donk kost gemiddeld €30 tot €35 per m² voor binnenschilderwerk en €35 tot €45 per m² voor buitenschilderwerk aan de gevel, vergelijkbaar met tarieven in de regio Eindhoven. Buitenschilderwerk vraagt meer voorbereiding dan binnenschilderwerk, wat de prijs beïnvloedt. Veel woningen in de gemeente Laarbeek dateren uit de jaren \'60 en \'70 en hebben houten kozijnen die periodiek geschilderd moeten worden. Schildersbedrijf040 gebruikt Boonstoppel verf die 8 tot 10 jaar bescherming biedt, een verstandige investering voor woningeigenaren in Beek en Donk.',
     diensten: [
       {
         title: 'Binnenschilderwerk',
@@ -112,7 +112,7 @@ export const batch2Data: Record<string, CityData> = {
     faqs: [
       {
         question: 'Wat kost een schilder in Beek en Donk?',
-        answer: 'Een schilder in Beek en Donk kost gemiddeld tussen €35 en €55 per uur. De prijs verschilt per type werk: buitenschilderwerk vraagt meer voorbereiding dan binnenschilderwerk. Schildersbedrijf040 uit Eindhoven maakt altijd een gedetailleerde offerte op maat voor uw woning in de gemeente Laarbeek, zodat u vooraf precies weet wat de investering is. Er zijn geen verborgen kosten.'
+        answer: 'Een schilder in Beek en Donk kost gemiddeld €30 tot €35 per m² voor binnenschilderwerk en €35 tot €45 per m² voor buitenschilderwerk aan de gevel. De prijs verschilt per type werk: buitenschilderwerk vraagt meer voorbereiding dan binnenschilderwerk. Schildersbedrijf040 uit Eindhoven maakt altijd een gedetailleerde offerte op maat voor uw woning in de gemeente Laarbeek, zodat u vooraf precies weet wat de investering is. Er zijn geen verborgen kosten.'
       },
       {
         question: 'Werkt Schildersbedrijf040 in de hele gemeente Laarbeek?',
@@ -139,7 +139,7 @@ export const batch2Data: Record<string, CityData> = {
     heroImage: 'https://res.cloudinary.com/dbtaisgda/image/upload/v1743873386/WhatsApp_Image_2025-03-27_at_07.53.08_myzeda.jpg',
     wijken: ['Eersel-Centrum', 'Duizel', 'Steensel', 'Knegsel'],
     intro: 'Schildersbedrijf040 is gevestigd in Eindhoven en uw vakkundige schilder in Eersel, het centrum van de Kempen. Het karakteristieke marktplein met zijn lindebomen en de monumentale Brabantse gevels maken Eersel tot een gemeente waar schilderwerk vakmanschap vraagt. Schildersbedrijf040 verzorgt binnenschilderwerk, buitenschilderwerk, behangen, houtrot sanering, lakwerk en latex spuiten in Eersel-Centrum, Duizel, Steensel en Knegsel. Met 5 sterren op Google uit 41 beoordelingen en een 4,9 op Werkspot is Schildersbedrijf040 de best beoordeelde schilder voor Eersel en omgeving.',
-    kosten: 'Schilderwerk in Eersel kost gemiddeld tussen €35 en €55 per uur, afhankelijk van het type werk. Buitenschilderwerk en houtrot sanering vragen meer voorbereiding dan binnenschilderwerk, wat de prijs beïnvloedt. Veel Kempische boerderijen en woningen in het buitengebied van Eersel hebben uitgebreid houtwerk dat periodiek onderhoud nodig heeft. Schildersbedrijf040 gebruikt Boonstoppel verf die 8 tot 10 jaar bescherming biedt, een bijzonder verstandige investering voor het rijke houtwerk in de Kempen.',
+    kosten: 'Schilderwerk in Eersel kost gemiddeld €30 tot €35 per m² voor binnenschilderwerk en €35 tot €45 per m² voor buitenschilderwerk aan de gevel, afhankelijk van het type werk. Buitenschilderwerk en houtrot sanering vragen meer voorbereiding dan binnenschilderwerk, wat de prijs beïnvloedt. Veel Kempische boerderijen en woningen in het buitengebied van Eersel hebben uitgebreid houtwerk dat periodiek onderhoud nodig heeft. Schildersbedrijf040 gebruikt Boonstoppel verf die 8 tot 10 jaar bescherming biedt, een bijzonder verstandige investering voor het rijke houtwerk in de Kempen.',
     diensten: [
       {
         title: 'Binnenschilderwerk',
@@ -178,7 +178,7 @@ export const batch2Data: Record<string, CityData> = {
     faqs: [
       {
         question: 'Wat kost een schilder in Eersel?',
-        answer: 'Een schilder in Eersel kost gemiddeld tussen €35 en €55 per uur. De prijs verschilt per type werk: houtrot sanering en buitenschilderwerk vragen meer voorbereiding dan binnenschilderwerk. Schildersbedrijf040 uit Eindhoven maakt altijd een offerte op maat voor uw woning in Eersel, zodat u vooraf precies weet wat de investering is. Er zijn geen verborgen kosten bij Schildersbedrijf040.'
+        answer: 'Een schilder in Eersel kost gemiddeld €30 tot €35 per m² voor binnenschilderwerk en €35 tot €45 per m² voor buitenschilderwerk aan de gevel. De prijs verschilt per type werk: houtrot sanering en buitenschilderwerk vragen meer voorbereiding dan binnenschilderwerk. Schildersbedrijf040 uit Eindhoven maakt altijd een offerte op maat voor uw woning in Eersel, zodat u vooraf precies weet wat de investering is. Er zijn geen verborgen kosten bij Schildersbedrijf040.'
       },
       {
         question: 'Heeft Schildersbedrijf040 ervaring met Kempische boerderijen in Eersel?',
@@ -205,7 +205,7 @@ export const batch2Data: Record<string, CityData> = {
     heroImage: 'https://res.cloudinary.com/dbtaisgda/image/upload/v1743873386/WhatsApp_Image_2025-03-27_at_07.53.08_myzeda.jpg',
     wijken: ['Bergeijk-Centrum', 'Westerhoven', 'Riethoven', 'Luyksgestel'],
     intro: 'Schildersbedrijf040 is gevestigd in Eindhoven en uw betrouwbare schilder in Bergeijk, een Kempisch dorp met rijk agrarisch erfgoed. Bergeijk staat bekend om De Ploeg, de prachtig gerestaureerde textielfabriek die nu dient als cultureel centrum, en om de vele houten geveldelen die het dorpskarakter bepalen. Schildersbedrijf040 verzorgt binnenschilderwerk, buitenschilderwerk, behangen, houtrot sanering, lakwerk en latex spuiten in Bergeijk-Centrum, Westerhoven, Riethoven en Luyksgestel. Met 5 sterren op Google uit 41 beoordelingen en een 4,9 op Werkspot is Schildersbedrijf040 de best beoordeelde schilder voor Bergeijk.',
-    kosten: 'Schilderwerk in Bergeijk kost gemiddeld tussen €35 en €55 per uur, afhankelijk van het type werk en de staat van de ondergrond. Buitenschilderwerk vraagt meer voorbereiding dan binnenschilderwerk, wat de prijs beïnvloedt. Veel woningen in Bergeijk en omliggende dorpen hebben houten geveldelen die periodiek onderhoud nodig hebben om het Kempische karakter te bewaren. Schildersbedrijf040 gebruikt Boonstoppel verf die 8 tot 10 jaar bescherming biedt, een verstandige investering voor het agrarisch erfgoed in Bergeijk.',
+    kosten: 'Schilderwerk in Bergeijk kost gemiddeld €30 tot €35 per m² voor binnenschilderwerk en €35 tot €45 per m² voor buitenschilderwerk aan de gevel, afhankelijk van het type werk en de staat van de ondergrond. Buitenschilderwerk vraagt meer voorbereiding dan binnenschilderwerk, wat de prijs beïnvloedt. Veel woningen in Bergeijk en omliggende dorpen hebben houten geveldelen die periodiek onderhoud nodig hebben om het Kempische karakter te bewaren. Schildersbedrijf040 gebruikt Boonstoppel verf die 8 tot 10 jaar bescherming biedt, een verstandige investering voor het agrarisch erfgoed in Bergeijk.',
     diensten: [
       {
         title: 'Binnenschilderwerk',
@@ -244,7 +244,7 @@ export const batch2Data: Record<string, CityData> = {
     faqs: [
       {
         question: 'Wat kost een schilder in Bergeijk?',
-        answer: 'Een schilder in Bergeijk kost gemiddeld tussen €35 en €55 per uur. De prijs hangt af van het type schilderwerk en de staat van de ondergrond. Buitenschilderwerk vraagt meer voorbereiding dan binnenschilderwerk. Schildersbedrijf040 uit Eindhoven maakt altijd een offerte op maat voor uw woning in Bergeijk, zodat u vooraf weet waar u aan toe bent zonder verborgen kosten.'
+        answer: 'Een schilder in Bergeijk kost gemiddeld €30 tot €35 per m² voor binnenschilderwerk en €35 tot €45 per m² voor buitenschilderwerk aan de gevel. De prijs hangt af van het type schilderwerk en de staat van de ondergrond. Buitenschilderwerk vraagt meer voorbereiding dan binnenschilderwerk. Schildersbedrijf040 uit Eindhoven maakt altijd een offerte op maat voor uw woning in Bergeijk, zodat u vooraf weet waar u aan toe bent zonder verborgen kosten.'
       },
       {
         question: 'Werkt Schildersbedrijf040 ook in Westerhoven, Riethoven en Luyksgestel?',
@@ -271,7 +271,7 @@ export const batch2Data: Record<string, CityData> = {
     heroImage: 'https://res.cloudinary.com/dbtaisgda/image/upload/v1743873386/WhatsApp_Image_2025-03-27_at_07.53.08_myzeda.jpg',
     wijken: ['Maarheeze-Centrum', 'Soerendonk', 'Gastel'],
     intro: 'Schildersbedrijf040 is gevestigd in Eindhoven en uw vakkundige schilder in Maarheeze, een klein Kempisch dorp in de gemeente Cranendonck. De karakteristieke dorpskern van Maarheeze telt veel Brabantse boerderijen en woningen met uitgebreid houtwerk die vakkundig schilderwerk verdienen. Schildersbedrijf040 verzorgt binnenschilderwerk, buitenschilderwerk, behangen, houtrot sanering, lakwerk en latex spuiten in Maarheeze-Centrum, Soerendonk en Gastel. Met 5 sterren op Google uit 41 beoordelingen en een 4,9 op Werkspot is Schildersbedrijf040 de best beoordeelde schilder voor Maarheeze en omgeving.',
-    kosten: 'Schilderwerk in Maarheeze kost gemiddeld tussen €35 en €55 per uur, vergelijkbaar met de regio Eindhoven. Buitenschilderwerk vraagt meer voorbereiding dan binnenschilderwerk, wat de prijs beïnvloedt. Veel Brabantse boerderijen en woningen in Maarheeze hebben uitgebreid houtwerk dat periodiek onderhoud nodig heeft om er mooi bij te blijven staan. Schildersbedrijf040 gebruikt Boonstoppel verf die 8 tot 10 jaar bescherming biedt, een verstandige investering voor het karakteristieke houtwerk in Maarheeze.',
+    kosten: 'Schilderwerk in Maarheeze kost gemiddeld €30 tot €35 per m² voor binnenschilderwerk en €35 tot €45 per m² voor buitenschilderwerk aan de gevel, vergelijkbaar met de regio Eindhoven. Buitenschilderwerk vraagt meer voorbereiding dan binnenschilderwerk, wat de prijs beïnvloedt. Veel Brabantse boerderijen en woningen in Maarheeze hebben uitgebreid houtwerk dat periodiek onderhoud nodig heeft om er mooi bij te blijven staan. Schildersbedrijf040 gebruikt Boonstoppel verf die 8 tot 10 jaar bescherming biedt, een verstandige investering voor het karakteristieke houtwerk in Maarheeze.',
     diensten: [
       {
         title: 'Binnenschilderwerk',
@@ -310,7 +310,7 @@ export const batch2Data: Record<string, CityData> = {
     faqs: [
       {
         question: 'Wat kost een schilder in Maarheeze?',
-        answer: 'Een schilder in Maarheeze kost gemiddeld tussen €35 en €55 per uur. De prijs verschilt per type werk: buitenschilderwerk en houtrot sanering vragen meer voorbereiding dan binnenschilderwerk. Schildersbedrijf040 uit Eindhoven maakt altijd een offerte op maat voor uw woning in Maarheeze, zodat u vooraf precies weet wat de investering is zonder verborgen kosten.'
+        answer: 'Een schilder in Maarheeze kost gemiddeld €30 tot €35 per m² voor binnenschilderwerk en €35 tot €45 per m² voor buitenschilderwerk aan de gevel. De prijs verschilt per type werk: buitenschilderwerk en houtrot sanering vragen meer voorbereiding dan binnenschilderwerk. Schildersbedrijf040 uit Eindhoven maakt altijd een offerte op maat voor uw woning in Maarheeze, zodat u vooraf precies weet wat de investering is zonder verborgen kosten.'
       },
       {
         question: 'Werkt Schildersbedrijf040 ook in Soerendonk en Gastel?',

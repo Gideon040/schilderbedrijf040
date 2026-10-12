@@ -3,6 +3,7 @@ import { Header } from '@/components/layout/header'
 import { Footer } from '@/components/layout/footer'
 import Image from 'next/image'
 import Link from 'next/link'
+import { prijzen as prijsTabel } from '@/lib/prices'
 import { ChevronDown, Phone, Mail, Clock, ArrowRight, Check } from 'lucide-react'
 
 export const metadata: Metadata = {
@@ -182,14 +183,7 @@ export default function HoutrotSaneringPage() {
     })),
   }
 
-  const prijzen = [
-    { dienst: 'Klein kozijn repareren', prijs: '€150 tot €250 /stuk' },
-    { dienst: 'Groot kozijn repareren', prijs: '€300 tot €450 /stuk' },
-    { dienst: 'Deurkozijn houtrot', prijs: '€200 tot €400 /stuk' },
-    { dienst: 'Dorpel vervangen', prijs: '€150 tot €350 /stuk' },
-    { dienst: 'Boeiboord reparatie', prijs: '€20 tot €40 /m¹' },
-    { dienst: 'Kozijn volledig vervangen', prijs: '€600 tot €1.500 /stuk' },
-  ]
+  const prijzen = prijsTabel['houtrot-sanering'].map((r) => ({ dienst: r.wat, prijs: r.prijs }))
 
   const werkwijzeStappen = [
     {

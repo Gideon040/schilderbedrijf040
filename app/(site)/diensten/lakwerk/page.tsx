@@ -3,6 +3,7 @@ import { Header } from '@/components/layout/header'
 import { Footer } from '@/components/layout/footer'
 import Image from 'next/image'
 import Link from 'next/link'
+import { prijzen as prijsTabel } from '@/lib/prices'
 import { ChevronDown, Phone, Mail, Clock, ArrowRight, Check } from 'lucide-react'
 
 export const metadata: Metadata = {
@@ -181,14 +182,7 @@ export default function LakwerkPage() {
     })),
   }
 
-  const prijzen = [
-    { dienst: 'Kozijnen lakken (binnen)', prijs: '€35 tot €75 /stuk' },
-    { dienst: 'Kozijnen lakken (buiten)', prijs: '€50 tot €100 /stuk' },
-    { dienst: 'Deuren lakken', prijs: '€100 tot €150 /stuk' },
-    { dienst: 'Trap lakken', prijs: '€350 tot €600' },
-    { dienst: 'Radiator lakken', prijs: '€80 tot €120 /stuk' },
-    { dienst: 'Keukenkasten spuiten', prijs: '€150 tot €300 /m¹' },
-  ]
+  const prijzen = prijsTabel['lakwerk'].map((r) => ({ dienst: r.wat, prijs: r.prijs }))
 
   const werkwijzeStappen = [
     {

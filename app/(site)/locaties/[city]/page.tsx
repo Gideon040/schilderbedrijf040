@@ -6,6 +6,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { ChevronDown, Phone, Mail, Clock, ArrowRight, Check } from 'lucide-react'
 import { notFound } from 'next/navigation'
+import { vanafPrijzen, prijsNoot } from '@/lib/prices'
 
 // Generate static params for all cities
 export function generateStaticParams() {
@@ -186,14 +187,7 @@ export default function LocationPage({ params }: { params: { city: string } }) {
     })),
   }
 
-  const prijzen = [
-    { dienst: 'Binnenschilderwerk', prijs: '€35 tot €45 /uur' },
-    { dienst: 'Buitenschilderwerk', prijs: '€40 tot €55 /uur' },
-    { dienst: 'Behangen', prijs: '€35 tot €50 /uur' },
-    { dienst: 'Houtrot sanering', prijs: '€45 tot €55 /uur' },
-    { dienst: 'Lakwerk', prijs: '€40 tot €50 /uur' },
-    { dienst: 'Latex spuiten', prijs: '€35 tot €50 /uur' },
-  ]
+  const prijzen = vanafPrijzen
 
   const werkwijzeStappen = [
     {
@@ -389,7 +383,7 @@ export default function LocationPage({ params }: { params: { city: string } }) {
               ))}
               <div className="px-8 py-5 bg-[#F7F8FA] border-t border-gray-200">
                 <p className="text-xs text-gray-400">
-                  * Prijzen zijn indicatief. Altijd een offerte op maat voor uw woning in {data.displayName}.
+                  * {prijsNoot}
                 </p>
               </div>
             </div>

@@ -3,6 +3,7 @@ import { Header } from '@/components/layout/header'
 import { Footer } from '@/components/layout/footer'
 import Image from 'next/image'
 import Link from 'next/link'
+import { prijzen as prijsTabel } from '@/lib/prices'
 import { ChevronDown, Phone, Mail, Clock, ArrowRight, Check } from 'lucide-react'
 
 export const metadata: Metadata = {
@@ -152,7 +153,7 @@ export default function LatexSpuitenPage() {
     },
     {
       question: 'Wat kost latex spuiten per m²?',
-      answer: 'Latex spuiten kost gemiddeld €7,50 tot €12 per m² voor muren, inclusief afplakken, primer en latex. Plafond spuiten is voordeliger: €5,50 tot €7 per m². Nieuwbouw compleet spuiten begint vanaf €3,50 per m², omdat nieuwe ondergronden minder voorbereiding vragen. Schildersbedrijf040 werkt altijd met een vaste offerte, zodat u vooraf precies weet wat de investering is. Bij woningen ouder dan 2 jaar geldt het verlaagde btw-tarief van 9%.',
+      answer: 'Latex spuiten kost gemiddeld €8 tot €12 per m² voor muren, inclusief afplakken, primer en latex. Plafond spuiten is voordeliger: €5,50 tot €7 per m². Nieuwbouw compleet spuiten begint vanaf €3,50 per m², omdat nieuwe ondergronden minder voorbereiding vragen. Schildersbedrijf040 werkt altijd met een vaste offerte, zodat u vooraf precies weet wat de investering is. Bij woningen ouder dan 2 jaar geldt het verlaagde btw-tarief van 9%.',
     },
     {
       question: 'Is latex spuiten goedkoper dan rollen?',
@@ -181,14 +182,7 @@ export default function LatexSpuitenPage() {
     })),
   }
 
-  const prijzen = [
-    { dienst: 'Muren spuiten', prijs: '€8 tot €12 /m²' },
-    { dienst: 'Plafond spuiten', prijs: '€5,50 tot €7 /m²' },
-    { dienst: 'Nieuwbouw compleet', prijs: '€3,50 tot €7 /m²' },
-    { dienst: 'Renovatie spuiten', prijs: '€8 tot €13 /m²' },
-    { dienst: 'Trappenhuis spuiten', prijs: '€7 tot €10 /m²' },
-    { dienst: 'Kantoor/bedrijfspand', prijs: '€6 tot €9 /m²' },
-  ]
+  const prijzen = prijsTabel['latex-spuiten'].map((r) => ({ dienst: r.wat, prijs: r.prijs }))
 
   const werkwijzeStappen = [
     {
@@ -444,7 +438,7 @@ export default function LatexSpuitenPage() {
                 Wat Kost Latex Spuiten?
               </h2>
               <p className="text-gray-600 leading-relaxed mb-5">
-                Latex spuiten kost gemiddeld €7,50 tot €12 per m² voor muren, inclusief afplakken, primer en latex muurverf. Plafond spuiten is voordeliger: €5,50 tot €7 per m², omdat plafonds doorgaans minder voorbereiding vragen. Bij nieuwbouw begint de all-in prijs vanaf €3,50 per m², omdat nieuwe ondergronden glad en schoon zijn.
+                Latex spuiten kost gemiddeld €8 tot €12 per m² voor muren, inclusief afplakken, primer en latex muurverf. Plafond spuiten is voordeliger: €5,50 tot €7 per m², omdat plafonds doorgaans minder voorbereiding vragen. Bij nieuwbouw begint de all-in prijs vanaf €3,50 per m², omdat nieuwe ondergronden glad en schoon zijn.
               </p>
               <p className="text-gray-600 leading-relaxed mb-5">
                 Schildersbedrijf040 hanteert een uurtarief van €35 tot €50 voor latex spuitwerk, maar werkt bij voorkeur met een vaste prijs per m², zodat u vooraf precies weet wat de investering is. Voor woningen ouder dan 2 jaar geldt het verlaagde btw-tarief van 9% in plaats van 21%, wat een merkbaar verschil maakt op de eindfactuur.

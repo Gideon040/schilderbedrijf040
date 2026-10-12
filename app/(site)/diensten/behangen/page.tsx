@@ -3,6 +3,7 @@ import { Header } from '@/components/layout/header'
 import { Footer } from '@/components/layout/footer'
 import Image from 'next/image'
 import Link from 'next/link'
+import { prijzen as prijsTabel } from '@/lib/prices'
 import { ChevronDown, Phone, Mail, Clock, ArrowRight, Check } from 'lucide-react'
 
 export const metadata: Metadata = {
@@ -181,14 +182,7 @@ export default function BehangenPage() {
     })),
   }
 
-  const prijzen = [
-    { dienst: 'Vliesbehang aanbrengen', prijs: '€15 tot €25 /m²' },
-    { dienst: 'Glasvezelbehang', prijs: '€18 tot €30 /m²' },
-    { dienst: 'Fotobehang plaatsen', prijs: '€25 tot €40 /m²' },
-    { dienst: 'Oud behang verwijderen', prijs: '€5 tot €10 /m²' },
-    { dienst: 'Muren voorbehandelen', prijs: '€8 tot €12 /m²' },
-    { dienst: 'Complete kamer (20 m²)', prijs: '€400 tot €800' },
-  ]
+  const prijzen = prijsTabel['behangen'].map((r) => ({ dienst: r.wat, prijs: r.prijs }))
 
   const werkwijzeStappen = [
     {

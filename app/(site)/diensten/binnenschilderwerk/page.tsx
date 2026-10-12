@@ -3,6 +3,7 @@ import { Header } from '@/components/layout/header'
 import { Footer } from '@/components/layout/footer'
 import Image from 'next/image'
 import Link from 'next/link'
+import { prijzen as prijsTabel } from '@/lib/prices'
 import { ChevronDown, Phone, Mail, Clock, ArrowRight, Check } from 'lucide-react'
 
 export const metadata: Metadata = {
@@ -181,14 +182,7 @@ export default function BinnenschilderwerkPage() {
     })),
   }
 
-  const prijzen = [
-    { dienst: 'Muren schilderen', prijs: '€30 tot €35 /m²' },
-    { dienst: 'Plafond schilderen', prijs: '€32 tot €38 /m²' },
-    { dienst: 'Kozijnen lakken', prijs: '€40 tot €55 /stuk' },
-    { dienst: 'Deuren lakken', prijs: '€80 tot €120 /stuk' },
-    { dienst: 'Trap schilderen', prijs: '€350 tot €600' },
-    { dienst: 'Complete kamer (20 m²)', prijs: '€500 tot €900' },
-  ]
+  const prijzen = prijsTabel['binnenschilderwerk'].map((r) => ({ dienst: r.wat, prijs: r.prijs }))
 
   const werkwijzeStappen = [
     {

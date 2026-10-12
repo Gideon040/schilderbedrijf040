@@ -44,7 +44,7 @@ Branch `seo-redesign`, gestart 12-10-2026. Nulmeting in `rapportages/codestructu
 | 1.1 | klaar | 18 bestanden in `app/`, `components/` (312 vervangen); `scripts/fix-dashes-sanity.mjs` | Blogteksten in Sanity (63 dashes, 5 posts) niet aangepast: dat wijzigt de live blog. Script staat klaar, proefrun gedraaid. Na akkoord: `node scripts/fix-dashes-sanity.mjs --write`. |
 | 1.2 | klaar | `app/(site)/page.tsx`, `components/sections/hero.tsx`, `app/(site)/locaties/[city]/page.tsx` | H1 "Schilder in Eindhoven" + subregel; title "Schilder Eindhoven \| Schildersbedrijf040". Ook opgelost: merknaam stond 2x in de title van home en alle 17 locatiepagina's. |
 | 1.3 | klaar | `components/sections/statistics.tsx`, `lib/site.ts` (nieuw: bedrijfsfeiten op één plek) | Cijferbalk nu: 5,0 Google (41 reviews), 4,9 Werkspot, 5+ jaar ervaring, Boonstoppel. "100+ projecten", "98%" en "100%" weg. Andere claims elders op de site staan op de Jordy-lijst. |
-| 1.4 | todo |  |  |
+| 1.4 | klaar | `lib/prices.ts` (nieuw), 6 dienstpagina's, `locaties/[city]/page.tsx` + 3 databestanden, `faq-section.tsx` | Alle prijstabellen lezen nu uit `lib/prices.ts`. Locatiepagina's en homepage-FAQ niet meer per uur (€35 tot €55) maar per m², gelijk aan de dienstpagina's (36 zinnen). Uurtarieven per dienst in de lopende tekst van dienstpagina's blijven staan. [JORDY: bevestig tabel] |
 | 1.5 | todo |  |  |
 | 1.6 | todo |  |  |
 | 1.7 | todo |  |  |
@@ -74,6 +74,7 @@ Branch `seo-redesign`, gestart 12-10-2026. Nulmeting in `rapportages/codestructu
 | Dienst- en locatiepagina's | Heeft u op Werkspot het label "Topvakman"? Zo niet, dan halen we het weg. |
 | Houtrot sanering | Waar komt "tot 70% goedkoper dan vervangen" vandaan? Graag bevestigen of afzwakken. |
 | Google-reviews | Link naar uw Google-bedrijfsprofiel (de reviewpagina), voor alle knoppen "Alle reviews op Google". |
+| Prijzen (lib/prices.ts) | Klopt de prijstabel? Twee dingen spraken elkaar tegen en zijn gelijkgetrokken: binnenkozijn lakken (€40 tot €55, lakwerkpagina zei €35 tot €75) en binnendeur lakken (€80 tot €120, lakwerkpagina zei €100 tot €150). Latex spuiten: muren €8 tot €12 per m² (tekst zei ook €7,50), meta zegt "vanaf €7". |
 
 ## Ideeën
 

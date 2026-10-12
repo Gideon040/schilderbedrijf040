@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Header } from '@/components/layout/header'
 import Image from 'next/image'
 import Link from 'next/link'
+import { prijzen as prijsTabel } from '@/lib/prices'
 import { ChevronDown, Phone, Mail, Clock, ArrowRight, Check } from 'lucide-react'
 
 export const metadata: Metadata = {
@@ -164,14 +165,7 @@ export default function BuitenschilderwerkPage() {
     })),
   }
 
-  const prijzen = [
-    { dienst: 'Gevel schilderen', prijs: '€35 tot €45 /m²' },
-    { dienst: 'Kozijnen buiten', prijs: '€50 tot €100 /stuk' },
-    { dienst: 'Deuren buiten', prijs: '€100 tot €150 /stuk' },
-    { dienst: 'Boeiboorden & windveren', prijs: '€20 tot €35 /m¹' },
-    { dienst: 'Dakkapel schilderen', prijs: '€400 tot €800' },
-    { dienst: 'Complete woning buiten', prijs: '€2.500 tot €6.000' },
-  ]
+  const prijzen = prijsTabel['buitenschilderwerk'].map((r) => ({ dienst: r.wat, prijs: r.prijs }))
 
   const werkwijzeStappen = [
     {
