@@ -14,7 +14,7 @@ const img = (file: string, alt: string, width: number, height: number): SiteImag
 export const images = {
   jordy: img('jordy-jacobs-schildersbedrijf040-op-ladder.jpg', 'Jordy Jacobs, eigenaar van Schildersbedrijf040, op een ladder met een verfblik', 1800, 1201),
   binnendeur: img('binnenschilderwerk-binnendeur-wit-gelakt.jpg', 'Wit gelakte binnendeur met glas en kozijn na binnenschilderwerk', 1440, 1800),
-  woonkamer: img('binnenschilderwerk-woonkamer-met-tuindeuren.jpg', 'Woonkamer met strak geschilderde wanden en plafond na binnenschilderwerk', 1440, 1800),
+  woonkamer: img('binnenschilderwerk-woonkamer-met-tuindeuren.jpg', 'Woonkamer met strak geschilderde wanden en plafond na binnenschilderwerk', 1005, 1104),
   zolder: img('binnenschilderwerk-zolder-renovatie.jpg', 'Zolderverdieping geschilderd tijdens een complete renovatie', 1179, 868),
   horeca: img('binnenschilderwerk-lambrisering-horeca-eindhoven.jpg', 'Donker geschilderde lambrisering in de entree van een horecazaak', 1179, 1462),
   tuinhuis: img('buitenschilderwerk-tuinhuis-wit-geschilderd.jpg', 'Tuinhuis met wit geschilderde gevel, kozijnen en deuren', 1800, 1350),

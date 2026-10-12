@@ -56,6 +56,12 @@
     @apply text-[18px] leading-[1.7] text-tekst;
   }
 
+  /* Links in lopende tekst */
+  .prose-body a,
+  .prose-links a {
+    @apply font-semibold text-link underline decoration-1 underline-offset-2 hover:text-link-hover;
+  }
+
   .link {
     @apply text-link hover:text-link-hover font-semibold;
   }

@@ -26,7 +26,9 @@ export type DienstPagina = {
   werkwijze: { id: string; h2: string; intro: string; stappen: { titel: string; beschrijving: string }[] }
   waarom: { h2: string; tekst: string; usps: { titel: string; beschrijving: string }[] }
   projecten: Project[]
-  faqs: { question: string; answer: string }[]
+  faqs: { question: string; answer: string; link?: { href: string; tekst: string } }[]
+  // Prijstabel van een andere dienst tonen (bijv. winterschilder -> binnenschilderwerk)
+  prijsSlug?: string
   faqTitel: string
   cta: { titel: string; tekst: string }
   schema: object[]
@@ -41,7 +43,8 @@ const anker = (s: string) =>
     .replace(/^-|-$/g, '')
 
 export function DienstTemplate({ d }: { d: DienstPagina }) {
-  const tabel = prijzen[d.slug] ?? []
+  const tabel = prijzen[d.prijsSlug ?? d.slug] ?? []
+  const tabelNaam = d.prijsSlug ? d.prijsSlug.replace('-', ' ') : d.naam.toLowerCase()
   const dienstReviews = reviews.filter((r) => r.dienst === d.slug).slice(0, 2)
   const reviewSlots = dienstReviews.length ? dienstReviews : [null, null]
 
@@ -62,7 +65,7 @@ export function DienstTemplate({ d }: { d: DienstPagina }) {
               / <span>Diensten</span> / <span aria-current="page">{d.naam}</span>
             </nav>
             <h1 className="mt-2 font-heading text-[42px] font-bold leading-none text-navy md:text-[60px] xl:text-[72px]">{d.h1}</h1>
-            <div className="max-w-[600px] text-[18px] leading-relaxed text-tekst md:text-[20px] md:leading-[1.6]">{d.heroTekst}</div>
+            <div className="prose-links max-w-[600px] text-[18px] leading-relaxed text-tekst md:text-[20px] md:leading-[1.6]">{d.heroTekst}</div>
             <div className="mt-1 flex flex-col gap-3 sm:flex-row sm:gap-3.5">
               <Link href="/contact" className="btn-primary !px-7 !py-4">
                 Gratis offerte aanvragen
@@ -128,10 +131,10 @@ export function DienstTemplate({ d }: { d: DienstPagina }) {
           aria-labelledby={`${d.slug}-prijzen`}
         >
           <h2 id={`${d.slug}-prijzen`} className="font-heading text-[30px] font-bold text-navy md:text-[36px]">
-            Prijzen {d.naam.toLowerCase()}
+            Prijzen {tabelNaam}
           </h2>
           <table className="w-full border-collapse text-[17px]">
-            <caption className="sr-only">Indicatieve prijzen {d.naam.toLowerCase()}</caption>
+            <caption className="sr-only">Indicatieve prijzen {tabelNaam}</caption>
             <tbody>
               {tabel.map((r) => (
                 <tr key={r.wat} className="border-b border-[#DDD8CF]">
@@ -260,7 +263,17 @@ export function DienstTemplate({ d }: { d: DienstPagina }) {
             {d.faqs.map((f) => (
               <div key={f.question} className="flex flex-col gap-2 border-b border-[#DDD8CF] pb-[18px]">
                 <h3 className="font-sans text-[19px] font-bold leading-snug text-navy md:text-[20px]">{f.question}</h3>
-                <p className="text-[17px] leading-relaxed text-tekst-zacht">{f.answer}</p>
+                <p className="text-[17px] leading-relaxed text-tekst-zacht">
+                  {f.answer}
+                  {f.link && (
+                    <>
+                      {' '}
+                      <Link href={f.link.href} className="link">
+                        {f.link.tekst}
+                      </Link>
+                    </>
+                  )}
+                </p>
               </div>
             ))}
           </div>
