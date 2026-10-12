@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { TOON_JORDY } from '@/lib/jordy'
 import Link from 'next/link'
 import { DienstTemplate, type DienstPagina } from '@/components/dienst/template'
 import { images } from '@/lib/images'
@@ -101,10 +102,10 @@ const pagina: DienstPagina = {
       <>
         <p>
           Sneller beschikbaar: vaak wel. In het voorjaar en de zomer piekt het buitenwerk. In de winter is er bij Schildersbedrijf040
-          meestal sneller plek in de planning voor binnenwerk. [JORDY: huidige wachttijd in de winter]
+          meestal sneller plek in de planning voor binnenwerk.{TOON_JORDY && ' [JORDY: huidige wachttijd in de winter]'}
         </p>
         <p>
-          Goedkoper: de prijzen zijn in de winter gelijk aan de rest van het jaar. [JORDY: klopt dit, of komt er een winteractie?]
+          Goedkoper: de prijzen zijn in de winter gelijk aan de rest van het jaar.{TOON_JORDY && ' [JORDY: klopt dit, of komt er een winteractie?]'}
           Binnenschilderwerk kost gemiddeld €30 tot €35 per m² voor muren en €32 tot €38 per m² voor plafonds, inclusief materiaal en
           exclusief btw. Voor woningen ouder dan twee jaar geldt 9% btw op de arbeid. De exacte prijs hoort u na een gratis inspectie, in
           een offerte met vaste prijs.

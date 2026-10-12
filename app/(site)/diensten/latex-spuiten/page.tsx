@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { TOON_JORDY } from '@/lib/jordy'
 import Link from 'next/link'
 import { DienstTemplate, type DienstPagina } from '@/components/dienst/template'
 import { images } from '@/lib/images'
@@ -177,7 +178,7 @@ const pagina: DienstPagina = {
   heroTekst: (
     <p>
       Latex spuiten kost gemiddeld €8 tot €12 per m² voor muren en €5,50 tot €7 per m² voor plafonds, inclusief afplakken en materiaal. Een
-      complete woning is meestal in 1 tot 2 dagen gespoten, [JORDY: gemiddeld aantal m² per dag]. Na een gratis inspectie krijgt u een
+      complete woning is meestal in 1 tot 2 dagen gespoten{TOON_JORDY && ', [JORDY: gemiddeld aantal m² per dag]'}. Na een gratis inspectie krijgt u een
       offerte met vaste prijs per m².
     </p>
   ),

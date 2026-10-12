@@ -377,7 +377,7 @@ export function DienstTemplate({ d }: { d: DienstPagina }) {
             </div>
           </div>
           <div className="rv">
-            {d.faqs.map((f, i) => (
+            {d.faqs.filter((f) => jordy(f.answer).length > 0).map((f, i) => (
               <details key={f.question} open={i === 0}>
                 <summary>
                   <h3>{f.question}</h3>
