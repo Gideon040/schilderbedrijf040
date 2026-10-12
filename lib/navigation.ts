@@ -30,3 +30,7 @@ export const plaatsen = [
   { name: 'Bergeijk', href: '/locaties/bergeijk' },
   { name: 'Maarheeze', href: '/locaties/maarheeze' },
 ]
+
+// Prijsgids (/kosten/schilderwerk) staat gepland voor november en wacht op de scopecheck.
+// Zet live op true zodra de pagina bestaat; dan verschijnen de links op dienst- en locatiepagina's.
+export const PRIJSGIDS = { href: '/kosten/schilderwerk', live: false }
