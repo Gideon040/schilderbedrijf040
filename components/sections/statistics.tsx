@@ -1,28 +1,14 @@
 'use client'
 
 import Image from 'next/image'
+import { site } from '@/lib/site'
 
+// Alleen verifieerbare feiten. "100+ projecten" pas tonen als Jordy het aantal bevestigt.
 const stats = [
-  {
-    value: "5+",
-    label: "Jaren Ervaring",
-    color: "#0088FF"
-  },
-  {
-    value: "100+",
-    label: "Projecten Voltooid",
-    color: "#0088FF"
-  },
-  {
-    value: "98%",
-    label: "Klanttevredenheid",
-    color: "#0088FF"
-  },
-  {
-    value: "100%",
-    label: "Kwaliteitsgarantie",
-    color: "#0088FF"
-  }
+  { value: site.google.rating, label: `Google (${site.google.reviewCount} reviews)` },
+  { value: site.werkspot.rating, label: 'op Werkspot' },
+  { value: site.experience, label: 'ervaring' },
+  { value: site.paintBrand, label: 'verf op elk project' },
 ]
 
 export function Statistics() {
@@ -47,10 +33,7 @@ export function Statistics() {
               key={index}
               className="flex flex-col items-center justify-center min-h-[120px] text-center"
             >
-              <span 
-                className="text-5xl font-bold mb-2 font-bebas tracking-wide"
-                style={{ color: stat.color }}
-              >
+              <span className="text-5xl font-bold mb-2 font-bebas tracking-wide text-[#0088FF]">
                 {stat.value}
               </span>
               <span className="text-white text-base">

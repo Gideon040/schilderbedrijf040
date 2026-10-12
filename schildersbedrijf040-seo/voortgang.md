@@ -43,7 +43,7 @@ Branch `seo-redesign`, gestart 12-10-2026. Nulmeting in `rapportages/codestructu
 |---|---|---|---|
 | 1.1 | klaar | 18 bestanden in `app/`, `components/` (312 vervangen); `scripts/fix-dashes-sanity.mjs` | Blogteksten in Sanity (63 dashes, 5 posts) niet aangepast: dat wijzigt de live blog. Script staat klaar, proefrun gedraaid. Na akkoord: `node scripts/fix-dashes-sanity.mjs --write`. |
 | 1.2 | klaar | `app/(site)/page.tsx`, `components/sections/hero.tsx`, `app/(site)/locaties/[city]/page.tsx` | H1 "Schilder in Eindhoven" + subregel; title "Schilder Eindhoven \| Schildersbedrijf040". Ook opgelost: merknaam stond 2x in de title van home en alle 17 locatiepagina's. |
-| 1.3 | todo |  |  |
+| 1.3 | klaar | `components/sections/statistics.tsx`, `lib/site.ts` (nieuw: bedrijfsfeiten op één plek) | Cijferbalk nu: 5,0 Google (41 reviews), 4,9 Werkspot, 5+ jaar ervaring, Boonstoppel. "100+ projecten", "98%" en "100%" weg. Andere claims elders op de site staan op de Jordy-lijst. |
 | 1.4 | todo |  |  |
 | 1.5 | todo |  |  |
 | 1.6 | todo |  |  |
@@ -67,6 +67,13 @@ Branch `seo-redesign`, gestart 12-10-2026. Nulmeting in `rapportages/codestructu
 
 | Waar | Vraag |
 |---|---|
+| Homepage, cijferbalk | Hoeveel projecten heeft u ongeveer gedaan? "100+ projecten" is weggehaald tot u het bevestigt. |
+| Sitebreed (diensten, locaties, werkwijze) | Klopt "offerte binnen 48 uur" na de inspectie en "reactie binnen 24 uur" (of "binnen één werkdag")? Staat op ca. 40 plekken. |
+| Homepage-FAQ, garanties | Welke garantie geeft u precies? Nu staat er binnen 3 tot 5 jaar en buiten 5 tot 7 jaar, en "100% kwaliteitsgarantie". |
+| Homepage, blok Garanties | Klopt "gediplomeerde schilders", "gecertificeerd" en "regelmatig bijscholing"? Werkt u met personeel of alleen? Tot bevestiging niet overnemen in het redesign. |
+| Dienst- en locatiepagina's | Heeft u op Werkspot het label "Topvakman"? Zo niet, dan halen we het weg. |
+| Houtrot sanering | Waar komt "tot 70% goedkoper dan vervangen" vandaan? Graag bevestigen of afzwakken. |
+| Google-reviews | Link naar uw Google-bedrijfsprofiel (de reviewpagina), voor alle knoppen "Alle reviews op Google". |
 
 ## Ideeën
 
