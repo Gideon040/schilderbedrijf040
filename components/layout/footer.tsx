@@ -1,146 +1,92 @@
-'use client'
-
 import Link from 'next/link'
-import { Facebook, Instagram, Mail, MapPin, Phone } from 'lucide-react'
+import { Facebook, Instagram } from 'lucide-react'
+import { Stars } from '@/components/site/stars'
+import { diensten, plaatsen } from '@/lib/navigation'
+import { site } from '@/lib/site'
 
-const services = [
-  { name: 'Binnenschilderwerk', href: '/diensten/binnenschilderwerk' },
-  { name: 'Buitenschilderwerk', href: '/diensten/buitenschilderwerk' },
-  { name: 'Behangen', href: '/diensten/behangen' },
-  { name: 'Lakwerk', href: '/diensten/lakwerk' },
-  { name: 'Latex Spuiten', href: '/diensten/latex-spuiten' },
-  { name: 'Houtrot Sanering', href: '/diensten/houtrot-sanering' }
-]
-
-const werkgebieden = [
-  { name: 'Eindhoven', href: '/' },
-  { name: 'Veldhoven', href: '/locaties/veldhoven' },
-  { name: 'Waalre', href: '/locaties/waalre' },
-  { name: 'Best', href: '/locaties/best' },
-  { name: 'Nuenen', href: '/locaties/nuenen' },
-  { name: 'Geldrop', href: '/locaties/geldrop' },
-  { name: 'Helmond', href: '/locaties/helmond' },
-  { name: 'Son en Breugel', href: '/locaties/son-en-breugel' },
-  { name: 'Valkenswaard', href: '/locaties/valkenswaard' },
-  { name: 'Oirschot', href: '/locaties/oirschot' },
-  { name: 'Heeze', href: '/locaties/heeze' },
-  { name: 'Mierlo', href: '/locaties/mierlo' },
-  { name: 'Meerhoven', href: '/locaties/meerhoven' },
-  { name: 'Deurne', href: '/locaties/deurne' },
-  { name: 'Beek en Donk', href: '/locaties/beek-en-donk' },
-  { name: 'Eersel', href: '/locaties/eersel' },
-  { name: 'Bergeijk', href: '/locaties/bergeijk' },
-  { name: 'Maarheeze', href: '/locaties/maarheeze' },
+const snelleLinks = [
+  { name: 'Projecten', href: '/projecten' },
+  { name: 'Over ons', href: '/over-ons' },
+  { name: 'Veelgestelde vragen', href: '/faq' },
+  { name: 'Blog', href: '/blog' },
+  { name: 'Contact', href: '/contact' },
 ]
 
 export function Footer() {
   return (
-    <footer className="bg-[#001B32] text-white">
-      <div className="container py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
-          {/* Contact Info */}
-          <div>
-            <h3 className="text-xl font-bebas mb-6">CONTACT</h3>
-            <div className="space-y-4">
-              <a href="tel:+31638903004" className="flex items-center gap-2 hover:text-primary transition-colors">
-                <Phone className="w-5 h-5" />
-                <span>06-38903004</span>
-              </a>
-              <a href="mailto:info@schildersbedrijf040.nl" className="flex items-center gap-2 hover:text-primary transition-colors">
-                <Mail className="w-5 h-5" />
-                <span>info@schildersbedrijf040.nl</span>
-              </a>
-              <div className="flex items-start gap-2">
-                <MapPin className="w-5 h-5 flex-shrink-0" />
-                <span>Straatsburglaan 26, 5627DB Eindhoven</span>
-              </div>
-            </div>
-          </div>
-
-          {/* Services */}
-          <div>
-            <h3 className="text-xl font-bebas mb-6">DIENSTEN</h3>
-            <ul className="space-y-2">
-              {services.map((service) => (
-                <li key={service.href}>
-                  <Link href={service.href} className="hover:text-primary transition-colors">
-                    {service.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Quick Links */}
-          <div>
-            <h3 className="text-xl font-bebas mb-6">SNELLE LINKS</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link href="/over-ons" className="hover:text-primary transition-colors">
-                  Over Ons
-                </Link>
-              </li>
-              <li>
-                <Link href="/projecten" className="hover:text-primary transition-colors">
-                  Projecten
-                </Link>
-              </li>
-              <li>
-                <Link href="/contact" className="hover:text-primary transition-colors">
-                  Contact
-                </Link>
-              </li>
-              <li>
-                <Link href="/faq" className="hover:text-primary transition-colors">
-                  FAQ
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Werkgebieden */}
-          <div>
-            <h3 className="text-xl font-bebas mb-6">WERKGEBIEDEN</h3>
-            <ul className="space-y-2">
-              {werkgebieden.map((locatie) => (
-                <li key={locatie.href}>
-                  <Link href={locatie.href} className="hover:text-primary transition-colors">
-                    {locatie.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Social Media */}
-          <div>
-            <h3 className="text-xl font-bebas mb-6">VOLG ONS</h3>
-            <div className="flex gap-4">
-              <a
-                href="https://www.facebook.com/profile.php?id=100064851917826"
-                aria-label="Schildersbedrijf040 op Facebook"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors"
-              >
-                <Facebook className="w-5 h-5" />
-              </a>
-              <a
-                href="https://www.instagram.com/schildersbedrijf040/"
-                aria-label="Schildersbedrijf040 op Instagram"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors"
-              >
-                <Instagram className="w-5 h-5" />
-              </a>
-            </div>
+    <footer className="bg-ink text-[#AEBBCC]">
+      <div className="container grid grid-cols-1 gap-10 py-14 sm:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1.6fr_1fr] lg:gap-12 lg:py-[72px]">
+        <div className="flex flex-col gap-3.5 text-base leading-relaxed">
+          <span className="font-heading text-[30px] font-bold text-white">Schildersbedrijf040</span>
+          <span>Vakkundig schilderwerk in Eindhoven en omgeving. Eigenaar {site.owner}.</span>
+          <span className="flex flex-wrap items-center gap-2 text-white">
+            <Stars className="h-3.5 w-3.5" />
+            {site.google.rating} op Google ({site.google.reviewCount}) · {site.werkspot.rating} op Werkspot
+          </span>
+          <div className="mt-2 flex gap-3">
+            <a href={site.sameAs[0]} target="_blank" rel="noopener noreferrer" aria-label="Schildersbedrijf040 op Facebook" className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white hover:bg-brand">
+              <Facebook className="h-5 w-5" />
+            </a>
+            <a href={site.sameAs[1]} target="_blank" rel="noopener noreferrer" aria-label="Schildersbedrijf040 op Instagram" className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white hover:bg-brand">
+              <Instagram className="h-5 w-5" />
+            </a>
           </div>
         </div>
 
-<div className="mt-12 pt-8 border-t border-white/10 text-center text-sm text-white/60">
- <p>© {new Date().getFullYear()} Schildersbedrijf040. Alle rechten voorbehouden. Website gemaakt door <a href="https://www.gostack.nl" target="_blank" rel="noopener noreferrer" className="hover:text-white">GOSTACK</a></p>
-</div>
+        <div className="flex flex-col gap-2.5 text-base">
+          <h2 className="mb-1.5 font-sans text-base font-bold text-white">Diensten</h2>
+          {diensten.map((d) => (
+            <Link key={d.href} href={d.href} className="hover:text-white">
+              {d.name}
+            </Link>
+          ))}
+          <h2 className="mb-1.5 mt-4 font-sans text-base font-bold text-white">Snel naar</h2>
+          {snelleLinks.map((l) => (
+            <Link key={l.href} href={l.href} className="hover:text-white">
+              {l.name}
+            </Link>
+          ))}
+        </div>
+
+        <div className="flex flex-col gap-2.5 text-base">
+          <h2 className="mb-1.5 font-sans text-base font-bold text-white">Werkgebied</h2>
+          <ul className="grid grid-cols-2 gap-x-6 gap-y-2.5">
+            {plaatsen.map((p) => (
+              <li key={p.href}>
+                <Link href={p.href} className="hover:text-white">
+                  Schilder {p.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div className="flex flex-col gap-2.5 text-base leading-normal">
+          <h2 className="mb-1.5 font-sans text-base font-bold text-white">Contact</h2>
+          <address className="not-italic">
+            {site.address.street}
+            <br />
+            {site.address.postalCode} {site.address.city}
+          </address>
+          <a href={site.phoneHref} className="font-semibold text-white hover:text-verf">
+            {site.phone}
+          </a>
+          <a href={`mailto:${site.email}`} className="hover:text-white">
+            {site.email}
+          </a>
+          <span>
+            {site.openingHours.days} {site.openingHours.opens} tot {site.openingHours.closes}
+          </span>
+        </div>
+      </div>
+
+      <div className="border-t border-white/10">
+        <div className="container py-6 text-center text-sm text-[#AEBBCC]">
+          © {new Date().getFullYear()} Schildersbedrijf040. Alle rechten voorbehouden. Website gemaakt door{' '}
+          <a href="https://www.gostack.nl" target="_blank" rel="noopener noreferrer" className="underline hover:text-white">
+            GOSTACK
+          </a>
+        </div>
       </div>
     </footer>
   )
