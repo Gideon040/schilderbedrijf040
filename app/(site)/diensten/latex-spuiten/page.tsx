@@ -7,7 +7,7 @@ import { ChevronDown, Phone, Mail, Clock, ArrowRight, Check } from 'lucide-react
 
 export const metadata: Metadata = {
   title: 'Latex Spuiten Eindhoven | Muren & Plafonds Snel en Egaal Afgewerkt',
-  description: 'Latex spuiten door Schildersbedrijf040 in Eindhoven. Muren en plafonds 3-5x sneller en 100% egaal met airless spuittechniek. \u2713 Vanaf \u20ac7/m\u00b2 \u2713 Gratis offerte.',
+  description: 'Latex spuiten door Schildersbedrijf040 in Eindhoven. Muren en plafonds 3-5x sneller en 100% egaal met airless spuittechniek. ✓ Vanaf €7/m² ✓ Gratis offerte.',
   keywords: [
     'latex spuiten eindhoven',
     'airless spuiten eindhoven',
@@ -96,7 +96,7 @@ export default function LatexSpuitenPage() {
         '@type': 'UnitPriceSpecification',
         priceCurrency: 'EUR',
         price: '7-12',
-        unitText: 'per m\u00b2',
+        unitText: 'per m²',
       },
     },
     hasOfferCatalog: {
@@ -151,12 +151,12 @@ export default function LatexSpuitenPage() {
       answer: 'Gespoten latex muurverf is stofdroog binnen 30 tot 60 minuten en overschilderbaar na 4 tot 6 uur, afhankelijk van de temperatuur en ventilatie in de ruimte. Schildersbedrijf040 zorgt voor goede ventilatie tijdens en na het spuiten, waardoor de droogtijd optimaal blijft. Een volledige kamer met muren en plafond kan doorgaans op dezelfde dag meerdere lagen ontvangen.',
     },
     {
-      question: 'Wat kost latex spuiten per m\u00b2?',
-      answer: 'Latex spuiten kost gemiddeld \u20ac7,50 tot \u20ac12 per m\u00b2 voor muren, inclusief afplakken, primer en latex. Plafond spuiten is voordeliger: \u20ac5,50 tot \u20ac7 per m\u00b2. Nieuwbouw compleet spuiten begint vanaf \u20ac3,50 per m\u00b2, omdat nieuwe ondergronden minder voorbereiding vragen. Schildersbedrijf040 werkt altijd met een vaste offerte, zodat u vooraf precies weet wat de investering is. Bij woningen ouder dan 2 jaar geldt het verlaagde btw-tarief van 9%.',
+      question: 'Wat kost latex spuiten per m²?',
+      answer: 'Latex spuiten kost gemiddeld €7,50 tot €12 per m² voor muren, inclusief afplakken, primer en latex. Plafond spuiten is voordeliger: €5,50 tot €7 per m². Nieuwbouw compleet spuiten begint vanaf €3,50 per m², omdat nieuwe ondergronden minder voorbereiding vragen. Schildersbedrijf040 werkt altijd met een vaste offerte, zodat u vooraf precies weet wat de investering is. Bij woningen ouder dan 2 jaar geldt het verlaagde btw-tarief van 9%.',
     },
     {
       question: 'Is latex spuiten goedkoper dan rollen?',
-      answer: 'Bij grotere oppervlakken is latex spuiten doorgaans voordeliger dan rollen, ondanks de hogere materiaalkosten van de spuitmachine. De reden is dat airless spuiten 3 tot 5 keer sneller gaat, waardoor de arbeidskosten aanzienlijk lager uitvallen. Voor een enkele kleine kamer kan rollen voordeliger zijn, maar bij complete woningen, nieuwbouwprojecten of bedrijfspanden is latex spuiten door Schildersbedrijf040 de meest kosteneffici\u00ebnte keuze.',
+      answer: 'Bij grotere oppervlakken is latex spuiten doorgaans voordeliger dan rollen, ondanks de hogere materiaalkosten van de spuitmachine. De reden is dat airless spuiten 3 tot 5 keer sneller gaat, waardoor de arbeidskosten aanzienlijk lager uitvallen. Voor een enkele kleine kamer kan rollen voordeliger zijn, maar bij complete woningen, nieuwbouwprojecten of bedrijfspanden is latex spuiten door Schildersbedrijf040 de meest kostenefficiënte keuze.',
     },
     {
       question: 'Moet ik zelf de kamer leegruimen voor het spuiten?',
@@ -182,12 +182,12 @@ export default function LatexSpuitenPage() {
   }
 
   const prijzen = [
-    { dienst: 'Muren spuiten', prijs: '\u20ac8 \u2013 \u20ac12 /m\u00b2' },
-    { dienst: 'Plafond spuiten', prijs: '\u20ac5,50 \u2013 \u20ac7 /m\u00b2' },
-    { dienst: 'Nieuwbouw compleet', prijs: '\u20ac3,50 \u2013 \u20ac7 /m\u00b2' },
-    { dienst: 'Renovatie spuiten', prijs: '\u20ac8 \u2013 \u20ac13 /m\u00b2' },
-    { dienst: 'Trappenhuis spuiten', prijs: '\u20ac7 \u2013 \u20ac10 /m\u00b2' },
-    { dienst: 'Kantoor/bedrijfspand', prijs: '\u20ac6 \u2013 \u20ac9 /m\u00b2' },
+    { dienst: 'Muren spuiten', prijs: '€8 tot €12 /m²' },
+    { dienst: 'Plafond spuiten', prijs: '€5,50 tot €7 /m²' },
+    { dienst: 'Nieuwbouw compleet', prijs: '€3,50 tot €7 /m²' },
+    { dienst: 'Renovatie spuiten', prijs: '€8 tot €13 /m²' },
+    { dienst: 'Trappenhuis spuiten', prijs: '€7 tot €10 /m²' },
+    { dienst: 'Kantoor/bedrijfspand', prijs: '€6 tot €9 /m²' },
   ]
 
   const werkwijzeStappen = [
@@ -199,7 +199,7 @@ export default function LatexSpuitenPage() {
     {
       nummer: 2,
       titel: 'Offerte op Maat',
-      beschrijving: 'Binnen 48 uur ontvangt u een gedetailleerde offerte met vaste prijs \u2014 inclusief afplakken, primer, latex en oplevering.',
+      beschrijving: 'Binnen 48 uur ontvangt u een gedetailleerde offerte met vaste prijs, inclusief afplakken, primer, latex en oplevering.',
     },
     {
       nummer: 3,
@@ -235,7 +235,7 @@ export default function LatexSpuitenPage() {
         <div className="absolute inset-0 z-0 opacity-30">
           <Image
             src={heroImage}
-            alt="Latex spuiten in Eindhoven \u2014 muren en plafonds professioneel gespoten door Schildersbedrijf040"
+            alt="Latex spuiten in Eindhoven, muren en plafonds professioneel gespoten door Schildersbedrijf040"
             fill
             sizes="100vw"
             className="object-cover"
@@ -280,7 +280,7 @@ export default function LatexSpuitenPage() {
                     <StarIcon key={i} />
                   ))}
                 </div>
-                <span className="text-sm text-gray-300 font-medium">5.0 \u2014 41 reviews</span>
+                <span className="text-sm text-gray-300 font-medium">5,0 uit 41 reviews</span>
               </div>
               <div className="w-px h-7 bg-white/15" />
               <div className="flex items-center gap-2.5">
@@ -290,7 +290,7 @@ export default function LatexSpuitenPage() {
                     <StarIcon key={i} />
                   ))}
                 </div>
-                <span className="text-sm text-gray-300 font-medium">4.9 \u2014 Topvakman</span>
+                <span className="text-sm text-gray-300 font-medium">4,9 op Werkspot</span>
               </div>
             </div>
           </div>
@@ -323,7 +323,7 @@ export default function LatexSpuitenPage() {
               <div className="rounded-2xl overflow-hidden">
                 <Image
                   src={heroImage}
-                  alt="Professioneel latex spuiten door Schildersbedrijf040 \u2014 airless spuittechniek voor muren en plafonds in Eindhoven"
+                  alt="Professioneel latex spuiten door Schildersbedrijf040, airless spuittechniek voor muren en plafonds in Eindhoven"
                   width={600}
                   height={400}
                   className="w-full h-auto object-cover rounded-2xl"
@@ -331,8 +331,8 @@ export default function LatexSpuitenPage() {
               </div>
               <div className="grid grid-cols-2 gap-4">
                 {[
-                  { label: 'Snelheid', waarde: '3\u20135x sneller' },
-                  { label: 'Prijs', waarde: 'vanaf \u20ac7/m\u00b2' },
+                  { label: 'Snelheid', waarde: '3 tot 5x sneller' },
+                  { label: 'Prijs', waarde: 'vanaf €7/m²' },
                   { label: 'Resultaat', waarde: '100% egaal' },
                   { label: 'BTW woningen 2+ jaar', waarde: '9%' },
                 ].map((item, index) => (
@@ -357,7 +357,7 @@ export default function LatexSpuitenPage() {
             Soorten Latex Spuitwerk
           </h2>
           <p className="text-gray-600 leading-relaxed mb-12 max-w-2xl">
-            Latex spuiten is veelzijdig inzetbaar. Van nieuwbouw tot renovatie, van woonkamers tot kantoorpanden \u2014 Schildersbedrijf040 past airless spuittechniek toe in uiteenlopende situaties.
+            Latex spuiten is veelzijdig inzetbaar. Van nieuwbouw tot renovatie, van woonkamers tot kantoorpanden. Schildersbedrijf040 past airless spuittechniek toe in uiteenlopende situaties.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0.5 rounded-2xl overflow-hidden">
@@ -365,7 +365,7 @@ export default function LatexSpuitenPage() {
               {
                 nummer: '01',
                 titel: 'Muren Spuiten',
-                beschrijving: 'Muren spuiten met airless techniek levert een strak, egaal resultaat zonder rolstrepen. Schildersbedrijf040 spuit binnenmuren in elke gewenste kleur en afwerking \u2014 van mat tot zijdeglans. Ideaal voor woonkamers, slaapkamers en hallen waar een moderne uitstraling gewenst is.',
+                beschrijving: 'Muren spuiten met airless techniek levert een strak, egaal resultaat zonder rolstrepen. Schildersbedrijf040 spuit binnenmuren in elke gewenste kleur en afwerking, van mat tot zijdeglans. Ideaal voor woonkamers, slaapkamers en hallen waar een moderne uitstraling gewenst is.',
                 link: '/diensten/binnenschilderwerk',
                 linkTekst: 'Bekijk binnenschilderwerk',
               },
@@ -379,7 +379,7 @@ export default function LatexSpuitenPage() {
               {
                 nummer: '03',
                 titel: 'Nieuwbouw Spuiten',
-                beschrijving: 'Nieuwbouw spuiten is de meest kosteneffici\u00ebnte manier om een nieuwbouwwoning af te werken. Omdat nieuwe muren en plafonds doorgaans glad en schoon zijn, is minder voorbereiding nodig. Schildersbedrijf040 spuit complete nieuwbouwwoningen in Eindhoven vanaf \u20ac3,50 per m\u00b2 \u2014 snel, egaal en betaalbaar.',
+                beschrijving: 'Nieuwbouw spuiten is de meest kostenefficiënte manier om een nieuwbouwwoning af te werken. Omdat nieuwe muren en plafonds doorgaans glad en schoon zijn, is minder voorbereiding nodig. Schildersbedrijf040 spuit complete nieuwbouwwoningen in Eindhoven vanaf €3,50 per m², snel, egaal en betaalbaar.',
                 link: '/projecten',
                 linkTekst: 'Bekijk projecten',
               },
@@ -393,7 +393,7 @@ export default function LatexSpuitenPage() {
               {
                 nummer: '05',
                 titel: 'Kantoren & Bedrijfspanden',
-                beschrijving: 'Kantoren en bedrijfspanden hebben vaak grote muur- en plafondoppervlakken die met airless spuiten snel en effici\u00ebnt afgewerkt worden. Schildersbedrijf040 plant het spuitwerk buiten kantooruren of in het weekend, zodat de bedrijfsvoering niet verstoord wordt.',
+                beschrijving: 'Kantoren en bedrijfspanden hebben vaak grote muur- en plafondoppervlakken die met airless spuiten snel en efficiënt afgewerkt worden. Schildersbedrijf040 plant het spuitwerk buiten kantooruren of in het weekend, zodat de bedrijfsvoering niet verstoord wordt.',
                 link: '/contact',
                 linkTekst: 'Plan een afspraak',
               },
@@ -444,13 +444,13 @@ export default function LatexSpuitenPage() {
                 Wat Kost Latex Spuiten?
               </h2>
               <p className="text-gray-600 leading-relaxed mb-5">
-                Latex spuiten kost gemiddeld \u20ac7,50 tot \u20ac12 per m\u00b2 voor muren, inclusief afplakken, primer en latex muurverf. Plafond spuiten is voordeliger: \u20ac5,50 tot \u20ac7 per m\u00b2, omdat plafonds doorgaans minder voorbereiding vragen. Bij nieuwbouw begint de all-in prijs vanaf \u20ac3,50 per m\u00b2, omdat nieuwe ondergronden glad en schoon zijn.
+                Latex spuiten kost gemiddeld €7,50 tot €12 per m² voor muren, inclusief afplakken, primer en latex muurverf. Plafond spuiten is voordeliger: €5,50 tot €7 per m², omdat plafonds doorgaans minder voorbereiding vragen. Bij nieuwbouw begint de all-in prijs vanaf €3,50 per m², omdat nieuwe ondergronden glad en schoon zijn.
               </p>
               <p className="text-gray-600 leading-relaxed mb-5">
-                Schildersbedrijf040 hanteert een uurtarief van \u20ac35 tot \u20ac50 voor latex spuitwerk, maar werkt bij voorkeur met een vaste prijs per m\u00b2 \u2014 zodat u vooraf precies weet wat de investering is. Voor woningen ouder dan 2 jaar geldt het verlaagde btw-tarief van 9% in plaats van 21%, wat een merkbaar verschil maakt op de eindfactuur.
+                Schildersbedrijf040 hanteert een uurtarief van €35 tot €50 voor latex spuitwerk, maar werkt bij voorkeur met een vaste prijs per m², zodat u vooraf precies weet wat de investering is. Voor woningen ouder dan 2 jaar geldt het verlaagde btw-tarief van 9% in plaats van 21%, wat een merkbaar verschil maakt op de eindfactuur.
               </p>
               <p className="text-gray-600 leading-relaxed mb-6">
-                Hoewel de materiaalkosten bij airless spuiten iets hoger liggen dan bij rollen (door de spuitmachine en het hogere verfverbruik), zijn de totale kosten bij grotere oppervlakken lager. Airless spuiten is 3 tot 5 keer sneller, waardoor de arbeidskosten fors dalen. Schildersbedrijf040 adviseert altijd eerlijk welke methode \u2014 spuiten of rollen \u2014 het beste bij uw project past.
+                Hoewel de materiaalkosten bij airless spuiten iets hoger liggen dan bij rollen (door de spuitmachine en het hogere verfverbruik), zijn de totale kosten bij grotere oppervlakken lager. Airless spuiten is 3 tot 5 keer sneller, waardoor de arbeidskosten fors dalen. Schildersbedrijf040 adviseert altijd eerlijk welke methode, spuiten of rollen, het beste bij uw project past.
               </p>
               <Link
                 href="/contact"
@@ -494,7 +494,7 @@ export default function LatexSpuitenPage() {
         <div className="absolute inset-0">
           <Image
             src={heroImage}
-            alt="Latex spuiten resultaat \u2014 egaal gespoten muren en plafonds"
+            alt="Latex spuiten resultaat, egaal gespoten muren en plafonds"
             fill
             sizes="100vw"
             className="object-cover"
@@ -543,7 +543,7 @@ export default function LatexSpuitenPage() {
               Ons Werkproces in 4 Stappen
             </h2>
             <p className="text-gray-600 leading-relaxed max-w-xl mx-auto">
-              Elk latex spuitproject bij Schildersbedrijf040 volgt een vast werkproces \u2014 van inspectie tot oplevering. Zo weet u precies wat u kunt verwachten.
+              Elk latex spuitproject bij Schildersbedrijf040 volgt een vast werkproces, van inspectie tot oplevering. Zo weet u precies wat u kunt verwachten.
             </p>
           </div>
 
@@ -581,15 +581,15 @@ export default function LatexSpuitenPage() {
                 Waarom Schildersbedrijf040 voor Latex Spuiten?
               </h2>
               <p className="text-gray-600 leading-relaxed mb-8">
-                Schildersbedrijf040 onderscheidt zich door vakmanschap, professionele airless spuitapparatuur en transparante prijzen. Eigenaar Jordy Jacobs is persoonlijk betrokken bij elk spuitproject \u2014 van de eerste inspectie tot de eindcontrole. Dat vertaalt zich in een klantbeoordeling van 5 sterren op Google en een 4,9 op Werkspot.
+                Schildersbedrijf040 onderscheidt zich door vakmanschap, professionele airless spuitapparatuur en transparante prijzen. Eigenaar Jordy Jacobs is persoonlijk betrokken bij elk spuitproject, van de eerste inspectie tot de eindcontrole. Dat vertaalt zich in een klantbeoordeling van 5 sterren op Google en een 4,9 op Werkspot.
               </p>
 
               <div className="flex flex-col gap-4">
                 {[
-                  { titel: 'Professionele airless spuitapparatuur', beschrijving: 'Schildersbedrijf040 werkt met Graco en Titan airless spuitmachines \u2014 industriestandaard voor egaal en effici\u00ebnt spuitwerk zonder overspray.' },
-                  { titel: 'Hoogst beoordeeld in de regio', beschrijving: '5 sterren op Google en 4,9 op Werkspot \u2014 gebaseerd op 60+ beoordelingen van woningeigenaren in Eindhoven en omgeving.' },
+                  { titel: 'Professionele airless spuitapparatuur', beschrijving: 'Schildersbedrijf040 werkt met Graco en Titan airless spuitmachines, industriestandaard voor egaal en efficiënt spuitwerk zonder overspray.' },
+                  { titel: 'Hoogst beoordeeld in de regio', beschrijving: '5 sterren op Google en 4,9 op Werkspot, gebaseerd op 60+ beoordelingen van woningeigenaren in Eindhoven en omgeving.' },
                   { titel: '3-5x sneller dan rollen', beschrijving: 'Airless latex spuiten bespaart u dagen wachttijd. Een complete woning is in 1 tot 2 dagen gespoten, waar rollen een week kost.' },
-                  { titel: 'Vaste prijs \u2014 geen verrassingen', beschrijving: 'Gedetailleerde offerte binnen 48 uur met vaste prijs per m\u00b2. Inclusief afplakken, primer, latex en oplevering.' },
+                  { titel: 'Vaste prijs, geen verrassingen', beschrijving: 'Gedetailleerde offerte binnen 48 uur met vaste prijs per m². Inclusief afplakken, primer, latex en oplevering.' },
                   { titel: 'Nette afplak- en afdekwerkzaamheden', beschrijving: 'Professioneel afplakken en afdekken voorkomt overspray. Schildersbedrijf040 levert de werkplek schoon en netjes op.' },
                 ].map((usp, index) => (
                   <div
@@ -624,7 +624,7 @@ export default function LatexSpuitenPage() {
                 </p>
                 <div className="flex items-center gap-2 mt-3 text-xs font-semibold text-gray-400 uppercase tracking-wide">
                   <GoogleLogo />
-                  Google Reviews \u2014 41 beoordelingen
+                  Google Reviews: 41 beoordelingen
                 </div>
               </div>
 
@@ -643,7 +643,7 @@ export default function LatexSpuitenPage() {
                 </p>
                 <div className="flex items-center gap-2 mt-3 text-xs font-semibold text-gray-400 uppercase tracking-wide">
                   <WerkspotLogo />
-                  Werkspot \u2014 Topvakman
+                  Werkspot: Topvakman
                 </div>
               </div>
 
@@ -688,7 +688,7 @@ export default function LatexSpuitenPage() {
             Vragen over Latex Spuiten
           </h2>
           <p className="text-gray-600 leading-relaxed mb-12 max-w-2xl">
-            Staat uw vraag er niet bij? Neem gerust contact op \u2014 Schildersbedrijf040 helpt u graag verder.
+            Staat uw vraag er niet bij? Neem gerust contact op. Schildersbedrijf040 helpt u graag verder.
           </p>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
@@ -697,7 +697,7 @@ export default function LatexSpuitenPage() {
               <div className="rounded-2xl overflow-hidden relative h-[280px]">
                 <Image
                   src="https://res.cloudinary.com/dbtaisgda/image/upload/v1743873386/WhatsApp_Image_2025-03-27_at_08.02.00_o5xgwd.jpg"
-                  alt="Latex spuiten resultaat \u2014 egaal gespoten muren en plafonds door Schildersbedrijf040"
+                  alt="Latex spuiten resultaat, egaal gespoten muren en plafonds door Schildersbedrijf040"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-cover"
@@ -772,7 +772,7 @@ export default function LatexSpuitenPage() {
                 Klaar voor een Egaal Resultaat?
               </h2>
               <p className="text-gray-300 leading-relaxed mb-8">
-                Wilt u weten wat latex spuiten voor uw woning of bedrijfspand kost? Schildersbedrijf040 komt graag langs voor een gratis inspectie en vrijblijvende offerte. Bel, mail of vul het contactformulier in \u2014 u ontvangt binnen 48 uur een offerte op maat.
+                Wilt u weten wat latex spuiten voor uw woning of bedrijfspand kost? Schildersbedrijf040 komt graag langs voor een gratis inspectie en vrijblijvende offerte. Bel, mail of vul het contactformulier in, u ontvangt binnen 48 uur een offerte op maat.
               </p>
               <Link
                 href="/contact"
@@ -818,7 +818,7 @@ export default function LatexSpuitenPage() {
                 </div>
                 <div>
                   <div className="text-xs text-gray-400 font-medium uppercase tracking-wide mb-0.5">Bereikbaarheid</div>
-                  <div className="text-white font-semibold">Ma \u2013 Vr: 08:00 \u2013 17:30</div>
+                  <div className="text-white font-semibold">Ma t/m vr: 08:00 tot 17:30</div>
                 </div>
               </div>
             </div>
