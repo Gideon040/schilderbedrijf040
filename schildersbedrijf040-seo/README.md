@@ -2,19 +2,23 @@
 
 ## Starten
 
-1. Pak deze map uit, bij voorkeur **in de repo van de site** (bijv. als submap `seo/`), of los.
-2. Open `CLAUDE.md` en vul bovenaan in: `PAKKET` (B/P/M), `SITE_REPO` (ja/nee) en na het gesprek met Jordy de scopecheck-antwoorden.
-3. Start Claude Code in deze map (of in de repo-root):
+1. Pak deze map uit **in de repo van de site** als submap `seo/`.
+2. Zet de commando's op de plek waar Claude Code ze vindt (in de root van de repo):
+   ```bash
+   mkdir -p .claude/commands && cp seo/.claude/commands/*.md .claude/commands/
+   ```
+3. Voeg bovenaan de `CLAUDE.md` in de root van de repo (of maak die aan) deze regel toe:
+   ```
+   Voor al het SEO-werk: lees en volg seo/CLAUDE.md. Paden in die instructies zijn relatief aan seo/.
+   ```
+4. Vul in `seo/CLAUDE.md` bovenaan `PAKKET` in (staat op P) en na het gesprek met Jordy de scopecheck-antwoorden.
+5. Start Claude Code in de root van de repo:
    ```bash
    claude --model opus
    ```
-4. Eerste opdracht, bijvoorbeeld:
+6. Eerste opdracht:
    ```
-   /volgende
-   ```
-   of gericht:
-   ```
-   /pagina 3
+   /sitefix
    ```
 
 ## Commando's
@@ -25,7 +29,14 @@
 | `/pagina <nr of id>` | Werkt één pagina uit volgens de briefing en het template. |
 | `/check <bestand>` | Controleert een opgeleverd bestand op richtlijnen, links, feiten en lengte. |
 | `/linkcheck` | Controleert de interne links over alle pagina's heen en maakt een lijst met links die nog toegevoegd moeten worden. |
+| `/sitefix [punt]` | Voert de fixes en het redesign uit `plan/site-audit-en-redesign.md` uit, punt voor punt. |
 | `/maandrapport <maand>` | Maakt het maandrapport voor Jordy op basis van jouw exports. |
+
+## Aanpak
+
+1. Eerst `/sitefix` tot Prioriteit 1 klaar is (fixes aan de huidige site).
+2. Dan `/volgende` voor de pagina's uit de planning.
+3. Redesign-punten (Prioriteit 2) meenemen bij de pagina waar ze over gaan.
 
 ## Volgorde oktober (Plus)
 

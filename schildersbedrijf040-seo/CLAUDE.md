@@ -6,7 +6,7 @@ Je voert het SEO- en GEO-traject uit voor **Schildersbedrijf040** (schildersbedr
 
 ```
 PAKKET: P            # B = Basis (750), P = Plus (1.000), M = Maximaal (1.500). Werk alleen pagina's met pakket <= PAKKET.
-SITE_REPO: nee       # "ja" als deze map in (of naast) de code van de site staat; anders lever je content als markdown.
+SITE_REPO: ja        # deze map staat in (of naast) de code van de site. Je mag pagina's direct in de code bouwen en de site fiksen/verbeteren.
 SCOPECHECK_GEDAAN: nee   # Pagina's met alleen_na_scopecheck: true pas bouwen als dit "ja" is en de antwoorden hieronder staan.
 ```
 
@@ -18,6 +18,8 @@ SCOPECHECK_GEDAAN: nee   # Pagina's met alleen_na_scopecheck: true pas bouwen al
 | `briefings/NN-id.md` | Dezelfde briefing per pagina, leesbaar. Werk altijd vanuit de briefing. |
 | `plan/uitvoeringsplan.md` | Strategie, zoekvolumes, linkbuilding, GEO-kernvragen, techniek, meting. |
 | `plan/voorstel.md` | Wat aan Jordy is beloofd (pakketten, prognose). Beloof niets wat daar niet staat. |
+| `plan/site-audit-en-redesign.md` | **Fixes en redesign** van de bestaande site, met prioriteiten en randvoorwaarden. Uitvoeren met `/sitefix`. |
+| `plan/design/` | **Goedgekeurd ontwerp** van het redesign (4 schermen, kleuren, fonts). Zie `plan/design/LEESMIJ.md`. |
 | `plan/paginabriefings-overzicht.md` | Alle briefings plus de complete linktabel. |
 | `data/ahrefs-binnen-zoekwoorden.tsv` | Ahrefs-export binnentermen (volume, KD, SV-trend). |
 | `data/ahrefs-volume-historie-buiten.csv` | Volumehistorie buitentermen top 5. |
@@ -37,6 +39,15 @@ SCOPECHECK_GEDAAN: nee   # Pagina's met alleen_na_scopecheck: true pas bouwen al
 - Diensten: binnenschilderwerk, buitenschilderwerk, behangen, houtrot sanering, lakwerk, latex spuiten. Kitwerk, onderhoudsschilderwerk en gevelreiniging: pas na scopecheck.
 
 Ontbreekt een feit (projectdetails, foto, prijs, claim)? Zet een duidelijke placeholder `[JORDY: ...]` in de tekst en noteer het in `voortgang.md`. Nooit invullen met iets wat plausibel klinkt.
+
+## Fixes en redesign (toegestaan)
+
+Gideon geeft toestemming om de site te fiksen en waar nodig te herontwerpen, volgens `plan/site-audit-en-redesign.md`. Volgorde:
+1. Eerst Prioriteit 1 (fixes: em dashes, H1/title, claims, prijzen, schema, CTA's, afbeeldingen).
+2. Daarna de pagina's uit `data/pages.json` (oktober: homepage, binnenschilderwerk, winterschilder, latex spuiten).
+3. Prioriteit 2 (redesign) tussendoor, per onderdeel, als de pagina waar het over gaat toch wordt aangepakt.
+
+Randvoorwaarden: geen URL's wijzigen, huisstijl behouden (verfijnen, niet vervangen), mobiel testen, Lighthouse niet omlaag, kleine losse wijzigingen, niets live zonder akkoord van Gideon.
 
 ## Werkwijze per pagina
 
