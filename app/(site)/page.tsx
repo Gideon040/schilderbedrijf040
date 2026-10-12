@@ -13,16 +13,17 @@ import { Callback } from '@/components/sections/callback'
 import { SocialMedia } from '@/components/sections/social-media'
 import { ContactForm } from '@/components/sections/contact-form'
 import Script from 'next/script'
+import type { Metadata } from 'next'
 
-export const metadata = {
-  title: 'Schildersbedrijf040 | Vakkundig Schilderwerk in Eindhoven',
-  description: 'Professioneel schildersbedrijf in Eindhoven voor binnen- en buitenschilderwerk, behangen en houtrot sanering. Meer dan 5 jaar ervaring en 100% kwaliteitsgarantie.',
+export const metadata: Metadata = {
+  title: { absolute: 'Schilder Eindhoven | Schildersbedrijf040' },
+  description: 'Schilder in Eindhoven en omgeving voor binnen- en buitenschilderwerk, behangen en latex spuiten. Boonstoppel-verf, gratis inspectie en een vaste prijs.',
   alternates: {
     canonical: 'https://schildersbedrijf040.nl',
   },
   openGraph: {
-    title: 'Schildersbedrijf040 | Vakkundig Schilderwerk in Eindhoven',
-    description: 'Professioneel schildersbedrijf in Eindhoven voor binnen- en buitenschilderwerk, behangen en houtrot sanering. Meer dan 5 jaar ervaring en 100% kwaliteitsgarantie.',
+    title: 'Schilder Eindhoven | Schildersbedrijf040',
+    description: 'Schilder in Eindhoven en omgeving voor binnen- en buitenschilderwerk, behangen en latex spuiten. Boonstoppel-verf, gratis inspectie en een vaste prijs.',
     url: 'https://schildersbedrijf040.nl',
     siteName: 'Schildersbedrijf040',
     images: [

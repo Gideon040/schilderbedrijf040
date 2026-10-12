@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: { params: { city: string } })
   }
 
   return {
-    title: `Op zoek naar een schilder in ${data.displayName}? | Schildersbedrijf040`,
+    title: `Op zoek naar een schilder in ${data.displayName}?`,
     description: `Schildersbedrijf040 is uw vakkundige schilder in ${data.displayName}. Binnenschilderwerk, buitenschilderwerk, behangen, lakwerk & houtrot sanering. ✓ Hoogst beoordeeld ✓ Gratis offerte.`,
     keywords: [
       `schilder ${data.displayName.toLowerCase()}`,

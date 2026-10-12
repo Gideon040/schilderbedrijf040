@@ -73,6 +73,7 @@ Status per punt uit `plan/site-audit-en-redesign.md`. Screenshots in `rapportage
 |---|---|---|---|---|
 | 0 | Nulmeting | klaar | `rapportages/codestructuur.md`, `rapportages/lighthouse-voor.md` | Screenshots `00-voor-*` |
 | 1.1 | Em dashes | klaar | 18 bestanden in `app/` en `components/` (312 vervangen), `scripts/fix-dashes-sanity.mjs` | Blogteksten staan in Sanity (63 dashes in 5 posts): script klaar, proefrun gedraaid, **niet** uitgevoerd omdat het de live blog aanpast. Gideon: `node scripts/fix-dashes-sanity.mjs --write` na akkoord. |
+| 1.2 | H1 en title homepage | klaar | `app/(site)/page.tsx`, `components/sections/hero.tsx`, `app/(site)/locaties/[city]/page.tsx` | H1 "Schilder in Eindhoven" + subregel; title "Schilder Eindhoven \| Schildersbedrijf040" (absolute, merknaam 1x); meta zonder "100% kwaliteitsgarantie". Bug gevonden en opgelost: merknaam stond 2x in de title van home en alle 17 locatiepagina's (layout-template plus eigen suffix). |
 
 ## Open punten voor Jordy
 

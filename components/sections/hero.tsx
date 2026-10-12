@@ -60,15 +60,17 @@ export function Hero() {
       <div className="container relative z-10 flex flex-col lg:flex-row items-center justify-between py-12">
         {/* Hero Content */}
         <div className="text-white max-w-2xl mb-12 lg:mb-0">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl mb-6 font-bold tracking-wide drop-shadow-lg">
-            SCHILDERSBEDRIJF040. VAKKUNDIG SCHILDERWERK<br />
-            <span className="eindhoven-text">IN EINDHOVEN</span>
+          <h1 className="text-5xl sm:text-6xl md:text-7xl mb-4 font-bold tracking-wide drop-shadow-lg">
+            Schilder in <span className="eindhoven-text">Eindhoven</span>
           </h1>
+          <p className="text-lg sm:text-xl mb-4 text-white font-medium">
+            Binnen- en buitenschilderwerk, behangen en latex spuiten
+          </p>
           <p className="text-sm sm:text-base mb-8 text-gray-200 leading-relaxed">
-            Schildersbedrijf040 is uw schildersbedrijf in Eindhoven voor binnenschilderwerk,
+            Schildersbedrijf040 is uw schildersbedrijf in Eindhoven en omgeving voor binnenschilderwerk,
             buitenschilderwerk, behangen, lakwerk, latex spuiten en houtrot sanering.
             Eigenaar Jordy Jacobs werkt met Boonstoppel verf voor een
-            resultaat dat jaren meegaat, beoordeeld met 5 sterren op Google.
+            resultaat dat jaren meegaat, beoordeeld met 5,0 op Google.
             Vraag vandaag nog een gratis inspectie en vrijblijvende offerte aan.
           </p>
           <div className="flex flex-wrap gap-4">
