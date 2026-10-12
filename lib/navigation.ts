@@ -7,6 +7,7 @@ export const diensten = [
   { name: 'Lakwerk', href: '/diensten/lakwerk' },
   { name: 'Latex spuiten', href: '/diensten/latex-spuiten' },
   { name: 'Houtrot sanering', href: '/diensten/houtrot-sanering' },
+  { name: 'Schilderen in de winter', href: '/diensten/winterschilder' },
 ]
 
 // Eindhoven = homepage. Volgorde: grootste/belangrijkste plaatsen eerst.
