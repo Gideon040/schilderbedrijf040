@@ -7,37 +7,37 @@ import { Brush } from 'lucide-react'
 const services = [
   {
     title: 'Binnenschilderwerk',
-    description: 'Professioneel schilderwerk voor uw interieur, van muren en plafonds tot kozijnen en deuren. Goed binnenschilderwerk verhoogt de uitstraling van uw woning en beschermt oppervlakken tot wel 7 jaar.',
+    description: 'Muren, plafonds, kozijnen, deuren en trappen, strak geschilderd en schoon opgeleverd.',
     image: 'https://lh3.googleusercontent.com/p/AF1QipPXaEJ8_nFLFo8wrT1CHm7dEM7yNx9IWh1V0DFw=s680-w680-h510',
     link: '/diensten/binnenschilderwerk'
   },
   {
     title: 'Buitenschilderwerk',
-    description: 'Bescherm en verfraai uw woning met vakkundig buitenschilderwerk, inclusief gratis houtrot inspectie. Zonder tijdig buitenschilderwerk kan vochtschade de constructie van uw houtwerk aantasten.',
+    description: 'Gevels, kozijnen en boeidelen, goed beschermd tegen weer en houtrot.',
     image: 'https://lh3.googleusercontent.com/p/AF1QipNXyfpYcsRHyYj-UkgdSInfmglcLJzMdNdm5g_1=s680-w680-h510',
     link: '/diensten/buitenschilderwerk'
   },
   {
     title: 'Behangen',
-    description: 'Van klassiek behang tot moderne wandbekleding. Schildersbedrijf040 zorgt voor een naadloze afwerking. Behang geeft uw interieur direct karakter en is beschikbaar in honderden dessins.',
+    description: 'Behang plaatsen of verwijderen, los of samen met het schilderwerk.',
     image: 'https://lh3.googleusercontent.com/p/AF1QipNI8hPbuWSdgczF1ESCx3LJuCE1R20aoXhy4qw0=s680-w680-h510',
     link: '/diensten/behangen'
   },
   {
     title: 'Lakwerk',
-    description: 'Specialistisch lakwerk voor een hoogwaardige afwerking van deuren, kozijnen en meubels. Schildersbedrijf040 gebruikt Boonstoppel lakken voor een krasbestendig en duurzaam resultaat.',
+    description: 'Deuren, trappen en kozijnen gelakt in zijdeglans of hoogglans.',
     image: 'https://lh3.googleusercontent.com/p/AF1QipOr4IhxZqT7X5yggLlaVSJnnjH9PWYVIF5OE5TG=s680-w680-h510',
     link: '/diensten/lakwerk'
   },
   {
     title: 'Latex Spuiten',
-    description: 'Efficiënt en strak resultaat met professionele latex spuittechniek. Latex spuiten is tot 3 keer sneller dan rollen en levert een egale, rolstreepvrije afwerking.',
+    description: 'Muren en plafonds snel en egaal gespoten, ideaal bij nieuwbouw of na stucwerk.',
     image: 'https://lh3.googleusercontent.com/p/AF1QipPWQlzzKHaEZif6B4lo5V6JnTsfDmR6_vbbTv7x=s680-w680-h510',
     link: '/diensten/latex-spuiten'
   },
   {
     title: 'Houtrot Sanering',
-    description: 'Preventieve en curatieve behandeling van houtrot om grotere schade te voorkomen. Onbehandeld houtrot kan zich snel uitbreiden en tot kostbare vervanging van kozijnen leiden.',
+    description: 'Rot hout vakkundig herstellen of vervangen voordat we gaan schilderen.',
     image: 'https://lh3.googleusercontent.com/p/AF1QipMZixn_Qv18YKLHSq9Y3tZvy3zD__7obCnKGGMF=s680-w680-h510',
     link: '/diensten/houtrot-sanering'
   }
@@ -78,7 +78,7 @@ export function Services() {
                 </h3>
               </div>
               <div className="p-6">
-                <p className="text-gray-600 text-sm mb-4 line-clamp-3">
+                <p className="text-gray-600 text-base mb-4">
                   {service.description}
                 </p>
                 <span className="text-primary hover:text-primary/80 font-bebas tracking-wider text-lg inline-flex items-center transition-colors duration-300">
