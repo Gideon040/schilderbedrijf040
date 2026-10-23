@@ -1025,3 +1025,91 @@ header.nav .mmenu{position:absolute;top:100%;left:0;right:0;bottom:auto;height:c
 header.nav .mmenu .wrap{padding-bottom:170px}
 header.nav nav.mmenu{display:block;font-weight:400;font-size:inherit}
 @media (max-width:1180px){.mega-kaart ul{display:none}.mega-kaart{justify-content:space-between;gap:16px 28px}}
+
+/* ---------- Afspraak-popup "offerte aan huis" (components/afspraak/popup.tsx) ---------- */
+.afs-knop{position:fixed;right:24px;bottom:24px;z-index:60;display:inline-flex;align-items:center;gap:10px;padding:15px 20px;background:var(--blue);color:var(--white);font-weight:700;text-decoration:none;border-radius:999px;box-shadow:0 14px 30px rgba(26,91,255,.35);transition:transform .2s,background .2s}
+.afs-knop:hover{background:var(--blue-ink);transform:translateY(-2px)}
+.afs-knop:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+@media (max-width:980px){.afs-knop{display:none}}
+
+.afs-overlay{position:fixed;inset:0;z-index:100;background:rgba(10,22,38,.62);display:flex;align-items:center;justify-content:center;padding:24px;animation:afsIn .2s ease-out}
+@keyframes afsIn{from{opacity:0}to{opacity:1}}
+.afs-dialoog{position:relative;width:min(760px,100%);max-height:calc(100dvh - 48px);overflow-y:auto;overscroll-behavior:contain;background:var(--white);color:var(--text);border-radius:16px;box-shadow:0 30px 80px rgba(10,22,38,.4);padding:34px 36px 30px;animation:afsOp .25s cubic-bezier(.2,.8,.2,1)}
+@keyframes afsOp{from{transform:translateY(12px) scale(.98);opacity:0}to{transform:none;opacity:1}}
+.afs-dialoog:focus{outline:none}
+.afs-sluit{position:absolute;top:14px;right:14px;width:42px;height:42px;display:grid;place-items:center;border:0;background:var(--paper);color:var(--ink);border-radius:50%;cursor:pointer}
+.afs-sluit:hover{background:var(--paper-2)}
+.afs-sluit:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
+.afs-titel{font-family:var(--display);font-stretch:108%;font-weight:850;text-transform:uppercase;color:var(--ink);font-size:clamp(24px,3vw,32px);line-height:1.05;margin:0 48px 10px 0}
+.afs-sub{margin:0 0 22px;color:var(--muted);font-size:16px;line-height:1.55}
+.afs-actie{display:block;margin-top:8px;padding:8px 12px;background:#E8EEFF;color:var(--blue-ink);font-weight:700;border-radius:8px;font-size:15px}
+.afs-dialoog form{display:flex;flex-direction:column;gap:14px}
+.afs-dialoog label{display:flex;flex-direction:column;gap:6px;font-size:14px;font-weight:700;color:var(--ink)}
+.afs-dialoog :is(input:not([type=radio]):not([type=checkbox]),textarea){font:inherit;font-weight:400;font-size:16px;color:var(--ink);border:1.5px solid var(--line);background:var(--white);padding:12px 13px;border-radius:10px;width:100%;transition:border-color .15s,box-shadow .15s}
+.afs-dialoog :is(input,textarea):focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px rgba(26,91,255,.18)}
+.afs-dialoog [aria-invalid=true]:is(input,textarea){border-color:#C8312C}
+.afs-dialoog textarea{resize:vertical;min-height:84px}
+.afs-rij{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.afs-adres{grid-template-columns:1.6fr 1fr}
+.afs-opt{font-weight:400;color:var(--muted)}
+.afs-fout{font-size:13.5px;font-weight:600;color:#C8312C}
+.afs-keuze{border:0;padding:0;margin:0;display:flex;flex-direction:column;gap:8px}
+.afs-keuze:focus{outline:none}
+.afs-keuze legend{font-size:14px;font-weight:700;color:var(--ink);margin-bottom:8px;padding:0}
+.afs-segment{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.afs-slots{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.afs-segment label,.afs-slots label{position:relative;flex-direction:row;justify-content:center;align-items:center;padding:12px 8px;border:1.5px solid var(--line);border-radius:10px;cursor:pointer;font-weight:700;font-size:15px;color:var(--ink);background:var(--white);transition:border-color .15s,background .15s,color .15s}
+.afs-segment label:hover,.afs-slots label:hover{border-color:var(--blue)}
+.afs-segment label.on,.afs-slots label.on{background:var(--blue);border-color:var(--blue);color:var(--white)}
+.afs-segment input,.afs-slots input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+.afs-segment label:has(input:focus-visible),.afs-slots label:has(input:focus-visible){outline:3px solid var(--ink);outline-offset:2px}
+.afs-dialoog .afs-check{flex-direction:row;align-items:flex-start;gap:10px;font-weight:400;font-size:14.5px;color:var(--text);line-height:1.45}
+.afs-check input{width:20px;height:20px;margin:1px 0 0;accent-color:var(--blue);flex:0 0 20px}
+.afs-gekozen{font-size:14px;color:var(--blue-ink);font-weight:700}
+.afs-melding{margin:0;padding:10px 12px;background:#FDECEA;color:#8E1F1B;border-radius:8px;font-size:14.5px}
+.afs-melding a{color:inherit;font-weight:700}
+.afs-verstuur{justify-content:center;border-radius:10px;padding:16px;font-size:16px;margin-top:4px}
+.afs-hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.afs-klaar{text-align:center;padding:24px 8px 8px;display:flex;flex-direction:column;align-items:center;gap:14px}
+.afs-klaar h2{font-family:var(--display);font-stretch:106%;font-weight:850;text-transform:uppercase;color:var(--ink);font-size:clamp(22px,2.6vw,28px);line-height:1.1;max-width:480px;margin:0}
+.afs-klaar p{margin:0;color:var(--text);max-width:460px}
+.afs-klaar a{color:var(--blue);font-weight:700}
+.afs-klaar .btn{border-radius:10px;justify-content:center;min-width:180px}
+.afs-vink{width:68px;height:68px;border-radius:50%;background:var(--blue);color:var(--white);display:grid;place-items:center}
+
+/* Kalender (react-day-picker 8), in de huisstijl */
+.afs-kalender{--cel:42px;align-self:flex-start;border:1.5px solid var(--line);border-radius:12px;padding:12px 14px}
+.afs-kalender .rdp-months{display:flex}
+.afs-kalender .rdp-caption{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}
+.afs-kalender .rdp-caption_label{font-weight:800;color:var(--ink);text-transform:capitalize;font-size:15px}
+.afs-kalender .rdp-nav{display:flex;gap:4px}
+.afs-kalender .rdp-nav_button{width:34px;height:34px;display:grid;place-items:center;border:0;border-radius:8px;background:var(--paper);color:var(--ink);cursor:pointer}
+.afs-kalender .rdp-nav_button:hover:not([disabled]){background:var(--paper-2)}
+.afs-kalender .rdp-nav_button[disabled]{opacity:.3;cursor:default}
+.afs-kalender .rdp-nav_icon{width:12px;height:12px}
+.afs-kalender table{border-collapse:separate;border-spacing:3px}
+.afs-kalender .rdp-head_cell{font-size:12px;font-weight:600;color:var(--muted);text-transform:lowercase;height:28px}
+.afs-kalender .rdp-cell{padding:0;text-align:center}
+.afs-kalender .rdp-day{width:var(--cel);height:var(--cel);border:0;border-radius:10px;background:transparent;font:inherit;font-size:15px;font-weight:700;color:var(--ink);cursor:pointer;box-shadow:inset 0 0 0 1.5px var(--line)}
+.afs-kalender .rdp-day:hover:not([disabled]){box-shadow:inset 0 0 0 2px var(--blue)}
+.afs-kalender .rdp-day[disabled],.afs-kalender .rdp-day_disabled{box-shadow:none;color:#B9BEC6;font-weight:400;cursor:default}
+.afs-kalender .rdp-day_selected,.afs-kalender .rdp-day_selected:hover{background:var(--blue);color:var(--white);box-shadow:none}
+.afs-kalender .rdp-day_today:not(.rdp-day_selected){text-decoration:underline}
+.afs-kalender .rdp-day:focus-visible{outline:3px solid var(--ink);outline-offset:1px}
+.afs-kalender .rdp-vhidden{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+
+/* Mobiel: vrijwel schermvullend, tijdsloten in 2 kolommen */
+@media (max-width:640px){
+  .afs-overlay{padding:8px;align-items:stretch}
+  .afs-dialoog{max-height:none;height:100%;border-radius:14px;padding:26px 18px 22px}
+  .afs-rij,.afs-adres{grid-template-columns:1fr}
+  .afs-slots{grid-template-columns:repeat(2,1fr)}
+  .afs-kalender{--cel:38px;align-self:stretch;padding:10px}
+  .afs-kalender .rdp-table{margin:0 auto}
+}
+@media (prefers-reduced-motion:reduce){.afs-overlay,.afs-dialoog{animation:none}.afs-knop{transition:none}}
+.afs-dialoog .btn-blue{background:var(--blue);color:var(--white);position:relative;overflow:hidden;isolation:isolate}
+.afs-dialoog .btn-blue:disabled{opacity:.7;cursor:progress}
+.afs-kalender .rdp-months{gap:24px;flex-wrap:wrap}
+@media (min-width:760px){.afs-kalender{width:max-content}.afs-kalender .rdp-months{flex-wrap:nowrap}}
+.afs-knop[hidden]{display:none}

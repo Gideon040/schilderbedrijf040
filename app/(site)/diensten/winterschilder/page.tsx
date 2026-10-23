@@ -1,9 +1,13 @@
 import type { Metadata } from 'next'
 import { TOON_JORDY } from '@/lib/jordy'
+import { AFSPRAAK, winteractieActief } from '@/lib/afspraak'
 import Link from 'next/link'
 import { DienstTemplate, type DienstPagina } from '@/components/dienst/template'
 import { images } from '@/lib/images'
 import { breadcrumbSchema, faqSchema, orgRef, serviceOffers, werkgebied } from '@/lib/schema'
+
+// Dagelijks opnieuw opbouwen, zodat de winteractie na de einddatum vanzelf verdwijnt
+export const revalidate = 86400
 
 export const metadata: Metadata = {
   title: 'Winterschilder Eindhoven',
@@ -105,7 +109,11 @@ const pagina: DienstPagina = {
           meestal sneller plek in de planning voor binnenwerk.{TOON_JORDY && ' [JORDY: huidige wachttijd in de winter]'}
         </p>
         <p>
-          Goedkoper: de prijzen zijn in de winter gelijk aan de rest van het jaar.{TOON_JORDY && ' [JORDY: klopt dit, of komt er een winteractie?]'}
+          {winteractieActief() ? (
+            <>Goedkoper: ja, tijdelijk. {AFSPRAAK.winteractie.tekst} </>
+          ) : (
+            <>Goedkoper: de prijzen zijn in de winter gelijk aan de rest van het jaar. </>
+          )}
           Binnenschilderwerk kost gemiddeld €30 tot €35 per m² voor muren en €32 tot €38 per m² voor plafonds, inclusief materiaal en
           exclusief btw. Voor woningen ouder dan twee jaar geldt 9% btw op de arbeid. De exacte prijs hoort u na een gratis inspectie, in
           een offerte met vaste prijs.

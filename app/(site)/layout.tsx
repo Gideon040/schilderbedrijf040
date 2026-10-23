@@ -1,6 +1,7 @@
 import { Header } from '@/components/layout/header'
 import { Footer } from '@/components/layout/footer'
 import { MobileActionBar } from '@/components/layout/mobile-action-bar'
+import { AfspraakPopup } from '@/components/afspraak/popup'
 import { JsonLd } from '@/components/json-ld'
 import { Motion } from '@/components/site/motion'
 import { TrackingListener } from '@/components/tracking-listener'
@@ -21,6 +22,7 @@ export default function SiteLayout({
       <div className="flex-1">{children}</div>
       <Footer />
       <MobileActionBar />
+      <AfspraakPopup />
     </>
   )
 }
