@@ -13,6 +13,7 @@ import {
   laatsteDatum,
   naarDate,
   naarIso,
+  soortLabel,
   winteractieActief,
   type AfspraakVelden,
 } from '@/lib/afspraak'
@@ -22,6 +23,7 @@ import { bronpagina } from '@/lib/tracking'
 // Popup "Plan een vrijblijvende offerte aan huis". Eén keer in de layout.
 // Opent via de vaste knop, via elke offerteknop (a.btn naar /contact of [data-afspraak]),
 // en één keer automatisch (zie AFSPRAAK.autoOpen). Zonder JavaScript gaan de knoppen gewoon naar /contact.
+// Drie stappen: het werk, het moment, de gegevens. Elke stap wordt apart gecontroleerd.
 
 const OPSLAG_GETOOND = 'afspraak-popup-getoond'
 const OPSLAG_VERSTUURD = 'afspraak-popup-verstuurd'
@@ -56,14 +58,61 @@ type Velden = {
 }
 const leeg: Velden = { naam: '', telefoon: '', email: '', straat: '', plaats: '', omschrijving: '', soort: '', datum: '', tijd: '', privacy: false, _gotcha: '' }
 
+const STAPPEN: { label: string; kop: string; velden: AfspraakVelden[] }[] = [
+  { label: 'Het werk', kop: 'Waar gaat het om?', velden: ['soort', 'omschrijving'] },
+  { label: 'Moment', kop: 'Wanneer mag Jordy langskomen?', velden: ['datum', 'tijd'] },
+  { label: 'Gegevens', kop: 'Waar mogen we komen?', velden: ['naam', 'telefoon', 'email', 'straat', 'plaats', 'privacy'] },
+]
+const stapVan = (veld: string) => Math.max(0, STAPPEN.findIndex((s) => s.velden.includes(veld as AfspraakVelden)))
+
+// Kleurstalen uit de huisstijl; de kleur vult de tegel bij het kiezen
+const SOORTEN = [
+  { key: 'binnen', label: 'Binnen', uitleg: 'Muren, plafonds, deuren', kleur: 'var(--sw2)', licht: true },
+  { key: 'buiten', label: 'Buiten', uitleg: 'Kozijnen, gevel, houtwerk', kleur: 'var(--sw4)', licht: false },
+  { key: 'beide', label: 'Beide', uitleg: 'Binnen en buiten', kleur: 'var(--sw5)', licht: false },
+] as const
+
+function SoortIcoon({ soort }: { soort: 'binnen' | 'buiten' | 'beide' }) {
+  const p = { viewBox: '0 0 32 32', width: 30, height: 30, fill: 'none', stroke: 'currentColor', strokeWidth: 1.8, strokeLinecap: 'round' as const, strokeLinejoin: 'round' as const, 'aria-hidden': true }
+  if (soort === 'binnen')
+    // verfroller
+    return (
+      <svg {...p}>
+        <rect x="5" y="5" width="19" height="7" rx="1" />
+        <path d="M24 8.5h3v6.5H16v4M14.5 19h3v9h-3z" />
+      </svg>
+    )
+  if (soort === 'buiten')
+    // huis met kozijn
+    return (
+      <svg {...p}>
+        <path d="M4 15 16 5l12 10M7 12.5V27h18V12.5" />
+        <rect x="12" y="15" width="8" height="7" />
+        <path d="M16 15v7M12 18.5h8" />
+      </svg>
+    )
+  // huis met roller
+  return (
+    <svg {...p}>
+      <path d="M3 15 13 6.5 23 15M5.5 13v14h15V13" />
+      <rect x="18" y="16" width="11" height="4.5" rx=".8" />
+      <path d="M29 18.2h1.5v4H24v2.3M23 24.5h2.2V29H23z" />
+    </svg>
+  )
+}
+
 export function AfspraakPopup() {
   const pathname = usePathname()
   const [open, setOpen] = useState(false)
+  const [stap, setStap] = useState(0)
   const [v, setV] = useState<Velden>(leeg)
   const [fouten, setFouten] = useState<Partial<Record<AfspraakVelden, string>>>({})
   const [status, setStatus] = useState<'invullen' | 'bezig' | 'klaar' | 'fout'>('invullen')
-  const [breed, setBreed] = useState(false)
+  const [bezet, setBezet] = useState<Set<string>>(new Set())
   const dialoog = useRef<HTMLDivElement>(null)
+  const romp = useRef<HTMLDivElement>(null)
+  const stapKop = useRef<HTMLHeadingElement>(null)
+  const naStapWissel = useRef(false)
   const terugFocus = useRef<HTMLElement | null>(null)
   const id = useId()
 
@@ -77,6 +126,7 @@ export function AfspraakPopup() {
     setOpen(false)
     if (status === 'klaar') {
       setV(leeg)
+      setStap(0)
       setStatus('invullen')
     }
     terugFocus.current?.focus?.()
@@ -124,12 +174,20 @@ export function AfspraakPopup() {
     return opruimen
   }, [pathname, openen])
 
-  // Twee maanden naast elkaar op brede schermen
+  // Bezette momenten ophalen bij openen (en opnieuw na een geweigerde dubbele boeking)
+  const haalBezet = useCallback(async () => {
+    try {
+      const j = await (await fetch('/api/afspraak', { cache: 'no-store' })).json()
+      const set = new Set<string>(Array.isArray(j.bezet) ? j.bezet : [])
+      setBezet(set)
+      setV((x) => (x.datum && x.tijd && set.has(`${x.datum}T${x.tijd}`) ? { ...x, tijd: '' } : x))
+    } catch {
+      /* geen lijst: de server weigert een dubbele boeking alsnog */
+    }
+  }, [])
   useEffect(() => {
-    if (!open) return
-    const mq = window.matchMedia('(min-width: 760px)')
-    setBreed(mq.matches)
-  }, [open])
+    if (open) haalBezet()
+  }, [open, haalBezet])
 
   // Scroll-lock, Escape en focus trap
   useEffect(() => {
@@ -166,22 +224,54 @@ export function AfspraakPopup() {
     }
   }, [open, sluiten])
 
+  // Na een stapwissel: bovenaan beginnen en de kop van de nieuwe stap voorlezen
+  useEffect(() => {
+    if (!naStapWissel.current) return
+    naStapWissel.current = false
+    romp.current?.scrollTo({ top: 0 })
+    stapKop.current?.focus()
+  }, [stap])
+
+  const naarStap = (i: number) => {
+    naStapWissel.current = true
+    setStap(i)
+  }
+
   const zet = <K extends keyof Velden>(k: K, waarde: Velden[K]) => {
     setV((x) => ({ ...x, [k]: waarde }))
     if (fouten[k as AfspraakVelden]) setFouten((f) => ({ ...f, [k]: undefined }))
   }
 
+  // Fouten tonen en focus op het eerste foute veld (na de render, ook als de stap wisselt)
+  const toonFouten = (f: Partial<Record<AfspraakVelden, string>>) => {
+    setFouten(f)
+    const eerste = Object.keys(f)[0]
+    if (!eerste) return
+    const s = stapVan(eerste)
+    if (s !== stap) setStap(s)
+    requestAnimationFrame(() => dialoog.current?.querySelector<HTMLElement>(`[data-veld="${eerste}"]`)?.focus())
+  }
+
+  // Fouten van alle stappen t/m `tot`, in de volgorde van de stappen
+  const controleer = (tot: number) => {
+    const r = afspraakSchema.safeParse(v)
+    const f: Partial<Record<AfspraakVelden, string>> = {}
+    if (!r.success) {
+      const toegestaan = STAPPEN.slice(0, tot + 1).flatMap((s) => s.velden)
+      for (const veld of toegestaan) {
+        const i = r.error.issues.find((x) => x.path[0] === veld)
+        if (i) f[veld] = i.message
+      }
+    }
+    return f
+  }
+
   const versturen = async (e: React.FormEvent) => {
     e.preventDefault()
-    const r = afspraakSchema.safeParse(v)
-    if (!r.success) {
-      const f: Partial<Record<AfspraakVelden, string>> = {}
-      for (const i of r.error.issues) f[i.path[0] as AfspraakVelden] ??= i.message
-      setFouten(f)
-      const eersteFout = dialoog.current?.querySelector<HTMLElement>(`[data-veld="${Object.keys(f)[0]}"]`)
-      eersteFout?.focus()
-      return
-    }
+    const f = controleer(stap)
+    if (Object.keys(f).length) return toonFouten(f)
+    if (stap < STAPPEN.length - 1) return naarStap(stap + 1)
+
     setStatus('bezig')
     try {
       const res = await fetch('/api/afspraak', {
@@ -196,8 +286,12 @@ export function AfspraakPopup() {
         dialoog.current?.focus()
         return
       }
-      if (j.velden) setFouten(j.velden)
       setStatus('fout')
+      if (res.status === 409) {
+        setV((x) => ({ ...x, tijd: '' }))
+        haalBezet()
+      }
+      if (j.velden) toonFouten(j.velden)
     } catch {
       setStatus('fout')
     }
@@ -218,15 +312,20 @@ export function AfspraakPopup() {
   const eerste = naarDate(eersteDatum())
   const laatste = naarDate(laatsteDatum())
   const lokaal = (d: Date) => naarIso(new Date(Date.UTC(d.getFullYear(), d.getMonth(), d.getDate(), 12)))
+  const gekozenDag = v.datum ? naarDate(v.datum) : undefined
+  const laatsteStap = stap === STAPPEN.length - 1
+  const actie = winteractieActief()
+  const isBezet = (datum: string, tijd: string) => bezet.has(`${datum}T${tijd}`)
+  const dagVol = (datum: string) => AFSPRAAK.slots.every((t) => isBezet(datum, t))
 
   return (
     <>
       <a className="afs-knop" href="/contact" data-afspraak="" hidden={open}>
         <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-          <rect x="3.5" y="5" width="17" height="15" rx="2" />
+          <rect x="3.5" y="5" width="17" height="15" />
           <path d="M3.5 10h17M8 3v4M16 3v4" />
         </svg>
-        Offerte inplannen
+        {actie ? AFSPRAAK.winteractie.knop : 'Offerte inplannen'}
       </a>
 
       {open && (
@@ -258,6 +357,7 @@ export function AfspraakPopup() {
                     <path d="m5 12.5 4.5 4.5L19 7.5" />
                   </svg>
                 </div>
+                <span className="eyebrow">Aanvraag ontvangen</span>
                 <h2 id={`${id}-titel`}>Bedankt, we bevestigen je afspraak per e-mail of telefoon</h2>
                 <p id={`${id}-sub`}>
                   Je gekozen moment: <b>{datumTekst(v.datum)}</b> om <b>{v.tijd} uur</b>. Vragen of iets wijzigen? Bel{' '}
@@ -268,125 +368,211 @@ export function AfspraakPopup() {
                 </button>
               </div>
             ) : (
-              <form onSubmit={versturen} noValidate>
-                <h2 id={`${id}-titel`} className="afs-titel">
-                  Plan een vrijblijvende offerte aan huis
-                </h2>
-                <p id={`${id}-sub`} className="afs-sub">
-                  Jordy komt langs, bekijkt het werk en je ontvangt binnen 2 werkdagen een offerte.
-                  {winteractieActief() && <span className="afs-actie"> {AFSPRAAK.winteractie.tekst}</span>}
-                </p>
-
-                {/* Honeypot: voor mensen onzichtbaar */}
-                <div className="afs-hp" aria-hidden="true">
-                  <label>
-                    Laat dit veld leeg
-                    <input tabIndex={-1} autoComplete="off" value={v._gotcha} onChange={(e) => zet('_gotcha', e.target.value)} />
-                  </label>
-                </div>
-
-                <div className="afs-rij">
-                  <label>
-                    Naam
-                    <input autoComplete="name" value={v.naam} onChange={(e) => zet('naam', e.target.value)} {...aria('naam')} />
-                    {fout('naam')}
-                  </label>
-                  <label>
-                    Telefoon
-                    <input type="tel" autoComplete="tel" inputMode="tel" value={v.telefoon} onChange={(e) => zet('telefoon', e.target.value)} {...aria('telefoon')} />
-                    {fout('telefoon')}
-                  </label>
-                </div>
-                <label>
-                  E-mail
-                  <input type="email" autoComplete="email" value={v.email} onChange={(e) => zet('email', e.target.value)} {...aria('email')} />
-                  {fout('email')}
-                </label>
-                <div className="afs-rij afs-adres">
-                  <label>
-                    Straat en huisnummer
-                    <input autoComplete="street-address" value={v.straat} onChange={(e) => zet('straat', e.target.value)} {...aria('straat')} />
-                    {fout('straat')}
-                  </label>
-                  <label>
-                    Plaats
-                    <input autoComplete="address-level2" value={v.plaats} onChange={(e) => zet('plaats', e.target.value)} {...aria('plaats')} />
-                    {fout('plaats')}
-                  </label>
-                </div>
-
-                <fieldset className="afs-keuze" {...aria('soort')} tabIndex={-1}>
-                  <legend>Waar gaat het om?</legend>
-                  <div className="afs-segment">
-                    {(['binnen', 'buiten', 'beide'] as const).map((s) => (
-                      <label key={s} className={v.soort === s ? 'on' : undefined}>
-                        <input type="radio" name={`${id}-soort`} value={s} checked={v.soort === s} onChange={() => zet('soort', s)} />
-                        {s === 'binnen' ? 'Binnen' : s === 'buiten' ? 'Buiten' : 'Beide'}
-                      </label>
-                    ))}
-                  </div>
-                  {fout('soort')}
-                </fieldset>
-
-                <label>
-                  <span>
-                    Korte omschrijving van het werk <span className="afs-opt">(optioneel)</span>
-                  </span>
-                  <textarea rows={3} value={v.omschrijving} onChange={(e) => zet('omschrijving', e.target.value)} {...aria('omschrijving')} />
-                  {fout('omschrijving')}
-                </label>
-
-                <fieldset className="afs-keuze" {...aria('datum')} tabIndex={-1}>
-                  <legend>
-                    Datum <span className="afs-opt">(maandag of woensdag)</span>
-                  </legend>
-                  <DayPicker
-                    mode="single"
-                    locale={nl}
-                    weekStartsOn={1}
-                    numberOfMonths={breed ? 2 : 1}
-                    fromDate={eerste}
-                    toDate={laatste}
-                    defaultMonth={v.datum ? naarDate(v.datum) : eerste}
-                    selected={v.datum ? new Date(naarDate(v.datum).getUTCFullYear(), naarDate(v.datum).getUTCMonth(), naarDate(v.datum).getUTCDate()) : undefined}
-                    disabled={(d: Date) => !isToegestaneDatum(lokaal(d))}
-                    onSelect={(d) => zet('datum', d ? lokaal(d) : '')}
-                    showOutsideDays={false}
-                    className="afs-kalender"
-                  />
-                  {v.datum && <span className="afs-gekozen">Gekozen: {datumTekst(v.datum)}</span>}
-                  {fout('datum')}
-                </fieldset>
-
-                <fieldset className="afs-keuze" {...aria('tijd')} tabIndex={-1}>
-                  <legend>Tijdslot</legend>
-                  <div className="afs-slots">
-                    {AFSPRAAK.slots.map((t) => (
-                      <label key={t} className={v.tijd === t ? 'on' : undefined}>
-                        <input type="radio" name={`${id}-tijd`} value={t} checked={v.tijd === t} onChange={() => zet('tijd', t)} />
-                        {t}
-                      </label>
-                    ))}
-                  </div>
-                  {fout('tijd')}
-                </fieldset>
-
-                <label className="afs-check">
-                  <input type="checkbox" checked={v.privacy} onChange={(e) => zet('privacy', e.target.checked)} {...aria('privacy')} />
-                  <span>Ik ga akkoord dat Schildersbedrijf040 mijn gegevens gebruikt om contact met mij op te nemen over deze afspraak.</span>
-                </label>
-                {fout('privacy')}
-
-                {status === 'fout' && (
-                  <p className="afs-melding" role="alert">
-                    {Object.keys(fouten).length ? 'Controleer de gemarkeerde velden.' : 'Versturen lukte niet.'} Bel ons gerust op{' '}
-                    <a href={site.phoneHref}>{site.phone}</a>.
+              <form onSubmit={versturen} noValidate className="afs-form">
+                <header className={actie ? 'afs-kop met-actie' : 'afs-kop'}>
+                  {actie && (
+                    <span className="afs-sticker" aria-hidden="true">
+                      <small>{AFSPRAAK.winteractie.sticker[0]}</small>
+                      {AFSPRAAK.winteractie.sticker[1]}
+                    </span>
+                  )}
+                  <span className="eyebrow">{actie ? AFSPRAAK.winteractie.label : 'Gratis offerte aan huis'}</span>
+                  <h2 id={`${id}-titel`} className="afs-titel">
+                    {actie ? (
+                      <>
+                        {AFSPRAAK.winteractie.kop[0]} <span>{AFSPRAAK.winteractie.kop[1]}</span>
+                      </>
+                    ) : (
+                      'Plan een bezoek van Jordy'
+                    )}
+                  </h2>
+                  <p id={`${id}-sub`} className="afs-sub">
+                    {actie
+                      ? 'Plan een gratis offerte aan huis en profiteer van 10 tot 20% winterkorting. Jordy komt langs, binnen 2 werkdagen heb je de offerte.'
+                      : 'Jordy bekijkt het werk bij je thuis. Binnen 2 werkdagen heb je een vrijblijvende offerte.'}
                   </p>
-                )}
+                  <ol className="afs-stappen" aria-label="Stappen">
+                    {STAPPEN.map((s, i) => (
+                      <li key={s.label} className={i < stap ? 'af' : i === stap ? 'nu' : undefined} aria-current={i === stap ? 'step' : undefined}>
+                        {i < stap ? (
+                          <button type="button" onClick={() => naarStap(i)}>
+                            <b>{i + 1}</b> {s.label}
+                            <span className="afs-vh"> (wijzigen)</span>
+                          </button>
+                        ) : (
+                          <span>
+                            <b>{i + 1}</b> {s.label}
+                          </span>
+                        )}
+                      </li>
+                    ))}
+                  </ol>
+                </header>
 
-                <button className="btn btn-blue afs-verstuur" type="submit" disabled={status === 'bezig'}>
-                  {status === 'bezig' ? 'Bezig met versturen...' : 'Afspraak aanvragen'} <span className="arr">→</span>
-                </button>
+                <div className="afs-romp" ref={romp}>
+                  {/* Honeypot: voor mensen onzichtbaar */}
+                  <div className="afs-hp" aria-hidden="true">
+                    <label>
+                      Laat dit veld leeg
+                      <input tabIndex={-1} autoComplete="off" value={v._gotcha} onChange={(e) => zet('_gotcha', e.target.value)} />
+                    </label>
+                  </div>
+
+                  <h3 className="afs-stapkop" ref={stapKop} tabIndex={-1}>
+                    <span className="afs-vh">
+                      Stap {stap + 1} van {STAPPEN.length}:{' '}
+                    </span>
+                    {STAPPEN[stap].kop}
+                  </h3>
+
+                  {stap === 0 && (
+                    <>
+                      <fieldset className="afs-keuze" {...aria('soort')} tabIndex={-1}>
+                        <legend className="afs-vh">Soort werk</legend>
+                        <div className="afs-soorten">
+                          {SOORTEN.map((s) => (
+                            <label key={s.key} className={(v.soort === s.key ? 'on' : '') + (s.licht ? ' licht' : '')} style={{ ['--c' as string]: s.kleur }}>
+                              <input type="radio" name={`${id}-soort`} value={s.key} checked={v.soort === s.key} onChange={() => zet('soort', s.key)} />
+                              <SoortIcoon soort={s.key} />
+                              <b>{s.label}</b>
+                              <small>{s.uitleg}</small>
+                            </label>
+                          ))}
+                        </div>
+                        {fout('soort')}
+                      </fieldset>
+                      <label>
+                        <span>
+                          Wat wil je laten schilderen? <span className="afs-opt">(optioneel)</span>
+                        </span>
+                        <textarea
+                          rows={3}
+                          placeholder="Bijvoorbeeld: woonkamer en hal, of de kozijnen aan de voorkant"
+                          value={v.omschrijving}
+                          onChange={(e) => zet('omschrijving', e.target.value)}
+                          {...aria('omschrijving')}
+                        />
+                        {fout('omschrijving')}
+                      </label>
+                    </>
+                  )}
+
+                  {stap === 1 && (
+                    <div className="afs-moment">
+                      <fieldset className="afs-keuze" {...aria('datum')} tabIndex={-1}>
+                        <legend>
+                          Datum <span className="afs-opt">(maandag of woensdag)</span>
+                        </legend>
+                        <DayPicker
+                          mode="single"
+                          locale={nl}
+                          weekStartsOn={1}
+                          fromDate={eerste}
+                          toDate={laatste}
+                          defaultMonth={gekozenDag ? new Date(gekozenDag.getUTCFullYear(), gekozenDag.getUTCMonth(), 1) : eerste}
+                          selected={gekozenDag ? new Date(gekozenDag.getUTCFullYear(), gekozenDag.getUTCMonth(), gekozenDag.getUTCDate()) : undefined}
+                          disabled={(d: Date) => !isToegestaneDatum(lokaal(d)) || dagVol(lokaal(d))}
+                          onSelect={(d) => zet('datum', d ? lokaal(d) : '')}
+                          showOutsideDays={false}
+                          className="afs-kalender"
+                        />
+                        {fout('datum')}
+                      </fieldset>
+                      <fieldset className="afs-keuze" {...aria('tijd')} tabIndex={-1}>
+                        <legend>Tijd</legend>
+                        {v.datum ? (
+                          <>
+                            <span className="afs-gekozen">{datumTekst(v.datum)}</span>
+                            <div className="afs-slots">
+                              {AFSPRAAK.slots.map((t) => {
+                                const vol = isBezet(v.datum, t)
+                                return (
+                                  <label key={t} className={vol ? 'vol' : v.tijd === t ? 'on' : undefined}>
+                                    <input type="radio" name={`${id}-tijd`} value={t} checked={v.tijd === t} disabled={vol} onChange={() => zet('tijd', t)} />
+                                    {t}
+                                    {vol && <span className="afs-vh"> (bezet)</span>}
+                                  </label>
+                                )
+                              })}
+                            </div>
+                          </>
+                        ) : (
+                          <p className="afs-leeg">Kies eerst een datum, dan zie je hier de tijden.</p>
+                        )}
+                        {fout('tijd')}
+                      </fieldset>
+                    </div>
+                  )}
+
+                  {stap === 2 && (
+                    <>
+                      <div className="afs-samenvatting">
+                        <span>
+                          {v.soort && soortLabel[v.soort]} · {datumTekst(v.datum)} om {v.tijd} uur
+                        </span>
+                        <button type="button" onClick={() => naarStap(1)}>
+                          Wijzig
+                        </button>
+                      </div>
+                      <div className="afs-rij">
+                        <label>
+                          Naam
+                          <input autoComplete="name" value={v.naam} onChange={(e) => zet('naam', e.target.value)} {...aria('naam')} />
+                          {fout('naam')}
+                        </label>
+                        <label>
+                          Telefoon
+                          <input type="tel" autoComplete="tel" inputMode="tel" value={v.telefoon} onChange={(e) => zet('telefoon', e.target.value)} {...aria('telefoon')} />
+                          {fout('telefoon')}
+                        </label>
+                      </div>
+                      <label>
+                        E-mail
+                        <input type="email" autoComplete="email" value={v.email} onChange={(e) => zet('email', e.target.value)} {...aria('email')} />
+                        {fout('email')}
+                      </label>
+                      <div className="afs-rij afs-adres">
+                        <label>
+                          Straat en huisnummer
+                          <input autoComplete="street-address" value={v.straat} onChange={(e) => zet('straat', e.target.value)} {...aria('straat')} />
+                          {fout('straat')}
+                        </label>
+                        <label>
+                          Plaats
+                          <input autoComplete="address-level2" value={v.plaats} onChange={(e) => zet('plaats', e.target.value)} {...aria('plaats')} />
+                          {fout('plaats')}
+                        </label>
+                      </div>
+                      <label className="afs-check">
+                        <input type="checkbox" checked={v.privacy} onChange={(e) => zet('privacy', e.target.checked)} {...aria('privacy')} />
+                        <span>Ik ga akkoord dat Schildersbedrijf040 mijn gegevens gebruikt om contact met mij op te nemen over deze afspraak.</span>
+                      </label>
+                      {fout('privacy')}
+                    </>
+                  )}
+
+                  {status === 'fout' && (
+                    <p className="afs-melding" role="alert">
+                      {Object.values(fouten).some(Boolean) ? 'Controleer de gemarkeerde velden.' : 'Versturen lukte niet.'} Bel ons gerust op{' '}
+                      <a href={site.phoneHref}>{site.phone}</a>.
+                    </p>
+                  )}
+                </div>
+
+                <footer className="afs-voet">
+                  {stap > 0 ? (
+                    <button type="button" className="afs-terug" onClick={() => naarStap(stap - 1)}>
+                      <span aria-hidden="true">←</span> Terug
+                    </button>
+                  ) : (
+                    <a className="afs-bel" href={site.phoneHref}>
+                      Liever bellen? <b>{site.phone}</b>
+                    </a>
+                  )}
+                  <button className="btn btn-blue afs-verder" type="submit" disabled={status === 'bezig'}>
+                    {status === 'bezig' ? 'Bezig met versturen...' : laatsteStap ? 'Afspraak aanvragen' : 'Volgende'} <span className="arr">→</span>
+                  </button>
+                </footer>
               </form>
             )}
           </div>

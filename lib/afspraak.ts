@@ -15,8 +15,13 @@ export const AFSPRAAK = {
   tijdzone: 'Europe/Amsterdam',
 
   // Actieregel in de popup (en op /diensten/winterschilder). Verdwijnt vanzelf na de datum `tot`.
+  // `kop` is de grote titel van de popup zolang de actie loopt; daarna weer "Plan een bezoek van Jordy".
   winteractie: {
     tekst: 'Winteractie: 10 tot 20% korting op binnenschilderwerk in november, december en januari.',
+    kop: ['Nu tot 20% korting', 'op binnenschilderwerk'],
+    sticker: ['Tot', '-20%'],
+    label: 'Winteractie t/m 31 januari',
+    knop: 'Tot 20% korting',
     tot: '2027-01-31',
   },
 

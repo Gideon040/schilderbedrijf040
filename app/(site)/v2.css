@@ -1027,89 +1027,173 @@ header.nav nav.mmenu{display:block;font-weight:400;font-size:inherit}
 @media (max-width:1180px){.mega-kaart ul{display:none}.mega-kaart{justify-content:space-between;gap:16px 28px}}
 
 /* ---------- Afspraak-popup "offerte aan huis" (components/afspraak/popup.tsx) ---------- */
-.afs-knop{position:fixed;right:24px;bottom:24px;z-index:60;display:inline-flex;align-items:center;gap:10px;padding:15px 20px;background:var(--blue);color:var(--white);font-weight:700;text-decoration:none;border-radius:999px;box-shadow:0 14px 30px rgba(26,91,255,.35);transition:transform .2s,background .2s}
+/* Huisstijl: rechte hoeken, navy kop, mono-eyebrow, kleurstalen die de tegel vullen */
+.afs-knop{position:fixed;right:24px;bottom:24px;z-index:60;display:inline-flex;align-items:center;gap:10px;padding:15px 20px;background:var(--blue);color:var(--white);font-weight:700;text-decoration:none;box-shadow:0 14px 30px rgba(26,91,255,.35);transition:transform .2s,background .2s}
 .afs-knop:hover{background:var(--blue-ink);transform:translateY(-2px)}
 .afs-knop:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.afs-knop[hidden]{display:none}
 @media (max-width:980px){.afs-knop{display:none}}
 
-.afs-overlay{position:fixed;inset:0;z-index:100;background:rgba(10,22,38,.62);display:flex;align-items:center;justify-content:center;padding:24px;animation:afsIn .2s ease-out}
+.afs-overlay{position:fixed;inset:0;z-index:100;background:rgba(10,22,38,.66);display:flex;align-items:center;justify-content:center;padding:24px;animation:afsIn .2s ease-out}
 @keyframes afsIn{from{opacity:0}to{opacity:1}}
-.afs-dialoog{position:relative;width:min(760px,100%);max-height:calc(100dvh - 48px);overflow-y:auto;overscroll-behavior:contain;background:var(--white);color:var(--text);border-radius:16px;box-shadow:0 30px 80px rgba(10,22,38,.4);padding:34px 36px 30px;animation:afsOp .25s cubic-bezier(.2,.8,.2,1)}
-@keyframes afsOp{from{transform:translateY(12px) scale(.98);opacity:0}to{transform:none;opacity:1}}
-.afs-dialoog:focus{outline:none}
-.afs-sluit{position:absolute;top:14px;right:14px;width:42px;height:42px;display:grid;place-items:center;border:0;background:var(--paper);color:var(--ink);border-radius:50%;cursor:pointer}
-.afs-sluit:hover{background:var(--paper-2)}
-.afs-sluit:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
-.afs-titel{font-family:var(--display);font-stretch:108%;font-weight:850;text-transform:uppercase;color:var(--ink);font-size:clamp(24px,3vw,32px);line-height:1.05;margin:0 48px 10px 0}
-.afs-sub{margin:0 0 22px;color:var(--muted);font-size:16px;line-height:1.55}
-.afs-actie{display:block;margin-top:8px;padding:8px 12px;background:#E8EEFF;color:var(--blue-ink);font-weight:700;border-radius:8px;font-size:15px}
-.afs-dialoog form{display:flex;flex-direction:column;gap:14px}
+.afs-dialoog{position:relative;width:min(640px,100%);max-height:calc(100dvh - 48px);display:flex;flex-direction:column;background:var(--white);color:var(--text);box-shadow:0 30px 80px rgba(10,22,38,.45);animation:afsOp .3s cubic-bezier(.2,.8,.2,1)}
+@keyframes afsOp{from{transform:translateY(14px);opacity:0}to{transform:none;opacity:1}}
+.afs-dialoog:focus,.afs-stapkop:focus{outline:none}
+.afs-sluit{position:absolute;top:14px;right:14px;z-index:2;width:40px;height:40px;display:grid;place-items:center;border:0;background:rgba(255,255,255,.08);color:var(--white);cursor:pointer;transition:background .2s}
+.afs-sluit:hover{background:rgba(255,255,255,.18)}
+.afs-sluit:focus-visible{outline:3px solid var(--white);outline-offset:2px}
+.afs-dialoog:has(.afs-klaar) .afs-sluit{background:var(--paper);color:var(--ink)}
+.afs-dialoog:has(.afs-klaar) .afs-sluit:focus-visible{outline-color:var(--blue)}
+.afs-vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+.afs-form{display:flex;flex-direction:column;min-height:0;flex:1}
+.afs-kop{background:var(--ink);color:#C4CEDB;padding:26px 32px 0;display:flex;flex-direction:column;gap:8px}
+.afs-kop .eyebrow{color:#9DB6FF}
+.afs-titel{font-family:var(--display);font-stretch:110%;font-weight:850;text-transform:uppercase;letter-spacing:-.01em;color:var(--white);font-size:clamp(26px,3.4vw,34px);line-height:1;margin:0 48px 0 0}
+.afs-sub{margin:0;font-size:15.5px;line-height:1.5;max-width:46ch}
+
+/* Actie: korting is de blikvanger, met een schuine sticker */
+.afs-kop.met-actie .eyebrow{color:#FFD15C}
+.afs-kop.met-actie .afs-titel{font-size:clamp(30px,4.4vw,44px);margin-right:130px}
+.afs-kop.met-actie .afs-titel span{display:block;font-size:.5em;letter-spacing:.01em;color:#C4CEDB;margin-top:6px}
+.afs-kop.met-actie .afs-sub{max-width:40ch;margin-right:100px}
+.afs-kop.met-actie .afs-sub::first-line{color:var(--white)}
+.afs-sticker{position:absolute;top:58px;right:30px;z-index:1;width:116px;height:116px;display:flex;flex-direction:column;align-items:center;justify-content:center;background:var(--blue);color:var(--white);font-family:var(--display);font-stretch:112%;font-weight:900;font-size:32px;line-height:.9;letter-spacing:-.02em;transform:rotate(8deg);box-shadow:0 12px 26px rgba(0,0,0,.35);animation:afsSticker .55s .15s cubic-bezier(.2,1.5,.4,1) both}
+.afs-sticker small{font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;margin-bottom:4px}
+@keyframes afsSticker{from{transform:rotate(-12deg) scale(.4);opacity:0}to{transform:rotate(8deg) scale(1);opacity:1}}
+
+/* Stappen als verfstreken: de blauwe balk loopt mee */
+.afs-stappen{list-style:none;margin:16px -32px 0;padding:0;display:grid;grid-template-columns:repeat(3,1fr)}
+.afs-stappen li{position:relative;font-size:13.5px;font-weight:700;color:#7F8DA3}
+.afs-stappen li::after{content:"";position:absolute;left:0;right:0;bottom:0;height:5px;background:var(--line-dark)}
+.afs-stappen li.af::after,.afs-stappen li.nu::after{background:var(--blue)}
+.afs-stappen li.af{color:#C4CEDB}
+.afs-stappen li.nu{color:var(--white)}
+.afs-stappen :is(span,button){display:flex;align-items:center;gap:9px;width:100%;padding:12px 0 14px 32px;font:inherit;color:inherit;background:none;border:0;text-align:left}
+.afs-stappen li+li :is(span,button){padding-left:16px}
+.afs-stappen button{cursor:pointer}
+.afs-stappen button:hover{color:var(--white)}
+.afs-stappen b{font-family:var(--mono);font-size:11.5px;width:22px;height:22px;flex:0 0 22px;display:grid;place-items:center;box-shadow:inset 0 0 0 1.5px currentColor}
+.afs-stappen li.nu b,.afs-stappen li.af b{background:var(--blue);box-shadow:none;color:var(--white)}
+
+.afs-romp{flex:1;min-height:0;overflow-y:auto;overscroll-behavior:contain;padding:24px 32px;display:flex;flex-direction:column;gap:16px}
+.afs-stapkop{font-family:var(--display);font-stretch:106%;font-weight:800;font-size:20px;line-height:1.15;color:var(--ink);margin:0}
 .afs-dialoog label{display:flex;flex-direction:column;gap:6px;font-size:14px;font-weight:700;color:var(--ink)}
-.afs-dialoog :is(input:not([type=radio]):not([type=checkbox]),textarea){font:inherit;font-weight:400;font-size:16px;color:var(--ink);border:1.5px solid var(--line);background:var(--white);padding:12px 13px;border-radius:10px;width:100%;transition:border-color .15s,box-shadow .15s}
-.afs-dialoog :is(input,textarea):focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px rgba(26,91,255,.18)}
+.afs-dialoog :is(input:not([type=radio]):not([type=checkbox]),textarea){font:inherit;font-weight:400;font-size:16px;color:var(--ink);border:0;border-bottom:2px solid var(--line);background:var(--paper);padding:13px 12px;width:100%;min-width:0;transition:border-color .2s}
+.afs-dialoog :is(input,textarea):focus{outline:none;border-color:var(--blue)}
+.afs-dialoog textarea::placeholder{color:#8B93A0}
 .afs-dialoog [aria-invalid=true]:is(input,textarea){border-color:#C8312C}
-.afs-dialoog textarea{resize:vertical;min-height:84px}
+.afs-dialoog textarea{resize:vertical;min-height:80px}
 .afs-rij{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 .afs-adres{grid-template-columns:1.6fr 1fr}
 .afs-opt{font-weight:400;color:var(--muted)}
 .afs-fout{font-size:13.5px;font-weight:600;color:#C8312C}
-.afs-keuze{border:0;padding:0;margin:0;display:flex;flex-direction:column;gap:8px}
+.afs-keuze{border:0;padding:0;margin:0;display:flex;flex-direction:column;gap:8px;min-width:0}
 .afs-keuze:focus{outline:none}
 .afs-keuze legend{font-size:14px;font-weight:700;color:var(--ink);margin-bottom:8px;padding:0}
-.afs-segment{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
-.afs-slots{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
-.afs-segment label,.afs-slots label{position:relative;flex-direction:row;justify-content:center;align-items:center;padding:12px 8px;border:1.5px solid var(--line);border-radius:10px;cursor:pointer;font-weight:700;font-size:15px;color:var(--ink);background:var(--white);transition:border-color .15s,background .15s,color .15s}
-.afs-segment label:hover,.afs-slots label:hover{border-color:var(--blue)}
-.afs-segment label.on,.afs-slots label.on{background:var(--blue);border-color:var(--blue);color:var(--white)}
-.afs-segment input,.afs-slots input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
-.afs-segment label:has(input:focus-visible),.afs-slots label:has(input:focus-visible){outline:3px solid var(--ink);outline-offset:2px}
-.afs-dialoog .afs-check{flex-direction:row;align-items:flex-start;gap:10px;font-weight:400;font-size:14.5px;color:var(--text);line-height:1.45}
+
+/* Stap 1: soort werk als kleurstalen */
+.afs-soorten{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.afs-dialoog .afs-soorten label{position:relative;isolation:isolate;overflow:hidden;gap:4px;padding:16px 14px 14px;cursor:pointer;box-shadow:inset 0 0 0 1.5px var(--line);transition:color .3s,box-shadow .2s}
+.afs-soorten label::before{content:"";position:absolute;left:0;right:0;top:0;height:6px;background:var(--c);z-index:-1;transition:height .45s cubic-bezier(.7,0,.2,1)}
+.afs-soorten label:hover{box-shadow:inset 0 0 0 1.5px var(--ink)}
+.afs-soorten label.on{color:var(--white);box-shadow:none}
+.afs-soorten label.on.licht{color:var(--ink)}
+.afs-soorten label.on::before{height:100%}
+.afs-soorten svg{margin:6px 0}
+.afs-soorten b{font-family:var(--display);font-stretch:108%;font-weight:850;text-transform:uppercase;font-size:19px;line-height:1}
+.afs-soorten small{font-size:13px;font-weight:400;line-height:1.35;opacity:.8}
+.afs-soorten input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+.afs-soorten label:has(input:focus-visible){outline:3px solid var(--blue);outline-offset:2px}
+
+/* Stap 2: kalender naast de tijden */
+.afs-moment{display:grid;grid-template-columns:auto 1fr;gap:24px;align-items:start}
+.afs-slots{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.afs-dialoog .afs-slots label{position:relative;flex-direction:row;justify-content:center;align-items:center;padding:11px 8px;cursor:pointer;font-family:var(--mono);font-size:14.5px;background:var(--paper);box-shadow:inset 0 0 0 1.5px transparent;transition:background .15s,color .15s,box-shadow .15s}
+.afs-slots label:hover{box-shadow:inset 0 0 0 1.5px var(--blue)}
+.afs-dialoog .afs-slots label.on{background:var(--blue);color:var(--white)}
+.afs-slots input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+.afs-slots label:has(input:focus-visible){outline:3px solid var(--ink);outline-offset:2px}
+.afs-dialoog .afs-slots label.vol{background:transparent;color:#BDC2C9;text-decoration:line-through;cursor:not-allowed;box-shadow:inset 0 0 0 1.5px var(--paper-2)}
+.afs-slots label.vol input{cursor:not-allowed}
+.afs-gekozen{font-size:14px;color:var(--blue-ink);font-weight:700;margin:-4px 0 4px}
+.afs-gekozen::first-letter{text-transform:uppercase}
+.afs-leeg{margin:0;padding:16px;background:var(--paper);color:var(--muted);font-size:14.5px;line-height:1.45}
+
+/* Stap 3 */
+.afs-samenvatting{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 14px;background:var(--paper);border-left:3px solid var(--blue);font-size:14.5px;font-weight:700;color:var(--ink)}
+.afs-samenvatting button{border:0;background:none;padding:4px 0;font:inherit;font-size:14px;color:var(--blue);text-decoration:underline;cursor:pointer}
+.afs-dialoog .afs-check{flex-direction:row;align-items:flex-start;gap:10px;font-weight:400;font-size:14px;color:var(--text);line-height:1.45}
 .afs-check input{width:20px;height:20px;margin:1px 0 0;accent-color:var(--blue);flex:0 0 20px}
-.afs-gekozen{font-size:14px;color:var(--blue-ink);font-weight:700}
-.afs-melding{margin:0;padding:10px 12px;background:#FDECEA;color:#8E1F1B;border-radius:8px;font-size:14.5px}
+.afs-melding{margin:0;padding:10px 12px;background:#FDECEA;color:#8E1F1B;font-size:14.5px}
 .afs-melding a{color:inherit;font-weight:700}
-.afs-verstuur{justify-content:center;border-radius:10px;padding:16px;font-size:16px;margin-top:4px}
 .afs-hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
-.afs-klaar{text-align:center;padding:24px 8px 8px;display:flex;flex-direction:column;align-items:center;gap:14px}
-.afs-klaar h2{font-family:var(--display);font-stretch:106%;font-weight:850;text-transform:uppercase;color:var(--ink);font-size:clamp(22px,2.6vw,28px);line-height:1.1;max-width:480px;margin:0}
-.afs-klaar p{margin:0;color:var(--text);max-width:460px}
+
+/* Vaste voet met knoppen */
+.afs-voet{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px 32px;border-top:1px solid var(--line);background:var(--white)}
+.afs-terug{border:0;background:none;padding:10px 0;font:inherit;font-weight:700;color:var(--ink);cursor:pointer;display:inline-flex;gap:8px}
+.afs-terug:hover{color:var(--blue)}
+.afs-bel{font-size:14px;color:var(--muted);text-decoration:none;line-height:1.3}
+.afs-bel b{color:var(--ink);white-space:nowrap}
+.afs-bel:hover b{color:var(--blue)}
+.afs-dialoog .btn-blue{background:var(--blue);color:var(--white)}
+.afs-dialoog .btn-blue:disabled{opacity:.7;cursor:progress}
+.afs-verder{justify-content:center;padding:15px 24px}
+
+/* Bevestiging */
+.afs-klaar{text-align:center;padding:44px 32px 34px;display:flex;flex-direction:column;align-items:center;gap:14px;border-top:6px solid var(--blue);overflow-y:auto}
+.afs-klaar .eyebrow{justify-content:center}
+.afs-klaar h2{font-family:var(--display);font-stretch:108%;font-weight:850;text-transform:uppercase;color:var(--ink);font-size:clamp(22px,2.8vw,28px);line-height:1.05;max-width:460px;margin:0}
+.afs-klaar p{margin:0;color:var(--text);max-width:440px}
 .afs-klaar a{color:var(--blue);font-weight:700}
-.afs-klaar .btn{border-radius:10px;justify-content:center;min-width:180px}
-.afs-vink{width:68px;height:68px;border-radius:50%;background:var(--blue);color:var(--white);display:grid;place-items:center}
+.afs-klaar .btn{justify-content:center;min-width:180px}
+.afs-vink{width:64px;height:64px;background:var(--blue);color:var(--white);display:grid;place-items:center}
 
 /* Kalender (react-day-picker 8), in de huisstijl */
-.afs-kalender{--cel:42px;align-self:flex-start;border:1.5px solid var(--line);border-radius:12px;padding:12px 14px}
-.afs-kalender .rdp-months{display:flex}
-.afs-kalender .rdp-caption{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}
+.afs-kalender{--cel:40px;margin:0}
+.afs-kalender .rdp-caption{display:flex;align-items:center;justify-content:space-between;margin-bottom:6px}
 .afs-kalender .rdp-caption_label{font-weight:800;color:var(--ink);text-transform:capitalize;font-size:15px}
 .afs-kalender .rdp-nav{display:flex;gap:4px}
-.afs-kalender .rdp-nav_button{width:34px;height:34px;display:grid;place-items:center;border:0;border-radius:8px;background:var(--paper);color:var(--ink);cursor:pointer}
+.afs-kalender .rdp-nav_button{width:32px;height:32px;display:grid;place-items:center;border:0;background:var(--paper);color:var(--ink);cursor:pointer}
 .afs-kalender .rdp-nav_button:hover:not([disabled]){background:var(--paper-2)}
 .afs-kalender .rdp-nav_button[disabled]{opacity:.3;cursor:default}
-.afs-kalender .rdp-nav_icon{width:12px;height:12px}
+.afs-kalender .rdp-nav_icon{width:11px;height:11px}
 .afs-kalender table{border-collapse:separate;border-spacing:3px}
-.afs-kalender .rdp-head_cell{font-size:12px;font-weight:600;color:var(--muted);text-transform:lowercase;height:28px}
+.afs-kalender .rdp-head_cell{font-family:var(--mono);font-size:11px;font-weight:500;color:var(--muted);text-transform:lowercase;height:26px}
 .afs-kalender .rdp-cell{padding:0;text-align:center}
-.afs-kalender .rdp-day{width:var(--cel);height:var(--cel);border:0;border-radius:10px;background:transparent;font:inherit;font-size:15px;font-weight:700;color:var(--ink);cursor:pointer;box-shadow:inset 0 0 0 1.5px var(--line)}
+.afs-kalender .rdp-day{width:var(--cel);height:var(--cel);border:0;background:var(--paper);font:inherit;font-size:15px;font-weight:700;color:var(--ink);cursor:pointer;transition:background .15s,box-shadow .15s}
 .afs-kalender .rdp-day:hover:not([disabled]){box-shadow:inset 0 0 0 2px var(--blue)}
-.afs-kalender .rdp-day[disabled],.afs-kalender .rdp-day_disabled{box-shadow:none;color:#B9BEC6;font-weight:400;cursor:default}
+.afs-kalender .rdp-day[disabled],.afs-kalender .rdp-day_disabled{background:transparent;color:#BDC2C9;font-weight:400;cursor:default}
 .afs-kalender .rdp-day_selected,.afs-kalender .rdp-day_selected:hover{background:var(--blue);color:var(--white);box-shadow:none}
 .afs-kalender .rdp-day_today:not(.rdp-day_selected){text-decoration:underline}
 .afs-kalender .rdp-day:focus-visible{outline:3px solid var(--ink);outline-offset:1px}
 .afs-kalender .rdp-vhidden{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
 
-/* Mobiel: vrijwel schermvullend, tijdsloten in 2 kolommen */
+/* Mobiel: schermvullend, kop compacter, kalender boven de tijden */
 @media (max-width:640px){
-  .afs-overlay{padding:8px;align-items:stretch}
-  .afs-dialoog{max-height:none;height:100%;border-radius:14px;padding:26px 18px 22px}
-  .afs-rij,.afs-adres{grid-template-columns:1fr}
-  .afs-slots{grid-template-columns:repeat(2,1fr)}
-  .afs-kalender{--cel:38px;align-self:stretch;padding:10px}
+  .afs-overlay{padding:0;align-items:stretch}
+  .afs-dialoog{max-height:none;height:100%;width:100%}
+  .afs-kop{padding:20px 18px 0;gap:6px}
+  .afs-sub{display:none}
+  .afs-kop.met-actie .afs-titel{font-size:30px;margin-right:92px}
+  .afs-sticker{top:62px;right:14px;width:84px;height:84px;font-size:23px}
+  .afs-sticker small{font-size:10px;margin-bottom:2px}
+  .afs-stappen{margin:10px -18px 0}
+  .afs-stappen :is(span,button){padding:10px 0 12px 18px;font-size:12.5px;gap:7px}
+  .afs-stappen li+li :is(span,button){padding-left:10px}
+  .afs-romp{padding:20px 18px}
+  .afs-voet{padding:12px 18px calc(12px + env(safe-area-inset-bottom))}
+  .afs-rij,.afs-adres,.afs-moment{grid-template-columns:1fr}
+  .afs-moment{gap:18px}
+  .afs-soorten{grid-template-columns:1fr;gap:8px}
+  .afs-dialoog .afs-soorten label{display:grid;grid-template-columns:auto 1fr;column-gap:14px;row-gap:2px;align-items:center;padding:12px 14px 12px 20px}
+  .afs-soorten svg{grid-row:span 2;margin:0}
+  .afs-soorten label::before{bottom:0;width:6px;height:auto;right:auto;transition:width .45s cubic-bezier(.7,0,.2,1)}
+  .afs-soorten label.on::before{width:100%;height:auto}
+  .afs-slots{grid-template-columns:repeat(4,1fr)}
+  .afs-kalender{--cel:min(46px,calc((100vw - 36px - 24px) / 7))}
   .afs-kalender .rdp-table{margin:0 auto}
+  .afs-bel{display:none}
+  .afs-verder{flex:1}
 }
-@media (prefers-reduced-motion:reduce){.afs-overlay,.afs-dialoog{animation:none}.afs-knop{transition:none}}
-.afs-dialoog .btn-blue{background:var(--blue);color:var(--white);position:relative;overflow:hidden;isolation:isolate}
-.afs-dialoog .btn-blue:disabled{opacity:.7;cursor:progress}
-.afs-kalender .rdp-months{gap:24px;flex-wrap:wrap}
-@media (min-width:760px){.afs-kalender{width:max-content}.afs-kalender .rdp-months{flex-wrap:nowrap}}
-.afs-knop[hidden]{display:none}
+@media (prefers-reduced-motion:reduce){.afs-overlay,.afs-dialoog{animation:none}.afs-knop,.afs-soorten label::before{transition:none}.afs-sticker{animation:none}}

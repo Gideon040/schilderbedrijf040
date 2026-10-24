@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",
+    "@netlify/blobs": "^10.7.13",
     "@netlify/plugin-nextjs": "^5.15.8",
     "@next/swc-wasm-nodejs": "13.5.1",
     "@portabletext/react": "^4.0.3",
