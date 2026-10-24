@@ -113,7 +113,7 @@ const buitenklussen: { titel: string; tekst: string; prijs: string; href?: strin
   {
     titel: 'Houtrot sanering',
     tekst: 'Rot hout verwijderen en herstellen met epoxy, daarna direct afgeschilderd.',
-    prijs: prijzen['houtrot-sanering'][0].prijs.replace(' /stuk', ' per klein kozijn'),
+    prijs: prijzen['houtrot-sanering'][0].prijs,
     href: '/diensten/houtrot-sanering',
   },
   {

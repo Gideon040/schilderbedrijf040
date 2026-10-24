@@ -1,6 +1,5 @@
-// Eén bron voor alle prijzen op de site. Indicatief, inclusief materiaal, exclusief btw.
-// Bedragen komen van de bestaande dienstpagina's. Waar pagina's elkaar tegenspraken is één
-// waarde gekozen (zie seo/voortgang.md). [JORDY: bevestig tabel]
+// Eén bron voor alle prijzen op de site. Indicatief, exclusief btw.
+// Prijslijst van Jordy Jacobs, 16-10-2026 (WhatsApp). Kozijnen vallen onder lakwerk per m², niet per stuk.
 
 export type PriceRow = {
   wat: string
@@ -13,72 +12,78 @@ export type PriceRow = {
 
 const range = (min: number, max: number, suffix = '') =>
   `€${min.toLocaleString('nl-NL')} tot €${max.toLocaleString('nl-NL')}${suffix}`
+const vanaf = (min: number, suffix = '') => `vanaf €${min.toLocaleString('nl-NL')}${suffix}`
+const vast = (bedrag: number, suffix = '') => `€${bedrag.toLocaleString('nl-NL')}${suffix}`
+
+// De prijslijst zelf, op één plek
+export const PRIJSLIJST = {
+  wanden: { min: 10, max: 25 }, // wanden latexen/schilderen per m²
+  plafonds: { min: 10, max: 25 }, // per m²
+  lakwerkBuiten: { min: 45, max: 120 }, // per m², ook kozijnen buiten
+  lakwerkBinnen: { min: 30, max: 75 }, // per m², ook kozijnen binnen
+  gevel: { min: 25, max: 50 }, // per m²
+  behangen: { min: 15, max: 25 }, // per m²
+  latexSpuiten: { min: 10, max: 20 }, // per m²
+  houtrot: { vanaf: 100 },
+  trap: 350, // vanaf
+  deur: 80, // vanaf, per stuk
+  schuren: 3, // wanden/plafonds per m²
+  voorstrijken: 4, // primeren/voorstrijken per m²
+}
+const P = PRIJSLIJST
+
+const schuren: PriceRow = { wat: 'Wanden of plafonds schuren', prijs: vast(P.schuren, ' /m²'), min: P.schuren, max: P.schuren, unit: 'MTK' }
+const voorstrijken: PriceRow = { wat: 'Primeren of voorstrijken', prijs: vast(P.voorstrijken, ' /m²'), min: P.voorstrijken, max: P.voorstrijken, unit: 'MTK' }
+const lakBinnen: PriceRow = { wat: 'Lakwerk binnen (kozijnen, deuren, plinten)', prijs: range(P.lakwerkBinnen.min, P.lakwerkBinnen.max, ' /m²'), min: P.lakwerkBinnen.min, max: P.lakwerkBinnen.max, unit: 'MTK' }
+const lakBuiten: PriceRow = { wat: 'Lakwerk buiten (kozijnen, deuren, boeidelen)', prijs: range(P.lakwerkBuiten.min, P.lakwerkBuiten.max, ' /m²'), min: P.lakwerkBuiten.min, max: P.lakwerkBuiten.max, unit: 'MTK' }
+const deur: PriceRow = { wat: 'Deur lakken', prijs: vanaf(P.deur, ' /stuk'), min: P.deur, unit: 'C62' }
+const trap: PriceRow = { wat: 'Trap schilderen of lakken', prijs: vanaf(P.trap), min: P.trap, unit: 'C62' }
 
 export const prijzen: Record<string, PriceRow[]> = {
   binnenschilderwerk: [
-    { wat: 'Muren schilderen', prijs: range(30, 35, ' /m²'), min: 30, max: 35, unit: 'MTK' },
-    { wat: 'Plafond schilderen', prijs: range(32, 38, ' /m²'), min: 32, max: 38, unit: 'MTK' },
-    { wat: 'Kozijnen lakken', prijs: range(40, 55, ' /stuk'), min: 40, max: 55, unit: 'C62' },
-    { wat: 'Deuren lakken', prijs: range(80, 120, ' /stuk'), min: 80, max: 120, unit: 'C62' },
-    { wat: 'Trap schilderen', prijs: range(350, 600) },
-    { wat: 'Complete kamer (20 m²)', prijs: range(500, 900) },
+    { wat: 'Wanden schilderen', prijs: range(P.wanden.min, P.wanden.max, ' /m²'), min: P.wanden.min, max: P.wanden.max, unit: 'MTK' },
+    { wat: 'Plafond schilderen', prijs: range(P.plafonds.min, P.plafonds.max, ' /m²'), min: P.plafonds.min, max: P.plafonds.max, unit: 'MTK' },
+    lakBinnen,
+    deur,
+    trap,
+    schuren,
+    voorstrijken,
   ],
   buitenschilderwerk: [
-    { wat: 'Gevel schilderen', prijs: range(35, 45, ' /m²'), min: 35, max: 45, unit: 'MTK' },
-    { wat: 'Kozijnen buiten', prijs: range(50, 100, ' /stuk'), min: 50, max: 100, unit: 'C62' },
-    { wat: 'Deuren buiten', prijs: range(100, 150, ' /stuk'), min: 100, max: 150, unit: 'C62' },
-    { wat: 'Boeiboorden & windveren', prijs: range(20, 35, ' /m¹'), min: 20, max: 35, unit: 'MTR' },
-    { wat: 'Dakkapel schilderen', prijs: range(400, 800) },
-    { wat: 'Complete woning buiten', prijs: range(2500, 6000) },
+    { wat: 'Gevel schilderen', prijs: range(P.gevel.min, P.gevel.max, ' /m²'), min: P.gevel.min, max: P.gevel.max, unit: 'MTK' },
+    { ...lakBuiten, wat: 'Kozijnen buiten (lakwerk)' },
+    { ...lakBuiten, wat: 'Boeidelen en windveren (lakwerk)' },
+    { ...deur, wat: 'Buitendeur lakken' },
+    { wat: 'Houtrot herstellen', prijs: vanaf(P.houtrot.vanaf), min: P.houtrot.vanaf, unit: 'C62' },
   ],
   behangen: [
-    { wat: 'Vliesbehang aanbrengen', prijs: range(15, 25, ' /m²'), min: 15, max: 25, unit: 'MTK' },
-    { wat: 'Glasvezelbehang', prijs: range(18, 30, ' /m²'), min: 18, max: 30, unit: 'MTK' },
-    { wat: 'Fotobehang plaatsen', prijs: range(25, 40, ' /m²'), min: 25, max: 40, unit: 'MTK' },
-    { wat: 'Oud behang verwijderen', prijs: range(5, 10, ' /m²'), min: 5, max: 10, unit: 'MTK' },
-    { wat: 'Muren voorbehandelen', prijs: range(8, 12, ' /m²'), min: 8, max: 12, unit: 'MTK' },
-    { wat: 'Complete kamer (20 m²)', prijs: range(400, 800) },
+    { wat: 'Behangen', prijs: range(P.behangen.min, P.behangen.max, ' /m²'), min: P.behangen.min, max: P.behangen.max, unit: 'MTK' },
+    schuren,
+    voorstrijken,
   ],
-  lakwerk: [
-    // Gelijkgetrokken met binnenschilderwerk (stond hier op €35 tot €75)
-    { wat: 'Kozijnen lakken (binnen)', prijs: range(40, 55, ' /stuk'), min: 40, max: 55, unit: 'C62' },
-    { wat: 'Kozijnen lakken (buiten)', prijs: range(50, 100, ' /stuk'), min: 50, max: 100, unit: 'C62' },
-    // Stond als "Deuren lakken €100 tot €150"; binnen en buiten nu apart, gelijk aan de andere dienstpagina's
-    { wat: 'Binnendeuren lakken', prijs: range(80, 120, ' /stuk'), min: 80, max: 120, unit: 'C62' },
-    { wat: 'Buitendeuren lakken', prijs: range(100, 150, ' /stuk'), min: 100, max: 150, unit: 'C62' },
-    { wat: 'Trap lakken', prijs: range(350, 600) },
-    { wat: 'Radiator lakken', prijs: range(80, 120, ' /stuk'), min: 80, max: 120, unit: 'C62' },
-    { wat: 'Keukenkasten spuiten', prijs: range(150, 300, ' /m¹'), min: 150, max: 300, unit: 'MTR' },
-  ],
+  lakwerk: [lakBinnen, lakBuiten, deur, trap],
   'latex-spuiten': [
-    { wat: 'Muren spuiten', prijs: range(8, 12, ' /m²'), min: 8, max: 12, unit: 'MTK' },
-    { wat: 'Plafond spuiten', prijs: '€5,50 tot €7 /m²', min: 5.5, max: 7, unit: 'MTK' },
-    { wat: 'Nieuwbouw compleet', prijs: '€3,50 tot €7 /m²', min: 3.5, max: 7, unit: 'MTK' },
-    { wat: 'Renovatie spuiten', prijs: range(8, 13, ' /m²'), min: 8, max: 13, unit: 'MTK' },
-    { wat: 'Trappenhuis spuiten', prijs: range(7, 10, ' /m²'), min: 7, max: 10, unit: 'MTK' },
-    { wat: 'Kantoor/bedrijfspand', prijs: range(6, 9, ' /m²'), min: 6, max: 9, unit: 'MTK' },
+    { wat: 'Wanden en plafonds spuiten', prijs: range(P.latexSpuiten.min, P.latexSpuiten.max, ' /m²'), min: P.latexSpuiten.min, max: P.latexSpuiten.max, unit: 'MTK' },
+    schuren,
+    voorstrijken,
   ],
   'houtrot-sanering': [
-    { wat: 'Klein kozijn repareren', prijs: range(150, 250, ' /stuk'), min: 150, max: 250, unit: 'C62' },
-    { wat: 'Groot kozijn repareren', prijs: range(300, 450, ' /stuk'), min: 300, max: 450, unit: 'C62' },
-    { wat: 'Deurkozijn houtrot', prijs: range(200, 400, ' /stuk'), min: 200, max: 400, unit: 'C62' },
-    { wat: 'Dorpel vervangen', prijs: range(150, 350, ' /stuk'), min: 150, max: 350, unit: 'C62' },
-    { wat: 'Boeiboord reparatie', prijs: range(20, 40, ' /m¹'), min: 20, max: 40, unit: 'MTR' },
-    { wat: 'Kozijn volledig vervangen', prijs: range(600, 1500, ' /stuk'), min: 600, max: 1500, unit: 'C62' },
+    { wat: 'Houtrot herstellen', prijs: vanaf(P.houtrot.vanaf), min: P.houtrot.vanaf, unit: 'C62' },
+    { ...lakBuiten, wat: 'Afschilderen na herstel (lakwerk buiten)' },
   ],
 }
 
 // Eén regel per dienst, voor overzichten (homepage, locatiepagina's). Zelfde bedragen als hierboven.
 export const vanafPrijzen: { dienst: string; slug: string; prijs: string }[] = [
-  { dienst: 'Binnenschilderwerk (muren)', slug: 'binnenschilderwerk', prijs: prijzen.binnenschilderwerk[0].prijs },
+  { dienst: 'Binnenschilderwerk (wanden)', slug: 'binnenschilderwerk', prijs: prijzen.binnenschilderwerk[0].prijs },
   { dienst: 'Buitenschilderwerk (gevel)', slug: 'buitenschilderwerk', prijs: prijzen.buitenschilderwerk[0].prijs },
-  { dienst: 'Kozijnen buiten', slug: 'buitenschilderwerk', prijs: prijzen.buitenschilderwerk[1].prijs },
-  { dienst: 'Behangen (vliesbehang)', slug: 'behangen', prijs: prijzen.behangen[0].prijs },
-  { dienst: 'Latex spuiten (muren)', slug: 'latex-spuiten', prijs: prijzen['latex-spuiten'][0].prijs },
-  { dienst: 'Houtrot (klein kozijn)', slug: 'houtrot-sanering', prijs: prijzen['houtrot-sanering'][0].prijs },
+  { dienst: 'Kozijnen buiten (lakwerk)', slug: 'kozijnen-schilderen', prijs: prijzen.buitenschilderwerk[1].prijs },
+  { dienst: 'Behangen', slug: 'behangen', prijs: prijzen.behangen[0].prijs },
+  { dienst: 'Latex spuiten', slug: 'latex-spuiten', prijs: prijzen['latex-spuiten'][0].prijs },
+  { dienst: 'Houtrot herstellen', slug: 'houtrot-sanering', prijs: prijzen['houtrot-sanering'][0].prijs },
 ]
 
-export const prijsNoot = 'Indicatieve prijzen, inclusief materiaal en exclusief btw. De exacte prijs hoort u na de gratis inspectie.'
+export const prijsNoot = 'Indicatieve prijzen, exclusief btw. De exacte prijs hoort u na de gratis inspectie.'
 
 // Korte prijszin voor teksten (locatiepagina's, FAQ)
-export const prijsZinRegio = 'gemiddeld €30 tot €35 per m² voor binnenschilderwerk en €35 tot €45 per m² voor buitenschilderwerk aan de gevel'
+export const prijsZinRegio = 'gemiddeld €10 tot €25 per m² voor binnenschilderwerk en €25 tot €50 per m² voor buitenschilderwerk aan de gevel'
