@@ -1,13 +1,13 @@
 // Menu's en werkgebied. Nieuwe pagina's hier toevoegen zodra ze live zijn.
 
 export const diensten = [
+  { name: 'Latex spuiten', href: '/diensten/latex-spuiten' },
   { name: 'Binnenschilderwerk', href: '/diensten/binnenschilderwerk' },
   { name: 'Buitenschilderwerk', href: '/diensten/buitenschilderwerk' },
   { name: 'Kozijnen schilderen', href: '/diensten/kozijnen-schilderen' },
   { name: 'Gevel schilderen', href: '/diensten/gevel-schilderen' },
   { name: 'Behangen', href: '/diensten/behangen' },
   { name: 'Lakwerk', href: '/diensten/lakwerk' },
-  { name: 'Latex spuiten', href: '/diensten/latex-spuiten' },
   { name: 'Houtrot sanering', href: '/diensten/houtrot-sanering' },
   { name: 'Schilderen in de winter', href: '/diensten/winterschilder' },
 ]

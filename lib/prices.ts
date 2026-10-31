@@ -75,11 +75,11 @@ export const prijzen: Record<string, PriceRow[]> = {
 
 // Eén regel per dienst, voor overzichten (homepage, locatiepagina's). Zelfde bedragen als hierboven.
 export const vanafPrijzen: { dienst: string; slug: string; prijs: string }[] = [
+  { dienst: 'Latex spuiten', slug: 'latex-spuiten', prijs: prijzen['latex-spuiten'][0].prijs },
   { dienst: 'Binnenschilderwerk (wanden)', slug: 'binnenschilderwerk', prijs: prijzen.binnenschilderwerk[0].prijs },
   { dienst: 'Buitenschilderwerk (gevel)', slug: 'buitenschilderwerk', prijs: prijzen.buitenschilderwerk[0].prijs },
   { dienst: 'Kozijnen buiten (lakwerk)', slug: 'kozijnen-schilderen', prijs: prijzen.buitenschilderwerk[1].prijs },
   { dienst: 'Behangen', slug: 'behangen', prijs: prijzen.behangen[0].prijs },
-  { dienst: 'Latex spuiten', slug: 'latex-spuiten', prijs: prijzen['latex-spuiten'][0].prijs },
   { dienst: 'Houtrot herstellen', slug: 'houtrot-sanering', prijs: prijzen['houtrot-sanering'][0].prijs },
 ]
 

@@ -31,7 +31,7 @@ const omschrijving: Record<string, string> = {
 }
 
 const groepen = [
-  { titel: 'Binnen', slugs: ['binnenschilderwerk', 'latex-spuiten', 'lakwerk', 'behangen', 'winterschilder'] },
+  { titel: 'Binnen', slugs: ['latex-spuiten', 'binnenschilderwerk', 'lakwerk', 'behangen', 'winterschilder'] },
   { titel: 'Buiten', slugs: ['buitenschilderwerk', 'kozijnen-schilderen', 'gevel-schilderen', 'houtrot-sanering'] },
 ]
 

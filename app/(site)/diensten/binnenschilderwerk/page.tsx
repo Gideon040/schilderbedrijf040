@@ -7,7 +7,7 @@ import { orgRef, serviceOffers } from '@/lib/schema'
 export const metadata: Metadata = {
   title: 'Binnenschilderwerk Eindhoven',
   description:
-    'Binnenschilder in Eindhoven: muren, plafonds, kozijnen en deuren voor €30 tot €35 per m², met Boonstoppel-verf. Gratis inspectie en een offerte met vaste prijs.',
+    'Binnenschilder in Eindhoven: muren en plafonds €10 tot €25 per m², kozijnen en deuren lakken €30 tot €75 per m², met Boonstoppel-verf. Gratis inspectie en vaste prijs.',
   keywords: [
     'binnenschilderwerk eindhoven',
     'binnenschilder eindhoven',
@@ -33,7 +33,7 @@ const faqs = [
   {
     question: 'Wat kost binnenschilderwerk per m² in Eindhoven?',
     answer:
-      'Binnenschilderwerk kost gemiddeld €30 tot €35 per m², inclusief materiaal en exclusief btw. Voor een gemiddelde woonkamer van 20 m² komt dat neer op €250 tot €400 voor muren en plafond. Schildersbedrijf040 werkt met Boonstoppel verf, waardoor het resultaat 8 tot 10 jaar meegaat, aanzienlijk langer dan de 3 jaar die budgetverf biedt. Bij woningen ouder dan 2 jaar geldt het verlaagde btw-tarief van 9% in plaats van 21%.',
+      'Muren en plafonds schilderen kost bij Schildersbedrijf040 €10 tot €25 per m² en lakwerk aan kozijnen, deuren en plinten €30 tot €75 per m², exclusief btw. Wat een complete kamer kost, rekent Schildersbedrijf040 na de gratis inspectie in de offerte uit. Schildersbedrijf040 werkt met Boonstoppel verf, waardoor het resultaat 8 tot 10 jaar meegaat, aanzienlijk langer dan de 3 jaar die budgetverf biedt. Bij woningen ouder dan 2 jaar geldt het verlaagde btw-tarief van 9% in plaats van 21%.',
   },
   {
     question: 'Hoe lang duurt het om een kamer te schilderen?',
@@ -171,8 +171,8 @@ const pagina: DienstPagina = {
   h1: 'Binnenschilderwerk in Eindhoven',
   heroTekst: (
     <p>
-      Muren, plafonds, kozijnen, deuren en trappen laten schilderen kost gemiddeld €30 tot €35 per m², inclusief materiaal en
-      Boonstoppel-verf. Een woonkamer is meestal in 1 tot 2 werkdagen klaar. Na een gratis inspectie krijgt u een offerte met vaste prijs.
+      Muren en plafonds laten schilderen kost €10 tot €25 per m² en kozijnen, deuren en plinten lakken €30 tot €75 per m², inclusief
+      materiaal en Boonstoppel-verf. Een woonkamer is meestal in 1 tot 2 werkdagen klaar. Na een gratis inspectie krijgt u een offerte met vaste prijs.
     </p>
   ),
   heroImg: images.binnendeur,
@@ -218,14 +218,15 @@ const pagina: DienstPagina = {
     body: (
       <>
         <p>
-          Binnenschilderwerk kost gemiddeld €30 tot €35 per m² inclusief materiaal en exclusief btw. De uiteindelijke prijs hangt af van de
+          Muren en plafonds schilderen kost €10 tot €25 per m² en lakwerk binnen aan kozijnen, deuren en plinten €30 tot €75 per m²,
+          inclusief materiaal en exclusief btw. De uiteindelijke prijs hangt af van de
           staat van de ondergrond, het type oppervlak en de gewenste afwerking. Muren en plafonds schilderen is voordeliger per m² dan
           kozijnen lakken, omdat kozijnen meer voorbereidingstijd vragen door het nauwkeurige schuur- en lakwerk.
         </p>
         <p>
-          Schildersbedrijf040 hanteert een uurtarief van €35 tot €45 voor binnenschilderwerk, inclusief materiaal. Voor woningen ouder dan 2
-          jaar geldt het verlaagde btw-tarief van 9%, wat een merkbaar verschil maakt op de eindfactuur. Bij een schilderproject van €2.000
-          bespaart u daarmee ruim €200 ten opzichte van het standaard btw-tarief van 21%.
+          Een deur lakken kost vanaf €80 per stuk en een trap vanaf €350. Schuren van wanden of plafonds kost €3 per m² en primeren of
+          voorstrijken €4 per m². Voor woningen ouder dan 2 jaar geldt het verlaagde btw-tarief van 9% in plaats van 21% op het
+          arbeidsloon, wat een merkbaar verschil maakt op de eindfactuur.
         </p>
         <p>
           Schildersbedrijf040 werkt altijd met een vaste offerte, geen verrassingen achteraf. De investering in Boonstoppel verf betaalt
