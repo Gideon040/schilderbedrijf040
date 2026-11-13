@@ -37,4 +37,8 @@ export const site = {
     'https://www.facebook.com/profile.php?id=100064851917826',
     'https://www.instagram.com/schildersbedrijf040/',
   ],
+  // [INVULLEN: link naar het Google-bedrijfsprofiel (maps.app.goo.gl/... of g.page/...) en het Werkspot-profiel].
+  // Zodra ingevuld komen ze vanzelf in sameAs van het HousePainter-schema.
+  googleProfielUrl: null as string | null,
+  werkspotUrl: null as string | null,
 } as const

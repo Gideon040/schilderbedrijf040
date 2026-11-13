@@ -18,7 +18,7 @@ import {
 import { Offerte } from '@/components/site/offerte'
 import { Winterband } from '@/components/site/winterband'
 import { JsonLd } from '@/components/json-ld'
-import { faqSchema } from '@/lib/schema'
+import { breadcrumbSchema, faqSchema } from '@/lib/schema'
 import { huidigSeizoen } from '@/lib/seizoen'
 import { site } from '@/lib/site'
 
@@ -90,6 +90,7 @@ export default function Home() {
   return (
     <main>
       <JsonLd data={faqSchema(faqs)} />
+      <JsonLd data={breadcrumbSchema([['Home', '/']])} />
       <HomeHero />
       <Winterband />
       <Diensten />

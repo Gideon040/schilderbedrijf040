@@ -5,11 +5,10 @@ const nextConfig = {
   },
   async redirects() {
     return [
-      {
-        source: '/locaties/eindhoven',
-        destination: '/',
-        permanent: true,
-      },
+      // statusCode 301 in plaats van permanent: true (dat geeft een 308)
+      { source: '/locaties/eindhoven', destination: '/', statusCode: 301 },
+      // Oude blog-URL uit Search Console, onderwerp staat nu in verven-na-behang
+      { source: '/blog/voorstrijk-is-nodig-na-behang-verwijderen', destination: '/blog/verven-na-behang', statusCode: 301 },
     ]
   },
   images: {

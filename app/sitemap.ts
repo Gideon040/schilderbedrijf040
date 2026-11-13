@@ -1,94 +1,43 @@
 import { MetadataRoute } from 'next'
 import { cityData } from './(site)/locaties/[city]/data'
 import { blogs } from '@/lib/blog'
+import { diensten } from '@/lib/navigation'
+import lastmod from '@/data/lastmod.json'
+
+// lastModified = echte laatste inhoudelijke wijziging (data/lastmod.json, bijgewerkt met `node scripts/lastmod.mjs`),
+// niet het build-tijdstip. Blogs gebruiken hun eigen datum.
+const baseUrl = 'https://schildersbedrijf040.nl'
+const datums = lastmod as Record<string, string>
+const lm = (route: string) => (datums[route] ? new Date(datums[route]) : undefined)
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = 'https://schildersbedrijf040.nl'
+  const pagina = (route: string, changeFrequency: 'weekly' | 'monthly', priority: number, datumRoute = route) => ({
+    url: route === '/' ? baseUrl : `${baseUrl}${route}`,
+    lastModified: lm(datumRoute),
+    changeFrequency,
+    priority,
+  })
 
-  // Static pages
   const staticPages: MetadataRoute.Sitemap = [
-    {
-      url: baseUrl,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 1.0,
-    },
-    {
-      url: `${baseUrl}/over-ons`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/contact`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/faq`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/projecten`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.7,
-    },
+    pagina('/', 'weekly', 1.0),
+    pagina('/over-ons', 'monthly', 0.8),
+    pagina('/contact', 'monthly', 0.9),
+    pagina('/faq', 'monthly', 0.7),
+    pagina('/projecten', 'weekly', 0.7),
   ]
 
-  // Diensten pages
-  const diensten = [
-    'binnenschilderwerk',
-    'buitenschilderwerk',
-    'behangen',
-    'houtrot-sanering',
-    'lakwerk',
-    'latex-spuiten',
-    'winterschilder',
-    'kozijnen-schilderen',
-    'gevel-schilderen',
-  ]
+  const dienstenPages: MetadataRoute.Sitemap = diensten.map((d) => pagina(d.href, 'monthly', 0.9))
 
-  const dienstenPages: MetadataRoute.Sitemap = diensten.map((dienst) => ({
-    url: `${baseUrl}/diensten/${dienst}`,
-    lastModified: new Date(),
-    changeFrequency: 'monthly' as const,
-    priority: 0.9,
-  }))
+  const locationPages: MetadataRoute.Sitemap = Object.keys(cityData).map((city) => pagina(`/locaties/${city}`, 'monthly', 0.8, '/locaties'))
 
-  // Location pages (dynamic from data)
-  const locationPages: MetadataRoute.Sitemap = Object.keys(cityData).map((city) => ({
-    url: `${baseUrl}/locaties/${city}`,
-    lastModified: new Date(),
-    changeFrequency: 'monthly' as const,
-    priority: 0.8,
-  }))
-
-  // Blog pages (lokale bestanden in data/blog)
-  const blogOverview: MetadataRoute.Sitemap = [
-    {
-      url: `${baseUrl}/blog`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.8,
-    },
-  ]
+  const blogOverview: MetadataRoute.Sitemap = [{ ...pagina('/blog', 'weekly', 0.8), lastModified: new Date(blogs().map((b) => b.updated ?? b.date).sort().reverse()[0]) }]
 
   const blogPages: MetadataRoute.Sitemap = blogs().map((post) => ({
     url: `${baseUrl}/blog/${post.slug}`,
-    lastModified: new Date(post.date),
+    lastModified: new Date(post.updated ?? post.date),
     changeFrequency: 'monthly' as const,
     priority: 0.7,
   }))
 
-  return [
-    ...staticPages,
-    ...dienstenPages,
-    ...locationPages,
-    ...blogOverview,
-    ...blogPages,
-  ]
+  return [...staticPages, ...dienstenPages, ...locationPages, ...blogOverview, ...blogPages]
 }

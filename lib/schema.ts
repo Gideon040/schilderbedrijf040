@@ -50,8 +50,7 @@ export const businessSchema = {
     bestRating: '5',
     worstRating: '1',
   },
-  // [JORDY: link naar het Werkspot-profiel toevoegen aan sameAs]
-  sameAs: [...site.sameAs],
+  sameAs: [...site.sameAs, site.googleProfielUrl, site.werkspotUrl].filter((u): u is string => !!u),
   areaServed: werkgebied.map((name) => ({ '@type': 'City', name })),
 }
 

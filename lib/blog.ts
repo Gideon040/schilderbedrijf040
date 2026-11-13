@@ -13,6 +13,8 @@ export type BlogPost = {
   excerpt: string
   cover: BlogAfbeelding
   date: string
+  // Datum van de laatste inhoudelijke herziening (sitemap, dateModified)
+  updated?: string
   readTime: string
   category: string
   keywords: string[]

@@ -11,3 +11,17 @@
 
 [context.branch-deploy.environment]
   NEXT_PUBLIC_TOON_JORDY = "true"
+
+# Alle hostvarianten in één 301 naar https://schildersbedrijf040.nl (geen keten via https://www)
+[[redirects]]
+  from = "http://www.schildersbedrijf040.nl/*"
+  to = "https://schildersbedrijf040.nl/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.schildersbedrijf040.nl/*"
+  to = "https://schildersbedrijf040.nl/:splat"
+  status = 301
+  force = true
+

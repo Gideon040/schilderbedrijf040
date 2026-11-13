@@ -37,7 +37,7 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
       url: `https://schildersbedrijf040.nl/blog/${post.slug}`,
       type: 'article',
       publishedTime: post.date,
-      modifiedTime: post.date,
+      modifiedTime: post.updated ?? post.date,
       authors: [post.author.name],
       images: [{ url: imageUrl, width: post.cover.width, height: post.cover.height, alt: post.title }],
     },
@@ -71,7 +71,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
     description: post.excerpt,
     image: coverImageUrl,
     datePublished: post.date,
-    dateModified: post.date,
+    dateModified: post.updated ?? post.date,
     author: {
       '@type': 'Person',
       name: post.author.name,
