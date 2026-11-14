@@ -280,8 +280,8 @@ const pagina: DienstPagina = {
         titel: 'Trappen & balustrades',
         beschrijving:
           'Een trap is een intensief belopen oppervlak dat extra slijtvaste verf of lak nodig heeft. Schildersbedrijf040 schuurt de trap volledig kaal, brengt een hechtingsgrondlaag aan en werkt af met meerdere lagen slijtvaste lak. Een geschilderde trap is binnen 2 tot 3 dagen klaar, waarbij u de trap tussendoor kunt blijven gebruiken doordat Schildersbedrijf040 om en om werkt.',
-        link: '/diensten/lakwerk',
-        linkTekst: 'Meer over lakwerk',
+        link: '/diensten/trap-schilderen',
+        linkTekst: 'Meer over trap schilderen',
       },
       {
         titel: 'Houtwerk voorbehandelen',

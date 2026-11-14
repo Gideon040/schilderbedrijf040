@@ -328,8 +328,8 @@ const pagina: DienstPagina = {
         titel: 'Trappen lakken',
         beschrijving:
           'Een trap is een intensief belopen oppervlak dat extra slijtvaste lak nodig heeft. Schildersbedrijf040 schuurt de trap volledig kaal, brengt een hechtingsgrondlaag aan en werkt af met meerdere lagen slijtvaste lak. Een trap lakken kost ' + prijsKort.trap + ', afhankelijk van het aantal treden en de staat van het hout. Schildersbedrijf040 werkt om en om, zodat u de trap tussendoor kunt blijven gebruiken.',
-        link: '/projecten',
-        linkTekst: 'Bekijk projecten',
+        link: '/diensten/trap-schilderen',
+        linkTekst: 'Meer over trap schilderen',
       },
       {
         titel: 'Radiatoren & leidingen',
