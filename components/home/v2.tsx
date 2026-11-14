@@ -303,6 +303,10 @@ export function Bewijs() {
             <h2 id="vast-aanspreekpunt" className="disp" style={{ marginTop: 14 }}>
               Een schildersbedrijf uit Eindhoven, met een vast <Streek>aanspreekpunt</Streek>
             </h2>
+            {/* Echte foto van Jordy (beeldplan 8.1: geen AI-beeld van personen) */}
+            <div className="about-foto">
+              <Image src={images.jordy.src} alt={images.jordy.alt} fill sizes="(max-width: 980px) 92vw, 560px" />
+            </div>
           </div>
           <div className="rv lopend">
             <p>
