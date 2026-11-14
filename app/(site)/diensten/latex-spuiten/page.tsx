@@ -4,12 +4,13 @@ import Link from 'next/link'
 import { DienstTemplate, type DienstPagina } from '@/components/dienst/template'
 import { images } from '@/lib/images'
 import { orgRef, serviceOffers } from '@/lib/schema'
-import { site } from '@/lib/site'
+import { hoofd, site } from '@/lib/site'
+import { prijsKort, prijsTekst, prijzen, teBevestigen } from '@/lib/prices'
 
 export const metadata: Metadata = {
   title: 'Latex spuiten Eindhoven',
   description:
-    'Latex spuiten in Eindhoven: muren €8 tot €12 per m², plafonds €5,50 tot €7 en nieuwbouw vanaf €3,50 per m². Egaal, snel en met een vaste prijs per m².',
+    'Latex spuiten in Eindhoven: muren en plafonds ' + prijsTekst.latex + ', inclusief afplakken. Egaal, snel en met een vaste prijs per m² na een gratis inspectie.',
   keywords: [
     'latex spuiten eindhoven',
     'airless spuiten eindhoven',
@@ -56,7 +57,7 @@ const faqs = [
   {
     question: 'Wat kost latex spuiten per m²?',
     answer:
-      'Latex spuiten kost gemiddeld €8 tot €12 per m² voor muren, inclusief afplakken, primer en latex. Plafond spuiten is voordeliger: €5,50 tot €7 per m². Nieuwbouw compleet spuiten begint vanaf €3,50 per m², omdat nieuwe ondergronden minder voorbereiding vragen. Schildersbedrijf040 werkt altijd met een vaste offerte, zodat u vooraf precies weet wat de investering is. Bij woningen ouder dan 2 jaar geldt het verlaagde btw-tarief van 9%.',
+      'Latex spuiten kost ' + prijsTekst.latex + ' voor muren en plafonds, inclusief afplakken, primer en latex. Waar u binnen die bandbreedte uitkomt, hangt af van de ondergrond: nieuwbouw met gladde, schone wanden vraagt minder voorbereiding dan een bestaande woning. Schildersbedrijf040 werkt altijd met een vaste offerte, zodat u vooraf precies weet wat de investering is. Bij woningen ouder dan 2 jaar geldt het verlaagde btw-tarief van 9%.',
   },
   {
     question: 'Is latex spuiten goedkoper dan rollen?',
@@ -91,7 +92,7 @@ const werkwijzeStappen = [
   {
     nummer: 2,
     titel: 'Offerte op maat',
-    beschrijving: 'Binnen 48 uur ontvangt u een gedetailleerde offerte met vaste prijs, inclusief afplakken, primer, latex en oplevering.',
+    beschrijving: '' + hoofd(site.termijnen.offerte) + ' ontvangt u een gedetailleerde offerte met vaste prijs, inclusief afplakken, primer, latex en oplevering.',
   },
   {
     nummer: 3,
@@ -178,7 +179,7 @@ const pagina: DienstPagina = {
   h1: 'Latex spuiten in Eindhoven',
   heroTekst: (
     <p>
-      Latex spuiten kost gemiddeld €8 tot €12 per m² voor muren en €5,50 tot €7 per m² voor plafonds, inclusief afplakken en materiaal. Een
+      Latex spuiten kost gemiddeld {prijsTekst.latex} voor muren en plafonds, inclusief afplakken en materiaal. Een
       complete woning is meestal in 1 tot 2 dagen gespoten{TOON_JORDY && ', [JORDY: gemiddeld aantal m² per dag]'}. Na een gratis inspectie krijgt u een
       offerte met vaste prijs per m².
     </p>
@@ -186,7 +187,7 @@ const pagina: DienstPagina = {
   heroImg: images.latex,
   kerncijfers: [
     { waarde: '3 tot 5x sneller', label: 'Snelheid' },
-    { waarde: 'vanaf €3,50/m²', label: 'Prijs (nieuwbouw)' },
+    { waarde: prijsKort.latex, label: 'Prijs per m²' },
     { waarde: '100% egaal', label: 'Resultaat' },
     { waarde: '9%', label: 'BTW woningen 2+ jaar' },
   ],
@@ -224,16 +225,15 @@ const pagina: DienstPagina = {
     body: (
       <>
         <p>
-          Latex spuiten kost gemiddeld €8 tot €12 per m² voor muren, inclusief afplakken, primer en latex muurverf. Plafond spuiten is
-          voordeliger: €5,50 tot €7 per m², omdat plafonds doorgaans minder voorbereiding vragen. Bij nieuwbouw begint de all-in prijs vanaf
-          €3,50 per m², omdat nieuwe ondergronden glad en schoon zijn.
+          Latex spuiten kost gemiddeld {prijsTekst.latex} voor muren en plafonds, inclusief afplakken, primer en latex muurverf. Waar u binnen
+          die bandbreedte uitkomt, hangt af van de ondergrond: nieuwbouw met gladde, schone wanden vraagt minder voorbereiding dan renovatie.
         </p>
         <table className="w-full border-collapse text-[17px]">
-          <caption className="sr-only">Wat kost latex spuiten per m², nieuwbouw en bestaande bouw</caption>
+          <caption className="sr-only">Wat kost latex spuiten per m²</caption>
           <thead>
             <tr className="border-b-2 border-navy text-left">
               <th scope="col" className="py-2.5 pr-3 font-bold text-navy">
-                Situatie
+                Onderdeel
               </th>
               <th scope="col" className="py-2.5 text-right font-bold text-navy">
                 Prijs per m²
@@ -241,27 +241,17 @@ const pagina: DienstPagina = {
             </tr>
           </thead>
           <tbody>
-            <tr className="border-b border-lijn">
-              <td className="py-2.5 pr-3">Muren, bestaande woning</td>
-              <td className="py-2.5 text-right">€8 tot €12</td>
-            </tr>
-            <tr className="border-b border-lijn">
-              <td className="py-2.5 pr-3">Plafonds, bestaande woning</td>
-              <td className="py-2.5 text-right">€5,50 tot €7</td>
-            </tr>
-            <tr className="border-b border-lijn">
-              <td className="py-2.5 pr-3">Nieuwbouw, muren en plafonds</td>
-              <td className="py-2.5 text-right">€3,50 tot €7</td>
-            </tr>
-            <tr className="border-b border-lijn">
-              <td className="py-2.5 pr-3">Renovatie, muren en plafonds</td>
-              <td className="py-2.5 text-right">€8 tot €13</td>
-            </tr>
+            {prijzen['latex-spuiten'].map((r) => (
+              <tr key={r.wat} className="border-b border-lijn">
+                <td className="py-2.5 pr-3">{r.wat}</td>
+                <td className="py-2.5 text-right">{r.prijs.replace(' /m²', '')}</td>
+              </tr>
+            ))}
           </tbody>
         </table>
         <p className="!text-[15px] text-tekst-zacht">Indicatief, inclusief afplakken en materiaal, exclusief btw.</p>
         <p>
-          Schildersbedrijf040 hanteert een uurtarief van €35 tot €50 voor latex spuitwerk, maar werkt bij voorkeur met een vaste prijs per
+          Schildersbedrijf040 hanteert een uurtarief van {teBevestigen.uurLatex} voor latex spuitwerk, maar werkt bij voorkeur met een vaste prijs per
           m², zodat u vooraf precies weet wat de investering is. Voor woningen ouder dan 2 jaar geldt het verlaagde btw-tarief van 9% in
           plaats van 21%, wat een merkbaar verschil maakt op de eindfactuur.
         </p>
@@ -279,7 +269,7 @@ const pagina: DienstPagina = {
         Plafond spuiten
       </h2>
       <p>
-        Een plafond laten spuiten kost gemiddeld €5,50 tot €7 per m², inclusief afplakken en materiaal. Bij een plafond is spuiten extra
+        Een plafond laten spuiten kost gemiddeld {prijsTekst.latex}, inclusief afplakken en materiaal. Bij een plafond is spuiten extra
         handig: rollen boven het hoofd is zwaar werk en geeft snel zichtbare banen in strijklicht, terwijl gespoten latex in één egale laag
         op het plafond komt. Schildersbedrijf040 plakt vooraf wanden, kozijnen, vloeren en lichtpunten af, zodat alleen het plafond verf
         krijgt. Spuiten werkt goed op gestucte en gladde plafonds, zowel in nieuwbouw als in bestaande woningen.
@@ -321,7 +311,7 @@ const pagina: DienstPagina = {
       {
         titel: 'Nieuwbouw spuiten',
         beschrijving:
-          'Nieuwbouw spuiten is de meest kostenefficiënte manier om een nieuwbouwwoning af te werken. Omdat nieuwe muren en plafonds doorgaans glad en schoon zijn, is minder voorbereiding nodig. Schildersbedrijf040 spuit complete nieuwbouwwoningen in Eindhoven vanaf €3,50 per m², snel, egaal en betaalbaar.',
+          'Nieuwbouw spuiten is de meest kostenefficiënte manier om een nieuwbouwwoning af te werken. Omdat nieuwe muren en plafonds doorgaans glad en schoon zijn, is minder voorbereiding nodig. Schildersbedrijf040 spuit complete nieuwbouwwoningen in Eindhoven voor ' + prijsTekst.latex + ', snel, egaal en betaalbaar.',
         link: '/projecten',
         linkTekst: 'Bekijk projecten',
       },
@@ -377,7 +367,7 @@ const pagina: DienstPagina = {
       },
       {
         titel: 'Vaste prijs, geen verrassingen',
-        beschrijving: 'Gedetailleerde offerte binnen 48 uur met vaste prijs per m². Inclusief afplakken, primer, latex en oplevering.',
+        beschrijving: 'Gedetailleerde offerte ' + site.termijnen.offerte + ' met vaste prijs per m². Inclusief afplakken, primer, latex en oplevering.',
       },
       {
         titel: 'Nette afplak- en afdekwerkzaamheden',
@@ -391,7 +381,7 @@ const pagina: DienstPagina = {
   cta: {
     titel: 'Latex laten spuiten?',
     tekst:
-      'Wilt u weten wat latex spuiten voor uw woning of bedrijfspand kost? Schildersbedrijf040 komt graag langs voor een gratis inspectie en vrijblijvende offerte. Bel, mail of vul het contactformulier in, u ontvangt binnen 48 uur een offerte op maat.',
+      'Wilt u weten wat latex spuiten voor uw woning of bedrijfspand kost? Schildersbedrijf040 komt graag langs voor een gratis inspectie en vrijblijvende offerte. Bel, mail of vul het contactformulier in, u ontvangt ' + site.termijnen.offerte + ' een offerte op maat.',
   },
   schema: [serviceSchema, breadcrumbSchema, faqSchema],
 }

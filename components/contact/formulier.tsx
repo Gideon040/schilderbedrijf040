@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { bronpagina, trackEvent } from '@/lib/tracking'
 import { Pijl } from '@/components/site/v2'
+import { site } from '@/lib/site'
 
 const buildingTypes = ['Appartement', 'Tussenwoning', 'Hoekwoning', 'Twee-onder-een-kap', 'Vrijstaande woning', 'Bedrijfspand']
 
@@ -60,7 +61,10 @@ export function ContactFormulier() {
   return (
     <form id="quote-form" className="cform" action={FORMSPREE} method="POST" onSubmit={handleSubmit}>
       <h2>Vraag direct een offerte aan</h2>
-      <p>Vul het formulier in en ontvang binnen 24 uur een vrijblijvende offerte</p>
+      <p>
+        Vul het formulier in. U hoort {site.termijnen.reactie} van ons; na de gratis inspectie ontvangt u {site.termijnen.offerte} een
+        vrijblijvende offerte.
+      </p>
       <fieldset>
         <legend>Gewenste diensten</legend>
         <div className="swatches">

@@ -4,18 +4,18 @@ import { linkLive } from '@/lib/navigation'
 import { DienstTemplate, type DienstPagina } from '@/components/dienst/template'
 import { images } from '@/lib/images'
 import { jordy, toonBlok } from '@/lib/jordy'
-import { prijzen } from '@/lib/prices'
+import { PRIJSLIJST, prijsKort, prijsRij, prijsTekst, prijzen, rekenvoorbeeld, teBevestigen } from '@/lib/prices'
 import { breadcrumbSchema, faqSchema, orgRef, serviceOffers, werkgebied } from '@/lib/schema'
 import { site } from '@/lib/site'
 
 export const metadata: Metadata = {
   title: 'Kozijnen schilderen: prijs per kozijn',
   description:
-    'Kozijnen schilderen kost €50 tot €100 per kozijn en gaat met Boonstoppel-verf 8 tot 10 jaar mee. Gratis houtrotcheck en een vaste prijs. Vraag offerte aan.',
+    'Kozijnen schilderen kost ' + prijsTekst.lakBuiten + ' en gaat met Boonstoppel-verf 8 tot 10 jaar mee. Gratis houtrotcheck en een vaste prijs. Vraag offerte aan.',
   openGraph: {
     title: 'Kozijnen schilderen: prijs per kozijn | Schildersbedrijf040',
     description:
-      'Houten kozijnen buiten laten schilderen in Eindhoven en omgeving: €50 tot €100 per kozijn, met houtrotcheck, kitwerk en Boonstoppel-verf.',
+      'Houten kozijnen buiten laten schilderen in Eindhoven en omgeving: ' + prijsTekst.lakBuiten + ', met houtrotcheck, kitwerk en Boonstoppel-verf.',
     url: 'https://schildersbedrijf040.nl/diensten/kozijnen-schilderen',
     type: 'website',
   },
@@ -34,7 +34,7 @@ const prijsRegels: { wat: string; toelichting: string; prijs: string }[] = [
   {
     wat: 'Buitenkozijn schilderen',
     toelichting: 'Schuren, gronden en twee lagen aflak',
-    prijs: perStuk(vind(buiten, 'Kozijnen buiten'), 'kozijn'),
+    prijs: prijsRij.kozijnenBuiten.prijs.replace(' /m²', ' per m²'),
   },
   {
     wat: 'Klein kozijn (bijv. toilet- of badkamerraam)',
@@ -54,7 +54,7 @@ const prijsRegels: { wat: string; toelichting: string; prijs: string }[] = [
   {
     wat: 'Buitendeur schilderen',
     toelichting: 'Voordeur, achterdeur of tuindeur',
-    prijs: perStuk(vind(buiten, 'Deuren buiten'), 'deur'),
+    prijs: prijsRij.buitendeur.prijs.replace(' /stuk', ' per deur'),
   },
   {
     wat: 'Houtrot herstellen (klein kozijn)',
@@ -114,7 +114,7 @@ const pagina: DienstPagina = {
   h1: 'Kozijnen schilderen in Eindhoven',
   heroTekst: (
     <p>
-      Houten kozijnen buiten laten schilderen kost gemiddeld €50 tot €100 per kozijn, inclusief voorbereiding en Boonstoppel-verf en
+      Houten kozijnen buiten laten schilderen kost gemiddeld {prijsTekst.lakBuiten}, inclusief voorbereiding en Boonstoppel-verf en
       exclusief btw. Met goede voorbereiding gaat het schilderwerk 8 tot 10 jaar mee. Kozijnen schilderen is een onderdeel van ons{' '}
       <Link href="/diensten/buitenschilderwerk">buitenschilderwerk</Link>: na een gratis inspectie met houtrotcheck krijgt u een vaste
       prijs.
@@ -122,7 +122,7 @@ const pagina: DienstPagina = {
   ),
   heroImg: images.lakKozijnen,
   kerncijfers: [
-    { waarde: '€50 tot €100', label: 'Per kozijn buiten' },
+    { waarde: prijsKort.lakBuiten, label: 'Per m² lakwerk buiten' },
     { waarde: '8 tot 10 jaar', label: 'Levensduur met Boonstoppel-verf' },
     { waarde: '4 stappen', label: 'Inclusief houtrotcheck en kitwerk' },
     { waarde: '9% btw', label: 'Op arbeid, woning ouder dan 2 jaar' },
@@ -161,19 +161,19 @@ const pagina: DienstPagina = {
           </li>
         </ol>
         <p>
-          Het verschil in kosten is groot. Een kozijn op tijd schilderen kost €50 tot €100. Is er al houtrot, dan komt daar €150 tot €250 bij
-          voor herstel van een klein kozijn, en een kozijn volledig vervangen kost €600 tot €1.500.
+          Het verschil in kosten is groot. Een kozijn op tijd schilderen kost {prijsTekst.lakBuiten}. Is er al houtrot, dan komt daar {teBevestigen.houtrotKleinKozijn} bij
+          voor herstel van een klein kozijn, en een kozijn volledig vervangen kost {teBevestigen.kozijnVervangen}.
         </p>
       </>
     ),
   },
   kosten: {
     id: 'wat-kost-kozijnen-schilderen',
-    h2: 'Wat kost kozijnen schilderen per kozijn?',
+    h2: 'Wat kost kozijnen schilderen?',
     body: (
       <>
         <p>
-          Een houten buitenkozijn schilderen kost gemiddeld €50 tot €100 per kozijn, inclusief schuren, gronden en twee lagen
+          Houten buitenkozijnen schilderen valt onder lakwerk buiten en kost gemiddeld {prijsTekst.lakBuiten}, inclusief schuren, gronden en twee lagen
           Boonstoppel-verf, exclusief btw. Waar u binnen die bandbreedte uitkomt, hangt af van het formaat van het kozijn, het aantal ramen en
           glaslatten, de staat van de oude verf en de hoogte. Een kozijn op de begane grond is sneller klaar dan een kozijn op de tweede
           verdieping.
@@ -199,7 +199,7 @@ const pagina: DienstPagina = {
           </tbody>
         </table>
         <p>
-          Rekenvoorbeeld: een woning met 8 houten kozijnen komt uit op 8 keer €50 tot €100, dus €400 tot €800 voor het schilderwerk,
+          Rekenvoorbeeld: een woning met 10 m² te lakken kozijnhout buiten komt uit op {rekenvoorbeeld(10, PRIJSLIJST.lakwerkBuiten)} voor het schilderwerk,
           exclusief eventueel houtrotherstel en steiger. Voor woningen ouder dan twee jaar geldt 9% btw op de arbeid. De exacte prijs hoort u
           na de gratis inspectie, in een offerte met een vaste prijs per onderdeel.
         </p>
@@ -227,17 +227,17 @@ const pagina: DienstPagina = {
           <tr>
             <td>Verf dof of bladderend, hout gezond</td>
             <td>Schuren, gronden, kitwerk en aflakken</td>
-            <td>€50 tot €100 per kozijn</td>
+            <td>{prijsTekst.lakBuiten}</td>
           </tr>
           <tr>
             <td>Plaatselijk zacht hout, bijvoorbeeld in de onderdorpel</td>
             <td>Houtrot herstellen met epoxy, daarna schilderen</td>
-            <td>€150 tot €450 per kozijn, plus schilderwerk</td>
+            <td>{prijsTekst.houtrot}, plus schilderwerk</td>
           </tr>
           <tr>
             <td>Kozijn grotendeels aangetast of sluit niet meer</td>
             <td>Kozijn vervangen</td>
-            <td>€600 tot €1.500 per kozijn</td>
+            <td>{teBevestigen.kozijnVervangen} per kozijn</td>
           </tr>
         </tbody>
       </table>

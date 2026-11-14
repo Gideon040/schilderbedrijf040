@@ -388,9 +388,14 @@ export function AfspraakPopup() {
                   </h2>
                   <p id={`${id}-sub`} className="afs-sub">
                     {actie
-                      ? 'Plan een gratis offerte aan huis en profiteer van 10 tot 20% winterkorting. Jordy komt langs, binnen 2 werkdagen heb je de offerte.'
-                      : 'Jordy bekijkt het werk bij je thuis. Binnen 2 werkdagen heb je een vrijblijvende offerte.'}
+                      ? `Plan een gratis offerte aan huis en profiteer van 10 tot 20% winterkorting. Jordy komt langs en je hebt ${site.termijnen.offerte} de offerte.`
+                      : `Jordy bekijkt het werk bij je thuis. Je hebt ${site.termijnen.offerte} een vrijblijvende offerte.`}
                   </p>
+                  {actie && (
+                    <a className="afs-voorwaarden" href="/diensten/winterschilder#winteractie">
+                      Bekijk de voorwaarden van de winteractie
+                    </a>
+                  )}
                   <ol className="afs-stappen" aria-label="Stappen">
                     {STAPPEN.map((s, i) => (
                       <li key={s.label} className={i < stap ? 'af' : i === stap ? 'nu' : undefined} aria-current={i === stap ? 'step' : undefined}>

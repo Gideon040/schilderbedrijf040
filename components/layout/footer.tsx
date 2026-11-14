@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { diensten, plaatsen } from '@/lib/navigation'
 import { site } from '@/lib/site'
+import { TOON_JORDY } from '@/lib/jordy'
 
 const snelleLinks = [
   { name: 'Projecten', href: '/projecten' },
@@ -76,7 +77,8 @@ export function Footer() {
       </div>
       <div className="copy">
         <div className="wrap">
-          © {new Date().getFullYear()} Schildersbedrijf040. Alle rechten voorbehouden. Website gemaakt door{' '}
+          © {new Date().getFullYear()} Schildersbedrijf040.{' '}
+          {site.kvk ? `KvK ${site.kvk}. ` : TOON_JORDY ? 'KvK [INVULLEN: KvK-nummer]. ' : ''}Alle rechten voorbehouden. Website gemaakt door{' '}
           <a href="https://www.gostack.nl" target="_blank" rel="noopener noreferrer">
             GOSTACK
           </a>

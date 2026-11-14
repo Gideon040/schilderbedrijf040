@@ -1,9 +1,9 @@
-// Server-side JSON-LD, zodat het schema in de HTML staat (next/script zet het pas client-side neer)
+import { TOON_JORDY } from '@/lib/jordy'
+
+// Server-side JSON-LD, zodat het schema in de HTML staat (next/script zet het pas client-side neer).
+// Open punten ([JORDY: ...], [INVULLEN: ...]) komen nooit in de structured data van productie.
 export function JsonLd({ data }: { data: object }) {
-  return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(data).replace(/</g, '\\u003c') }}
-    />
-  )
+  let json = JSON.stringify(data)
+  if (!TOON_JORDY) json = json.replace(/\s*\[(?:JORDY|INVULLEN)[^\]]*\]/g, '')
+  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: json.replace(/</g, '\u003c') }} />
 }

@@ -3,12 +3,13 @@ import Link from 'next/link'
 import { DienstTemplate, type DienstPagina } from '@/components/dienst/template'
 import { images } from '@/lib/images'
 import { orgRef, serviceOffers } from '@/lib/schema'
-import { site } from '@/lib/site'
+import { hoofd, site } from '@/lib/site'
+import { prijsKort, prijsTekst } from '@/lib/prices'
 
 export const metadata: Metadata = {
   title: 'Binnenschilderwerk Eindhoven',
   description:
-    'Binnenschilder in Eindhoven: muren en plafonds €10 tot €25 per m², kozijnen en deuren lakken €30 tot €75 per m², met Boonstoppel-verf. Gratis inspectie en vaste prijs.',
+    'Binnenschilder in Eindhoven: muren en plafonds ' + prijsTekst.wanden + ', kozijnen en deuren lakken ' + prijsTekst.lakBinnen + ', met Boonstoppel-verf. Gratis inspectie en vaste prijs.',
   keywords: [
     'binnenschilderwerk eindhoven',
     'binnenschilder eindhoven',
@@ -34,7 +35,7 @@ const faqs = [
   {
     question: 'Wat kost binnenschilderwerk per m² in Eindhoven?',
     answer:
-      'Muren en plafonds schilderen kost bij Schildersbedrijf040 €10 tot €25 per m² en lakwerk aan kozijnen, deuren en plinten €30 tot €75 per m², exclusief btw. Wat een complete kamer kost, rekent Schildersbedrijf040 na de gratis inspectie in de offerte uit. Schildersbedrijf040 werkt met Boonstoppel verf, waardoor het resultaat 8 tot 10 jaar meegaat, aanzienlijk langer dan de 3 jaar die budgetverf biedt. Bij woningen ouder dan 2 jaar geldt het verlaagde btw-tarief van 9% in plaats van 21%.',
+      'Muren en plafonds schilderen kost bij Schildersbedrijf040 ' + prijsTekst.wanden + ' en lakwerk aan kozijnen, deuren en plinten ' + prijsTekst.lakBinnen + ', exclusief btw. Wat een complete kamer kost, rekent Schildersbedrijf040 na de gratis inspectie in de offerte uit. Schildersbedrijf040 werkt met Boonstoppel verf, waardoor het resultaat 8 tot 10 jaar meegaat, aanzienlijk langer dan de 3 jaar die budgetverf biedt. Bij woningen ouder dan 2 jaar geldt het verlaagde btw-tarief van 9% in plaats van 21%.',
   },
   {
     question: 'Hoe lang duurt het om een kamer te schilderen?',
@@ -85,7 +86,7 @@ const werkwijzeStappen = [
   {
     nummer: 2,
     titel: 'Offerte op maat',
-    beschrijving: 'Binnen 48 uur ontvangt u een gedetailleerde offerte met vaste prijs, zonder verborgen kosten en inclusief materialen.',
+    beschrijving: '' + hoofd(site.termijnen.offerte) + ' ontvangt u een gedetailleerde offerte met vaste prijs, zonder verborgen kosten en inclusief materialen.',
   },
   {
     nummer: 3,
@@ -172,7 +173,7 @@ const pagina: DienstPagina = {
   h1: 'Binnenschilderwerk in Eindhoven',
   heroTekst: (
     <p>
-      Muren en plafonds laten schilderen kost €10 tot €25 per m² en kozijnen, deuren en plinten lakken €30 tot €75 per m², inclusief
+      Muren en plafonds laten schilderen kost {prijsTekst.wanden} en kozijnen, deuren en plinten lakken {prijsTekst.lakBinnen}, inclusief
       materiaal en Boonstoppel-verf. Een woonkamer is meestal in 1 tot 2 werkdagen klaar. Na een gratis inspectie krijgt u een offerte met vaste prijs.
     </p>
   ),
@@ -219,14 +220,14 @@ const pagina: DienstPagina = {
     body: (
       <>
         <p>
-          Muren en plafonds schilderen kost €10 tot €25 per m² en lakwerk binnen aan kozijnen, deuren en plinten €30 tot €75 per m²,
+          Muren en plafonds schilderen kost {prijsTekst.wanden} en lakwerk binnen aan kozijnen, deuren en plinten {prijsTekst.lakBinnen},
           inclusief materiaal en exclusief btw. De uiteindelijke prijs hangt af van de
           staat van de ondergrond, het type oppervlak en de gewenste afwerking. Muren en plafonds schilderen is voordeliger per m² dan
           kozijnen lakken, omdat kozijnen meer voorbereidingstijd vragen door het nauwkeurige schuur- en lakwerk.
         </p>
         <p>
-          Een deur lakken kost vanaf €80 per stuk en een trap vanaf €350. Schuren van wanden of plafonds kost €3 per m² en primeren of
-          voorstrijken €4 per m². Voor woningen ouder dan 2 jaar geldt het verlaagde btw-tarief van 9% in plaats van 21% op het
+          Een deur lakken kost {prijsKort.deur} per stuk en een trap {prijsKort.trap}. Schuren van wanden of plafonds kost {prijsTekst.schuren} en primeren of
+          voorstrijken {prijsTekst.voorstrijken}. Voor woningen ouder dan 2 jaar geldt het verlaagde btw-tarief van 9% in plaats van 21% op het
           arbeidsloon, wat een merkbaar verschil maakt op de eindfactuur.
         </p>
         <p>
@@ -351,7 +352,7 @@ const pagina: DienstPagina = {
       },
       {
         titel: 'Vaste prijs, geen verrassingen',
-        beschrijving: 'Gedetailleerde offerte binnen 48 uur met vaste prijs. Inclusief materiaal, voorbereiding en oplevering.',
+        beschrijving: 'Gedetailleerde offerte ' + site.termijnen.offerte + ' met vaste prijs. Inclusief materiaal, voorbereiding en oplevering.',
       },
       {
         titel: 'Nette en schone werkplek',
@@ -373,7 +374,7 @@ const pagina: DienstPagina = {
   cta: {
     titel: 'Binnenwerk laten doen?',
     tekst:
-      'Wilt u weten wat professioneel binnenschilderwerk voor uw woning kost? Schildersbedrijf040 komt graag langs voor een gratis inspectie en vrijblijvende offerte. Bel, mail of vul het contactformulier in, u ontvangt binnen 48 uur een offerte op maat.',
+      'Wilt u weten wat professioneel binnenschilderwerk voor uw woning kost? Schildersbedrijf040 komt graag langs voor een gratis inspectie en vrijblijvende offerte. Bel, mail of vul het contactformulier in, u ontvangt ' + site.termijnen.offerte + ' een offerte op maat.',
   },
   schema: [serviceSchema, breadcrumbSchema, faqSchema],
 }

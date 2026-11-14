@@ -36,6 +36,16 @@ export const site = {
     reviewCount: reviewTotalen.werkspot.aantal,
   },
   experience: '5+ jaar',
+  // Termijnen: overal dezelfde, uit deze twee regels. [INVULLEN: Jordy bevestigt beide termijnen, zie VRAGEN-JORDY.md]
+  termijnen: {
+    reactie: 'binnen 24 uur', // reactie op een aanvraag, op werkdagen
+    offerte: 'binnen 48 uur', // offerte na de inspectie
+  },
+  // Eén garantietekst voor de hele site
+  garantie: '[INVULLEN: garantietermijn in jaren voor binnen- en buitenschilderwerk, en wat eronder valt]',
+  kvk: null as string | null, // [INVULLEN: KvK-nummer]
+  // Facebook noemt Schildersbedrijf040 "Officieel ambassadeur van Boonstoppel". Pas op true na bevestiging door Jordy.
+  boonstoppelAmbassadeur: false,
   paintBrand: 'Boonstoppel',
   sameAs: [
     'https://www.facebook.com/profile.php?id=100064851917826',
@@ -46,3 +56,6 @@ export const site = {
   googleProfielUrl: null as string | null,
   werkspotUrl: null as string | null,
 } as const
+
+// Eerste letter als hoofdletter (termijn aan het begin van een zin)
+export const hoofd = (s: string) => s.charAt(0).toUpperCase() + s.slice(1)

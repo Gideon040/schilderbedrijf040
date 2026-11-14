@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { site } from '@/lib/site'
 import { Offerte } from '@/components/site/offerte'
+import { prijsTekst } from '@/lib/prices'
 
 export const metadata: Metadata = {
   title: 'Veelgestelde Vragen | Schildersbedrijf Eindhoven',
@@ -22,7 +23,7 @@ export const metadata: Metadata = {
 const faqs = [
   {
     question: "Wat kost een schilder per m2 in Eindhoven?",
-    answer: "De kosten voor schilderwerk variëren van €15 tot €35 per m2, afhankelijk van het type werk, de staat van de ondergrond en het aantal verflagen. Binnenschilderwerk is over het algemeen goedkoper dan buitenschilderwerk. Wij maken graag een vrijblijvende offerte op maat."
+    answer: "De kosten voor schilderwerk variëren van " + prijsTekst.wanden + " voor binnenschilderwerk en " + prijsTekst.gevel + " voor een gevel, afhankelijk van het type werk, de staat van de ondergrond en het aantal verflagen. Binnenschilderwerk is over het algemeen goedkoper dan buitenschilderwerk. Wij maken graag een vrijblijvende offerte op maat."
   },
   {
     question: "Hoe lang duurt een schilderproject gemiddeld?",

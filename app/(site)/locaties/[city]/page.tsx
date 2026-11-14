@@ -17,7 +17,7 @@ import { ReviewKaarten } from '@/components/site/reviews'
 import { ProjectKaarten } from '@/components/projecten/kaarten'
 import { projectenUit } from '@/lib/projecten'
 import { orgRef } from '@/lib/schema'
-import { site } from '@/lib/site'
+import { hoofd, site } from '@/lib/site'
 
 // Generate static params for all cities
 export function generateStaticParams() {
@@ -154,7 +154,7 @@ export default function LocationPage({ params }: { params: { city: string } }) {
   const stappen = [
     { titel: 'Contact', tekst: `Bel, mail of vul het formulier in voor een vrijblijvend gesprek over uw schilderproject in ${X}.` },
     { titel: 'Inspectie', tekst: `Wij komen langs bij uw woning in ${X} voor een inspectie en bespreking.` },
-    { titel: 'Offerte', tekst: 'Binnen 48 uur een gedetailleerde offerte met vaste prijs, zonder verborgen kosten.' },
+    { titel: 'Offerte', tekst: '' + hoofd(site.termijnen.offerte) + ' een gedetailleerde offerte met vaste prijs, zonder verborgen kosten.' },
     { titel: 'Uitvoering', tekst: 'Netjes, op tijd en samen controleren wij het eindresultaat.' },
   ]
   const kleuren = ['var(--sw1)', 'var(--sw4)', 'var(--sw2)', 'var(--sw5)', 'var(--sw6)', 'var(--sw3)']

@@ -3,14 +3,15 @@ import Link from 'next/link'
 import { DienstTemplate, type DienstPagina } from '@/components/dienst/template'
 import { images } from '@/lib/images'
 import { afbreek } from '@/components/site/v2'
-import { TOON_JORDY } from '@/lib/jordy'
-import { prijzen } from '@/lib/prices'
+import { TOON_JORDY, toonBlok } from '@/lib/jordy'
+import { prijsRij, prijsTekst, prijzen, teBevestigen } from '@/lib/prices'
 import { orgRef, serviceOffers } from '@/lib/schema'
+import { hoofd, site } from '@/lib/site'
 
 export const metadata: Metadata = {
   title: 'Buitenschilderwerk Eindhoven',
   description:
-    'Buitenschilder in Eindhoven: gevel €35 tot €45 per m², kozijnen €50 tot €100, boeidelen en dakkapellen. Boonstoppel-verf, gratis houtrot-inspectie, vaste prijs.',
+    'Buitenschilder in Eindhoven: gevel ' + prijsTekst.gevel + ', kozijnen ' + prijsTekst.lakBuiten + ', boeidelen en dakkapellen. Boonstoppel-verf, gratis houtrot-inspectie, vaste prijs.',
   keywords: [
     'buitenschilderwerk eindhoven',
     'buitenschilder eindhoven',
@@ -39,7 +40,7 @@ const faqs = [
   {
     question: 'Wat kost buitenschilderwerk per m² in 2026?',
     answer:
-      'Buitenschilderwerk kost gemiddeld €35 tot €45 per m² inclusief materiaal en exclusief btw. Kozijnen schilderen buiten kost €50 tot €100 per kozijn, afhankelijk van de staat en het formaat. Schildersbedrijf040 hanteert een uurtarief van €40 tot €55 voor buitenschilderwerk. Voor woningen ouder dan 2 jaar geldt het verlaagde btw-tarief van 9%. Schildersbedrijf040 werkt altijd met een vaste offerte, zodat u vooraf precies weet wat het buitenschilderwerk kost.',
+      'Buitenschilderwerk kost gemiddeld ' + prijsTekst.gevel + ' inclusief materiaal en exclusief btw. Kozijnen schilderen buiten kost ' + prijsTekst.lakBuiten + ', afhankelijk van de staat en het formaat. Schildersbedrijf040 hanteert een uurtarief van ' + teBevestigen.uurBuiten + ' voor buitenschilderwerk. Voor woningen ouder dan 2 jaar geldt het verlaagde btw-tarief van 9%. Schildersbedrijf040 werkt altijd met een vaste offerte, zodat u vooraf precies weet wat het buitenschilderwerk kost.',
   },
   {
     question: 'Wanneer is het beste seizoen voor buitenschilderwerk?',
@@ -85,7 +86,7 @@ const faqs = [
   {
     question: 'Hoe ver van tevoren plant u buitenschilderwerk in?',
     answer:
-      'Vraag de offerte voor buitenschilderwerk het liefst in de winter of het vroege voorjaar aan. Buiten schilderen gebeurt van april tot en met oktober, met mei, juni en september als beste maanden, en in die periode piekt de vraag. Wie in januari of februari een inspectie laat doen, heeft binnen 48 uur een offerte met vaste prijs en kan een startdatum vastleggen voordat de agenda volloopt. Schildersbedrijf040 plant de werkdagen daarna op droog weer, zodat de verf goed hecht en droogt.',
+      'Vraag de offerte voor buitenschilderwerk het liefst in de winter of het vroege voorjaar aan. Buiten schilderen gebeurt van april tot en met oktober, met mei, juni en september als beste maanden, en in die periode piekt de vraag. Wie in januari of februari een inspectie laat doen, heeft ' + site.termijnen.offerte + ' een offerte met vaste prijs en kan een startdatum vastleggen voordat de agenda volloopt. Schildersbedrijf040 plant de werkdagen daarna op droog weer, zodat de verf goed hecht en droogt.',
     link: { href: '/blog/wanneer-buiten-schilderen', tekst: 'Lees wanneer u het beste buiten kunt schilderen.' },
   },
 ]
@@ -93,21 +94,21 @@ const faqs = [
 // Blok "Alle buitenklussen" en de secties boeidelen, dakkapel en deuren: prijzen uit lib/prices.ts
 const buiten = prijzen.buitenschilderwerk
 const vind = (wat: string) => buiten.find((r) => r.wat === wat)
-const boeidelen = vind('Boeiboorden & windveren')
-const dakkapel = vind('Dakkapel schilderen')
-const deuren = vind('Deuren buiten')
+const boeidelen = prijsRij.boeidelen
+const dakkapel = { prijs: teBevestigen.dakkapel }
+const deuren = prijsRij.buitendeur
 
 const buitenklussen: { titel: string; tekst: string; prijs: string; href?: string }[] = [
   {
     titel: 'Kozijnen schilderen',
     tekst: 'Houten kozijnen buiten schuren, herstellen, gronden en aflakken.',
-    prijs: vind('Kozijnen buiten')?.prijs.replace(' /stuk', ' per kozijn') ?? '',
+    prijs: prijsRij.kozijnenBuiten.prijs.replace(' /m²', ' per m²') ?? '',
     href: '/diensten/kozijnen-schilderen',
   },
   {
     titel: 'Gevel schilderen',
     tekst: 'Gevels reinigen, scheuren herstellen en schilderen met ademende buitenmuurverf.',
-    prijs: vind('Gevel schilderen')?.prijs.replace(' /m²', ' per m²') ?? '',
+    prijs: prijsRij.gevel.prijs.replace(' /m²', ' per m²') ?? '',
     href: '/diensten/gevel-schilderen',
   },
   {
@@ -136,7 +137,7 @@ const werkwijzeStappen = [
     nummer: 2,
     titel: 'Offerte op maat',
     beschrijving:
-      'Binnen 48 uur ontvangt u een gedetailleerde offerte met vaste prijs, inclusief materiaal, eventuele steigerhuur en houtrotreparatie.',
+      '' + hoofd(site.termijnen.offerte) + ' ontvangt u een gedetailleerde offerte met vaste prijs, inclusief materiaal, eventuele steigerhuur en houtrotreparatie.',
   },
   {
     nummer: 3,
@@ -209,7 +210,7 @@ const pagina: DienstPagina = {
   h1: 'Buitenschilderwerk in Eindhoven',
   heroTekst: (
     <p>
-      Gevels, kozijnen, deuren en boeidelen laten schilderen kost gemiddeld €35 tot €45 per m² voor de gevel en €50 tot €100 per kozijn,
+      Gevels, kozijnen, deuren en boeidelen laten schilderen kost gemiddeld {prijsTekst.gevel} voor de gevel en {prijsTekst.lakBuiten},
       inclusief voorbereiding en Boonstoppel-verf. Een rijtjeswoning is meestal in 5 tot 8 werkdagen klaar. Na een gratis inspectie,
       inclusief controle op houtrot, krijgt u een offerte met vaste prijs.
     </p>
@@ -259,14 +260,14 @@ const pagina: DienstPagina = {
     body: (
       <>
         <p>
-          Buitenschilderwerk kost gemiddeld €35 tot €45 per m² inclusief materiaal en exclusief btw. De uiteindelijke prijs hangt af van
+          Buitenschilderwerk kost gemiddeld {prijsTekst.gevel} inclusief materiaal en exclusief btw. De uiteindelijke prijs hangt af van
           drie factoren: de staat van het houtwerk, de bereikbaarheid (ladder of steiger) en de hoeveelheid houtrotreparatie die nodig is.
           <Link href="/diensten/kozijnen-schilderen">Kozijnen schilderen buiten</Link> is duurder per stuk dan muurwerk, omdat elk kozijn individueel geschuurd, geground en gelakt moet
           worden.
         </p>
         <p>
-          Schildersbedrijf040 hanteert een uurtarief van €40 tot €55 voor buitenschilderwerk. Voor een gemiddelde eengezinswoning in
-          Eindhoven bedragen de kosten voor volledig buitenschilderwerk €2.500 tot €6.000, afhankelijk van de grootte en de staat. Bij
+          Schildersbedrijf040 hanteert een uurtarief van {teBevestigen.uurBuiten} voor buitenschilderwerk. Voor een gemiddelde eengezinswoning in
+          Eindhoven bedragen de kosten voor volledig buitenschilderwerk {teBevestigen.buitenWoningTotaal}, afhankelijk van de grootte en de staat. Bij
           woningen ouder dan 2 jaar geldt het verlaagde btw-tarief van 9%.
         </p>
         <p>
@@ -322,7 +323,7 @@ const pagina: DienstPagina = {
         Boeidelen schilderen
       </h3>
       <p>
-        Boeidelen en windveren schilderen kost gemiddeld {boeidelen?.prijs.replace(' /m¹', ' per strekkende meter')}, inclusief
+        Boeidelen en windveren schilderen kost gemiddeld {boeidelen.prijs.replace(' /m²', ' per m²')}, inclusief
         voorbereiding en Boonstoppel-verf. Boeiboorden zitten op de overgang van gevel naar dakrand, waar vocht zich gemakkelijk ophoopt.
         Schildersbedrijf040 controleert boeidelen daarom altijd op houtrot voordat er geschilderd wordt. Zacht hout wordt eerst hersteld met
         epoxy; daarover leest u meer bij <Link href="/diensten/houtrot-sanering">houtrot sanering</Link>. Voor boeidelen is vaak een
@@ -332,7 +333,7 @@ const pagina: DienstPagina = {
         Dakkapel schilderen
       </h3>
       <p>
-        Een dakkapel laten schilderen kost gemiddeld {dakkapel?.prijs}, afhankelijk van de grootte en de staat van het houtwerk. Een dakkapel
+        {toonBlok(dakkapel.prijs) ? <>Een dakkapel laten schilderen kost gemiddeld {dakkapel.prijs}, afhankelijk van de grootte en de staat van het houtwerk.</> : <>Wat een dakkapel laten schilderen kost, hangt af van de grootte en de staat van het houtwerk.</>} Een dakkapel
         heeft eigen kozijnen, boeiboorden en vaak een zinken of houten bekleding, en al die onderdelen hebben onderhoud nodig. Omdat een
         dakkapel hoog zit, loont het om hem samen met de kozijnen en boeidelen te laten schilderen: dat scheelt in steiger- of ladderkosten en
         geeft een gelijk eindresultaat.
@@ -341,7 +342,7 @@ const pagina: DienstPagina = {
         Voordeur en buitendeuren schilderen
       </h3>
       <p>
-        Een voordeur, achterdeur of tuindeur schilderen kost gemiddeld {deuren?.prijs.replace(' /stuk', ' per deur')}. Buitendeuren worden
+        Een voordeur, achterdeur of tuindeur schilderen kost {deuren.prijs.replace(' /stuk', ' per deur')}. Buitendeuren worden
         dagelijks gebruikt en vangen weer en wind, dus de voorbereiding weegt zwaar: schuren, houtrot herstellen, gronden en twee lagen
         weerbestendige lak. Schildersbedrijf040 spreekt vooraf af op welke dag de deur geschilderd wordt, omdat lak tijd nodig heeft om te
         drogen. Over de juiste kleur bij uw kozijnen en gevel denkt Schildersbedrijf040 graag mee.
@@ -439,7 +440,7 @@ const pagina: DienstPagina = {
       {
         titel: 'Vaste prijs, geen verrassingen',
         beschrijving:
-          'Gedetailleerde offerte binnen 48 uur met vaste prijs. Inclusief materiaal, voorbereiding en eventuele steigerhuur apart vermeld.',
+          'Gedetailleerde offerte ' + site.termijnen.offerte + ' met vaste prijs. Inclusief materiaal, voorbereiding en eventuele steigerhuur apart vermeld.',
       },
       {
         titel: 'Ervaring met lokale bouwstijlen',
@@ -457,7 +458,7 @@ const pagina: DienstPagina = {
   cta: {
     titel: 'Buitenwerk laten doen?',
     tekst:
-      'Wilt u weten wat professioneel buitenschilderwerk voor uw woning kost? Schildersbedrijf040 komt graag langs voor een gratis houtrot inspectie en vrijblijvende offerte. Bel, mail of vul het contactformulier in, u ontvangt binnen 48 uur een offerte op maat.',
+      'Wilt u weten wat professioneel buitenschilderwerk voor uw woning kost? Schildersbedrijf040 komt graag langs voor een gratis houtrot inspectie en vrijblijvende offerte. Bel, mail of vul het contactformulier in, u ontvangt ' + site.termijnen.offerte + ' een offerte op maat.',
   },
   schema: [serviceSchema, breadcrumbSchema, faqSchema],
 }

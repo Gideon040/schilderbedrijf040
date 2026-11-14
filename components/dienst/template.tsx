@@ -139,7 +139,7 @@ export function DienstTemplate({ d }: { d: DienstPagina }) {
               </div>
               <div>
                 <span className="n">Boonstoppel</span>
-                <small>verf op elk project</small>
+                <small>{site.boonstoppelAmbassadeur ? 'officieel ambassadeur' : 'verf op elk project'}</small>
               </div>
             </div>
           </div>

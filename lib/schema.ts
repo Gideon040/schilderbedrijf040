@@ -1,6 +1,7 @@
 // JSON-LD op één plek. Het bedrijf (HousePainter) staat sitebreed in app/(site)/layout.tsx;
 // pagina's verwijzen ernaar via ORG_ID in plaats van het bedrijf opnieuw te beschrijven.
 import { site } from './site'
+import { jordy } from './jordy'
 import { prijzen } from './prices'
 
 export const ORG_ID = `${site.url}/#organization`
@@ -84,7 +85,7 @@ export function faqSchema(faqs: { question: string; answer: string }[]) {
     mainEntity: faqs.map((f) => ({
       '@type': 'Question',
       name: f.question,
-      acceptedAnswer: { '@type': 'Answer', text: f.answer },
+      acceptedAnswer: { '@type': 'Answer', text: jordy(f.answer) },
     })),
   }
 }

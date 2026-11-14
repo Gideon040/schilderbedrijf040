@@ -7,6 +7,7 @@ import { catKleur } from '@/components/blog/categorie'
 import { JsonLd } from '@/components/json-ld'
 import { Offerte } from '@/components/site/offerte'
 import { Pijl } from '@/components/site/v2'
+import { site } from '@/lib/site'
 
 export const metadata: Metadata = {
   title: 'Blog | Schildertips & Advies',
@@ -158,7 +159,7 @@ export default function BlogPage() {
         eyebrow="Gratis offerte"
         titel="Liever uitbesteden?"
         streek="uitbesteden?"
-        tekst="Geen tijd of zin om zelf te schilderen? Wij doen het graag voor je. Vraag een vrijblijvende offerte aan en weet binnen 48 uur waar je aan toe bent."
+        tekst={`Geen tijd of zin om zelf te schilderen? Wij doen het graag voor u. Vraag een vrijblijvende offerte aan en weet ${site.termijnen.offerte} waar u aan toe bent.`}
       />
     </main>
   )

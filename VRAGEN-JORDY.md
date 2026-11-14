@@ -27,3 +27,36 @@ Opgesteld 13 november 2026 bij de branch `seo-conversie-nov-2026`. Alles wat hie
 15. **Bij welk project hoort de foto van de antracietgrijze hoogglans deur** (`fluwijnstraat/04-...CONTROLEREN`)? Die foto staat er niet op; er is ook een schilder in de spiegeling zichtbaar.
 16. **Foto's niet gebruikt** (personen zichtbaar of persoonlijke spullen): badkamer `01-wastafel` en `02-bad` (verzorgingsproducten, verhuisdozen, spiegeling; vervangen door de lege badkamer uit de bungalowmap), bungalow `03`, `04`, `05`, `06`, `10`, `11`, `13` (mensen buiten zichtbaar; bij `04` en `05` ook, die stonden niet in de lijst). Bungalow `09` en `12` en Fluwijnstraat `01` zijn bijgesneden. Heb je van de bungalow foto's zonder mensen, of foto's van het eindresultaat met vloer?
 17. **Oude Instagram-projecten** (afgelakte deur, houtrotreparatie, vrijstaande woning, binnen- en buitenwerk renovatie, Blixembosch, Restaria Oude Gracht): die hebben nu een eigen pagina, maar staan op `noindex` omdat er alleen een titel en een foto van bekend is. Lever per project plaats, wat er gedaan is en materialen aan, dan gaan ze in de sitemap. Waar hoort de houtrotreparatie, de vrijstaande woning en de renovatie?
+
+## Prijzen (`lib/prices.ts`)
+
+Alle pagina's lezen hun bedragen nu uit `lib/prices.ts`. Tot je antwoord staan overal de bedragen van de dienstkaarten (jouw prijslijst van 16-10-2026). Op de site stonden daarnaast andere bedragen; kies per regel één waarde of bandbreedte:
+
+| Onderdeel | Nu op de site (dienstkaart, prijslijst) | Stond ook op de site |
+|---|---|---|
+| Binnenschilderwerk, muren en plafonds | €10 tot €25 per m² | €30 tot €35 per m² (homepage-FAQ, alle 17 locatiepagina's, winterpagina), €32 tot €38 per m² voor plafonds |
+| Buitenschilderwerk / gevel | €25 tot €50 per m² | €35 tot €45 per m² (buitenschilderwerk, gevel, locatiepagina's) |
+| Kozijnen buiten | €45 tot €120 per m² (lakwerk buiten) | €50 tot €100 per kozijn (kozijnen, buitenschilderwerk, lakwerk, locatiepagina's, blog beitsen of lakken) |
+| Kozijnen binnen | €30 tot €75 per m² | €35 tot €75 per kozijn, €40 tot €55 per binnenkozijn |
+| Latex spuiten | €10 tot €20 per m² | muren €8 tot €12, plafonds €5,50 tot €7, nieuwbouw vanaf €3,50, renovatie €8 tot €13 per m² |
+| Behangen | €15 tot €25 per m² | €15 tot €30 gemiddeld, glasvezel €18 tot €30, fotobehang €25 tot €40 per m² |
+| Deur lakken | vanaf €80 per deur | binnendeur €80 tot €120, buitendeur €100 tot €150 |
+| Trap | vanaf €350 | €350 tot €600 |
+| Houtrot herstellen | vanaf €100 | kleine epoxyreparatie €80 tot €180 |
+| Voorbehandelen muren (behangen) | voorstrijken €4, schuren €3 per m² | €8 tot €12 per m² |
+| Schilderwerk na houtrotherstel | €45 tot €120 per m² (lakwerk buiten) | €75 tot €300 per kozijn |
+| Dakkapel schilderen | geen bedrag (de plek was leeg) | [INVULLEN] |
+
+18. **Bedragen die niet op je prijslijst staan** maar wel op de site (nu verzameld onder `teBevestigen` in `lib/prices.ts`): uurtarieven (binnen €35 tot €45, buiten €40 tot €55, behangen €35 tot €50, houtrot €45 tot €55, lakwerk €40 tot €50, latex €35 tot €50), houtrot klein kozijn €150 tot €250 en groot kozijn €300 tot €450, kozijn gedeeltelijk vervangen €200 tot €500, kozijn vervangen €600 tot €1.500, complete buitenschilderbeurt €2.500 tot €6.000, oud behang verwijderen €5 tot €10 per m², keukenkasten spuiten €150 tot €300 per strekkende meter, radiator lakken €80 tot €120. Kloppen deze, of moeten ze weg?
+19. **Prijs dakkapel schilderen** (indicatie).
+
+## Claims en bedrijfsgegevens
+
+20. **Winterkorting "tot 20%":** de actie loopt volgens de site tot en met 31 januari 2027 op binnenschilderwerk. Welke voorwaarden gelden (wanneer 10% en wanneer 20%, minimale opdracht, ook voor latex spuiten en behangen, geldt de datum voor opdracht of uitvoering)? Zonder voorwaarden staat de kortingsbadge niet live.
+21. **Korting houtrot:** op de houtrotpagina stond "10 tot 20% korting bij drie of meer kozijnen". Die zin is weggehaald. Klopt die korting, en onder welke voorwaarden?
+22. **Certificaten of keurmerken:** "Gecertificeerd" is gewijzigd in "Gediplomeerde schilders". Heb je een concreet certificaat of keurmerk (bijvoorbeeld Erkend Schilder, OnderhoudNL)? Op /faq staat ook "gecertificeerde partners" voor steigers en hoogwerkers: welke partner?
+23. **Garantie:** hoeveel jaar op binnen- en op buitenschilderwerk, en wat valt eronder? Op de homepage stond "3 tot 5 jaar binnen, 5 tot 7 jaar buiten" zonder bron; die getallen zijn weg tot je bevestigt. Komt in `site.garantie`.
+24. **Termijnen:** reageer je op werkdagen binnen 24 uur op een aanvraag, en volgt de offerte binnen 48 uur na de inspectie? Op de contactpagina stond "offerte binnen 24 uur", in de popup "binnen 2 werkdagen". Nu staat overal: reactie binnen 24 uur, offerte binnen 48 uur na inspectie.
+25. **KvK-nummer** voor de footer.
+26. **Boonstoppel-ambassadeur:** Facebook noemt je "Officieel ambassadeur van Boonstoppel". Klopt dat? Dan zetten we het op de homepage en de dienstpagina's.
+27. **Bijscholing:** op de homepage staat "Elke medewerker volgt regelmatig bijscholing in de nieuwste verftechnieken". Klopt dat?

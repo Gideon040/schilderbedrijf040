@@ -22,6 +22,7 @@ import { JsonLd } from '@/components/json-ld'
 import { breadcrumbSchema, faqSchema } from '@/lib/schema'
 import { huidigSeizoen } from '@/lib/seizoen'
 import { site } from '@/lib/site'
+import { prijsTekst } from '@/lib/prices'
 
 // Dagelijks opnieuw opbouwen, zodat het seizoensblok vanzelf wisselt
 export const revalidate = 86400
@@ -55,7 +56,7 @@ const faqs: Faq[] = [
   {
     question: 'Wat kost een schilder in Eindhoven?',
     answer:
-      'Een schilder in Eindhoven kost gemiddeld €30 tot €35 per m² voor binnenschilderwerk en €35 tot €45 per m² voor buitenschilderwerk aan de gevel, afhankelijk van het type schilderwerk en de staat van de ondergrond. Binnenschilderwerk valt doorgaans lager uit dan buitenschilderwerk, omdat buitenwerk meer voorbereiding vereist zoals schuren, gronden en eventueel houtrot sanering. Schildersbedrijf040 brengt altijd eerst een gratis inspectie uit en levert een gedetailleerde offerte op maat, zodat u vooraf precies weet wat de kosten zijn, zonder verrassingen achteraf.',
+      'Een schilder in Eindhoven kost gemiddeld ' + prijsTekst.wanden + ' voor binnenschilderwerk en ' + prijsTekst.gevel + ' voor buitenschilderwerk aan de gevel, afhankelijk van het type schilderwerk en de staat van de ondergrond. Binnenschilderwerk valt doorgaans lager uit dan buitenschilderwerk, omdat buitenwerk meer voorbereiding vereist zoals schuren, gronden en eventueel houtrot sanering. Schildersbedrijf040 brengt altijd eerst een gratis inspectie uit en levert een gedetailleerde offerte op maat, zodat u vooraf precies weet wat de kosten zijn, zonder verrassingen achteraf.',
     link: { href: '/diensten/binnenschilderwerk', tekst: 'Bekijk de prijzen voor binnenschilderwerk.' },
   },
   {
@@ -66,7 +67,7 @@ const faqs: Faq[] = [
   {
     question: 'Welke garantie geeft Schildersbedrijf040 op schilderwerk?',
     answer:
-      'Schildersbedrijf040 biedt garantie op zowel het vakmanschap als de gebruikte materialen. De exacte garantieperiode hangt af van het type schilderwerk: binnenschilderwerk kent doorgaans een garantie van 3 tot 5 jaar, buitenschilderwerk van 5 tot 7 jaar. Schildersbedrijf040 werkt uitsluitend met Boonstoppel verf, waardoor het schilderwerk langer meegaat. Mocht er binnen de garantieperiode een gebrek ontstaan, dan herstelt Schildersbedrijf040 dit kosteloos.',
+      `Schildersbedrijf040 geeft garantie op zowel het vakmanschap als de gebruikte materialen. ${site.garantie} Schildersbedrijf040 werkt met Boonstoppel-verf, waardoor het schilderwerk langer meegaat. Ontstaat er binnen de garantieperiode toch een gebrek, dan herstelt Schildersbedrijf040 dit kosteloos.`,
   },
   {
     question: 'Kan er het hele jaar door geschilderd worden?',

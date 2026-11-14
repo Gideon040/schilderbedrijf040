@@ -80,7 +80,7 @@ export function Offerte({
           <ul>
             <li>Gratis inspectie en advies bij u thuis</li>
             <li>Offerte met vaste prijs, geen verrassingen</li>
-            {TOON_JORDY && <li>Reactie binnen één werkdag [JORDY: klopt?]</li>}
+            <li>Reactie {site.termijnen.reactie} op werkdagen</li>
           </ul>
           <a className="phone" href={site.phoneHref}>
             {site.phone}

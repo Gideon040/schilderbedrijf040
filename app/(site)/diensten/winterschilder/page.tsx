@@ -1,11 +1,12 @@
 import type { Metadata } from 'next'
-import { TOON_JORDY } from '@/lib/jordy'
-import { AFSPRAAK, winteractieActief } from '@/lib/afspraak'
+import { TOON_JORDY, jordy } from '@/lib/jordy'
+import { AFSPRAAK, datumTekst, winteractieActief } from '@/lib/afspraak'
 import Link from 'next/link'
 import { DienstTemplate, type DienstPagina } from '@/components/dienst/template'
 import { images } from '@/lib/images'
 import { breadcrumbSchema, faqSchema, orgRef, serviceOffers, werkgebied } from '@/lib/schema'
 import { site } from '@/lib/site'
+import { prijsTekst } from '@/lib/prices'
 
 // Dagelijks opnieuw opbouwen, zodat de winteractie na de einddatum vanzelf verdwijnt
 export const revalidate = 86400
@@ -13,7 +14,7 @@ export const revalidate = 86400
 export const metadata: Metadata = {
   title: 'Winterschilder Eindhoven',
   description:
-    'Kun je in de winter binnen laten schilderen? Ja. Winterschilder in Eindhoven: binnenwerk voor €30 tot €35 per m² en vaak sneller plek in de planning.',
+    'Kun je in de winter binnen laten schilderen? Ja. Winterschilder in Eindhoven: binnenwerk voor ' + prijsTekst.wanden + ' en vaak sneller plek in de planning.',
   openGraph: {
     title: 'Winterschilder Eindhoven | Schildersbedrijf040',
     description:
@@ -70,7 +71,7 @@ const pagina: DienstPagina = {
     <p>
       Ja, <Link href="/diensten/binnenschilderwerk">binnenschilderwerk</Link> kan prima in de winter. In een verwarmde woning ligt de temperatuur tussen 10 en 25 °C, precies goed voor
       muurverf en lak. Het voordeel: in de winter is er vaak sneller plek in de planning dan in het voorjaar. Binnenschilderwerk kost
-      gemiddeld €30 tot €35 per m².
+      gemiddeld {prijsTekst.wanden}.
     </p>
   ),
   heroImg: images.woonkamer,
@@ -111,11 +112,16 @@ const pagina: DienstPagina = {
         </p>
         <p>
           {winteractieActief() ? (
-            <>Goedkoper: ja, tijdelijk. {AFSPRAAK.winteractie.tekst} </>
+            <>
+              Goedkoper: ja, tijdelijk. {AFSPRAAK.winteractie.tekst}{' '}
+              <span id="winteractie">
+                Voorwaarden: {jordy(AFSPRAAK.winteractie.voorwaarden)} De actie loopt tot en met {datumTekst(AFSPRAAK.winteractie.tot)}.
+              </span>{' '}
+            </>
           ) : (
             <>Goedkoper: de prijzen zijn in de winter gelijk aan de rest van het jaar. </>
           )}
-          Binnenschilderwerk kost gemiddeld €30 tot €35 per m² voor muren en €32 tot €38 per m² voor plafonds, inclusief materiaal en
+          Binnenschilderwerk kost gemiddeld {prijsTekst.wanden} voor muren en plafonds, inclusief materiaal en
           exclusief btw. Voor woningen ouder dan twee jaar geldt 9% btw op de arbeid. De exacte prijs hoort u na een gratis inspectie, in
           een offerte met vaste prijs.
         </p>

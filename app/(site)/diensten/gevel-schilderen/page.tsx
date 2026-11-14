@@ -5,15 +5,16 @@ import { images } from '@/lib/images'
 import { jordy, TOON_JORDY, toonBlok } from '@/lib/jordy'
 import { breadcrumbSchema, faqSchema, orgRef, serviceOffers, werkgebied } from '@/lib/schema'
 import { site } from '@/lib/site'
+import { PRIJSLIJST, prijsKort, prijsTekst, rekenvoorbeeld } from '@/lib/prices'
 
 export const metadata: Metadata = {
   title: 'Gevel schilderen: prijs per m²',
   description:
-    'Gevel schilderen kost €35 tot €45 per m², excl. steiger en btw. Welke gevels kunnen, wanneer baksteen beter kaal blijft en wanneer u toestemming nodig heeft.',
+    'Gevel schilderen kost ' + prijsTekst.gevel + ', excl. steiger en btw. Welke gevels kunnen, wanneer baksteen beter kaal blijft en wanneer u toestemming nodig heeft.',
   openGraph: {
     title: 'Gevel schilderen: prijs per m² | Schildersbedrijf040',
     description:
-      'Gevel laten schilderen in Eindhoven en omgeving: €35 tot €45 per m², eerlijk advies over baksteen en uitleg over toestemming van gemeente of VvE.',
+      'Gevel laten schilderen in Eindhoven en omgeving: ' + prijsTekst.gevel + ', eerlijk advies over baksteen en uitleg over toestemming van gemeente of VvE.',
     url: 'https://schildersbedrijf040.nl/diensten/gevel-schilderen',
     type: 'website',
   },
@@ -27,7 +28,7 @@ const kostenRegels: { wat: string; toelichting: string; prijs: string }[] = [
   {
     wat: 'Gevel schilderen',
     toelichting: 'Voorbereiden, gronden waar nodig en twee lagen buitenmuurverf',
-    prijs: '€35 tot €45 per m²',
+    prijs: '' + prijsTekst.gevel + '',
   },
   {
     wat: 'Steiger',
@@ -97,7 +98,7 @@ const pagina: DienstPagina = {
   h1: 'Gevel schilderen in Eindhoven',
   heroTekst: (
     <p>
-      Een gevel laten schilderen kost gemiddeld €35 tot €45 per m², inclusief voorbereiding en verf en exclusief steiger en btw. Stucwerk,
+      Een gevel laten schilderen kost gemiddeld {prijsTekst.gevel}, inclusief voorbereiding en verf en exclusief steiger en btw. Stucwerk,
       beton en eerder geschilderd metselwerk zijn goed te schilderen; kale baksteen in goede staat raden wij meestal af. Gevel schilderen
       is een onderdeel van ons <Link href="/diensten/buitenschilderwerk">buitenschilderwerk</Link>, met een vaste prijs na een gratis
       inspectie.
@@ -105,7 +106,7 @@ const pagina: DienstPagina = {
   ),
   heroImg: images.villa,
   kerncijfers: [
-    { waarde: '€35 tot €45', label: 'Per m² gevel, excl. steiger' },
+    { waarde: prijsKort.gevel, label: 'Per m² gevel, excl. steiger' },
     { waarde: '8 tot 10 jaar', label: 'Levensduur met Boonstoppel-verf' },
     { waarde: '1 jaar', label: 'Wachten bij nieuw metselwerk' },
     { waarde: '9% btw', label: 'Op arbeid, woning ouder dan 2 jaar' },
@@ -174,7 +175,7 @@ const pagina: DienstPagina = {
     body: (
       <>
         <p>
-          Gevel schilderen kost gemiddeld €35 tot €45 per m², inclusief voorbereiding en verf, exclusief steiger en btw. De steiger komt als
+          Gevel schilderen kost gemiddeld {prijsTekst.gevel}, inclusief voorbereiding en verf, exclusief steiger en btw. De steiger komt als
           aparte regel in de offerte, net als het reinigen van de gevel en het herstellen van scheuren als dat nodig is. Zo ziet u precies
           waar de kosten zitten.
         </p>
@@ -199,7 +200,7 @@ const pagina: DienstPagina = {
           </tbody>
         </table>
         <p>
-          Rekenvoorbeeld: een gevel met 40 m² te schilderen oppervlak, dus zonder ramen en deuren, komt uit op €1.400 tot €1.800 voor het
+          Rekenvoorbeeld: een gevel met 40 m² te schilderen oppervlak, dus zonder ramen en deuren, komt uit op {rekenvoorbeeld(40, PRIJSLIJST.gevel)} voor het
           schilderwerk, plus de steiger en btw. Waar u binnen de bandbreedte uitkomt, hangt af van de ondergrond, het aantal scheuren, de
           hoogte en een eventuele kleurwissel: van donker naar licht is vaak een extra laag nodig.
         </p>

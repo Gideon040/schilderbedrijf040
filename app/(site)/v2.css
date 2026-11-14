@@ -1256,3 +1256,4 @@ header.nav nav.mmenu{display:block;font-weight:400;font-size:inherit}
 .strook img{object-fit:cover;transition:transform .5s}
 .strook a:hover img{transform:scale(1.05)}
 @media (max-width: 980px){.strook{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:8px}.strook a{flex:0 0 62%;scroll-snap-align:start}}
+.afs-voorwaarden{display:inline-block;margin-top:6px;font-size:13px;color:inherit;text-decoration:underline}

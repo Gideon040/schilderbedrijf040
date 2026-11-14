@@ -87,3 +87,66 @@ export const prijsNoot = 'Indicatieve prijzen, exclusief btw. De exacte prijs ho
 
 // Korte prijszin voor teksten (locatiepagina's, FAQ)
 export const prijsZinRegio = 'gemiddeld €10 tot €25 per m² voor binnenschilderwerk en €25 tot €50 per m² voor buitenschilderwerk aan de gevel'
+
+// ---------- Prijzen in lopende tekst ----------
+// Teksten op dienst-, locatie- en homepagina lezen hun bedragen hieruit, zodat elke pagina dezelfde prijs noemt.
+const bereik = (r: { min: number; max: number }) => range(r.min, r.max)
+export const prijsKort = {
+  wanden: bereik(P.wanden), // muren en plafonds binnen
+  gevel: bereik(P.gevel),
+  lakBuiten: bereik(P.lakwerkBuiten), // ook kozijnen buiten
+  lakBinnen: bereik(P.lakwerkBinnen),
+  behangen: bereik(P.behangen),
+  latex: bereik(P.latexSpuiten),
+  houtrot: vanaf(P.houtrot.vanaf),
+  deur: vanaf(P.deur),
+  trap: vanaf(P.trap),
+  schuren: vast(P.schuren),
+  voorstrijken: vast(P.voorstrijken),
+}
+export const prijsTekst = {
+  wanden: `${prijsKort.wanden} per m²`,
+  gevel: `${prijsKort.gevel} per m²`,
+  lakBuiten: `${prijsKort.lakBuiten} per m²`,
+  lakBinnen: `${prijsKort.lakBinnen} per m²`,
+  behangen: `${prijsKort.behangen} per m²`,
+  latex: `${prijsKort.latex} per m²`,
+  houtrot: `${prijsKort.houtrot} per reparatie`,
+  deur: `${prijsKort.deur} per deur`,
+  trap: prijsKort.trap,
+  schuren: `${prijsKort.schuren} per m²`,
+  voorstrijken: `${prijsKort.voorstrijken} per m²`,
+}
+
+// Rekenvoorbeeld: m² maal de bandbreedte, bijvoorbeeld 40 m² gevel
+export const rekenvoorbeeld = (m2: number, r: { min: number; max: number }) => range(m2 * r.min, m2 * r.max)
+
+// Vaste sleutels voor de prijsregels (pagina's zochten eerder op omschrijving, wat lege prijsplekken gaf)
+export const prijsRij = {
+  gevel: prijzen.buitenschilderwerk[0],
+  kozijnenBuiten: prijzen.buitenschilderwerk[1],
+  boeidelen: prijzen.buitenschilderwerk[2],
+  buitendeur: prijzen.buitenschilderwerk[3],
+  houtrot: prijzen['houtrot-sanering'][0],
+}
+
+// ---------- Nog te bevestigen door Jordy ----------
+// Bedragen die al op de site stonden maar niet op de prijslijst van 16-10-2026 staan. Eén plek, zodat Jordy ze
+// in één keer kan goedkeuren of schrappen (VRAGEN-JORDY.md). Ze spreken de prijslijst hierboven niet tegen.
+export const teBevestigen = {
+  uurBinnen: '€35 tot €45',
+  uurBuiten: '€40 tot €55',
+  uurBehangen: '€35 tot €50',
+  uurHoutrot: '€45 tot €55',
+  uurLakwerk: '€40 tot €50',
+  uurLatex: '€35 tot €50',
+  houtrotKleinKozijn: '€150 tot €250',
+  houtrotGrootKozijn: '€300 tot €450',
+  kozijnGedeeltelijkVervangen: '€200 tot €500',
+  kozijnVervangen: '€600 tot €1.500',
+  buitenWoningTotaal: '€2.500 tot €6.000',
+  behangVerwijderen: '€5 tot €10 per m²',
+  keukenkastenSpuiten: '€150 tot €300 per strekkende meter',
+  radiatorLakken: '€80 tot €120 per stuk',
+  dakkapel: '[INVULLEN: prijs dakkapel schilderen]',
+}

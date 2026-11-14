@@ -5,7 +5,7 @@ import { plaatsen } from '@/lib/navigation'
 import { prijzen } from '@/lib/prices'
 import { homeReviews } from '@/lib/reviews'
 import { ReviewKaart } from '@/components/site/reviews'
-import { site } from '@/lib/site'
+import { hoofd, site } from '@/lib/site'
 import { jordy, toonBlok } from '@/lib/jordy'
 import type { Seizoensblok } from '@/lib/seizoen'
 import { afbreek, Eyebrow, KnopBel, KnopOfferte, Pijl, Streek } from '@/components/site/v2'
@@ -302,6 +302,7 @@ export function Bewijs() {
             <p className="boon">
               <b>Boonstoppel</b> verf die 8 tot 10 jaar meegaat
             </p>
+            {site.boonstoppelAmbassadeur && <p>Schildersbedrijf040 is officieel ambassadeur van Boonstoppel.</p>}
             <Link className="btn btn-line" href="/over-ons" style={{ marginTop: 26 }}>
               Meer over Schildersbedrijf040 <Pijl />
             </Link>
@@ -314,8 +315,8 @@ export function Bewijs() {
 
 /* ---------- werkwijze ---------- */
 export const stappenLive = [
-  { titel: 'Contact', tekst: 'Neem telefonisch of via het formulier contact op voor een vrijblijvende afspraak. Schildersbedrijf040 reageert op werkdagen doorgaans binnen 24 uur.' },
-  { titel: 'Inspectie & offerte', tekst: 'Wij komen gratis bij u langs om het schilderwerk te inspecteren en de ondergrond te beoordelen. Binnen 48 uur na de inspectie ontvangt u een gedetailleerde offerte.' },
+  { titel: 'Contact', tekst: 'Neem telefonisch of via het formulier contact op voor een vrijblijvende afspraak. Schildersbedrijf040 reageert op werkdagen ' + site.termijnen.reactie + '.' },
+  { titel: 'Inspectie & offerte', tekst: 'Wij komen gratis bij u langs om het schilderwerk te inspecteren en de ondergrond te beoordelen. ' + hoofd(site.termijnen.offerte) + ' na de inspectie ontvangt u een gedetailleerde offerte.' },
   { titel: 'Uitvoering', tekst: 'Vakkundige uitvoering door gediplomeerde schilders met hoogwaardige Boonstoppel verfproducten. Schildersbedrijf040 werkt netjes en beschermt uw interieur tijdens het project.' },
   { titel: 'Oplevering', tekst: 'Na afronding loopt u samen met de schilder het resultaat na. Schildersbedrijf040 levert pas op wanneer u volledig tevreden bent en biedt garantie op het geleverde werk.' },
 ]
@@ -441,7 +442,7 @@ export function Reviews() {
 /* ---------- SEO-tekstblok: over ons en garanties (live tekst) ---------- */
 const garanties = [
   { titel: 'Kwaliteitsgarantie', tekst: 'Schildersbedrijf040 garandeert vakkundig schilderwerk met Boonstoppel verfproducten. Bij gebreken binnen de garantieperiode herstelt Schildersbedrijf040 het werk kosteloos.' },
-  { titel: 'Gecertificeerd', tekst: 'Het team van Schildersbedrijf040 bestaat uit gediplomeerde schilders met jarenlange praktijkervaring. Elke medewerker volgt regelmatig bijscholing in de nieuwste verftechnieken.' },
+  { titel: 'Gediplomeerde schilders', tekst: 'Het team van Schildersbedrijf040 bestaat uit gediplomeerde schilders met jarenlange praktijkervaring. Elke medewerker volgt regelmatig bijscholing in de nieuwste verftechnieken.' },
   { titel: 'Op tijd', tekst: 'Schildersbedrijf040 levert elk project op binnen de afgesproken planning. Bij de offerte ontvangt u een concreet tijdschema, zodat u precies weet wanneer het schilderwerk gereed is.' },
   { titel: 'Tevreden klanten', tekst: 'Klanten van Schildersbedrijf040 geven 5 sterren op Google en een 4,9 op Werkspot. Die scores weerspiegelen de combinatie van kwaliteit, communicatie en nette oplevering.' },
 ]
@@ -531,7 +532,7 @@ export function WerkgebiedFaq({ faqs }: { faqs: Faq[] }) {
                 <h3>{f.question}</h3>
               </summary>
               <p>
-                {f.answer}
+                {jordy(f.answer)}
                 {f.link && (
                   <>
                     {' '}

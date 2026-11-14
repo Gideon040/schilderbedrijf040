@@ -6,7 +6,7 @@ import { site } from '@/lib/site'
 
 export const metadata: Metadata = {
   title: 'Contact | Gratis Offerte Aanvragen',
-  description: 'Neem contact op met Schildersbedrijf040 in Eindhoven. Vraag een gratis offerte aan voor schilderwerk. ✓ Binnen 24 uur reactie ✓ Vrijblijvend advies ✓ Eerlijke prijzen',
+  description: 'Neem contact op met Schildersbedrijf040 in Eindhoven. Vraag een gratis offerte aan voor schilderwerk. ✓ Reactie ' + site.termijnen.reactie + ' ✓ Vrijblijvend advies ✓ Eerlijke prijzen',
   keywords: ['contact schilder eindhoven', 'offerte schilderwerk', 'schilder offerte', 'schildersbedrijf contact'],
   openGraph: {
     title: 'Contact | Schildersbedrijf040',

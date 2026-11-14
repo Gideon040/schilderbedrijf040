@@ -3,13 +3,14 @@ import Link from 'next/link'
 import { DienstTemplate, type DienstPagina } from '@/components/dienst/template'
 import { images } from '@/lib/images'
 import { TOON_JORDY } from '@/lib/jordy'
-import { prijzen } from '@/lib/prices'
+import { prijsKort, prijsTekst, prijzen, teBevestigen } from '@/lib/prices'
 import { orgRef, serviceOffers } from '@/lib/schema'
+import { site } from '@/lib/site'
 
 export const metadata: Metadata = {
   title: 'Houtrot kozijn repareren in Eindhoven',
   description:
-    'Houtrot in uw kozijn? Repareren met epoxy kost €150 tot €250 per klein kozijn, vervangen €600 tot €1.500. Gratis houtrot-inspectie en vaste prijs per kozijn.',
+    'Houtrot in uw kozijn? Herstel kost ' + prijsTekst.houtrot + ', een kozijn vervangen ' + teBevestigen.kozijnVervangen + '. Gratis houtrot-inspectie en vaste prijs per kozijn.',
   keywords: [
     'houtrot kozijn',
     'houtrot repareren',
@@ -43,7 +44,7 @@ const faqs = [
   {
     question: 'Wat kost houtrot sanering per kozijn?',
     answer:
-      'Houtrot sanering kost gemiddeld €150 tot €250 per klein kozijn en €300 tot €450 per groot kozijn, inclusief epoxy reparatie en exclusief btw. Een kleine epoxy reparatie op een enkele plek kost €80 tot €180. Moet een kozijn gedeeltelijk vervangen worden, dan liggen de kosten tussen €200 en €500. Volledig vervangen van een kozijn kost €600 tot €1.500. Bij woningen ouder dan 2 jaar geldt het verlaagde btw-tarief van 9%. Schildersbedrijf040 biedt 10 tot 20% korting wanneer u drie of meer kozijnen tegelijk laat repareren.',
+      'Houtrot sanering kost gemiddeld ' + teBevestigen.houtrotKleinKozijn + ' per klein kozijn en ' + teBevestigen.houtrotGrootKozijn + ' per groot kozijn, inclusief epoxy reparatie en exclusief btw. Een kleine epoxy reparatie op een enkele plek kost ' + prijsKort.houtrot + '. Moet een kozijn gedeeltelijk vervangen worden, dan liggen de kosten op ' + teBevestigen.kozijnGedeeltelijkVervangen + '. Volledig vervangen van een kozijn kost ' + teBevestigen.kozijnVervangen + '. Bij woningen ouder dan 2 jaar geldt het verlaagde btw-tarief van 9%.',
   },
   {
     question: 'Is epoxy houtrot reparatie net zo sterk als nieuw hout?',
@@ -73,16 +74,15 @@ const faqs = [
   {
     question: 'Combineert Schildersbedrijf040 houtrot sanering met schilderwerk?',
     answer:
-      'Schildersbedrijf040 combineert houtrot sanering standaard met schilderwerk. Na de epoxy reparatie wordt het kozijn geschuurd, gegrond en afgelakt met duurzame buitenlak. Dit is niet alleen esthetisch beter, maar ook functioneel noodzakelijk: onbehandelde epoxy is gevoelig voor UV-straling en moet beschermd worden door een dekkende verflaag. Het schilderwerk na houtrot reparatie kost €75 tot €300 extra per kozijn, afhankelijk van de grootte. Door reparatie en schilderwerk te combineren bespaart u op de totale arbeidskosten.',
+      'Schildersbedrijf040 combineert houtrot sanering standaard met schilderwerk. Na de epoxy reparatie wordt het kozijn geschuurd, gegrond en afgelakt met duurzame buitenlak. Dit is niet alleen esthetisch beter, maar ook functioneel noodzakelijk: onbehandelde epoxy is gevoelig voor UV-straling en moet beschermd worden door een dekkende verflaag. Het schilderwerk na houtrot reparatie kost ' + prijsTekst.lakBuiten + ' (lakwerk buiten), afhankelijk van de grootte. Door reparatie en schilderwerk te combineren bespaart u op de totale arbeidskosten.',
   },
 ]
 
 // Repareren of vervangen: regels uit lib/prices.ts, aangevuld met bedragen die al in de tekst en FAQ van deze pagina staan
 const houtrot = prijzen['houtrot-sanering']
 const herstelPrijzen = [
-  { wat: 'Kleine epoxy reparatie (één plek)', prijs: '€80 tot €180' },
   ...houtrot.slice(0, 5),
-  { wat: 'Kozijn gedeeltelijk vervangen', prijs: '€200 tot €500 /stuk' },
+  { wat: 'Kozijn gedeeltelijk vervangen', prijs: `${teBevestigen.kozijnGedeeltelijkVervangen} /stuk` },
   ...houtrot.slice(5),
 ]
 
@@ -185,7 +185,7 @@ const pagina: DienstPagina = {
   h1: 'Houtrot sanering in Eindhoven',
   heroTekst: (
     <p>
-      Houtrot in een kozijn repareren kost €80 tot €180 voor een kleine epoxy reparatie op één plek. Houtrot sanering kost gemiddeld €150 tot €250 voor een klein kozijn en €300 tot €450 voor een groot kozijn, inclusief herstel en
+      Houtrot in een kozijn repareren kost {prijsKort.houtrot} voor een kleine epoxy reparatie op één plek. Houtrot sanering kost gemiddeld {teBevestigen.houtrotKleinKozijn} voor een klein kozijn en {teBevestigen.houtrotGrootKozijn} voor een groot kozijn, inclusief herstel en
       afwerking. De reparatie zelf duurt meestal 1 tot 3 werkdagen. Na een gratis inspectie krijgt u een offerte met vaste prijs per kozijn.
       Het gerepareerde kozijn wordt direct meegenomen in het{' '}
       <Link href="/diensten/buitenschilderwerk">buitenschilderwerk</Link>.
@@ -234,17 +234,16 @@ const pagina: DienstPagina = {
     body: (
       <>
         <p>
-          Houtrot sanering kost gemiddeld €150 tot €450 per kozijn, afhankelijk van de grootte van het kozijn en de ernst van de aantasting.
-          Een kleine epoxy reparatie op een enkele plek begint bij €80, terwijl het volledig vervangen van een kozijn €600 tot €1.500 kost.
+          Houtrot sanering kost gemiddeld {teBevestigen.houtrotKleinKozijn} voor een klein en {teBevestigen.houtrotGrootKozijn} voor een groot kozijn, afhankelijk van de grootte van het kozijn en de ernst van de aantasting.
+          Een kleine epoxy reparatie op een enkele plek kost {prijsKort.houtrot}, terwijl het volledig vervangen van een kozijn {teBevestigen.kozijnVervangen} kost.
           In de meeste gevallen is reparatie met epoxy de meest kostenefficiënte oplossing, tot 70% goedkoper dan volledig vervangen.
         </p>
         <p>
-          Schildersbedrijf040 hanteert een uurtarief van €45 tot €55 voor houtrot sanering, inclusief materiaal. Voor woningen ouder dan 2
-          jaar geldt het verlaagde btw-tarief van 9%, wat een merkbaar verschil maakt op de eindfactuur. Bij drie of meer kozijnen biedt
-          Schildersbedrijf040 een korting van 10 tot 20% op de totale reparatiekosten.
+          Schildersbedrijf040 hanteert een uurtarief van {teBevestigen.uurHoutrot} voor houtrot sanering, inclusief materiaal. Voor woningen ouder dan 2
+          jaar geldt het verlaagde btw-tarief van 9%, wat een merkbaar verschil maakt op de eindfactuur.
         </p>
         <p>
-          Het schilderwerk na houtrot reparatie kost €75 tot €300 extra per kozijn. Schildersbedrijf040 raadt aan om houtrot sanering en
+          Het schilderwerk na houtrot reparatie kost {prijsTekst.lakBuiten} (lakwerk buiten). Schildersbedrijf040 raadt aan om houtrot sanering en
           schilderwerk altijd te combineren: onbehandelde epoxy is gevoelig voor UV-straling en moet beschermd worden door een dekkende
           verflaag. Door beide werkzaamheden in een keer uit te voeren, bespaart u op de totale arbeidskosten.
         </p>
@@ -307,7 +306,7 @@ const pagina: DienstPagina = {
         </tbody>
       </table>
       <p>
-        Na de reparatie wordt het kozijn geschuurd, gegrond en afgelakt; dat schilderwerk kost €75 tot €300 per kozijn. Gaat het om meerdere
+        Na de reparatie wordt het kozijn geschuurd, gegrond en afgelakt; dat schilderwerk kost {prijsTekst.lakBuiten} (lakwerk buiten). Gaat het om meerdere
         kozijnen, dan is het vaak voordeliger om meteen alle{' '}
         <Link href="/diensten/kozijnen-schilderen">kozijnen te laten schilderen</Link>, zodat de reparaties niet afsteken tegen oud
         schilderwerk. Kitnaden die zijn gescheurd, worden bij het herstel vernieuwd. Twijfelt u of uw kozijn nog te redden is?{' '}
@@ -324,7 +323,7 @@ const pagina: DienstPagina = {
       {
         titel: 'Kozijnen repareren',
         beschrijving:
-          'Kozijnen zijn het meest getroffen door houtrot, vooral aan de onderzijde waar regenwater blijft staan. Schildersbedrijf040 verwijdert het aangetaste hout, behandelt het gezonde hout met houtprimer en bouwt het kozijn weer op met tweecombinente epoxy. Na uitharding en schuren is de reparatie onzichtbaar en minstens zo sterk als het originele hout. Een klein kozijn repareren kost €150 tot €250.',
+          'Kozijnen zijn het meest getroffen door houtrot, vooral aan de onderzijde waar regenwater blijft staan. Schildersbedrijf040 verwijdert het aangetaste hout, behandelt het gezonde hout met houtprimer en bouwt het kozijn weer op met tweecombinente epoxy. Na uitharding en schuren is de reparatie onzichtbaar en minstens zo sterk als het originele hout. Een klein kozijn repareren kost ' + teBevestigen.houtrotKleinKozijn + '.',
         link: '/diensten/buitenschilderwerk',
         linkTekst: 'Bekijk buitenschilderwerk',
       },
@@ -359,7 +358,7 @@ const pagina: DienstPagina = {
       {
         titel: 'Kozijn vervangen',
         beschrijving:
-          'Wanneer meer dan 40 tot 50% van het kozijnhout is aangetast of het kozijn structureel is verzwakt, adviseert Schildersbedrijf040 om het kozijn volledig te vervangen. Schildersbedrijf040 plaatst nieuwe hardhouten of kunststof kozijnen op maat, inclusief beglazing, kitwerk en schilderwerk. Volledig vervangen van een kozijn kost €600 tot €1.500, afhankelijk van het type en de afmetingen.',
+          'Wanneer meer dan 40 tot 50% van het kozijnhout is aangetast of het kozijn structureel is verzwakt, adviseert Schildersbedrijf040 om het kozijn volledig te vervangen. Schildersbedrijf040 plaatst nieuwe hardhouten of kunststof kozijnen op maat, inclusief beglazing, kitwerk en schilderwerk. Volledig vervangen van een kozijn kost ' + teBevestigen.kozijnVervangen + ', afhankelijk van het type en de afmetingen.',
         link: '/contact',
         linkTekst: 'Offerte aanvragen',
       },
@@ -410,7 +409,7 @@ const pagina: DienstPagina = {
   cta: {
     titel: 'Houtrot laten herstellen?',
     tekst:
-      'Houtrot breidt zich uit als het niet wordt aangepakt. Schildersbedrijf040 komt graag langs voor een gratis inspectie en vrijblijvende offerte. Bel, mail of vul het contactformulier in, u ontvangt binnen 48 uur een offerte op maat.',
+      'Houtrot breidt zich uit als het niet wordt aangepakt. Schildersbedrijf040 komt graag langs voor een gratis inspectie en vrijblijvende offerte. Bel, mail of vul het contactformulier in, u ontvangt ' + site.termijnen.offerte + ' een offerte op maat.',
   },
   schema: [serviceSchema, breadcrumbSchema, faqSchema],
 }

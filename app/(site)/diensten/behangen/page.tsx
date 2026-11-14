@@ -3,12 +3,13 @@ import Link from 'next/link'
 import { DienstTemplate, type DienstPagina } from '@/components/dienst/template'
 import { images } from '@/lib/images'
 import { orgRef, serviceOffers } from '@/lib/schema'
-import { site } from '@/lib/site'
+import { hoofd, site } from '@/lib/site'
+import { prijsKort, prijsTekst, teBevestigen } from '@/lib/prices'
 
 export const metadata: Metadata = {
   title: 'Behanger in Eindhoven en Helmond',
   description:
-    'Behanger in Eindhoven en Helmond: vliesbehang €15 tot €25 per m², glasvezelbehang €18 tot €30 per m², oud behang verwijderen €5 tot €10. Vaste prijs vooraf.',
+    'Behanger in Eindhoven en Helmond: behangen ' + prijsTekst.behangen + ', oud behang verwijderen ' + teBevestigen.behangVerwijderen + '. Vaste prijs vooraf.',
   keywords: [
     'behangen eindhoven',
     'behanger',
@@ -37,7 +38,7 @@ const faqs = [
   {
     question: 'Wat kost behangen per m² in Eindhoven?',
     answer:
-      'Behangen kost gemiddeld €15 tot €30 per m², inclusief materiaal en exclusief btw. De prijs hangt af van het type behang: vliesbehang aanbrengen kost €15 tot €25 per m², terwijl fotobehang plaatsen uitkomt op €25 tot €40 per m² vanwege het nauwkeurige paswerk. Schildersbedrijf040 hanteert een uurtarief van €35 tot €50 voor behangwerk. Bij woningen ouder dan 2 jaar geldt het verlaagde btw-tarief van 9% in plaats van 21%.',
+      'Behangen kost gemiddeld ' + prijsTekst.behangen + ', inclusief materiaal en exclusief btw. De prijs hangt af van het type behang: fotobehang vraagt meer tijd dan vliesbehang vanwege het nauwkeurige paswerk. Schildersbedrijf040 hanteert een uurtarief van ' + teBevestigen.uurBehangen + ' voor behangwerk. Bij woningen ouder dan 2 jaar geldt het verlaagde btw-tarief van 9% in plaats van 21%.',
   },
   {
     question: 'Welk type behang is het beste voor mijn woning?',
@@ -47,7 +48,7 @@ const faqs = [
   {
     question: 'Moet oud behang eerst verwijderd worden?',
     answer:
-      'In de meeste gevallen verwijdert Schildersbedrijf040 het oude behang volledig voordat nieuw behang wordt aangebracht. Oud behang dat loslaat of blaasjes vertoont, veroorzaakt oneffenheden onder het nieuwe behang. Het verwijderen van oud behang kost €5 tot €10 per m². Bij vliesbehang kan de vlieslaag soms als ondergrond blijven zitten als deze nog goed hecht. Schildersbedrijf040 beoordeelt dat tijdens de inspectie.',
+      'In de meeste gevallen verwijdert Schildersbedrijf040 het oude behang volledig voordat nieuw behang wordt aangebracht. Oud behang dat loslaat of blaasjes vertoont, veroorzaakt oneffenheden onder het nieuwe behang. Het verwijderen van oud behang kost ' + teBevestigen.behangVerwijderen + '. Bij vliesbehang kan de vlieslaag soms als ondergrond blijven zitten als deze nog goed hecht. Schildersbedrijf040 beoordeelt dat tijdens de inspectie.',
   },
   {
     question: 'Hoe lang duurt het behangen van een kamer?',
@@ -62,7 +63,7 @@ const faqs = [
   {
     question: 'Moet de muur voorbehandeld worden voor behangen?',
     answer:
-      'Een goede ondergrond is essentieel voor behangwerk dat jarenlang blijft zitten. Schildersbedrijf040 behandelt de muren voor met een grondlaag die de zuiging van de muur reguleert en de hechting van het behang verbetert. Scheuren worden gevuld, oneffenheden geschuurd en de muur wordt stofvrij gemaakt. Het voorbehandelen van muren kost €8 tot €12 per m² en voorkomt dat het behang loslaat of blaasjes vormt.',
+      'Een goede ondergrond is essentieel voor behangwerk dat jarenlang blijft zitten. Schildersbedrijf040 behandelt de muren voor met een grondlaag die de zuiging van de muur reguleert en de hechting van het behang verbetert. Scheuren worden gevuld, oneffenheden geschuurd en de muur wordt stofvrij gemaakt. Voorstrijken kost ' + prijsTekst.voorstrijken + ' en voorkomt dat het behang loslaat of blaasjes vormt.',
   },
   {
     question: 'Wat is het verschil tussen vliesbehang en vinylbehang?',
@@ -83,7 +84,7 @@ const faqs = [
   {
     question: 'Werkt de behanger van Schildersbedrijf040 ook in Helmond?',
     answer:
-      'Ja, Schildersbedrijf040 behangt in Eindhoven en de hele regio eromheen, waaronder Helmond, Veldhoven, Best, Nuenen, Geldrop en Valkenswaard. De werkwijze en prijzen zijn overal gelijk: vliesbehang kost €15 tot €25 per m² en glasvezelbehang €18 tot €30 per m², inclusief materiaal en exclusief btw. Eigenaar Jordy Jacobs komt zelf langs voor de gratis inspectie, meet de wanden op en geeft advies over het behangtype. Binnen 48 uur ontvangt u een offerte met vaste prijs.',
+      'Ja, Schildersbedrijf040 behangt in Eindhoven en de hele regio eromheen, waaronder Helmond, Veldhoven, Best, Nuenen, Geldrop en Valkenswaard. De werkwijze en prijzen zijn overal gelijk: behangen kost ' + prijsTekst.behangen + ', inclusief materiaal en exclusief btw. Eigenaar Jordy Jacobs komt zelf langs voor de gratis inspectie, meet de wanden op en geeft advies over het behangtype. ' + hoofd(site.termijnen.offerte) + ' ontvangt u een offerte met vaste prijs.',
   },
   {
     question: 'Geeft Schildersbedrijf040 garantie op behangwerk?',
@@ -103,7 +104,7 @@ const werkwijzeStappen = [
     nummer: 2,
     titel: 'Offerte op maat',
     beschrijving:
-      'Binnen 48 uur ontvangt u een gedetailleerde offerte met vaste prijs, inclusief behang, lijm, voorbehandeling en arbeidskosten.',
+      '' + hoofd(site.termijnen.offerte) + ' ontvangt u een gedetailleerde offerte met vaste prijs, inclusief behang, lijm, voorbehandeling en arbeidskosten.',
   },
   {
     nummer: 3,
@@ -191,7 +192,7 @@ const pagina: DienstPagina = {
   h1: 'Behangen in Eindhoven',
   heroTekst: (
     <p>
-      Behangen kost gemiddeld €15 tot €25 per m² voor vliesbehang en €18 tot €30 per m² voor glasvezelbehang, inclusief materiaal. Een kamer
+      Behangen kost gemiddeld {prijsTekst.behangen}, voor vliesbehang en glasvezelbehang, inclusief materiaal. Een kamer
       met 20 m² wandoppervlak is meestal in 1 tot 2 werkdagen klaar. Na een gratis inspectie krijgt u een offerte met vaste prijs. Een
       standaardrol behang dekt ongeveer 5 m² wand. Behangen combineert u eenvoudig met{' '}
       <Link href="/diensten/binnenschilderwerk">binnenschilderwerk</Link> in één planning.
@@ -201,7 +202,7 @@ const pagina: DienstPagina = {
   kerncijfers: [
     { waarde: '15 tot 20 jaar', label: 'Levensduur vliesbehang' },
     { waarde: '10x', label: 'Glasvezel overschilderbaar' },
-    { waarde: '€15 tot €30', label: 'Prijs per m²' },
+    { waarde: prijsKort.behangen, label: 'Prijs per m²' },
     { waarde: '9%', label: 'BTW woningen 2+ jaar' },
   ],
   watIs: {
@@ -239,12 +240,12 @@ const pagina: DienstPagina = {
     body: (
       <>
         <p>
-          Behangen kost gemiddeld €15 tot €30 per m² inclusief materiaal en exclusief btw. De uiteindelijke prijs hangt af van het type
+          Behangen kost gemiddeld {prijsTekst.behangen} inclusief materiaal en exclusief btw. De uiteindelijke prijs hangt af van het type
           behang, de staat van de ondergrond en of oud behang verwijderd moet worden. Vliesbehang aanbrengen is voordeliger per m² dan
           fotobehang, omdat fotobehang meer voorbereidingstijd en nauwkeurig paswerk vereist.
         </p>
         <p>
-          Schildersbedrijf040 hanteert een uurtarief van €35 tot €50 voor behangwerk, inclusief materiaal. Voor woningen ouder dan 2 jaar
+          Schildersbedrijf040 hanteert een uurtarief van {teBevestigen.uurBehangen} voor behangwerk, inclusief materiaal. Voor woningen ouder dan 2 jaar
           geldt het verlaagde btw-tarief van 9%, wat een merkbaar verschil maakt op de eindfactuur. Bij een behangproject van €1.500
           bespaart u daarmee bijna €180 ten opzichte van het standaard btw-tarief van 21%.
         </p>
@@ -262,14 +263,14 @@ const pagina: DienstPagina = {
         Behang verwijderen en daarna verven
       </h2>
       <p>
-        Oud behang laten verwijderen kost €5 tot €10 per m², en daarna kan de muur geverfd of opnieuw behangd worden. Hoe het behang eraf
+        Oud behang laten verwijderen kost {teBevestigen.behangVerwijderen}, en daarna kan de muur geverfd of opnieuw behangd worden. Hoe het behang eraf
         gaat, hangt af van het type. Vliesbehang dat op een gegronde, gladde muur is aangebracht, laat zich vaak droog in hele banen van de
         muur trekken. Papierbehang wordt eerst geperforeerd en daarna afgeweekt of afgestoomd, zodat de lijm loslaat.
       </p>
       <p>
         Na het verwijderen blijft er bijna altijd behanglijm op de muur achter. Die lijmresten moeten er helemaal af, want muurverf hecht
         slecht op lijm en laat dan plekken of bladders zien. Schildersbedrijf040 wast de muur af, vult gaten en scheuren en brengt een
-        voorstrijkmiddel aan op zuigende delen. Voorbehandelen kost €8 tot €12 per m². Daarna is de muur klaar voor{' '}
+        voorstrijkmiddel aan op zuigende delen. Voorstrijken kost {prijsTekst.voorstrijken}, schuren {prijsTekst.schuren}. Daarna is de muur klaar voor{' '}
         <Link href="/diensten/binnenschilderwerk">muurverf in de kleur van uw keuze</Link> of voor nieuw behang.
       </p>
       <p>
@@ -289,7 +290,7 @@ const pagina: DienstPagina = {
       {
         titel: 'Vliesbehang',
         beschrijving:
-          'Vliesbehang is de populairste keuze voor woningen in Eindhoven. De vliesdrager maakt vliesbehang dimensioneel stabiel, vliesbehang krimpt niet, scheurt niet en overbrugt kleine scheuren in de ondergrond. De behanglijm wordt direct op de muur aangebracht in plaats van op het behang, waardoor vliesbehang sneller en schoner te verwerken is. Schildersbedrijf040 brengt vliesbehang aan vanaf €15 per m².',
+          'Vliesbehang is de populairste keuze voor woningen in Eindhoven. De vliesdrager maakt vliesbehang dimensioneel stabiel, vliesbehang krimpt niet, scheurt niet en overbrugt kleine scheuren in de ondergrond. De behanglijm wordt direct op de muur aangebracht in plaats van op het behang, waardoor vliesbehang sneller en schoner te verwerken is. Schildersbedrijf040 brengt vliesbehang aan voor ' + prijsTekst.behangen + '.',
         link: '/contact',
         linkTekst: 'Offerte vliesbehang',
       },
@@ -354,7 +355,7 @@ const pagina: DienstPagina = {
       },
       {
         titel: 'Vaste prijs, geen verrassingen',
-        beschrijving: 'Gedetailleerde offerte binnen 48 uur met vaste prijs. Inclusief behang, lijm, voorbehandeling en oplevering.',
+        beschrijving: 'Gedetailleerde offerte ' + site.termijnen.offerte + ' met vaste prijs. Inclusief behang, lijm, voorbehandeling en oplevering.',
       },
       {
         titel: 'Zorgvuldige voorbereiding',
@@ -372,7 +373,7 @@ const pagina: DienstPagina = {
   cta: {
     titel: 'Laten behangen?',
     tekst:
-      'Wilt u weten wat professioneel behangen voor uw woning kost? Schildersbedrijf040 komt graag langs voor een gratis inspectie en vrijblijvende offerte. Bel, mail of vul het contactformulier in, u ontvangt binnen 48 uur een offerte op maat.',
+      'Wilt u weten wat professioneel behangen voor uw woning kost? Schildersbedrijf040 komt graag langs voor een gratis inspectie en vrijblijvende offerte. Bel, mail of vul het contactformulier in, u ontvangt ' + site.termijnen.offerte + ' een offerte op maat.',
   },
   schema: [serviceSchema, breadcrumbSchema, faqSchema],
 }
