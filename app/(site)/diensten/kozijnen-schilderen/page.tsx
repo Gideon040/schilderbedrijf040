@@ -197,6 +197,10 @@ const pagina: DienstPagina = {
           exclusief eventueel houtrotherstel en steiger. Voor woningen ouder dan twee jaar geldt 9% btw op de arbeid. De exacte prijs hoort u
           na de gratis inspectie, in een offerte met een vaste prijs per onderdeel.
         </p>
+        <p>
+          De volledige prijsopbouw, met rekenvoorbeelden en de btw per onderdeel, staat op de pagina{' '}
+          <Link href="/kosten/kozijnen-schilderen">kosten kozijnen schilderen</Link>.
+        </p>
       </>
     ),
   },
