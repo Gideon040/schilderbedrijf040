@@ -28,6 +28,7 @@ const routes = {
   '/locaties': [`${site}/locaties/[city]/data.ts`, `${site}/locaties/[city]/data-batch1.ts`, `${site}/locaties/[city]/data-batch2.ts`, `${site}/locaties/[city]/data-lokaal.ts`, `${site}/locaties/[city]/data-lokaal-08.ts`, `${site}/locaties/[city]/data-lokaal-13.ts`],
 }
 for (const d of readdirSync(`${site}/diensten`)) routes[`/diensten/${d}`] = [`${site}/diensten/${d}/page.tsx`]
+if (existsSync(`${site}/kosten`)) for (const d of readdirSync(`${site}/kosten`)) routes[`/kosten/${d}`] = [`${site}/kosten/${d}/page.tsx`]
 
 const uit = {}
 for (const [url, bestanden] of Object.entries(routes)) {

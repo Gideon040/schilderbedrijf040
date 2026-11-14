@@ -164,7 +164,8 @@ export function Diensten() {
               {i < dienstMenu.length - 2 ? ', ' : i === dienstMenu.length - 2 ? ' en ' : '.'}
             </span>
           ))}{' '}
-          Bekijk ook <Link href="/projecten">onze projecten</Link> en <Link href="/reviews">wat klanten zeggen</Link>.
+          Wat het kost, staat op de pagina <Link href="/kosten/wat-kost-een-schilder">wat kost een schilder</Link>. Bekijk ook{' '}
+          <Link href="/projecten">onze projecten</Link> en <Link href="/reviews">wat klanten zeggen</Link>.
         </p>
       </div>
       <div className="peek" id="peek" aria-hidden="true">

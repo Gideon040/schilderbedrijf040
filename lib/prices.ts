@@ -73,6 +73,22 @@ export const prijzen: Record<string, PriceRow[]> = {
   ],
 }
 
+// Fase 7: nieuwe dienst- en kostenpagina's, samengesteld uit dezelfde regels
+const wandenRij: PriceRow = prijzen.binnenschilderwerk[0]
+const plafondRij: PriceRow = prijzen.binnenschilderwerk[1]
+const gevelRij: PriceRow = prijzen.buitenschilderwerk[0]
+const latexRij: PriceRow = prijzen['latex-spuiten'][0]
+const behangRij: PriceRow = prijzen.behangen[0]
+const houtrotRij: PriceRow = prijzen['houtrot-sanering'][0]
+prijzen['trap-schilderen'] = [trap, { ...lakBinnen, wat: 'Leuning, spijlen en traphekje (lakwerk binnen)' }, schuren]
+prijzen['dakkapel-schilderen'] = [{ ...lakBuiten, wat: 'Kozijnen en boeidelen dakkapel (lakwerk buiten)' }, houtrotRij]
+prijzen['vve-en-zakelijk'] = [wandenRij, latexRij, gevelRij, { ...lakBuiten, wat: 'Kozijnen, deuren en boeidelen buiten (lakwerk)' }]
+prijzen['latex-spuiten-nieuwbouw'] = [latexRij, schuren, voorstrijken]
+prijzen['kosten-latex-spuiten'] = [latexRij, { ...wandenRij, wat: 'Ter vergelijking: wanden rollen' }, schuren, voorstrijken]
+prijzen['kosten-plafond-schilderen'] = [plafondRij, { ...latexRij, wat: 'Plafond spuiten (latex)' }, schuren, voorstrijken]
+prijzen['kosten-kozijnen-schilderen'] = [{ ...lakBuiten, wat: 'Kozijnen buiten (lakwerk)' }, { ...lakBinnen, wat: 'Kozijnen binnen (lakwerk)' }, houtrotRij]
+prijzen['overzicht'] = [wandenRij, plafondRij, latexRij, behangRij, lakBinnen, lakBuiten, gevelRij, houtrotRij, deur, trap, schuren, voorstrijken]
+
 // Eén regel per dienst, voor overzichten (homepage, locatiepagina's). Zelfde bedragen als hierboven.
 export const vanafPrijzen: { dienst: string; slug: string; prijs: string }[] = [
   { dienst: 'Latex spuiten', slug: 'latex-spuiten', prijs: prijzen['latex-spuiten'][0].prijs },

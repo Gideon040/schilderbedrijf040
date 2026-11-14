@@ -11,7 +11,7 @@ import { sfeer, type SiteImage } from '@/lib/images'
 import { liveDiensten } from '@/lib/live-diensten'
 import { diensten, linkLive, plaatsen, PRIJSGIDS } from '@/lib/navigation'
 import { prijsNoot, prijzen } from '@/lib/prices'
-import { reviewsVoor } from '@/lib/reviews'
+import { reviewOpId, reviewsVoor } from '@/lib/reviews'
 import { ReviewKaarten } from '@/components/site/reviews'
 import { ProjectKaarten } from '@/components/projecten/kaarten'
 import { projectenMetDienst } from '@/lib/projecten'
@@ -42,6 +42,14 @@ export type DienstPagina = {
   prijsSlug?: string
   cta: { titel: string; tekst: string }
   schema: object[]
+  // Optioneel (fase 7): kruimelpad, reviews, projecten, sfeerbeelden en blogs per pagina
+  kruimel?: { naam: string; href: string }
+  reviewTag?: string
+  reviewIds?: string[] // deze reviews eerst (alleen als ze getoond mogen worden)
+  projectTag?: string | null // null: geen projectblok
+  sfeer?: { bg: SiteImage; rij: SiteImage[] }
+  blogs?: string[]
+  tabelTitel?: string
 }
 
 // Lange samengestelde woorden in de H1 splitsen zoals in het prototype (tekst blijft gelijk)
@@ -104,13 +112,15 @@ function faqFoto(d: DienstPagina): SiteImage {
 
 export function DienstTemplate({ d }: { d: DienstPagina }) {
   const tabel = prijzen[d.prijsSlug ?? d.slug] ?? []
-  const tabelNaam = d.prijsSlug ? d.prijsSlug.replace('-', ' ') : d.naam.toLowerCase()
+  const tabelNaam = d.tabelTitel ?? (d.prijsSlug ? d.prijsSlug.replace('-', ' ') : d.naam.toLowerCase())
   const live = liveDiensten[d.slug]
   // Reviews met de dienst-tag (gevel en winter vallen onder buiten- en binnenwerk), aangevuld met algemene reviews
-  const reviewTag = reviewTags[d.slug] ?? d.slug
-  const klantReviews = reviewsVoor({ dienst: reviewTag, aantal: 6 })
-  const eigenProjecten = projectenMetDienst(d.slug === 'winterschilder' ? 'binnenschilderwerk' : d.slug)
-  const sf = sfeerPerDienst[d.slug]
+  const reviewTag = d.reviewTag ?? reviewTags[d.slug] ?? d.slug
+  const vast = (d.reviewIds ?? []).map((id) => reviewOpId(id)).filter((r): r is NonNullable<typeof r> => !!r)
+  const klantReviews = [...vast, ...reviewsVoor({ dienst: reviewTag, aantal: 8 }).filter((r) => !vast.includes(r))].slice(0, 6)
+  const eigenProjecten = d.projectTag === null ? [] : projectenMetDienst(d.projectTag ?? (d.slug === 'winterschilder' ? 'binnenschilderwerk' : d.slug))
+  const sf = d.sfeer ?? sfeerPerDienst[d.slug]
+  const blogLijst = d.blogs ?? blogsPerDienst[d.slug] ?? []
   const metTag = klantReviews.filter((r) => r.diensten.includes(reviewTag)).length
   const kleur = staal[d.slug] ?? staal.binnenschilderwerk
   const [eersteWoord, ...rest] = d.h1.split(' ')
@@ -130,7 +140,7 @@ export function DienstTemplate({ d }: { d: DienstPagina }) {
             <nav className="crumbs" aria-label="Kruimelpad">
               <Link href="/">Home</Link>
               <span>/</span>
-              <Link href="/#diensten">Diensten</Link>
+              <Link href={d.kruimel?.href ?? '/#diensten'}>{d.kruimel?.naam ?? 'Diensten'}</Link>
               <span>/</span>
               <b aria-current="page">{d.naam}</b>
             </nav>
@@ -329,7 +339,7 @@ export function DienstTemplate({ d }: { d: DienstPagina }) {
             </div>
           </div>
         </section>
-      ) : (
+      ) : d.projecten.length > 0 ? (
       <section className="ba-sec on-dark">
         <div className="wrap">
           <div className="head rv">
@@ -357,7 +367,7 @@ export function DienstTemplate({ d }: { d: DienstPagina }) {
           ))}
         </div>
       </section>
-      )}
+      ) : null}
 
       {/* Werkwijze */}
       <section>
@@ -491,13 +501,13 @@ export function DienstTemplate({ d }: { d: DienstPagina }) {
               </Link>
             ))}
           </div>
-          {(blogsPerDienst[d.slug] ?? []).length > 0 && (
+          {blogLijst.length > 0 && (
             <>
               <h2 id={`${d.slug}-lees-ook`} className="mini-h2 rv">
                 Lees ook
               </h2>
               <div className="places rv">
-                {(blogsPerDienst[d.slug] ?? [])
+                {blogLijst
                   .map((s) => blog(s))
                   .filter((b): b is NonNullable<typeof b> => !!b)
                   .map((b) => (

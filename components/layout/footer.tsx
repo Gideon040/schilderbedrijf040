@@ -4,6 +4,7 @@ import { site } from '@/lib/site'
 import { TOON_JORDY } from '@/lib/jordy'
 
 const snelleLinks = [
+  { name: 'Wat kost een schilder?', href: '/kosten/wat-kost-een-schilder' },
   { name: 'Projecten', href: '/projecten' },
   { name: 'Reviews', href: '/reviews' },
   { name: 'Over ons', href: '/over-ons' },

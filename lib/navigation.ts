@@ -10,6 +10,12 @@ export const diensten = [
   { name: 'Lakwerk', href: '/diensten/lakwerk' },
   { name: 'Houtrot sanering', href: '/diensten/houtrot-sanering' },
   { name: 'Schilderen in de winter', href: '/diensten/winterschilder' },
+  // Fase 7: nieuwe dienstpagina's worden hier toegevoegd zodra ze bestaan
+]
+
+// Kostenpagina's (prijs en prijsopbouw; de dienstpagina's gaan over werkwijze en resultaat)
+export const kostenPaginas = [
+  { name: 'Wat kost een schilder?', href: '/kosten/wat-kost-een-schilder' },
 ]
 
 // Eindhoven = homepage. Volgorde: grootste/belangrijkste plaatsen eerst.
@@ -34,9 +40,8 @@ export const plaatsen = [
   { name: 'Maarheeze', href: '/locaties/maarheeze' },
 ]
 
-// Prijsgids (/kosten/schilderwerk) staat gepland voor november en wacht op de scopecheck.
-// Zet live op true zodra de pagina bestaat; dan verschijnen de links op dienst- en locatiepagina's.
-export const PRIJSGIDS = { href: '/kosten/schilderwerk', live: false }
+// Centrale kostenpagina; links verschijnen op dienst- en locatiepagina's.
+export const PRIJSGIDS = { href: '/kosten/wat-kost-een-schilder', live: true }
 
 // Nieuwe blogs staan als concept klaar (scripts/create-blog-*.mjs) en zijn nog niet gepubliceerd in Sanity.
 // Zet een blog op true zodra hij live staat; dan worden de links ernaartoe op dienstpagina's zichtbaar.

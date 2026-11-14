@@ -57,4 +57,7 @@ export const sfeer = {
   afplakken: sf('ruimte-afgeplakt', 'Lege kamer met afgeplakte kozijnen en afgedekte vloer'),
   wandHalverwege: sf('wand-halverwege-geschilderd', 'Wand die halverwege in een nieuwe kleur is geschilderd, met trapje'),
   kleurstalen: sf('kleurstalen', 'Kleurstalen en verfblikken op een tafel'),
+  dakkapel: sf('dakkapel', 'Wit geschilderde dakkapel op een pannendak'),
+  appartementen: sf('appartementen-vve', 'Appartementengebouw met balkons en een grasveld ervoor'),
+  trap: sf('trap-gelakt', 'Trap met witte stootborden en donkere treden in een lichte hal'),
 }

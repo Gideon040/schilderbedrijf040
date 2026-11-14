@@ -28,11 +28,15 @@ const omschrijving: Record<string, string> = {
   'kozijnen-schilderen': 'Houten kozijnen buiten',
   'gevel-schilderen': 'Gevels schilderen en herstellen',
   'houtrot-sanering': 'Rot hout herstellen met epoxy',
+  'trap-schilderen': 'Trap lakken of schilderen',
+  'dakkapel-schilderen': 'Kozijnen en boeidelen dakkapel',
+  'latex-spuiten-nieuwbouw': 'Nieuwbouwwoning in één keer af',
+  'vve-en-zakelijk': 'VvE, kantoor en bedrijfspand',
 }
 
 const groepen = [
-  { titel: 'Binnen', slugs: ['latex-spuiten', 'binnenschilderwerk', 'lakwerk', 'behangen', 'winterschilder'] },
-  { titel: 'Buiten', slugs: ['buitenschilderwerk', 'kozijnen-schilderen', 'gevel-schilderen', 'houtrot-sanering'] },
+  { titel: 'Binnen', slugs: ['latex-spuiten', 'latex-spuiten-nieuwbouw', 'binnenschilderwerk', 'trap-schilderen', 'lakwerk', 'behangen', 'winterschilder'] },
+  { titel: 'Buiten', slugs: ['buitenschilderwerk', 'kozijnen-schilderen', 'gevel-schilderen', 'dakkapel-schilderen', 'houtrot-sanering', 'vve-en-zakelijk'] },
 ]
 
 const slug = (href: string) => href.split('/').pop() as string
@@ -146,6 +150,9 @@ export function Header() {
                     </ul>
                     <Link className="btn btn-blue" href="/contact">
                       Gratis offerte <Pijl />
+                    </Link>
+                    <Link className="mk-kosten" href="/kosten/wat-kost-een-schilder">
+                      Wat kost een schilder? →
                     </Link>
                     <a className="mk-tel" href={site.phoneHref}>
                       <Icoon naam="telefoon" width={16} height={16} /> {site.phone}

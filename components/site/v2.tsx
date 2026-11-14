@@ -108,4 +108,9 @@ export const staal: Record<string, { c: string; code: string; label: string; don
   winterschilder: { c: 'var(--sw4)', code: '040-07', label: 'WINTER', donker: true },
   'kozijnen-schilderen': { c: 'var(--sw6)', code: '040-08', label: 'KOZIJNEN', donker: true },
   'gevel-schilderen': { c: 'var(--sw4)', code: '040-09', label: 'GEVEL', donker: true },
+  'trap-schilderen': { c: 'var(--sw6)', code: '040-10', label: 'TRAP', donker: true },
+  'dakkapel-schilderen': { c: 'var(--sw4)', code: '040-11', label: 'DAKKAPEL', donker: true },
+  'latex-spuiten-nieuwbouw': { c: 'var(--sw3)', code: '040-12', label: 'NIEUWBOUW' },
+  'vve-en-zakelijk': { c: 'var(--sw5)', code: '040-13', label: 'VVE', donker: true },
+  kosten: { c: 'var(--sw1)', code: '040-PRIJS', label: 'KOSTEN' },
 }

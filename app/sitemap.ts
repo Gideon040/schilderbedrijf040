@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next'
 import { cityData } from './(site)/locaties/[city]/data'
 import { blogs } from '@/lib/blog'
-import { diensten } from '@/lib/navigation'
+import { diensten, kostenPaginas } from '@/lib/navigation'
 import { indexeerbaar, projecten } from '@/lib/projecten'
 import lastmod from '@/data/lastmod.json'
 
@@ -28,7 +28,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     pagina('/reviews', 'monthly', 0.7),
   ]
 
-  const dienstenPages: MetadataRoute.Sitemap = diensten.map((d) => pagina(d.href, 'monthly', 0.9))
+  const dienstenPages: MetadataRoute.Sitemap = [...diensten, ...kostenPaginas].map((d) => pagina(d.href, 'monthly', 0.9))
 
   const locationPages: MetadataRoute.Sitemap = Object.keys(cityData).map((city) => pagina(`/locaties/${city}`, 'monthly', 0.8, '/locaties'))
 
