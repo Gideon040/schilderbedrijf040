@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { DienstTemplate, type DienstPagina } from '@/components/dienst/template'
-import { images } from '@/lib/images'
+import { images, sfeer } from '@/lib/images'
 import { orgRef, serviceOffers } from '@/lib/schema'
 import { hoofd, site } from '@/lib/site'
 import { prijsKort, prijsTekst } from '@/lib/prices'
@@ -178,6 +178,7 @@ const pagina: DienstPagina = {
     </p>
   ),
   heroImg: images.binnendeur,
+  sectieImg: sfeer.zolder,
   kerncijfers: [
     { waarde: '8 tot 10 jaar', label: 'Levensduur' },
     { waarde: '4 tot 6 uur', label: 'Droogtijd per laag' },

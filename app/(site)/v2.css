@@ -1257,3 +1257,26 @@ header.nav nav.mmenu{display:block;font-weight:400;font-size:inherit}
 .strook a:hover img{transform:scale(1.05)}
 @media (max-width: 980px){.strook{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:8px}.strook a{flex:0 0 62%;scroll-snap-align:start}}
 .afs-voorwaarden{display:inline-block;margin-top:6px;font-size:13px;color:inherit;text-decoration:underline}
+
+/* Secties met een beeld op de achtergrond (sfeerbeeld met donkere overlay voor leesbaarheid) */
+.bg-beeld{position:relative;overflow:hidden;isolation:isolate}
+.bg-beeld>.bg{position:absolute;inset:0;z-index:-1}
+.bg-beeld>.bg img{object-fit:cover}
+.bg-beeld>.bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,22,38,.86) 0%,rgba(10,22,38,.72) 45%,rgba(10,22,38,.88) 100%)}
+.bg-beeld .head h2,.bg-beeld .lok-alineas p,.bg-beeld .head p{color:var(--white)}
+.bg-beeld .head p,.bg-beeld .lok-alineas p{color:#DCE3EC}
+.bg-beeld .lok-alineas a{color:#9FC2FF}
+.bg-beeld .eyebrow{color:#9FC2FF}
+.bg-beeld .places .pl,.bg-beeld .pl-label{color:var(--white)}
+.winter.bg-beeld>.bg::after{background:linear-gradient(90deg,rgba(26,91,255,.94) 0%,rgba(26,91,255,.82) 55%,rgba(26,91,255,.55) 100%)}
+.quote.bg-beeld>.bg::after{background:linear-gradient(90deg,rgba(10,22,38,.95) 0%,rgba(10,22,38,.86) 55%,rgba(10,22,38,.7) 100%)}
+
+/* Homepage: beeld per dienstregel en per werkstap */
+.svc a.row .thumb{position:relative;width:70px;height:70px;overflow:hidden;box-shadow:0 0 0 3px var(--c)}
+.svc a.row .thumb img{object-fit:cover;transition:transform .5s}
+.svc a.row:hover .thumb img{transform:scale(1.08)}
+.steps .s .stap-img{position:relative;aspect-ratio:16/10;overflow:hidden;margin-top:4px}
+.steps .s .stap-img img{object-fit:cover}
+.wg-beeld{position:relative;aspect-ratio:16/9;margin-top:28px;overflow:hidden}
+.wg-beeld img{object-fit:cover}
+@media (max-width: 980px){.svc a.row .thumb{width:44px;height:44px}}

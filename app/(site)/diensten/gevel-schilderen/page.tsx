@@ -1,7 +1,8 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { DienstTemplate, type DienstPagina } from '@/components/dienst/template'
-import { images } from '@/lib/images'
+import { images, sfeer } from '@/lib/images'
+import { projectFoto } from '@/lib/projecten'
 import { jordy, TOON_JORDY, toonBlok } from '@/lib/jordy'
 import { breadcrumbSchema, faqSchema, orgRef, serviceOffers, werkgebied } from '@/lib/schema'
 import { site } from '@/lib/site'
@@ -104,7 +105,8 @@ const pagina: DienstPagina = {
       inspectie.
     </p>
   ),
-  heroImg: images.villa,
+  heroImg: projectFoto('witte-dorp-burghplein-eindhoven', 0),
+  sectieImg: sfeer.witteGevels,
   kerncijfers: [
     { waarde: prijsKort.gevel, label: 'Per m² gevel, excl. steiger' },
     { waarde: '8 tot 10 jaar', label: 'Levensduur met Boonstoppel-verf' },

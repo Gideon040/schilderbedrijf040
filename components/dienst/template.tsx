@@ -24,6 +24,8 @@ export type DienstPagina = {
   h1: string
   heroTekst: ReactNode
   heroImg: SiteImage
+  // Beeld bij de uitleg ("Wat is ..."); sfeerbeelden krijgen nooit een tekst die eigen werk suggereert
+  sectieImg?: SiteImage
   kerncijfers: { waarde: string; label: string }[]
   watIs: { id: string; h2: string; body: ReactNode }
   kosten: { id: string; h2: string; body: ReactNode }
@@ -48,6 +50,9 @@ const splits: Record<string, [string, string]> = {
   Winterschilder: ['Winter', 'schilder'],
 }
 
+// Alt-tekst: projectfoto's en sfeerbeelden houden hun eigen beschrijving; oude foto's de vaste alt van de live site
+const altVoor = (img: SiteImage, liveAlt?: string) => (img.eigenAlt ? img.alt : liveAlt ?? img.alt)
+
 const reviewTags: Record<string, string> = { 'gevel-schilderen': 'buitenschilderwerk', winterschilder: 'binnenschilderwerk' }
 
 const kleuren = ['var(--sw1)', 'var(--sw2)', 'var(--sw3)', 'var(--sw5)', 'var(--sw4)', 'var(--sw6)']
@@ -65,8 +70,8 @@ function Kerncijfer({ waarde }: { waarde: string }) {
 }
 
 // Foto naast de FAQ: een tweede projectfoto als die er is, anders de herofoto
-function faqFoto(d: DienstPagina) {
-  return (d.projecten[1]?.na ?? d.projecten[0]?.na ?? d.heroImg).src
+function faqFoto(d: DienstPagina): SiteImage {
+  return d.projecten[1]?.na ?? d.projecten[0]?.na ?? d.heroImg
 }
 
 export function DienstTemplate({ d }: { d: DienstPagina }) {
@@ -146,7 +151,7 @@ export function DienstTemplate({ d }: { d: DienstPagina }) {
           <div className="staal">
             <div className="staal-card">
               <div className="img" style={{ ['--sw1' as string]: kleur.c }}>
-                <Image src={d.heroImg.src} alt={live?.alts[0] ?? d.heroImg.alt} fill priority sizes="(max-width: 980px) 92vw, 560px" />
+                <Image src={d.heroImg.src} alt={altVoor(d.heroImg, live?.alts[0])} fill priority sizes="(max-width: 980px) 92vw, 560px" />
               </div>
               <div className="staal-label">
                 <div>
@@ -194,9 +199,15 @@ export function DienstTemplate({ d }: { d: DienstPagina }) {
               <StreekKop tekst={d.watIs.h2} />
             </h2>
             {d.watIs.body}
-            {live && (
+            {(d.sectieImg || live) && (
               <figure className="dp-fig">
-                <Image src={d.heroImg.src} alt={live.alts[1]} width={d.heroImg.width} height={d.heroImg.height} sizes="(max-width: 980px) 92vw, 640px" />
+                <Image
+                  src={(d.sectieImg ?? d.heroImg).src}
+                  alt={altVoor(d.sectieImg ?? d.heroImg, live?.alts[1])}
+                  width={(d.sectieImg ?? d.heroImg).width}
+                  height={(d.sectieImg ?? d.heroImg).height}
+                  sizes="(max-width: 980px) 92vw, 640px"
+                />
               </figure>
             )}
             <Eyebrow style={{ marginTop: 40 }}>Transparante prijzen</Eyebrow>
@@ -377,13 +388,13 @@ export function DienstTemplate({ d }: { d: DienstPagina }) {
             {live && <p style={{ margin: 0, color: 'var(--muted)' }}>{live.vragenIntro}</p>}
             {live?.alts[2] && (
               <div className="faq-img">
-                <Image src={faqFoto(d)} alt={live.alts[2]} fill sizes="(max-width: 980px) 92vw, 480px" />
+                <Image src={faqFoto(d).src} alt={altVoor(faqFoto(d), live.alts[2])} fill sizes="(max-width: 980px) 92vw, 480px" />
               </div>
             )}
             <div className="ask">
               {live?.alts[3] && (
                 <div className="ask-foto">
-                  <Image src={d.heroImg.src} alt={live.alts[3]} fill sizes="120px" />
+                  <Image src={d.heroImg.src} alt={altVoor(d.heroImg, live.alts[3])} fill sizes="120px" />
                 </div>
               )}
               <h3>Nog vragen?</h3>

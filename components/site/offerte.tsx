@@ -1,6 +1,8 @@
 'use client'
 
 import { useState, type ReactNode } from 'react'
+import Image from 'next/image'
+import type { SiteImage } from '@/lib/images'
 import { site } from '@/lib/site'
 import { bronpagina, trackEvent } from '@/lib/tracking'
 import { TOON_JORDY } from '@/lib/jordy'
@@ -19,6 +21,7 @@ export function Offerte({
   eyebrow = 'Gratis offerte',
   extra,
   formTitel = 'Offerte aanvragen',
+  achtergrond,
 }: {
   titel?: string
   streek?: string
@@ -26,6 +29,8 @@ export function Offerte({
   eyebrow?: string
   extra?: ReactNode
   formTitel?: string
+  // Optioneel sfeerbeeld op de achtergrond, met donkere overlay
+  achtergrond?: SiteImage
 }) {
   const [form, setForm] = useState(leeg)
   const [status, setStatus] = useState<'idle' | 'bezig' | 'klaar' | 'fout'>('idle')
@@ -61,7 +66,12 @@ export function Offerte({
     )
 
   return (
-    <section className="quote on-dark" id="offerte">
+    <section className={`quote on-dark${achtergrond ? ' bg-beeld' : ''}`} id="offerte">
+      {achtergrond && (
+        <div className="bg">
+          <Image src={achtergrond.src} alt="" fill sizes="100vw" />
+        </div>
+      )}
       <svg className="splat" viewBox="0 0 200 200" aria-hidden="true">
         <path
           fill="#1A5BFF"

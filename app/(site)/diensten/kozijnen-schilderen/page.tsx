@@ -2,7 +2,8 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { linkLive } from '@/lib/navigation'
 import { DienstTemplate, type DienstPagina } from '@/components/dienst/template'
-import { images } from '@/lib/images'
+import { images, sfeer } from '@/lib/images'
+import { projectFoto } from '@/lib/projecten'
 import { jordy, toonBlok } from '@/lib/jordy'
 import { PRIJSLIJST, prijsKort, prijsRij, prijsTekst, prijzen, rekenvoorbeeld, teBevestigen } from '@/lib/prices'
 import { breadcrumbSchema, faqSchema, orgRef, serviceOffers, werkgebied } from '@/lib/schema'
@@ -120,7 +121,8 @@ const pagina: DienstPagina = {
       prijs.
     </p>
   ),
-  heroImg: images.lakKozijnen,
+  heroImg: projectFoto('fluwijnstraat-eindhoven', 0),
+  sectieImg: sfeer.kozijn,
   kerncijfers: [
     { waarde: prijsKort.lakBuiten, label: 'Per m² lakwerk buiten' },
     { waarde: '8 tot 10 jaar', label: 'Levensduur met Boonstoppel-verf' },

@@ -18,6 +18,7 @@ import { ProjectKaarten } from '@/components/projecten/kaarten'
 import { projectenUit } from '@/lib/projecten'
 import { orgRef } from '@/lib/schema'
 import { hoofd, site } from '@/lib/site'
+import { sfeer } from '@/lib/images'
 
 // Generate static params for all cities
 export function generateStaticParams() {
@@ -142,6 +143,9 @@ export default function LocationPage({ params }: { params: { city: string } }) {
   const uitPlaats = reviewsUit(X)
   const klantReviews = reviewsVoor({ plaats: X, aantal: 3 })
   const lokaleProjecten = projectenUit(X)
+  // Sfeerbeeld achter het lokale blok, wisselend per plaats
+  const lokaalBeelden = [sfeer.villaHerfst, sfeer.jaren30, sfeer.rijtjeshuis, sfeer.witteGevels, sfeer.entreeOranje]
+  const lokaalBeeld = lokaalBeelden[Object.keys(cityData).indexOf(city) % lokaalBeelden.length]
 
   // Teksten van het live template (main), letterlijk, em dashes vervangen
   const usps = [
@@ -223,8 +227,11 @@ export default function LocationPage({ params }: { params: { city: string } }) {
 
       <Winterband />
 
-      {/* Lokaal blok */}
-      <section>
+      {/* Lokaal blok, met een sfeerbeeld op de achtergrond (geen eigen werk, dus zonder bijschrift) */}
+      <section className="bg-beeld">
+        <div className="bg">
+          <Image src={lokaalBeeld.src} alt={lokaalBeeld.alt} fill sizes="100vw" />
+        </div>
         <div className="wrap">
           <div className="head rv">
             <div>
@@ -424,6 +431,7 @@ export default function LocationPage({ params }: { params: { city: string } }) {
 
       <Offerte
         eyebrow={`Schilder nodig in ${X}?`}
+        achtergrond={sfeer.entreeOranje}
         titel="Klaar voor een frisse start?"
         streek="start?"
         tekst={data.contact}

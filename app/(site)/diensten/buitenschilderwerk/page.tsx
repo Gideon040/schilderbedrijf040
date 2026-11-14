@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { DienstTemplate, type DienstPagina } from '@/components/dienst/template'
-import { images } from '@/lib/images'
+import { images, sfeer } from '@/lib/images'
 import { afbreek } from '@/components/site/v2'
 import { TOON_JORDY, toonBlok } from '@/lib/jordy'
 import { prijsRij, prijsTekst, prijzen, teBevestigen } from '@/lib/prices'
@@ -215,7 +215,8 @@ const pagina: DienstPagina = {
       inclusief controle op houtrot, krijgt u een offerte met vaste prijs.
     </p>
   ),
-  heroImg: images.tuinhuis,
+  heroImg: sfeer.rijtjeshuis,
+  sectieImg: sfeer.entreeOranje,
   kerncijfers: [
     { waarde: '8 tot 10 jaar', label: 'Levensduur' },
     { waarde: '15 tot 25°C', label: 'Ideale temperatuur' },

@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { images, type SiteImage } from '@/lib/images'
+import { images, sfeer, type SiteImage } from '@/lib/images'
 import { plaatsen } from '@/lib/navigation'
 import { prijzen } from '@/lib/prices'
 import { homeReviews } from '@/lib/reviews'
@@ -100,12 +100,12 @@ export function HomeHero() {
 
 /* ---------- diensten als stalenkaart ---------- */
 const rijen: { slug: string; code: string; c: string; titel: string; tekst: string; linkTekst: string; prijs: string; img: SiteImage }[] = [
-  { slug: 'latex-spuiten', code: '040-03', c: 'var(--sw3)', titel: 'Latex spuiten', tekst: 'Efficiënt en strak resultaat met professionele latex spuittechniek. Latex spuiten is tot 3 keer sneller dan rollen en levert een egale, rolstreepvrije afwerking.', linkTekst: 'Latex spuiten bekijken', prijs: per(prijzen['latex-spuiten'][0].prijs), img: images.latex },
-  { slug: 'binnenschilderwerk', code: '040-01', c: 'var(--sw1)', titel: 'Binnenschilderwerk', tekst: 'Professioneel schilderwerk voor uw interieur, van muren en plafonds tot kozijnen en deuren. Goed binnenschilderwerk verhoogt de uitstraling van uw woning en beschermt oppervlakken tot wel 7 jaar.', linkTekst: 'Meer over binnenschilderwerk', prijs: per(prijzen.binnenschilderwerk[0].prijs), img: images.binnendeur },
-  { slug: 'buitenschilderwerk', code: '040-05', c: 'var(--sw4)', titel: 'Buitenschilderwerk', tekst: 'Bescherm en verfraai uw woning met vakkundig buitenschilderwerk, inclusief gratis houtrot inspectie. Zonder tijdig buitenschilderwerk kan vochtschade de constructie van uw houtwerk aantasten.', linkTekst: 'Meer over buitenschilderwerk', prijs: per(prijzen.buitenschilderwerk[0].prijs), img: images.tuinhuis },
-  { slug: 'behangen', code: '040-02', c: 'var(--sw2)', titel: 'Behangen', tekst: 'Van klassiek behang tot moderne wandbekleding. Schildersbedrijf040 zorgt voor een naadloze afwerking. Behang geeft uw interieur direct karakter en is beschikbaar in honderden dessins.', linkTekst: 'Meer over behangen', prijs: per(prijzen.behangen[0].prijs), img: images.behang },
-  { slug: 'lakwerk', code: '040-06', c: 'var(--sw6)', titel: 'Lakwerk', tekst: 'Specialistisch lakwerk voor een hoogwaardige afwerking van deuren, kozijnen en meubels. Schildersbedrijf040 gebruikt Boonstoppel lakken voor een krasbestendig en duurzaam resultaat.', linkTekst: 'Meer over lakwerk', prijs: `Deur ${prijzen.lakwerk[2].prijs.replace(' /stuk', '')}`, img: images.lakKozijnen },
-  { slug: 'houtrot-sanering', code: '040-04', c: 'var(--sw5)', titel: 'Houtrot sanering', tekst: 'Preventieve en curatieve behandeling van houtrot om grotere schade te voorkomen. Onbehandeld houtrot kan zich snel uitbreiden en tot kostbare vervanging van kozijnen leiden.', linkTekst: 'Meer over houtrot sanering', prijs: `Houtrot ${prijzen['houtrot-sanering'][0].prijs}`, img: images.houtrot },
+  { slug: 'latex-spuiten', code: '040-03', c: 'var(--sw3)', titel: 'Latex spuiten', tekst: 'Efficiënt en strak resultaat met professionele latex spuittechniek. Latex spuiten is tot 3 keer sneller dan rollen en levert een egale, rolstreepvrije afwerking.', linkTekst: 'Latex spuiten bekijken', prijs: per(prijzen['latex-spuiten'][0].prijs), img: sfeer.nieuwbouw },
+  { slug: 'binnenschilderwerk', code: '040-01', c: 'var(--sw1)', titel: 'Binnenschilderwerk', tekst: 'Professioneel schilderwerk voor uw interieur, van muren en plafonds tot kozijnen en deuren. Goed binnenschilderwerk verhoogt de uitstraling van uw woning en beschermt oppervlakken tot wel 7 jaar.', linkTekst: 'Meer over binnenschilderwerk', prijs: per(prijzen.binnenschilderwerk[0].prijs), img: sfeer.woonkamer },
+  { slug: 'buitenschilderwerk', code: '040-05', c: 'var(--sw4)', titel: 'Buitenschilderwerk', tekst: 'Bescherm en verfraai uw woning met vakkundig buitenschilderwerk, inclusief gratis houtrot inspectie. Zonder tijdig buitenschilderwerk kan vochtschade de constructie van uw houtwerk aantasten.', linkTekst: 'Meer over buitenschilderwerk', prijs: per(prijzen.buitenschilderwerk[0].prijs), img: sfeer.rijtjeshuis },
+  { slug: 'behangen', code: '040-02', c: 'var(--sw2)', titel: 'Behangen', tekst: 'Van klassiek behang tot moderne wandbekleding. Schildersbedrijf040 zorgt voor een naadloze afwerking. Behang geeft uw interieur direct karakter en is beschikbaar in honderden dessins.', linkTekst: 'Meer over behangen', prijs: per(prijzen.behangen[0].prijs), img: sfeer.behang },
+  { slug: 'lakwerk', code: '040-06', c: 'var(--sw6)', titel: 'Lakwerk', tekst: 'Specialistisch lakwerk voor een hoogwaardige afwerking van deuren, kozijnen en meubels. Schildersbedrijf040 gebruikt Boonstoppel lakken voor een krasbestendig en duurzaam resultaat.', linkTekst: 'Meer over lakwerk', prijs: `Deur ${prijzen.lakwerk[2].prijs.replace(' /stuk', '')}`, img: sfeer.voordeur },
+  { slug: 'houtrot-sanering', code: '040-04', c: 'var(--sw5)', titel: 'Houtrot sanering', tekst: 'Preventieve en curatieve behandeling van houtrot om grotere schade te voorkomen. Onbehandeld houtrot kan zich snel uitbreiden en tot kostbare vervanging van kozijnen leiden.', linkTekst: 'Meer over houtrot sanering', prijs: `Houtrot ${prijzen['houtrot-sanering'][0].prijs}`, img: sfeer.houtrot },
 ]
 
 export function Diensten() {
@@ -127,7 +127,9 @@ export function Diensten() {
         <div className="svc">
           {rijen.map((r) => (
             <Link key={r.slug} className="row rv" href={`/diensten/${r.slug}`} data-img={opt(r.img.src)} style={{ ['--c' as string]: r.c }}>
-              <span className="chip" style={r.slug === 'binnenschilderwerk' ? { boxShadow: 'inset 0 0 0 1px var(--line)' } : undefined} />
+              <span className="thumb">
+                <Image src={r.img.src} alt={r.img.alt} fill sizes="70px" />
+              </span>
               <div>
                 <span className="code">{r.code}</span>
                 <h3>{afbreek(r.titel)}</h3>
@@ -149,7 +151,7 @@ export function Diensten() {
       </div>
       <div className="peek" id="peek" aria-hidden="true">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img alt="" id="peekimg" src={opt(images.binnendeur.src)} loading="lazy" decoding="async" />
+        <img alt="" id="peekimg" src={opt(sfeer.woonkamer.src)} loading="lazy" decoding="async" />
       </div>
     </section>
   )
@@ -321,7 +323,7 @@ export const stappenLive = [
   { titel: 'Oplevering', tekst: 'Na afronding loopt u samen met de schilder het resultaat na. Schildersbedrijf040 levert pas op wanneer u volledig tevreden bent en biedt garantie op het geleverde werk.' },
 ]
 
-export function Stappen({ stappen }: { stappen: { titel: string; tekst: string }[] }) {
+export function Stappen({ stappen, beelden }: { stappen: { titel: string; tekst: string }[]; beelden?: SiteImage[] }) {
   return (
     <ol className="steps">
       <li className="track" aria-hidden="true">
@@ -337,6 +339,11 @@ export function Stappen({ stappen }: { stappen: { titel: string; tekst: string }
       {stappen.map((s, i) => (
         <li key={s.titel} className="s">
           <span className="dot">{i + 1}</span>
+          {beelden?.[i] && (
+            <div className="stap-img">
+              <Image src={beelden[i].src} alt={beelden[i].alt} fill sizes="(max-width: 980px) 92vw, 280px" />
+            </div>
+          )}
           <h3>{afbreek(s.titel)}</h3>
           <p>{jordy(s.tekst)}</p>
         </li>
@@ -361,7 +368,7 @@ export function Werkwijze() {
             ervoor dat elk schilderproject in Eindhoven binnen planning en budget wordt opgeleverd.
           </p>
         </div>
-        <Stappen stappen={stappenLive} />
+        <Stappen stappen={stappenLive} beelden={[sfeer.kleurstalen, sfeer.gereedschap, sfeer.afplakken, sfeer.woonkamer]} />
       </div>
     </section>
   )
@@ -374,7 +381,10 @@ export function Winter({ seizoen }: { seizoen: Seizoensblok }) {
     ? ['Woonkamer, hal of slaapkamer opfrissen', 'Kozijnen en deuren binnen lakken', 'Latex spuiten na een verbouwing', 'Klaar voor de feestdagen [JORDY: uiterlijk starten op?]']
     : ['Gevels, kozijnen en boeidelen', 'Houtrot herstellen voordat we schilderen', 'Buitendeuren en dakkapellen']
   return (
-    <section className="winter on-dark" id="winter">
+    <section className="winter on-dark bg-beeld" id="winter">
+      <div className="bg">
+        <Image src={winter ? sfeer.winter.src : sfeer.rijtjeshuis.src} alt="" fill sizes="100vw" />
+      </div>
       <div className="flakes" id="flakes" aria-hidden="true" />
       <div className="wrap">
         <div className="rv">
@@ -511,6 +521,9 @@ export function WerkgebiedFaq({ faqs }: { faqs: Faq[] }) {
             Schildersbedrijf040 is gevestigd in Eindhoven en werkt in de hele regio tot circa 50 kilometer. Doordat Schildersbedrijf040 lokaal werkt,
             zijn de reistijden kort en kunnen spoedklussen vaak binnen een week worden ingepland.
           </p>
+          <div className="wg-beeld">
+            <Image src={sfeer.villaHerfst.src} alt={sfeer.villaHerfst.alt} fill sizes="(max-width: 980px) 92vw, 520px" />
+          </div>
           <h3 className="mini">Serviceregio&apos;s</h3>
           <div className="places">
             {plaatsen.map((p) => (

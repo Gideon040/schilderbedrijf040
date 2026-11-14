@@ -26,4 +26,11 @@ export function plaatsLink(plaats: string): { href: string; tekst: string } | nu
   return slug ? { href: `/locaties/${slug}`, tekst: `Schilder ${cityData[slug].displayName}` } : null
 }
 
+// Projectfoto als SiteImage (bijvoorbeeld als hero van een dienstpagina)
+export function projectFoto(slug: string, i = 0) {
+  const f = project(slug)?.fotos[i]
+  if (!f) throw new Error(`Projectfoto ${slug} ${i} bestaat niet`)
+  return { src: f.src, alt: f.alt, width: f.width, height: f.height, eigenAlt: true }
+}
+
 export const plaatsLabel = (p: Project) => [p.wijk, p.plaats].filter(Boolean).join(', ')

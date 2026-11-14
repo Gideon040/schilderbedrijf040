@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { DienstTemplate, type DienstPagina } from '@/components/dienst/template'
-import { images } from '@/lib/images'
+import { images, sfeer } from '@/lib/images'
 import { orgRef, serviceOffers } from '@/lib/schema'
 import { hoofd, site } from '@/lib/site'
 import { prijsKort, prijsTekst, teBevestigen } from '@/lib/prices'
@@ -199,6 +199,7 @@ const pagina: DienstPagina = {
     </p>
   ),
   heroImg: images.behang,
+  sectieImg: sfeer.behang,
   kerncijfers: [
     { waarde: '15 tot 20 jaar', label: 'Levensduur vliesbehang' },
     { waarde: '10x', label: 'Glasvezel overschilderbaar' },

@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { TOON_JORDY } from '@/lib/jordy'
 import Link from 'next/link'
 import { DienstTemplate, type DienstPagina } from '@/components/dienst/template'
-import { images } from '@/lib/images'
+import { images, sfeer } from '@/lib/images'
 import { orgRef, serviceOffers } from '@/lib/schema'
 import { hoofd, site } from '@/lib/site'
 import { prijsKort, prijsTekst, prijzen, teBevestigen } from '@/lib/prices'
@@ -185,6 +185,7 @@ const pagina: DienstPagina = {
     </p>
   ),
   heroImg: images.latex,
+  sectieImg: sfeer.afplakken,
   kerncijfers: [
     { waarde: '3 tot 5x sneller', label: 'Snelheid' },
     { waarde: prijsKort.latex, label: 'Prijs per m²' },

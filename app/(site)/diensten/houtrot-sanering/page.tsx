@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { DienstTemplate, type DienstPagina } from '@/components/dienst/template'
-import { images } from '@/lib/images'
+import { images, sfeer } from '@/lib/images'
 import { TOON_JORDY } from '@/lib/jordy'
 import { prijsKort, prijsTekst, prijzen, teBevestigen } from '@/lib/prices'
 import { orgRef, serviceOffers } from '@/lib/schema'
@@ -192,6 +192,7 @@ const pagina: DienstPagina = {
     </p>
   ),
   heroImg: images.houtrot,
+  sectieImg: sfeer.houtrot,
   kerncijfers: [
     { waarde: '70% goedkoper', label: 'Reparatie vs vervangen' },
     { waarde: '30 tot 60 min', label: 'Inspectietijd' },

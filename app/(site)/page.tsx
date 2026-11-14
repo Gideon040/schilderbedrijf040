@@ -22,6 +22,7 @@ import { JsonLd } from '@/components/json-ld'
 import { breadcrumbSchema, faqSchema } from '@/lib/schema'
 import { huidigSeizoen } from '@/lib/seizoen'
 import { site } from '@/lib/site'
+import { sfeer } from '@/lib/images'
 import { prijsTekst } from '@/lib/prices'
 
 // Dagelijks opnieuw opbouwen, zodat het seizoensblok vanzelf wisselt
@@ -108,6 +109,7 @@ export default function Home() {
       <WerkgebiedFaq faqs={faqs} />
       <Social />
       <Offerte
+        achtergrond={sfeer.entreeOranje}
         formTitel="Vraag een offerte aan"
         extra={
           <div className="q-extra">

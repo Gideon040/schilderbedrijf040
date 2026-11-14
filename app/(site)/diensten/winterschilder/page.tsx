@@ -3,7 +3,7 @@ import { TOON_JORDY, jordy } from '@/lib/jordy'
 import { AFSPRAAK, datumTekst, winteractieActief } from '@/lib/afspraak'
 import Link from 'next/link'
 import { DienstTemplate, type DienstPagina } from '@/components/dienst/template'
-import { images } from '@/lib/images'
+import { images, sfeer } from '@/lib/images'
 import { breadcrumbSchema, faqSchema, orgRef, serviceOffers, werkgebied } from '@/lib/schema'
 import { site } from '@/lib/site'
 import { prijsTekst } from '@/lib/prices'
@@ -75,6 +75,7 @@ const pagina: DienstPagina = {
     </p>
   ),
   heroImg: images.woonkamer,
+  sectieImg: sfeer.winter,
   kerncijfers: [
     { waarde: '10 tot 25 °C', label: 'Verwerkingstemperatuur binnen' },
     { waarde: '4 tot 6 uur', label: 'Droogtijd per laag muurverf' },

@@ -1,7 +1,8 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { DienstTemplate, type DienstPagina } from '@/components/dienst/template'
-import { images } from '@/lib/images'
+import { images, sfeer } from '@/lib/images'
+import { projectFoto } from '@/lib/projecten'
 import { prijsKort, prijsTekst, prijzen, teBevestigen } from '@/lib/prices'
 import { orgRef, serviceOffers } from '@/lib/schema'
 import { hoofd, site } from '@/lib/site'
@@ -208,7 +209,8 @@ const pagina: DienstPagina = {
       <Link href="/diensten/binnenschilderwerk">binnenschilderwerk aan muren en plafonds</Link>.
     </p>
   ),
-  heroImg: images.lakKozijnen,
+  heroImg: projectFoto('driehoeksbos-eindhoven', 0),
+  sectieImg: sfeer.garagedeuren,
   kerncijfers: [
     { waarde: '8 tot 10 jaar', label: 'Levensduur' },
     { waarde: '16 tot 24 uur', label: 'Droogtijd lak' },
