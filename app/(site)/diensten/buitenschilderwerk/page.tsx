@@ -328,7 +328,8 @@ const pagina: DienstPagina = {
         {toonBlok(dakkapel.prijs) ? <>Een dakkapel laten schilderen kost gemiddeld {dakkapel.prijs}, afhankelijk van de grootte en de staat van het houtwerk.</> : <>Wat een dakkapel laten schilderen kost, hangt af van de grootte en de staat van het houtwerk.</>} Een dakkapel
         heeft eigen kozijnen, boeiboorden en vaak een zinken of houten bekleding, en al die onderdelen hebben onderhoud nodig. Omdat een
         dakkapel hoog zit, loont het om hem samen met de kozijnen en boeidelen te laten schilderen: dat scheelt in steiger- of ladderkosten en
-        geeft een gelijk eindresultaat.
+        geeft een gelijk eindresultaat. Meer over{' '}
+        <Link href="/diensten/dakkapel-schilderen">dakkapel schilderen</Link>.
       </p>
       <h3 id="buitendeuren-schilderen" className="klus-h3">
         Voordeur en buitendeuren schilderen

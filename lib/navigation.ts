@@ -11,6 +11,7 @@ export const diensten = [
   { name: 'Houtrot sanering', href: '/diensten/houtrot-sanering' },
   { name: 'Schilderen in de winter', href: '/diensten/winterschilder' },
   { name: 'Trap schilderen', href: '/diensten/trap-schilderen' },
+  { name: 'Dakkapel schilderen', href: '/diensten/dakkapel-schilderen' },
   // Fase 7: nieuwe dienstpagina's worden hier toegevoegd zodra ze bestaan
 ]
 
