@@ -5,7 +5,7 @@ import { DienstTemplate, type DienstPagina } from '@/components/dienst/template'
 import { images, sfeer } from '@/lib/images'
 import { afbreek } from '@/components/site/v2'
 import { TOON_JORDY, toonBlok } from '@/lib/jordy'
-import { prijsRij, prijsTekst, prijzen, teBevestigen } from '@/lib/prices'
+import { PRIJSLIJST, prijsRij, prijsTekst, prijzen, rekenvoorbeeld, teBevestigen } from '@/lib/prices'
 import { orgRef, serviceOffers } from '@/lib/schema'
 import { hoofd, site } from '@/lib/site'
 
@@ -350,6 +350,22 @@ const pagina: DienstPagina = {
         <Link href="/locaties/nuenen">Nuenen</Link> en <Link href="/locaties/geldrop">Geldrop</Link>, of over{' '}
         <Link href="/locaties/waalre">schilderwerk in Waalre</Link>. Overal geldt dezelfde werkwijze:{' '}
         <Link href="/contact">een gratis inspectie</Link> met houtrotcontrole en een offerte met vaste prijs.
+      </p>
+      <h2 id="wat-kost-een-huis-buiten-laten-schilderen" className="h-section mt-6 scroll-mt-28">
+        Wat kost een huis buiten laten schilderen?
+      </h2>
+      <p>
+        De prijs voor een complete buitenschilderbeurt is de optelsom van de onderdelen. Kozijnen, boeidelen en ander houtwerk vallen onder lakwerk
+        buiten: {prijsTekst.lakBuiten}. Een buitendeur lakken kost {prijsTekst.deur}. Moet de gevel zelf geschilderd worden, dan komt daar{' '}
+        {prijsTekst.gevel} bij. Zit er houtrot in het hout, dan kost herstellen {prijsTekst.houtrot}. Een steiger, als die nodig is, staat apart in
+        de offerte.
+      </p>
+      <p>
+        Een rekenvoorbeeld: een woning met samen 12 m² te lakken kozijnen en boeidelen en twee buitendeuren komt voor het lakwerk uit op{' '}
+        {rekenvoorbeeld(12, PRIJSLIJST.lakwerkBuiten)}, plus de deuren. Dit is exclusief btw, houtrotherstel en steiger. Hoeveel m² hout uw woning
+        heeft, meet Jordy bij de gratis inspectie op. De volledige prijsopbouw staat op de pagina{' '}
+        <Link href="/kosten/kozijnen-schilderen">kosten kozijnen schilderen</Link>, en alle prijzen op een rij bij{' '}
+        <Link href="/kosten/wat-kost-een-schilder">wat kost een schilder</Link>.
       </p>
     </>
   ),

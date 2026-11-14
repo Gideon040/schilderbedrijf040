@@ -271,6 +271,21 @@ const pagina: DienstPagina = {
         verwijderen van behang voorbereidt en verft. Liever alles in één keer uit handen geven?{' '}
         <Link href="/contact">Vraag een gratis inspectie aan</Link>, dan staan verwijderen, voorbehandelen en verven samen in één offerte.
       </p>
+      <h2 id="fotobehang-laten-plakken" className="h-section mt-6 scroll-mt-28">
+        Fotobehang laten plakken
+      </h2>
+      <p>
+        Fotobehang is één afbeelding die over meerdere banen loopt. Juist daardoor valt elke fout direct op: een baan die een paar millimeter
+        verschuift, breekt de afbeelding. Het plakken vraagt daarom meer paswerk dan gewoon behang. De banen moeten precies op elkaar aansluiten,
+        recht hangen en op de juiste hoogte beginnen, zodat het beeld goed op de wand staat.
+      </p>
+      <p>
+        De ondergrond is minstens zo belangrijk. Fotobehang is vaak dun, waardoor oneffenheden in de muur zichtbaar blijven. De muur wordt daarom
+        eerst glad gemaakt en voorgestreken ({prijsTekst.voorstrijken}), zodat het behang goed hecht en egaal droogt. Behangen kost bij
+        Schildersbedrijf040 {prijsTekst.behangen}; door het extra paswerk vraagt fotobehang meer tijd. De vaste prijs hoort u na de gratis inspectie,
+        waarbij Jordy de wand opmeet en bekijkt. Let op de btw: het plakken valt in een woning ouder dan twee jaar onder 9%, het behang zelf onder
+        21%.
+      </p>
     </>
   ),
   soorten: {

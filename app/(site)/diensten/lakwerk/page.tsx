@@ -302,6 +302,20 @@ const pagina: DienstPagina = {
         buitendeuren, een hele verdieping met deuren en kozijnen of een trap kiezen de meeste huiseigenaren voor een schilder. Een trap moet
         immers bruikbaar blijven tijdens het werk, en een voordeur moet ook na de laatste laklaag weer dicht kunnen.
       </p>
+      <h2 id="deuren-laten-spuiten" className="h-section mt-6 scroll-mt-28">
+        Deuren laten spuiten of lakken met de kwast?
+      </h2>
+      <p>
+        Een deur kan met de kwast en roller worden gelakt, of worden gespoten. Spuiten geeft een gladde, fabrieksmatige afwerking zonder
+        kwaststrepen, vergelijkbaar met hoe Schildersbedrijf040 keukenkasten spuit. Het vraagt wel meer voorbereiding: de deur en de omgeving moeten
+        zorgvuldig worden afgeplakt, en vaak gaat de deur er tijdelijk uit. Met de kwast lakken is bij een enkele deur in een bewoonde woning meestal
+        praktischer.
+      </p>
+      <p>
+        Welke methode bij uw deuren past, hangt af van het aantal deuren, het type deur en of er tegelijk andere ruimtes worden gedaan. Jordy
+        adviseert dat bij de inspectie. Een deur lakken kost {prijsTekst.deur}; de vaste prijs voor uw deuren staat in de offerte. Wie het zelf
+        wil proberen, vindt de stappen in het artikel <Link href="/blog/hoe-schilder-je-een-deur">een deur schilderen zonder strepen</Link>.
+      </p>
     </>
   ),
   soorten: {
