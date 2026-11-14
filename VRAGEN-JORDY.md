@@ -71,3 +71,22 @@ Alle pagina's lezen hun bedragen nu uit `lib/prices.ts`. Tot je antwoord staan o
 ## Btw en teksten
 
 32. **Btw op houtrotherstel en kitwerk:** volgens de Belastingdienst valt houtrot herstellen met nieuwe houten inzetstukken of onderdorpels, constructief kitwerk en glas plaatsen onder 21%, en het behang zelf ook. Op de houtrot- en behangpagina en op enkele locatiepagina's staat nu "9% btw voor woningen ouder dan 2 jaar" zonder die uitzondering, en op een paar plekken "9% op het arbeidsloon" (het is 9% op arbeid én de gebruikte materialen). Hoe factureer je dit nu? Dan zetten we de teksten gelijk. De blog over het btw-tarief is al bijgewerkt (14-11-2026).
+
+## Nieuwe pagina's (fase 7, live sinds 14-11-2026)
+
+Deze pagina's zijn gebouwd met alleen bestaande feiten en de prijslijst. Graag bevestigen of aanvullen:
+
+33. **VvE en zakelijk** (`/diensten/vve-en-zakelijk`): wil je dit werk doen? Zo niet, dan halen we de pagina weg. Heb je referenties (zonder namen) die we mogen noemen?
+34. **Deuren spuiten** (sectie op `/diensten/lakwerk`): spuit je ook deuren, of alleen keukenkasten? De tekst zegt nu dat Jordy per deur adviseert of spuiten of lakken past.
+35. **Trap** (`/diensten/trap-schilderen`): klopt "2 tot 3 dagen" en "om en om werken" (stond al op de site)? Neem je kitwerk langs de trap mee (zoals in de review van Marlie S)?
+36. **Dakkapel** (`/diensten/dakkapel-schilderen`): een vaste prijsindicatie per dakkapel (zie ook vraag 19) en of kitwerk rond de kozijnen in de prijs zit.
+37. **Latex spuiten nieuwbouw**: was de bungalow in Best nieuwbouw? Dan noemen we dat op de projectpagina.
+38. **Fotobehang** (sectie op `/diensten/behangen`): bestel jij het behang of de klant? Zit het behang in de prijs per m²?
+39. **Helmond**: heb je een project of een review uit Helmond? Dan komt die op de pagina (nu staat er geen projectblok).
+
+## Besluiten zonder antwoord (werkafspraak 14-11-2026)
+
+- Prijzen: overal de waarden van de dienstkaarten.
+- Blokken en zinnen zonder antwoord zijn weggelaten; er staat nergens `[INVULLEN]` op de live site.
+- Winterkorting-badge "Tot 20% korting" staat live; de voorwaardenzin verschijnt zodra vraag 20 is beantwoord.
+- Review w03 (trap, Werkspot) staat niet op de trappagina, omdat de tekst is ingekort (vraag 5).
