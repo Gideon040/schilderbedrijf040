@@ -1,5 +1,7 @@
 // Bedrijfsfeiten op één plek. Alleen feiten die door Jordy zijn bevestigd (zie seo/CLAUDE.md).
 
+import { reviewTotalen } from './reviews'
+
 export const site = {
   name: 'Schildersbedrijf040',
   url: 'https://schildersbedrijf040.nl',
@@ -19,17 +21,19 @@ export const site = {
   openingHours: { days: 'Ma t/m vr', opens: '08:00', closes: '17:30' },
   logo: 'https://schildersbedrijf040.nl/images/schildersbedrijf040-logo.png',
   ogImage: 'https://schildersbedrijf040.nl/images/schildersbedrijf040-schilder-eindhoven.jpg',
+  // Scores en aantallen komen uit data/reviews.json (niet hardcoderen)
   google: {
-    rating: '5,0',
-    ratingValue: 5.0,
-    reviewCount: 41,
-    // Stand september 2026
+    rating: reviewTotalen.google.scoreTekst,
+    ratingValue: reviewTotalen.google.score,
+    reviewCount: reviewTotalen.google.aantal,
     reviewsUrl: 'https://www.google.com/search?q=schildersbedrijf040',
+    // [INVULLEN: directe link om een Google-review te schrijven (search.google.com/local/writereview?placeid=...)]
+    schrijfReviewUrl: null as string | null,
   },
   werkspot: {
-    rating: '4,9',
-    ratingValue: 4.9,
-    reviewCount: 19,
+    rating: reviewTotalen.werkspot.scoreTekst,
+    ratingValue: reviewTotalen.werkspot.score,
+    reviewCount: reviewTotalen.werkspot.aantal,
   },
   experience: '5+ jaar',
   paintBrand: 'Boonstoppel',

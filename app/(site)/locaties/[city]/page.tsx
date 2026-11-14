@@ -13,7 +13,8 @@ import { afbreek, MetLinks, Eyebrow, KnopBel, KnopOfferte, Pijl, Streek, staal }
 import { TOON_JORDY } from '@/lib/jordy'
 import { PRIJSGIDS } from '@/lib/navigation'
 import { prijzen } from '@/lib/prices'
-import { bronLabel, locatieQuotes } from '@/lib/reviews'
+import { reviewsUit, reviewsVoor, bronNaam } from '@/lib/reviews'
+import { ReviewKaarten } from '@/components/site/reviews'
 import { orgRef } from '@/lib/schema'
 import { site } from '@/lib/site'
 
@@ -136,10 +137,14 @@ export default function LocationPage({ params }: { params: { city: string } }) {
   const foto = heroFoto(city)
   const buurplaatsen = (buren[city] ?? []).filter((b) => cityData[b])
   const X = data.displayName
+  // Eerst reviews uit deze plaats, dan aanvullen. "Review uit de buurt" alleen bij een echte review uit de plaats.
+  const uitPlaats = reviewsUit(X)
+  const buurtReview = uitPlaats[0]
+  const klantReviews = reviewsVoor({ plaats: X, aantal: 3 })
 
   // Teksten van het live template (main), letterlijk, em dashes vervangen
   const usps = [
-    { titel: 'Hoogst beoordeeld in de regio', beschrijving: '5 sterren op Google en 4,9 op Werkspot met 41+ beoordelingen.' },
+    { titel: 'Hoogst beoordeeld in de regio', beschrijving: `${site.google.rating} op Google uit ${site.google.reviewCount} reviews en ${site.werkspot.rating} op Werkspot.` },
     { titel: 'Premium Boonstoppel verf', beschrijving: '8 tot 10 jaar bescherming, de beste keuze voor langdurig resultaat.' },
     { titel: 'Garantie op elk project', beschrijving: 'Kwaliteitsgarantie op al het schilderwerk, u bent altijd verzekerd.' },
     { titel: 'Korte reistijd, lage kosten', beschrijving: `Gevestigd in Eindhoven, minimale voorrijkosten voor ${X}.` },
@@ -335,15 +340,20 @@ export default function LocationPage({ params }: { params: { city: string } }) {
               ['Oppervlak', '[JORDY: m²]'],
             ]}
             extra={
-              <div className="buurt-review">
-                <h3 id="review">Review uit de buurt</h3>
-                <p className="bq">
-                  &ldquo;{locatieQuotes.google}&rdquo;
-                  <span className="rr">
-                    <span aria-hidden="true">★★★★★</span> <span className="m">{bronLabel.google}</span>
-                  </span>
-                </p>
-              </div>
+              buurtReview && (
+                <div className="buurt-review">
+                  <h3 id="review">Review uit de buurt</h3>
+                  <p className="bq">
+                    &ldquo;{buurtReview.tekst}&rdquo;
+                    <span className="rr">
+                      <span aria-hidden="true">★★★★★</span>{' '}
+                      <span className="m">
+                        {buurtReview.naam} · {buurtReview.plaats} · {bronNaam[buurtReview.bron]}
+                      </span>
+                    </span>
+                  </p>
+                </div>
+              )
             }
             knop={{ href: '/projecten', tekst: 'Bekijk projecten' }}
           />
@@ -370,24 +380,13 @@ export default function LocationPage({ params }: { params: { city: string } }) {
               </div>
             ))}
           </div>
-          <div className="rev-strip">
-            <figure className="rv">
-              <div className="stars" aria-hidden="true">
-                ★★★★★
-              </div>
-              <h3 className="rq">5,0 op Google</h3>
-              <blockquote>&ldquo;{locatieQuotes.google}&rdquo;</blockquote>
-              <figcaption>{bronLabel.google}</figcaption>
-            </figure>
-            <figure className="rv">
-              <div className="stars" aria-hidden="true">
-                ★★★★★
-              </div>
-              <h3 className="rq">4,9 op Werkspot</h3>
-              <blockquote>&ldquo;{locatieQuotes.werkspot}&rdquo;</blockquote>
-              <figcaption>{bronLabel.werkspot}</figcaption>
-            </figure>
-          </div>
+          <h2 id="reviews" className="mini-h2 rv">
+            {uitPlaats.length ? `Reviews uit ${X}` : 'Wat klanten zeggen'}
+          </h2>
+          <ReviewKaarten reviews={klantReviews} drie />
+          <p className="rv" style={{ marginTop: 18 }}>
+            <Link href="/reviews">Alle reviews lezen →</Link>
+          </p>
         </div>
       </section>
 

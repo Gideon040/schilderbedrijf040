@@ -320,7 +320,7 @@ const pagina: DienstPagina = {
     tekst:
       'Schildersbedrijf040 is een schildersbedrijf uit Eindhoven met ruim vijf jaar ervaring. Eigenaar Jordy Jacobs bekijkt uw kozijnen zelf en is uw vaste aanspreekpunt van inspectie tot oplevering.',
     usps: [
-      { titel: '5,0 op Google', beschrijving: 'Uit 41 reviews op Google, en een 4,9 op Werkspot.' },
+      { titel: `${site.google.rating} op Google`, beschrijving: `Uit ${site.google.reviewCount} reviews op Google, en een ${site.werkspot.rating} op Werkspot uit ${site.werkspot.reviewCount} beoordelingen.` },
       { titel: 'Houtrotcheck', beschrijving: 'Elk kozijn wordt gecontroleerd voordat er verf op komt, zodat rot hout niet onder een nieuwe laag verdwijnt.' },
       { titel: 'Boonstoppel-verf', beschrijving: 'Buitenlak die 8 tot 10 jaar meegaat bij goede voorbereiding.' },
       { titel: 'Vaste prijs per kozijn', beschrijving: 'Na de gratis inspectie weet u per kozijn wat het kost, houtrotherstel en steiger apart vermeld.' },

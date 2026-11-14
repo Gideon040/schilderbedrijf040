@@ -4,6 +4,7 @@ import { site } from '@/lib/site'
 
 const snelleLinks = [
   { name: 'Projecten', href: '/projecten' },
+  { name: 'Reviews', href: '/reviews' },
   { name: 'Over ons', href: '/over-ons' },
   { name: 'Veelgestelde vragen', href: '/faq' },
   { name: 'Blog', href: '/blog' },
@@ -18,7 +19,9 @@ export function Footer() {
           <div className="brand">Schildersbedrijf040</div>
           <p>Vakkundig schilderwerk in Eindhoven en omgeving. Eigenaar {site.owner}.</p>
           <p style={{ color: '#fff' }}>
-            <span aria-hidden="true">★</span> {site.google.rating} op Google ({site.google.reviewCount}) · {site.werkspot.rating} op Werkspot
+            <span aria-hidden="true">★</span> <Link href="/reviews" style={{ display: 'inline', color: 'inherit' }}>
+              {site.google.rating} op Google ({site.google.reviewCount}) · {site.werkspot.rating} op Werkspot ({site.werkspot.reviewCount})
+            </Link>
           </p>
           <p className="social">
             <a href={site.sameAs[0]} target="_blank" rel="noopener noreferrer" aria-label="Schildersbedrijf040 op Facebook">

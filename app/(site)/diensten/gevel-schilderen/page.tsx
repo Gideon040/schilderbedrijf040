@@ -346,7 +346,7 @@ const pagina: DienstPagina = {
     tekst:
       'Schildersbedrijf040 is een schildersbedrijf uit Eindhoven met ruim vijf jaar ervaring. Eigenaar Jordy Jacobs beoordeelt zelf of uw gevel geschikt is en is uw vaste aanspreekpunt van inspectie tot oplevering.',
     usps: [
-      { titel: '5,0 op Google', beschrijving: 'Uit 41 reviews op Google, en een 4,9 op Werkspot.' },
+      { titel: `${site.google.rating} op Google`, beschrijving: `Uit ${site.google.reviewCount} reviews op Google, en een ${site.werkspot.rating} op Werkspot uit ${site.werkspot.reviewCount} beoordelingen.` },
       { titel: 'Eerlijk advies', beschrijving: 'Is schilderen niet verstandig voor uw gevel, dan hoort u dat vooraf.' },
       { titel: 'Boonstoppel-verf', beschrijving: 'Verf die 8 tot 10 jaar meegaat bij goede voorbereiding.' },
       { titel: 'Vaste prijs', beschrijving: 'Prijs per m², met steiger en reiniging als aparte regels in de offerte.' },

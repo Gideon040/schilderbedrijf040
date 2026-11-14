@@ -24,6 +24,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     pagina('/contact', 'monthly', 0.9),
     pagina('/faq', 'monthly', 0.7),
     pagina('/projecten', 'weekly', 0.7),
+    pagina('/reviews', 'monthly', 0.7),
   ]
 
   const dienstenPages: MetadataRoute.Sitemap = diensten.map((d) => pagina(d.href, 'monthly', 0.9))

@@ -1197,3 +1197,15 @@ header.nav nav.mmenu{display:block;font-weight:400;font-size:inherit}
   .afs-verder{flex:1}
 }
 @media (prefers-reduced-motion:reduce){.afs-overlay,.afs-dialoog{animation:none}.afs-knop,.afs-soorten label::before{transition:none}.afs-sticker{animation:none}}
+
+/* ---------- SEO en conversie, november 2026 ---------- */
+/* Reviews: inklappen en driekoloms variant */
+.lees-meer{display:inline}
+.lees-meer summary{display:inline;cursor:pointer;color:var(--blue);font-weight:700;list-style:none}
+.lees-meer summary::-webkit-details-marker{display:none}
+.lees-meer[open] summary{display:none}
+.cards.c3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.rev-sec .cards{margin-top:28px}
+.rev-sec .rev-meer{margin-top:24px;display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.rev-sec .rev-meer small{color:var(--muted)}
+@media (max-width: 980px){.cards.c3{grid-template-columns:1fr}}

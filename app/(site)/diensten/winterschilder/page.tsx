@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { DienstTemplate, type DienstPagina } from '@/components/dienst/template'
 import { images } from '@/lib/images'
 import { breadcrumbSchema, faqSchema, orgRef, serviceOffers, werkgebied } from '@/lib/schema'
+import { site } from '@/lib/site'
 
 // Dagelijks opnieuw opbouwen, zodat de winteractie na de einddatum vanzelf verdwijnt
 export const revalidate = 86400
@@ -215,7 +216,7 @@ const pagina: DienstPagina = {
     tekst:
       'Schildersbedrijf040 is een schildersbedrijf uit Eindhoven met ruim vijf jaar ervaring. Eigenaar Jordy Jacobs is uw vaste aanspreekpunt van inspectie tot oplevering.',
     usps: [
-      { titel: '5,0 op Google', beschrijving: 'Uit 41 reviews op Google, en een 4,9 op Werkspot.' },
+      { titel: `${site.google.rating} op Google`, beschrijving: `Uit ${site.google.reviewCount} reviews op Google, en een ${site.werkspot.rating} op Werkspot uit ${site.werkspot.reviewCount} beoordelingen.` },
       { titel: 'Boonstoppel-verf', beschrijving: 'Watergedragen en geurarm binnen, verf die 8 tot 10 jaar meegaat.' },
       { titel: 'Vaste prijs', beschrijving: 'Na een gratis inspectie krijgt u een offerte met vaste prijs.' },
       { titel: 'Netjes in huis', beschrijving: 'Meubels en vloeren worden afgedekt en de werkplek wordt schoon opgeleverd.' },

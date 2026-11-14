@@ -1,84 +1,68 @@
-// Reviews zoals ze op de live site stonden (main, commit c892894). Tekst, naam, plaats en datum letterlijk overgenomen.
-// In ronde 1 waren ze weggehaald; volgens ontwerp v2 komen ze terug (seo/plan/design-v2/LEESMIJ.md, regel 2).
+// Eén bron voor alle reviews en tellingen: data/reviews.json (Google en Werkspot, overgenomen op 13-11-2026).
+// Reviewteksten worden letterlijk getoond. Plaats en diensten per review kunnen in dat bestand worden aangevuld
+// (of via `node scripts/reviews-csv.mjs export` en `import` in een spreadsheet), zonder code aan te passen.
+import data from '@/data/reviews.json'
 
 export type Review = {
-  tekst: string
+  id: string
+  bron: 'google' | 'werkspot'
   naam: string
-  plaats?: string
-  datum?: string
-  bron: 'Google' | 'Werkspot'
-  dienst?: string
+  sterren: number
+  jaar: number | null
+  plaats: string | null
+  diensten: string[]
+  heeft_fotos: boolean
+  ingekort?: boolean
+  tekst: string
 }
 
-// Homepage (components/sections/reviews.tsx op main)
-export const reviews: Review[] = [
-  {
-    tekst:
-      'Uitstekend binnenschilderwerk geleverd in onze woning in Eindhoven Centrum. Zeer professioneel, netjes afgewerkt en alles keurig afgedekt tijdens het werk.',
-    naam: 'Peter van der Berg',
-    plaats: 'Eindhoven Centrum',
-    datum: '2025-09-12',
-    bron: 'Google',
-    dienst: 'binnenschilderwerk',
-  },
-  {
-    tekst:
-      'Schildersbedrijf040 heeft prachtig behangwerk geleverd in onze woonkamer in Strijp. Klantvriendelijke service en het resultaat is perfect. Echte aanrader!',
-    naam: 'Maria Jansen',
-    plaats: 'Strijp, Eindhoven',
-    datum: '2025-06-23',
-    bron: 'Google',
-    dienst: 'behangen',
-  },
-  {
-    tekst:
-      'Zeer tevreden met het buitenschilderwerk aan onze woning in Woensel. Netjes en volgens planning uitgevoerd, inclusief houtrot sanering van twee kozijnen.',
-    naam: 'Johan Smits',
-    plaats: 'Woensel, Eindhoven',
-    datum: '2025-03-08',
-    bron: 'Google',
-    dienst: 'buitenschilderwerk',
-  },
-]
+export const alleReviews = data.reviews as Review[]
 
-// Quotes op de dienstpagina's (kaartjes "5.0 op Google" en "4.9 op Werkspot" op main)
-export const dienstQuotes: Record<string, { google: string; werkspot: string }> = {
-  binnenschilderwerk: {
-    google: 'Uitstekend werk geleverd! Zeer netjes, punctueel en het resultaat is prachtig. Absoluut een aanrader voor binnenschilderwerk.',
-    werkspot: 'Heel tevreden met het schilderwerk. Goede communicatie, netjes afgewerkt en op tijd opgeleverd. Aanrader!',
-  },
-  buitenschilderwerk: {
-    google: 'Buitenschilderwerk top afgeleverd. Kozijnen zien er weer als nieuw uit. Goede voorbereiding en netjes opgeruimd na afloop.',
-    werkspot: 'Heel tevreden. Houtrot netjes gerepareerd en het schilderwerk is perfect. Goede communicatie over de planning.',
-  },
-  behangen: {
-    google: 'Uitstekend werk geleverd! Zeer netjes, punctueel en het resultaat is prachtig. Absoluut een aanrader voor behangwerk.',
-    werkspot: 'Heel tevreden met het behangwerk. Goede communicatie, netjes afgewerkt en op tijd opgeleverd. Aanrader!',
-  },
-  'houtrot-sanering': {
-    google: 'Houtrot in meerdere kozijnen vakkundig gerepareerd. Eerlijk advies over wat gerepareerd kon worden en wat vervangen moest. Top resultaat!',
-    werkspot: 'Alle kozijnen geïnspecteerd en de houtrot plekken perfect gerepareerd met epoxy. Netjes afgeschilderd en je ziet niets meer. Aanrader!',
-  },
-  lakwerk: {
-    google: 'Uitstekend werk geleverd! Zeer netjes, punctueel en het resultaat is prachtig. Absoluut een aanrader voor lakwerk.',
-    werkspot: 'Heel tevreden met het lakwerk. Goede communicatie, netjes afgewerkt en op tijd opgeleverd. Aanrader!',
-  },
-  'latex-spuiten': {
-    google: 'Uitstekend werk geleverd! Zeer netjes, punctueel en het resultaat is prachtig. Absoluut een aanrader voor schilderwerk.',
-    werkspot: 'Heel tevreden met het spuitwerk. Goede communicatie, netjes afgewerkt en op tijd opgeleverd. Aanrader!',
-  },
+const nl = (n: number) => n.toLocaleString('nl-NL', { minimumFractionDigits: 1, maximumFractionDigits: 1 })
+
+// Tellingen en scores: lege reviews tellen mee, want ze staan wel op Google
+export const reviewTotalen = {
+  google: { score: data.totalen.google.score, scoreTekst: nl(data.totalen.google.score), aantal: data.totalen.google.aantal },
+  werkspot: { score: data.totalen.werkspot.score, scoreTekst: nl(data.totalen.werkspot.score), aantal: data.totalen.werkspot.aantal },
 }
 
-// Quotes op de locatiepagina's (template op main)
-export const locatieQuotes = {
-  google: 'Uitstekend werk geleverd! Zeer netjes, punctueel en het resultaat is prachtig. Absoluut een aanrader.',
-  werkspot: 'Heel tevreden met het schilderwerk. Goede communicatie, netjes afgewerkt en op tijd opgeleverd.',
+export const bronNaam = { google: 'Google', werkspot: 'Werkspot' } as const
+
+// Alleen tonen met tekst en als de volledige tekst bekend is
+export const toonbaar = (r: Review) => r.tekst.trim().length > 0 && !r.ingekort
+
+export const toonbareReviews = alleReviews.filter(toonbaar)
+
+export function reviewOpId(id: string): Review | undefined {
+  return toonbareReviews.find((r) => r.id === id)
 }
 
-// Bijschriften zoals op main (em dash vervangen)
-export const bronLabel = {
-  google: 'Google Reviews: 41 beoordelingen',
-  werkspot: 'Werkspot: Topvakman',
+const plaatsGelijk = (a: string | null, b: string) => !!a && a.toLowerCase() === b.toLowerCase()
+
+// Reviews voor een dienst- of locatiepagina: eerst met de juiste tag of plaats, dan aanvullen met reviews
+// zonder dienst-tag (algemene ervaringen). Volgorde in het bestand blijft behouden (nieuwste eerst).
+export function reviewsVoor({ dienst, plaats, aantal = 4 }: { dienst?: string; plaats?: string; aantal?: number }): Review[] {
+  const passend = toonbareReviews.filter((r) => (dienst ? r.diensten.includes(dienst) : true) && (plaats ? plaatsGelijk(r.plaats, plaats) : true))
+  if (passend.length >= aantal) return passend.slice(0, aantal)
+  const algemeen = toonbareReviews.filter((r) => !passend.includes(r) && r.diensten.length === 0 && r.tekst.length > 60)
+  return [...passend, ...algemeen].slice(0, aantal)
 }
 
-export const reviewPlaceholder = '[JORDY: echte Google-review koppelen]'
+// Reviews die echt uit een plaats komen (voor het blok "Review uit de buurt")
+export function reviewsUit(plaats: string): Review[] {
+  return toonbareReviews.filter((r) => plaatsGelijk(r.plaats, plaats))
+}
+
+// Homepage: afwisselend binnen en buiten, aangevuld met algemene reviews
+export function homeReviews(aantal = 9): Review[] {
+  const binnen = toonbareReviews.filter((r) => r.diensten.some((d) => ['binnenschilderwerk', 'behangen', 'latex-spuiten', 'trap-schilderen'].includes(d)))
+  const buiten = toonbareReviews.filter((r) => !binnen.includes(r) && r.diensten.some((d) => ['buitenschilderwerk', 'kozijnen-schilderen', 'houtrot-sanering'].includes(d)))
+  const uit: Review[] = []
+  for (let i = 0; uit.length < aantal - 1 && (i < binnen.length || i < buiten.length); i++) {
+    if (binnen[i]) uit.push(binnen[i])
+    if (buiten[i] && uit.length < aantal - 1) uit.push(buiten[i])
+  }
+  const werkspot = toonbareReviews.find((r) => r.bron === 'werkspot' && !uit.includes(r))
+  if (werkspot) uit.push(werkspot)
+  return uit.slice(0, aantal)
+}

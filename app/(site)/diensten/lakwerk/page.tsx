@@ -4,6 +4,7 @@ import { DienstTemplate, type DienstPagina } from '@/components/dienst/template'
 import { images } from '@/lib/images'
 import { prijzen } from '@/lib/prices'
 import { orgRef, serviceOffers } from '@/lib/schema'
+import { site } from '@/lib/site'
 
 export const metadata: Metadata = {
   title: 'Deuren en kozijnen lakken Eindhoven',
@@ -375,7 +376,7 @@ const pagina: DienstPagina = {
       {
         titel: 'Hoogst beoordeeld in de regio',
         beschrijving:
-          '5 sterren op Google en 4,9 op Werkspot, gebaseerd op 60+ beoordelingen van woningeigenaren in Eindhoven en omgeving.',
+          `${site.google.rating} op Google en ${site.werkspot.rating} op Werkspot, gebaseerd op ${site.google.reviewCount + site.werkspot.reviewCount} beoordelingen van woningeigenaren in Eindhoven en omgeving.`,
       },
       {
         titel: 'Uitsluitend Boonstoppel A-merk lak',

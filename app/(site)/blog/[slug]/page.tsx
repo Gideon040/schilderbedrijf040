@@ -180,7 +180,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
               <span className="stars" aria-hidden="true">
                 ★★★★★
               </span>{' '}
-              5,0 · 4,9
+              {site.google.rating} · {site.werkspot.rating}
             </span>
           </div>
         </div>
@@ -259,7 +259,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
                 <span className="stars" aria-hidden="true">
                   ★★★★★
                 </span>{' '}
-                5,0 uit 41 reviews
+                {site.google.rating} uit {site.google.reviewCount} reviews
               </span>
             </div>
           </aside>

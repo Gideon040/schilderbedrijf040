@@ -60,7 +60,7 @@ const faqs: Faq[] = [
   {
     question: 'Hoe herkent u een goede schilder in Eindhoven?',
     answer:
-      'Een goede schilder in Eindhoven herkent u aan ervaringen van klanten, een duidelijke offerte en zorgvuldige voorbereiding. Kijk naar reviews: Schildersbedrijf040 heeft een 5,0 op Google uit 41 reviews en een 4,9 op Werkspot. Vraag om een inspectie bij u thuis en een offerte met vaste prijs, en vraag welke verf er wordt gebruikt. Schildersbedrijf040 werkt met Boonstoppel-verf en heeft ruim vijf jaar ervaring in Eindhoven en omgeving.',
+      `Een goede schilder in Eindhoven herkent u aan ervaringen van klanten, een duidelijke offerte en zorgvuldige voorbereiding. Kijk naar reviews: Schildersbedrijf040 heeft een ${site.google.rating} op Google uit ${site.google.reviewCount} reviews en een ${site.werkspot.rating} op Werkspot. Vraag om een inspectie bij u thuis en een offerte met vaste prijs, en vraag welke verf er wordt gebruikt. Schildersbedrijf040 werkt met Boonstoppel-verf en heeft ruim vijf jaar ervaring in Eindhoven en omgeving.`,
   },
   {
     question: 'Welke garantie geeft Schildersbedrijf040 op schilderwerk?',

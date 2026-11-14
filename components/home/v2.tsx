@@ -3,7 +3,8 @@ import Link from 'next/link'
 import { images, type SiteImage } from '@/lib/images'
 import { plaatsen } from '@/lib/navigation'
 import { prijzen } from '@/lib/prices'
-import { reviews, dienstQuotes } from '@/lib/reviews'
+import { homeReviews } from '@/lib/reviews'
+import { ReviewKaart } from '@/components/site/reviews'
 import { site } from '@/lib/site'
 import { jordy, toonBlok } from '@/lib/jordy'
 import type { Seizoensblok } from '@/lib/seizoen'
@@ -70,7 +71,7 @@ export function HomeHero() {
                 <path id="badge-cirkel" d="M58,58 m-44,0 a44,44 0 1,1 88,0 a44,44 0 1,1 -88,0" />
               </defs>
               <text fontFamily="var(--mono)" fontSize="9" letterSpacing="2.4" fill="#0A1626">
-                <textPath href="#badge-cirkel">GOOGLE REVIEWS · 41 · GOOGLE REVIEWS · 41 ·</textPath>
+                <textPath href="#badge-cirkel">{`GOOGLE REVIEWS · ${site.google.reviewCount} · GOOGLE REVIEWS · ${site.google.reviewCount} ·`}</textPath>
               </text>
             </svg>
             <div>
@@ -405,36 +406,18 @@ export function Reviews() {
             ★★★★★
           </div>
           <p>Gemiddeld uit {site.google.reviewCount} reviews op Google</p>
-          <p>5 sterren op Google en 4,9 op Werkspot, ontdek wat klanten over Schildersbedrijf040 zeggen</p>
-          <a className="btn btn-blue" href={site.google.reviewsUrl} target="_blank" rel="noopener noreferrer">
-            Bekijk al onze Google Reviews <Pijl />
-          </a>
+          <p>
+            {site.google.rating} op Google en {site.werkspot.rating} op Werkspot uit {site.werkspot.reviewCount} beoordelingen. Ontdek wat klanten over
+            Schildersbedrijf040 zeggen.
+          </p>
+          <Link className="btn btn-blue" href="/reviews">
+            Alle reviews lezen <Pijl />
+          </Link>
         </div>
         <div className="cards">
-          {reviews.map((r) => (
-            <article key={r.naam} className="rv">
-              <div className="stars" aria-hidden="true">
-                ★★★★★
-              </div>
-              <blockquote>{r.tekst}</blockquote>
-              <div className="ft">
-                <b>{r.naam}</b>
-                <span>
-                  {r.plaats} · {r.datum} · {r.bron}
-                </span>
-              </div>
-            </article>
+          {homeReviews(8).map((r) => (
+            <ReviewKaart key={r.id} r={r} />
           ))}
-          <article className="rv">
-            <div className="stars" aria-hidden="true">
-              ★★★★★
-            </div>
-            <blockquote>{dienstQuotes.binnenschilderwerk.werkspot}</blockquote>
-            <div className="ft">
-              <b>Werkspot</b>
-              <span>{site.werkspot.rating} op Werkspot</span>
-            </div>
-          </article>
         </div>
       </div>
     </section>

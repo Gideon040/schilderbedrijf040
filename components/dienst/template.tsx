@@ -11,7 +11,8 @@ import type { SiteImage } from '@/lib/images'
 import { liveDiensten } from '@/lib/live-diensten'
 import { diensten, linkLive, plaatsen, PRIJSGIDS } from '@/lib/navigation'
 import { prijsNoot, prijzen } from '@/lib/prices'
-import { bronLabel, dienstQuotes } from '@/lib/reviews'
+import { reviewsVoor } from '@/lib/reviews'
+import { ReviewKaarten } from '@/components/site/reviews'
 import { jordy } from '@/lib/jordy'
 import { site } from '@/lib/site'
 
@@ -45,6 +46,8 @@ const splits: Record<string, [string, string]> = {
   Winterschilder: ['Winter', 'schilder'],
 }
 
+const reviewTags: Record<string, string> = { 'gevel-schilderen': 'buitenschilderwerk', winterschilder: 'binnenschilderwerk' }
+
 const kleuren = ['var(--sw1)', 'var(--sw2)', 'var(--sw3)', 'var(--sw5)', 'var(--sw4)', 'var(--sw6)']
 
 // Getal vooraan laten oplopen als het een geheel getal is (tellers, ontwerp v2)
@@ -68,7 +71,10 @@ export function DienstTemplate({ d }: { d: DienstPagina }) {
   const tabel = prijzen[d.prijsSlug ?? d.slug] ?? []
   const tabelNaam = d.prijsSlug ? d.prijsSlug.replace('-', ' ') : d.naam.toLowerCase()
   const live = liveDiensten[d.slug]
-  const quotes = dienstQuotes[d.slug] ?? dienstQuotes[d.prijsSlug ?? ''] ?? null
+  // Reviews met de dienst-tag (gevel en winter vallen onder buiten- en binnenwerk), aangevuld met algemene reviews
+  const reviewTag = reviewTags[d.slug] ?? d.slug
+  const klantReviews = reviewsVoor({ dienst: reviewTag, aantal: 6 })
+  const metTag = klantReviews.filter((r) => r.diensten.includes(reviewTag)).length
   const kleur = staal[d.slug] ?? staal.binnenschilderwerk
   const [eersteWoord, ...rest] = d.h1.split(' ')
   const anderen = diensten.filter((x) => !x.href.endsWith(`/${d.slug}`)).slice(0, 4)
@@ -325,27 +331,13 @@ export function DienstTemplate({ d }: { d: DienstPagina }) {
               </div>
             )}
           </div>
-          {quotes && <h2 id={`${d.slug}-reviews`} className="mini-h2 rv">Klanten over ons {d.naam.toLowerCase()}</h2>}
-          {quotes && (
-            <div className="rev-strip">
-              <figure className="rv">
-                <div className="stars" aria-hidden="true">
-                  ★★★★★
-                </div>
-                <h3 className="rq">5,0 op Google</h3>
-                <blockquote>&ldquo;{quotes.google}&rdquo;</blockquote>
-                <figcaption>{bronLabel.google}</figcaption>
-              </figure>
-              <figure className="rv">
-                <div className="stars" aria-hidden="true">
-                  ★★★★★
-                </div>
-                <h3 className="rq">4,9 op Werkspot</h3>
-                <blockquote>&ldquo;{quotes.werkspot}&rdquo;</blockquote>
-                <figcaption>{bronLabel.werkspot}</figcaption>
-              </figure>
-            </div>
-          )}
+          <h2 id={`${d.slug}-reviews`} className="mini-h2 rv">
+            {metTag >= 3 ? `Klanten over ons ${d.naam.toLowerCase()}` : 'Wat klanten zeggen'}
+          </h2>
+          <ReviewKaarten reviews={klantReviews} drie />
+          <p className="rv" style={{ marginTop: 18 }}>
+            <Link href="/reviews">Alle {site.google.reviewCount} Google-reviews en {site.werkspot.reviewCount} Werkspot-beoordelingen lezen →</Link>
+          </p>
         </div>
       </section>
 
