@@ -14,6 +14,8 @@ export type Lokaal = {
   alineas?: string[]
   // Unieke meta description per plaats (140 tot 160 tekens). De title volgt het vaste format.
   metaDescription?: string
+  // Veelvoorkomend schilderwerk per type woning (uitgebreide locatiepagina's, fase 7)
+  perType?: { type: string; periode: string; tekst: string }[]
 }
 
 const basis: Record<string, Lokaal> = {

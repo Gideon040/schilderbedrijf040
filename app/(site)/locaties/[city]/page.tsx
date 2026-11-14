@@ -265,6 +265,33 @@ export default function LocationPage({ params }: { params: { city: string } }) {
         </div>
       </section>
 
+      {/* Veelvoorkomend schilderwerk per type woning (uitgebreide locatiepagina's) */}
+      {lok?.perType && (
+        <section style={{ background: 'var(--white)' }}>
+          <div className="wrap">
+            <div className="head rv">
+              <div>
+                <Eyebrow>Per type woning</Eyebrow>
+                <h2 id="schilderwerk-per-type-woning" className="disp">
+                  Schilderwerk per type woning in <Streek>{X}</Streek>
+                </h2>
+              </div>
+              <p>Wat een woning nodig heeft, hangt vooral af van het bouwjaar. Zo ziet het schilderwerk er per type woning in {X} meestal uit.</p>
+            </div>
+            <div className="why">
+              {lok.perType.map((t) => (
+                <div key={t.type} className="rv">
+                  <h3>{t.type}</h3>
+                  <span>
+                    <b>{t.periode}.</b> {t.tekst}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Diensten in deze plaats */}
       <section style={{ background: 'var(--paper-2)' }}>
         <div className="wrap">

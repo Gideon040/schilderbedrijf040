@@ -98,6 +98,24 @@ export const lokaal08: Record<string, Lokaal> = {
         tekst:
           'De grote uitbreidingswijken aan de oostkant van Helmond uit de groeistadperiode. Bij deze woningen zijn een frisse binnenkant en een controle van de buitenkozijnen op houtrot vaak de eerste stap.',
       },
+      {
+        label: 'Vooral jaren zestig en zeventig',
+        naam: 'Helmond-Noord',
+        tekst:
+          'Na een kleinschalig begin in de jaren vijftig aan de zuidkant groeide Helmond-Noord vooral in de jaren zestig en zeventig. Bij woningen van vijftig tot zestig jaar oud zijn kozijnen vaak al meerdere keren overgeschilderd en is controle op houtrot in onderdorpels de eerste stap.',
+      },
+      {
+        label: 'Gebouwd 1950 tot 1970',
+        naam: 'Warande',
+        tekst:
+          'Wijk rond het stadspark De Warande, met veel woningen uit de periode 1950 tot 1970. Oude verflagen op kozijnen en deuren worden hier eerst geschuurd of verwijderd voordat er nieuw lakwerk op komt.',
+      },
+      {
+        label: 'Oude kernen, bij Helmond sinds 1968',
+        naam: 'Mierlo-Hout en Stiphout',
+        tekst:
+          'Twee oudere dorpskernen die in 1968 bij Helmond kwamen, met een mix van oudere woningen en latere uitbreidingen. Per straat verschilt het bouwjaar, en daarmee wat het schilderwerk vraagt.',
+      },
     ],
     alineas: [
       'In jongere wijken als Brandevoort en Dierdonk draait het binnen meestal om wanden en plafonds die strak en egaal moeten worden. Op grote oppervlakken werkt [latex spuiten in Helmond](/diensten/latex-spuiten) sneller dan rollen, zeker als meerdere kamers tegelijk aan de beurt zijn. Wilt u liever structuur of een patroon op de muur, dan is Schildersbedrijf040 ook uw behanger in Helmond: [behangen](/diensten/behangen) kan van één accentwand tot een complete verdieping. Wanden en plafonds die geschilderd worden, vallen onder [binnenschilderwerk](/diensten/binnenschilderwerk), gemiddeld ' + prijsTekst.wanden + '.',
@@ -106,7 +124,42 @@ export const lokaal08: Record<string, Lokaal> = {
     ],
     metaDescription:
       'Schilder in Helmond voor latex spuiten, behangen en kozijnen. Van Brandevoort tot Brouwhuis werkt Schildersbedrijf040 met Boonstoppel-verf. Gratis offerte.',
+    perType: [
+      {
+        type: 'Rijwoningen en flats uit de jaren vijftig tot zeventig',
+        periode: 'Helmond-Noord, Warande',
+        tekst:
+          'Houten kozijnen en deuren met vaak meerdere oude verflagen. Eerst schuren of oude lagen verwijderen, houtrot herstellen waar nodig en daarna dekkend lakken. Binnen gaat het vaak om een frisse afwerking van wanden en plafonds.',
+      },
+      {
+        type: 'Groeistadwoningen uit de jaren tachtig',
+        periode: 'Brouwhuis, Rijpelberg',
+        tekst:
+          'Woningen van rond de veertig jaar oud, waar het buitenschilderwerk toe is aan een planmatige beurt. Controle van kozijnen op houtrot, nieuw kitwerk waar het gescheurd is en lakwerk buiten.',
+      },
+      {
+        type: 'Woningen uit de jaren negentig',
+        periode: 'Dierdonk',
+        tekst:
+          'Ruim dertig jaar oud: regelmatig onderhoud van kozijnen en deuren houdt het houtwerk in goede staat. Binnen vaak een opknapbeurt van wanden, plafonds en de trap.',
+      },
+      {
+        type: 'Vinex-woningen vanaf 1997',
+        periode: 'Brandevoort',
+        tekst:
+          'Veel detail in gevels, deuren en kozijnen, dat zorgvuldig lakwerk vraagt. Binnen zijn grote, gladde wanden en plafonds geschikt voor latex spuiten.',
+      },
+      {
+        type: 'Oudere woningen in de kernen en de binnenstad',
+        periode: 'Mierlo-Hout, Stiphout, binnenstad',
+        tekst:
+          'Woningen met meer karakter en vaak houten details. Kleur en uitstraling behouden staat voorop; het hout wordt eerst gecontroleerd en waar nodig hersteld.',
+      },
+    ],
     bronnen: [
+      'https://www.helmond.nl/Media%20Helmond.nl/Documenten%20Helmond/Stad/20230601%20WOP%20Noord.pdf (Helmond-Noord: begin jaren vijftig, vooral ontwikkeld in de jaren zestig en zeventig)',
+      'https://allecijfers.nl/wijk/warande-helmond/ (Warande: 432 gebouwen uit de bouwperiode 1950 tot 1970)',
+      'Gemeente Helmond, groei door annexatie 1968: Mierlo-Hout en Stiphout bij Helmond',
       'https://www.helmond.nl (Feiten en cijfers 2018: Rijpelberg en Brouwhuis 1980 tot 1990)',
       'https://commissiemer.nl/docs/mer/p04/p0470/470-066masterplan.pdf (Masterplan Dierdonk 1991)',
       'https://en.wikipedia.org/wiki/Brandevoort (bouw vanaf ca. 1997, De Veste)',
