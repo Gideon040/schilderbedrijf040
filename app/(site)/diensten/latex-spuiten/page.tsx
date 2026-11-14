@@ -243,6 +243,10 @@ const pagina: DienstPagina = {
         </table>
         <p className="!text-[15px] text-tekst-zacht">Indicatief, inclusief afplakken en materiaal, exclusief btw.</p>
         <p>
+          Hoe de prijs is opgebouwd, met rekenvoorbeelden voor een kamer, woonkamer en hele verdieping, leest u op de pagina{' '}
+          <Link href="/kosten/latex-spuiten">kosten latex spuiten</Link>.
+        </p>
+        <p>
           Schildersbedrijf040 hanteert een uurtarief van {teBevestigen.uurLatex} voor latex spuitwerk, maar werkt bij voorkeur met een vaste prijs per
           m², zodat u vooraf precies weet wat de investering is. Voor woningen ouder dan 2 jaar geldt het verlaagde btw-tarief van 9% in
           plaats van 21%, wat een merkbaar verschil maakt op de eindfactuur.
