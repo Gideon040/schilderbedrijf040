@@ -207,7 +207,7 @@ export default function OverOnsPage() {
 
       <section className="ba-sec on-dark quote-band bg-beeld">
         <div className="bg">
-          <Image src={sfeer.gereedschap.src} alt="" fill sizes="100vw" />
+          <Image src={sfeer.gereedschap.src} alt={sfeer.gereedschap.alt} fill sizes="100vw" />
         </div>
         <div className="wrap">
           <blockquote className="rv">

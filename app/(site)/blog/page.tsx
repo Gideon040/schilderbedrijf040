@@ -105,8 +105,8 @@ export default function BlogPage() {
           <BlogFilter categorieen={categorieen} />
           <div className="blog-hero-foto">
             <Image
-              src="https://res.cloudinary.com/dbtaisgda/image/upload/v1743873386/WhatsApp_Image_2025-03-27_at_07.55.12_amqj6v.jpg"
-              alt="Schildersbedrijf040 Blog - Tips & Advies"
+              src={sfeer.gereedschap.src}
+              alt={sfeer.gereedschap.alt}
               fill
               sizes="(max-width: 980px) 100vw, 340px"
               className="object-cover"

@@ -288,7 +288,7 @@ export function DienstTemplate({ d }: { d: DienstPagina }) {
       <section className={`dp-types${sf ? ' bg-beeld' : ''}`}>
         {sf && (
           <div className="bg">
-            <Image src={sf.bg.src} alt="" fill sizes="100vw" />
+            <Image src={sf.bg.src} alt={sf.bg.alt} fill sizes="100vw" />
           </div>
         )}
         <div className="wrap">

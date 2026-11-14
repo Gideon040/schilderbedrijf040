@@ -45,7 +45,7 @@ export function Offerte({
     <section className={`quote on-dark${achtergrond ? ' bg-beeld' : ''}`} id="offerte">
       {achtergrond && (
         <div className="bg">
-          <Image src={achtergrond.src} alt="" fill sizes="100vw" />
+          <Image src={achtergrond.src} alt={achtergrond.alt} fill sizes="100vw" />
         </div>
       )}
       <svg className="splat" viewBox="0 0 200 200" aria-hidden="true">

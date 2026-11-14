@@ -170,7 +170,7 @@ export function Diensten() {
       </div>
       <div className="peek" id="peek" aria-hidden="true">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img alt="" id="peekimg" src={opt(sfeer.woonkamer.src)} loading="lazy" decoding="async" />
+        <img alt={sfeer.woonkamer.alt} id="peekimg" src={opt(sfeer.woonkamer.src)} loading="lazy" decoding="async" />
       </div>
     </section>
   )
@@ -406,7 +406,7 @@ export function Winter({ seizoen }: { seizoen: Seizoensblok }) {
   return (
     <section className="winter on-dark bg-beeld" id="winter">
       <div className="bg">
-        <Image src={winter ? sfeer.winter.src : sfeer.rijtjeshuis.src} alt="" fill sizes="100vw" />
+        <Image src={winter ? sfeer.winter.src : sfeer.rijtjeshuis.src} alt={winter ? sfeer.winter.alt : sfeer.rijtjeshuis.alt} fill sizes="100vw" />
       </div>
       <div className="flakes" id="flakes" aria-hidden="true" />
       <div className="wrap">
@@ -484,7 +484,7 @@ export function SeoTekst() {
   return (
     <section className="seo-txt bg-beeld">
       <div className="bg">
-        <Image src={sfeer.jaren30.src} alt="" fill sizes="100vw" />
+        <Image src={sfeer.jaren30.src} alt={sfeer.jaren30.alt} fill sizes="100vw" />
       </div>
       <div className="wrap">
         <div className="head rv">

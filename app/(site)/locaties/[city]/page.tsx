@@ -136,6 +136,7 @@ export default function LocationPage({ params }: { params: { city: string } }) {
   // Sfeerbeeld achter het lokale blok, wisselend per plaats
   const lokaalBeelden = [sfeer.villaHerfst, sfeer.jaren30, sfeer.rijtjeshuis, sfeer.witteGevels, sfeer.entreeOranje]
   const lokaalBeeld = lokaalBeelden[Object.keys(cityData).indexOf(city) % lokaalBeelden.length]
+  const waaromBeeld = lokaalBeelden[(lokaalBeelden.indexOf(lokaalBeeld) + 1) % lokaalBeelden.length]
 
   // Teksten van het live template (main), letterlijk, em dashes vervangen
   const usps = [
@@ -366,7 +367,7 @@ export default function LocationPage({ params }: { params: { city: string } }) {
       {/* Waarom, met de USP's en reviews, op een sfeerbeeld */}
       <section className="bg-beeld">
         <div className="bg">
-          <Image src={lokaalBeelden[(lokaalBeelden.indexOf(lokaalBeeld) + 1) % lokaalBeelden.length].src} alt="" fill sizes="100vw" />
+          <Image src={waaromBeeld.src} alt={waaromBeeld.alt} fill sizes="100vw" />
         </div>
         <div className="wrap">
           <div className="head rv">
