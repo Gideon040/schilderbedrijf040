@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { TOON_JORDY, jordy } from '@/lib/jordy'
-import { AFSPRAAK, datumTekst, winteractieActief } from '@/lib/afspraak'
+import { AFSPRAAK, datumTekst, winteractieActief, winterVoorwaardenBekend } from '@/lib/afspraak'
 import Link from 'next/link'
 import { formats, meta } from '@/lib/meta'
 import { DienstTemplate, type DienstPagina } from '@/components/dienst/template'
@@ -112,7 +112,8 @@ const pagina: DienstPagina = {
             <>
               Goedkoper: ja, tijdelijk. {AFSPRAAK.winteractie.tekst}{' '}
               <span id="winteractie">
-                Voorwaarden: {jordy(AFSPRAAK.winteractie.voorwaarden)} De actie loopt tot en met {datumTekst(AFSPRAAK.winteractie.tot)}.
+                {winterVoorwaardenBekend() && <>Voorwaarden: {jordy(AFSPRAAK.winteractie.voorwaarden)} </>}De actie loopt tot en met{' '}
+                {datumTekst(AFSPRAAK.winteractie.tot)}.
               </span>{' '}
             </>
           ) : (

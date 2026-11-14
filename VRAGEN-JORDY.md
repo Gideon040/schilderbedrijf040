@@ -1,6 +1,6 @@
 # Vragen voor Jordy
 
-Opgesteld 13 november 2026 bij de branch `seo-conversie-nov-2026`. Alles wat hieronder staat, staat op de site als `[INVULLEN: ...]` of `[JORDY: ...]`. Die open punten zijn op de preview zichtbaar en in productie automatisch verborgen. Een antwoord van één regel per vraag is genoeg.
+Opgesteld 13 november 2026 bij de branch `seo-conversie-nov-2026`. Alles wat hieronder staat, staat op de site als `[INVULLEN: ...]` of `[JORDY: ...]`. Die open punten zijn op de preview zichtbaar en in productie automatisch verborgen. Werkafspraak vanaf 14-11-2026: ontbrekende antwoorden houden het werk niet tegen; prijzen volgen de dienstkaarten en blokken zonder antwoord worden weggelaten. Een antwoord van één regel per vraag is genoeg.
 
 ## Bedrijfsgegevens en profielen
 
@@ -52,7 +52,7 @@ Alle pagina's lezen hun bedragen nu uit `lib/prices.ts`. Tot je antwoord staan o
 
 ## Claims en bedrijfsgegevens
 
-20. **Winterkorting "tot 20%":** de actie loopt volgens de site tot en met 31 januari 2027 op binnenschilderwerk. Welke voorwaarden gelden (wanneer 10% en wanneer 20%, minimale opdracht, ook voor latex spuiten en behangen, geldt de datum voor opdracht of uitvoering)? Zonder voorwaarden staat de kortingsbadge niet live.
+20. **Winterkorting "tot 20%":** de actie loopt volgens de site tot en met 31 januari 2027 op binnenschilderwerk. Welke voorwaarden gelden (wanneer 10% en wanneer 20%, minimale opdracht, ook voor latex spuiten en behangen, geldt de datum voor opdracht of uitvoering)? Besluit Gideon (14-11-2026): de badge staat live; de voorwaarden worden toegevoegd zodra je ze doorgeeft.
 21. **Korting houtrot:** op de houtrotpagina stond "10 tot 20% korting bij drie of meer kozijnen". Die zin is weggehaald. Klopt die korting, en onder welke voorwaarden?
 22. **Certificaten of keurmerken:** "Gecertificeerd" is gewijzigd in "Gediplomeerde schilders". Heb je een concreet certificaat of keurmerk (bijvoorbeeld Erkend Schilder, OnderhoudNL)? Op /faq staat ook "gecertificeerde partners" voor steigers en hoogwerkers: welke partner?
 23. **Garantie:** hoeveel jaar op binnen- en op buitenschilderwerk, en wat valt eronder? Op de homepage stond "3 tot 5 jaar binnen, 5 tot 7 jaar buiten" zonder bron; die getallen zijn weg tot je bevestigt. Komt in `site.garantie`.

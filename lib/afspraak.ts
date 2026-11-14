@@ -24,7 +24,7 @@ export const AFSPRAAK = {
     label: 'Winteractie t/m 31 januari',
     knop: 'Tot 20% korting',
     tot: '2027-01-31',
-    // Zonder voorwaarden geen kortingsbadge in productie (instructie 5.2). Staat uitgelegd op /diensten/winterschilder#winteractie.
+    // Voorwaarden staan op /diensten/winterschilder#winteractie zodra ze zijn ingevuld.
     voorwaarden: '[INVULLEN: wanneer geldt 10% en wanneer 20%, minimale opdracht, geldt het ook voor latex spuiten en behangen, geldig bij opdracht of bij uitvoering vóór 31 januari]',
   },
 
@@ -83,10 +83,13 @@ export function isToegestaneDatum(iso: string, nu: Date = new Date()): boolean {
   return AFSPRAAK.dagen.includes(weekdag(iso)) && iso >= eersteDatum(nu) && iso <= laatsteDatum(nu)
 }
 
-// Actief tot de einddatum, en alleen als de voorwaarden zijn ingevuld (op de preview altijd, met het open punt zichtbaar)
+// Actief tot de einddatum (besluit Gideon 14-11-2026: badge blijft live, voorwaarden volgen later)
 export function winteractieActief(nu: Date = new Date()): boolean {
-  return vandaag(nu) <= AFSPRAAK.winteractie.tot && toonBlok(AFSPRAAK.winteractie.voorwaarden)
+  return vandaag(nu) <= AFSPRAAK.winteractie.tot
 }
+
+// Voorwaarden pas tonen als ze zijn ingevuld
+export const winterVoorwaardenBekend = () => toonBlok(AFSPRAAK.winteractie.voorwaarden)
 
 export function datumTekst(iso: string): string {
   return new Intl.DateTimeFormat('nl-NL', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' }).format(naarDate(iso))

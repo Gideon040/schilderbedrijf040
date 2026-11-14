@@ -394,7 +394,7 @@ export function AfspraakPopup() {
                   </p>
                   {actie && (
                     <a className="afs-voorwaarden" href="/diensten/winterschilder#winteractie">
-                      Bekijk de voorwaarden van de winteractie
+                      Meer over de winteractie
                     </a>
                   )}
                   <ol className="afs-stappen" aria-label="Stappen">
