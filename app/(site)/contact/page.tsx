@@ -1,16 +1,17 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import { ContactFormulier } from '@/components/contact/formulier'
+import { OfferteFormulier } from '@/components/site/offerte-formulier'
+import { KnopBel } from '@/components/site/v2'
 import { site } from '@/lib/site'
 
 export const metadata: Metadata = {
-  title: 'Contact | Gratis Offerte Aanvragen',
-  description: 'Neem contact op met Schildersbedrijf040 in Eindhoven. Vraag een gratis offerte aan voor schilderwerk. ✓ Reactie ' + site.termijnen.reactie + ' ✓ Vrijblijvend advies ✓ Eerlijke prijzen',
-  keywords: ['contact schilder eindhoven', 'offerte schilderwerk', 'schilder offerte', 'schildersbedrijf contact'],
+  title: { absolute: 'Offerte schilderwerk Eindhoven aanvragen | Schildersbedrijf040' },
+  description: `Vraag gratis een offerte voor schilderwerk in Eindhoven aan, met foto's van de klus. Reactie ${site.termijnen.reactie}, gratis inspectie en een vaste prijs vooraf.`,
+  keywords: ['offerte schilderwerk eindhoven', 'offerte schilder eindhoven', 'schilder offerte', 'contact schilder eindhoven'],
   openGraph: {
-    title: 'Contact | Schildersbedrijf040',
-    description: 'Neem contact op voor een gratis offerte voor uw schilderproject in Eindhoven.',
+    title: 'Offerte schilderwerk Eindhoven aanvragen | Schildersbedrijf040',
+    description: 'Vraag gratis een offerte voor schilderwerk in Eindhoven aan. Gratis inspectie en een vaste prijs vooraf.',
     url: 'https://schildersbedrijf040.nl/contact',
     type: 'website',
   },
@@ -68,7 +69,7 @@ export default function ContactPage() {
       {
         '@type': 'ListItem',
         position: 2,
-        name: 'Contact',
+        name: 'Offerte aanvragen',
         item: 'https://schildersbedrijf040.nl/contact'
       }
     ]
@@ -90,23 +91,28 @@ export default function ContactPage() {
             <nav className="crumbs" aria-label="Kruimelpad">
               <Link href="/">Home</Link>
               <span>/</span>
-              <b aria-current="page">Contact</b>
+              <b aria-current="page">Offerte aanvragen</b>
             </nav>
             <h1 className="disp">
               <span className="w">
-                <span>Neem</span>
+                <span>Offerte</span>
+              </span>{' '}
+              <span className="w">
+                <span className="paint">schilderwerk</span>
               </span>
               <br />
               <span className="w">
-                <span className="paint">contact</span>
-              </span>{' '}
-              <span className="w">
-                <span>op</span>
+                <span>Eindhoven aanvragen</span>
               </span>
             </h1>
             <p className="lead">
-              Heeft u vragen over onze diensten of wilt u een offerte aanvragen? Neem gerust contact met ons op. We staan klaar om u te helpen.
+              Vraag hier gratis en vrijblijvend een offerte voor schilderwerk in Eindhoven en omgeving aan. Stuur gerust foto&apos;s van de klus
+              mee. U hoort {site.termijnen.reactie} van ons, Jordy komt gratis langs voor een inspectie en {site.termijnen.offerte} daarna heeft u
+              een offerte met vaste prijs. Liever direct contact? Bel of app Jordy.
             </p>
+            <div className="cta-row">
+              <KnopBel />
+            </div>
             <h2 className="cc-kop">Contactgegevens</h2>
             <div className="ccards">
               <div className="cc rv">
@@ -132,7 +138,7 @@ export default function ContactPage() {
               </div>
             </div>
           </div>
-          <ContactFormulier />
+          <OfferteFormulier formulier="offerte" className="cform" kopNiveau="h2" titel="Vraag direct een offerte aan" />
         </div>
       </section>
 

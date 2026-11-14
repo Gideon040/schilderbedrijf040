@@ -18,7 +18,7 @@ import {
   type AfspraakVelden,
 } from '@/lib/afspraak'
 import { site } from '@/lib/site'
-import { bronpagina } from '@/lib/tracking'
+import { bronpagina, trackEvent } from '@/lib/tracking'
 
 // Popup "Plan een vrijblijvende offerte aan huis". Eén keer in de layout.
 // Opent via de vaste knop, via elke offerteknop (a.btn naar /contact of [data-afspraak]),
@@ -281,6 +281,7 @@ export function AfspraakPopup() {
       })
       const j = await res.json().catch(() => ({}))
       if (res.ok && j.ok) {
+        trackEvent('generate_lead', { form: 'afspraak' })
         schrijf(OPSLAG_VERSTUURD, String(Date.now()))
         setStatus('klaar')
         dialoog.current?.focus()

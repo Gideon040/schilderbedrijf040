@@ -1280,3 +1280,25 @@ header.nav nav.mmenu{display:block;font-weight:400;font-size:inherit}
 .wg-beeld{position:relative;aspect-ratio:16/9;margin-top:28px;overflow:hidden}
 .wg-beeld img{object-fit:cover}
 @media (max-width: 980px){.svc a.row .thumb{width:44px;height:44px}}
+
+/* Offerteformulier (één component) en WhatsApp */
+.of-form fieldset{border:0;padding:0;margin:0;min-width:0}
+.of-form legend{font-size:14px;font-weight:700;color:var(--ink);margin-bottom:10px}
+.of-form .of-intro{margin:-6px 0 0;color:var(--muted)}
+.of-form .of-fotos input{padding:10px 12px;font-size:15px}
+.qform .swatches label{font-size:15px}
+.btn-wa{gap:10px}
+.btn-wa svg{color:#25D366}
+.quote .btn-wa{margin-top:16px;color:var(--white);box-shadow:inset 0 0 0 2px #3A4E6B}
+.mbar .btn-wa{flex:1}
+.mbar a.btn{padding:15px 10px}
+
+/* Blog: blok "Liever laten doen?" */
+.prose .lld{margin:36px 0;padding:26px;background:var(--paper-2);display:grid;grid-template-columns:1.2fr 1fr;gap:24px;align-items:start;box-shadow:inset 4px 0 0 var(--blue)}
+.prose .lld small{font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--blue)}
+.prose .lld .lld-h{font-size:22px;line-height:1.2;margin:6px 0 10px;font-weight:800}
+.prose .lld p{margin:0 0 16px;font-size:16px}
+.prose .lld .btn{text-decoration:none}
+.prose .lld .lld-rev{grid-template-columns:1fr}
+.prose .lld .lld-rev blockquote{font-size:15px}
+@media (max-width: 760px){.prose .lld{grid-template-columns:1fr}}

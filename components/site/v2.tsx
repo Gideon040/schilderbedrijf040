@@ -2,6 +2,7 @@
 import Link from 'next/link'
 import type { ReactNode } from 'react'
 import { site } from '@/lib/site'
+import { KnopWhatsApp } from '@/components/site/whatsapp'
 
 // Onzichtbare afbreekpunten (zacht koppelteken) in lange samengestelde woorden, zodat een kop als
 // "Binnenschilderwerk" op een smal scherm netjes als "Binnen-schilderwerk" afbreekt in plaats van buiten
@@ -71,9 +72,12 @@ export function KnopOfferte({ children = 'Gratis offerte aanvragen', className =
 
 export function KnopBel({ className = '' }: { className?: string }) {
   return (
-    <a className={`btn btn-line ${className}`} href={site.phoneHref}>
-      Bel {site.phone}
-    </a>
+    <>
+      <a className={`btn btn-line ${className}`} href={site.phoneHref}>
+        Bel {site.phone}
+      </a>
+      <KnopWhatsApp className={className} />
+    </>
   )
 }
 

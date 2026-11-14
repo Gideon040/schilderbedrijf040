@@ -5,6 +5,7 @@ import { AfspraakPopup } from '@/components/afspraak/popup'
 import { JsonLd } from '@/components/json-ld'
 import { Motion } from '@/components/site/motion'
 import { TrackingListener } from '@/components/tracking-listener'
+import { Analytics } from '@/components/analytics'
 import { businessSchema, websiteSchema } from '@/lib/schema'
 
 export default function SiteLayout({
@@ -16,6 +17,7 @@ export default function SiteLayout({
     <>
       <JsonLd data={businessSchema} />
       <JsonLd data={websiteSchema} />
+      <Analytics />
       <TrackingListener />
       <Motion />
       <Header />

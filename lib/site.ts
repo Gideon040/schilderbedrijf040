@@ -9,6 +9,8 @@ export const site = {
   phone: '06-38903004',
   phoneHref: 'tel:+31638903004',
   phoneE164: '+31638903004',
+  // WhatsApp op hetzelfde nummer [INVULLEN: Jordy bevestigt dat 06-38903004 WhatsApp heeft]
+  whatsappHref: 'https://wa.me/31638903004',
   email: 'info@schildersbedrijf040.nl',
   address: {
     street: 'Straatsburglaan 26',

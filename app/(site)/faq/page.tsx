@@ -147,7 +147,7 @@ export default function FAQPage() {
               <h3>Nog vragen?</h3>
               <span>Heeft u nog andere vragen? Neem gerust contact met ons op.</span>
               <span>
-                Bel of app Jordy: <a href={site.phoneHref}>{site.phone}</a>
+                Bel of app Jordy: <a href={site.phoneHref}>{site.phone}</a> of <a href={site.whatsappHref} target="_blank" rel="noopener noreferrer">stuur een WhatsApp</a>
               </span>
               <Link className="btn btn-blue" href="/contact" style={{ alignSelf: 'flex-start' }}>
                 Stel uw vraag <span aria-hidden="true">→</span>

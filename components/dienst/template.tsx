@@ -400,7 +400,7 @@ export function DienstTemplate({ d }: { d: DienstPagina }) {
               <h3>Nog vragen?</h3>
               {live && <span>{live.nogVragen}</span>}
               <span>
-                Bel of app Jordy: <a href={site.phoneHref}>{site.phone}</a>
+                Bel of app Jordy: <a href={site.phoneHref}>{site.phone}</a> of <a href={site.whatsappHref} target="_blank" rel="noopener noreferrer">stuur een WhatsApp</a>
               </span>
             </div>
           </div>

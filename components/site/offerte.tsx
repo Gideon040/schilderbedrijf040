@@ -1,16 +1,13 @@
 'use client'
 
-import { useState, type ReactNode } from 'react'
+import type { ReactNode } from 'react'
 import Image from 'next/image'
 import type { SiteImage } from '@/lib/images'
 import { site } from '@/lib/site'
-import { bronpagina, trackEvent } from '@/lib/tracking'
-import { TOON_JORDY } from '@/lib/jordy'
 import { afbreek } from '@/components/site/v2'
+import { OfferteFormulier } from '@/components/site/offerte-formulier'
+import { KnopWhatsApp } from '@/components/site/whatsapp'
 
-const FORMSPREE = 'https://formspree.io/f/mkgovyya'
-const diensten = ['Binnenschilderwerk', 'Buitenschilderwerk', 'Latex spuiten', 'Lakwerk', 'Behangen', 'Houtrot sanering']
-const leeg = { name: '', phone: '', email: '', service: diensten[0], message: '' }
 
 // Offerteblok onderaan elke pagina behalve /contact (ontwerp v2, #offerte).
 // titel/tekst/extra per pagina, zodat de bestaande afsluiters van elke pagina letterlijk terugkomen.
@@ -32,27 +29,6 @@ export function Offerte({
   // Optioneel sfeerbeeld op de achtergrond, met donkere overlay
   achtergrond?: SiteImage
 }) {
-  const [form, setForm] = useState(leeg)
-  const [status, setStatus] = useState<'idle' | 'bezig' | 'klaar' | 'fout'>('idle')
-
-  const submit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setStatus('bezig')
-    try {
-      const res = await fetch(FORMSPREE, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-        body: JSON.stringify({ ...form, bronpagina: bronpagina(), formulier: 'offerteblok' }),
-      })
-      if (!res.ok) throw new Error(String(res.status))
-      trackEvent('generate_lead', { form: 'offerteblok' })
-      setForm(leeg)
-      setStatus('klaar')
-    } catch {
-      setStatus('fout')
-    }
-  }
-
   const i = titel.lastIndexOf(streek)
   const kop =
     i >= 0 ? (
@@ -95,48 +71,12 @@ export function Offerte({
           <a className="phone" href={site.phoneHref}>
             {site.phone}
           </a>
+          <KnopWhatsApp className="on-dark-wa" />
           {extra}
         </div>
-        {/* Zonder JavaScript post het formulier direct naar Formspree (action + name-attributen) */}
-        <form className="qform rv" action={FORMSPREE} method="POST" onSubmit={submit}>
-          <input type="hidden" name="formulier" value="offerteblok" />
-          <h3 className="full">{formTitel}</h3>
-          <label>
-            Naam
-            <input required name="name" autoComplete="name" value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} />
-          </label>
-          <label>
-            Telefoon
-            <input required type="tel" name="phone" autoComplete="tel" value={form.phone} onChange={(e) => setForm({ ...form, phone: e.target.value })} />
-          </label>
-          <label className="full">
-            E-mail
-            <input required type="email" name="email" autoComplete="email" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} />
-          </label>
-          <label className="full">
-            Wat wilt u laten doen?
-            <select name="service" value={form.service} onChange={(e) => setForm({ ...form, service: e.target.value })}>
-              {diensten.map((d) => (
-                <option key={d}>{d}</option>
-              ))}
-            </select>
-          </label>
-          <label className="full">
-            Korte omschrijving
-            <textarea name="message" value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })} />
-          </label>
-          <button className="btn btn-blue full" type="submit" disabled={status === 'bezig'} style={{ justifyContent: 'center' }}>
-            {status === 'bezig' ? 'Bezig met versturen...' : 'Gratis offerte aanvragen'} <span className="arr">→</span>
-          </button>
-          <p className="sent" role="status">
-            {status === 'klaar' && 'Bedankt! We nemen zo snel mogelijk contact met u op.'}
-            {status === 'fout' && (
-              <>
-                Versturen lukte niet. Bel ons op <a href={site.phoneHref}>{site.phone}</a>.
-              </>
-            )}
-          </p>
-        </form>
+        <div className="rv">
+          <OfferteFormulier formulier="offerteblok" titel={formTitel} />
+        </div>
       </div>
     </section>
   )

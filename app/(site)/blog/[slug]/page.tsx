@@ -4,6 +4,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { PortableTextRenderer, anker, blokTekst } from '@/components/blog/portable-text'
 import { ArtikelVoortgang } from '@/components/blog/artikel-voortgang'
+import { LieverLatenDoen } from '@/components/blog/liever-laten-doen'
 import { catKleur } from '@/components/blog/categorie'
 import { JsonLd } from '@/components/json-ld'
 import { Offerte } from '@/components/site/offerte'
@@ -140,6 +141,12 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
   }
 
   const relatedPosts = gerelateerd(post)
+  // Knippunten: de eerste H2 (einde inleiding) en de H2 die het dichtst bij het midden ligt
+  const blokken = post.content || []
+  const h2s = blokken.map((b, i) => ((b as { style?: string }).style === 'h2' ? i : -1)).filter((i) => i >= 0)
+  const eerste = h2s[0] ?? blokken.length
+  const midden = h2s.slice(1).reduce((best, i) => (Math.abs(i - blokken.length / 2) < Math.abs(best - blokken.length / 2) ? i : best), h2s[2] ?? blokken.length)
+  const delen = [blokken.slice(0, eerste), blokken.slice(eerste, midden), blokken.slice(midden)]
   const inhoud = (post.content || []).filter((b) => (b as { style?: string }).style === 'h2').map((b) => blokTekst(b))
   const woorden = post.title.split(' ')
   const datum = new Date(post.date).toLocaleDateString('nl-NL', { day: 'numeric', month: 'long', year: 'numeric' })
@@ -189,7 +196,12 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
       <section style={{ paddingTop: 56 }}>
         <div className="wrap art-grid">
           <article className="prose">
-            <PortableTextRenderer content={post.content} />
+            {/* "Liever laten doen?" na de inleiding en halverwege het artikel */}
+            <PortableTextRenderer content={delen[0]} />
+            {delen[1].length > 0 && <LieverLatenDoen slug={post.slug} />}
+            <PortableTextRenderer content={delen[1]} />
+            {delen[2].length > 0 && <LieverLatenDoen slug={post.slug} nr={1} />}
+            <PortableTextRenderer content={delen[2]} />
 
             <div className="art-cta">
               <div>
