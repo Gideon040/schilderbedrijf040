@@ -1,8 +1,8 @@
 {
  "slug": "btw-tarief-schilderwerk",
  "title": "BTW Tarief Schilderwerk: Alle Regels voor 2026",
- "metaTitle": "BTW Tarief Schilderwerk 2026 | 9% of 21%? Regels Uitgelegd",
- "metaDescription": "Wanneer betaal je 9% of 21% BTW op schilderwerk? Complete uitleg over BTW tarieven voor schilderwerk in 2026. Inclusief voorbeelden en uitzonderingen.",
+ "metaTitle": "Btw-tarief schilderwerk 2026: 9% of 21%?",
+ "metaDescription": "Wanneer betaal je 9% en wanneer 21% btw op schilderwerk in 2026? Regels van de Belastingdienst, uitzonderingen als behang en houtrot, met rekenvoorbeelden.",
  "excerpt": "Het verschil tussen 9% en 21% BTW kan honderden euro's schelen. Wij leggen alle regels helder uit.",
  "cover": {
   "src": "/images/blog/btw-tarief-schilderwerk-cover.jpg",
@@ -126,13 +126,33 @@
    "_type": "block",
    "children": [
     {
-     "_key": "k14",
      "_type": "span",
-     "marks": [],
-     "text": "Belangrijk: het lage tarief geldt niet alleen voor de arbeid. Volgens de Belastingdienst vallen ook de materialen die de schilder gebruikt en het voorbereidende werk onder 9%. Als je schilder een offerte maakt van €2.000, waarvan €1.400 arbeid en €600 materialen, dan betaal je 9% BTW over het hele bedrag: €180. Had het hoge tarief overal gegolden, dan was dit €420 geweest, een verschil van €240."
+     "_key": "b7a",
+     "text": "Belangrijk: het lage tarief geldt niet alleen voor de arbeid. Volgens ",
+     "marks": []
+    },
+    {
+     "_type": "span",
+     "_key": "b7b",
+     "text": "de Belastingdienst",
+     "marks": [
+      "lnk-bd"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "b7c",
+     "text": " vallen ook de materialen die de schilder gebruikt, het voorbereidende werk en voorbehandelingen onder 9%, net als lakken, vernissen en beitsen. Als je schilder een offerte maakt van €2.000, waarvan €1.400 arbeid en €600 materialen, dan betaal je 9% btw over het hele bedrag: €180. Had het hoge tarief overal gegolden, dan was dit €420 geweest, een verschil van €240.",
+     "marks": []
     }
    ],
-   "markDefs": [],
+   "markDefs": [
+    {
+     "_type": "link",
+     "_key": "lnk-bd",
+     "href": "https://www.belastingdienst.nl/wps/wcm/connect/bldcontentnl/belastingdienst/zakelijk/btw/tarieven_en_vrijstellingen/diensten_9_btw/werkzaamheden_aan_woningen/schilderen"
+    }
+   ],
    "style": "normal"
   },
   {
@@ -182,10 +202,10 @@
    "_type": "block",
    "children": [
     {
-     "_key": "k22",
      "_type": "span",
-     "marks": [],
-     "text": "Let op bij gemengd gebruik: heb je een woning met een praktijkruimte of kantoor aan huis? Dan geldt het lage tarief alleen voor het woongedeelte. De schilder moet dan de werkzaamheden splitsen, wat de administratie complexer maakt. Bespreek dit vooraf om misverstanden te voorkomen."
+     "_key": "k22",
+     "text": "Let op bij gemengd gebruik: heb je een woning met een praktijkruimte of kantoor aan huis? Dan geldt het lage tarief alleen voor het woongedeelte. Sinds 1 juli 2025 geldt dat ook als het pand grotendeels woning is; daarvoor mocht het hele pand onder 9% vallen als het voor meer dan de helft als woning werd gebruikt. De schilder moet de werkzaamheden dan splitsen. Bespreek dit vooraf om misverstanden te voorkomen.",
+     "marks": []
     }
    ],
    "markDefs": [],
@@ -322,10 +342,10 @@
    "_type": "block",
    "children": [
     {
-     "_key": "k42",
      "_type": "span",
-     "marks": [],
-     "text": "Een tweede fout is aannemen dat alle werkzaamheden onder het lage tarief vallen. Sommige werkzaamheden, zoals het aanbrengen van nieuwe kozijnen (timmerwerkzaamheden), vallen onder andere regels. Schilderwerk, behangen en houtrotherstel vallen wel onder het lage tarief, maar vraag bij twijfel om verduidelijking."
+     "_key": "k42",
+     "text": "Een tweede fout is aannemen dat alle werkzaamheden onder het lage tarief vallen. Schilderen, lakken, beitsen en het voorbereiden daarvan vallen onder 9%, en bij behangen geldt 9% voor het werk en de lijm. Maar het behang zelf valt onder 21%. Ook werk dat volgens de Belastingdienst te ver van schilderwerk afstaat, valt onder 21%: houtrot herstellen met nieuwe houten inzetstukken of onderdorpels, ramen, deuren of kozijnen vervangen, constructief kitwerk, glas plaatsen en voegwerk. Vraag bij twijfel om een offerte waarin per post het tarief staat.",
+     "marks": []
     }
    ],
    "markDefs": [],
@@ -336,10 +356,10 @@
    "_type": "block",
    "children": [
     {
-     "_key": "k44",
      "_type": "span",
-     "marks": [],
-     "text": "De derde fout is geen factuur bewaren. De Belastingdienst kan tot vijf jaar terug controles uitvoeren. Als blijkt dat ten onrechte het lage tarief is toegepast, kun jij als opdrachtgever aansprakelijk worden gesteld voor het verschil. Bewaar je facturen dus minimaal vijf jaar."
+     "_key": "k44",
+     "text": "De derde fout is geen factuur bewaren. Op de factuur staat welk tarief is toegepast en voor welke werkzaamheden. Die heb je nodig als er later vragen komen over het werk of de garantie. Bewaar je facturen dus goed.",
+     "marks": []
     }
    ],
    "markDefs": [],
@@ -527,8 +547,9 @@
   },
   {
    "question": "Geldt het lage BTW-tarief ook voor buitenschilderwerk?",
-   "answer": "Ja, zowel binnen- als buitenschilderwerk komen in aanmerking voor 9% BTW op de arbeid en de gebruikte materialen, mits de woning ouder is dan 2 jaar. Dit geldt ook voor kozijnen, deuren, dakgoten en boeidelen."
+   "answer": "Ja, zowel binnen- als buitenschilderwerk komen in aanmerking voor 9% btw op de arbeid en de gebruikte materialen, mits de woning ouder is dan 2 jaar. Dit geldt ook voor het schilderen van kozijnen, deuren, dakgoten en boeidelen. Houtrot herstellen met nieuwe houten inzetstukken of onderdorpels en het vervangen van kozijnen vallen wel onder 21%."
   }
  ],
- "related": []
+ "related": [],
+ "updated": "2026-11-14"
 }

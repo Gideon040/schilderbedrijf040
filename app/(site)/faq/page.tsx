@@ -4,10 +4,12 @@ import Link from 'next/link'
 import { site } from '@/lib/site'
 import { Offerte } from '@/components/site/offerte'
 import { prijsTekst } from '@/lib/prices'
+import { titel } from '@/lib/meta'
+import { sfeer } from '@/lib/images'
 
 export const metadata: Metadata = {
-  title: 'Veelgestelde Vragen | Schildersbedrijf Eindhoven',
-  description: 'Antwoorden op veelgestelde vragen over schilderwerk in Eindhoven. Wat kost een schilder? Hoe lang duurt schilderwerk? Welke garantie? Lees hier alle antwoorden.',
+  title: { absolute: titel('Veelgestelde vragen over schilderwerk') },
+  description: 'Antwoorden over schilderwerk in Eindhoven: wat een schilder kost, hoe lang het duurt, welke verf en wanneer buiten schilderen kan. Gratis inspectie.',
   keywords: ['schilder vragen', 'schilderwerk kosten', 'schilderwerk duur', 'schilder garantie', 'schilder eindhoven faq'],
   openGraph: {
     title: 'Veelgestelde Vragen | Schildersbedrijf040',
@@ -167,7 +169,7 @@ export default function FAQPage() {
         </div>
       </section>
 
-      <Offerte />
+      <Offerte achtergrond={sfeer.villaHerfst} />
     </main>
   )
 }

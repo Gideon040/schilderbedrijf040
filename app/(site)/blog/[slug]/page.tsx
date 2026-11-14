@@ -10,6 +10,8 @@ import { JsonLd } from '@/components/json-ld'
 import { Offerte } from '@/components/site/offerte'
 import { Eyebrow, Pijl, Streek } from '@/components/site/v2'
 import { site } from '@/lib/site'
+import { titel } from '@/lib/meta'
+import { sfeer } from '@/lib/images'
 import { blog, blogs, gerelateerd } from '@/lib/blog'
 
 export function generateStaticParams() {
@@ -28,7 +30,7 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
   const imageUrl = `https://schildersbedrijf040.nl${post.cover.src}`
 
   return {
-    title: post.metaTitle,
+    title: { absolute: titel(post.metaTitle.replace(' | Schildersbedrijf040', '')) },
     description: post.metaDescription,
     keywords: post.keywords,
     authors: [{ name: post.author.name }],
@@ -312,7 +314,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
         <Link href="/blog">← Terug naar alle artikelen</Link>
       </div>
 
-      <Offerte />
+      <Offerte achtergrond={sfeer.gereedschap} />
     </main>
   )
 }

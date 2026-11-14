@@ -1,16 +1,17 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { formats, meta } from '@/lib/meta'
 import { DienstTemplate, type DienstPagina } from '@/components/dienst/template'
 import { images, sfeer } from '@/lib/images'
 import { orgRef, serviceOffers } from '@/lib/schema'
 import { hoofd, site } from '@/lib/site'
 import { prijsKort, prijsTekst } from '@/lib/prices'
 
-export const metadata: Metadata = {
-  title: 'Binnenschilderwerk Eindhoven',
-  description:
-    'Binnenschilder in Eindhoven: muren en plafonds ' + prijsTekst.wanden + ', kozijnen en deuren lakken ' + prijsTekst.lakBinnen + ', met Boonstoppel-verf. Gratis inspectie en vaste prijs.',
-  keywords: [
+export const metadata: Metadata = meta({
+  titel: formats.dienst('Binnenschilderwerk'),
+  beschrijving: `Binnenschilderwerk in Eindhoven: muren en plafonds ${prijsTekst.wanden}, lakwerk ${prijsTekst.lakBinnen}. ${formats.staart}`,
+  pad: '/diensten/binnenschilderwerk',
+  extra: { keywords: [
     'binnenschilderwerk eindhoven',
     'binnenschilder eindhoven',
     'muren schilderen eindhoven',
@@ -18,18 +19,8 @@ export const metadata: Metadata = {
     'kozijnen schilderen binnen',
     'schildersbedrijf eindhoven',
     'binnenschilderwerk kosten',
-  ],
-  openGraph: {
-    title: 'Binnenschilderwerk Eindhoven | Schildersbedrijf040',
-    description:
-      'Professioneel binnenschilderwerk in Eindhoven en omgeving. Muren, plafonds, kozijnen en deuren vakkundig geschilderd met Boonstoppel verf.',
-    url: 'https://schildersbedrijf040.nl/diensten/binnenschilderwerk',
-    type: 'website',
-  },
-  alternates: {
-    canonical: 'https://schildersbedrijf040.nl/diensten/binnenschilderwerk',
-  },
-}
+  ] },
+})
 
 const faqs = [
   {

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { formats, meta } from '@/lib/meta'
 import { DienstTemplate, type DienstPagina } from '@/components/dienst/template'
 import { images, sfeer } from '@/lib/images'
 import { TOON_JORDY } from '@/lib/jordy'
@@ -7,11 +8,11 @@ import { prijsKort, prijsTekst, prijzen, teBevestigen } from '@/lib/prices'
 import { orgRef, serviceOffers } from '@/lib/schema'
 import { site } from '@/lib/site'
 
-export const metadata: Metadata = {
-  title: 'Houtrot kozijn repareren in Eindhoven',
-  description:
-    'Houtrot in uw kozijn? Herstel kost ' + prijsTekst.houtrot + ', een kozijn vervangen ' + teBevestigen.kozijnVervangen + '. Gratis houtrot-inspectie en vaste prijs per kozijn.',
-  keywords: [
+export const metadata: Metadata = meta({
+  titel: formats.dienst('Houtrot sanering'),
+  beschrijving: `Houtrot herstellen in Eindhoven: ${prijsTekst.houtrot}, daarna geschilderd met Boonstoppel-verf. ${formats.staart}`,
+  pad: '/diensten/houtrot-sanering',
+  extra: { keywords: [
     'houtrot kozijn',
     'houtrot repareren',
     'houtrot kosten',
@@ -22,18 +23,8 @@ export const metadata: Metadata = {
     'houtrot kozijnen',
     'schildersbedrijf eindhoven',
     'houtrot sanering kosten',
-  ],
-  openGraph: {
-    title: 'Houtrot Sanering Eindhoven | Schildersbedrijf040',
-    description:
-      'Houtrot sanering in Eindhoven en omgeving. Kozijnen, deuren en boeiboorden vakkundig gerepareerd met epoxy. 70% goedkoper dan volledig vervangen.',
-    url: 'https://schildersbedrijf040.nl/diensten/houtrot-sanering',
-    type: 'website',
-  },
-  alternates: {
-    canonical: 'https://schildersbedrijf040.nl/diensten/houtrot-sanering',
-  },
-}
+  ] },
+})
 
 const faqs = [
   {

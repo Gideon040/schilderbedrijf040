@@ -4,13 +4,14 @@ import Link from 'next/link'
 import { JsonLd } from '@/components/json-ld'
 import { Offerte } from '@/components/site/offerte'
 import { Eyebrow, KnopOfferte, Streek } from '@/components/site/v2'
-import { images } from '@/lib/images'
+import { images, sfeer } from '@/lib/images'
 import { TOON_JORDY, jordy } from '@/lib/jordy'
 import { site } from '@/lib/site'
+import { titel } from '@/lib/meta'
 
 export const metadata: Metadata = {
-  title: 'Over Ons | Ervaren Schildersbedrijf Eindhoven',
-  description: 'Leer Schildersbedrijf040 kennen. Meer dan 5 jaar ervaring in Eindhoven. Vakkundig, betrouwbaar en persoonlijk. Ontdek onze geschiedenis en werkwijze.',
+  title: { absolute: titel('Over ons | Schilder uit Eindhoven sinds 5+ jaar') },
+  description: `Schildersbedrijf040 uit Eindhoven: eigenaar Jordy Jacobs en een vast team, Boonstoppel-verf en ${site.google.rating} op Google uit ${site.google.reviewCount} reviews.`,
   keywords: ['over schildersbedrijf040', 'schilder eindhoven', 'ervaren schilder', 'betrouwbaar schildersbedrijf'],
   openGraph: {
     title: 'Over Ons | Schildersbedrijf040',
@@ -204,7 +205,10 @@ export default function OverOnsPage() {
         </div>
       </section>
 
-      <section className="ba-sec on-dark quote-band">
+      <section className="ba-sec on-dark quote-band bg-beeld">
+        <div className="bg">
+          <Image src={sfeer.gereedschap.src} alt="" fill sizes="100vw" />
+        </div>
         <div className="wrap">
           <blockquote className="rv">
             <span className="mark" aria-hidden="true">
@@ -293,7 +297,7 @@ export default function OverOnsPage() {
         </div>
       </section>
 
-      <Offerte
+      <Offerte achtergrond={sfeer.jaren30}
         eyebrow="Gratis offerte"
         titel="Klaar voor uw project?"
         streek="project?"

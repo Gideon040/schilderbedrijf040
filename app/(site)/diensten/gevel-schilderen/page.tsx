@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { formats, meta } from '@/lib/meta'
 import { DienstTemplate, type DienstPagina } from '@/components/dienst/template'
 import { images, sfeer } from '@/lib/images'
 import { projectFoto } from '@/lib/projecten'
@@ -8,21 +9,12 @@ import { breadcrumbSchema, faqSchema, orgRef, serviceOffers, werkgebied } from '
 import { site } from '@/lib/site'
 import { PRIJSLIJST, prijsKort, prijsTekst, rekenvoorbeeld } from '@/lib/prices'
 
-export const metadata: Metadata = {
-  title: 'Gevel schilderen: prijs per m²',
-  description:
-    'Gevel schilderen kost ' + prijsTekst.gevel + ', excl. steiger en btw. Welke gevels kunnen, wanneer baksteen beter kaal blijft en wanneer u toestemming nodig heeft.',
-  openGraph: {
-    title: 'Gevel schilderen: prijs per m² | Schildersbedrijf040',
-    description:
-      'Gevel laten schilderen in Eindhoven en omgeving: ' + prijsTekst.gevel + ', eerlijk advies over baksteen en uitleg over toestemming van gemeente of VvE.',
-    url: 'https://schildersbedrijf040.nl/diensten/gevel-schilderen',
-    type: 'website',
-  },
-  alternates: {
-    canonical: 'https://schildersbedrijf040.nl/diensten/gevel-schilderen',
-  },
-}
+export const metadata: Metadata = meta({
+  titel: formats.dienst('Gevel schilderen'),
+  beschrijving: `Gevel schilderen in Eindhoven: ${prijsTekst.gevel}, exclusief steiger, met eerlijk advies over baksteen. ${formats.staart}`,
+  pad: '/diensten/gevel-schilderen',
+  extra: {},
+})
 
 // Alleen het gevelbedrag staat al op de site; de rest is een open punt voor Jordy
 const kostenRegels: { wat: string; toelichting: string; prijs: string }[] = [

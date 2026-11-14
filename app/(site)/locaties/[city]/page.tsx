@@ -19,6 +19,7 @@ import { projectenUit } from '@/lib/projecten'
 import { orgRef } from '@/lib/schema'
 import { hoofd, site } from '@/lib/site'
 import { sfeer } from '@/lib/images'
+import { formats, locatieBeschrijving, meta } from '@/lib/meta'
 
 // Generate static params for all cities
 export function generateStaticParams() {
@@ -38,31 +39,20 @@ export async function generateMetadata({ params }: { params: { city: string } })
     }
   }
 
-  const beschrijving =
-    lokaal[city]?.metaDescription ??
-    `Schildersbedrijf040 is uw vakkundige schilder in ${data.displayName}. Binnenschilderwerk, buitenschilderwerk, behangen, lakwerk & houtrot sanering. ✓ Hoogst beoordeeld ✓ Gratis offerte.`
-
-  return {
-    title: `Op zoek naar een schilder in ${data.displayName}?`,
-    description: beschrijving,
-    keywords: [
-      `schilder ${data.displayName.toLowerCase()}`,
-      `schildersbedrijf ${data.displayName.toLowerCase()}`,
-      `binnenschilderwerk ${data.displayName.toLowerCase()}`,
-      `buitenschilderwerk ${data.displayName.toLowerCase()}`,
-      `houtrot sanering ${data.displayName.toLowerCase()}`,
-      `schilderwerk ${data.displayName.toLowerCase()}`,
-    ],
-    openGraph: {
-      title: `Op zoek naar een schilder in ${data.displayName}? | Schildersbedrijf040`,
-      description: beschrijving,
-      url: `https://schildersbedrijf040.nl/locaties/${city}`,
-      type: 'website',
+  return meta({
+    titel: formats.locatie(data.displayName),
+    beschrijving: locatieBeschrijving(data.displayName),
+    pad: `/locaties/${city}`,
+    extra: {
+      keywords: [
+        `schilder ${data.displayName.toLowerCase()}`,
+        `schildersbedrijf ${data.displayName.toLowerCase()}`,
+        `binnenschilderwerk ${data.displayName.toLowerCase()}`,
+        `buitenschilderwerk ${data.displayName.toLowerCase()}`,
+        `schilderwerk ${data.displayName.toLowerCase()}`,
+      ],
     },
-    alternates: {
-      canonical: `https://schildersbedrijf040.nl/locaties/${city}`,
-    },
-  }
+  })
 }
 
 export default function LocationPage({ params }: { params: { city: string } }) {
@@ -346,8 +336,11 @@ export default function LocationPage({ params }: { params: { city: string } }) {
         </section>
       )}
 
-      {/* Waarom, met de USP's en reviews van het live template */}
-      <section style={{ background: 'var(--paper-2)' }}>
+      {/* Waarom, met de USP's en reviews, op een sfeerbeeld */}
+      <section className="bg-beeld">
+        <div className="bg">
+          <Image src={lokaalBeelden[(lokaalBeelden.indexOf(lokaalBeeld) + 1) % lokaalBeelden.length].src} alt="" fill sizes="100vw" />
+        </div>
         <div className="wrap">
           <div className="head rv">
             <div>
@@ -388,7 +381,7 @@ export default function LocationPage({ params }: { params: { city: string } }) {
             </div>
             <p>{data.werkwijze}</p>
           </div>
-          <Stappen stappen={stappen} />
+          <Stappen stappen={stappen} beelden={[sfeer.kleurstalen, sfeer.gereedschap, sfeer.afplakken, lokaalBeelden[(lokaalBeelden.indexOf(lokaalBeeld) + 2) % lokaalBeelden.length]]} />
         </div>
       </section>
 

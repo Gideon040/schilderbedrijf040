@@ -7,14 +7,16 @@ import { Eyebrow, KnopOfferte, Pijl, Streek } from '@/components/site/v2'
 import { toonbareReviews } from '@/lib/reviews'
 import { breadcrumbSchema } from '@/lib/schema'
 import { site } from '@/lib/site'
+import { titel } from '@/lib/meta'
+import { sfeer } from '@/lib/images'
 
-const titel = `Reviews | ${site.google.rating} uit ${site.google.reviewCount} Google-reviews`
+const kop = `Reviews | ${site.google.rating} uit ${site.google.reviewCount} Google-reviews`
 
 export const metadata: Metadata = {
-  title: titel,
+  title: { absolute: titel(kop) },
   description: `Lees wat klanten zeggen over Schildersbedrijf040: ${site.google.rating} op Google uit ${site.google.reviewCount} reviews en ${site.werkspot.rating} op Werkspot. Binnen- en buitenschilderwerk in Eindhoven en omgeving.`,
   alternates: { canonical: 'https://schildersbedrijf040.nl/reviews' },
-  openGraph: { title: `${titel} | Schildersbedrijf040`, url: 'https://schildersbedrijf040.nl/reviews', type: 'website' },
+  openGraph: { title: titel(kop), url: 'https://schildersbedrijf040.nl/reviews', type: 'website' },
 }
 
 export default function ReviewsPage() {
@@ -98,7 +100,7 @@ export default function ReviewsPage() {
         </section>
       )}
 
-      <Offerte />
+      <Offerte achtergrond={sfeer.entreeOranje} />
     </main>
   )
 }

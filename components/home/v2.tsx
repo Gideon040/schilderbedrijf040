@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { images, sfeer, type SiteImage } from '@/lib/images'
-import { plaatsen } from '@/lib/navigation'
+import { diensten as dienstMenu, plaatsen } from '@/lib/navigation'
 import { prijzen } from '@/lib/prices'
 import { homeReviews } from '@/lib/reviews'
 import { ReviewKaart } from '@/components/site/reviews'
@@ -148,6 +148,16 @@ export function Diensten() {
           ))}
         </div>
         <p className="note-sm">Prijzen zijn indicatief, inclusief materiaal en exclusief btw. De exacte prijs hoort u na de gratis inspectie.</p>
+        <p className="lopend rv" style={{ marginTop: 18 }}>
+          Alle diensten op een rij:{' '}
+          {dienstMenu.map((d, i) => (
+            <span key={d.href}>
+              <Link href={d.href}>{d.name.toLowerCase()}</Link>
+              {i < dienstMenu.length - 2 ? ', ' : i === dienstMenu.length - 2 ? ' en ' : '.'}
+            </span>
+          ))}{' '}
+          Bekijk ook <Link href="/projecten">onze projecten</Link> en <Link href="/reviews">wat klanten zeggen</Link>.
+        </p>
       </div>
       <div className="peek" id="peek" aria-hidden="true">
         {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -459,7 +469,10 @@ const garanties = [
 
 export function SeoTekst() {
   return (
-    <section className="seo-txt">
+    <section className="seo-txt bg-beeld">
+      <div className="bg">
+        <Image src={sfeer.jaren30.src} alt="" fill sizes="100vw" />
+      </div>
       <div className="wrap">
         <div className="head rv">
           <div>

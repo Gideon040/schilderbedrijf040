@@ -22,35 +22,21 @@ import { JsonLd } from '@/components/json-ld'
 import { breadcrumbSchema, faqSchema } from '@/lib/schema'
 import { huidigSeizoen } from '@/lib/seizoen'
 import { site } from '@/lib/site'
-import { sfeer } from '@/lib/images'
+import { formats, meta } from '@/lib/meta'
 import { prijsTekst } from '@/lib/prices'
+import { sfeer } from '@/lib/images'
 
 // Dagelijks opnieuw opbouwen, zodat het seizoensblok vanzelf wisselt
 export const revalidate = 86400
 
-export const metadata: Metadata = {
-  title: { absolute: 'Schilder Eindhoven | Schildersbedrijf040' },
-  description: 'Schilder in Eindhoven en omgeving voor binnen- en buitenschilderwerk, behangen en latex spuiten. Boonstoppel-verf, gratis inspectie en een vaste prijs.',
-  alternates: {
-    canonical: 'https://schildersbedrijf040.nl',
+export const metadata: Metadata = meta({
+  titel: `${formats.home}${' | Schildersbedrijf040'}`,
+  beschrijving: `Schilder in Eindhoven en omgeving: binnen ${prijsTekst.wanden}, gevel ${prijsTekst.gevel}. ${formats.staart} ${site.google.rating} op Google.`,
+  pad: '/',
+  extra: {
+    openGraph: { images: [{ url: '/images/schildersbedrijf040-schilder-eindhoven.jpg', width: 1200, height: 630, alt: 'Schildersbedrijf040, schilder in Eindhoven' }] },
   },
-  openGraph: {
-    title: 'Schilder Eindhoven | Schildersbedrijf040',
-    description: 'Schilder in Eindhoven en omgeving voor binnen- en buitenschilderwerk, behangen en latex spuiten. Boonstoppel-verf, gratis inspectie en een vaste prijs.',
-    url: 'https://schildersbedrijf040.nl',
-    siteName: 'Schildersbedrijf040',
-    images: [
-      {
-        url: '/images/schildersbedrijf040-schilder-eindhoven.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Schildersbedrijf040, schilder in Eindhoven',
-      },
-    ],
-    locale: 'nl_NL',
-    type: 'website',
-  },
-}
+})
 
 // Zichtbare antwoorden, dezelfde tekst als in het FAQPage-schema
 const faqs: Faq[] = [

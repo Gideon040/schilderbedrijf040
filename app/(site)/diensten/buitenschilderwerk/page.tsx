@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { formats, meta } from '@/lib/meta'
 import { DienstTemplate, type DienstPagina } from '@/components/dienst/template'
 import { images, sfeer } from '@/lib/images'
 import { afbreek } from '@/components/site/v2'
@@ -8,11 +9,11 @@ import { prijsRij, prijsTekst, prijzen, teBevestigen } from '@/lib/prices'
 import { orgRef, serviceOffers } from '@/lib/schema'
 import { hoofd, site } from '@/lib/site'
 
-export const metadata: Metadata = {
-  title: 'Buitenschilderwerk Eindhoven',
-  description:
-    'Buitenschilder in Eindhoven: gevel ' + prijsTekst.gevel + ', kozijnen ' + prijsTekst.lakBuiten + ', boeidelen en dakkapellen. Boonstoppel-verf, gratis houtrot-inspectie, vaste prijs.',
-  keywords: [
+export const metadata: Metadata = meta({
+  titel: formats.dienst('Buitenschilderwerk'),
+  beschrijving: `Buitenschilderwerk in Eindhoven: gevel ${prijsTekst.gevel}, kozijnen ${prijsTekst.lakBuiten}, met houtrotcontrole. ${formats.staart}`,
+  pad: '/diensten/buitenschilderwerk',
+  extra: { keywords: [
     'buitenschilderwerk eindhoven',
     'buitenschilder eindhoven',
     'huis buiten laten schilderen',
@@ -23,18 +24,8 @@ export const metadata: Metadata = {
     'schildersbedrijf eindhoven',
     'buitenschilderwerk kosten',
     'houtwerk schilderen buiten',
-  ],
-  openGraph: {
-    title: 'Buitenschilderwerk Eindhoven | Schildersbedrijf040',
-    description:
-      'Professioneel buitenschilderwerk in Eindhoven en omgeving. Gevels, kozijnen en deuren duurzaam beschermd met Boonstoppel verf.',
-    url: 'https://schildersbedrijf040.nl/diensten/buitenschilderwerk',
-    type: 'website',
-  },
-  alternates: {
-    canonical: 'https://schildersbedrijf040.nl/diensten/buitenschilderwerk',
-  },
-}
+  ] },
+})
 
 const faqs = [
   {

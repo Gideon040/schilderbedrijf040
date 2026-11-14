@@ -1,17 +1,18 @@
 import type { Metadata } from 'next'
 import { TOON_JORDY } from '@/lib/jordy'
 import Link from 'next/link'
+import { formats, meta } from '@/lib/meta'
 import { DienstTemplate, type DienstPagina } from '@/components/dienst/template'
 import { images, sfeer } from '@/lib/images'
 import { orgRef, serviceOffers } from '@/lib/schema'
 import { hoofd, site } from '@/lib/site'
 import { prijsKort, prijsTekst, prijzen, teBevestigen } from '@/lib/prices'
 
-export const metadata: Metadata = {
-  title: 'Latex spuiten Eindhoven',
-  description:
-    'Latex spuiten in Eindhoven: muren en plafonds ' + prijsTekst.latex + ', inclusief afplakken. Egaal, snel en met een vaste prijs per m² na een gratis inspectie.',
-  keywords: [
+export const metadata: Metadata = meta({
+  titel: formats.dienst('Latex spuiten'),
+  beschrijving: `Latex spuiten in Eindhoven: wanden en plafonds egaal gespoten voor ${prijsTekst.latex}, inclusief afplakken. ${formats.staart}`,
+  pad: '/diensten/latex-spuiten',
+  extra: { keywords: [
     'latex spuiten eindhoven',
     'airless spuiten eindhoven',
     'muren spuiten eindhoven',
@@ -19,18 +20,8 @@ export const metadata: Metadata = {
     'latex spuiten kosten',
     'schildersbedrijf eindhoven',
     'latex spuiten prijs per m2',
-  ],
-  openGraph: {
-    title: 'Latex Spuiten Eindhoven | Schildersbedrijf040',
-    description:
-      'Professioneel latex spuiten in Eindhoven en omgeving. Muren en plafonds 3-5x sneller en 100% egaal met airless spuittechniek.',
-    url: 'https://schildersbedrijf040.nl/diensten/latex-spuiten',
-    type: 'website',
-  },
-  alternates: {
-    canonical: 'https://schildersbedrijf040.nl/diensten/latex-spuiten',
-  },
-}
+  ] },
+})
 
 const faqs = [
   {

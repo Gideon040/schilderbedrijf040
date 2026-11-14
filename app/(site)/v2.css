@@ -1302,3 +1302,24 @@ header.nav nav.mmenu{display:block;font-weight:400;font-size:inherit}
 .prose .lld .lld-rev{grid-template-columns:1fr}
 .prose .lld .lld-rev blockquote{font-size:15px}
 @media (max-width: 760px){.prose .lld{grid-template-columns:1fr}}
+
+/* Tabellen in de tekstkolom van dienstpagina's: nooit breder dan de kolom (liepen onder de prijzenkaart) */
+.dp-split table td:last-child,.dp-split table th:last-child{white-space:normal;min-width:7.5em}
+.dp-split table:has(th:nth-child(3)) td:last-child,.dp-split table:has(th:nth-child(3)) th:last-child{text-align:left}
+.dp-split table td{vertical-align:top;overflow-wrap:break-word}
+.dp-split .lopend{min-width:0;overflow-wrap:break-word}
+
+/* Meer sfeer: achtergrondbeeld achter kaartsecties en de over-ons-tekst */
+.dp-types.bg-beeld .head h2,.bg-beeld .why h3{color:var(--white)}
+.bg-beeld .mini-h2{color:var(--white)}
+.bg-beeld .why>div{background:rgba(255,255,255,.96)}
+.bg-beeld .why>div h3{color:var(--ink)}
+.seo-txt.bg-beeld h3,.seo-txt.bg-beeld h4,.seo-txt.bg-beeld p,.seo-txt.bg-beeld span{color:#E6ECF3}
+.seo-txt.bg-beeld h3,.seo-txt.bg-beeld h4{color:var(--white)}
+.seo-txt.bg-beeld .garanties>div{background:rgba(10,22,38,.55);padding:16px;box-shadow:inset 0 0 0 1px rgba(255,255,255,.15)}
+.beeld-rij{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:36px}
+.beeld-rij figure{margin:0;position:relative;aspect-ratio:16/10;overflow:hidden}
+.beeld-rij img{object-fit:cover;transition:transform .6s}
+.beeld-rij figure:hover img{transform:scale(1.05)}
+@media (max-width: 760px){.beeld-rij{grid-template-columns:1fr 1fr}.beeld-rij figure:nth-child(3){display:none}}
+.bg-beeld p>a:not(.btn){color:#9FC2FF}

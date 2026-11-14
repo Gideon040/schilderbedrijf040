@@ -8,10 +8,12 @@ import { JsonLd } from '@/components/json-ld'
 import { Offerte } from '@/components/site/offerte'
 import { Pijl } from '@/components/site/v2'
 import { site } from '@/lib/site'
+import { sfeer } from '@/lib/images'
+import { titel } from '@/lib/meta'
 
 export const metadata: Metadata = {
-  title: 'Blog | Schildertips & Advies',
-  description: 'Praktische tips en advies over schilderwerk. Leer hoe je zelf schildert, welke materialen je nodig hebt en wanneer je een professional inschakelt.',
+  title: { absolute: titel('Blog: schildertips en advies') },
+  description: 'Praktische tips over schilderwerk: plafond schilderen, verven na behang, beitsen of lakken en btw. Van Jordy Jacobs, schilder in Eindhoven.',
   keywords: ['schildertips', 'verf advies', 'schilderwerk blog', 'doe het zelf schilderen', 'schilder handleiding'],
   openGraph: {
     title: 'Blog | Schildersbedrijf040',
@@ -156,6 +158,7 @@ export default function BlogPage() {
       </section>
 
       <Offerte
+        achtergrond={sfeer.wandHalverwege}
         eyebrow="Gratis offerte"
         titel="Liever uitbesteden?"
         streek="uitbesteden?"

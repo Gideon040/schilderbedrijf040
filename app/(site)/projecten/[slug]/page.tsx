@@ -12,6 +12,7 @@ import { dienstNaam, indexeerbaar, plaatsLabel, plaatsLink, project, projecten }
 import { reviewOpId } from '@/lib/reviews'
 import { breadcrumbSchema, orgRef } from '@/lib/schema'
 import { site } from '@/lib/site'
+import { titel as metaTitel } from '@/lib/meta'
 
 export const dynamicParams = false
 
@@ -24,8 +25,9 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
   if (!p) return { title: 'Project niet gevonden' }
   const url = `${site.url}/projecten/${p.slug}`
   const titel = jordy(p.titel)
+  const plaats = jordy(p.plaats)
   return {
-    title: titel.length > 46 ? { absolute: titel } : titel,
+    title: { absolute: metaTitel(titel.length > 60 ? `${jordy(p.kaartTitel)}, ${plaats}` : titel) },
     description: jordy(p.samenvatting).slice(0, 155),
     alternates: { canonical: url },
     // Oude Instagram-kaarten: pagina bestaat, maar niet indexeren tot de gegevens compleet zijn

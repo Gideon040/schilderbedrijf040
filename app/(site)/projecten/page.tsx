@@ -8,10 +8,11 @@ import { diensten as dienstMenu } from '@/lib/navigation'
 import { TOON_JORDY, jordy } from '@/lib/jordy'
 import { indexeerbaar, projecten } from '@/lib/projecten'
 import { ProjectKaarten } from '@/components/projecten/kaarten'
+import { titel } from '@/lib/meta'
 
 export const metadata: Metadata = {
-  title: 'Projecten | Ons Schilderwerk in Beeld',
-  description: 'Bekijk onze afgeronde schilderprojecten in Eindhoven en omgeving. Van binnenschilderwerk tot complete renovaties. Volg ons op Instagram voor dagelijkse updates.',
+  title: { absolute: titel('Projecten in Eindhoven en omgeving') },
+  description: 'Schilderprojecten in Eindhoven en Best: monumentale woningen in het Witte Dorp, houtrotherstel, lakwerk en een gespoten bungalow, met aanpak en foto’s.',
   keywords: ['schilderwerk projecten', 'schilder portfolio', 'schilderwerk eindhoven', 'schilderwerk voorbeelden'],
   openGraph: {
     title: 'Projecten | Schildersbedrijf040',

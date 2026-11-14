@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { formats, meta } from '@/lib/meta'
 import { DienstTemplate, type DienstPagina } from '@/components/dienst/template'
 import { images, sfeer } from '@/lib/images'
 import { projectFoto } from '@/lib/projecten'
@@ -7,11 +8,11 @@ import { prijsKort, prijsTekst, prijzen, teBevestigen } from '@/lib/prices'
 import { orgRef, serviceOffers } from '@/lib/schema'
 import { hoofd, site } from '@/lib/site'
 
-export const metadata: Metadata = {
-  title: 'Deuren en kozijnen lakken Eindhoven',
-  description:
-    'Deuren, kozijnen en trappen laten lakken in Eindhoven: deur ' + prijsKort.deur + ', trap ' + prijsKort.trap + ', met Boonstoppel-lak. Gratis inspectie en vaste prijs.',
-  keywords: [
+export const metadata: Metadata = meta({
+  titel: formats.dienst('Lakwerk'),
+  beschrijving: `Lakwerk in Eindhoven: deuren ${prijsTekst.deur}, kozijnen binnen ${prijsTekst.lakBinnen}, trap ${prijsTekst.trap}. ${formats.staart}`,
+  pad: '/diensten/lakwerk',
+  extra: { keywords: [
     'lakwerk eindhoven',
     'kozijnen lakken eindhoven',
     'deuren lakken eindhoven',
@@ -21,18 +22,8 @@ export const metadata: Metadata = {
     'lakwerk kosten',
     'schildersbedrijf eindhoven',
     'houtwerk lakken',
-  ],
-  openGraph: {
-    title: 'Lakwerk Eindhoven | Schildersbedrijf040',
-    description:
-      'Professioneel lakwerk in Eindhoven en omgeving. Kozijnen, deuren en trappen vakkundig gelakt met Boonstoppel lak door Schildersbedrijf040.',
-    url: 'https://schildersbedrijf040.nl/diensten/lakwerk',
-    type: 'website',
-  },
-  alternates: {
-    canonical: 'https://schildersbedrijf040.nl/diensten/lakwerk',
-  },
-}
+  ] },
+})
 
 const faqs = [
   {

@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { TOON_JORDY, jordy } from '@/lib/jordy'
 import { AFSPRAAK, datumTekst, winteractieActief } from '@/lib/afspraak'
 import Link from 'next/link'
+import { formats, meta } from '@/lib/meta'
 import { DienstTemplate, type DienstPagina } from '@/components/dienst/template'
 import { images, sfeer } from '@/lib/images'
 import { breadcrumbSchema, faqSchema, orgRef, serviceOffers, werkgebied } from '@/lib/schema'
@@ -11,20 +12,15 @@ import { prijsTekst } from '@/lib/prices'
 // Dagelijks opnieuw opbouwen, zodat de winteractie na de einddatum vanzelf verdwijnt
 export const revalidate = 86400
 
-export const metadata: Metadata = {
-  title: 'Winterschilder Eindhoven',
-  description:
-    'Kun je in de winter binnen laten schilderen? Ja. Winterschilder in Eindhoven: binnenwerk voor ' + prijsTekst.wanden + ' en vaak sneller plek in de planning.',
-  openGraph: {
-    title: 'Winterschilder Eindhoven | Schildersbedrijf040',
-    description:
-      'Binnenschilderwerk in de winter: verf droogt binnen goed bij kamertemperatuur en de planning is ruimer dan in het voorjaar.',
-    url: 'https://schildersbedrijf040.nl/diensten/winterschilder',
-    type: 'website',
-  },
-  alternates: {
-    canonical: 'https://schildersbedrijf040.nl/diensten/winterschilder',
-  },
+// Titel en beschrijving per dag (revalidate): met winterkorting zolang de actie loopt en de voorwaarden bekend zijn
+export function generateMetadata(): Metadata {
+  const actie = winteractieActief()
+  return meta({
+    titel: actie ? 'Winterschilder Eindhoven | Winterkorting tot 20%' : formats.dienst('Winterschilder'),
+    beschrijving: `Winterschilder in Eindhoven: binnenwerk deze winter voor ${prijsTekst.wanden}${actie ? ', nu met winterkorting' : ''}, vaak sneller ingepland. ${formats.staart}`,
+    pad: '/diensten/winterschilder',
+    extra: { keywords: ['winterschilder eindhoven', 'winterschilder korting', 'winterschilder', 'binnen schilderen winter'] },
+  })
 }
 
 const faqs = [

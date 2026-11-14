@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { linkLive } from '@/lib/navigation'
+import { formats, meta } from '@/lib/meta'
 import { DienstTemplate, type DienstPagina } from '@/components/dienst/template'
 import { images, sfeer } from '@/lib/images'
 import { projectFoto } from '@/lib/projecten'
@@ -9,21 +10,12 @@ import { PRIJSLIJST, prijsKort, prijsRij, prijsTekst, prijzen, rekenvoorbeeld, t
 import { breadcrumbSchema, faqSchema, orgRef, serviceOffers, werkgebied } from '@/lib/schema'
 import { site } from '@/lib/site'
 
-export const metadata: Metadata = {
-  title: 'Kozijnen schilderen: prijs per kozijn',
-  description:
-    'Kozijnen schilderen kost ' + prijsTekst.lakBuiten + ' en gaat met Boonstoppel-verf 8 tot 10 jaar mee. Gratis houtrotcheck en een vaste prijs. Vraag offerte aan.',
-  openGraph: {
-    title: 'Kozijnen schilderen: prijs per kozijn | Schildersbedrijf040',
-    description:
-      'Houten kozijnen buiten laten schilderen in Eindhoven en omgeving: ' + prijsTekst.lakBuiten + ', met houtrotcheck, kitwerk en Boonstoppel-verf.',
-    url: 'https://schildersbedrijf040.nl/diensten/kozijnen-schilderen',
-    type: 'website',
-  },
-  alternates: {
-    canonical: 'https://schildersbedrijf040.nl/diensten/kozijnen-schilderen',
-  },
-}
+export const metadata: Metadata = meta({
+  titel: formats.dienst('Kozijnen schilderen'),
+  beschrijving: `Kozijnen schilderen in Eindhoven: ${prijsTekst.lakBuiten}, met houtrotcontrole en Boonstoppel-verf. ${formats.staart}`,
+  pad: '/diensten/kozijnen-schilderen',
+  extra: {},
+})
 
 // Prijzen uit lib/prices.ts (staan al op de site); nieuwe bedragen alleen als open punt voor Jordy
 const buiten = prijzen.buitenschilderwerk

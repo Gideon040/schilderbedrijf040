@@ -1,16 +1,17 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { formats, meta } from '@/lib/meta'
 import { DienstTemplate, type DienstPagina } from '@/components/dienst/template'
 import { images, sfeer } from '@/lib/images'
 import { orgRef, serviceOffers } from '@/lib/schema'
 import { hoofd, site } from '@/lib/site'
 import { prijsKort, prijsTekst, teBevestigen } from '@/lib/prices'
 
-export const metadata: Metadata = {
-  title: 'Behanger in Eindhoven en Helmond',
-  description:
-    'Behanger in Eindhoven en Helmond: behangen ' + prijsTekst.behangen + ', oud behang verwijderen ' + teBevestigen.behangVerwijderen + '. Vaste prijs vooraf.',
-  keywords: [
+export const metadata: Metadata = meta({
+  titel: formats.dienst('Behangen'),
+  beschrijving: `Behangen in Eindhoven en omgeving: ${prijsTekst.behangen}, inclusief voorbereiding van de muren. ${formats.staart}`,
+  pad: '/diensten/behangen',
+  extra: { keywords: [
     'behangen eindhoven',
     'behanger',
     'behanger eindhoven',
@@ -21,18 +22,8 @@ export const metadata: Metadata = {
     'fotobehang eindhoven',
     'behangen kosten',
     'schildersbedrijf eindhoven',
-  ],
-  openGraph: {
-    title: 'Behangen Eindhoven | Schildersbedrijf040',
-    description:
-      'Professioneel behangen in Eindhoven en omgeving. Vliesbehang, glasvezelbehang en fotobehang vakkundig aangebracht door Schildersbedrijf040.',
-    url: 'https://schildersbedrijf040.nl/diensten/behangen',
-    type: 'website',
-  },
-  alternates: {
-    canonical: 'https://schildersbedrijf040.nl/diensten/behangen',
-  },
-}
+  ] },
+})
 
 const faqs = [
   {

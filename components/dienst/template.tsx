@@ -7,7 +7,7 @@ import { VoorNa, type Project } from '@/components/site/voor-na'
 import { Winterband } from '@/components/site/winterband'
 import { afbreek, Eyebrow, KnopBel, KnopOfferte, Pijl, Streek, StreekKop, staal } from '@/components/site/v2'
 import { Stappen } from '@/components/home/v2'
-import type { SiteImage } from '@/lib/images'
+import { sfeer, type SiteImage } from '@/lib/images'
 import { liveDiensten } from '@/lib/live-diensten'
 import { diensten, linkLive, plaatsen, PRIJSGIDS } from '@/lib/navigation'
 import { prijsNoot, prijzen } from '@/lib/prices'
@@ -15,6 +15,7 @@ import { reviewsVoor } from '@/lib/reviews'
 import { ReviewKaarten } from '@/components/site/reviews'
 import { ProjectKaarten } from '@/components/projecten/kaarten'
 import { projectenMetDienst } from '@/lib/projecten'
+import { blog } from '@/lib/blog'
 import { jordy } from '@/lib/jordy'
 import { site } from '@/lib/site'
 
@@ -53,6 +54,33 @@ const splits: Record<string, [string, string]> = {
 // Alt-tekst: projectfoto's en sfeerbeelden houden hun eigen beschrijving; oude foto's de vaste alt van de live site
 const altVoor = (img: SiteImage, liveAlt?: string) => (img.eigenAlt ? img.alt : liveAlt ?? img.alt)
 
+// Relevante blogs per dienst (interne links, instructie 7.3)
+const blogsPerDienst: Record<string, string[]> = {
+  binnenschilderwerk: ['hoe-lang-duurt-binnenschilderwerk', 'plafond-schilderen', 'verven-na-behang', 'btw-tarief-schilderwerk'],
+  'latex-spuiten': ['latex-spuiten-of-rollen', 'plafond-schilderen', 'hoe-verf-je-een-muur'],
+  buitenschilderwerk: ['wanneer-buiten-schilderen', 'hoe-vaak-buitenschilderwerk', 'kitnaden-vervangen'],
+  'kozijnen-schilderen': ['beitsen-of-lakken', 'kitnaden-vervangen', 'hoe-vaak-buitenschilderwerk'],
+  'gevel-schilderen': ['wanneer-buiten-schilderen', 'hoe-vaak-buitenschilderwerk'],
+  lakwerk: ['hoe-schilder-je-een-deur', 'beitsen-of-lakken'],
+  behangen: ['verven-na-behang', 'hoe-verf-je-een-muur'],
+  'houtrot-sanering': ['hoe-vaak-buitenschilderwerk', 'kitnaden-vervangen', 'beitsen-of-lakken'],
+  winterschilder: ['hoe-lang-duurt-binnenschilderwerk', 'btw-tarief-schilderwerk', 'plafond-schilderen'],
+}
+
+// Sfeerbeelden per dienst: achtergrond achter de dienstkaarten en een rij van drie bij "Waarom"
+const S = sfeer
+const sfeerPerDienst: Record<string, { bg: SiteImage; rij: SiteImage[] }> = {
+  binnenschilderwerk: { bg: S.woonkamer, rij: [S.plafond, S.binnendeuren, S.badkamer] },
+  'latex-spuiten': { bg: S.nieuwbouw, rij: [S.plafond, S.wandHalverwege, S.woonkamer] },
+  buitenschilderwerk: { bg: S.jaren30, rij: [S.garagedeuren, S.villaHerfst, S.kozijn] },
+  'kozijnen-schilderen': { bg: S.rijtjeshuis, rij: [S.entreeOranje, S.voordeur, S.jaren30] },
+  'gevel-schilderen': { bg: S.rijtjeshuis, rij: [S.jaren30, S.villaHerfst, S.entreeOranje] },
+  lakwerk: { bg: S.binnendeuren, rij: [S.voordeur, S.garagedeuren, S.kozijn] },
+  behangen: { bg: S.zolder, rij: [S.behang, S.woonkamer, S.kleurstalen] },
+  'houtrot-sanering': { bg: S.jaren30, rij: [S.kozijn, S.entreeOranje, S.villaHerfst] },
+  winterschilder: { bg: S.woonkamer, rij: [S.winter, S.zolder, S.plafond] },
+}
+
 const reviewTags: Record<string, string> = { 'gevel-schilderen': 'buitenschilderwerk', winterschilder: 'binnenschilderwerk' }
 
 const kleuren = ['var(--sw1)', 'var(--sw2)', 'var(--sw3)', 'var(--sw5)', 'var(--sw4)', 'var(--sw6)']
@@ -82,6 +110,7 @@ export function DienstTemplate({ d }: { d: DienstPagina }) {
   const reviewTag = reviewTags[d.slug] ?? d.slug
   const klantReviews = reviewsVoor({ dienst: reviewTag, aantal: 6 })
   const eigenProjecten = projectenMetDienst(d.slug === 'winterschilder' ? 'binnenschilderwerk' : d.slug)
+  const sf = sfeerPerDienst[d.slug]
   const metTag = klantReviews.filter((r) => r.diensten.includes(reviewTag)).length
   const kleur = staal[d.slug] ?? staal.binnenschilderwerk
   const [eersteWoord, ...rest] = d.h1.split(' ')
@@ -246,7 +275,12 @@ export function DienstTemplate({ d }: { d: DienstPagina }) {
       </section>
 
       {/* Soorten werk als stalen */}
-      <section className="dp-types">
+      <section className={`dp-types${sf ? ' bg-beeld' : ''}`}>
+        {sf && (
+          <div className="bg">
+            <Image src={sf.bg.src} alt="" fill sizes="100vw" />
+          </div>
+        )}
         <div className="wrap">
           <div className="head rv">
             <div>
@@ -337,7 +371,10 @@ export function DienstTemplate({ d }: { d: DienstPagina }) {
             </div>
             <p>{d.werkwijze.intro}</p>
           </div>
-          <Stappen stappen={d.werkwijze.stappen.map((s) => ({ titel: s.titel, tekst: s.beschrijving }))} />
+          <Stappen
+            stappen={d.werkwijze.stappen.map((s) => ({ titel: s.titel, tekst: s.beschrijving }))}
+            beelden={[sfeer.kleurstalen, sfeer.gereedschap, sfeer.afplakken, sf?.bg ?? sfeer.woonkamer]}
+          />
         </div>
       </section>
 
@@ -367,6 +404,15 @@ export function DienstTemplate({ d }: { d: DienstPagina }) {
               </div>
             )}
           </div>
+          {sf && (
+            <div className="beeld-rij rv">
+              {sf.rij.map((b) => (
+                <figure key={b.src}>
+                  <Image src={b.src} alt={b.alt} fill sizes="(max-width: 760px) 50vw, 400px" />
+                </figure>
+              ))}
+            </div>
+          )}
           <h2 id={`${d.slug}-reviews`} className="mini-h2 rv">
             {metTag >= 3 ? `Klanten over ons ${d.naam.toLowerCase()}` : 'Wat klanten zeggen'}
           </h2>
@@ -445,6 +491,23 @@ export function DienstTemplate({ d }: { d: DienstPagina }) {
               </Link>
             ))}
           </div>
+          {(blogsPerDienst[d.slug] ?? []).length > 0 && (
+            <>
+              <h2 id={`${d.slug}-lees-ook`} className="mini-h2 rv">
+                Lees ook
+              </h2>
+              <div className="places rv">
+                {(blogsPerDienst[d.slug] ?? [])
+                  .map((s) => blog(s))
+                  .filter((b): b is NonNullable<typeof b> => !!b)
+                  .map((b) => (
+                    <Link key={b.slug} href={`/blog/${b.slug}`}>
+                      {b.title.replace(/\s*\[[^\]]*\]/, '')}
+                    </Link>
+                  ))}
+              </div>
+            </>
+          )}
           <h2 id={`${d.slug}-in-de-buurt`} className="mini-h2 rv">
             {d.naam} bij u in de buurt
           </h2>
@@ -459,6 +522,7 @@ export function DienstTemplate({ d }: { d: DienstPagina }) {
       </section>
 
       <Offerte
+        achtergrond={sf?.rij[1] ?? sfeer.entreeOranje}
         eyebrow={d.cta.titel}
         titel={slot}
         streek={slot.split(' ').slice(-1)[0]}
