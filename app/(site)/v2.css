@@ -11,7 +11,7 @@
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;overflow-x:clip}
-body{background:var(--paper);color:var(--text);font-family:var(--body);font-size:17px;line-height:1.6;font-stretch:100%;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body{background:var(--paper);color:var(--text);font-family:var(--body);font-size:17px;line-height:1.6;font-stretch:100%;-webkit-font-smoothing:antialiased;overflow-x:clip}
 a{color:inherit}
 img{max-width:100%;display:block}
 .wrap{max-width:1240px;margin:0 auto;padding-inline:clamp(16px,4vw,40px)}
@@ -1343,3 +1343,16 @@ header.nav nav.mmenu{display:block;font-weight:400;font-size:inherit}
 .dp-types.bg-beeld .deck .card{background:rgba(255,255,255,.94);backdrop-filter:blur(2px)}
 .dp-types.bg-beeld>.bg::after{background:linear-gradient(180deg,rgba(10,22,38,.25) 0%,rgba(10,22,38,.55) 30%,rgba(10,22,38,.85) 60%,rgba(10,22,38,.9) 100%)}
 .dp-types.bg-beeld>.bg img{object-position:50% 65%}
+
+/* Achtergrondbeeld alleen in de bovenste band van een sectie, zodat het niet over een hoge sectie wordt
+   opgerekt (werd wazig en sterk ingezoomd). Daaronder loopt het over in de donkere sectiekleur. */
+.bg-beeld{background-color:var(--ink)}
+.bg-beeld>.bg{bottom:auto;height:min(100%,760px)}
+.bg-beeld>.bg::after{background:linear-gradient(180deg,rgba(10,22,38,.55) 0%,rgba(10,22,38,.62) 50%,rgba(10,22,38,.92) 85%,var(--ink) 100%)}
+.dp-types.bg-beeld>.bg::after{background:linear-gradient(180deg,rgba(10,22,38,.2) 0%,rgba(10,22,38,.5) 40%,rgba(10,22,38,.9) 85%,var(--ink) 100%)}
+.dp-types.bg-beeld>.bg img{object-position:50% 60%}
+.winter.bg-beeld{background-color:var(--blue)}
+.winter.bg-beeld>.bg{height:100%}
+.quote.bg-beeld>.bg{height:100%}
+/* Prijzenkaart op dienstpagina's blijft in beeld bij scrollen (sticky werkte niet door overflow-x:hidden op body) */
+@media (min-width: 981px){.dp-split .kaart{position:sticky;top:96px;max-height:calc(100vh - 116px);overflow:auto}}
