@@ -65,7 +65,7 @@ Alle pagina's lezen hun bedragen nu uit `lib/prices.ts`. Tot je antwoord staan o
 
 28. **WhatsApp:** heeft 06-38903004 WhatsApp (of WhatsApp Business)? De knop "App Jordy" staat nu naast elke belknop en in de mobiele balk en linkt naar `wa.me/31638903004`.
 29. **Stucwerk, keukens spuiten, VvE en zakelijk werk:** levert Schildersbedrijf040 dit? "Traditioneel stucwerk" en "Exclusief stucdesign" zijn uit het formulier gehaald. Let op: in reviews noemen klanten wel stucwerk (Niki van het Hof: "De zolder gestuucd + geverfd"), en op de lakwerkpagina staat keukenkasten spuiten.
-30. **Foto-upload in het formulier:** Formspree accepteert bijlagen alleen op een betaald abonnement. Op welk Formspree-abonnement staat het formulier `mkgovyya`? Zonder bijlagen-ondersteuning komt de aanvraag wel binnen, maar zonder foto's. Test dit na de preview met één aanvraag met foto.
+30. **Foto-upload in het formulier:** getest na livegang (14-11-2026): Formspree weigert bijlagen op het huidige abonnement ("File Uploads Not Permitted"). Het formulier stuurt de aanvraag dan automatisch zonder foto's, met de notitie hoeveel foto's de klant wilde meesturen, en vraagt de klant ze via WhatsApp te sturen. Wil je foto's direct in de aanvraag? Dan is een Formspree-abonnement met bestandsuploads nodig.
 31. **Metingen:** er staat nu geen Google Analytics of Tag Manager op de site (ook niet live). De site stuurt wel events naar `dataLayer`: `generate_lead` (offerteformulier, offerteblok en afspraak-popup), `phone_click`, `whatsapp_click` en `email_click`. Lever een GTM-container-ID aan (in Netlify als `NEXT_PUBLIC_GTM_ID`), dan worden ze gemeten. Is er een cookiemelding nodig voor jouw instellingen?
 
 ## Btw en teksten

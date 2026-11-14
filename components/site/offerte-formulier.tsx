@@ -51,9 +51,19 @@ export function OfferteFormulier({
     setMelding('')
     setStatus('bezig')
     try {
-      const res = await fetch(FORMSPREE, { method: 'POST', headers: { Accept: 'application/json' }, body: fd })
+      let res = await fetch(FORMSPREE, { method: 'POST', headers: { Accept: 'application/json' }, body: fd })
+      let fotosMee = fotos.length > 0
+      // Het Formspree-abonnement accepteert (nog) geen bijlagen: verstuur dan zonder foto's, zodat de aanvraag
+      // niet verloren gaat, en vraag de klant de foto's via WhatsApp te sturen.
+      if (!res.ok && fotosMee) {
+        fd.delete('fotos')
+        fd.set('fotos_niet_meegestuurd', `Klant wilde ${fotos.length} foto('s) meesturen; vraag ze via WhatsApp op.`)
+        res = await fetch(FORMSPREE, { method: 'POST', headers: { Accept: 'application/json' }, body: fd })
+        fotosMee = false
+        if (res.ok) setMelding(`Uw foto's konden niet mee. Stuurt u ze via WhatsApp naar ${site.phone}?`)
+      }
       if (!res.ok) throw new Error(String(res.status))
-      trackEvent('generate_lead', { form: formulier, met_fotos: fotos.length > 0 })
+      trackEvent('generate_lead', { form: formulier, met_fotos: fotosMee })
       form.reset()
       setStatus('klaar')
     } catch {
@@ -62,7 +72,7 @@ export function OfferteFormulier({
   }
 
   return (
-    <form className={`${className} of-form`} action={FORMSPREE} method="POST" encType="multipart/form-data" onSubmit={submit}>
+    <form className={`${className} of-form`} action={FORMSPREE} method="POST" onSubmit={submit}>
       <input type="hidden" name="formulier" value={formulier} />
       <Kop className="full">{titel}</Kop>
       {intro && <p className="full of-intro">{intro}</p>}
@@ -106,8 +116,16 @@ export function OfferteFormulier({
         {status === 'bezig' ? 'Bezig met versturen...' : 'Gratis offerte aanvragen'} <Pijl />
       </button>
       <p className="sent full" role="status">
+        {status === 'klaar' && `Bedankt! U hoort ${site.termijnen.reactie} van ons. `}
         {melding}
-        {status === 'klaar' && `Bedankt! U hoort ${site.termijnen.reactie} van ons.`}
+        {melding.includes('WhatsApp') && (
+          <>
+            {' '}
+            <a href={site.whatsappHref} target="_blank" rel="noopener noreferrer">
+              Open WhatsApp
+            </a>
+          </>
+        )}
         {status === 'fout' && (
           <>
             Versturen lukte niet. Bel ons op <a href={site.phoneHref}>{site.phone}</a> of stuur een{' '}
