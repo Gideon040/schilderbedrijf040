@@ -13,6 +13,7 @@ PROJECTEN = {
     'witte-dorp-burghplein-eindhoven': [
         ('01-voordeur.jpg', (340, 0, 1536, 2048), 'voordeur-monumentale-woning-witte-dorp-eindhoven'),  # huisnummer weg
         ('02-gevel.jpg', (180, 0, 1536, 2048), 'gevel-monumentale-woning-witte-dorp-eindhoven'),  # huisnummer weg
+        ('02-gevel.jpg', (180, 1285, 1536, 2048), 'hero-gevel-voordeur-witte-dorp-eindhoven'),  # liggend, voor de homepage-hero
     ],
     'fluwijnstraat-eindhoven': [
         ('02-voorgevel.jpg', (90, 0, 1536, 2048), 'voorgevel-kozijnen-geschilderd-fluwijnstraat-eindhoven'),  # huisnummer weg

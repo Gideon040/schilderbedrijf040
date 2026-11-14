@@ -18,8 +18,19 @@ const per = (s: string) => s.replace(' /', ' / ')
 
 /* ---------- hero ---------- */
 export function HomeHero() {
+  const p = uitgelicht()
   return (
-    <section className="hero" style={{ padding: 0 }}>
+    <section className="hero hero-gevel on-dark" style={{ padding: 0 }}>
+      {/* Echte projectfoto (beeldplan 8.1): gevel in het Witte Dorp, zonder huisnummer. Vooraf geladen, niet lazy (LCP). */}
+      <div className="hero-bg">
+        <Image
+          src="/images/projecten/witte-dorp-burghplein-eindhoven/hero-gevel-voordeur-witte-dorp-eindhoven.webp"
+          alt="Geschilderde gevel en turquoise voordeur van een monumentale woning in het Witte Dorp, Eindhoven"
+          fill
+          priority
+          sizes="100vw"
+        />
+      </div>
       <div className="wrap grid">
         <div>
           <h1 className="disp">
@@ -60,13 +71,7 @@ export function HomeHero() {
             </div>
           </div>
         </div>
-        <div className="photo">
-          <div className="roller" aria-hidden="true">
-            <i />
-          </div>
-          <div className="img">
-            <Image src={images.jordy.src} alt="Jordy Jacobs - Eigenaar Schildersbedrijf040" fill priority sizes="(max-width: 980px) 92vw, 590px" />
-          </div>
+        <div className="hero-zij">
           <div className="badge" role="img" aria-label={`${site.google.rating} op Google`}>
             <svg viewBox="0 0 116 116" aria-hidden="true">
               <defs>
@@ -81,10 +86,13 @@ export function HomeHero() {
               <span aria-hidden="true">★★★★★</span>
             </div>
           </div>
-          <div className="who">
-            <b>{site.owner}</b>
-            <span>Eigenaar van Schildersbedrijf040</span>
-          </div>
+          <Link className="who hero-project" href={`/projecten/${p.slug}`}>
+            <small>Uitgelicht project</small>
+            <b>{p.kaartTitel}</b>
+            <span>
+              {plaatsLabel(p)} · Bekijk het project →
+            </span>
+          </Link>
           <div className="fan" aria-hidden="true">
             {['040-01 BINNEN', '040-02 BEHANG', '040-03 LATEX', '040-04 HOUTROT', '040-05 BUITEN', '040-06 LAKWERK'].map((l, i) => (
               <div key={l} className={`sw${i > 2 ? ' dk' : ''}`}>

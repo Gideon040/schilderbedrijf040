@@ -1359,3 +1359,30 @@ header.nav nav.mmenu{display:block;font-weight:400;font-size:inherit}
 /* Uitklapmenu dicht na een klik (header.tsx zet .dicht tot de muis het menu-item verlaat) */
 .dd.dicht .dd-menu{visibility:hidden!important;opacity:0!important;pointer-events:none!important}
 .dd.dicht .chev{transform:none!important}
+
+/* Homepage-hero: gevel Witte Dorp schermbreed met donkere overlay (beeldplan 8.1) */
+.hero-gevel{background:var(--ink);color:#DCE3EC;isolation:isolate}
+.hero-gevel .hero-bg{position:absolute;inset:0;z-index:-1}
+.hero-gevel .hero-bg img{object-fit:cover;object-position:55% 60%}
+.hero-gevel .hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,22,38,.92) 0%,rgba(10,22,38,.82) 42%,rgba(10,22,38,.45) 75%,rgba(10,22,38,.3) 100%)}
+.hero-gevel .grid{min-height:clamp(560px,78vh,760px)}
+.hero-gevel h1,.hero-gevel h1 .w>span{color:var(--white)}
+.hero-gevel .sub{color:#9FC2FF}
+.hero-gevel .lead{color:#DCE3EC}
+.hero-gevel .trust{border-top-color:rgba(255,255,255,.2)}
+.hero-gevel .trust .n{color:var(--white)}
+.hero-gevel .trust small{color:#B8C4D3}
+.hero-zij{position:relative;align-self:stretch;min-height:320px}
+.hero-zij .badge{right:6%;top:12%}
+.hero-zij .hero-project{right:0;bottom:22%;display:flex;flex-direction:column;gap:2px;text-decoration:none;color:var(--ink)}
+.hero-zij .hero-project small{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--blue)}
+.hero-zij .hero-project:hover b{color:var(--blue)}
+.hero-zij .fan{left:auto;right:42%;bottom:4%}
+@media (max-width: 980px){
+  .hero-gevel .grid{min-height:0}
+  .hero-gevel .hero-bg::after{background:linear-gradient(180deg,rgba(10,22,38,.88) 0%,rgba(10,22,38,.8) 60%,rgba(10,22,38,.7) 100%)}
+  .hero-zij{min-height:260px}
+  .hero-zij .badge{right:auto;left:0;top:0}
+  .hero-zij .hero-project{right:0;bottom:0}
+  .hero-zij .fan{display:none}
+}
