@@ -13,6 +13,7 @@ export const diensten = [
   { name: 'Trap schilderen', href: '/diensten/trap-schilderen' },
   { name: 'Dakkapel schilderen', href: '/diensten/dakkapel-schilderen' },
   { name: 'VvE en zakelijk', href: '/diensten/vve-en-zakelijk' },
+  { name: 'Latex spuiten nieuwbouw', href: '/diensten/latex-spuiten-nieuwbouw' },
   // Fase 7: nieuwe dienstpagina's worden hier toegevoegd zodra ze bestaan
 ]
 

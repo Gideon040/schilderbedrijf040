@@ -308,8 +308,8 @@ const pagina: DienstPagina = {
         titel: 'Nieuwbouw spuiten',
         beschrijving:
           'Nieuwbouw spuiten is de meest kostenefficiënte manier om een nieuwbouwwoning af te werken. Omdat nieuwe muren en plafonds doorgaans glad en schoon zijn, is minder voorbereiding nodig. Schildersbedrijf040 spuit complete nieuwbouwwoningen in Eindhoven voor ' + prijsTekst.latex + ', snel, egaal en betaalbaar.',
-        link: '/projecten',
-        linkTekst: 'Bekijk projecten',
+        link: '/diensten/latex-spuiten-nieuwbouw',
+        linkTekst: 'Latex spuiten in nieuwbouw',
       },
       {
         titel: 'Renovatie spuitwerk',
