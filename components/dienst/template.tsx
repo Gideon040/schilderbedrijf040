@@ -13,6 +13,8 @@ import { diensten, linkLive, plaatsen, PRIJSGIDS } from '@/lib/navigation'
 import { prijsNoot, prijzen } from '@/lib/prices'
 import { reviewsVoor } from '@/lib/reviews'
 import { ReviewKaarten } from '@/components/site/reviews'
+import { ProjectKaarten } from '@/components/projecten/kaarten'
+import { projectenMetDienst } from '@/lib/projecten'
 import { jordy } from '@/lib/jordy'
 import { site } from '@/lib/site'
 
@@ -74,6 +76,7 @@ export function DienstTemplate({ d }: { d: DienstPagina }) {
   // Reviews met de dienst-tag (gevel en winter vallen onder buiten- en binnenwerk), aangevuld met algemene reviews
   const reviewTag = reviewTags[d.slug] ?? d.slug
   const klantReviews = reviewsVoor({ dienst: reviewTag, aantal: 6 })
+  const eigenProjecten = projectenMetDienst(d.slug === 'winterschilder' ? 'binnenschilderwerk' : d.slug)
   const metTag = klantReviews.filter((r) => r.diensten.includes(reviewTag)).length
   const kleur = staal[d.slug] ?? staal.binnenschilderwerk
   const [eersteWoord, ...rest] = d.h1.split(' ')
@@ -260,7 +263,28 @@ export function DienstTemplate({ d }: { d: DienstPagina }) {
         </div>
       </section>
 
-      {/* Voor en na, met de bannertekst van de live pagina */}
+      {/* Uit ons werk: echte projecten met deze dienst. Zonder projecten de bestaande voor/na-sectie. */}
+      {eigenProjecten.length > 0 ? (
+        <section style={{ background: 'var(--paper-2)' }}>
+          <div className="wrap">
+            <div className="head rv">
+              <div>
+                <Eyebrow>Projecten</Eyebrow>
+                <h2 id="uit-ons-werk" className="disp">
+                  Uit ons <Streek>werk</Streek>
+                </h2>
+              </div>
+              <p>{live ? live.banner.p : `Projecten waarbij Schildersbedrijf040 ${d.naam.toLowerCase()} heeft uitgevoerd.`}</p>
+            </div>
+            <ProjectKaarten projecten={eigenProjecten.slice(0, 3)} />
+            <div className="rv" style={{ marginTop: 28 }}>
+              <Link className="btn btn-line" href="/projecten">
+                Alle projecten <Pijl />
+              </Link>
+            </div>
+          </div>
+        </section>
+      ) : (
       <section className="ba-sec on-dark">
         <div className="wrap">
           <div className="head rv">
@@ -288,6 +312,7 @@ export function DienstTemplate({ d }: { d: DienstPagina }) {
           ))}
         </div>
       </section>
+      )}
 
       {/* Werkwijze */}
       <section>

@@ -8,7 +8,7 @@ export function ProjectFilter({ diensten, plaatsen }: { diensten: { slug: string
   const [plaats, setPlaats] = useState('alle')
 
   const toepassen = (d: string, p: string) => {
-    document.querySelectorAll<HTMLElement>('.collage.proj > a').forEach((el) => {
+    document.querySelectorAll<HTMLElement>('.pkaarten > a').forEach((el) => {
       const okDienst = d === 'alle' || (el.dataset.diensten ?? '').split(' ').includes(d)
       const okPlaats = p === 'alle' || el.dataset.plaats === p
       el.hidden = !(okDienst && okPlaats)

@@ -2,6 +2,7 @@ import { MetadataRoute } from 'next'
 import { cityData } from './(site)/locaties/[city]/data'
 import { blogs } from '@/lib/blog'
 import { diensten } from '@/lib/navigation'
+import { indexeerbaar, projecten } from '@/lib/projecten'
 import lastmod from '@/data/lastmod.json'
 
 // lastModified = echte laatste inhoudelijke wijziging (data/lastmod.json, bijgewerkt met `node scripts/lastmod.mjs`),
@@ -40,5 +41,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.7,
   }))
 
-  return [...staticPages, ...dienstenPages, ...locationPages, ...blogOverview, ...blogPages]
+  // Alleen projecten met volledige gegevens (oude Instagram-kaarten staan op noindex)
+  const projectPages: MetadataRoute.Sitemap = projecten.filter(indexeerbaar).map((p) => ({
+    url: `${baseUrl}/projecten/${p.slug}`,
+    lastModified: new Date(p.bijgewerkt),
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+  }))
+
+  return [...staticPages, ...dienstenPages, ...locationPages, ...projectPages, ...blogOverview, ...blogPages]
 }

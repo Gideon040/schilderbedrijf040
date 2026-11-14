@@ -316,6 +316,40 @@
   },
   {
    "_type": "block",
+   "_key": "proj-driehoeksbos",
+   "style": "normal",
+   "markDefs": [
+    {
+     "_type": "link",
+     "_key": "lnk-driehoeksbos",
+     "href": "/projecten/driehoeksbos-eindhoven"
+    }
+   ],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "s1",
+     "text": "Een voorbeeld uit de praktijk: bij ",
+     "marks": []
+    },
+    {
+     "_type": "span",
+     "_key": "s2",
+     "text": "een woning aan het Driehoeksbos in Eindhoven",
+     "marks": [
+      "lnk-driehoeksbos"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "s3",
+     "text": " is zowel gelakt als gebeitst. Het lakwerk is gedaan met lak van Boonstoppel, het beitswerk met beits van Sigma. Voor het overstek is een hoogwerker ingezet.",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
    "_key": "b42",
    "style": "h2",
    "markDefs": [],

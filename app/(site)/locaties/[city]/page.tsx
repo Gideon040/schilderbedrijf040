@@ -7,14 +7,15 @@ import { buren, heroFoto, lokaal } from './data-lokaal'
 import { JsonLd } from '@/components/json-ld'
 import { Stappen } from '@/components/home/v2'
 import { Offerte } from '@/components/site/offerte'
-import { VoorNa } from '@/components/site/voor-na'
 import { Winterband } from '@/components/site/winterband'
 import { afbreek, MetLinks, Eyebrow, KnopBel, KnopOfferte, Pijl, Streek, staal } from '@/components/site/v2'
 import { TOON_JORDY } from '@/lib/jordy'
 import { PRIJSGIDS } from '@/lib/navigation'
 import { prijzen } from '@/lib/prices'
-import { reviewsUit, reviewsVoor, bronNaam } from '@/lib/reviews'
+import { reviewsUit, reviewsVoor } from '@/lib/reviews'
 import { ReviewKaarten } from '@/components/site/reviews'
+import { ProjectKaarten } from '@/components/projecten/kaarten'
+import { projectenUit } from '@/lib/projecten'
 import { orgRef } from '@/lib/schema'
 import { site } from '@/lib/site'
 
@@ -139,8 +140,8 @@ export default function LocationPage({ params }: { params: { city: string } }) {
   const X = data.displayName
   // Eerst reviews uit deze plaats, dan aanvullen. "Review uit de buurt" alleen bij een echte review uit de plaats.
   const uitPlaats = reviewsUit(X)
-  const buurtReview = uitPlaats[0]
   const klantReviews = reviewsVoor({ plaats: X, aantal: 3 })
+  const lokaleProjecten = projectenUit(X)
 
   // Teksten van het live template (main), letterlijk, em dashes vervangen
   const usps = [
@@ -320,45 +321,23 @@ export default function LocationPage({ params }: { params: { city: string } }) {
         </div>
       </section>
 
-      {/* Project en review uit de plaats, met de bannertekst van de live pagina */}
-      <section className="ba-sec on-dark">
-        <div className="wrap">
-          <div className="head rv">
-            <div>
-              <Eyebrow style={{ color: '#7FA3FF' }}>Project in {X}</Eyebrow>
-              <h2 id="project" className="disp">
-                Resultaat waar u trots op <Streek>bent</Streek>
-              </h2>
+      {/* Projecten uit deze plaats. Geen projecten: blok weglaten, niet opvullen met andere plaatsen. */}
+      {lokaleProjecten.length > 0 && (
+        <section className="ba-sec on-dark">
+          <div className="wrap">
+            <div className="head rv">
+              <div>
+                <Eyebrow style={{ color: '#7FA3FF' }}>Uit ons werk</Eyebrow>
+                <h2 id="projecten" className="disp">
+                  Projecten in <Streek>{X}</Streek>
+                </h2>
+              </div>
+              <p>Van voorbereiding tot de laatste kwaststreek. Bekijk wat Schildersbedrijf040 in {X} heeft uitgevoerd.</p>
             </div>
-            <p>Van voorbereiding tot de laatste kwaststreek, wij leveren schilderwerk dat jarenlang meegaat. Bekijk onze projecten of vraag direct een offerte aan.</p>
+            <ProjectKaarten projecten={lokaleProjecten} />
           </div>
-          <VoorNa
-            na={foto}
-            feiten={[
-              ['Wijk', '[JORDY: wijk]'],
-              ['Werk', `[JORDY: project in ${X}]`],
-              ['Oppervlak', '[JORDY: m²]'],
-            ]}
-            extra={
-              buurtReview && (
-                <div className="buurt-review">
-                  <h3 id="review">Review uit de buurt</h3>
-                  <p className="bq">
-                    &ldquo;{buurtReview.tekst}&rdquo;
-                    <span className="rr">
-                      <span aria-hidden="true">★★★★★</span>{' '}
-                      <span className="m">
-                        {buurtReview.naam} · {buurtReview.plaats} · {bronNaam[buurtReview.bron]}
-                      </span>
-                    </span>
-                  </p>
-                </div>
-              )
-            }
-            knop={{ href: '/projecten', tekst: 'Bekijk projecten' }}
-          />
-        </div>
-      </section>
+        </section>
+      )}
 
       {/* Waarom, met de USP's en reviews van het live template */}
       <section style={{ background: 'var(--paper-2)' }}>
@@ -381,7 +360,7 @@ export default function LocationPage({ params }: { params: { city: string } }) {
             ))}
           </div>
           <h2 id="reviews" className="mini-h2 rv">
-            {uitPlaats.length ? `Reviews uit ${X}` : 'Wat klanten zeggen'}
+            {uitPlaats.length ? `Review uit de buurt: klanten in ${X}` : 'Wat klanten zeggen'}
           </h2>
           <ReviewKaarten reviews={klantReviews} drie />
           <p className="rv" style={{ marginTop: 18 }}>

@@ -10,6 +10,8 @@ import { jordy, toonBlok } from '@/lib/jordy'
 import type { Seizoensblok } from '@/lib/seizoen'
 import { afbreek, Eyebrow, KnopBel, KnopOfferte, Pijl, Streek } from '@/components/site/v2'
 import { VoorNa } from '@/components/site/voor-na'
+import { ProjectKaarten } from '@/components/projecten/kaarten'
+import { indexeerbaar, plaatsLabel, projecten, uitgelicht } from '@/lib/projecten'
 
 const opt = (src: string, w = 640) => `/_next/image?url=${encodeURIComponent(src)}&w=${w}&q=75`
 const per = (s: string) => s.replace(' /', ' / ')
@@ -153,46 +155,39 @@ export function Diensten() {
   )
 }
 
-/* ---------- voor/na: uit ons werk ---------- */
+/* ---------- uit ons werk: uitgelicht project ---------- */
 export function UitOnsWerk() {
+  const p = uitgelicht()
   return (
     <section className="ba-sec on-dark" id="werk">
       <div className="wrap">
         <div className="head rv">
           <div>
-            <Eyebrow style={{ color: '#7FA3FF' }}>Projecten</Eyebrow>
+            <Eyebrow style={{ color: '#7FA3FF' }}>Uitgelicht project</Eyebrow>
             <h2 id="uit-ons-werk" className="disp">
               Uit ons <Streek>werk</Streek>
             </h2>
           </div>
-          <p>Foto&apos;s van eigen projecten. Bij elk project komt een voor- en na-foto, met plaats en omschrijving.</p>
+          <p>{p.samenvatting}</p>
         </div>
         <VoorNa
-          na={images.binnendeur}
+          na={{ src: p.fotos[0].src, alt: p.fotos[0].alt, width: p.fotos[0].width, height: p.fotos[0].height }}
           feiten={[
-            ['Project', 'Binnendeur en kozijn strak gelakt'],
-            ['Dienst', 'Binnenschilderwerk'],
-            ['Plaats', '[JORDY: plaats]'],
-            ['Doorlooptijd', '[JORDY: doorlooptijd]'],
+            ['Project', p.kaartTitel],
+            ['Plaats', plaatsLabel(p)],
+            ['Werk', p.typeWerk],
+            ['Uitgevoerd', [p.maand, p.jaar].filter(Boolean).join(' ')],
           ]}
-          knop={{ href: '/projecten', tekst: 'Alle projecten bekijken' }}
+          knop={{ href: `/projecten/${p.slug}`, tekst: 'Bekijk dit project' }}
         />
       </div>
     </section>
   )
 }
 
-/* ---------- recente projecten ---------- */
-const collage: { img: SiteImage; cls: string; label: string; titel: string; alt?: string }[] = [
-  { img: images.tuinhuis, cls: 'b1', label: 'BUITENSCHILDERWERK', titel: 'Gevel en kozijnen wit geschilderd' },
-  { img: images.dakkapel, cls: 'b2', label: 'Eindhoven · Complete renovatie', titel: 'Binnen- en buitenschilderwerk' },
-  { img: images.lakKozijnen, cls: 'b3', label: 'LAKWERK', titel: 'Kozijnen gelakt' },
-  { img: images.latex, cls: 'b4', label: 'Blixembosch, Eindhoven · Benedenverdieping', titel: 'Latex spuiten', alt: 'Benedenverdieping latex gespoten, Blixembosch' },
-  { img: images.horeca, cls: 'b5', label: 'Oude Gracht, Eindhoven · Houtrot sanering', titel: 'Binnenwerk Restaria', alt: 'BINNENWERK RESTARIA' },
-  { img: images.houtrot, cls: 'b6', label: 'HOUTROT SANERING', titel: 'Houtrot hersteld en geschilderd' },
-]
-
+/* ---------- recente projecten: echte projecten, Witte Dorp groot ---------- */
 export function RecenteProjecten() {
+  const lijst = projecten.filter(indexeerbaar)
   return (
     <section>
       <div className="wrap">
@@ -205,22 +200,41 @@ export function RecenteProjecten() {
           </div>
           <p>Ontdek onze recent voltooide projecten en zie hoe wij ruimtes transformeren met vakkundig schilderwerk en oog voor detail.</p>
         </div>
-        <div className="collage">
-          {collage.map((f) => (
-            <figure key={f.titel} className={`${f.cls} rv`}>
-              <Image src={f.img.src} alt={f.alt ?? f.img.alt} fill sizes="(max-width: 980px) 50vw, 600px" />
-              <figcaption>
-                <small>{f.label}</small>
-                <span>{f.titel}</span>
-              </figcaption>
-            </figure>
-          ))}
-        </div>
+        <ProjectKaarten projecten={lijst} eersteGroot />
         <div className="rv" style={{ marginTop: 28 }}>
           <Link className="btn btn-line" href="/projecten">
             Alle projecten bekijken <Pijl />
           </Link>
         </div>
+      </div>
+    </section>
+  )
+}
+
+/* ---------- fotostrook: zes echte projectfoto's ---------- */
+const strookFotos: [string, number][] = [
+  ['witte-dorp-burghplein-eindhoven', 1],
+  ['driehoeksbos-eindhoven', 0],
+  ['driehoeksbos-eindhoven', 2],
+  ['fluwijnstraat-eindhoven', 1],
+  ['bungalow-best', 0],
+  ['bungalow-best', 2],
+]
+
+export function FotoStrook() {
+  return (
+    <section style={{ paddingTop: 0 }} aria-label="Foto's uit eigen projecten">
+      <div className="wrap strook">
+        {strookFotos.map(([slug, i]) => {
+          const p = projecten.find((x) => x.slug === slug)
+          const f = p?.fotos[i]
+          if (!p || !f) return null
+          return (
+            <Link key={f.src} href={`/projecten/${slug}`} className="rv">
+              <Image src={f.src} alt={f.alt} fill sizes="(max-width: 980px) 62vw, 200px" />
+            </Link>
+          )
+        })}
       </div>
     </section>
   )

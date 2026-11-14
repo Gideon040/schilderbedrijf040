@@ -1,11 +1,13 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Eyebrow, Pijl, Streek } from '@/components/site/v2'
+import { Eyebrow, Streek } from '@/components/site/v2'
 import { Offerte } from '@/components/site/offerte'
 import { ProjectFilter } from '@/components/projecten/filter'
 import { diensten as dienstMenu } from '@/lib/navigation'
-import { TOON_JORDY } from '@/lib/jordy'
+import { TOON_JORDY, jordy } from '@/lib/jordy'
+import { indexeerbaar, projecten } from '@/lib/projecten'
+import { ProjectKaarten } from '@/components/projecten/kaarten'
 
 export const metadata: Metadata = {
   title: 'Projecten | Ons Schilderwerk in Beeld',
@@ -22,58 +24,8 @@ export const metadata: Metadata = {
   },
 }
 
-// Dienst en plaats per project: alleen wat de site al noemt (alt-tekst, titel, homepage).
-// Onbekende plaats blijft leeg tot Jordy die aanlevert (zie seo/content/optimaliseren/11-projecten.md).
-const projects: { href: string; src: string; alt: string; title: string; diensten: string[]; plaats?: string }[] = [
-  {
-    href: "https://www.instagram.com/p/C4kHvkXIkR_/",
-    src: "/images/lakwerk-voordeur-antraciet.jpg",
-    alt: "Afgelakte deur project Eindhoven",
-    title: "Afgelakte deur 🚪",
-    diensten: ['lakwerk'],
-    plaats: 'Eindhoven'
-  },
-  {
-    href: "https://www.instagram.com/p/C4kHt5mo3xR/",
-    src: "/images/buitenschilderwerk-dakkapel-wit-geschilderd.jpg",
-    alt: "Houtrot reparatie met schilderwerk",
-    title: "Houtrot reparatie met schilderwerk 🔨",
-    diensten: ['houtrot-sanering'],
-    plaats: undefined
-  },
-  {
-    href: "https://www.instagram.com/p/C4h2XkSI5Rw/",
-    src: "/images/buitenschilderwerk-vrijstaande-woning-wit.jpg",
-    alt: "Complete vrijstaande woning buitenschilderwerk",
-    title: "Complete vrijstaande woning buitenschilderwerk 🏠",
-    diensten: ['buitenschilderwerk'],
-    plaats: undefined
-  },
-  {
-    href: "https://www.instagram.com/p/C4h2V4-I1R4/",
-    src: "/images/binnenschilderwerk-zolder-renovatie.jpg",
-    alt: "Binnen- en buitenschilderwerk project",
-    title: "Binnen- en buitenschilderwerk project afgerond! ✨",
-    diensten: ['binnenschilderwerk', 'buitenschilderwerk'],
-    plaats: undefined
-  },
-  {
-    href: "https://www.instagram.com/p/C4h2UPyI3R2/",
-    src: "/images/latex-spuiten-benedenverdieping-blixembosch-eindhoven.jpg",
-    alt: "Latex spuiten project Blixembosch",
-    title: "Latex spuiten project in Blixembosch 🎨",
-    diensten: ['latex-spuiten'],
-    plaats: 'Eindhoven'
-  },
-  {
-    href: "https://www.instagram.com/p/C4h2SoUI1Rz/",
-    src: "/images/binnenschilderwerk-lambrisering-horeca-eindhoven.jpg",
-    alt: "Binnenwerk Restaria Oude Gracht",
-    title: "Binnenwerk Restaria Oude Gracht 🚪",
-    diensten: ['binnenschilderwerk'],
-    plaats: 'Eindhoven'
-  }
-]
+// Projecten uit data/projecten.ts: eerst de projecten met eigen pagina, daarna de oudere Instagram-projecten
+const lijst = [...projecten.filter(indexeerbaar), ...projecten.filter((p) => !indexeerbaar(p))]
 
 export default function ProjectenPage() {
   const schemaData = {
@@ -84,15 +36,11 @@ export default function ProjectenPage() {
     description: 'Portfolio van afgeronde schilderprojecten in Eindhoven en omgeving',
     mainEntity: {
       '@type': 'ItemList',
-      itemListElement: projects.map((project, index) => ({
+      itemListElement: projecten.filter(indexeerbaar).map((p, index) => ({
         '@type': 'ListItem',
         position: index + 1,
-        item: {
-          '@type': 'CreativeWork',
-          name: project.title,
-          image: project.src,
-          url: project.href
-        }
+        url: `https://schildersbedrijf040.nl/projecten/${p.slug}`,
+        name: jordy(p.titel),
       }))
     },
     provider: {
@@ -150,12 +98,15 @@ export default function ProjectenPage() {
                 <span className="paint">projecten</span>
               </span>
             </h1>
-            <p className="lead">Bekijk onze meest recente projecten en volg ons op Instagram voor dagelijkse updates.</p>
+            <p className="lead">
+              Projecten van Schildersbedrijf040 in Eindhoven en omgeving, met per klus de situatie, de aanpak, de gebruikte materialen en foto&apos;s
+              van het resultaat.
+            </p>
           </div>
           <div className="pg-foto">
             <Image
-              src="/images/buitenschilderwerk-dakkapel-wit-geschilderd.jpg"
-              alt="Schilderprojecten Eindhoven - Schildersbedrijf040"
+              src={projecten[0].fotos[0].src}
+              alt={projecten[0].fotos[0].alt}
               fill
               sizes="(max-width: 980px) 100vw, 420px"
               className="object-cover"
@@ -169,47 +120,26 @@ export default function ProjectenPage() {
         <div className="wrap">
           <div className="head rv">
             <div>
-              <Eyebrow>Instagram</Eyebrow>
+              <Eyebrow>Uit ons werk</Eyebrow>
               <h2 id="laatste-projecten" className="disp">
                 Laatste <Streek>Projecten</Streek>
               </h2>
             </div>
-            <p>
-              Volg ons op Instagram voor dagelijkse updates{' '}
-              <a href="https://www.instagram.com/schildersbedrijf040/" target="_blank" rel="noopener noreferrer">
-                <span>@schildersbedrijf040</span>
-              </a>
-            </p>
+            <p>Filter op dienst of plaats. Elk project heeft een eigen pagina met de aanpak en meer foto&apos;s.</p>
           </div>
           <ProjectFilter
-            diensten={dienstMenu.filter((d) => projects.some((p) => p.diensten.includes(d.href.split('/').pop() as string))).map((d) => ({ slug: d.href.split('/').pop() as string, naam: d.name }))}
-            plaatsen={projects.map((p) => p.plaats).filter((p, i, a): p is string => !!p && a.indexOf(p) === i)}
+            diensten={dienstMenu.filter((d) => lijst.some((p) => p.diensten.includes(d.href.split('/').pop() as string))).map((d) => ({ slug: d.href.split('/').pop() as string, naam: d.name }))}
+            plaatsen={lijst.map((p) => jordy(p.plaats)).filter((p, i, a): p is string => !!p && a.indexOf(p) === i)}
           />
-          <div className="collage proj">
-            {projects.map((project) => (
-              <a
-                key={project.href}
-                className="rv"
-                href={project.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                data-diensten={project.diensten.join(' ')}
-                data-plaats={project.plaats ?? ''}
-              >
-                <figure>
-                  <Image src={project.src} alt={project.alt} fill sizes="(max-width: 980px) 50vw, 400px" />
-                  <figcaption>
-                    <small>INSTAGRAM{project.plaats ? ` · ${project.plaats.toUpperCase()}` : ''}</small>
-                    <p>{project.title}</p>
-                  </figcaption>
-                </figure>
-              </a>
-            ))}
-          </div>
+          <ProjectKaarten projecten={lijst} />
           <div className="rv" style={{ marginTop: 28 }}>
-            <a className="btn btn-line" href="https://www.instagram.com/schildersbedrijf040/" target="_blank" rel="noopener noreferrer">
-              Volg ons op Instagram <Pijl />
-            </a>
+            <p style={{ margin: 0, color: 'var(--muted)' }}>
+              Meer foto&apos;s en werk in uitvoering staan op{' '}
+              <a href="https://www.instagram.com/schildersbedrijf040/" target="_blank" rel="noopener noreferrer">
+                Instagram (@schildersbedrijf040)
+              </a>
+              .
+            </p>
           </div>
         </div>
       </section>
@@ -225,9 +155,9 @@ export default function ProjectenPage() {
           <div className="lopend rv">
             <p>
               Schildersbedrijf040 werkt vanuit Eindhoven voor particulieren en bedrijven in de hele regio. De projecten op deze pagina laten
-              zien wat dat in de praktijk betekent: binnenwerk zoals een gelatexte benedenverdieping in Blixembosch en een gelakte
-              lambrisering in een horecazaak, en buitenwerk zoals een complete vrijstaande woning en houtrot dat is hersteld en
-              overgeschilderd. Met de filter hierboven ziet u alleen de projecten van één dienst of één plaats.
+              zien wat dat in de praktijk betekent: buitenwerk zoals vier monumentale woningen in het Witte Dorp en een woning met
+              houtrotherstel aan de Fluwijnstraat, en binnenwerk zoals een volledig gespoten bungalow in Best en een gelatexte
+              benedenverdieping in Blixembosch. Met de filter hierboven ziet u alleen de projecten van één dienst of één plaats.
             </p>
             <p>
               Meer over de aanpak per klus leest u op de pagina&apos;s over <Link href="/diensten/binnenschilderwerk">binnenschilderwerk</Link>{' '}

@@ -4,6 +4,7 @@ import {
   Bewijs,
   Diensten,
   DienstenTicker,
+  FotoStrook,
   HomeHero,
   RecenteProjecten,
   Reviews,
@@ -96,6 +97,7 @@ export default function Home() {
       <Diensten />
       <UitOnsWerk />
       <RecenteProjecten />
+      <FotoStrook />
       <DienstenTicker />
       <Bewijs />
       <Werkwijze />
