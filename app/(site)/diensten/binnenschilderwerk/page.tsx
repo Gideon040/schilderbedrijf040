@@ -301,8 +301,8 @@ const pagina: DienstPagina = {
         titel: 'Schilderwerk bedrijfspanden',
         beschrijving:
           'Kantoren, praktijkruimtes en winkels vragen om binnenschilderwerk dat representatief is en tegen intensief gebruik bestand. Schildersbedrijf040 plant het schilderwerk buiten kantooruren of in fases, zodat uw bedrijfsvoering minimaal verstoord wordt. Professionele airless spuittechniek is hierbij een optie voor grote oppervlakken.',
-        link: '/diensten/latex-spuiten',
-        linkTekst: 'Bekijk latex spuiten',
+        link: '/diensten/vve-en-zakelijk',
+        linkTekst: 'VvE en zakelijk',
       },
       {
         titel: 'Behangen',

@@ -12,6 +12,7 @@ export const diensten = [
   { name: 'Schilderen in de winter', href: '/diensten/winterschilder' },
   { name: 'Trap schilderen', href: '/diensten/trap-schilderen' },
   { name: 'Dakkapel schilderen', href: '/diensten/dakkapel-schilderen' },
+  { name: 'VvE en zakelijk', href: '/diensten/vve-en-zakelijk' },
   // Fase 7: nieuwe dienstpagina's worden hier toegevoegd zodra ze bestaan
 ]
 
