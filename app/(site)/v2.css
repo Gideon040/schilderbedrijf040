@@ -1356,3 +1356,6 @@ header.nav nav.mmenu{display:block;font-weight:400;font-size:inherit}
 .quote.bg-beeld>.bg{height:100%}
 /* Prijzenkaart op dienstpagina's blijft in beeld bij scrollen (sticky werkte niet door overflow-x:hidden op body) */
 @media (min-width: 981px){.dp-split .kaart{position:sticky;top:96px;max-height:calc(100vh - 116px);overflow:auto}}
+/* Uitklapmenu dicht na een klik (header.tsx zet .dicht tot de muis het menu-item verlaat) */
+.dd.dicht .dd-menu{visibility:hidden!important;opacity:0!important;pointer-events:none!important}
+.dd.dicht .chev{transform:none!important}

@@ -60,6 +60,25 @@ export function Header() {
   const pathname = usePathname()
   useEffect(() => setOpen(false), [pathname])
 
+  // Na een klik in een uitklapmenu: menu direct dicht (focus weg en hover tijdelijk uit),
+  // weer beschikbaar zodra de muis het menu-item verlaat
+  useEffect(() => {
+    const klik = (e: MouseEvent) => {
+      const link = (e.target as HTMLElement).closest('.dd-menu a')
+      const dd = link?.closest<HTMLElement>('.dd')
+      if (!dd) return
+      dd.classList.add('dicht')
+      ;(document.activeElement as HTMLElement | null)?.blur?.()
+      const weer = () => {
+        dd.classList.remove('dicht')
+        dd.removeEventListener('mouseleave', weer)
+      }
+      dd.addEventListener('mouseleave', weer)
+    }
+    document.addEventListener('click', klik)
+    return () => document.removeEventListener('click', klik)
+  }, [])
+
   return (
     <>
       <div className="top">
