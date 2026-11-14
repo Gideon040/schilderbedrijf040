@@ -18,6 +18,7 @@ export const diensten = [
 export const kostenPaginas = [
   { name: 'Wat kost een schilder?', href: '/kosten/wat-kost-een-schilder' },
   { name: 'Kosten latex spuiten', href: '/kosten/latex-spuiten' },
+  { name: 'Kosten plafond schilderen', href: '/kosten/plafond-schilderen' },
 ]
 
 // Eindhoven = homepage. Volgorde: grootste/belangrijkste plaatsen eerst.
