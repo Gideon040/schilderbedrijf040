@@ -97,26 +97,31 @@ export function datumTekst(iso: string): string {
 
 // ---------- validatie (gedeeld door popup en server) ----------
 
-export const afspraakSchema = z.object({
+// Een afspraak plannen is optioneel: 'ja' = datum en tijd kiezen (en adres voor het bezoek), 'nee' = Jordy neemt contact op
+export const afspraakSchema = z
+  .object({
   naam: z.string().trim().min(2, 'Vul uw naam in.').max(100),
   telefoon: z
     .string()
     .trim()
     .refine((t) => /^[+()\d\s-]+$/.test(t) && t.replace(/\D/g, '').length >= 10 && t.replace(/\D/g, '').length <= 15, 'Vul een geldig telefoonnummer in.'),
   email: z.string().trim().email('Vul een geldig e-mailadres in.').max(200),
-  straat: z
-    .string()
-    .trim()
-    .min(3, 'Vul straat en huisnummer in.')
-    .max(150)
-    .refine((t) => /\d/.test(t), 'Vul ook het huisnummer in.'),
+  straat: z.string().trim().max(150).optional().default(''),
   plaats: z.string().trim().min(2, 'Vul de plaats in.').max(100),
   omschrijving: z.string().trim().max(2000, 'Maximaal 2000 tekens.').optional().default(''),
   soort: z.enum(['binnen', 'buiten', 'beide'], { errorMap: () => ({ message: 'Kies binnen, buiten of beide.' }) }),
-  datum: z.string().refine((d) => isToegestaneDatum(d), 'Kies een maandag of woensdag in de kalender.'),
-  tijd: z.string().refine((t) => AFSPRAAK.slots.includes(t), 'Kies een tijdslot.'),
+  plannen: z.enum(['ja', 'nee'], { errorMap: () => ({ message: 'Kies of je direct een afspraak wilt plannen.' }) }),
+  datum: z.string().optional().default(''),
+  tijd: z.string().optional().default(''),
   privacy: z.literal(true, { errorMap: () => ({ message: 'Geef akkoord om verder te gaan.' }) }),
-})
+  })
+  .superRefine((a, ctx) => {
+    if (a.plannen !== 'ja') return
+    if (!isToegestaneDatum(a.datum)) ctx.addIssue({ code: 'custom', path: ['datum'], message: 'Kies een maandag of woensdag in de kalender.' })
+    if (!AFSPRAAK.slots.includes(a.tijd)) ctx.addIssue({ code: 'custom', path: ['tijd'], message: 'Kies een tijdslot.' })
+    if (a.straat.length < 3) ctx.addIssue({ code: 'custom', path: ['straat'], message: 'Vul straat en huisnummer in.' })
+    else if (!/\d/.test(a.straat)) ctx.addIssue({ code: 'custom', path: ['straat'], message: 'Vul ook het huisnummer in.' })
+  })
 
 export type AfspraakInvoer = z.input<typeof afspraakSchema>
 export type AfspraakVelden = keyof AfspraakInvoer

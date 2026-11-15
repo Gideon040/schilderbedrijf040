@@ -51,17 +51,18 @@ type Velden = {
   plaats: string
   omschrijving: string
   soort: '' | 'binnen' | 'buiten' | 'beide'
+  plannen: '' | 'ja' | 'nee'
   datum: string
   tijd: string
   privacy: boolean
   _gotcha: string
 }
-const leeg: Velden = { naam: '', telefoon: '', email: '', straat: '', plaats: '', omschrijving: '', soort: '', datum: '', tijd: '', privacy: false, _gotcha: '' }
+const leeg: Velden = { naam: '', telefoon: '', email: '', straat: '', plaats: '', omschrijving: '', soort: '', plannen: '', datum: '', tijd: '', privacy: false, _gotcha: '' }
 
 const STAPPEN: { label: string; kop: string; velden: AfspraakVelden[] }[] = [
   { label: 'Het werk', kop: 'Waar gaat het om?', velden: ['soort', 'omschrijving'] },
-  { label: 'Moment', kop: 'Wanneer mag Jordy langskomen?', velden: ['datum', 'tijd'] },
-  { label: 'Gegevens', kop: 'Waar mogen we komen?', velden: ['naam', 'telefoon', 'email', 'straat', 'plaats', 'privacy'] },
+  { label: 'Afspraak', kop: 'Wil je direct een afspraak plannen?', velden: ['plannen', 'datum', 'tijd'] },
+  { label: 'Gegevens', kop: 'Hoe kunnen we je bereiken?', velden: ['naam', 'telefoon', 'email', 'straat', 'plaats', 'privacy'] },
 ]
 const stapVan = (veld: string) => Math.max(0, STAPPEN.findIndex((s) => s.velden.includes(veld as AfspraakVelden)))
 
@@ -326,7 +327,7 @@ export function AfspraakPopup() {
           <rect x="3.5" y="5" width="17" height="15" />
           <path d="M3.5 10h17M8 3v4M16 3v4" />
         </svg>
-        {actie ? AFSPRAAK.winteractie.knop : 'Offerte inplannen'}
+        {actie ? AFSPRAAK.winteractie.knop : 'Gratis offerte'}
       </a>
 
       {open && (
@@ -359,11 +360,23 @@ export function AfspraakPopup() {
                   </svg>
                 </div>
                 <span className="eyebrow">Aanvraag ontvangen</span>
-                <h2 id={`${id}-titel`}>Bedankt, we bevestigen je afspraak per e-mail of telefoon</h2>
-                <p id={`${id}-sub`}>
-                  Je gekozen moment: <b>{datumTekst(v.datum)}</b> om <b>{v.tijd} uur</b>. Vragen of iets wijzigen? Bel{' '}
-                  <a href={site.phoneHref}>{site.phone}</a>.
-                </p>
+                {v.plannen === 'ja' ? (
+                  <>
+                    <h2 id={`${id}-titel`}>Bedankt, we bevestigen je afspraak per e-mail of telefoon</h2>
+                    <p id={`${id}-sub`}>
+                      Je gekozen moment: <b>{datumTekst(v.datum)}</b> om <b>{v.tijd} uur</b>. Vragen of iets wijzigen? Bel{' '}
+                      <a href={site.phoneHref}>{site.phone}</a>.
+                    </p>
+                  </>
+                ) : (
+                  <>
+                    <h2 id={`${id}-titel`}>Bedankt, Jordy neemt contact met je op</h2>
+                    <p id={`${id}-sub`}>
+                      Je hoort {site.termijnen.reactie} op werkdagen van ons. Liever direct overleggen? Bel of app{' '}
+                      <a href={site.phoneHref}>{site.phone}</a>.
+                    </p>
+                  </>
+                )}
                 <button type="button" className="btn btn-blue" onClick={sluiten}>
                   Sluiten
                 </button>
@@ -384,13 +397,13 @@ export function AfspraakPopup() {
                         {AFSPRAAK.winteractie.kop[0]} <span>{AFSPRAAK.winteractie.kop[1]}</span>
                       </>
                     ) : (
-                      'Plan een bezoek van Jordy'
+                      'Vraag een gratis offerte aan'
                     )}
                   </h2>
                   <p id={`${id}-sub`} className="afs-sub">
                     {actie
-                      ? `Plan een gratis offerte aan huis en profiteer van 10 tot 20% winterkorting. Jordy komt langs en je hebt ${site.termijnen.offerte} de offerte.`
-                      : `Jordy bekijkt het werk bij je thuis. Je hebt ${site.termijnen.offerte} een vrijblijvende offerte.`}
+                      ? `Vraag een gratis offerte aan en profiteer van 10 tot 20% winterkorting. Direct een afspraak plannen kan, maar hoeft niet.`
+                      : `Vertel wat er geschilderd moet worden. Direct een afspraak plannen kan, maar hoeft niet: Jordy neemt ook zelf contact op.`}
                   </p>
                   {actie && (
                     <a className="afs-voorwaarden" href="/diensten/winterschilder#winteractie">
@@ -464,6 +477,27 @@ export function AfspraakPopup() {
                   )}
 
                   {stap === 1 && (
+                    <fieldset className="afs-keuze" {...aria('plannen')} tabIndex={-1}>
+                      <legend className="afs-vh">Wil je direct een afspraak plannen?</legend>
+                      <div className="afs-soorten afs-plannen">
+                        {(
+                          [
+                            ['nee', 'Nee, neem contact op', 'Jordy belt of mailt je om samen een moment te kiezen'],
+                            ['ja', 'Ja, kies een moment', 'Plan nu een gratis bezoek op maandag of woensdag'],
+                          ] as const
+                        ).map(([k, kop, uitleg]) => (
+                          <label key={k} className={(v.plannen === k ? 'on' : '') + ' licht'} style={{ ['--c' as string]: k === 'ja' ? 'var(--sw2)' : 'var(--sw1)' }}>
+                            <input type="radio" name={`${id}-plannen`} value={k} checked={v.plannen === k} onChange={() => zet('plannen', k)} />
+                            <b>{kop}</b>
+                            <small>{uitleg}</small>
+                          </label>
+                        ))}
+                      </div>
+                      {fout('plannen')}
+                    </fieldset>
+                  )}
+
+                  {stap === 1 && v.plannen === 'ja' && (
                     <div className="afs-moment">
                       <fieldset className="afs-keuze" {...aria('datum')} tabIndex={-1}>
                         <legend>
@@ -514,7 +548,8 @@ export function AfspraakPopup() {
                     <>
                       <div className="afs-samenvatting">
                         <span>
-                          {v.soort && soortLabel[v.soort]} · {datumTekst(v.datum)} om {v.tijd} uur
+                          {v.soort && soortLabel[v.soort]} ·{' '}
+                          {v.plannen === 'ja' ? `${datumTekst(v.datum)} om ${v.tijd} uur` : 'Geen afspraak, Jordy neemt contact op'}
                         </span>
                         <button type="button" onClick={() => naarStap(1)}>
                           Wijzig
@@ -539,7 +574,9 @@ export function AfspraakPopup() {
                       </label>
                       <div className="afs-rij afs-adres">
                         <label>
-                          Straat en huisnummer
+                          <span>
+                            Straat en huisnummer {v.plannen !== 'ja' && <span className="afs-opt">(optioneel)</span>}
+                          </span>
                           <input autoComplete="street-address" value={v.straat} onChange={(e) => zet('straat', e.target.value)} {...aria('straat')} />
                           {fout('straat')}
                         </label>
@@ -551,7 +588,7 @@ export function AfspraakPopup() {
                       </div>
                       <label className="afs-check">
                         <input type="checkbox" checked={v.privacy} onChange={(e) => zet('privacy', e.target.checked)} {...aria('privacy')} />
-                        <span>Ik ga akkoord dat Schildersbedrijf040 mijn gegevens gebruikt om contact met mij op te nemen over deze afspraak.</span>
+                        <span>Ik ga akkoord dat Schildersbedrijf040 mijn gegevens gebruikt om contact met mij op te nemen over deze aanvraag.</span>
                       </label>
                       {fout('privacy')}
                     </>
@@ -576,7 +613,14 @@ export function AfspraakPopup() {
                     </a>
                   )}
                   <button className="btn btn-blue afs-verder" type="submit" disabled={status === 'bezig'}>
-                    {status === 'bezig' ? 'Bezig met versturen...' : laatsteStap ? 'Afspraak aanvragen' : 'Volgende'} <span className="arr">→</span>
+                    {status === 'bezig'
+                      ? 'Bezig met versturen...'
+                      : laatsteStap
+                        ? v.plannen === 'ja'
+                          ? 'Afspraak aanvragen'
+                          : 'Offerte aanvragen'
+                        : 'Volgende'}{' '}
+                    <span className="arr">→</span>
                   </button>
                 </footer>
               </form>

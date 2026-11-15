@@ -39,16 +39,18 @@ export async function POST(req: Request) {
   const a = r.data
   const bron = typeof body.bronpagina === 'string' ? body.bronpagina.slice(0, 200) : ''
 
+  const metAfspraak = a.plannen === 'ja'
   const bericht = {
-    _subject: `Afspraak offerte aan huis: ${datumTekst(a.datum)} om ${a.tijd} (${a.naam}, ${a.plaats})`,
+    _subject: metAfspraak
+      ? `Afspraak offerte aan huis: ${datumTekst(a.datum)} om ${a.tijd} (${a.naam}, ${a.plaats})`
+      : `Offerte-aanvraag, graag contact opnemen voor een afspraak (${a.naam}, ${a.plaats})`,
     _replyto: a.email,
-    formulier: 'afspraak',
-    'Datum': datumTekst(a.datum),
-    'Tijd': `${a.tijd} uur`,
+    formulier: metAfspraak ? 'afspraak' : 'offerte-zonder-afspraak',
+    'Afspraak': metAfspraak ? `${datumTekst(a.datum)} om ${a.tijd} uur` : 'Nog niet gepland: klant wil eerst contact',
     'Naam': a.naam,
     'Telefoon': a.telefoon,
     'E-mail': a.email,
-    'Adres': `${a.straat}, ${a.plaats}`,
+    'Adres': a.straat ? `${a.straat}, ${a.plaats}` : a.plaats,
     'Binnen of buiten': soortLabel[a.soort],
     'Omschrijving': a.omschrijving || '(geen)',
     'Akkoord privacy': 'ja',
@@ -57,11 +59,13 @@ export async function POST(req: Request) {
 
   // Moment vastleggen vóór het versturen; bezet = weigeren. Lukt de opslag niet, dan gaat de aanvraag toch door.
   let vastgelegd = false
-  try {
-    vastgelegd = await reserveer(host(req), a.datum, a.tijd, { naam: a.naam, plaats: a.plaats, aangemaakt: new Date().toISOString() })
-    if (!vastgelegd) return NextResponse.json({ ok: false, fout: BEZET, velden: { tijd: BEZET } }, { status: 409 })
-  } catch (e) {
-    console.error('[afspraak] moment vastleggen mislukt', e)
+  if (metAfspraak) {
+    try {
+      vastgelegd = await reserveer(host(req), a.datum, a.tijd, { naam: a.naam, plaats: a.plaats, aangemaakt: new Date().toISOString() })
+      if (!vastgelegd) return NextResponse.json({ ok: false, fout: BEZET, velden: { tijd: BEZET } }, { status: 409 })
+    } catch (e) {
+      console.error('[afspraak] moment vastleggen mislukt', e)
+    }
   }
 
   // Testen zonder echte mail: AFSPRAAK_DROOG=1 toont het bericht in de serverlog en stuurt niets door

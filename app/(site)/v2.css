@@ -1409,3 +1409,9 @@ header.nav nav.mmenu{display:block;font-weight:400;font-size:inherit}
   .mbar .btn-wa svg{width:16px;height:16px}
   body{padding-bottom:56px}
 }
+/* Afspraak-popup: keuze "direct een afspraak plannen?" in twee tegels */
+.afs-soorten.afs-plannen{grid-template-columns:1fr 1fr}
+.afs-plannen label b{font-size:17px}
+@media (max-width: 480px){.afs-soorten.afs-plannen{grid-template-columns:1fr}}
+.afs-dialoog .afs-plannen label{flex-direction:column;align-items:flex-start;justify-content:center;text-align:left}
+.afs-dialoog .afs-plannen label small{max-width:none}
